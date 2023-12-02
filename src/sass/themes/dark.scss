@@ -3,32 +3,32 @@
 /** 色值可以参考：https://yeun.github.io/open-color/ */
 
 /** 工具栏样式 */
-$toolbarBg: rgb(60, 60, 60);
+$toolbarBg: $dark-light;
 $toolbarBtnColor: $toolbarBtnColorDark;
-$toolbarBtnBgHover: rgb(69, 70, 70);
-$toolbarBtnHoverColor: rgb(255,255,255);
-$toolbarColorItemHoverBorderColor: rgb(247, 133, 83);
+$toolbarBtnBgHover: $dark-dark;
+$toolbarBtnHoverColor: $light-light;
+$toolbarColorItemHoverBorderColor: $dark-dark;
 $sidebarShadow: $shadow;
 /** 编辑区域样式 */
-$editorBg: rgb(37, 37, 38);
-$editorColor: rgb(200, 200, 200);
+$editorBg: $dark-light;
+$editorColor: $dark-very-light;
 $editorSelectedBg: $toolbarBtnBgHover;
-$editorUrlBg: rgb(0,0,0);
-$editorCursorColor: rgb(255,255,255);
-$editorImportantColor: rgb(247, 133, 83);
-$editorCodeColor: rgb(255, 203, 107);
+$editorUrlBg:$primary-dark;
+$editorCursorColor: $light;
+$editorImportantColor: $light;
+$editorCodeColor:$light;
 /** 预览区域样式 */
-$previewBg: rgb(51, 51, 51);
+$previewBg: $dark-light;
 $previewMobileBgColor: $editorBg;
 /** markdown样式 */
 $mdColor: $editorColor;
 $mdHeaderColor: $editorImportantColor;
-$mdLineColor: rgb(105, 105, 105);
-$mdAColor: $editorCodeColor;
-$mdAHoverColor: $editorImportantColor;
+$mdLineColor: $dark-dark;
+$mdAColor: $primary-light;
+$mdAHoverColor: $primary;
 $mdInlineCodeColor: $editorCodeColor;
 $mdInlineCodeBg: $editorUrlBg;
-$mdSvgTextColor: rgb(250, 160, 0);
+$mdSvgTextColor: $light-dark;
 /** 编辑器样式 */
 .cherry.theme__dark {
   
@@ -382,7 +382,51 @@ $mdSvgTextColor: rgb(250, 160, 0);
   }
 
   .cherry-highlight-line {
-    background-color: #151422;
+    background-color: $dark-dark;
   }
 
+}
+.cherry-panel__primary {
+  background-color: darken($primary-very-light,10%);
+  color: darken($primary,10%);
+  .cherry-panel--title {
+    background-color: darken($primary-light,10%);
+  }
+}
+.cherry-panel__info {
+  background-color: darken($info-very-light,10%);
+  color: darken($info,10%);
+  .cherry-panel--title {
+    background-color: darken($info-light,10%);
+  }
+}
+.cherry-panel__warning {
+  background-color: darken($warning-very-light,10%);
+  color: darken($warning,10%);
+  .cherry-panel--title {
+    background-color:  darken($warning-light,10%);
+  }
+}
+.cherry-panel__danger {
+  background-color: darken($danger-very-light,10%);
+  color: darken($danger,10%);
+  .cherry-panel--title {
+    background-color: darken($danger-light,10%);
+  }
+}
+.cherry-panel__success {
+  background-color: darken($success-very-light,10%);
+  color: darken($success,10%);
+  .cherry-panel--title {
+    background-color: darken($success-light,10%);
+  }
+}
+.cherry-detail {
+  details {
+    background: $dark;
+    summary {
+      background-color: $dark-dark;
+      color: $light;
+    }
+  }
 }

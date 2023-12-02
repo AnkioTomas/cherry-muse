@@ -11,39 +11,85 @@ $monospaceFont: 'Menlo', 'Liberation Mono', 'Consolas', 'DejaVu Sans Mono', 'Ubu
 $fontSize: 16px;
 $fontSizeLarge: 18px;
 $lineHeight: 27px;
-$editorBg: #f8fafb;
-$previewBg: #f8fafb;
-$fontColor: #3f4a56;
-$linkColor: #3582fb;
-$linkHoverColor: #056bad;
-$borderColor: #dfe6ee;
-$toolbarSplitColor: #dfe6ee;
-$fullWidthColor: #d71616;
+
+
+//基础颜色变量
+
+$primary: #3B71CA;
+$primary-light: hsl(213, 69%, 62%);
+$primary-dark: hsl(213, 69%, 32%);
+$primary-very-light: hsl(213, 69%, 90%);
+
+$secondary: #9FA6B2;
+$secondary-light: hsl(220, 10%, 70%);
+$secondary-dark: hsl(220, 10%, 40%);
+$secondary-very-light: hsl(220, 10%, 90%);
+
+$success: #14A44D;
+$success-light: hsl(145deg 71.82% 42.56%);
+$success-dark: hsl(145, 80%, 17%);
+$success-very-light: hsl(145, 80%, 90%);
+
+$danger: #DC4C64;
+$danger-light: hsl(352, 71%, 61%);
+$danger-dark: hsl(352, 71%, 31%);
+$danger-very-light: hsl(352, 71%, 90%);
+
+$warning: #E4A11B;
+$warning-light: hsl(42, 84%, 53%);
+$warning-dark: hsl(42, 84%, 23%);
+$warning-very-light: hsl(42, 84%, 90%);
+
+$info: #54B4D3;
+$info-light: hsl(190, 57%, 62%);
+$info-dark: hsl(190, 57%, 32%);
+$info-very-light: hsl(190, 57%, 90%);
+
+$light: #FBFBFB;
+$light-light: hsl(0, 0%, 95%);
+$light-dark: hsl(0, 0%, 65%);
+$light-very-light: hsl(0, 0%, 90%);
+
+$dark: #332D2D;
+$dark-light: hsl(0, 0%, 19%);
+$dark-dark: hsl(0, 0%, 10%);
+$dark-very-light: hsl(0, 0%, 90%);
+
+
+
+$editorBg: $light;
+$previewBg: $light;
+$fontColor: $dark;
+$linkColor: $primary;
+$linkHoverColor: $primary-light;
+$borderColor: $light-dark;
+$toolbarSplitColor: $light-dark;
+$fullWidthColor: $danger;
 $toolbarFontSize: 14px;
 $toolbarHeight: 48px;
 $elementGap: 16px;
 $elementLittleGap: 12px;
 $borderRadius: 3px;
 
-$errorColor: #f85353;
-$warnColor: #ffaf21;
+$errorColor: $danger;
+$warnColor: $warning;
 
-$shadow: 0 0 10px rgba(128, 145, 165, 0.2);
+$shadow: 0;
 
 // 标题
-$subTitle: #6d6e6f;
+$subTitle: $light;
 // 滚动条
 
 // 列表
 
 // 代码块
-$codeBackground: #e5e5e5;
+$codeBackground: $light-dark;
 $codeColor: $errorColor;
-$codeBlockBg: #00212b;
+$codeBlockBg: $dark-light;
 
 
 // 引用
-$quoteBorderColor: #D6DBDF;
+$quoteBorderColor: $light-dark;
 $quoteBackground: rgba(102, 128, 153, .05);
 $quoteColor: $subTitle;
 
@@ -57,7 +103,7 @@ $editorCommentColor: $linkColor;
 $editorQuoteColor: $editorCommentColor;
 $editorStringColor: $fontColor;
 $editorLinkColor: $linkColor;
-$editorUrlBgColor: #d7e6fe;
+$editorUrlBgColor: $light;
 
 $editorV2Color: $fontColor;
 $editorV3Color: $fontColor;
@@ -66,19 +112,20 @@ $editorKeywordColor: $fontColor;
 
 // 工具栏
 // 暗色
-$toolbarBgDark: #20304b;
+$toolbarBgDark: $dark;
 $toolbarShadowDark: $shadow;
 $toolbarBtnBgDark: transparent;
-$toolbarBtnColorDark: #d7e6fe;
-$toolbarBtnBgHoverDark: rgba(255, 255, 255, 0.1);
-$toolbarBtnHoverColorDark: #fff;
-$toolbarBtnDisabledDark: #ccc;
+$toolbarBtnColorDark: $light;
+$toolbarBtnBgHoverDark: $light-dark;
+$toolbarBtnHoverColorDark: $light-dark;
+$toolbarBtnDisabledDark: $light-dark;
 
 // 亮色
-$toolbarBgLight: white;
+$toolbarBgLight: $light;
 $toolbarShadowLight: $shadow;
 $toolbarBtnBgLight: transparent;
-$toolbarBtnColorLight: #3f4a56;
-$toolbarBtnBgHoverLight: #ebf3ff;
-$toolbarBtnHoverColorLight: #5d9bfc;
-$toolbarBtnDisabledLight: #ccc;
+$toolbarBtnColorLight: $dark;
+$toolbarBtnBgHoverLight: $dark-very-light;
+$toolbarBtnHoverColorLight: $dark-light;
+$toolbarBtnDisabledLight: $dark-very-light;
+

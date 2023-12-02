@@ -7,28 +7,28 @@ $toolbarBg: $toolbarBgLight;
 $toolbarBtnColor: $toolbarBtnColorLight;
 $toolbarBtnBgHover: $toolbarBtnBgHoverLight;
 $toolbarBtnHoverColor: $toolbarBtnHoverColorLight;
-$toolbarColorItemHoverBorderColor: rgb(247, 133, 83);
+$toolbarColorItemHoverBorderColor: $dark-light;
 $sidebarShadow: $shadow;
 /** 编辑区域样式 */
-$editorBg: rgb(255, 255, 255);
-$editorColor: rgb(63, 74, 86);
+$editorBg: $light;
+$editorColor: $dark-light;
 $editorSelectedBg: $toolbarBtnBgHover;
-$editorUrlBg: rgb(215, 230, 254);
-$editorCursorColor: rgb(0,0,0);
-$editorImportantColor: rgb(34, 139, 230);
-$editorCodeColor: rgb(77, 171, 247);
+$editorUrlBg: $primary-very-light;
+$editorCursorColor: $dark;
+$editorImportantColor: $primary;
+$editorCodeColor:$primary-light;
 /** 预览区域样式 */
-$previewBg: rgb(255, 255, 255);
+$previewBg: $light;
 $previewMobileBgColor: $editorBg;
 /** markdown样式 */
 $mdColor: $editorColor;
-$mdHeaderColor: $editorImportantColor;
-$mdLineColor: rgb(25, 113, 194);
+$mdHeaderColor: $dark;
+$mdLineColor: $primary-light;
 $mdAColor: $editorCodeColor;
 $mdAHoverColor: $editorImportantColor;
 $mdInlineCodeColor: $editorCodeColor;
 $mdInlineCodeBg: $editorUrlBg;
-$mdBlockquoteBg: rgb(231, 245, 255);
+$mdBlockquoteBg:$light;
 /** 编辑器样式 */
 .cherry.theme__light {
   
@@ -274,7 +274,7 @@ $mdBlockquoteBg: rgb(231, 245, 255);
   p code, li code {
     background-color: $mdInlineCodeBg;
     color: $mdInlineCodeColor;
-    border: 1px solid $mdLineColor;
+    border: none;
   }
   
   /** 
