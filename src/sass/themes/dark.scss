@@ -136,6 +136,50 @@ $mdSvgTextColor: $light-dark;
     }
   }
 
+  .cherry-panel__primary {
+    background-color: darken($primary-very-light,10%);
+    color: darken($primary,10%);
+    .cherry-panel--title {
+      background-color: darken($primary-light,10%);
+    }
+  }
+  .cherry-panel__info {
+    background-color: darken($info-very-light,10%);
+    color: darken($info,10%);
+    .cherry-panel--title {
+      background-color: darken($info-light,10%);
+    }
+  }
+  .cherry-panel__warning {
+    background-color: darken($warning-very-light,10%);
+    color: darken($warning,10%);
+    .cherry-panel--title {
+      background-color:  darken($warning-light,10%);
+    }
+  }
+  .cherry-panel__danger {
+    background-color: darken($danger-very-light,10%);
+    color: darken($danger,10%);
+    .cherry-panel--title {
+      background-color: darken($danger-light,10%);
+    }
+  }
+  .cherry-panel__success {
+    background-color: darken($success-very-light,10%);
+    color: darken($success,10%);
+    .cherry-panel--title {
+      background-color: darken($success-light,10%);
+    }
+  }
+  .cherry-detail {
+    details {
+      background: $dark;
+      summary {
+        background-color: $dark-dark;
+        color: $light;
+      }
+    }
+  }
 }
 /** 预览区域样式 */
 .cherry-markdown.theme__dark {
@@ -386,47 +430,4 @@ $mdSvgTextColor: $light-dark;
   }
 
 }
-.cherry-panel__primary {
-  background-color: darken($primary-very-light,10%);
-  color: darken($primary,10%);
-  .cherry-panel--title {
-    background-color: darken($primary-light,10%);
-  }
-}
-.cherry-panel__info {
-  background-color: darken($info-very-light,10%);
-  color: darken($info,10%);
-  .cherry-panel--title {
-    background-color: darken($info-light,10%);
-  }
-}
-.cherry-panel__warning {
-  background-color: darken($warning-very-light,10%);
-  color: darken($warning,10%);
-  .cherry-panel--title {
-    background-color:  darken($warning-light,10%);
-  }
-}
-.cherry-panel__danger {
-  background-color: darken($danger-very-light,10%);
-  color: darken($danger,10%);
-  .cherry-panel--title {
-    background-color: darken($danger-light,10%);
-  }
-}
-.cherry-panel__success {
-  background-color: darken($success-very-light,10%);
-  color: darken($success,10%);
-  .cherry-panel--title {
-    background-color: darken($success-light,10%);
-  }
-}
-.cherry-detail {
-  details {
-    background: $dark;
-    summary {
-      background-color: $dark-dark;
-      color: $light;
-    }
-  }
-}
+

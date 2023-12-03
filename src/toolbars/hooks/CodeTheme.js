@@ -26,12 +26,6 @@ export default class CodeTheme extends MenuBase {
     this.noIcon = true;
     this.subMenuConfig = [
       { noIcon: true, name: 'default', onclick: this.bindSubClick.bind(this, 'default') },
-      { noIcon: true, name: 'dark', onclick: this.bindSubClick.bind(this, 'dark') },
-      { noIcon: true, name: 'funky', onclick: this.bindSubClick.bind(this, 'funky') },
-      { noIcon: true, name: 'okaidia', onclick: this.bindSubClick.bind(this, 'okaidia') },
-      { noIcon: true, name: 'twilight', onclick: this.bindSubClick.bind(this, 'twilight') },
-      { noIcon: true, name: 'coy', onclick: this.bindSubClick.bind(this, 'coy') },
-      { noIcon: true, name: 'solarized light', onclick: this.bindSubClick.bind(this, 'solarized-light') },
       { noIcon: true, name: 'tomorrow night', onclick: this.bindSubClick.bind(this, 'tomorrow-night') },
     ];
   }

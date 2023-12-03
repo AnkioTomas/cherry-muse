@@ -22,33 +22,49 @@ import { getSelection } from '@/utils/selection';
 export default class Panel extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('panel', 'tips');
+    this.setName('面板', 'justify');
     this.panelRule = getPanelRule().reg;
+    const { locale } = this.$cherry;
     this.subMenuConfig = [
       {
         iconName: 'tips',
-        name: 'tips',
+        name: '提示面板',
         onclick: this.bindSubClick.bind(this, 'primary'),
       },
       {
         iconName: 'info',
-        name: 'info',
+        name: '信息面板',
         onclick: this.bindSubClick.bind(this, 'info'),
       },
       {
         iconName: 'warning',
-        name: 'warning',
+        name: '警告面板',
         onclick: this.bindSubClick.bind(this, 'warning'),
       },
       {
         iconName: 'danger',
-        name: 'danger',
+        name: '危险面板',
         onclick: this.bindSubClick.bind(this, 'danger'),
       },
       {
         iconName: 'success',
-        name: 'success',
+        name: '成功面板',
         onclick: this.bindSubClick.bind(this, 'success'),
+      },
+      {
+        iconName: 'justifyLeft',
+        name: locale?.justifyLeft ?? '左对齐',
+        onclick: this.bindSubClick.bind(this, 'left'),
+      },
+      {
+        iconName: 'justifyCenter',
+        name: locale?.justifyCenter ?? '居中',
+        onclick: this.bindSubClick.bind(this, 'center'),
+      },
+      {
+        iconName: 'justifyRight',
+        name: locale?.justifyRight ?? '右对齐',
+        onclick: this.bindSubClick.bind(this, 'right'),
       },
     ];
   }

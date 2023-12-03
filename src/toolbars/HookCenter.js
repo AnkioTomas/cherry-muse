@@ -57,9 +57,8 @@ import Table from './hooks/Table';
 import Toc from './hooks/Toc';
 import LineTable from './hooks/LineTable';
 import BarTable from './hooks/BarTable';
-import Pdf from './hooks/Pdf';
+
 import File from './hooks/File';
-import Word from './hooks/Word';
 import Ruby from './hooks/Ruby';
 import Theme from './hooks/Theme';
 // import ChatGpt from './hooks/ChatGpt';
@@ -67,7 +66,6 @@ import Theme from './hooks/Theme';
 import MobilePreview from './hooks/MobilePreview';
 import Copy from './hooks/Copy';
 import Panel from './hooks/Panel';
-import Justify from './hooks/Justify';
 import Detail from './hooks/Detail';
 import DrawIo from './hooks/DrawIo';
 
@@ -118,16 +116,12 @@ const HookList = {
   toc: Toc,
   lineTable: LineTable,
   barTable: BarTable,
-  pdf: Pdf,
-  word: Word,
   ruby: Ruby,
   theme: Theme,
   file: File,
   panel: Panel,
-  justify: Justify,
   detail: Detail,
   drawIo: DrawIo,
-  // chatgpt: ChatGpt,
 };
 
 export default class HookCenter {

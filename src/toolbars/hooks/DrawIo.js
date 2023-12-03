@@ -21,8 +21,7 @@ import { drawioDialog } from '@/utils/dialog';
 export default class DrawIo extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('draw.io', 'draw.io');
-    this.noIcon = true;
+    this.setName('可视流程图', 'insertFlow');
     this.drawioIframeUrl = $cherry.options.drawioIframeUrl;
   }
 
