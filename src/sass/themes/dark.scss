@@ -315,7 +315,7 @@ $mdSvgTextColor: $light-dark;
   p code, li code {
     background-color: $mdInlineCodeBg;
     color: $mdInlineCodeColor;
-    border: 1px solid $mdLineColor;
+    border: none;
   }
   
   /** 
