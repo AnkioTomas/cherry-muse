@@ -449,29 +449,7 @@ div[data-type='codeBlock'] {
     @import 'prism/default';
   }
 
-  [data-code-block-theme='dark'] & {
-    @import 'prism/dark';
-  }
 
-  [data-code-block-theme='funky'] & {
-    @import 'prism/funky';
-  }
-
-  [data-code-block-theme='okaidia'] & {
-    @import 'prism/okaidia';
-  }
-
-  [data-code-block-theme='twilight'] & {
-    @import 'prism/twilight';
-  }
-
-  [data-code-block-theme='coy'] & {
-    @import 'prism/coy';
-  }
-
-  [data-code-block-theme='solarized-light'] & {
-    @import 'prism/solarized-light';
-  }
 }
 
 .cherry-detail {
@@ -543,9 +521,7 @@ div[data-type='codeBlock'] {
   color: $primary;
   .cherry-panel--title {
     background-color: $primary-light;
-    &.cherry-panel--title__not-empty::before {
-      content: '';
-    }
+
   }
 }
 .cherry-panel__info {
@@ -553,9 +529,7 @@ div[data-type='codeBlock'] {
   color: $info;
   .cherry-panel--title {
     background-color: $info-light;
-    &.cherry-panel--title__not-empty::before {
-      content: '';
-    }
+
   }
 }
 .cherry-panel__warning {
@@ -563,9 +537,7 @@ div[data-type='codeBlock'] {
   color: $warning;
   .cherry-panel--title {
     background-color:  $warning-light;
-    &.cherry-panel--title__not-empty::before {
-      content: '';
-    }
+
   }
 }
 .cherry-panel__danger {
@@ -573,9 +545,7 @@ div[data-type='codeBlock'] {
   color: $danger;
   .cherry-panel--title {
     background-color: $danger-light;
-    &.cherry-panel--title__not-empty::before {
-      content: '';
-    }
+
   }
 }
 .cherry-panel__success {
@@ -583,8 +553,6 @@ div[data-type='codeBlock'] {
   color: $success;
   .cherry-panel--title {
     background-color: $success-light;
-    &.cherry-panel--title__not-empty::before {
-      content: '';
-    }
+
   }
 }
