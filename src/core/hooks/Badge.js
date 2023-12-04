@@ -23,19 +23,21 @@ export default class Badge extends SyntaxBase {
 
   toHtml(whole, m1, m2, m3) {
     // 处理颜色
-    let clazz = 'badge badge-primary ';
+    let clazz = 'badge  ';
     let style = '';
     if (Badge.predefinedColors.has(m2)) {
       clazz += `badge-${m2} `;
-    } else if (/^#[0-9a-fA-F]{6}$/.test(m2)) {
+    } else if (/^#\w{6}$/.test(m2)) {
       style += `background-color: ${m2}`;
+    } else {
+      clazz += 'badge-primary ';
     }
 
     // 处理位置
     const position = ['top', 'bottom'].includes(m3) ? m3 : 'center';
     const positionClass = `badge-${position}`;
     clazz += positionClass;
-    return `<span ${style} class="${clazz}">${m1}</span>`;
+    return `<span style="${style}" class="${clazz}">${m1}</span>`;
   }
 
   makeHtml(str) {
