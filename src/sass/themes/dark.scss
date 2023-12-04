@@ -31,6 +31,11 @@ $mdInlineCodeBg: $editorUrlBg;
 $mdSvgTextColor: $light-dark;
 /** 编辑器样式 */
 .cherry.theme__dark {
+  :root{
+    --mainBg:$mdLineColor;
+    --textColor:$mdColor;
+    --borderColor:$mdLineColor;
+  }
   background-color: $dark-dark;
   /** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 */
   .cherry-toolbar, .cherry-floatmenu, .cherry-bubble, .cherry-sidebar {

@@ -68,6 +68,8 @@ import Copy from './hooks/Copy';
 import Panel from './hooks/Panel';
 import Detail from './hooks/Detail';
 import Badge from './hooks/Badge';
+import ECharts from './hooks/ECharts';
+import Card from '@/toolbars/hooks/Card';
 
 // 定义默认支持的工具栏
 // 目前不支持按需动态加载
@@ -122,6 +124,8 @@ const HookList = {
   panel: Panel,
   detail: Detail,
   badge: Badge,
+  echarts: ECharts,
+  card: Card,
 };
 
 export default class HookCenter {

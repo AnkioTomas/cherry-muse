@@ -18,6 +18,7 @@ import MermaidCodeEngine from '@/addons/cherry-code-block-mermaid-plugin';
 import PlantUMLCodeEngine from '@/addons/cherry-code-block-plantuml-plugin';
 import mermaid from 'mermaid';
 import EChartsCodeEngine from '@/addons/cherry-code-block-echarts-plugin';
+import CardCodeEngine from '@/addons/cherry-code-block-card-plugin';
 
 const mermaidAPI = mermaid?.mermaidAPI;
 Cherry.usePlugin(MermaidCodeEngine, {
@@ -27,5 +28,6 @@ Cherry.usePlugin(MermaidCodeEngine, {
 });
 Cherry.usePlugin(PlantUMLCodeEngine, {});
 Cherry.usePlugin(EChartsCodeEngine, {});
+Cherry.usePlugin(CardCodeEngine, {});
 export * from './index.core';
 export default Cherry;

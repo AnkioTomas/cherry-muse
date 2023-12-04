@@ -17,6 +17,7 @@ export default {
   bold: '加粗', // 加粗
   code: '代码', // 代码
   graph: '画图', // 画图
+  echarts: '图表', // 画图
   h1: '一级标题', // 一级标题
   h2: '二级标题', // 二级标题
   h3: '三级标题', // 三级标题
@@ -83,7 +84,7 @@ export default {
   exportHTMLFile: '导出html', // 导出预览区html文件
   theme: '主题', // 导出长图
   panel: '面板', // 导出长图
-  detail: '手风琴', // 手风琴
+  detail: '详情', // 手风琴
   'H1 Heading': 'H1 一级标题',
   'H2 Heading': 'H2 二级标题',
   'H3 Heading': 'H3 三级标题',

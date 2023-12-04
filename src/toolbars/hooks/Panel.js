@@ -22,7 +22,8 @@ import { getSelection } from '@/utils/selection';
 export default class Panel extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('面板', 'justify');
+    this.setName('面板');
+    this.noIcon = true;
     this.panelRule = getPanelRule().reg;
     const { locale } = this.$cherry;
     this.subMenuConfig = [

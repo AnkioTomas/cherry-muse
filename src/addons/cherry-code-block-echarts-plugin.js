@@ -16,6 +16,7 @@
  */
 import mergeWith from 'lodash/mergeWith';
 import Event from '../Event';
+import extraJSON from '@/utils/jsonUtils';
 export default class EChartsCodeEngine {
   static install(cherryOptions, args) {
     mergeWith(cherryOptions, {
@@ -126,21 +127,7 @@ export default class EChartsCodeEngine {
     }
     const graphId = `echarts-${$sign}`;
 
-    let json = {};
-    if (typeof src !== 'object') {
-      try {
-        json = JSON.parse(src);
-      } catch (e) {
-        try {
-          // eslint-disable-next-line no-eval
-          eval(`json = ${src}`);
-        } catch (e) {
-          throw e;
-        }
-      }
-    } else {
-      json = src;
-    }
+    const json = extraJSON(src);
 
     if (json === {}) {
       return ``;

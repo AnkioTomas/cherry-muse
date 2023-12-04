@@ -22,6 +22,7 @@ export default class Badge extends MenuBase {
   constructor($cherry) {
     super($cherry);
     this.setName('徽章', 'tips');
+    this.noIcon = true;
     this.subMenuConfig = [
       {
         iconName: 'tips',
