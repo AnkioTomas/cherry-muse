@@ -127,16 +127,21 @@ export default class EChartsCodeEngine {
     const graphId = `echarts-${$sign}`;
 
     let json = {};
-    try {
-      json = JSON.parse(src);
-    } catch (e) {
+    if (typeof src !== 'object') {
       try {
-        // eslint-disable-next-line no-eval
-        eval(`json = ${src}`);
+        json = JSON.parse(src);
       } catch (e) {
-        throw e;
+        try {
+          // eslint-disable-next-line no-eval
+          eval(`json = ${src}`);
+        } catch (e) {
+          throw e;
+        }
       }
+    } else {
+      json = src;
     }
+
     if (json === {}) {
       return ``;
     }

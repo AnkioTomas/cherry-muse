@@ -15,6 +15,7 @@
  */
 import ParagraphBase from '@/core/ParagraphBase';
 import { getTableRule } from '@/utils/regexp';
+import EChartsCodeEngine from '@/addons/cherry-code-block-echarts-plugin';
 
 const TABLE_LOOSE = 'loose';
 const TABLE_STRICT = 'strict';
@@ -24,16 +25,11 @@ export default class Table extends ParagraphBase {
 
   constructor({ externals, config }) {
     super({ needCache: true });
-    const {
-      enableChart,
-      chartRenderEngine: ChartRenderEngine,
-      externals: requiredPackages,
-      chartEngineOptions = {},
-    } = config;
+    const { enableChart, externals: requiredPackages, chartEngineOptions = {} } = config;
     this.chartRenderEngine = null;
     if (enableChart === true) {
       try {
-        this.chartRenderEngine = new ChartRenderEngine({
+        this.chartRenderEngine = new EChartsCodeEngine({
           // 注入需要的第三方包
           ...(externals &&
             requiredPackages instanceof Array &&
@@ -165,7 +161,26 @@ export default class Table extends ParagraphBase {
     if (!chartOptions) {
       return tableResult;
     }
-    const chart = this.chartRenderEngine.render(chartOptions.type, chartOptions.options, tableObject);
+    tableObject.header.shift();
+    const option = {
+      xAxis: {
+        data: tableObject.header,
+      },
+      yAxis: {},
+      series: [],
+    };
+    for (const row of rows) {
+      const first = row.shift().trim();
+      if (chartOptions.options.includes(first)) {
+        option.series.push({
+          data: row,
+          type: chartOptions.type,
+        });
+      }
+    }
+
+    console.warn(chartOptions.type, chartOptions.options, tableObject);
+    const chart = this.chartRenderEngine.render(option, `table_chart_${chartOptionsSign}_${tableResult.sign}`);
     const chartHtml = `<figure id="table_chart_${chartOptionsSign}_${tableResult.sign}"
       data-sign="table_chart_${chartOptionsSign}_${tableResult.sign}" data-lines="0">${chart}</figure>`;
     return {
