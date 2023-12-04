@@ -50,6 +50,7 @@ import Ruby from './hooks/Ruby';
 import Panel from './hooks/Panel';
 import Detail from './hooks/Detail';
 import Mark from '@/core/hooks/Mark';
+import Badge from '@/core/hooks/Badge';
 /**
  * 引擎各语法的配置
  * 主要决定支持哪些语法，以及各语法的执行顺序
@@ -90,6 +91,7 @@ const hooksConfig = [
   Sub,
   Sup,
   Mark, // 高亮
+  Badge,
   Ruby,
   Strikethrough,
   Underline,

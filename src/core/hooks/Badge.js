@@ -15,12 +15,27 @@
  */
 
 import SyntaxBase from '../SyntaxBase';
+export default class Badge extends SyntaxBase {
+  static HOOK_NAME = 'badge';
 
-export default class Mark extends SyntaxBase {
-  static HOOK_NAME = 'mark';
+  // 预定义颜色类
+  static predefinedColors = new Set(['primary', 'success', 'info', 'danger', 'warning']);
 
-  toHtml(whole, m1, m2) {
-    return `<mark>${m1}</mark>`;
+  toHtml(whole, m1, m2, m3) {
+    // 处理颜色
+    let clazz = 'badge badge-primary ';
+    let style = '';
+    if (Badge.predefinedColors.has(m2)) {
+      clazz += `badge-${m2} `;
+    } else if (/^#[0-9a-fA-F]{6}$/.test(m2)) {
+      style += `background-color: ${m2}`;
+    }
+
+    // 处理位置
+    const position = ['top', 'bottom'].includes(m3) ? m3 : 'center';
+    const positionClass = `badge-${position}`;
+    clazz += positionClass;
+    return `<span ${style} class="${clazz}">${m1}</span>`;
   }
 
   makeHtml(str) {
@@ -32,7 +47,8 @@ export default class Mark extends SyntaxBase {
   }
 
   rule() {
-    const reg = /==(.*?)==/g;
+    // 正则表达式匹配 {badge:文本|颜色|位置}
+    const reg = /\{badge:([^|}]+)\|?([^|}]*)\|?([^}]*)\}/g;
     return { reg };
   }
 }

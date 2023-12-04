@@ -568,3 +568,37 @@ div[data-type='codeBlock'] {
 
   }
 }
+
+// 基础徽章样式
+.badge {
+  display: inline-block;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 3px;
+  padding: 0 6px;
+  color: #fff;
+  margin: 0 6px;
+}
+
+// 颜色类 - 假设您已定义了相应的 SCSS 变量
+.badge-primary { background-color: $primary; }
+.badge-success { background-color: $success; }
+.badge-info    { background-color: $info; }
+.badge-danger  { background-color: $danger; }
+.badge-warning { background-color: $warning; }
+
+// 位置类
+.badge-top {
+  vertical-align: top;
+  margin-bottom: 4px; // 调整徽章与下方元素的间距
+}
+
+.badge-center {
+  vertical-align: middle;
+}
+
+.badge-bottom {
+  vertical-align: bottom;
+  margin-top: 4px; // 调整徽章与上方元素的间距
+}
