@@ -67,6 +67,7 @@ import MobilePreview from './hooks/MobilePreview';
 import Copy from './hooks/Copy';
 import Panel from './hooks/Panel';
 import Detail from './hooks/Detail';
+import Badge from './hooks/Badge';
 
 // 定义默认支持的工具栏
 // 目前不支持按需动态加载
@@ -120,6 +121,7 @@ const HookList = {
   file: File,
   panel: Panel,
   detail: Detail,
+  badge: Badge,
 };
 
 export default class HookCenter {
