@@ -17,7 +17,6 @@
 import imgSizeHandler from '@/utils/imgSizeHandler';
 import TableHandler from '@/utils/tableContentHandler';
 import CodeHandler from '@/utils/codeBlockContentHandler';
-import { drawioDialog } from '@/utils/dialog';
 import Event from '@/Event';
 import { imgDrawioReg, getValueWithoutCode } from '@/utils/regexp';
 import debounce from 'lodash/debounce';
@@ -243,19 +242,6 @@ export default class PreviewerBubble {
     }
 
     // 编辑draw.io不受enablePreviewerBubble配置的影响
-    if (target instanceof HTMLImageElement) {
-      if (target.tagName === 'IMG' && target.getAttribute('data-type') === 'drawio') {
-        if (!this.beginChangeDrawioImg(target)) {
-          return;
-        }
-        const xmlData = decodeURI(target.getAttribute('data-xml'));
-        drawioDialog(this.previewer.$cherry.options.drawioIframeUrl, xmlData, (newData) => {
-          const { xmlData, base64 } = newData;
-          this.editor.editor.replaceSelection(`(${base64}){data-type=drawio data-xml=${encodeURI(xmlData)}}`, 'around');
-        });
-        return;
-      }
-    }
 
     if (!this.enablePreviewerBubble) {
       return;

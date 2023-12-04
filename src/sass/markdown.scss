@@ -361,8 +361,20 @@
     }
   }
 
+  video,audio {
+    max-width: 100%;
+  }
+
+
+  img {
+    max-width: 100%;
+  }
+  iframe.cherry-dialog-iframe {
+    width: 100%;
+    height: 100%;
+  }
   /* 数学表达式展示 */
-  mjx-assistive-mml {
+  .mjx-assistive-mml {
     position: absolute;
     top: 0;
     left: 0;

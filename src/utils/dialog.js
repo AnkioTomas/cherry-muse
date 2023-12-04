@@ -194,21 +194,3 @@ const dialog = {
     document.body.appendChild(this.dom);
   },
 };
-
-/**
- * draw.io的对话框
- * @param {string} xml draw.io的xml格式的字符串数据
- * @param {*} callback 回调
- */
-export function drawioDialog(iframeSrc = '', xml = '', callback = null) {
-  const dialogParam = { iframeSrc, title: 'draw.io' };
-  dialog.draw(
-    dialogParam,
-    () => {
-      dialog.postMessage('setData', xml);
-    },
-    (data) => {
-      callback(data);
-    },
-  );
-}

@@ -408,6 +408,8 @@
   box-sizing: border-box;
   overflow: hidden;
 
+  border-right: 2px solid #ebedee;
+
   &.cherry-editor--full {
     width: 100%;
     padding-right: 0;
@@ -621,8 +623,7 @@
 }
 
 .cherry-previewer {
-  padding: 20px 45px 20px 20px;
-  border-left: 2px solid #ebedee;
+  padding: 20px 20px 20px 20px;
   width: 50%;
   box-sizing: border-box;
   background-color: $previewBg;
@@ -716,11 +717,11 @@
     float: left;
     width: 14px;
     height: 14px;
-    border: 1px solid #fff;
+    border: 1px solid $light;
     cursor: pointer;
 
     &:hover {
-      border: 1px solid #000;
+      border: 1px solid $dark-dark;
     }
   }
 }
@@ -736,25 +737,25 @@
   position: absolute;
   left: 0;
   top: 0;
-  background: #fff;
+  background: $light-dark;
   // border: 1px solid #ccc;
   border-radius: 2px;
   max-height: 500px;
-  box-shadow: 0 2px 8px 1px #00000033;
+  box-shadow: 0 2px 8px 1px $dark-dark;
 
   .cherry-suggester-panel__item {
     border: none;
     white-space: nowrap;
     min-width: 50px;
     padding: 5px 13px;
-    color: #333;
+    color: $dark-dark;
     display: block;
     cursor: pointer;
 
     &.cherry-suggester-panel__item--selected {
-      background-color: #f2f2f5;
+      background-color: $light;
       text-decoration: none;
-      color: #eb7350;
+      color: $primary-dark;
     }
     & > i {
       display: inline-block;
@@ -765,8 +766,8 @@
 }
 
 .cherry-suggestion {
-  background-color: #ebf3ff;
-  color: #3582fb;
+  background-color: $light;
+  color: $primary;
   padding: 1px 4px;
   border-radius: 3px;
   cursor: pointer;

@@ -31,7 +31,7 @@ $mdInlineCodeBg: $editorUrlBg;
 $mdSvgTextColor: $light-dark;
 /** 编辑器样式 */
 .cherry.theme__dark {
-  
+  background-color: $dark-dark;
   /** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 */
   .cherry-toolbar, .cherry-floatmenu, .cherry-bubble, .cherry-sidebar {
     background: $toolbarBg;
@@ -180,6 +180,25 @@ $mdSvgTextColor: $light-dark;
       }
     }
   }
+
+  .cherry-suggester-panel {
+    background: $dark-dark;
+    box-shadow: none;
+
+    .cherry-suggester-panel__item {
+      color: $light;
+
+      &.cherry-suggester-panel__item--selected {
+        background-color: $dark-dark;
+        color: $primary-dark;
+      }
+    }
+  }
+
+  .cherry-suggestion {
+    background-color: $dark-dark;
+    color: $primary;
+  }
 }
 /** 预览区域样式 */
 .cherry-markdown.theme__dark {
@@ -322,9 +341,13 @@ $mdSvgTextColor: $light-dark;
   * 代码块
   */
   pre code {
-    
+
   }
-  
+
+  pre{
+    background-color:$dark-dark
+  }
+
   /** 
   * 表格
   */
