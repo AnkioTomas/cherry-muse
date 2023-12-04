@@ -16,6 +16,9 @@
 import CherryEngine from './index.engine.core';
 import MermaidCodeEngine from './addons/cherry-code-block-mermaid-plugin';
 import mermaid from 'mermaid';
+import Cherry from '@/index.core';
+import PlantUMLCodeEngine from '@/addons/cherry-code-block-plantuml-plugin';
+import EChartsCodeEngine from '@/addons/cherry-code-block-echarts-plugin';
 
 const mermaidAPI = mermaid?.mermaidAPI;
 CherryEngine.usePlugin(MermaidCodeEngine, {
@@ -23,6 +26,8 @@ CherryEngine.usePlugin(MermaidCodeEngine, {
   theme: 'default',
   sequence: { useMaxWidth: false, showSequenceNumbers: true },
 });
+Cherry.usePlugin(PlantUMLCodeEngine, {});
 
+Cherry.usePlugin(EChartsCodeEngine, {});
 export * from './index.engine.core';
 export default CherryEngine;

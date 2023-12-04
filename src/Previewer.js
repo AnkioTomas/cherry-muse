@@ -601,8 +601,10 @@ export default class Previewer {
           newContent[change.newIndex].dom.innerHTML,
         );
       }
+
       switch (change.type) {
         case 'delete':
+          Event.emit('previewer', 'beforeRenderDom', oldContent[change.oldIndex].sign, oldContent[change.oldIndex].dom);
           domContainer.removeChild(oldContent[change.oldIndex].dom);
           break;
         case 'insert':
@@ -611,8 +613,17 @@ export default class Previewer {
           } else {
             domContainer.appendChild(newContent[change.newIndex].dom);
           }
+          setTimeout(function () {
+            Event.emit(
+              'previewer',
+              'afterRenderDom',
+              newContent[change.newIndex].sign,
+              newContent[change.newIndex].dom,
+            );
+          });
           break;
         case 'update':
+          Event.emit('previewer', 'beforeRenderDom', oldContent[change.oldIndex].sign, oldContent[change.oldIndex].dom);
           try {
             if (newContent[change.newIndex].dom.querySelector('svg')) {
               throw new Error(); // SVG暂不使用patch更新
@@ -622,6 +633,14 @@ export default class Previewer {
             domContainer.insertBefore(newContent[change.newIndex].dom, oldContent[change.oldIndex].dom);
             domContainer.removeChild(oldContent[change.oldIndex].dom);
           }
+          setTimeout(function () {
+            Event.emit(
+              'previewer',
+              'afterRenderDom',
+              newContent[change.newIndex].sign,
+              newContent[change.newIndex].dom,
+            );
+          });
       }
     });
   }
@@ -638,11 +657,15 @@ export default class Previewer {
         Logger.log('add all');
         newHtmlList.list.forEach((piece) => {
           domContainer.appendChild(piece.dom);
+          setTimeout(function () {
+            Event.emit('previewer', 'afterRenderDom', piece.sign, piece.dom);
+          });
         });
       } else if (!newHtmlList.list.length && oldHtmlList.list.length) {
         // 全删除
         Logger.log('delete all');
         oldHtmlList.list.forEach((piece) => {
+          Event.emit('previewer', 'beforeRenderDom', piece.sign, piece.dom);
           domContainer.removeChild(piece.dom);
         });
       }
@@ -658,6 +681,8 @@ export default class Previewer {
   }
 
   update(html) {
+    // 更新之前删除
+
     // 更新时保留图片懒加载逻辑
     const newHtml = this.lazyLoadImg.changeSrc2DataSrc(html);
     if (!this.isPreviewerHidden()) {
@@ -670,7 +695,6 @@ export default class Previewer {
       tmpDiv.innerHTML = newHtml;
       const newHtmlList = this.$getSignData(tmpDiv);
       const oldHtmlList = this.$getSignData(domContainer);
-
       try {
         this.$dealUpdate(domContainer, oldHtmlList, newHtmlList);
         this.afterUpdate();
@@ -769,6 +793,7 @@ export default class Previewer {
     if (this.highlightLineNum === undefined) {
       this.highlightLineNum = 0;
     }
+
     this.highlightLine(this.highlightLineNum);
   }
 

@@ -47,6 +47,7 @@ export default new (class Event {
    * @param {(event: any) => void} handler 事件回调
    */
   on(instanceId, event, handler) {
+    // console.warn('事件注册', `${instanceId}:${event}`);
     this.emitter.on(`${instanceId}:${event}`, handler);
   }
 
@@ -54,8 +55,14 @@ export default new (class Event {
    * 触发事件
    * @param {string} instanceId 发送消息的频道
    * @param {string} event 要触发的事件
+   * @param {array} param 触发时传入的参数
    */
-  emit(instanceId, event) {
-    this.emitter.emit(`${instanceId}:${event}`);
+  emit(instanceId, event, ...param) {
+    // console.warn('事件触发', `${instanceId}:${event}`, param);
+    this.emitter.emit(`${instanceId}:${event}`, param);
+  }
+
+  off(instanceId, event, handler) {
+    this.emitter.off(`${instanceId}:${event}`, handler);
   }
 })();
