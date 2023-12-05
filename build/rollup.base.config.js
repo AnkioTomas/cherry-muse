@@ -21,6 +21,7 @@ import eslint from '@rollup/plugin-eslint';
 import alias from '@rollup/plugin-alias';
 import json from '@rollup/plugin-json';
 import envReplacePlugin from './env';
+import visualizer from 'rollup-plugin-visualizer';
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 const PROJECT_ROOT_PATH = path.resolve(__dirname, '..');
@@ -56,6 +57,11 @@ const options = {
     manualChunks: () => 'cherry',
   },
   plugins: [
+    // 我到要看看到底打包了什么妖魔鬼怪
+    visualizer({
+      filename: './dist/stats.html', // 输出文件的路径和名称
+      open: true, // 完成后是否自动打开报告
+    }),
     eslint({
       exclude: ['node_modules/**', 'src/libs/**'],
     }),

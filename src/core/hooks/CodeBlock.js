@@ -40,7 +40,6 @@ export default class CodeBlock extends ParagraphBase {
     this.copyCode = config.copyCode; // 是否显示“复制”按钮
     this.editCode = config.editCode; // 是否显示“编辑”按钮
     this.changeLang = config.changeLang; // 是否显示“切换语言”按钮
-    this.mermaid = config.mermaid; // mermaid的配置，目前仅支持格式设置，svg2img=true 展示成图片，false 展示成svg
     this.indentedCodeBlock = typeof config.indentedCodeBlock === 'undefined' ? true : config.indentedCodeBlock; // 是否支持缩进代码块
     this.INLINE_CODE_REGEX = /(`+)(.+?(?:\n.+?)*?)\1/g;
     if (config && config.customRenderer) {
@@ -72,7 +71,7 @@ export default class CodeBlock extends ParagraphBase {
     if (!engine || typeof engine.render !== 'function') {
       return false;
     }
-    const html = engine.render(codeSrc, props.sign, this.$engine, this.mermaid);
+    const html = engine.render(codeSrc, props.sign, this.$engine);
     if (!html) {
       return false;
     }
@@ -143,31 +142,6 @@ export default class CodeBlock extends ParagraphBase {
       sign,
       lines,
     };
-  }
-
-  /**
-   * 补齐用codeBlock承载的mermaid
-   * @param {string} $code
-   * @param {string} $lang
-   */
-  appendMermaid($code, $lang) {
-    let [code, lang] = [$code, $lang];
-    // 临时实现流程图、时序图缩略写法
-    if (/^flow([ ](TD|LR))?$/i.test(lang) && !this.isInternalCustomLangCovered(lang)) {
-      const suffix = lang.match(/^flow(?:[ ](TD|LR))?$/i) || [];
-      code = `graph ${suffix[1] || 'TD'}\n${code}`;
-      lang = 'mermaid';
-    }
-    if (/^seq$/i.test(lang) && !this.isInternalCustomLangCovered(lang)) {
-      code = `sequenceDiagram\n${code}`;
-      lang = 'mermaid';
-    }
-    if (lang === 'mermaid') {
-      // 8.4.8版本兼容8.5.2版本的语法
-      code = code.replace(/(^[\s]*)stateDiagram-v2\n/, '$1stateDiagram\n');
-      // code = code.replace(/(^[\s]*)sequenceDiagram[ \t]*\n[\s]*autonumber[ \t]*\n/, '$1sequenceDiagram\n');
-    }
-    return [code, lang];
   }
 
   /**
@@ -311,14 +285,14 @@ export default class CodeBlock extends ParagraphBase {
       }
 
       // 未命中缓存，执行渲染
-      let $lang = lang.trim();
+      const $lang = lang.trim();
       // 如果是公式关键字，则直接返回
       if (/^(math|katex|latex)$/i.test($lang) && !this.isInternalCustomLangCovered($lang)) {
         const prefix = match.match(/^\s*/g);
         // ~D为经编辑器中间转义后的$，code结尾包含结束```前的所有换行符，所以不需要补换行
         return `${prefix}~D~D\n${$code}~D~D`; // 提供公式语法供公式钩子解析
       }
-      [$code, $lang] = this.appendMermaid($code, $lang);
+
       // 自定义语言渲染，可覆盖内置的自定义语言逻辑
       if (this.customLang.indexOf($lang.toLowerCase()) !== -1) {
         cacheCode = this.parseCustomLanguage($lang, $code, { lines, sign });

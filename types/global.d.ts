@@ -9,7 +9,6 @@ declare global {
     // for IE
     clipboardData: ClipboardEvent['clipboardData'];
     mermaid?: typeof Mermaid;
-    mermaidAPI?: typeof Mermaid['mermaidAPI'];
     echarts?: echarts.ECharts;
     MathJax?: any;
   }

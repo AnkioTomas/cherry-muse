@@ -139,6 +139,7 @@
     "rollup-plugin-serve": "^2.0.2",
     "rollup-plugin-serve-proxy": "^1.1.4",
     "rollup-plugin-typescript2": "^0.32.1",
+    "rollup-plugin-visualizer": "^5.10.0",
     "sass": "^1.52.3",
     "serve": "^14.2.0",
     "standard-version": "^9.3.2",
@@ -165,9 +166,6 @@
     "commitizen": {
       "path": "./node_modules/cz-customizable"
     }
-  },
-  "optionalDependencies": {
-    "mermaid": "9.4.3"
   },
   "lint-staged": {
     "*.js": "eslint --fix"

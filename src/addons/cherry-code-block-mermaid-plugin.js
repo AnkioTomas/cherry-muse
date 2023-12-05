@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 import mergeWith from 'lodash/mergeWith';
+import Event from '@/Event';
 
 const DEFAULT_OPTIONS = {
-  // TODO: themes
   theme: 'default',
   altFontFamily: 'sans-serif',
   fontFamily: 'sans-serif',
@@ -29,7 +29,6 @@ const DEFAULT_OPTIONS = {
   },
   startOnLoad: false,
   logLevel: 5,
-  // fontFamily: 'Arial, monospace'
 };
 
 export default class MermaidCodeEngine {
@@ -55,74 +54,31 @@ export default class MermaidCodeEngine {
   mermaidCanvas = null;
 
   constructor(mermaidOptions = {}) {
-    const { mermaid, mermaidAPI } = mermaidOptions;
-    if (
-      !mermaidAPI &&
-      !window.mermaidAPI &&
-      (!mermaid || !mermaid.mermaidAPI) &&
-      (!window.mermaid || !window.mermaid.mermaidAPI)
-    ) {
+    const { mermaid } = mermaidOptions;
+    if (!mermaid && !window.mermaid) {
       throw new Error('code-block-mermaid-plugin[init]: Package mermaid or mermaidAPI not found.');
     }
     this.options = { ...DEFAULT_OPTIONS, ...(mermaidOptions || {}) };
-    this.mermaidAPIRefs = mermaidAPI || window.mermaidAPI || mermaid.mermaidAPI || window.mermaid.mermaidAPI;
-    delete this.options.mermaid;
-    delete this.options.mermaidAPI;
+    this.mermaidAPIRefs = mermaid || window.mermaid;
     this.mermaidAPIRefs.initialize(this.options);
-  }
-
-  mountMermaidCanvas($engine) {
-    if (this.mermaidCanvas && document.body.contains(this.mermaidCanvas)) {
-      return;
-    }
-    this.mermaidCanvas = document.createElement('div');
-    this.mermaidCanvas.style = 'width:1024px;opacity:0;position:fixed;top:100%;';
-    const container = $engine.$cherry.wrapperDom || document.body;
-    container.appendChild(this.mermaidCanvas);
-  }
-
-  /**
-   * 转换svg为img，如果出错则直出svg
-   * @param {string} svgCode
-   * @param {string} graphId
-   * @returns {string}
-   */
-  convertMermaidSvgToImg(svgCode, graphId) {
-    const domParser = new DOMParser();
-    let svgHtml;
-    const injectSvgFallback = (svg) =>
-      svg.replace('<svg ', '<svg style="max-width:100%;height:auto;font-family:sans-serif;" ');
-    try {
-      const svgDoc = /** @type {XMLDocument} */ (domParser.parseFromString(svgCode, 'image/svg+xml'));
-      const svgDom = /** @type {SVGSVGElement} */ (/** @type {any} */ (svgDoc.documentElement));
-      // tagName不是svg时，说明存在parse error
-      if (svgDom.tagName.toLowerCase() === 'svg') {
-        svgDom.style.maxWidth = '100%';
-        svgDom.style.height = 'auto';
-        svgDom.style.fontFamily = 'sans-serif';
-        const shadowSvg = /** @type {SVGSVGElement} */ (/** @type {any} */ (document.getElementById(graphId)));
-        let svgBox = shadowSvg.getBBox();
-        if (!svgDom.hasAttribute('viewBox')) {
-          svgDom.setAttribute('viewBox', `0 0 ${svgBox.width} ${svgBox.height}`);
-        } else {
-          svgBox = svgDom.viewBox.baseVal;
-        }
-        svgDom.getAttribute('width') === '100%' && svgDom.setAttribute('width', `${svgBox.width}`);
-        svgDom.getAttribute('height') === '100%' && svgDom.setAttribute('height', `${svgBox.height}`);
-        // fix end
-        svgHtml = svgDoc.documentElement.outerHTML;
-        // 屏蔽转img标签功能，如需要转换为img解除屏蔽即可
-        if (this.svg2img) {
-          const dataUrl = `data:image/svg+xml,${encodeURIComponent(svgDoc.documentElement.outerHTML)}`;
-          svgHtml = `<img class="svg-img" src="${dataUrl}" alt="${graphId}" />`;
-        }
-      } else {
-        svgHtml = injectSvgFallback(svgCode);
+    const that = this;
+    Event.on('previewer', 'beforeRenderDom', function ([sign, dom]) {});
+    Event.on('previewer', 'afterRenderDom', function ([sign, dom]) {
+      const mermaidClazz = `mermaid-${sign}`;
+      const item = sessionStorage.getItem(mermaidClazz);
+      if (!item) return;
+      const mermaidCanvas = document.querySelectorAll(`.${mermaidClazz}`);
+      if (!mermaidCanvas) {
+        return;
       }
-    } catch (e) {
-      svgHtml = injectSvgFallback(svgCode);
-    }
-    return svgHtml;
+      for (const mermaidCanva of mermaidCanvas) {
+        const id = mermaidClazz + Math.floor(1000 + Math.random() * 9000);
+        that.mermaidAPIRefs.render(id, item).then(function (svg) {
+          mermaidCanva.innerHTML = svg.svg;
+        });
+      }
+      sessionStorage.removeItem(mermaidClazz);
+    });
   }
 
   render(src, sign, $engine, config = {}) {
@@ -130,29 +86,8 @@ export default class MermaidCodeEngine {
     if (!$sign) {
       $sign = Math.round(Math.random() * 100000000);
     }
-    this.mountMermaidCanvas($engine);
-    let html;
-    // 多实例的情况下相同的内容ID相同会导致mermaid渲染异常
-    // 需要通过添加时间戳使得多次渲染相同内容的图像ID唯一
-    // 图像渲染节流在CodeBlock Hook内部控制
-    const graphId = `mermaid-${$sign}-${new Date().getTime()}`;
-    this.svg2img = config?.svg2img ?? false;
-    try {
-      this.mermaidAPIRefs.render(
-        graphId,
-        src,
-        (svgCode) => {
-          const fixedSvg = svgCode
-            .replace(/\s*markerUnits="0"/g, '')
-            .replace(/\s*x="NaN"/g, '')
-            .replace(/<br>/g, '<br/>');
-          html = this.convertMermaidSvgToImg(fixedSvg, graphId);
-        },
-        this.mermaidCanvas,
-      );
-    } catch (e) {
-      return e?.str;
-    }
-    return html;
+    const graphId = `mermaid-${$sign}`;
+    sessionStorage.setItem(graphId, src);
+    return `<div class="mermaid ${graphId}" style="text-align: center"></div>`;
   }
 }
