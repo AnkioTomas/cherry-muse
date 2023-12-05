@@ -34,6 +34,7 @@ import locales from '@/locales/index';
 import { urlProcessorProxy } from './UrlCache';
 import { CherryStatic } from './CherryStatic';
 import { LIST_CONTENT } from '@/utils/regexp';
+import { Theme } from '@/Theme';
 
 /** @typedef {import('~types/cherry').CherryOptions} CherryOptions */
 export default class Cherry extends CherryStatic {
@@ -140,7 +141,6 @@ export default class Cherry extends CherryStatic {
     wrapperFragment.appendChild(this.toolbar.options.dom);
     wrapperFragment.appendChild(editor.options.editorDom);
     // 创建预览区域的侧边工具栏
-    this.createSidebar(wrapperFragment);
     if (!this.options.previewer.dom) {
       wrapperFragment.appendChild(previewer.options.previewerDom);
     }
@@ -152,10 +152,7 @@ export default class Cherry extends CherryStatic {
     mountEl.appendChild(wrapperDom);
 
     editor.init(previewer);
-    // 创建bubble工具栏，所谓bubble工具栏，是指在编辑区选中文本时悬浮出现的工具栏
-    this.createBubble();
-    // 创建float工具栏，所谓float工具栏，是指当编辑区光标处于新行时，在行内联想出的工具栏
-    this.createFloatMenu();
+
     previewer.init(editor);
 
     previewer.registerAfterUpdate(this.engine.mounted.bind(this.engine));
@@ -186,6 +183,8 @@ export default class Cherry extends CherryStatic {
 
     // 切换模式，有纯预览模式、纯编辑模式、双栏编辑模式
     this.switchModel(this.options.editor.defaultModel);
+
+    Theme.init(this);
   }
 
   /**
@@ -238,7 +237,7 @@ export default class Cherry extends CherryStatic {
 
   /**
    * 获取编辑区内的markdown源码内容
-   * @returns markdown源码内容
+   * @returns string
    */
   getValue() {
     return this.editor.editor.getValue();
@@ -369,16 +368,10 @@ export default class Cherry extends CherryStatic {
    * @returns
    */
   createWrapper() {
-    const toolbarTheme = this.options.toolbars.theme === 'dark' ? 'dark' : '';
-    // TODO: 完善类型
-    const inlineCodeTheme = /** @type {{theme?: string;}} */ (this.options.engine.syntax.inlineCode).theme;
-    let codeBlockTheme = /** @type {{theme?: string;}} */ (this.options.engine.syntax.codeBlock).theme;
-    if (codeBlockTheme === 'dark') codeBlockTheme = 'tomorrow-night';
-    else if (codeBlockTheme === 'light') codeBlockTheme = 'solarized-light';
-    const wrapperDom = createElement('div', ['cherry', 'clearfix', getThemeFromLocal(true)].join(' '), {
-      'data-toolbarTheme': toolbarTheme,
-      'data-inlineCodeTheme': inlineCodeTheme,
-      'data-codeBlockTheme': codeBlockTheme,
+    const wrapperDom = createElement('div', ['cherry', 'clearfix', Theme.getTheme()].join(' '), {
+      'data-toolbarTheme': '',
+      'data-inlineCodeTheme': Theme.getTheme(),
+      'data-codeBlockTheme': Theme.getTheme(),
     });
     this.wrapperDom = wrapperDom;
     return wrapperDom;
@@ -414,63 +407,6 @@ export default class Cherry extends CherryStatic {
     });
     this.toolbar.collectMenuInfo(this.toolbarRight);
     return this.toolbarRight;
-  }
-
-  /**
-   * @private
-   * @returns
-   */
-  createSidebar(wrapperFragment) {
-    if (this.options.toolbars.sidebar) {
-      $expectTarget(this.options.toolbars.sidebar, Array);
-      const externalClass = this.options.toolbars.theme === 'dark' ? 'dark' : '';
-      const dom = createElement('div', `cherry-sidebar ${externalClass}`);
-      this.sidebar = new Sidebar({
-        dom,
-        $cherry: this,
-        buttonConfig: this.options.toolbars.sidebar,
-        customMenu: this.options.toolbars.customMenu,
-      });
-      this.toolbar.collectMenuInfo(this.sidebar);
-      wrapperFragment.appendChild(this.sidebar.options.dom);
-    }
-  }
-
-  /**
-   * @private
-   * @returns
-   */
-  createFloatMenu() {
-    if (this.options.toolbars.float) {
-      const dom = createElement('div', 'cherry-floatmenu');
-      $expectTarget(this.options.toolbars.float, Array);
-      this.floatMenu = new FloatMenu({
-        dom,
-        $cherry: this,
-        buttonConfig: this.options.toolbars.float,
-        customMenu: this.options.toolbars.customMenu,
-      });
-      this.toolbar.collectMenuInfo(this.floatMenu);
-    }
-  }
-
-  /**
-   * @private
-   * @returns
-   */
-  createBubble() {
-    if (this.options.toolbars.bubble) {
-      const dom = createElement('div', 'cherry-bubble');
-      $expectTarget(this.options.toolbars.bubble, Array);
-      this.bubble = new Bubble({
-        dom,
-        $cherry: this,
-        buttonConfig: this.options.toolbars.bubble,
-        customMenu: this.options.toolbars.customMenu,
-        engine: this.engine,
-      });
-      this.toolbar.collectMenuInfo(this.bubble);
-    }
   }
 
   /**
@@ -638,8 +574,8 @@ export default class Cherry extends CherryStatic {
    * 修改主题
    * @param {string} theme option.theme里的className
    */
-  setTheme(theme = 'default') {
-    changeTheme(this, theme);
+  setTheme(theme = 'light') {
+    Theme.setTheme(this, theme);
   }
 
   /**

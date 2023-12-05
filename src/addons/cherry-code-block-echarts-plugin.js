@@ -36,11 +36,8 @@ export default class EChartsCodeEngine {
   }
 
   constructor(echartsOptions = {}) {
-    const { echarts, api = true, apiHost = 'https://echarts-api.vercel.app' } = echartsOptions;
-    if (!api && !echarts && !window.echarts) {
-      throw new Error('code-block-echarts-plugin[init]: Package echarts  not found.');
-    }
-    this.api = api;
+    const { echarts, apiHost = 'https://echarts-api.vercel.app' } = echartsOptions;
+    this.api = !echarts && !window.echarts;
     this.apiHost = apiHost;
     this.echartsInstanceRef = echarts || window.echarts;
     const that = this;
@@ -127,8 +124,8 @@ export default class EChartsCodeEngine {
         }
       }
     });
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-      renderChart(e.matches);
+    Event.on('Theme', 'change', function (isDark) {
+      renderChart(isDark);
     });
   }
 

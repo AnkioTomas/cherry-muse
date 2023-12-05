@@ -50,7 +50,11 @@ export default class Badge extends SyntaxBase {
 
   rule() {
     // 正则表达式匹配 {badge:文本|颜色|位置}
-    const reg = /\{badge:([^|}]+)\|?([^|}]*)\|?([^}]*)\}/g;
-    return { reg };
+    return {
+      begin: '',
+      content: '',
+      end: '',
+      reg: new RegExp('\\{badge:([^|}]+)\\|?([^|}]*)\\|?([^}]*)\\}', 'g'),
+    };
   }
 }

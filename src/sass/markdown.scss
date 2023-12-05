@@ -456,10 +456,10 @@
 }
 
 div[data-type='codeBlock'] {
-  @import 'prism/tomorrow-night';
+  @import 'prism/dark';
 
   [data-code-block-theme='default'] & {
-    @import 'prism/default';
+    @import 'prism/light';
   }
 
 

@@ -14,45 +14,45 @@
  * limitations under the License.
  */
 import ParagraphBase from '@/core/ParagraphBase';
-import { escapeFormulaPunctuations, LoadMathModule } from '@/utils/mathjax';
 import { getHTML } from '@/utils/dom';
-import { isBrowser } from '@/utils/env';
 import { getTableRule, isLookbehindSupported } from '@/utils/regexp';
 import { replaceLookbehind } from '@/utils/lookbehind-replace';
-
+import { Theme } from '@/Theme';
+import Event from '../../Event';
 /**
  * 行内公式的语法
  * 虽然叫做行内公式，Cherry依然将其视为“段落级语法”，因为其具备排他性并且需要优先渲染
  */
 export default class InlineMath extends ParagraphBase {
   static HOOK_NAME = 'inlineMath';
-  /** @type {'katex' | 'MathJax' | 'node'} */
-  engine = 'MathJax'; // 渲染引擎，默认为MathJax，MathJax支持2.x与3.x版本
-  katex;
-  MathJax;
 
   constructor({ config }) {
     super({ needCache: true });
     // 非浏览器环境下配置为 node
-    this.engine = isBrowser() ? config.engine ?? 'MathJax' : 'node';
+    const { MathJax, apiHost = 'https://math.vercel.app' } = config;
+    this.api = !MathJax && !window.MathJax;
+    this.apiHost = apiHost;
+    this.MathJax = MathJax || window.MathJax;
+    if (this.api) {
+      const that = this;
+      Event.on('Theme', 'change', function (isDark) {
+        const images = that.$engine.$cherry.wrapperDom.querySelectorAll('.Cherry-Math-Latex-Inline');
+        images.forEach(function (item, index) {
+          console.log(item, item.src, index);
+          item.src = item.src.replace(isDark ? 'color=black' : 'color=white', isDark ? 'color=white' : 'color=black');
+        });
+      });
+    }
   }
 
   toHtml(wholeMatch, leadingChar, m1) {
     if (!m1) {
       return wholeMatch;
     }
-    LoadMathModule.bind(this)('engine');
+
     const linesArr = m1.match(/\n/g);
     const lines = linesArr ? linesArr.length + 2 : 2;
     const sign = this.$engine.md5(wholeMatch);
-    if (this.engine === 'katex' && this.katex?.renderToString) {
-      // katex渲染
-      const html = this.katex.renderToString(m1, {
-        throwOnError: false,
-      });
-      const result = `${leadingChar}<span class="Cherry-InlineMath" data-type="mathBlock" data-lines="${lines}">${html}</span>`;
-      return this.pushCache(result, ParagraphBase.IN_PARAGRAPH_CACHE_KEY_PREFIX + sign);
-    }
 
     if (this.MathJax?.tex2svg) {
       // MathJax渲染
@@ -60,9 +60,10 @@ export default class InlineMath extends ParagraphBase {
       const result = `${leadingChar}<span class="Cherry-InlineMath" data-type="mathBlock" data-lines="${lines}">${svg}</span>`;
       return this.pushCache(result, ParagraphBase.IN_PARAGRAPH_CACHE_KEY_PREFIX + sign);
     }
-    // 既无MathJax又无katex时，原样输出
-    const result = `${leadingChar}<span class="Cherry-InlineMath" data-type="mathBlock"
-        data-lines="${lines}">$${escapeFormulaPunctuations(m1)}$</span>`;
+    const result = `<span class="Cherry-InlineMath " data-type="mathBlock" data-lines="${lines}"><img class="Cherry-Math-Latex-Inline" alt="latex" src="${
+      this.apiHost
+    }/?from=${encodeURIComponent(m1)}&color=${Theme.isDark() ? 'white' : 'black'}" /></span>`;
+
     return this.pushCache(result, ParagraphBase.IN_PARAGRAPH_CACHE_KEY_PREFIX + sign);
   }
 

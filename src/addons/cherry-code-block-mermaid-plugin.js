@@ -55,11 +55,8 @@ export default class MermaidCodeEngine {
   mermaidCanvas = null;
 
   constructor(mermaidOptions = {}) {
-    const { mermaid, api = true, apiHost = 'https://mermaid.ink' } = mermaidOptions;
-    if (!api && !mermaid && !window.mermaid) {
-      throw new Error('code-block-mermaid-plugin[init]: Package mermaid or mermaidAPI not found.');
-    }
-    this.api = api;
+    const { mermaid, apiHost = 'https://mermaid.ink' } = mermaidOptions;
+    this.api = !mermaid && !window.mermaid;
     this.apiHost = apiHost;
     this.options = { ...DEFAULT_OPTIONS, ...(mermaidOptions || {}) };
 

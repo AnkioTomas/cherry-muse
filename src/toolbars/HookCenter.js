@@ -41,7 +41,6 @@ import FullScreen from './hooks/FullScreen';
 import Undo from './hooks/Undo';
 import Redo from './hooks/Redo';
 import Code from './hooks/Code';
-import CodeTheme from './hooks/CodeTheme';
 import Export from './hooks/Export';
 import Settings from './hooks/Settings';
 import Underline from './hooks/Underline';
@@ -51,7 +50,6 @@ import Audio from './hooks/Audio';
 import Video from './hooks/Video';
 import Br from './hooks/Br';
 import Hr from './hooks/Hr';
-import Formula from './hooks/Formula';
 import Link from './hooks/Link';
 import Table from './hooks/Table';
 import Toc from './hooks/Toc';
@@ -97,7 +95,6 @@ const HookList = {
   quickTable: QuickTable,
   togglePreview: TogglePreview,
   code: Code,
-  codeTheme: CodeTheme,
   export: Export,
   settings: Settings,
   fullScreen: FullScreen,
@@ -112,7 +109,6 @@ const HookList = {
   video: Video,
   br: Br,
   hr: Hr,
-  formula: Formula,
   link: Link,
   table: Table,
   toc: Toc,

@@ -113,27 +113,7 @@ if(window.outerWidth<=600){
   ];
 }
 window.cherry = new Cherry(basicConfig);
-function setTheme(isDark) {
-  if (isDark) {
-    window.cherry.setTheme('dark');
-    document.querySelector('.cherry').setAttribute('data-code-block-theme', 'tomorrow-night');
-  } else {
-    window.cherry.setTheme('light');
-    document.querySelector('.cherry').setAttribute('data-code-block-theme', 'default');
-  }
-}
-window.matchMedia('(prefers-color-scheme:  dark)').addEventListener('change', () => {
-  const systemPrefersDarkScheme = window.matchMedia('(prefers-color-scheme:  dark)').matches;
-  setTheme(systemPrefersDarkScheme);
-});
-setTheme(isDark)
-window.addEventListener('resize',function () {
-  if(window.outerWidth>600){
-    window.cherry.switchModel('edit&preview');
-  }else{
-    window.cherry.switchModel('editOnly');
-  }
-})
+
 
 fetch('./markdown/test.md').then((response) => response.text()).then((value) => {
   window.cherry.setMarkdown(value)

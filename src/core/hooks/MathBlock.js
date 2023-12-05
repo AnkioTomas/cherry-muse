@@ -14,31 +14,33 @@
  * limitations under the License.
  */
 import ParagraphBase from '@/core/ParagraphBase';
-import { escapeFormulaPunctuations, LoadMathModule } from '@/utils/mathjax';
 import { getHTML } from '@/utils/dom';
-import { isBrowser } from '@/utils/env';
 import { isLookbehindSupported } from '@/utils/regexp';
 import { replaceLookbehind } from '@/utils/lookbehind-replace';
-
+import { Theme } from '@/Theme';
+import Event from '../../Event';
 export default class MathBlock extends ParagraphBase {
   static HOOK_NAME = 'mathBlock';
-  /**
-   * 块级公式语法
-   * 该语法具有排他性，并且需要优先其他段落级语法进行渲染
-   * @type {'katex' | 'MathJax' | 'node'}
-   */
-  engine = 'MathJax'; // 渲染引擎，默认为MathJax，MathJax支持2.x与3.x版本
-  katex;
-  MathJax;
 
   constructor({ config }) {
     super({ needCache: true });
     // 非浏览器环境下配置为 node
-    this.engine = isBrowser() ? config.engine ?? 'MathJax' : 'node';
+    const { MathJax, apiHost = 'https://math.vercel.app' } = config;
+    this.api = !MathJax && !window.MathJax;
+    this.apiHost = apiHost;
+    this.MathJax = MathJax || window.MathJax;
+    if (this.api) {
+      const that = this;
+      Event.on('Theme', 'change', function (isDark) {
+        const images = that.$engine.$cherry.wrapperDom.querySelectorAll('.Cherry-Math-Latex');
+        images.forEach(function (item, index) {
+          item.src = item.src.replace(isDark ? 'color=black' : 'color=white', isDark ? 'color=white' : 'color=black');
+        });
+      });
+    }
   }
 
   toHtml(wholeMatch, lineSpace, leadingChar, content) {
-    LoadMathModule.bind(this)('engine');
     // 去掉开头的空字符，去掉结尾的换行符
     const wholeMatchWithoutSpace = wholeMatch.replace(/^[ \f\r\t\v]*/, '').replace(/\s*$/, '');
     // 去掉匹配到的第一个换行符
@@ -56,16 +58,6 @@ export default class MathBlock extends ParagraphBase {
     // 目前的机制还没有测过lines为负数的情况，先不处理
     lines = lines > 0 ? lines : 0;
 
-    if (this.engine === 'katex') {
-      // katex渲染
-      const html = this.katex.renderToString(content, {
-        throwOnError: false,
-        displayMode: true,
-      });
-      const result = `<div data-sign="${sign}" class="Cherry-Math" data-type="mathBlock"
-            data-lines="${lines}">${html}</div>`;
-      return leadingChar + this.getCacheWithSpace(this.pushCache(result, sign, lines), wholeMatch);
-    }
     if (this.MathJax?.tex2svg) {
       // MathJax渲染
       const svg = getHTML(this.MathJax.tex2svg(content), true);
@@ -73,10 +65,10 @@ export default class MathBlock extends ParagraphBase {
             data-lines="${lines}">${svg}</div>`;
       return leadingChar + this.getCacheWithSpace(this.pushCache(result, sign, lines), wholeMatch);
     }
-
-    // 既无MathJax又无katex时，原样输出
     const result = `<div data-sign="${sign}" class="Cherry-Math" data-type="mathBlock"
-          data-lines="${lines}">$$${escapeFormulaPunctuations(content)}$$</div>`;
+            data-lines="${lines}"><img class="Cherry-Math-Latex" alt="latex" src="${
+      this.apiHost
+    }/?from=${encodeURIComponent(content)}&color=${Theme.isDark() ? 'white' : 'black'}" /></div>`;
     return leadingChar + this.getCacheWithSpace(this.pushCache(result, sign, lines), wholeMatch);
   }
 
