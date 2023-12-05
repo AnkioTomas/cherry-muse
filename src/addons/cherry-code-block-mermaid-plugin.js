@@ -86,11 +86,12 @@ export default class MermaidCodeEngine {
     });
   }
 
-  _fromUint8Array(u8a) {
+  fromUint8Array(u8a) {
     const fromCC = String.fromCharCode.bind(String);
     const maxargs = 0x1000;
     const strs = [];
     for (let i = 0, l = u8a.length; i < l; i += maxargs) {
+      // eslint-disable-next-line prefer-spread
       strs.push(fromCC.apply(null, u8a.subarray(i, i + maxargs)));
     }
     return btoa(strs.join(''));
@@ -109,7 +110,7 @@ export default class MermaidCodeEngine {
     };
     const data = new TextEncoder().encode(JSON.stringify(convert));
     const compressed = deflate(data, { level: 9 });
-    const image = this._fromUint8Array(compressed);
+    const image = this.fromUint8Array(compressed);
     return `<img src="${this.apiHost}/img/pako:${encodeURIComponent(image)}" style="max-width: 100%"  alt=""/>`;
   }
   render(src, sign, $engine, config = {}) {

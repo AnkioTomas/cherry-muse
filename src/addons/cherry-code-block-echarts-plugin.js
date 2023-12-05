@@ -36,13 +36,16 @@ export default class EChartsCodeEngine {
   }
 
   constructor(echartsOptions = {}) {
-    const { echarts } = echartsOptions;
-    if (!echarts && !window.echarts) {
+    const { echarts, api = true, apiHost = 'https://echarts-api.vercel.app' } = echartsOptions;
+    if (!api && !echarts && !window.echarts) {
       throw new Error('code-block-echarts-plugin[init]: Package echarts  not found.');
     }
+    this.api = api;
+    this.apiHost = apiHost;
     this.echartsInstanceRef = echarts || window.echarts;
     const that = this;
     Event.on('previewer', 'beforeRenderDom', function ([sign, dom]) {
+      if (that.api) return;
       const chartClazz = `echarts-${sign}`;
       const echartsCanvas = dom.querySelectorAll(`.${chartClazz}`);
       if (echartsCanvas) {
@@ -58,6 +61,7 @@ export default class EChartsCodeEngine {
       }
     });
     Event.on('previewer', 'afterRenderDom', function ([sign, dom]) {
+      if (that.api) return;
       const chartClazz = `echarts-${sign}`;
       const item = sessionStorage.getItem(chartClazz);
       if (!item) return;
@@ -89,6 +93,14 @@ export default class EChartsCodeEngine {
         return;
       }
       for (const queryElement of query) {
+        if (that.api) {
+          if (isDark) {
+            queryElement.src = queryElement.src.replace('theme%22%3A%22%22', 'theme%22%3A%22dark%22');
+          } else {
+            queryElement.src = queryElement.src.replace('theme%22%3A%22dark%22', 'theme%22%3A%22%22');
+          }
+          continue;
+        }
         const item = sessionStorage.getItem(queryElement.dataset.json);
         if (!item) continue;
         const json = JSON.parse(item);
@@ -120,17 +132,29 @@ export default class EChartsCodeEngine {
     });
   }
 
+  renderFromApi(json, isDark) {
+    const data = {
+      theme: isDark ? 'dark' : '',
+      width: 600,
+      height: 400,
+      options: json,
+    };
+    return `<img class='echart-container' style="max-width: 100%" src='${this.apiHost}?data=${encodeURIComponent(
+      JSON.stringify(data),
+    )}'  alt=""/>`;
+  }
   render(src, sign, $engine, config = {}) {
     let $sign = sign;
     if (!$sign) {
       $sign = Math.round(Math.random() * 100000000);
     }
+
     const graphId = `echarts-${$sign}`;
 
     const json = extraJSON(src);
 
-    if (json === {}) {
-      return ``;
+    if (this.api) {
+      return this.renderFromApi(json, window.matchMedia('(prefers-color-scheme: dark)').matches);
     }
 
     sessionStorage.setItem(graphId, JSON.stringify(json));
