@@ -23,7 +23,6 @@ export default class Export extends MenuBase {
     this.updateMarkdown = false;
     this.subMenuConfig = [
       { noIcon: true, name: 'exportToPdf', onclick: this.bindSubClick.bind(this, 'pdf') },
-      { noIcon: true, name: 'exportScreenshot', onclick: this.bindSubClick.bind(this, 'screenShot') },
       { noIcon: true, name: 'exportMarkdownFile', onclick: this.bindSubClick.bind(this, 'markdown') },
       { noIcon: true, name: 'exportHTMLFile', onclick: this.bindSubClick.bind(this, 'html') },
     ];
