@@ -52,7 +52,7 @@ export default class CardCodeEngine {
     }
     return `<div class="${
       type === 'card' ? 'cardList' : 'cardImgList'
-    }Container"><div class="card-list">${listDOM}</div>`;
+    }Container"><div class="card-list">${listDOM}</div></div>`;
   }
   getCardListDOM(dataList, row) {
     let listDOM = '';
