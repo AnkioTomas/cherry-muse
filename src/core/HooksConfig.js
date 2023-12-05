@@ -13,9 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// import Bold from './hooks/Bold';
-// import Italic from './hooks/Italic';
-// import Underline from './hooks/Underline';
 import Color from './hooks/Color';
 import BackgroundColor from './hooks/BackgroundColor';
 import Size from './hooks/Size';
@@ -45,7 +42,6 @@ import HtmlBlock from './hooks/HtmlBlock';
 import Emoji from './hooks/Emoji';
 import Underline from './hooks/Underline';
 import HighLight from './hooks/HighLight';
-import Suggester from './hooks/Suggester';
 import Ruby from './hooks/Ruby';
 import Panel from './hooks/Panel';
 import Detail from './hooks/Detail';
@@ -91,12 +87,11 @@ const hooksConfig = [
   Sub,
   Sup,
   Mark, // 高亮
-  Badge,
+  Badge, // 徽章
   Ruby,
   Strikethrough,
   Underline,
   HighLight,
-  Suggester,
 ];
 
 export default hooksConfig;

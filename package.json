@@ -120,7 +120,6 @@
     "husky": "~7.0.4",
     "jest": "^27.5.1",
     "jest-diff": "^27.5.1",
-    "juice": "^8.0.0",
     "lint-staged": "~12.5.0",
     "lodash": "^4.17.20",
     "md5": "^2.2.1",
@@ -151,7 +150,8 @@
   "dependencies": {
     "@types/codemirror": "^0.0.108",
     "@types/dompurify": "^2.2.3",
-    "jsdom": "~19.0.0"
+    "jsdom": "~19.0.0",
+    "pako": "^2.1.0"
   },
   "resolutions": {
     "glob-parent": "5.1.2",

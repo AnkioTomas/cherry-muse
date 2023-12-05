@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import html2canvas from 'html2canvas';
 
 /**
  * 先把body上的内容隐藏起来
@@ -69,21 +68,6 @@ const getReadyToExport = (previewDom, cb) => {
 };
 
 /**
- * 下载文件
- * @param {String} downloadUrl 图片本地地址
- * @param {String} fileName 导出图片文件名
- */
-const fileDownload = (downloadUrl, fileName) => {
-  const aLink = document.createElement('a');
-  aLink.style.display = 'none';
-  aLink.href = downloadUrl;
-  aLink.download = `${fileName}.png`;
-  document.body.appendChild(aLink);
-  aLink.click();
-  document.body.removeChild(aLink);
-};
-
-/**
  * 利用window.print导出成PDF
  * @param {HTMLElement} previewDom 预览区域的dom
  * @param {String} fileName 导出PDF文件名
@@ -95,28 +79,6 @@ export function exportPDF(previewDom, fileName) {
     window.print();
     thenFinish();
     document.title = oldTitle;
-  });
-}
-
-/**
- * 利用canvas将html内容导出成图片
- * @param {HTMLElement} previewDom 预览区域的dom
- * @param {String} fileName 导出图片文件名
- */
-export function exportScreenShot(previewDom, fileName) {
-  getReadyToExport(previewDom, (/** @type {HTMLElement}*/ cherryPreviewer, /** @type {function}*/ thenFinish) => {
-    window.scrollTo(0, 0);
-    html2canvas(cherryPreviewer, {
-      allowTaint: true,
-      height: cherryPreviewer.clientHeight,
-      width: cherryPreviewer.clientWidth,
-      scrollY: 0,
-      scrollX: 0,
-    }).then((canvas) => {
-      const imgData = canvas.toDataURL('image/jpeg');
-      fileDownload(imgData, fileName);
-      thenFinish();
-    });
   });
 }
 
