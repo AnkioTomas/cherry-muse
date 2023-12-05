@@ -17,7 +17,7 @@
 import mergeWith from 'lodash/mergeWith';
 import deflate from '@/libs/rawdeflate';
 
-function encode64(data) {
+export function encode64(data) {
   let r = '';
   for (let i = 0; i < data.length; i += 3) {
     if (i + 2 === data.length) {
