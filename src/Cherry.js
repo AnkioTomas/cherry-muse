@@ -17,13 +17,10 @@ import mergeWith from 'lodash/mergeWith';
 import Editor from './Editor';
 import Engine from './Engine';
 import Previewer from './Previewer';
-import Bubble from './toolbars/Bubble';
-import FloatMenu from './toolbars/FloatMenu';
 import Toolbar from './toolbars/Toolbar';
 import ToolbarRight from './toolbars/ToolbarRight';
 import { createElement } from './utils/dom';
-import Sidebar from './toolbars/Sidebar';
-import { customizer, getThemeFromLocal, changeTheme } from './utils/config';
+import { customizer, getThemeFromLocal } from './utils/config';
 import NestedError, { $expectTarget } from './utils/error';
 import getPosBydiffs from './utils/recount-pos';
 import defaultConfig from './Cherry.config';
@@ -562,7 +559,7 @@ export default class Cherry extends CherryStatic {
   /**
    * 导出预览区域内容
    * @public
-   * @param {'pdf' | 'img' | 'markdown' | 'html'} [type='pdf']
+   * @param {'pdf'  | 'markdown' | 'html'} [type='pdf']
    * 'pdf'：导出成pdf文件; 'img'：导出成png图片; 'markdown'：导出成markdown文件; 'html'：导出成html文件;
    * @param {string} [fileName] 导出文件名(默认为当前第一行内容|'cherry-export')
    */

@@ -32,9 +32,11 @@ export default class MathBlock extends ParagraphBase {
     if (this.api) {
       const that = this;
       Event.on('Theme', 'change', function (isDark) {
-        const images = that.$engine.$cherry.wrapperDom.querySelectorAll('.Cherry-Math-Latex');
+        const images = that.$engine.$cherry.wrapperDom.querySelectorAll('img.Cherry-Math-Latex');
         images.forEach(function (item, index) {
-          item.src = item.src.replace(isDark ? 'color=black' : 'color=white', isDark ? 'color=white' : 'color=black');
+          if (item instanceof HTMLImageElement) {
+            item.src = item.src.replace(isDark ? 'color=black' : 'color=white', isDark ? 'color=white' : 'color=black');
+          }
         });
       });
     }

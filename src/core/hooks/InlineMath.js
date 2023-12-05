@@ -36,10 +36,11 @@ export default class InlineMath extends ParagraphBase {
     if (this.api) {
       const that = this;
       Event.on('Theme', 'change', function (isDark) {
-        const images = that.$engine.$cherry.wrapperDom.querySelectorAll('.Cherry-Math-Latex-Inline');
-        images.forEach(function (item, index) {
-          console.log(item, item.src, index);
-          item.src = item.src.replace(isDark ? 'color=black' : 'color=white', isDark ? 'color=white' : 'color=black');
+        const images = that.$engine.$cherry.wrapperDom.querySelectorAll('img.Cherry-Math-Latex-Inline');
+        images.forEach(function (item) {
+          if (item instanceof HTMLImageElement) {
+            item.src = item.src.replace(isDark ? 'color=black' : 'color=white', isDark ? 'color=white' : 'color=black');
+          }
         });
       });
     }

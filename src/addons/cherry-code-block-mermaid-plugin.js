@@ -73,12 +73,13 @@ export default class MermaidCodeEngine {
       if (!mermaidCanvas) {
         return;
       }
-      for (const mermaidCanva of mermaidCanvas) {
+      mermaidCanvas.forEach(function (mermaidCanva) {
         const id = mermaidClazz + Math.floor(1000 + Math.random() * 9000);
         that.mermaidAPIRefs.render(id, item).then(function (svg) {
           mermaidCanva.innerHTML = svg.svg;
         });
-      }
+      });
+
       sessionStorage.removeItem(mermaidClazz);
     });
   }

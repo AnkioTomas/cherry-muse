@@ -32,7 +32,11 @@ export default class Mark extends SyntaxBase {
   }
 
   rule() {
-    const reg = /==(.*?)==/g;
-    return { reg };
+    return {
+      begin: '',
+      content: '',
+      end: '',
+      reg: new RegExp('==(.*?)==', 'g'),
+    };
   }
 }

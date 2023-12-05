@@ -202,13 +202,11 @@ export default class FormulaHandler {
                 /** @type {MathBlock} */
                 // @ts-ignore
                 const hook = this.editor.$cherry.engine.hooks.paragraph.find((hook) => hook instanceof MathBlock);
-                if (hook && hook.engine === 'MathJax') {
+                if (hook) {
                   window.MathJax?.texReset();
                   window.MathJax?.tex2mmlPromise?.(code, { display: true }).then((mml) => {
                     if (name === 'mathml') {
                       copyTextByClipboard(mml);
-                    } else {
-                      // TODO: docx
                     }
                   });
                 }

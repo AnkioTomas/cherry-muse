@@ -12,9 +12,9 @@ export const Theme = {
     Theme.setTheme($cherry, isDark);
     window.addEventListener('resize', function () {
       if (window.outerWidth > 600) {
-        window.cherry.switchModel('edit&preview');
+        $cherry.switchModel('edit&preview');
       } else {
-        window.cherry.switchModel('editOnly');
+        $cherry.switchModel('editOnly');
       }
     });
   },
