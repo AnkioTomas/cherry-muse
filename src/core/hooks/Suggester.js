@@ -27,6 +27,7 @@ import { isLookbehindSupported } from '@/utils/regexp';
 import { replaceLookbehind } from '@/utils/lookbehind-replace';
 import { isBrowser } from '@/utils/env';
 import mergeWith from 'lodash/mergeWith';
+import { Theme } from '@/Theme';
 
 /**
  * @typedef {import('codemirror')} CodeMirror
@@ -215,7 +216,7 @@ class SuggesterPanel {
     }
   }
 
-  panelWrap = `<div class="cherry-suggester-panel"></div>`;
+  panelWrap = `<div class="cherry-suggester-panel cherry__theme__${Theme.getTheme()}"></div>`;
 
   hasEditor() {
     return !!this.editor && !!this.editor.editor.display && !!this.editor.editor.display.wrapper;

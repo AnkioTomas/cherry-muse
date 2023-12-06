@@ -186,7 +186,9 @@ $mdSvgTextColor: $light-dark;
     }
   }
 
-  .cherry-suggester-panel {
+
+}
+.cherry__theme__dark.cherry-suggester-panel {
     background: $dark-dark;
     box-shadow: none;
 
@@ -194,11 +196,11 @@ $mdSvgTextColor: $light-dark;
       color: $light;
 
       &.cherry-suggester-panel__item--selected {
-        background-color: $dark-dark;
+        background-color: $light-dark;
         color: $primary-dark;
       }
     }
-  }
+
 
   .cherry-suggestion {
     background-color: $dark-dark;
