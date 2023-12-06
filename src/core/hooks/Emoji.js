@@ -26,31 +26,28 @@ export function convertToUnicode(code) {
   // 转换为 Unicode 字符
   return fromCodePoint(...parts);
 }
-export function fuzzySearchKeysWithValues($cherry, query) {
+export function fuzzySearchKeysWithValues(query, options) {
   const keys = Object.keys(gfmUnicode.emojis); // 获取所有键
   const queryLower = query; // 将查询转换为小写以实现大小写不敏感的搜索
   const combinedValues = [];
   for (const key of keys) {
     if (key.includes(queryLower)) {
-      if ($cherry.options.engine.syntax.emoji.useUnicode) {
-        combinedValues.push({
-          key: convertToUnicode(gfmUnicode.emojis[key]),
-          value: `:${key}:`,
-        }); // 合并匹配键的值
-      } else {
-        const src = $cherry.options.engine.syntax.emoji.resourceURL.replace(
-          /\$\{code\}/g,
-          gfmUnicode.emojis[key].toLowerCase(),
-        );
-        combinedValues.push({
-          key: `<img class="emoji" src="${src}" alt="${_e(key)}" />`,
-          value: `:${key}:`,
-        }); // 合并匹配键的值
-      }
+      combinedValues.push({
+        key: getEmoji(key, options),
+        value: `:${key}:`,
+      }); // 合并匹配键的值
     }
   }
 
   return combinedValues.length <= 0 ? false : combinedValues;
+}
+
+function getEmoji(key, options) {
+  if (options.useUnicode) {
+    return convertToUnicode(gfmUnicode.emojis[key]);
+  }
+  const src = options.resourceURL.replace(/\$\{code\}/g, gfmUnicode.emojis[key].toLowerCase());
+  return `<img class="emoji" src="${src}" alt="${_e(key)}" />`;
 }
 
 function fromCodePoint(...args) {
@@ -122,13 +119,7 @@ export default class Emoji extends SyntaxBase {
       if (this.options.customHandled && typeof this.options.customRenderer === 'function') {
         return this.options.customRenderer(emojiKey);
       }
-      let emojiCode = this.options.emojis[emojiKey];
-      if (this.options.useUnicode) {
-        return convertToUnicode(emojiCode);
-      }
-      emojiCode = emojiCode.toLowerCase();
-      const src = this.options.resourceURL.replace(/\$\{code\}/g, emojiCode);
-      return `<img class="emoji" src="${src}" alt="${_e(emojiKey)}" />`;
+      return getEmoji(emojiKey, this.options);
     });
   }
 
@@ -137,7 +128,7 @@ export default class Emoji extends SyntaxBase {
     const ret = {
       // ?<left>
       begin: ':',
-      content: '([a-zA-Z0-9+_]+?)',
+      content: '([a-zA-Z0-9+_-]+?)',
       // ?<right>
       end: ':',
     };

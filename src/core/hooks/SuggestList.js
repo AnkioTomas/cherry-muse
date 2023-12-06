@@ -87,7 +87,7 @@ export const systemSuggests = [
   {
     keyword: ':',
     data(keywords, callback, $cherry) {
-      callback(fuzzySearchKeysWithValues($cherry, keywords));
+      callback(fuzzySearchKeysWithValues(keywords, $cherry.options.engine.syntax.emoji));
     },
   },
   {
