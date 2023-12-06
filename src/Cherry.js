@@ -32,6 +32,7 @@ import { urlProcessorProxy } from './UrlCache';
 import { CherryStatic } from './CherryStatic';
 import { LIST_CONTENT } from '@/utils/regexp';
 import { Theme } from '@/Theme';
+import SideToc from '@/toolbars/SideToc';
 
 /** @typedef {import('~types/cherry').CherryOptions} CherryOptions */
 export default class Cherry extends CherryStatic {
@@ -119,6 +120,8 @@ export default class Cherry extends CherryStatic {
 
     // 蒙层dom，用来拖拽编辑区&预览区宽度时展示蒙层
     const wrapperDom = this.createWrapper();
+    // 创建目录预览区
+    this.tocList = new SideToc().createTocList();
     // 创建编辑区
     const editor = this.createEditor();
     // 创建预览区
@@ -136,6 +139,7 @@ export default class Cherry extends CherryStatic {
 
     const wrapperFragment = document.createDocumentFragment();
     wrapperFragment.appendChild(this.toolbar.options.dom);
+    wrapperFragment.appendChild(this.tocList);
     wrapperFragment.appendChild(editor.options.editorDom);
     // 创建预览区域的侧边工具栏
     if (!this.options.previewer.dom) {
@@ -499,6 +503,7 @@ export default class Cherry extends CherryStatic {
    * @param {import('codemirror').Editor} codemirror
    */
   editText(_evt, codemirror) {
+    const that = this;
     try {
       if (this.timer) {
         clearTimeout(this.timer);
@@ -511,6 +516,8 @@ export default class Cherry extends CherryStatic {
         if (this.options.callback.afterChange) {
           this.options.callback.afterChange(markdownText, html);
         }
+
+        Event.emit('editor', 'change', that);
         // 强制每次编辑（包括undo、redo）编辑器都会自动滚动到光标位置
         codemirror.scrollIntoView(null);
       }, 50);

@@ -460,7 +460,15 @@ $mdSvgTextColor: $light-dark;
   }
 
 }
-.emoji-panel {
-  border: 1px solid $light-dark;
-  background-color: $dark-dark;
+.cherry__theme__dark .cherry-toc {
+  background-color: $dark-light;
+  a{
+    color: $primary-light;
+  }
+  a:hover{
+    color: $primary-very-light;
+  }
+  li:hover {
+    background-color: $dark-dark;
+  }
 }

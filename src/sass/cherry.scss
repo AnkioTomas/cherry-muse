@@ -127,7 +127,7 @@
 
 .cherry-dropdown {
   position: absolute;
-  width: 130px;
+  width: 140px;
   min-height: 40px;
   background: #fff;
   //border: 1px solid $borderColor;
@@ -188,6 +188,7 @@
   box-shadow: $toolbarShadowLight;
   background: $toolbarBgLight;
   overflow: hidden;
+
   .icon-loading {
     &.loading {
       display: inline-block;
@@ -256,7 +257,7 @@
 
   &-button {
     float: left;
-    padding: 0 12px;
+    padding: 0 5px;
     // margin: 4px 0;
     height: 38px;
     color: $toolbarBtnColorLight;
@@ -296,53 +297,40 @@
   }
 }
 
-.cherry-sidebar {
-  width: 30px;
+.cherry-toc {
+  width: 240px;
   position: absolute;
   top: 48px;
-  right: 7px;
+  left: 7px;
   z-index: 11;
   bottom: 0;
   overflow: hidden;
-
-  .cherry-toolbar-button {
-    height: 30px;
-    padding: 3px 12px 0 6px;
-
-    &:hover {
-      background: transparent;
+  background-color: $light;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  overflow-y: auto;
+  a{
+    text-decoration: none;
+    color: $primary;
+  }
+  a:hover{
+    color: $primary-light;
+  }
+  li:hover{
+    background-color: $primary-very-light;
+  }
+  ul {
+    cursor: pointer;
+    list-style-type: none; /* 移除列表符号 */
+    padding: 0;
+    ul {
+      margin-top: 5px; /* 子列表的顶部间距 */
     }
-
-    .icon-loading {
-      &.loading {
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-      }
-
-      &.loading:after {
-        content: ' ';
-        display: block;
-        width: 8px;
-        height: 8px;
-        margin-left: 2px;
-        margin-top: -2px;
-        border-radius: 50%;
-        border: 2px solid #000;
-        border-color: #000 transparent #000 transparent;
-        animation: loading 1.2s linear infinite;
-      }
-    }
-
-    @keyframes loading {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+  }
+  li {
+    padding:3px 0 3px 8px;
+    border-radius: 5px;
+    margin-bottom: 5px; /* 列表项之间的间距 */
   }
 }
 
@@ -364,7 +352,7 @@
 
   .cherry-toolbar-button {
     float: left;
-    padding: 0 9px;
+    padding: 0 5px;
     margin: 0;
     height: $lineHeight;
     line-height: $lineHeight;
@@ -385,10 +373,6 @@
       height: 25px;
     }
 
-    .ch-icon {
-      color: #aaa;
-      font-size: 12px;
-    }
 
     &:hover {
       background: rgba(0, 0, 0, 0.05);
@@ -431,6 +415,7 @@
         pointer-events: none;
         z-index: 11;
       }
+
       &::after {
         content: '';
         display: block;
@@ -442,13 +427,16 @@
         z-index: 11;
       }
     }
+
     &--typewriter {
       .CodeMirror-lines {
         position: relative;
+
         &::before {
           content: '';
           display: block;
         }
+
         &::after {
           content: '';
           display: block;
@@ -583,9 +571,11 @@
   position: absolute;
   z-index: 1;
 }
+
 .cherry-previewer-codeBlock-hover-handler {
   z-index: 0;
   position: absolute;
+
   .cherry-copy-code-block,
   .cherry-edit-code-block {
     position: relative;
@@ -604,18 +594,22 @@
     background-color: #eee;
     border-color: #3582fb;
   }
+
   .cherry-copy-code-block {
     right: 10px;
   }
+
   .cherry-edit-code-block {
     right: 10+25+10px;
   }
+
   .cherry-copy-code-block:hover,
   .cherry-edit-code-block:hover {
     color: #eee;
     background-color: #3582fb;
     border-color: #eee;
   }
+
   .cherry-code-preview-lang-select {
     position: absolute;
     transform: translate(2px, -50%);
@@ -743,7 +737,8 @@
   max-height: 500px;
   box-shadow: 0 2px 8px 1px $dark-very-light;
   overflow-y: auto;
-text-align: center;
+  text-align: center;
+
   .cherry-suggester-panel__item {
     border: none;
     white-space: nowrap;
@@ -758,6 +753,7 @@ text-align: center;
       text-decoration: none;
       color: $primary-dark;
     }
+
     & > i {
       display: inline-block;
       transform: translateY(2px);
