@@ -458,4 +458,7 @@ $mdSvgTextColor: $light-dark;
   }
 
 }
-
+.emoji-panel {
+  border: 1px solid $light-dark;
+  background-color: $dark-dark;
+}

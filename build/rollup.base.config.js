@@ -60,7 +60,7 @@ const options = {
     // 我到要看看到底打包了什么妖魔鬼怪
     visualizer({
       filename: './dist/stats.html', // 输出文件的路径和名称
-      open: true, // 完成后是否自动打开报告
+      open: false, // 完成后是否自动打开报告
     }),
     eslint({
       exclude: ['node_modules/**', 'src/libs/**'],

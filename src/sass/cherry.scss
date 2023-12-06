@@ -737,11 +737,12 @@
   position: absolute;
   left: 0;
   top: 0;
-  background: $light-dark;
+  background: $light;
   // border: 1px solid #ccc;
   border-radius: 2px;
   max-height: 500px;
-  box-shadow: 0 2px 8px 1px $dark-dark;
+  box-shadow: 0 2px 8px 1px $dark-very-light;
+  overflow-y: auto;
 
   .cherry-suggester-panel__item {
     border: none;
@@ -753,7 +754,7 @@
     cursor: pointer;
 
     &.cherry-suggester-panel__item--selected {
-      background-color: $light;
+      background-color: $dark-very-light;
       text-decoration: none;
       color: $primary-dark;
     }

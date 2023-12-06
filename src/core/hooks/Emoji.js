@@ -19,6 +19,40 @@ import { compileRegExp } from '@/utils/regexp';
 import { gfmUnicode } from './Emoji.config';
 
 // ref: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
+export function convertToUnicode(code) {
+  // 分割字符串为两部分
+  const parts = code.split('-').map((part) => parseInt(part, 16));
+
+  // 转换为 Unicode 字符
+  return fromCodePoint(...parts);
+}
+export function fuzzySearchKeysWithValues($cherry, query) {
+  const keys = Object.keys(gfmUnicode.emojis); // 获取所有键
+  const queryLower = query; // 将查询转换为小写以实现大小写不敏感的搜索
+  const combinedValues = [];
+  for (const key of keys) {
+    if (key.includes(queryLower)) {
+      if ($cherry.options.engine.syntax.emoji.useUnicode) {
+        combinedValues.push({
+          key: convertToUnicode(gfmUnicode.emojis[key]),
+          value: `:${key}:`,
+        }); // 合并匹配键的值
+      } else {
+        const src = $cherry.options.engine.syntax.emoji.resourceURL.replace(
+          /\$\{code\}/g,
+          gfmUnicode.emojis[key].toLowerCase(),
+        );
+        combinedValues.push({
+          key: `<img class="emoji" src="${src}" alt="${_e(key)}" />`,
+          value: `:${key}:`,
+        }); // 合并匹配键的值
+      }
+    }
+  }
+
+  return combinedValues.length <= 0 ? false : combinedValues;
+}
+
 function fromCodePoint(...args) {
   const codeUnits = [];
   let codeLen = 0;
@@ -89,16 +123,10 @@ export default class Emoji extends SyntaxBase {
         return this.options.customRenderer(emojiKey);
       }
       let emojiCode = this.options.emojis[emojiKey];
-      if (typeof emojiCode !== 'string') {
-        return match;
-      }
       if (this.options.useUnicode) {
-        const codes = emojiCode.split('-').map((unicode) => `0x${unicode}`); // convert to hex string
-        return fromCodePoint(...codes);
+        return convertToUnicode(emojiCode);
       }
-      if (this.options.upperCase) {
-        emojiCode = emojiCode.toUpperCase();
-      }
+      emojiCode = emojiCode.toLowerCase();
       const src = this.options.resourceURL.replace(/\$\{code\}/g, emojiCode);
       return `<img class="emoji" src="${src}" alt="${_e(emojiKey)}" />`;
     });
