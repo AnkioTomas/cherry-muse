@@ -23,7 +23,7 @@ import { getListFromStr } from '@/utils/regexp';
 export default class Checklist extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('checklist', 'checklist');
+    this.setName('checklist', 'done_outline');
   }
 
   /**

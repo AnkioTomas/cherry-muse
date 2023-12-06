@@ -20,7 +20,7 @@ import MenuBase from '@/toolbars/MenuBase';
 export default class BrTable extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('柱状图表格', 'table');
+    this.setName('柱状图表格', 'table_chart');
   }
 
   /**

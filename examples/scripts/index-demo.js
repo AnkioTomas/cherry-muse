@@ -57,10 +57,9 @@ var basicConfig = {
   },
   toolbars: {
     toolbar: [
-
+        'tocList',
       {
-        strikethrough: ['strikethrough', 'underline', 'sub', 'sup', 'ruby',  'bold',
-          'italic',],
+        strikethrough: ['strikethrough', 'underline', 'sub', 'sup', 'ruby',  'bold', 'italic',],
       },
       'size',
       '|',
@@ -80,11 +79,12 @@ var basicConfig = {
         'echarts',
         'card',
       'togglePreview',
-        'switchModel'
+
+      'redo'
 
     ],
-    toolbarRight: ['fullScreen', '|', 'export', '|'],
-    bubble: false, // array or false
+    toolbarRight: ['fullScreen', '|', 'export', '|', 'switchModel'],
+    bubble: true, // array or false
     sidebar: false,
     customMenu: {
 

@@ -20,7 +20,7 @@ import MenuBase from '@/toolbars/MenuBase';
 export default class LineTable extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('折线图表格', 'table');
+    this.setName('折线图表格', 'table_chart_view');
   }
 
   /**

@@ -22,7 +22,7 @@ import { getSelection } from '@/utils/selection';
 export default class Detail extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('detail', 'insertFlow');
+    this.setName('detail', 'more_horiz');
     this.detailRule = getDetailRule().reg;
   }
 

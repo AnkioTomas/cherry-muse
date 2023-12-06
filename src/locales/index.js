@@ -15,9 +15,7 @@
  */
 
 import zhCn from './zh_CN';
-import enUs from './en_US';
 
 export default {
   zh_CN: zhCn,
-  en_US: enUs,
 };

@@ -28,7 +28,7 @@ import { createElement } from '@/utils/dom';
 /**
  *
  * @param {HTMLElement} targetDom
- * @param {'absolute' | 'fixed' | 'sidebar'} [positionModel = 'absolute']
+ * @param {'absolute' | 'fixed'} [positionModel = 'absolute']
  * @returns {Pick<DOMRect, 'left' | 'top' | 'width' | 'height'>}
  */
 function getPosition(targetDom, positionModel = 'absolute') {
@@ -36,16 +36,7 @@ function getPosition(targetDom, positionModel = 'absolute') {
   if (positionModel === 'fixed') {
     return pos;
   }
-  // 侧边栏按钮做个特殊处理
-  if (positionModel === 'sidebar') {
-    const parent = MenuBase.getTargetParentByButton(targetDom);
-    return {
-      left: parent.offsetLeft - 130 + pos.width,
-      top: targetDom.offsetTop + pos.height / 2,
-      width: pos.width,
-      height: pos.height,
-    };
-  }
+
   return { left: targetDom.offsetLeft, top: targetDom.offsetTop, width: pos.width, height: pos.height };
 }
 
@@ -65,7 +56,7 @@ export default class MenuBase {
 
   /**
    *
-   * @param {*} $cherry
+   * @param {Cherry} $cherry
    */
   constructor($cherry) {
     this.$cherry = $cherry;
@@ -83,7 +74,7 @@ export default class MenuBase {
     /**
      * 子菜单的定位方式
      * @property
-     * @type {'absolute' | 'fixed' | 'sidebar'}
+     * @type {'absolute' | 'fixed' }
      */
     this.positionModel = 'absolute';
     // eslint-disable-next-line no-underscore-dangle
@@ -150,7 +141,8 @@ export default class MenuBase {
     });
     // 如果有图标，则添加图标
     if (this.iconName && !this.noIcon) {
-      const icon = createElement('i', `ch-icon ch-icon-${this.iconName}`);
+      const icon = createElement('i', `material-symbols-outlined`);
+      icon.innerText = this.iconName;
       span.appendChild(icon);
     }
     // 二级菜单强制显示文字，没有图标的按钮也显示文字
@@ -170,7 +162,8 @@ export default class MenuBase {
       title: this.locale[name] || $e(name),
     });
     if (iconName) {
-      const icon = createElement('i', `ch-icon ch-icon-${iconName}`);
+      const icon = createElement('i', `material-symbols-outlined`);
+      icon.innerText = iconName;
       span.appendChild(icon);
     }
     span.innerHTML += this.locale[name] || $e(name);
@@ -338,11 +331,8 @@ export default class MenuBase {
    */
   getMenuPosition() {
     const parent = MenuBase.getTargetParentByButton(this.dom);
-    const isFromSidebar = /cherry-sidebar/.test(parent.className);
     if (/cherry-bubble/.test(parent.className) || /cherry-floatmenu/.test(parent.className)) {
       this.positionModel = 'fixed';
-    } else if (isFromSidebar) {
-      this.positionModel = 'sidebar';
     } else {
       this.positionModel = 'absolute';
     }

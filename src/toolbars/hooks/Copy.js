@@ -25,7 +25,7 @@ export default class Copy extends MenuBase {
     this.previewer = $cherry.previewer;
     this.isLoading = false;
     this.updateMarkdown = false;
-    this.setName('copy', 'copy');
+    this.setName('copy', 'content_copy');
   }
 
   async adaptWechat(rawHtml) {

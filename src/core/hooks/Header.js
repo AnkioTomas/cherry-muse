@@ -94,11 +94,6 @@ export default class Header extends ParagraphBase {
     // 需要经过一次escape
     const processedText = sentenceMakeFunc(text.trim());
     let { html } = processedText;
-    // TODO: allowCustomID开关
-    // let htmlAttr = this.getAttributes(html);
-    // html = htmlAttr.str;
-    // let attrs = htmlAttr.attrs;
-    // console.log(attrs);
     const customIDRegex = /\s+\{#([A-Za-z0-9-]+)\}$/; // ?<id>
     const idMatch = html.match(customIDRegex);
     let anchorID;
@@ -115,19 +110,19 @@ export default class Header extends ParagraphBase {
     const sign = this.$engine.md5(`${level}-${processedText.sign}-${anchorID}-${dataLines}`);
     const result = [
       `<h${level} id="${safeAnchorID}" data-sign="${sign}" data-lines="${dataLines}">`,
-      this.$getAnchor(anchorID),
-      `${html}`,
+      this.$getAnchor(anchorID, html),
+      // `${html}`,
       `</h${level}>`,
     ].join('');
     return { html: result, sign: `${sign}` };
   }
 
-  $getAnchor(anchorID) {
+  $getAnchor(anchorID, text) {
     const anchorStyle = this.config.anchorStyle || 'default';
     if (anchorStyle === 'none') {
       return '';
     }
-    return `<a class="anchor" href="#${anchorID}"></a>`;
+    return `<a class="anchor" href="#${anchorID}">${text}</a>`;
   }
 
   beforeMakeHtml(str) {

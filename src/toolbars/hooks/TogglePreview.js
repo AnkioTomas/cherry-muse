@@ -24,7 +24,7 @@ export default class TogglePreview extends MenuBase {
 
   constructor($cherry) {
     super($cherry);
-    this.setName('previewClose', 'previewClose');
+    this.setName('previewClose', 'preview');
     this.instanceId = $cherry.instanceId;
     this.updateMarkdown = false;
     this.attachEventListeners();
@@ -54,14 +54,13 @@ export default class TogglePreview extends MenuBase {
     const icon = this.dom.querySelector('i');
     // 隐藏预览，按钮状态为打开预览
     if (state) {
-      icon.classList.toggle('ch-icon-previewClose', false);
-      icon.classList.toggle('ch-icon-preview', true);
+      icon.innerText = 'preview';
       icon.title = this.locale.togglePreview;
     } else {
-      icon.classList.toggle('ch-icon-previewClose', true);
-      icon.classList.toggle('ch-icon-preview', false);
+      icon.innerText = 'preview_off';
       icon.title = this.locale.previewClose;
     }
+
     this.$previewerHidden = state;
   }
 

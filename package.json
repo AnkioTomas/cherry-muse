@@ -25,8 +25,7 @@
     "./dist/*.css"
   ],
   "scripts": {
-    "iconfont": "gulp",
-    "dev": "run-p watch:js watch:styles iconfont",
+    "dev": "run-p watch:js watch:styles ",
     "watch:js": "cross-env NODE_ENV=development rollup -w --config build/dev.js",
     "watch:styles": "cross-env NODE_ENV=development rollup -w --config build/rollup.styles.config.js",
     "dev:js": "cross-env NODE_ENV=development HOT_RELOAD=false rollup --config build/dev.js",

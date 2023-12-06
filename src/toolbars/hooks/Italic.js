@@ -20,7 +20,7 @@ import MenuBase from '@/toolbars/MenuBase';
 export default class Italic extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('italic', 'italic');
+    this.setName('italic', 'format_italic');
   }
 
   /**

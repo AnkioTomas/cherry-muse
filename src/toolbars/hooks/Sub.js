@@ -21,7 +21,7 @@ import { getSelection } from '@/utils/selection';
 export default class Sub extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('sub', 'sub');
+    this.setName('sub', 'subscript');
   }
 
   $testIsSub(selection) {

@@ -94,4 +94,10 @@ export default {
   justifyLeft: '左对齐',
   justifyCenter: '居中',
   justifyRight: '右对齐',
+
+  //
+  card: '卡片',
+
+  latexFormula: 'Latex公式',
+  latexFormulaInline: 'Latex行内公式',
 };

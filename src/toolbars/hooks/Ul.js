@@ -23,7 +23,7 @@ import { getListFromStr } from '@/utils/regexp';
 export default class Ul extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('ul', 'ul');
+    this.setName('ul', 'list');
   }
 
   /**

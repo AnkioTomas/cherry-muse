@@ -20,7 +20,7 @@ import MenuBase from '@/toolbars/MenuBase';
 export default class Underline extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('underline', 'underline');
+    this.setName('underline', 'format_underlined');
   }
 
   $testIsUnderline(selection) {

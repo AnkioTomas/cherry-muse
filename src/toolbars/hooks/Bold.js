@@ -20,7 +20,7 @@ import MenuBase from '@/toolbars/MenuBase';
 export default class Bold extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('bold', 'bold');
+    this.setName('bold', 'format_bold');
   }
 
   /**

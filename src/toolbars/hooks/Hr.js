@@ -20,7 +20,7 @@ import MenuBase from '@/toolbars/MenuBase';
 export default class Hr extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('hr', 'line');
+    this.setName('hr', 'horizontal_rule');
   }
 
   /**

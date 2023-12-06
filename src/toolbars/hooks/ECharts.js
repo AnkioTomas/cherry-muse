@@ -20,11 +20,11 @@ import MenuBase from '@/toolbars/MenuBase';
 export default class ECharts extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('echarts');
-    this.noIcon = true;
+    this.setName('echarts', 'insert_chart');
     this.subMenuConfig = [
       {
         name: '基本柱状图',
+        iconName: 'bar_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
             data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -40,6 +40,7 @@ export default class ECharts extends MenuBase {
       },
       {
         name: '堆叠柱状图',
+        iconName: 'stacked_bar_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
             data: ['A', 'B', 'C', 'D', 'E'],
@@ -61,6 +62,7 @@ export default class ECharts extends MenuBase {
       },
       {
         name: '基础折线图',
+        iconName: 'show_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
             type: 'category',
@@ -79,6 +81,8 @@ export default class ECharts extends MenuBase {
       },
       {
         name: '堆叠折线图',
+
+        iconName: 'stacked_line_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
             data: ['A', 'B', 'C', 'D', 'E'],
@@ -100,6 +104,8 @@ export default class ECharts extends MenuBase {
       },
       {
         name: '区域面积图',
+
+        iconName: 'area_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
             data: ['A', 'B', 'C', 'D', 'E'],
@@ -124,6 +130,7 @@ export default class ECharts extends MenuBase {
       },
       {
         name: '平滑曲线图',
+        iconName: 'multiline_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
             data: ['A', 'B', 'C', 'D', 'E'],
@@ -140,6 +147,7 @@ export default class ECharts extends MenuBase {
       },
       {
         name: '阶梯线图',
+        iconName: 'waterfall_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
             type: 'category',
@@ -172,6 +180,8 @@ export default class ECharts extends MenuBase {
       },
       {
         name: '基础饼图',
+
+        iconName: 'pie_chart',
         onclick: this.bindSubClick.bind(this, {
           series: [
             {
@@ -196,6 +206,8 @@ export default class ECharts extends MenuBase {
       },
       {
         name: '圆环图',
+
+        iconName: 'donut_large',
         onclick: this.bindSubClick.bind(this, {
           title: {
             text: '圆环图的例子',
@@ -226,6 +238,8 @@ export default class ECharts extends MenuBase {
       },
       {
         name: '玫瑰图',
+
+        iconName: 'donut_small',
         onclick: this.bindSubClick.bind(this, {
           series: [
             {
@@ -259,6 +273,8 @@ export default class ECharts extends MenuBase {
       },
       {
         name: '基础散点图',
+
+        iconName: 'scatter_plot',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
             data: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],

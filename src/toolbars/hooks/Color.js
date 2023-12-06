@@ -21,7 +21,7 @@ import { getSelection } from '@/utils/selection';
 export default class Color extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('color', 'color');
+    this.setName('color', 'format_color_fill');
     // this.bubbleMenu = true;
     this.bubbleColor = new BubbleColor($cherry);
   }
@@ -79,6 +79,7 @@ export default class Color extends MenuBase {
       });
       return `${begin}${$selection}${end}`;
     }
+    console.log(event);
     // 定位调色盘应该出现的位置
     // 该按钮可能出现在顶部工具栏，
     // 也可能出现在选中文字时出现的bubble工具栏，
@@ -89,9 +90,11 @@ export default class Color extends MenuBase {
       const $colorDom = /** @type {HTMLElement}*/ (event.target.closest('.cherry-bubble'));
       const clientRect = $colorDom.getBoundingClientRect();
       top = clientRect.top + $colorDom.offsetHeight;
-      left = /** @type {HTMLElement}*/ (event.target.closest('.cherry-toolbar-color')).offsetLeft + clientRect.left;
+      left =
+        /** @type {HTMLElement}*/ (event.target.closest('.cherry-toolbar-format_color_fill')).offsetLeft +
+        clientRect.left;
     } else {
-      const $colorDom = /** @type {HTMLElement}*/ (event.target.closest('.cherry-toolbar-color'));
+      const $colorDom = /** @type {HTMLElement}*/ (event.target.closest('.cherry-toolbar-format_color_fill'));
       const clientRect = $colorDom.getBoundingClientRect();
       top = clientRect.top + $colorDom.offsetHeight;
       left = clientRect.left;

@@ -23,8 +23,7 @@ export default class Insert extends MenuBase {
   // TODO: 需要优化参数传入方式
   constructor($cherry) {
     super($cherry);
-    this.setName('insert', 'insert');
-    this.noIcon = true;
+    this.setName('insert', 'arrow_insert');
 
     this.subBubbleTableMenu = new BubbleTableMenu({ row: 9, col: 9 });
     $cherry.editor.options.wrapperDom.appendChild(this.subBubbleTableMenu.dom);

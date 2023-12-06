@@ -21,7 +21,7 @@ import { handleUpload, handleParams } from '@/utils/file';
 export default class Video extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('video', 'video');
+    this.setName('video', 'videocam');
   }
 
   /**

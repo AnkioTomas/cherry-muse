@@ -15,185 +15,6 @@
  */
 import MenuBase from '@/toolbars/MenuBase';
 
-function generateExample(title, mermaidCode) {
-  return [title, '```mermaid', mermaidCode, '```'].join('\n');
-}
-
-const flowChartContent = [
-  '\tA[公司] -->| 下 班 | B(菜市场)',
-  '\tB --> C{看见<br>卖西瓜的}',
-  '\tC -->|Yes| D[买一个包子]',
-  '\tC -->|No| E[买一斤包子]',
-].join('\n');
-
-const flowChartContentEn = [
-  '\tA[Company] -->| Finish work | B(Grocery Store)',
-  '\tB --> C{See<br>Watermelon Seller}',
-  '\tC -->|Yes| D[Buy a bun]',
-  '\tC -->|No| E[Buy a kilogram of buns]',
-].join('\n');
-
-const sample = {
-  flow: [
-    'FlowChart',
-    generateExample('左右结构', `graph LR\n${flowChartContent}`),
-    generateExample('上下结构', `graph TD\n${flowChartContent}`),
-  ].join('\n'),
-  sequence: generateExample(
-    'SequenceDiagram',
-    [
-      'sequenceDiagram',
-      'autonumber',
-      'A-->A: 文本1',
-      'A->>B: 文本2',
-      'loop 循环1',
-      'loop 循环2',
-      'A->B: 文本3',
-      'end',
-      'loop 循环3',
-      'B -->>A: 文本4',
-      'end',
-      'B -->> B: 文本5',
-      'end',
-    ].join('\n'),
-  ),
-  state: generateExample(
-    'StateDiagram',
-    [
-      'stateDiagram-v2',
-      '[*] --> A',
-      'A --> B',
-      'A --> C',
-      'state A {',
-      '  \t[*] --> D',
-      '  \tD --> [*]',
-      '}',
-      'B --> [*]',
-      'C --> [*]',
-    ].join('\n'),
-  ),
-  class: generateExample(
-    'ClassDiagram',
-    [
-      'classDiagram',
-      'Base <|-- One',
-      'Base <|-- Two',
-      'Base : +String name',
-      'Base: +getName()',
-      'Base: +setName(String name)',
-      'class One{',
-      '  \t+String newName',
-      '  \t+getNewName()',
-      '}',
-      'class Two{',
-      '  \t-int id',
-      '  \t-getId()',
-      '}',
-    ].join('\n'),
-  ),
-  pie: generateExample('PieChart', ['pie', 'title 饼图', '"A" : 100', '"B" : 80', '"C" : 40', '"D" : 30'].join('\n')),
-  gantt: generateExample(
-    'GanttChart',
-    [
-      'gantt',
-      '\ttitle 敏捷研发流程',
-      '\tsection 迭代前',
-      '\t\t交互设计     :a1, 2020-03-01, 4d',
-      '\t\tUI设计        :after a1, 5d',
-      '\t\t需求评审     : 1d',
-      '\tsection 迭代中',
-      '\t\t详细设计      :a2, 2020-03-11, 2d',
-      '\t\t开发          :2020-03-15, 7d',
-      '\t\t测试          :2020-03-22, 5d',
-      '\tsection 迭代后',
-      '\t\t发布: 1d',
-      '\t\t验收: 2d',
-      '\t\t回顾: 1d',
-    ].join('\n'),
-  ),
-};
-
-// 英文例子
-const sampleEn = {
-  flow: [
-    'FlowChart',
-    generateExample('Left-right structure', `graph LR\n${flowChartContentEn}`),
-    generateExample('Top-bottom structure', `graph TD\n${flowChartContentEn}`),
-  ].join('\n'),
-  sequence: generateExample(
-    'SequenceDiagram',
-    [
-      'sequenceDiagram',
-      'autonumber',
-      'A-->A: text1',
-      'A->>B: text2',
-      'loop loop1',
-      'loop loop2',
-      'A->B: text3',
-      'end',
-      'loop loop3',
-      'B -->>A: text4',
-      'end',
-      'B -->> B: text5',
-      'end',
-    ].join('\n'),
-  ),
-  state: generateExample(
-    'StateDiagram',
-    [
-      'stateDiagram-v2',
-      '[*] --> A',
-      'A --> B',
-      'A --> C',
-      'state A {',
-      '  \t[*] --> D',
-      '  \tD --> [*]',
-      '}',
-      'B --> [*]',
-      'C --> [*]',
-    ].join('\n'),
-  ),
-  class: generateExample(
-    'ClassDiagram',
-    [
-      'classDiagram',
-      'Base <|-- One',
-      'Base <|-- Two',
-      'Base : +String name',
-      'Base: +getName()',
-      'Base: +setName(String name)',
-      'class One{',
-      '  \t+String newName',
-      '  \t+getNewName()',
-      '}',
-      'class Two{',
-      '  \t-int id',
-      '  \t-getId()',
-      '}',
-    ].join('\n'),
-  ),
-  pie: generateExample('PieChart', ['pie', 'title pie', '"A" : 100', '"B" : 80', '"C" : 40', '"D" : 30'].join('\n')),
-  gantt: generateExample(
-    'GanttChart',
-    [
-      'gantt',
-      '\ttitle work',
-      '\tsection session 1',
-      '\t\twork1     :a1, 2020-03-01, 4d',
-      '\t\twork2        :after a1, 5d',
-      '\t\twork3     : 1d',
-      '\tsection session 2',
-      '\t\twork4      :a2, 2020-03-11, 2d',
-      '\t\twork5          :2020-03-15, 7d',
-      '\t\twork6          :2020-03-22, 5d',
-      '\tsection session 3',
-      '\t\twork7: 1d',
-      '\t\twork8: 2d',
-      '\t\twork9: 1d',
-    ].join('\n'),
-  ),
-};
-
 /**
  * 插入“画图”的按钮
  * 本功能依赖[Mermaid.js](https://mermaid-js.github.io)组件，请保证调用CherryMarkdown前已加载mermaid.js组件
@@ -201,27 +22,246 @@ const sampleEn = {
 export default class Graph extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('graph', 'insertChart');
-    this.noIcon = true;
+    this.setName('graph', 'account_tree');
     this.localeName = $cherry.options.locale;
     this.subMenuConfig = [
       // 流程图
       // 访问[Mermaid 流程图](https://mermaid-js.github.io/mermaid/#/flowchart)参考具体使用方法。
-      { iconName: 'insertFlow', name: 'insertFlow', onclick: this.bindSubClick.bind(this, '1') },
+      {
+        iconName: 'device_hub',
+        name: 'insertFlow',
+        onclick: this.bindSubClick.bind(
+          this,
+          `flowchart TD
+    Start --> Stop
+      `,
+        ),
+      },
       // 时序图
       // 访问[Mermaid 时序图](https://mermaid-js.github.io/mermaid/#/sequenceDiagram)参考具体使用方法
-      { iconName: 'insertSeq', name: 'insertSeq', onclick: this.bindSubClick.bind(this, '2') },
+      {
+        iconName: 'pending_actions',
+        name: 'insertSeq',
+        onclick: this.bindSubClick.bind(
+          this,
+          `sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
+      `,
+        ),
+      },
       // 状态图
       // 访问[Mermaid 状态图](https://mermaid-js.github.io/mermaid/#/stateDiagram)参考具体使用方法
-      { iconName: 'insertState', name: 'insertState', onclick: this.bindSubClick.bind(this, '3') },
+      {
+        iconName: 'location_away',
+        name: 'insertState',
+        onclick: this.bindSubClick.bind(
+          this,
+          `stateDiagram-v2
+    s1 --> s2: A transition`,
+        ),
+      },
       // 类图
       // 访问[Mermaid UML图](https://mermaid-js.github.io/mermaid/#/classDiagram)参考具体使用方法
-      { iconName: 'insertClass', name: 'insertClass', onclick: this.bindSubClick.bind(this, '4') },
+      {
+        iconName: 'code',
+        name: 'insertClass',
+        onclick: this.bindSubClick.bind(
+          this,
+          `classDiagram
+    class Animal
+    Vehicle <|-- Car`,
+        ),
+      },
       // 饼图
       // 访问[Mermaid 饼图](https://mermaid-js.github.io/mermaid/#/pie)参考具体使用方法
-      { iconName: 'insertPie', name: 'insertPie', onclick: this.bindSubClick.bind(this, '5') },
+      {
+        iconName: 'pie_chart',
+        name: 'insertPie',
+        onclick: this.bindSubClick.bind(
+          this,
+          `pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15`,
+        ),
+      },
       // 甘特图
-      { iconName: 'insertGantt', name: 'insertGantt', onclick: this.bindSubClick.bind(this, '6') },
+      {
+        iconName: 'view_timeline',
+        name: 'insertGantt',
+        onclick: this.bindSubClick.bind(
+          this,
+          `gantt
+    title A Gantt Diagram
+    dateFormat YYYY-MM-DD
+    section Section
+        A task          :a1, 2014-01-01, 30d
+        Another task    :after a1, 20d
+    section Another
+        Task in Another :2014-01-12, 12d
+        another task    :24d`,
+        ),
+      },
+      {
+        iconName: 'schema',
+        name: '实体关系图',
+        onclick: this.bindSubClick.bind(
+          this,
+          `---
+title: Order example
+---
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses`,
+        ),
+      },
+      {
+        iconName: 'waterfall_chart',
+        name: '用户旅程图',
+        onclick: this.bindSubClick.bind(
+          this,
+          `journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 5: Me`,
+        ),
+      },
+      {
+        iconName: 'square',
+        name: '象限图',
+        onclick: this.bindSubClick.bind(
+          this,
+          `quadrantChart
+    title Reach and engagement of campaigns
+    x-axis Low Reach --> High Reach
+    y-axis Low Engagement --> High Engagement
+    quadrant-1 We should expand
+    quadrant-2 Need to promote
+    quadrant-3 Re-evaluate
+    quadrant-4 May be improved
+    Campaign A: [0.3, 0.6]
+    Campaign B: [0.45, 0.23]
+    Campaign C: [0.57, 0.69]
+    Campaign D: [0.78, 0.34]
+    Campaign E: [0.40, 0.34]
+    Campaign F: [0.35, 0.78]`,
+        ),
+      },
+      {
+        iconName: 'flowsheet',
+        name: '需求图',
+        onclick: this.bindSubClick.bind(
+          this,
+          `    requirementDiagram
+
+    requirement test_req {
+    id: 1
+    text: the test text.
+    risk: high
+    verifymethod: test
+    }
+
+    element test_entity {
+    type: simulation
+    }
+
+    test_entity - satisfies -> test_req`,
+        ),
+      },
+      {
+        iconName: 'linked_services',
+        name: 'Git提交图',
+        onclick: this.bindSubClick.bind(
+          this,
+          `    gitGraph
+       commit
+       commit
+       commit`,
+        ),
+      },
+      {
+        iconName: 'bid_landscape',
+        name: 'C4 图',
+        onclick: this.bindSubClick.bind(
+          this,
+          `    C4Dynamic
+    title Dynamic diagram for Internet Banking System - API Application
+
+    ContainerDb(c4, "Database", "Relational Database Schema", "Stores user registration information, hashed authentication credentials, access logs, etc.")
+    Container(c1, "Single-Page Application", "JavaScript and Angular", "Provides all of the Internet banking functionality to customers via their web browser.")
+    Container_Boundary(b, "API Application") {
+      Component(c3, "Security Component", "Spring Bean", "Provides functionality Related to signing in, changing passwords, etc.")
+      Component(c2, "Sign In Controller", "Spring MVC Rest Controller", "Allows users to sign in to the Internet Banking System.")
+    }
+    Rel(c1, c2, "Submits credentials to", "JSON/HTTPS")
+    Rel(c2, c3, "Calls isAuthenticated() on")
+    Rel(c3, c4, "select * from users where username = ?", "JDBC")
+
+    UpdateRelStyle(c1, c2, $textColor="red", $offsetY="-40")
+    UpdateRelStyle(c2, c3, $textColor="red", $offsetX="-40", $offsetY="60")
+    UpdateRelStyle(c3, c4, $textColor="red", $offsetY="-40", $offsetX="10")`,
+        ),
+      },
+      {
+        iconName: 'mindfulness',
+        name: '思维导图',
+        onclick: this.bindSubClick.bind(
+          this,
+          `mindmap
+Root
+    A
+      B
+      C`,
+        ),
+      },
+      {
+        iconName: 'chart_data',
+        name: 'XY 图表',
+        onclick: this.bindSubClick.bind(
+          this,
+          `xychart-beta
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]`,
+        ),
+      },
+      {
+        iconName: 'view_timeline',
+        name: '时间线',
+        onclick: this.bindSubClick.bind(
+          this,
+          `timeline
+    title History of Social Media Platform
+    2002 : LinkedIn
+    2004 : Facebook
+         : Google
+    2005 : Youtube
+    2006 : Twitter`,
+        ),
+      },
+      {
+        iconName: 'full_stacked_bar_chart',
+        name: '桑基图',
+        onclick: this.bindSubClick.bind(
+          this,
+          `sankey-beta
+
+%% source,target,value
+Electricity grid,Over generation / exports,104.453
+Electricity grid,Heating and cooling - homes,113.726
+Electricity grid,H2 conversion,27.14`,
+        ),
+      },
     ];
   }
 
@@ -236,28 +276,6 @@ export default class Graph extends MenuBase {
    * @returns {string} 回填到编辑器光标位置/选中文本区域的内容
    */
   onClick(selection, shortKey = '') {
-    const shortcutKeyMap = [null, 'flow', 'sequence', 'state', 'class', 'pie', 'gantt'];
-    const type = shortcutKeyMap[shortKey] ? shortcutKeyMap[shortKey] : shortKey;
-
-    if (!type || !/^(flow|sequence|state|class|pie|gantt)$/.test(type)) {
-      return;
-    }
-    this.registerAfterClickCb(() => {
-      this.setLessSelection('\n\n\n\n\n', '\n\n');
-    });
-    return `\n\n${this.$getSampleCode(type)}\n`;
-  }
-
-  /**
-   * 画图的markdown源码模版
-   * @param {string} type 画图的类型
-   * @returns
-   */
-  $getSampleCode(type) {
-    if (this.localeName !== 'zh-CN' && this.localeName !== 'zh_CN') {
-      // 只要不是中文，就返回英文例子
-      return sampleEn[type]?.replace(/\t/g, '    ');
-    }
-    return sample[type]?.replace(/\t/g, '    ');
+    return `\n\`\`\`mermaid\n${shortKey.trim()}\n\`\`\`\n\n`;
   }
 }

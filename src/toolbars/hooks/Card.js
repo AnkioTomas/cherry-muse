@@ -20,11 +20,11 @@ import MenuBase from '@/toolbars/MenuBase';
 export default class Card extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('卡片');
-    this.noIcon = true;
+    this.setName(this.locale.card, 'credit_card');
     this.subMenuConfig = [
       {
-        name: '普通卡片列表',
+        name: '普通卡片',
+        iconName: 'card_membership',
         onclick: this.bindSubClick.bind(this, {
           count: 3,
           type: 'card',
@@ -57,7 +57,8 @@ export default class Card extends MenuBase {
         }),
       },
       {
-        name: '普通卡片列表2',
+        name: '无图卡片',
+        iconName: 'space_dashboard',
         onclick: this.bindSubClick.bind(this, {
           count: 2,
           type: 'card',
@@ -79,7 +80,8 @@ export default class Card extends MenuBase {
         }),
       },
       {
-        name: '图文卡片列表',
+        name: '图文卡片',
+        iconName: 'badge',
         onclick: this.bindSubClick.bind(this, {
           count: 3,
           type: 'cardImage',

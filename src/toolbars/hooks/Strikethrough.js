@@ -21,7 +21,7 @@ import { getSelection } from '@/utils/selection';
 export default class Strikethrough extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('strikethrough', 'strike');
+    this.setName('strikethrough', 'format_strikethrough');
   }
 
   $testIsStrike(selection) {

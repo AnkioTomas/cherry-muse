@@ -22,48 +22,47 @@ import { getSelection } from '@/utils/selection';
 export default class Panel extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('面板');
-    this.noIcon = true;
+    this.setName('面板', 'dock_to_bottom');
     this.panelRule = getPanelRule().reg;
     const { locale } = this.$cherry;
     this.subMenuConfig = [
       {
-        iconName: 'tips',
+        iconName: 'question_mark',
         name: '提示面板',
         onclick: this.bindSubClick.bind(this, 'primary'),
       },
       {
-        iconName: 'info',
+        iconName: 'info_i',
         name: '信息面板',
         onclick: this.bindSubClick.bind(this, 'info'),
       },
       {
-        iconName: 'warning',
+        iconName: 'priority_high',
         name: '警告面板',
         onclick: this.bindSubClick.bind(this, 'warning'),
       },
       {
-        iconName: 'danger',
+        iconName: 'close',
         name: '危险面板',
         onclick: this.bindSubClick.bind(this, 'danger'),
       },
       {
-        iconName: 'success',
+        iconName: 'done',
         name: '成功面板',
         onclick: this.bindSubClick.bind(this, 'success'),
       },
       {
-        iconName: 'justifyLeft',
+        iconName: 'align_justify_flex_start',
         name: locale?.justifyLeft ?? '左对齐',
         onclick: this.bindSubClick.bind(this, 'left'),
       },
       {
-        iconName: 'justifyCenter',
+        iconName: 'align_justify_center',
         name: locale?.justifyCenter ?? '居中',
         onclick: this.bindSubClick.bind(this, 'center'),
       },
       {
-        iconName: 'justifyRight',
+        iconName: 'align_justify_flex_end',
         name: locale?.justifyRight ?? '右对齐',
         onclick: this.bindSubClick.bind(this, 'right'),
       },

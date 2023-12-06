@@ -21,7 +21,7 @@ import { getSelection } from '@/utils/selection';
 export default class Sup extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('sup', 'sup');
+    this.setName('sup', 'superscript');
   }
 
   $testIsSup(selection) {

@@ -18,13 +18,12 @@ import MenuBase from '@/toolbars/MenuBase';
 export default class Export extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('export');
-    this.noIcon = true;
+    this.setName('export', 'ios_share');
     this.updateMarkdown = false;
     this.subMenuConfig = [
-      { noIcon: true, name: 'exportToPdf', onclick: this.bindSubClick.bind(this, 'pdf') },
-      { noIcon: true, name: 'exportMarkdownFile', onclick: this.bindSubClick.bind(this, 'markdown') },
-      { noIcon: true, name: 'exportHTMLFile', onclick: this.bindSubClick.bind(this, 'html') },
+      { iconName: 'picture_as_pdf', name: 'exportToPdf', onclick: this.bindSubClick.bind(this, 'pdf') },
+      { iconName: 'markdown', name: 'exportMarkdownFile', onclick: this.bindSubClick.bind(this, 'markdown') },
+      { iconName: 'html', name: 'exportHTMLFile', onclick: this.bindSubClick.bind(this, 'html') },
     ];
   }
 

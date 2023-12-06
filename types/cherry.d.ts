@@ -226,8 +226,6 @@ export interface CherryToolbarOptions {
     | false;
   /** 是否展示顶部工具栏 */
   showToolbar?: boolean;
-  /** 侧边栏配置 */
-  sidebar?: any[] | false;
   /** 选中悬停菜单配置 */
   bubble?: any[] | false;
   /** 新行悬停菜单配置 */

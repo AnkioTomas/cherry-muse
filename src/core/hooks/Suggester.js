@@ -115,7 +115,7 @@ export default class Suggester extends SyntaxBase {
     if (!suggester) {
       suggester = [];
     }
-    for (const suggest of mergeWith(systemSuggests, suggester)) {
+    for (const suggest of mergeWith(systemSuggests(this), suggester)) {
       for (const keyword of suggest.keyword) {
         suggester.push({
           keyword,

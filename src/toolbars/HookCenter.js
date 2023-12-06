@@ -60,7 +60,7 @@ import File from './hooks/File';
 import Ruby from './hooks/Ruby';
 import Theme from './hooks/Theme';
 // import ChatGpt from './hooks/ChatGpt';
-// Sidebar
+// SideToc
 import MobilePreview from './hooks/MobilePreview';
 import Copy from './hooks/Copy';
 import Panel from './hooks/Panel';
@@ -68,6 +68,7 @@ import Detail from './hooks/Detail';
 import Badge from './hooks/Badge';
 import ECharts from './hooks/ECharts';
 import Card from '@/toolbars/hooks/Card';
+import TocList from '@/toolbars/hooks/TocList';
 
 // 定义默认支持的工具栏
 // 目前不支持按需动态加载
@@ -122,6 +123,7 @@ const HookList = {
   badge: Badge,
   echarts: ECharts,
   card: Card,
+  tocList: TocList,
 };
 
 export default class HookCenter {

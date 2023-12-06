@@ -82,8 +82,12 @@ const SystemSuggestdata = [
     value: `+++ 点击展开更多\n内容\n++- 默认展开\n内容\n++ 默认收起\n内容\n+++\n`,
   },
 ];
-
-export const systemSuggests = [
+/**
+ *
+ * @param {Suggester} suggester
+ * @returns
+ * */
+export const systemSuggests = (suggester) => [
   {
     keyword: ':',
     data(keywords, callback, $cherry) {
@@ -91,21 +95,19 @@ export const systemSuggests = [
     },
   },
   {
-    keyword: '$',
+    keyword: '￥$',
     data: [
       {
-        icon: 'FullWidth',
-        key: '$$',
-        keyword: '$$',
-        value: `$$\n\n$$`,
+        key: suggester.$locale.latexFormula,
+        keyword: '',
+        value: `$$`,
         goLeft: 1,
       },
       {
-        icon: 'FullWidth',
-        key: '$$',
+        key: suggester.$locale.latexFormulaInline,
         keyword: '$$',
         value: `$$\n\n$$`,
-        goLeft: 1,
+        goLeft: 4,
       },
     ],
   },
@@ -113,14 +115,12 @@ export const systemSuggests = [
     keyword: '<《【{[',
     data: [
       {
-        icon: 'FullWidth',
         key: '[]',
         keyword: '[',
         value: `[]`,
         goLeft: 1,
       },
       {
-        icon: 'FullWidth',
         key: '【】',
         keyword: '【',
         value: `【】`,
@@ -128,34 +128,30 @@ export const systemSuggests = [
       },
       {
         icon: 'link',
-        key: 'Link',
+        key: suggester.$locale.link,
         keyword: '[',
         value: `[title](https://url)`,
         selection: { from: 'title](https://url)'.length, to: '](https://url)'.length },
       },
       {
-        icon: 'FullWidth',
         key: '()',
         keyword: '（',
         value: `()`,
         goLeft: 1,
       },
       {
-        icon: 'FullWidth',
         key: '（）',
         keyword: '（',
         value: `（）`,
         goLeft: 1,
       },
       {
-        icon: 'FullWidth',
         key: '<>',
         keyword: '<',
         value: `<>`,
         goLeft: 1,
       },
       {
-        icon: 'FullWidth',
         key: '《》',
         keyword: '《',
         value: `《》`,
@@ -164,31 +160,38 @@ export const systemSuggests = [
     ],
   },
   {
+    keyword: '>》',
+    data: [
+      {
+        key: '引用',
+        keyword: '',
+        value: `>`,
+        goLeft: 1,
+      },
+    ],
+  },
+  {
     keyword: '\'"`',
     data: [
       {
-        icon: 'FullWidth',
         key: '代码块',
         keyword: '``',
         value: `\`\`\`\n\n\`\`\``,
         goLeft: 1,
       },
       {
-        icon: 'FullWidth',
         key: '行内代码',
         keyword: '`',
         value: `\`\``,
         goLeft: 1,
       },
       {
-        icon: 'FullWidth',
         key: '" "',
         keyword: '"',
         value: `""`,
         goLeft: 1,
       },
       {
-        icon: 'FullWidth',
         key: `' '`,
         keyword: `'`,
         value: `''`,
