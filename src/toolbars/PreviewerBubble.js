@@ -195,9 +195,8 @@ export default class PreviewerBubble {
   $dealCheckboxClick(e) {
     const { target } = e;
     // 先计算是previewer中第几个checkbox
-    const list = Array.from(this.previewerDom.querySelectorAll('.ch-icon-square, .ch-icon-check'));
+    const list = Array.from(this.previewerDom.querySelectorAll('.cherry-checkbox'));
     this.checkboxIdx = list.indexOf(target);
-
     // 然后找到Editor中对应的`- []`或者`- [ ]`进行修改
     const contents = getValueWithoutCode(this.editor.editor.getValue()).split('\n');
 
@@ -248,7 +247,7 @@ export default class PreviewerBubble {
     }
     // 只有双栏编辑模式才出现下面的功能
     // checkbox所见即所得编辑操作
-    if (target.className === 'ch-icon ch-icon-square' || target.className === 'ch-icon ch-icon-check') {
+    if (target.className === 'cherry-checkbox') {
       this.$dealCheckboxClick(e);
     }
     this.$removeAllPreviewerBubbles('click');

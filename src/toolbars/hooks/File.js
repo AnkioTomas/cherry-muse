@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 import MenuBase from '@/toolbars/MenuBase';
-import { handleUpload } from '@/utils/file';
+import { handleUpload, handleParams } from '@/utils/file';
 /**
- * 插入pdf
+ * 插入文件
  */
-export default class File extends MenuBase {
+export default class Video extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('file', 'phone');
+    this.setName('file', 'attach_file');
   }
 
   /**
@@ -33,13 +33,13 @@ export default class File extends MenuBase {
     if (this.hasCacheOnce()) {
       // @ts-ignore
       const { name, url, params } = this.getAndCleanCacheOnce();
-      const begin = '[';
+      const begin = '!file[';
       const end = `](${url})`;
       this.registerAfterClickCb(() => {
         this.setLessSelection(begin, end);
       });
       const finalName = params.name ? params.name : name;
-      return `${begin}${finalName}${end}`;
+      return `${begin}${finalName}${handleParams(params)}${end}`;
     }
     const accept = this.$cherry.options?.fileTypeLimitMap?.file ?? '*';
     // 插入图片，调用上传文件逻辑

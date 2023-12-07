@@ -16,12 +16,12 @@
 import MenuBase from '@/toolbars/MenuBase';
 import Event from '../../Event';
 /**
- * 插入目录
+ * 显示目录
  */
 export default class TocList extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('tocList', 'subtitles');
+    this.setName('tocListShow', 'subtitles');
     // subtitles_off
     this.changeToc(localStorage.getItem('tocShow'));
     Event.on($cherry.instanceId, Event.Events.previewerOpen, () => {
@@ -39,7 +39,7 @@ export default class TocList extends MenuBase {
     if (show) {
       if (icon) {
         icon.innerText = 'subtitles_off';
-        icon.title = '隐藏目录';
+        icon.title = this.locale.tocListHide;
         Event.emit('editor', 'change', this.$cherry);
       } else {
         this.setName('tocList', 'subtitles_off');
@@ -50,7 +50,7 @@ export default class TocList extends MenuBase {
     } else {
       if (icon) {
         icon.innerText = 'subtitles';
-        icon.title = '显示目录';
+        icon.title = this.locale.tocListShow;
       } else {
         this.setName('tocList', 'subtitles');
       }
@@ -71,6 +71,6 @@ export default class TocList extends MenuBase {
       localStorage.setItem('tocShow', '1');
     }
     this.changeToc(localStorage.getItem('tocShow'));
-    return null;
+    return '';
   }
 }

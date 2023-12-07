@@ -32,8 +32,8 @@ function attrsToAttributeString(object) {
 export function makeChecklist(text) {
   return text.replace(/^((?:|[\t ]+)[*+-]\s+)\[(\s|x)\]/gm, (whole, pre, test) => {
     const checkHtml = /\s/.test(test)
-      ? '<span class="ch-icon ch-icon-square"></span>'
-      : '<span class="ch-icon ch-icon-check"></span>';
+      ? '<input class="cherry-checkbox" type="checkbox"/>'
+      : '<input class="cherry-checkbox" type="checkbox"  checked="checked" />';
     return `${pre}${checkHtml}`;
   });
 }
@@ -181,8 +181,7 @@ export default class List extends ParagraphBase {
       node.lines += child.lines;
       lines += child.lines;
       // checklist 样式适配
-      const checklistRegex = /<span class="ch-icon ch-icon-(square|check)"><\/span>/;
-      if (checklistRegex.test(str)) {
+      if (str.indexOf('input') !== -1) {
         itemAttr.class += ' check-list-item';
       }
       return `${html}<li${attrsToAttributeString(itemAttr)}>${str}${children}</li>`;

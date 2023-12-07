@@ -62,7 +62,7 @@ export default class Insert extends MenuBase {
           code = `!audio[${file.name}](${url})`;
         } else {
           // 默认返回超链接
-          code = `[${file.name}](${url})`;
+          code = `!file[${file.name}](${url})`;
         }
         // 替换选中区域
         // @ts-ignore
@@ -172,14 +172,9 @@ export default class Insert extends MenuBase {
           callback(text);
         });
         return;
-      case 'pdf':
+      case 'file':
         // 插入pdf文件，调用上传文件逻辑
-        this.handleUpload('pdf');
-        return selection;
-      case 'word':
-        // 插入word，调用上传文件逻辑
-        // 可以在文件上传逻辑里做处理，word上传后通过后台服务转成html再返回，前端接受后进行处理并回填
-        this.handleUpload('word');
+        this.handleUpload('file');
         return selection;
       case 'ruby':
         // 如果选中的文本中已经有ruby语法了，则去掉该语法

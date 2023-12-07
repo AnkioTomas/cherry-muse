@@ -21,7 +21,7 @@ import { getSelection } from '@/utils/selection';
 export default class Ruby extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('pinyin', 'language_pinyin');
+    this.setName('ruby', 'language_pinyin');
   }
 
   $testIsRuby(selection) {

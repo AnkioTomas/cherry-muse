@@ -72,9 +72,10 @@ const htmlParser = {
    */
   $handleTagObject(temObj, returnString) {
     let ret = returnString;
-    if (temObj.attrs.class && /(ch-icon-square|ch-icon-check)/.test(temObj.attrs.class)) {
+
+    if (temObj.attrs.class && /cherry-checkbox/.test(temObj.attrs.class)) {
       // 针对checklist
-      if (temObj.attrs.class.indexOf('ch-icon-check') >= 0) {
+      if (temObj.attrs.checked) {
         ret += '[x]';
       } else {
         ret += '[ ]';

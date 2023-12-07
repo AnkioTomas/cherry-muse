@@ -21,46 +21,46 @@ import { getSelection } from '@/utils/selection';
 export default class Badge extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('徽章', 'app_badging');
+    this.setName('badge', 'app_badging');
     this.subMenuConfig = [
       {
         iconName: 'question_mark',
-        name: '提示徽章',
+        name: 'badgeTip',
         onclick: this.bindSubClick.bind(this, 'primary'),
       },
       {
         iconName: 'info_i',
-        name: '信息徽章',
+        name: 'badgeInfo',
         onclick: this.bindSubClick.bind(this, 'info'),
       },
       {
         iconName: 'priority_high',
-        name: '警告徽章',
+        name: 'badgeWarn',
         onclick: this.bindSubClick.bind(this, 'warning'),
       },
       {
         iconName: 'close',
-        name: '危险徽章',
+        name: 'badgeDanger',
         onclick: this.bindSubClick.bind(this, 'danger'),
       },
       {
         iconName: 'done',
-        name: '成功徽章',
+        name: 'badgeSuccess',
         onclick: this.bindSubClick.bind(this, 'success'),
       },
       {
         iconName: 'align_flex_start',
-        name: '偏上',
+        name: 'badgeTop',
         onclick: this.bindSubClick.bind(this, ['primary', 'top']),
       },
       {
         iconName: 'align_center',
-        name: '居中',
+        name: 'badgeCenter',
         onclick: this.bindSubClick.bind(this, ['primary', 'center']),
       },
       {
         iconName: 'align_flex_end',
-        name: '偏下',
+        name: 'badgeBottom',
         onclick: this.bindSubClick.bind(this, ['primary', 'bottom']),
       },
     ];

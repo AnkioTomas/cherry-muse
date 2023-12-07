@@ -14,77 +14,22 @@
  * limitations under the License.
  */
 export default {
-  bold: '加粗', // 加粗
-  code: '代码', // 代码
-  graph: '画图', // 画图
-  echarts: '图表', // 画图
-  h1: '一级标题', // 一级标题
-  h2: '二级标题', // 二级标题
-  h3: '三级标题', // 三级标题
-  h4: '四级标题', // 四级标题
-  h5: '五级标题', // 五级标题
-  header: '标题', // 标题
-  insert: '插入', // 插入
-  italic: '斜体', // 斜体
-  list: '列表', // 列表
-  quickTable: '表格', // 表格
-  quote: '引用', // 引用
-  size: '大小', // 大小
-  color: '文字颜色&背景', // 文字颜色&背景
-  strikethrough: '删除线', // 删除线
-  sub: '下标', // 下标
-  sup: '上标', // 上标
-  togglePreview: '预览', // 预览
-  fullScreen: '全屏', // 全屏
-  image: '图片', // 图片
-  audio: '音频', // 音频
-  video: '视频', // 视频
-  link: '超链接', // 超链接
-  hr: '分隔线', // 分隔线
-  br: '换行', // 换行
-  toc: '目录', // 目录
-  pdf: 'pdf', // pdf
-  word: 'word', // word
-  table: '表格', // 表格
-  'line-table': '折线表格', // 折线表格
-  'bar-table': '柱状表格', // 柱状表格
-  formula: '公式', // 公式
-  insertFormula: '公式', // 公式
-  insertFlow: '流程图', // 流程图
-  insertSeq: '时序图', // 时序图
-  insertState: '状态图', // 状态图
-  insertClass: '类图', // 类图
-  insertPie: '饼图', // 饼图
-  insertGantt: '甘特图', // 甘特图
-  checklist: '清单', // 清单
-  ol: '有序列表', // 有序列表
-  ul: '无序列表', // 无序列表
-  undo: '撤销', // 撤销
-  redo: '恢复', // 恢复
-  previewClose: '关闭预览', // 关闭预览
-  codeTheme: '代码主题', // 代码主题
-  switchModel: '模式切换', // 模式切换
-  switchPreview: '预览', // 预览
-  switchEdit: '返回编辑', // 返回编辑
-  classicBr: '经典换行', // 经典换行
-  normalBr: '常规换行', // 常规换行
-  settings: '设置', // 设置
-  mobilePreview: '移动端预览', // 移动端预览
-  copy: '复制内容', // 复制内容
-  export: '导出', // 导出PDF、长图
-  underline: '下划线', // 下划线
-  pinyin: '拼音', // 拼音
-  file: '文件',
-  pastePlain: '粘贴为纯文本格式', // 粘贴为纯文本格式
-  pasteMarkdown: '粘贴为markdown格式', // 粘贴为markdown格式
-  hide: '隐藏(ctrl+0)', // 隐藏(ctrl+0)
-  exportToPdf: '导出PDF', // 导出PDF
-  exportScreenshot: '导出长图', // 导出长图
-  exportMarkdownFile: '导出markdown', // 导出markdown文件
-  exportHTMLFile: '导出html', // 导出预览区html文件
-  theme: '主题', // 导出长图
-  panel: '面板', // 导出长图
-  detail: '详情', // 手风琴
+  insertFormula: '公式',
+
+  codeTheme: '代码主题',
+  switchModel: '模式切换',
+  switchEdit: '返回编辑',
+  classicBr: '经典换行',
+  normalBr: '常规换行',
+  settings: '设置',
+  mobilePreview: '移动端预览',
+
+  pastePlain: '粘贴为纯文本格式',
+  pasteMarkdown: '粘贴为markdown格式',
+  hide: '隐藏(ctrl+0)',
+
+  theme: '主题',
+
   'H1 Heading': 'H1 一级标题',
   'H2 Heading': 'H2 二级标题',
   'H3 Heading': 'H3 三级标题',
@@ -94,9 +39,136 @@ export default {
   justifyLeft: '左对齐',
   justifyCenter: '居中',
   justifyRight: '右对齐',
-
   //
+  audio: '音频',
+
+  badge: '徽章',
+  badgeTip: '提示徽章',
+  badgeInfo: '信息徽章',
+  badgeWarn: '警告徽章',
+  badgeDanger: '危险徽章',
+  badgeSuccess: '成功徽章',
+  badgeTop: '上标徽章',
+  badgeCenter: '居中徽章',
+  badgeBottom: '下标徽章',
+
+  barTable: '柱状图表格',
+
+  bold: '加粗',
+
   card: '卡片',
+  normalCard: '普通卡片',
+  noImageCard: '无图卡片',
+  imageCard: '图文卡片',
+
+  checklist: '清单',
+  //
+  code: '代码',
+  color: '颜色',
+  //
+  copy: '复制内容',
+  detail: '详情',
+
+  echarts: '图表',
+  basicBarChart: '基本柱状图',
+  stackedBarChart: '堆叠柱状图',
+  basicLineChart: '基础折线图',
+  stackedLineChart: '堆叠折线图',
+  areaChart: '区域面积图',
+  smoothCurveChart: '平滑曲线图',
+  ladderLineDiagram: '阶梯线图',
+  pieChart: '基础饼图',
+  circleDiagram: '圆环图',
+  roseChart: '玫瑰图',
+  scatterPlot: '基础散点图',
+  //
+  export: '导出',
+  exportToPdf: '导出PDF',
+  exportMarkdownFile: '导出MD',
+  exportHTMLFile: '导出HTML',
+
+  fullScreen: '全屏',
+
+  graph: '画图',
+
+  insertFlow: '流程图',
+  insertSeq: '时序图',
+  insertState: '状态图',
+  insertClass: '类图',
+  insertPie: '饼图',
+  insertGantt: '甘特图',
+  insertErDiagram: '实体关系图',
+  insertJourney: '用户旅程图',
+  insertQuadrantChart: '象限图',
+  insertRequirementDiagram: '需求图',
+  insertGitGraph: 'Git提交图',
+  insertC4Dynamic: 'C4 图',
+  insertMindmap: '思维导图',
+  insertXyChart: 'XY 图表',
+  insertTimeline: '时间线',
+  insertSankey: '桑基图',
+
+  header: '标题',
+  h1: '一级标题',
+  h2: '二级标题',
+  h3: '三级标题',
+  h4: '四级标题',
+  h5: '五级标题',
+
+  hr: '分隔线',
+
+  image: '图片',
+  insert: '插入',
+  br: '换行',
+  formula: '行内公式',
+  toc: '目录',
+
+  video: '视频',
+  link: '超链接',
+  file: '文件',
+  table: '表格',
+  'line-table': '折线表格',
+  'bar-table': '柱状表格',
+  headlessTable: '无头表格',
+  ruby: '拼音',
+
+  italic: '斜体',
+  list: '列表',
+  ol: '有序列表',
+  ul: '无序列表',
+
+  panel: '面板',
+  panelTip: '提示面板',
+  panelInfo: '信息面板',
+  panelWarn: '警告面板',
+  panelDanger: '危险面板',
+  panelSuccess: '成功面板',
+  panelTop: '偏左面板',
+  panelCenter: '居中面板',
+  panelBottom: '偏右面板',
+
+  quote: '引用',
+  undo: '撤销',
+  redo: '恢复',
+
+  size: '大小',
+  'size-1': '小',
+  'size-2': '中',
+  'size-3': '大',
+  'size-4': '特大',
+
+  strikethrough: '删除线',
+  sub: '下标',
+  sup: '上标',
+
+  switchPreview: '预览',
+  tocListShow: '显示目录',
+  tocListHide: '隐藏目录',
+
+  previewClose: '关闭预览',
+  togglePreview: '预览',
+
+  underline: '下划线',
 
   latexFormula: 'Latex公式',
   latexFormulaInline: 'Latex行内公式',

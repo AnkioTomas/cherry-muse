@@ -106,7 +106,7 @@ export default class Graph extends MenuBase {
       },
       {
         iconName: 'schema',
-        name: '实体关系图',
+        name: 'insertErDiagram',
         onclick: this.bindSubClick.bind(
           this,
           `---
@@ -120,7 +120,7 @@ erDiagram
       },
       {
         iconName: 'waterfall_chart',
-        name: '用户旅程图',
+        name: 'insertJourney',
         onclick: this.bindSubClick.bind(
           this,
           `journey
@@ -136,7 +136,7 @@ erDiagram
       },
       {
         iconName: 'square',
-        name: '象限图',
+        name: 'insertQuadrantChart',
         onclick: this.bindSubClick.bind(
           this,
           `quadrantChart
@@ -157,7 +157,7 @@ erDiagram
       },
       {
         iconName: 'flowsheet',
-        name: '需求图',
+        name: 'insertRequirementDiagram',
         onclick: this.bindSubClick.bind(
           this,
           `    requirementDiagram
@@ -178,7 +178,7 @@ erDiagram
       },
       {
         iconName: 'linked_services',
-        name: 'Git提交图',
+        name: 'insertGitGraph',
         onclick: this.bindSubClick.bind(
           this,
           `    gitGraph
@@ -189,7 +189,7 @@ erDiagram
       },
       {
         iconName: 'bid_landscape',
-        name: 'C4 图',
+        name: 'insertC4Dynamic',
         onclick: this.bindSubClick.bind(
           this,
           `    C4Dynamic
@@ -212,7 +212,7 @@ erDiagram
       },
       {
         iconName: 'mindfulness',
-        name: '思维导图',
+        name: 'insertMindmap',
         onclick: this.bindSubClick.bind(
           this,
           `mindmap
@@ -224,7 +224,7 @@ Root
       },
       {
         iconName: 'chart_data',
-        name: 'XY 图表',
+        name: 'insertXyChart',
         onclick: this.bindSubClick.bind(
           this,
           `xychart-beta
@@ -237,7 +237,7 @@ Root
       },
       {
         iconName: 'view_timeline',
-        name: '时间线',
+        name: 'insertTimeline',
         onclick: this.bindSubClick.bind(
           this,
           `timeline
@@ -251,7 +251,7 @@ Root
       },
       {
         iconName: 'full_stacked_bar_chart',
-        name: '桑基图',
+        name: 'insertSankey',
         onclick: this.bindSubClick.bind(
           this,
           `sankey-beta

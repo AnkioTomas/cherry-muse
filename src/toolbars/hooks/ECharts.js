@@ -23,7 +23,7 @@ export default class ECharts extends MenuBase {
     this.setName('echarts', 'insert_chart');
     this.subMenuConfig = [
       {
-        name: '基本柱状图',
+        name: 'basicBarChart',
         iconName: 'bar_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
@@ -39,7 +39,7 @@ export default class ECharts extends MenuBase {
         }),
       },
       {
-        name: '堆叠柱状图',
+        name: 'stackedBarChart',
         iconName: 'stacked_bar_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
@@ -61,7 +61,7 @@ export default class ECharts extends MenuBase {
         }),
       },
       {
-        name: '基础折线图',
+        name: 'basicLineChart',
         iconName: 'show_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
@@ -80,7 +80,7 @@ export default class ECharts extends MenuBase {
         }),
       },
       {
-        name: '堆叠折线图',
+        name: 'stackedLineChart',
 
         iconName: 'stacked_line_chart',
         onclick: this.bindSubClick.bind(this, {
@@ -103,7 +103,7 @@ export default class ECharts extends MenuBase {
         }),
       },
       {
-        name: '区域面积图',
+        name: 'areaChart',
 
         iconName: 'area_chart',
         onclick: this.bindSubClick.bind(this, {
@@ -129,7 +129,7 @@ export default class ECharts extends MenuBase {
         }),
       },
       {
-        name: '平滑曲线图',
+        name: 'smoothCurveChart',
         iconName: 'multiline_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
@@ -146,7 +146,7 @@ export default class ECharts extends MenuBase {
         }),
       },
       {
-        name: '阶梯线图',
+        name: 'ladderLineDiagram',
         iconName: 'waterfall_chart',
         onclick: this.bindSubClick.bind(this, {
           xAxis: {
@@ -205,7 +205,7 @@ export default class ECharts extends MenuBase {
         }),
       },
       {
-        name: '圆环图',
+        name: 'circleDiagram',
 
         iconName: 'donut_large',
         onclick: this.bindSubClick.bind(this, {
@@ -272,7 +272,7 @@ export default class ECharts extends MenuBase {
         }),
       },
       {
-        name: '基础散点图',
+        name: 'scatterPlot',
 
         iconName: 'scatter_plot',
         onclick: this.bindSubClick.bind(this, {

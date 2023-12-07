@@ -31,20 +31,25 @@ export default class FullScreen extends MenuBase {
   onClick() {
     const cherryClass = this.editor.options.editorDom.parentElement.classList;
     const cherryToolbarFullscreen = document.querySelector('.cherry-toolbar-fullscreen');
+
+    // 清空 cherryToolbarFullscreen 元素
     while (cherryToolbarFullscreen.firstChild) {
-      // 循环删除父元素下的第一个子元素，直到父元素下没有子元素
       cherryToolbarFullscreen.removeChild(cherryToolbarFullscreen.firstChild);
     }
 
+    // 根据 cherryClass 中是否包含 'fullscreen' 类来决定创建哪种图标
     if (cherryClass.contains('fullscreen')) {
-      const fullScreen = createElement('i', 'ch-icon ch-icon-fullscreen');
+      const fullScreen = createElement('i', 'material-symbols-outlined');
+      fullScreen.innerText = 'fullscreen'; // 设置图标的文本
       cherryToolbarFullscreen.appendChild(fullScreen);
       cherryClass.remove('fullscreen');
     } else {
-      const minScreen = createElement('i', 'ch-icon ch-icon-minscreen');
+      const minScreen = createElement('i', 'material-symbols-outlined');
+      minScreen.innerText = 'close_fullscreen'; // 设置图标的文本
       cherryToolbarFullscreen.appendChild(minScreen);
       cherryClass.add('fullscreen');
     }
+
     this.editor.editor.refresh();
   }
 }

@@ -17,10 +17,10 @@ import MenuBase from '@/toolbars/MenuBase';
 /**
  * 插入柱状图图+表格
  */
-export default class BrTable extends MenuBase {
+export default class BarTable extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('柱状图表格', 'table_chart');
+    this.setName('barTable', 'table_chart');
   }
 
   /**

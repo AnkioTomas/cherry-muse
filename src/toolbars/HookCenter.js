@@ -35,14 +35,12 @@ import H1 from './hooks/H1';
 import H2 from './hooks/H2';
 import H3 from './hooks/H3';
 import Quote from './hooks/Quote';
-import QuickTable from './hooks/QuickTable';
 import TogglePreview from './hooks/TogglePreview';
 import FullScreen from './hooks/FullScreen';
 import Undo from './hooks/Undo';
 import Redo from './hooks/Redo';
 import Code from './hooks/Code';
 import Export from './hooks/Export';
-import Settings from './hooks/Settings';
 import Underline from './hooks/Underline';
 import SwitchModel from './hooks/SwitchModel';
 import Image from './hooks/Image';
@@ -58,10 +56,7 @@ import BarTable from './hooks/BarTable';
 
 import File from './hooks/File';
 import Ruby from './hooks/Ruby';
-import Theme from './hooks/Theme';
-// import ChatGpt from './hooks/ChatGpt';
 // SideToc
-import MobilePreview from './hooks/MobilePreview';
 import Copy from './hooks/Copy';
 import Panel from './hooks/Panel';
 import Detail from './hooks/Detail';
@@ -93,13 +88,10 @@ const HookList = {
   h3: H3,
   color: Color,
   quote: Quote,
-  quickTable: QuickTable,
   togglePreview: TogglePreview,
   code: Code,
   export: Export,
-  settings: Settings,
   fullScreen: FullScreen,
-  mobilePreview: MobilePreview,
   copy: Copy,
   undo: Undo,
   redo: Redo,
@@ -116,7 +108,6 @@ const HookList = {
   lineTable: LineTable,
   barTable: BarTable,
   ruby: Ruby,
-  theme: Theme,
   file: File,
   panel: Panel,
   detail: Detail,

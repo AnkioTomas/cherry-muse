@@ -67,20 +67,37 @@ var basicConfig = {
       'header',
       '|',
 
-        'badge',
+      'badge',
       'panel',
-
       '|',
       {
-        insert: ['ol',
-          'ul', 'checklist', 'image', 'audio', 'video', 'link', 'hr', 'br', 'code', 'formula', 'toc', 'table','detail','lineTable','barTable','emoji'],
+        insert: [
+            'ol',
+          'ul',
+          'checklist',
+          'image',
+          'audio',
+          'video',
+          'link',
+          'hr',
+          'br',
+          'code',
+          'formula',
+          'toc',
+          'table',
+          'detail',
+          'lineTable',
+          'barTable',
+          'emoji'
+        ],
       },
       'graph',
         'echarts',
         'card',
       'togglePreview',
 
-      'redo'
+      'redo',
+        'undo'
 
     ],
     toolbarRight: ['fullScreen', '|', 'export', '|', 'switchModel'],
