@@ -188,6 +188,34 @@ $mdSvgTextColor: $light-dark;
     }
   }
 
+  .cherry-previewer-codeBlock-hover-handler {
+    .cherry-copy-code-block,
+    .cherry-edit-code-block {
+      color: $light;
+      background-color: $dark-light;
+    }
+
+    .cherry-copy-code-block:hover,
+    .cherry-edit-code-block:hover {
+      color: $primary;
+    }
+  }
+  .CodeMirror-gutters{
+    border: none;
+    background: $dark-dark;
+  }
+  .CodeMirror-cursor {
+    border-left: 1px solid $light;
+    border-right: none;
+    width: 0;
+  }
+  .CodeMirror{
+    color: $light;
+    background: $dark-dark;
+  }
+  .CodeMirror-selected {
+    background: $dark-light;
+  }
 
 }
 .cherry__theme__dark.cherry-suggester-panel {
@@ -474,3 +502,4 @@ $mdSvgTextColor: $light-dark;
     background-color: $dark-dark;
   }
 }
+
