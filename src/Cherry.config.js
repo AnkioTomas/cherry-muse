@@ -237,7 +237,7 @@ const defaultConfig = {
     toolbar: [
       'tocList',
       {
-        strikethrough: ['strikethrough', 'underline', 'sub', 'sup', 'ruby', 'bold', 'italic'],
+        strikethrough: ['strikethrough', 'underline', 'sub', 'sup', 'ruby', 'bold', 'italic', 'quote'],
       },
       'size',
       '|',

@@ -179,7 +179,7 @@ export default class ECharts extends MenuBase {
         }),
       },
       {
-        name: '基础饼图',
+        name: 'pieChart',
 
         iconName: 'pie_chart',
         onclick: this.bindSubClick.bind(this, {
@@ -237,7 +237,7 @@ export default class ECharts extends MenuBase {
         }),
       },
       {
-        name: '玫瑰图',
+        name: 'roseChart',
 
         iconName: 'donut_small',
         onclick: this.bindSubClick.bind(this, {

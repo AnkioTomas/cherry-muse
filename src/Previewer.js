@@ -154,7 +154,7 @@ export default class Previewer {
   /**
    * 获取预览区内的html内容
    * @param {boolean} wrapTheme 是否在外层包裹主题class
-   * @returns html内容
+   * @returns string
    */
   getValue(wrapTheme = true) {
     let html = '';

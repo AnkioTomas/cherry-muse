@@ -94,7 +94,6 @@ export default class Toolbar {
   init() {
     Event.on(this.instanceId, Event.Events.cleanAllSubMenus, () => this.hideAllSubMenu());
   }
-
   previewOnly() {
     this.options.dom.classList.add('preview-only');
     this.$cherry.wrapperDom.classList.add('cherry--no-toolbar');
@@ -212,7 +211,6 @@ export default class Toolbar {
    * 展开/收起二级菜单
    */
   toggleSubMenu(name) {
-    console.log('name: ', name);
     if (!this.subMenus[name]) {
       // 如果没有二级菜单，则先画出来，然后再显示
       this.hideAllSubMenu();

@@ -22,66 +22,7 @@
  * 外加配置系统联想词
  */
 import { fuzzySearchKeysWithValues } from '@/core/hooks/Emoji';
-/*
- * 系统联想候选表，主要为'、'以及'、'的联想。
- */
-const SystemSuggestdata = [
-  {
-    icon: 'h1',
-    key: '一级标题',
-    keyword: 'head1',
-    value: '# ',
-  },
-  {
-    icon: 'h2',
-    key: '二级标题',
-    keyword: 'head2',
-    value: '## ',
-  },
-  {
-    icon: 'h3',
-    key: '三级标题',
-    keyword: 'head3',
-    value: '### ',
-  },
-  {
-    icon: 'table',
-    key: '表格',
-    keyword: 'table',
-    value: '| Header | Header | Header |\n| --- | --- | --- |\n| Content | Content | Content |\n',
-  },
-  {
-    icon: 'code',
-    key: '代码',
-    keyword: 'code',
-    value: '```\n\n```\n',
-  },
-  {
-    icon: 'link',
-    key: '链接',
-    keyword: 'link',
-    value: `[title](https://url)`,
-    selection: { from: 'title](https://url)'.length, to: '](https://url)'.length },
-  },
-  {
-    icon: 'checkdata',
-    key: '待办列表',
-    keyword: 'checkdata',
-    value: `- [ ] item\n- [x] item`,
-  },
-  {
-    icon: 'tips',
-    key: '面板',
-    keyword: 'panel tips info warning danger success',
-    value: `::: primary title\ncontent\n:::\n`,
-  },
-  {
-    icon: 'insertFlow',
-    key: '详情',
-    keyword: 'detail',
-    value: `+++ 点击展开更多\n内容\n++- 默认展开\n内容\n++ 默认收起\n内容\n+++\n`,
-  },
-];
+
 /**
  *
  * @param {Suggester} suggester
@@ -89,30 +30,47 @@ const SystemSuggestdata = [
  * */
 export const systemSuggests = [
   {
-    keyword: ':',
+    keyword: ':：；;',
     data(keywords, callback, $cherry) {
+      // 面板语法提示
+      if (
+        ['::', '：：', ';;', '；；', ':', '：', ';', '；'].includes(keywords) ||
+        (keywords && 'panel'.includes(keywords))
+      ) {
+        callback([
+          {
+            toolbar: 'panel',
+            keyword: 'panel',
+            goLeft: 4,
+          },
+        ]);
+        return;
+      }
+      // emoji搜索
       callback(fuzzySearchKeysWithValues(keywords, $cherry.options.engine.syntax.emoji));
     },
   },
   {
-    keyword: '￥$',
+    keyword: '￥$', // 公式语法提示
     data: [
       {
-        key: 'latexFormula',
+        key: 'latexFormulaInline',
         keyword: '',
-        value: `$$`,
+        icon: 'function',
+        value: `$x^2$`,
         goLeft: 1,
       },
       {
-        key: 'latexFormulaInline',
+        key: 'latexFormula',
         keyword: '$$',
-        value: `$$\n\n$$`,
+        icon: 'function',
+        value: `\n$$\nx^2\n$$\n`,
         goLeft: 4,
       },
     ],
   },
   {
-    keyword: '<《【{[',
+    keyword: '<《【{[', // 括号、脚注、链接、徽章
     data: [
       {
         key: '[]',
@@ -126,13 +84,7 @@ export const systemSuggests = [
         value: `【】`,
         goLeft: 1,
       },
-      {
-        icon: 'link',
-        key: 'link',
-        keyword: '[',
-        value: `[title](https://url)`,
-        selection: { from: 'title](https://url)'.length, to: '](https://url)'.length },
-      },
+
       {
         key: '()',
         keyword: '（',
@@ -157,34 +109,142 @@ export const systemSuggests = [
         value: `《》`,
         goLeft: 1,
       },
+      {
+        toolbar: 'link',
+      },
+      {
+        icon: 'edit_note',
+        key: 'footNoteTitle',
+        keyword: '[^',
+        value: `[^脚注标题]`,
+      },
+      {
+        icon: 'text_snippet',
+        key: 'footNoteText',
+        keyword: '[^',
+        value: `[^脚注标题]: 脚注内容`,
+      },
+      {
+        toolbar: 'badge',
+        keyword: 'badge',
+      },
     ],
   },
   {
-    keyword: '>》',
+    keyword: '>》', // 引用
     data: [
       {
-        key: '引用',
+        toolbar: 'quote',
         keyword: '',
-        value: `>`,
         goLeft: 1,
       },
     ],
   },
   {
-    keyword: '\'"`',
+    keyword: '#', // 标题
     data: [
       {
-        key: '代码块',
-        keyword: '``',
-        value: `\`\`\`\n\n\`\`\``,
+        toolbar: 'header',
+        keyword: '',
+      },
+    ],
+  },
+  {
+    keyword: '*/', // 加粗、下划线、删除线
+    data: [
+      {
+        toolbar: 'bold',
+        keyword: '',
+      },
+      {
+        toolbar: 'italic',
+        keyword: '',
+      },
+      {
+        toolbar: 'underline',
+      },
+    ],
+  },
+  {
+    keyword: '-=', // 高亮、checklist、列表、删除线、下划线
+    data: [
+      {
+        icon: 'highlight',
+        key: 'highlight',
+        keyword: '==',
+        value: `====`,
+        goLeft: 2,
+      },
+      {
+        toolbar: 'checklist',
+        goLeft: 3,
+      },
+      {
+        toolbar: 'ol',
+      },
+      {
+        toolbar: 'ul',
+      },
+      {
+        toolbar: 'strikethrough',
+      },
+      {
+        toolbar: 'underline',
+      },
+    ],
+  },
+  {
+    keyword: `|`, // 各种表格
+    data: [
+      {
+        toolbar: 'table',
+      },
+      {
+        toolbar: 'lineTable',
+        keyword: 'line',
+      },
+      {
+        toolbar: 'barTable',
+        keyword: 'bar',
+      },
+    ],
+  },
+  {
+    keyword: `!！`, // 各种文件
+    data: [
+      {
+        icon: 'image',
+        key: 'image',
+        keyword: '[',
+        value: `![描述#center](链接)`,
         goLeft: 1,
       },
       {
-        key: '行内代码',
-        keyword: '`',
-        value: `\`\``,
+        icon: 'videocam',
+        key: 'video',
+        keyword: 'video',
+        value: `!video[描述](链接)`,
         goLeft: 1,
       },
+      {
+        icon: 'mic',
+        key: 'audio',
+        keyword: 'audio',
+        value: `!audio[描述](链接)`,
+        goLeft: 1,
+      },
+      {
+        icon: 'attach_file',
+        key: 'file',
+        keyword: 'file',
+        value: `!file[名称|拓展名|密码](链接)`,
+        goLeft: 1,
+      },
+    ],
+  },
+  {
+    keyword: '\'"`', // 代码相关
+    data: [
       {
         key: '" "',
         keyword: '"',
@@ -196,6 +256,33 @@ export const systemSuggests = [
         keyword: `'`,
         value: `''`,
         goLeft: 1,
+      },
+      {
+        icon: 'code',
+        key: 'codeBlock',
+        keyword: '``',
+        value: `\`\`\`\n\n\`\`\`\n`,
+        goLeft: 4,
+      },
+
+      {
+        key: 'code',
+        icon: 'code',
+        keyword: '`',
+        value: `\`\``,
+        goLeft: 1,
+      },
+      {
+        toolbar: 'echarts',
+        keyword: '```echarts',
+      },
+      {
+        toolbar: 'graph',
+        keyword: '```mermaid',
+      },
+      {
+        toolbar: 'card',
+        keyword: '```card',
       },
     ],
   },

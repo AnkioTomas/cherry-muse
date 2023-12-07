@@ -24,46 +24,45 @@ export default class Panel extends MenuBase {
     super($cherry);
     this.setName('panel', 'dock_to_bottom');
     this.panelRule = getPanelRule().reg;
-    const { locale } = this.$cherry;
     this.subMenuConfig = [
       {
         iconName: 'question_mark',
-        name: '提示面板',
+        name: 'panelTip',
         onclick: this.bindSubClick.bind(this, 'primary'),
       },
       {
         iconName: 'info_i',
-        name: '信息面板',
+        name: 'panelInfo',
         onclick: this.bindSubClick.bind(this, 'info'),
       },
       {
         iconName: 'priority_high',
-        name: '警告面板',
+        name: 'panelWarn',
         onclick: this.bindSubClick.bind(this, 'warning'),
       },
       {
         iconName: 'close',
-        name: '危险面板',
+        name: 'panelDanger',
         onclick: this.bindSubClick.bind(this, 'danger'),
       },
       {
         iconName: 'done',
-        name: '成功面板',
+        name: 'panelSuccess',
         onclick: this.bindSubClick.bind(this, 'success'),
       },
       {
         iconName: 'align_justify_flex_start',
-        name: locale?.justifyLeft ?? '左对齐',
+        name: 'panelTop',
         onclick: this.bindSubClick.bind(this, 'left'),
       },
       {
         iconName: 'align_justify_center',
-        name: locale?.justifyCenter ?? '居中',
+        name: 'panelCenter',
         onclick: this.bindSubClick.bind(this, 'center'),
       },
       {
         iconName: 'align_justify_flex_end',
-        name: locale?.justifyRight ?? '右对齐',
+        name: 'panelBottom',
         onclick: this.bindSubClick.bind(this, 'right'),
       },
     ];

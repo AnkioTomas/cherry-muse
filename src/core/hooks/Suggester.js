@@ -118,7 +118,7 @@ export default class Suggester extends SyntaxBase {
     for (const suggest of mergeWith(systemSuggests, suggester)) {
       for (const keyword of suggest.keyword) {
         suggester.push({
-          keyword: this.$locale[keyword] ?? keyword,
+          keyword,
           data: suggest.data,
         });
       }
@@ -132,6 +132,7 @@ export default class Suggester extends SyntaxBase {
       if (!configItem.keyword) {
         configItem.keyword = '@';
       }
+
       this.suggester[configItem.keyword] = configItem;
     });
 
@@ -193,6 +194,8 @@ export default class Suggester extends SyntaxBase {
       this.suggesterPanel.setEditor(editor);
       this.suggesterPanel.setSuggester(this.suggester);
       this.suggesterPanel.bindEvent();
+      this.suggesterPanel.setLocale(this.$locale);
+      this.suggesterPanel.setToolbar(this.$engine.$cherry.toolbar);
     }
   }
 }
@@ -204,6 +207,14 @@ class SuggesterPanel {
     this.optionList = [];
     this.cursorMove = true;
     this.suggesterConfig = {};
+    this.$locale = {};
+    this.$toolbar = null;
+  }
+  setToolbar($toolbar) {
+    this.$toolbar = $toolbar;
+  }
+  setLocale($locale) {
+    this.$locale = $locale;
   }
 
   /**
@@ -312,7 +323,7 @@ class SuggesterPanel {
       (evt) => {
         const idx = isChildNode(this.$suggesterPanel, evt.target);
         if (idx > -1) {
-          this.pasteSelectResult(idx);
+          this.pasteSelectResult(idx, evt, evt.target);
         }
         this.stopRelate();
       },
@@ -359,7 +370,7 @@ class SuggesterPanel {
         if (typeof suggest === 'object' && suggest !== null) {
           let renderContent = suggest.key;
           if (suggest?.icon) {
-            renderContent = `<i class="ch-icon ch-icon-${suggest.icon}"></i>${renderContent}`;
+            renderContent = `<span class="material-symbols-outlined" style="transform: translateY(0%);top: 0;vertical-align: middle;">${suggest.icon}</span>${renderContent}`;
           }
           return this.renderPanelItem(renderContent, idx === 0);
         }
@@ -474,8 +485,9 @@ class SuggesterPanel {
    * 粘贴选择结果
    * @param {number} idx 选择的结果索引
    * @param {KeyboardEvent} evt 键盘事件
+   * @param dom
    */
-  pasteSelectResult(idx, evt) {
+  pasteSelectResult(idx, evt, dom) {
     if (!this.cursorTo) {
       this.cursorTo = JSON.parse(JSON.stringify(this.cursorFrom));
     }
@@ -498,12 +510,12 @@ class SuggesterPanel {
         this.optionList[idx] !== null &&
         typeof this.optionList[idx].value === 'function'
       ) {
-        result = this.optionList[idx].value();
+        this.editor.editor.replaceRange('', cursorFrom, cursorTo);
+        result = this.optionList[idx].value(evt, dom);
       }
       if (typeof this.optionList[idx] === 'string') {
         result = ` ${this.keyword}${this.optionList[idx]} `;
       }
-      // this.cursorTo.ch = this.cursorFrom.ch + result.length;
       if (result) {
         this.editor.editor.replaceRange(result, cursorFrom, cursorTo);
       }
@@ -533,6 +545,12 @@ class SuggesterPanel {
     );
   }
 
+  findSelectedItem() {
+    return Array.prototype.find.call(this.$suggesterPanel.childNodes, (item) =>
+      item.classList.contains('cherry-suggester-panel__item--selected'),
+    );
+  }
+
   enableRelate() {
     return this.searchCache;
   }
@@ -556,6 +574,7 @@ class SuggesterPanel {
     const suggestList = _list.filter((item) => {
       return !word || test.test(item.keyword);
     });
+
     // 当没有候选项时直接推出联想
     callback(suggestList.length === 0 ? false : suggestList);
   }
@@ -574,7 +593,7 @@ class SuggesterPanel {
       this.startRelate(codemirror, changeValue, from);
     }
     if (this.enableRelate() && (changeValue || origin === '+delete')) {
-      this.cursorTo = to;
+      this.cursorTo = JSON.parse(JSON.stringify(to));
       if (changeValue) {
         this.searchKeyCache.push(changeValue);
       } else if (origin === '+delete') {
@@ -590,8 +609,43 @@ class SuggesterPanel {
           that.stopRelate();
           return;
         }
+
         // 回显命中的结果
-        that.optionList = !res || !res.length ? [] : res.slice(0, 200); // 只要前200个，太多影响性能
+        const optionList = !res || !res.length ? [] : res.slice(0, 200); // 只要前200个，太多影响性能
+        that.optionList = [];
+        optionList.forEach(function (suggest) {
+          if (suggest.toolbar) {
+            const toolbar = that.$toolbar.menus.hooks[suggest.toolbar];
+            if (toolbar) {
+              if (toolbar.subMenuConfig && toolbar.subMenuConfig.length > 0) {
+                toolbar.subMenuConfig.forEach(function (menu) {
+                  const menuItem = {};
+                  menuItem.icon = menu.iconName;
+                  menuItem.key = that.$locale[menu.name] ?? menu.name;
+                  menuItem.keyword = suggest.keyword;
+                  menuItem.value = function (event, dom) {
+                    menu.dom = dom;
+                    // 删除前面的字符
+                    return menu.onclick();
+                  };
+                  that.optionList.push(menuItem);
+                });
+              } else {
+                suggest.icon = toolbar.iconName;
+                suggest.key = that.$locale[toolbar.name] ?? toolbar.name;
+                suggest.value = function (event, dom) {
+                  toolbar.dom = dom;
+                  toolbar.fire(event, toolbar);
+                  return '';
+                };
+                that.optionList.push(suggest);
+              }
+            }
+          } else {
+            suggest.key = that.$locale[suggest.key] ?? suggest.key;
+            that.optionList.push(suggest);
+          }
+        });
         that.updatePanel(that.optionList);
       }
       // 展示推荐列表
@@ -665,7 +719,9 @@ class SuggesterPanel {
     } else if (keyCode === 13) {
       evt.stopPropagation();
       this.cursorMove = false;
-      this.pasteSelectResult(this.findSelectedItemIndex(), evt);
+      const dom = this.findSelectedItem();
+      this.pasteSelectResult(this.findSelectedItemIndex(), evt, dom);
+      //
       codemirror.focus();
       // const cache = JSON.parse(JSON.stringify(this.cursorTo));
       // setTimeout(() => {
