@@ -705,7 +705,20 @@ div[data-type='codeBlock'] {
     }
   }
 }
+.cardListContainer.fileContainer {
+  span.material-symbols-outlined {
+    position: absolute;
+    margin-left: 30px;
+    font-size: 60px;
+  }
 
+  .desc span.material-symbols-outlined {
+  position: relative;
+  font-size: 22px;
+  transform: translateY(20%);
+  margin-left: 0;
+}
+}
 // 图文卡片列表
 .cardImgListContainer {
   margin: 1rem 0;

@@ -29,13 +29,15 @@ $mdAHoverColor: $editorImportantColor;
 $mdInlineCodeColor: $editorCodeColor;
 $mdInlineCodeBg: $editorUrlBg;
 $mdBlockquoteBg:$light;
+.theme__light :root{
+
+}
 /** 编辑器样式 */
 .cherry.theme__light {
-  :root{
-    --mainBg:$mdBlockquoteBg;
-    --textColor:$mdColor;
-    --borderColor:$mdLineColor;
-  }
+  --mainBg:#{$mdLineColor};
+  --textColor:#{$mdColor};
+  --borderColor:#{$mdLineColor};
+  --bodyBg:#{$primary-very-light};
   /** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 */
   .cherry-toolbar, .cherry-floatmenu, .cherry-bubble {
     background: $toolbarBg;

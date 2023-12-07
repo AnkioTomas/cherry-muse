@@ -50,9 +50,21 @@ export function handleUpload(editor, type = 'image', accept = '*', callback = nu
         // 如果是音频，则返回固定的音频markdown源码
         code = `!audio[${file.name}](${url})`;
       } else {
+        function splitFileName(filename) {
+          // 使用正则表达式匹配文件名和扩展名
+          const result = /^(.+?)(\.[^.]*$|$)/.exec(filename);
+
+          // 如果没有扩展名，返回原始文件名
+          if (!result) return { name: filename, ext: null };
+
+          // 返回文件名和扩展名
+          return { name: result[1], ext: result[2] ? result[2].substring(1) : null };
+        }
+        const { name, ext } = splitFileName(file.name);
         // 默认返回超链接
-        code = `[${file.name}](${url})`;
+        code = `!file[${name}|${ext}](${url})`;
       }
+
       // 替换选中区域
       // @ts-ignore
       editor.editor.doc.replaceSelection(code);
@@ -63,11 +75,7 @@ export function handleUpload(editor, type = 'image', accept = '*', callback = nu
 
 /**
  * 解析params参数
- * @param params?.isBorder 是否有边框样式（图片场景下生效）
- * @param params?.isShadow 是否有阴影样式（图片场景下生效）
- * @param params?.isRadius 是否有圆角样式（图片场景下生效）
- * @param params?.width 设置宽度，可以是像素、也可以是百分比（图片、视频场景下生效）
- * @param params?.height 设置高度，可以是像素、也可以是百分比（图片、视频场景下生效）
+ * @param params
  */
 export function handleParams(params) {
   const ret = [];
@@ -105,6 +113,9 @@ export function handleFileUploadCallback(url, params, file) {
   }
   if (/image/i.test(file.type)) {
     type = '!';
+  }
+  if (/file/i.test(file.type)) {
+    type = '!file';
   }
   const style = type ? handleParams(params) : '';
   return `${type}[${name}${style}](${url})${poster}`;

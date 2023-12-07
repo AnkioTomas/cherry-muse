@@ -115,10 +115,10 @@ export default class Suggester extends SyntaxBase {
     if (!suggester) {
       suggester = [];
     }
-    for (const suggest of mergeWith(systemSuggests(this), suggester)) {
+    for (const suggest of mergeWith(systemSuggests, suggester)) {
       for (const keyword of suggest.keyword) {
         suggester.push({
-          keyword,
+          keyword: this.$locale[keyword] ?? keyword,
           data: suggest.data,
         });
       }

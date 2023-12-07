@@ -52,6 +52,54 @@ const replacerFactory = function (type, match, leadingChar, alt, link, title, po
   return match;
 };
 
+const replacerFileFactory = function (match, leadingChar, alt, link, title, posterContent, config, globalConfig) {
+  const fileIcon = {
+    file: 'draft', // 默认文件
+    'doc|docx|txt': 'description',
+    'xls|xlsx': 'table',
+    'ppt|pptx': 'video_file',
+    pdf: 'picture_as_pdf',
+    'jpg|jpeg|png|gif|bmp|tiff|svg': 'image', // 图像文件
+    'mp3|wav|aac|ogg|flac': 'audio_file', // 音频文件
+    'mp4|avi|mov|wmv|flv|mkv': 'movie', // 视频文件
+    'zip|rar|7z|tar.gz|gz': 'folder_zip', // 压缩文件
+    'exe|dmg|msi': 'memory', // Windows 可执行文件
+    'sh|json|xml|html|htm|css': 'code', // 编程语言和标记语言文件
+    apk: 'apk_document', // APK 文件
+  };
+
+  function getIcon(ext) {
+    for (const fileIconKey in fileIcon) {
+      if (fileIconKey.indexOf(ext) !== -1) {
+        return fileIcon[fileIconKey];
+      }
+    }
+    return fileIcon.file;
+  }
+
+  const refType = typeof link === 'undefined' ? 'ref' : 'url';
+  if (refType === 'ref') {
+    return match;
+  }
+  let titleInfo = alt;
+  if (!titleInfo) {
+    titleInfo = 'file|file';
+  }
+  const titleSplit = titleInfo.split('|');
+  const [name = 'file', ext = 'file', password = ''] = titleSplit;
+
+  return `<div class="card cardListContainer fileContainer"><div class="card-list">
+  <a href="${link}" target="_blank" class="card-item row-1" style="padding:0;background-color:var(--bodyBg);border-radius: 5px">
+       <span class="material-symbols-outlined">${getIcon(ext)}</span><div><p class="name">${name}</p>${
+    password !== ''
+      ? `<p class="desc" ><span class="material-symbols-outlined" style="margin-right: 5px">lock_open</span> ${password}</p>`
+      : ''
+  }</div></a>
+
+  </div></div>
+`;
+};
+
 export default class Image extends SyntaxBase {
   static HOOK_NAME = 'image';
 
@@ -60,13 +108,16 @@ export default class Image extends SyntaxBase {
     this.urlProcessor = globalConfig.urlProcessor;
     // TODO: URL Validator
     this.extendMedia = {
-      tag: ['video', 'audio'],
+      tag: ['video', 'audio', 'file'],
       replacer: {
         video(match, leadingChar, alt, link, title, poster) {
           return replacerFactory('video', match, leadingChar, alt, link, title, poster, config, globalConfig);
         },
         audio(match, leadingChar, alt, link, title, poster) {
           return replacerFactory('audio', match, leadingChar, alt, link, title, poster, config, globalConfig);
+        },
+        file(match, leadingChar, alt, link, title, poster) {
+          return replacerFileFactory(match, leadingChar, alt, link, title, poster, config, globalConfig);
         },
       },
     };

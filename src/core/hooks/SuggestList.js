@@ -87,7 +87,7 @@ const SystemSuggestdata = [
  * @param {Suggester} suggester
  * @returns
  * */
-export const systemSuggests = (suggester) => [
+export const systemSuggests = [
   {
     keyword: ':',
     data(keywords, callback, $cherry) {
@@ -98,13 +98,13 @@ export const systemSuggests = (suggester) => [
     keyword: '￥$',
     data: [
       {
-        key: suggester.$locale.latexFormula,
+        key: 'latexFormula',
         keyword: '',
         value: `$$`,
         goLeft: 1,
       },
       {
-        key: suggester.$locale.latexFormulaInline,
+        key: 'latexFormulaInline',
         keyword: '$$',
         value: `$$\n\n$$`,
         goLeft: 4,
@@ -128,7 +128,7 @@ export const systemSuggests = (suggester) => [
       },
       {
         icon: 'link',
-        key: suggester.$locale.link,
+        key: 'link',
         keyword: '[',
         value: `[title](https://url)`,
         selection: { from: 'title](https://url)'.length, to: '](https://url)'.length },
