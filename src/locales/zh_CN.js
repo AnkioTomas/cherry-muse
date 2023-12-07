@@ -14,31 +14,13 @@
  * limitations under the License.
  */
 export default {
-  insertFormula: '公式',
-
-  codeTheme: '代码主题',
   switchModel: '模式切换',
   switchEdit: '返回编辑',
-  classicBr: '经典换行',
-  normalBr: '常规换行',
-  settings: '设置',
-  mobilePreview: '移动端预览',
 
   pastePlain: '粘贴为纯文本格式',
   pasteMarkdown: '粘贴为markdown格式',
   hide: '隐藏(ctrl+0)',
 
-  theme: '主题',
-
-  'H1 Heading': 'H1 一级标题',
-  'H2 Heading': 'H2 二级标题',
-  'H3 Heading': 'H3 三级标题',
-  complement: '续写',
-  summary: '总结',
-  justify: '对齐方式',
-  justifyLeft: '左对齐',
-  justifyCenter: '居中',
-  justifyRight: '右对齐',
   //
   audio: '音频',
 
@@ -63,7 +45,8 @@ export default {
 
   checklist: '清单',
   //
-  code: '代码',
+  code: '行内代码',
+  codeBlock: '代码块',
   color: '颜色',
   //
   copy: '复制内容',
@@ -172,4 +155,7 @@ export default {
 
   latexFormula: 'Latex公式',
   latexFormulaInline: 'Latex行内公式',
+  highlight: '高亮',
+  footNoteTitle: '脚注标题',
+  footNoteText: '脚注内容',
 };
