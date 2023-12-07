@@ -10,16 +10,13 @@
   "main": "./dist/cherry-markdown.min.js",
   "module": "./dist/cherry-markdown.esm.js",
   "style": "./dist/cherry-markdown.min.css",
-  "types": "./dist/types/index.d.ts",
   "directories": {
-    "doc": "docs",
     "example": "examples"
   },
   "files": [
     "dist",
     "src",
-    "test",
-    "types"
+    "test"
   ],
   "sideEffects": [
     "./dist/*.css"
@@ -31,7 +28,7 @@
     "dev:js": "cross-env NODE_ENV=development HOT_RELOAD=false rollup --config build/dev.js",
     "dev:styles": "cross-env NODE_ENV=development rollup --config build/rollup.styles.config.js",
     "build": "run-s clean build:debug build:all build:cjs",
-    "build:all": "run-p iconfont build:styles build:types build:addons build:full build:core build:engine",
+    "build:all": "run-p  build:styles build:addons build:full build:core build:engine",
     "build:cjs": "run-p build:core-cjs build:engine-cjs",
     "build:debug": "run-p dev:js dev:styles",
     "build:full": "cross-env NODE_ENV=production rollup --config build/build.js",
@@ -40,11 +37,9 @@
     "build:engine": "cross-env CORE_BUILD=true NODE_ENV=production rollup --config build/rollup.engine.config.js",
     "build:engine-cjs": "cross-env BUILD_TARGET=commonjs CORE_BUILD=true NODE_ENV=production rollup --config build/rollup.engine.config.js",
     "build:addons": "node build/addons.build.js",
-    "build:types": "tsc --project tsconfig.json && node build/replacePaths.js",
     "build:styles": "cross-env NODE_ENV=production rollup --config build/rollup.styles.config.js",
     "clean": "rimraf ./dist",
     "check-bundle": "es-check es5 dist/cherry-markdown.js dist/cherry-markdown.min.js",
-    "test": "jest",
     "test:commonmark": "jest test/core/CommonMark.spec.ts",
     "test:snapshot": "jest test/core/hooks/*.spec.ts",
     "lint": "eslint --plugin file-progress --rule \"file-progress/activate: 1\" --ext .js .",
@@ -111,10 +106,6 @@
     "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "glob": "^8.0.3",
-    "gulp": "^4.0.2",
-    "gulp-consolidate": "^0.2.0",
-    "gulp-iconfont": "^11.0.0",
-    "gulp-rename": "^2.0.0",
     "html2canvas": "^1.1.3",
     "husky": "~7.0.4",
     "jest": "^27.5.1",

@@ -67,14 +67,6 @@ function buildAddons(entries) {
         resolve({
           browser: true,
         }),
-        typescript({
-          include: ['*.js', '*.ts'],
-          tsconfig: path.resolve(PROJECT_ROOT_PATH, 'tsconfig.addons.json'),
-          tsconfigOverride: {
-            include: [fullEntryPath], // FIXME: 临时方案确保不会重复生成其他插件的 d.ts
-            // outDir: declarationDir,
-          },
-        }),
         commonjs({
           include: [/node_modules/, /src[\\/]libs/], // Default: undefined
           extensions: ['.js'], // Default: [ '.js' ]

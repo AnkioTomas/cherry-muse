@@ -57,9 +57,6 @@ class CherryEngine extends CherryStatic {
 
 export { SyntaxHookBase, MenuHookBase };
 
-/**
- * @typedef {typeof CherryStatic & (new (options: Partial<import('~types/cherry').CherryOptions>) => Engine)}
- */
 const CherryEngineExport = CherryEngine;
 
 export default CherryEngineExport;

@@ -34,7 +34,6 @@ import { LIST_CONTENT } from '@/utils/regexp';
 import { Theme } from '@/Theme';
 import SideToc from '@/toolbars/SideToc';
 
-/** @typedef {import('~types/cherry').CherryOptions} CherryOptions */
 export default class Cherry extends CherryStatic {
   /**
    * @protected
@@ -44,23 +43,16 @@ export default class Cherry extends CherryStatic {
    * @readonly
    */
   static config = {
-    /** @type {Partial<CherryOptions>} */
     defaults: defaultConfig,
   };
 
-  /**
-   * @param {Partial<CherryOptions>} options
-   */
   constructor(options) {
     super();
     Cherry.initialized = true;
     const defaultConfigCopy = cloneDeep(Cherry.config.defaults);
     this.defaultToolbar = defaultConfigCopy.toolbars.toolbar;
     $expectTarget(options, Object);
-    /**
-     * @property
-     * @type {Partial<CherryOptions>}
-     */
+
     this.options = mergeWith({}, defaultConfigCopy, options, customizer);
 
     // loading the locale
@@ -90,9 +82,6 @@ export default class Cherry extends CherryStatic {
     this.instanceId = `cherry-${new Date().getTime()}${Math.random()}`;
     this.options.instanceId = this.instanceId;
 
-    /**
-     * @type {import('./Engine').default}
-     */
     this.engine = new Engine(this.options, this);
     this.init();
   }
