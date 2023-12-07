@@ -458,10 +458,9 @@
 div[data-type='codeBlock'] {
   @import 'prism/dark';
 
-  [data-code-block-theme='default'] & {
+  [data-code-block-theme='light'] & {
     @import 'prism/light';
   }
-
 
 }
 

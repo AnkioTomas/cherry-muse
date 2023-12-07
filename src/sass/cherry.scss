@@ -310,6 +310,8 @@
   a{
     text-decoration: none;
     color: $primary;
+    width: 100%;
+    display: block;
   }
   a:hover{
     color: $primary-light;
@@ -580,7 +582,6 @@
     width: 25px;
     text-align: center;
     height: 25px;
-    border: 1px solid #3582fb;
     cursor: pointer;
     float: right;
     top: 15px;
@@ -588,9 +589,8 @@
     margin-left: -27px;
     transition: all 0.3s;
     z-index: 2;
-    color: #3582fb;
-    background-color: #eee;
-    border-color: #3582fb;
+    color: $primary-light;
+    background-color: $primary-very-light;
   }
 
   .cherry-copy-code-block {
@@ -603,14 +603,22 @@
 
   .cherry-copy-code-block:hover,
   .cherry-edit-code-block:hover {
-    color: #eee;
-    background-color: #3582fb;
-    border-color: #eee;
+    color: $primary;
   }
 
   .cherry-code-preview-lang-select {
     position: absolute;
     transform: translate(2px, -50%);
+  }
+}
+.cherry-edit-code-block {
+  .material-symbols-outlined{
+    margin: 0;
+  }
+}
+.cherry-copy-code-block {
+  .material-symbols-outlined{
+    margin: 0;
   }
 }
 

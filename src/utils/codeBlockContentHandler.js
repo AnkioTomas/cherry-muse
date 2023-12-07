@@ -15,7 +15,6 @@
  */
 import { getCodeBlockRule } from '@/utils/regexp';
 import codemirror from 'codemirror';
-import { getCodePreviewLangSelectElement } from '@/utils/code-preview-language-setting';
 import { copyToClip } from '@/utils/copy';
 import 'codemirror/keymap/sublime';
 
@@ -160,25 +159,13 @@ export default class CodeBlockHandler {
    * 展示代码块区域的按钮
    */
   $showBtn(isEnableBubbleAndEditorShow) {
-    const { changeLang, editCode, copyCode, lang } = this.target.dataset;
+    const { editCode, copyCode } = this.target.dataset;
     this.container.innerHTML = '';
-    if (changeLang === 'true' && isEnableBubbleAndEditorShow) {
-      // 添加删除btn
-      this.container.innerHTML = getCodePreviewLangSelectElement(lang);
-      const changeLangDom = this.container.querySelector('#code-preview-lang-select');
-      this.changeLangDom = changeLangDom;
-      this.changeLangDom.addEventListener('change', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        this.parent.$removeAllPreviewerBubbles('click');
-        this.$changeLang(e.target.value || '');
-      });
-    }
     if (editCode === 'true' && isEnableBubbleAndEditorShow) {
       // 添加编辑btn
       const editDom = document.createElement('div');
       editDom.className = 'cherry-edit-code-block';
-      editDom.innerHTML = '<i class="ch-icon ch-icon-edit"></i>';
+      editDom.innerHTML = '<span class="material-symbols-outlined">edit</span>';
       this.container.appendChild(editDom);
       editDom.addEventListener('click', (e) => {
         e.preventDefault();
@@ -193,7 +180,7 @@ export default class CodeBlockHandler {
       // 添加复制btn
       const copyDom = document.createElement('div');
       copyDom.className = 'cherry-copy-code-block';
-      copyDom.innerHTML = '<i class="ch-icon ch-icon-copy"></i>';
+      copyDom.innerHTML = '<span class="material-symbols-outlined">content_copy</span>';
       this.container.appendChild(copyDom);
       copyDom.addEventListener('click', (e) => {
         e.preventDefault();
@@ -206,9 +193,6 @@ export default class CodeBlockHandler {
   }
   // 隐藏所有按钮（切换语言、编辑、复制）
   $hideAllBtn() {
-    if (this.changeLangDom?.style?.display) {
-      this.changeLangDom.style.display = 'none';
-    }
     if (this.editDom?.style?.display) {
       this.editDom.style.display = 'none';
     }
@@ -216,13 +200,7 @@ export default class CodeBlockHandler {
       this.copyDom.style.display = 'none';
     }
   }
-  /**
-   * 切换代码块的语言
-   */
-  $changeLang(lang) {
-    this.$findCodeInEditor(true);
-    this.codeMirror.replaceSelection(lang, 'around');
-  }
+
   $drawEditor() {
     const dom = document.createElement('div');
     dom.className = 'cherry-previewer-codeBlock-content-handler__input';
@@ -265,11 +243,11 @@ export default class CodeBlockHandler {
     if (final === false) {
       return false;
     }
-    const iconNode = this.copyDom.querySelector('i.ch-icon-copy');
+    const iconNode = this.copyDom.querySelector('span');
     if (iconNode) {
-      iconNode.className = iconNode.className.replace('copy', 'ok');
+      iconNode.textContent = iconNode.textContent.replace('content_copy', 'done');
       setTimeout(() => {
-        iconNode.className = iconNode.className.replace('ok', 'copy');
+        iconNode.textContent = iconNode.textContent.replace('done', 'content_copy');
       }, 1000);
     }
     copyToClip(final);
