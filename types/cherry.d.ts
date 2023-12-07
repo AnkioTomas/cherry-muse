@@ -23,8 +23,6 @@ export interface CherryOptions {
     video: string,
     audio: string,
     image: string,
-    word: string,
-    pdf: string,
     file: string,
   };
   /** 有哪些主题 */
