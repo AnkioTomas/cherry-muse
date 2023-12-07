@@ -69,12 +69,17 @@ const replacerFileFactory = function (match, leadingChar, alt, link, title, post
   };
 
   function getIcon(ext) {
-    for (const fileIconKey in fileIcon) {
-      if (fileIconKey.indexOf(ext) !== -1) {
-        return fileIcon[fileIconKey];
-      }
-    }
-    return fileIcon.file;
+    // 将 fileIcon 的键转换为数组，每个元素是该键包含的扩展名数组
+    const extensionsMap = Object.entries(fileIcon).map(([key, value]) => ({
+      exts: key.split('|'),
+      icon: value,
+    }));
+
+    // 查找与给定扩展名匹配的图标
+    const match = extensionsMap.find(({ exts }) => exts.includes(ext));
+
+    // 如果找到匹配的图标，则返回它；否则返回默认图标
+    return match ? match.icon : fileIcon.file;
   }
 
   const refType = typeof link === 'undefined' ? 'ref' : 'url';
