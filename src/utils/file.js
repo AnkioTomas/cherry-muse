@@ -13,7 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+export function splitFileName(filename) {
+  // 使用正则表达式匹配文件名和扩展名
+  const result = /^(.+?)(\.[^.]*$|$)/.exec(filename);
 
+  // 如果没有扩展名，返回原始文件名
+  if (!result) return { name: filename, ext: null };
+
+  // 返回文件名和扩展名
+  return { name: result[1], ext: result[2] ? result[2].substring(1) : null };
+}
 /**
  * 上传文件的逻辑，如果有callback，则不再走默认的替换文本的逻辑，而是调用callback
  * @param {string} type 上传文件的类型
@@ -50,16 +59,6 @@ export function handleUpload(editor, type = 'image', accept = '*', callback = nu
         // 如果是音频，则返回固定的音频markdown源码
         code = `!audio[${file.name}](${url})`;
       } else {
-        function splitFileName(filename) {
-          // 使用正则表达式匹配文件名和扩展名
-          const result = /^(.+?)(\.[^.]*$|$)/.exec(filename);
-
-          // 如果没有扩展名，返回原始文件名
-          if (!result) return { name: filename, ext: null };
-
-          // 返回文件名和扩展名
-          return { name: result[1], ext: result[2] ? result[2].substring(1) : null };
-        }
         const { name, ext } = splitFileName(file.name);
         // 默认返回超链接
         code = `!file[${name}|${ext}](${url})`;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import MenuBase from '@/toolbars/MenuBase';
-import { handleUpload, handleParams } from '@/utils/file';
+import { handleUpload, handleParams, splitFileName } from '@/utils/file';
 /**
  * 插入文件
  */
@@ -39,7 +39,9 @@ export default class Video extends MenuBase {
         this.setLessSelection(begin, end);
       });
       const finalName = params.name ? params.name : name;
-      return `${begin}${finalName}${handleParams(params)}${end}`;
+      const { title, ext } = splitFileName(finalName);
+
+      return `${begin}${title}|${ext}${handleParams(params)}${end}`;
     }
     const accept = this.$cherry.options?.fileTypeLimitMap?.file ?? '*';
     // 插入图片，调用上传文件逻辑
