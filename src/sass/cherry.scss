@@ -33,10 +33,7 @@
 
   &.cherry--no-toolbar {
     .cherry-toolbar,
-    .cherry-sidebar {
-      height: 0;
-      display: none;
-    }
+
 
     .cherry-editor,
     .cherry-previewer {

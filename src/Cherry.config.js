@@ -79,15 +79,6 @@ const defaultConfig = {
   externals: {
     // externals
   },
-  // chatGpt的openai配置
-  openai: {
-    apiKey: '', // apiKey
-    // proxy: {
-    //   host: '127.0.0.1',
-    //   port: '7890',
-    // }, // http & https代理配置
-    ignoreError: false, // 是否忽略请求失败，默认忽略
-  },
   // 解析引擎配置
   engine: {
     // 全局配置
@@ -142,25 +133,15 @@ const defaultConfig = {
         indentSpace: 2, // 默认2个空格缩进
       },
       table: {
-        enableChart: false,
-        // chartRenderEngine: EChartsTableEngine,
-        // externals: ['echarts'],
-      },
-      inlineCode: {
-        theme: 'red',
+        enableChart: true,
       },
       codeBlock: {
-        theme: 'dark', // 默认为深色主题
         wrap: true, // 超出长度是否换行，false则显示滚动条
         lineNumber: true, // 默认显示行号
         copyCode: true, // 是否显示“复制”按钮
         editCode: true, // 是否显示“编辑”按钮
-        changeLang: true, // 是否显示“切换语言”按钮
         customRenderer: {
           // 自定义语法渲染器
-        },
-        mermaid: {
-          svg2img: false, // 是否将mermaid生成的画图变成img格式
         },
         /**
          * indentedCodeBlock是缩进代码块是否启用的开关
@@ -254,23 +235,26 @@ const defaultConfig = {
     theme: 'dark', // light or dark
     showToolbar: true, // false：不展示顶部工具栏； true：展示工具栏; toolbars.showToolbar=false 与 toolbars.toolbar=false 等效
     toolbar: [
-      'bold',
-      'italic',
-      'strikethrough',
+      'tocList',
+      {
+        strikethrough: ['strikethrough', 'underline', 'sub', 'sup', 'ruby', 'bold', 'italic'],
+      },
+      'size',
       '|',
       'color',
       'header',
-      'ruby',
       '|',
-      'list',
+      'badge',
       'panel',
-      // 'justify', // 对齐方式，默认不推荐这么“复杂”的样式要求
-      'detail',
       {
         insert: [
+          'ol',
+          'ul',
+          'checklist',
           'image',
           'audio',
           'video',
+          'file',
           'link',
           'hr',
           'br',
@@ -278,17 +262,21 @@ const defaultConfig = {
           'formula',
           'toc',
           'table',
-          'line-table',
-          'bar-table',
-          'pdf',
-          'word',
+          'detail',
+          'lineTable',
+          'barTable',
+          'emoji',
         ],
       },
       'graph',
-      'settings',
+      'echarts',
+      'card',
+      'togglePreview',
+
+      'redo',
+      'undo',
     ],
-    toolbarRight: [],
-    sidebar: [],
+    toolbarRight: ['fullScreen', '|', 'export', '|', 'switchModel'],
     bubble: ['bold', 'italic', 'underline', 'strikethrough', 'sub', 'sup', 'quote', '|', 'size', 'color'], // array or false
     float: ['h1', 'h2', 'h3', '|', 'checklist', 'quote', 'table', 'code'], // array or false
     // 快捷键配置，如果配置为空，则使用toolbar的配置
@@ -299,16 +287,8 @@ const defaultConfig = {
       // 'Ctrl-Alt-m': 'formula',
     },
     // 一些按钮的配置信息
-    config: {
-      formula: {
-        showLatexLive: true, // true: 显示 www.latexlive.com 外链； false：不显示
-        templateConfig: false, // false: 使用默认模板
-      },
-    },
+    config: {},
   },
-  // 打开draw.io编辑页的url，如果为空则drawio按钮失效
-  drawioIframeUrl: '',
-  // 上传文件的回调
   fileUpload: callbacks.fileUpload,
   /**
    * 上传文件的时候用来指定文件类型
@@ -317,11 +297,10 @@ const defaultConfig = {
     video: 'video/*',
     audio: 'audio/*',
     image: 'image/*',
-    word: '.doc,.docx',
-    pdf: '.pdf',
     file: '*',
   },
   callback: {
+    // 上传文件的回调
     afterChange: callbacks.afterChange,
     afterInit: callbacks.afterInit,
     beforeImageMounted: callbacks.beforeImageMounted,
@@ -370,18 +349,7 @@ const defaultConfig = {
       afterLoadAllImgCallback: () => {},
     },
   },
-  /**
-   * 配置主题，第三方可以自行扩展主题
-   */
-  theme: [
-    { className: 'default', label: '默认' },
-    { className: 'dark', label: '暗黑' },
-    { className: 'light', label: '明亮' },
-    { className: 'green', label: '清新' },
-    { className: 'red', label: '热情' },
-    { className: 'violet', label: '淡雅' },
-    { className: 'blue', label: '清幽' },
-  ],
+
   // 预览页面不需要绑定事件
   isPreviewOnly: false,
   // 预览区域跟随编辑器光标自动滚动
@@ -391,5 +359,7 @@ const defaultConfig = {
   // The locale Cherry is going to use. Locales live in /src/locales/
   locale: 'zh_CN',
 };
-
+if (window.outerWidth <= 600) {
+  defaultConfig.toolbars.toolbar = ['tocList', 'togglePreview'];
+}
 export default cloneDeep(defaultConfig);

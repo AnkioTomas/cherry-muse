@@ -39,7 +39,6 @@ export default class CodeBlock extends ParagraphBase {
     this.lineNumber = config.lineNumber; // 是否显示行号
     this.copyCode = config.copyCode; // 是否显示“复制”按钮
     this.editCode = config.editCode; // 是否显示“编辑”按钮
-    this.changeLang = config.changeLang; // 是否显示“切换语言”按钮
     this.indentedCodeBlock = typeof config.indentedCodeBlock === 'undefined' ? true : config.indentedCodeBlock; // 是否支持缩进代码块
     this.INLINE_CODE_REGEX = /(`+)(.+?(?:\n.+?)*?)\1/g;
     if (config && config.customRenderer) {
@@ -178,7 +177,7 @@ export default class CodeBlock extends ParagraphBase {
         data-lines="${lines}" 
         data-edit-code="${this.editCode}" 
         data-copy-code="${this.copyCode}"
-        data-change-lang="${this.changeLang}"
+     
         data-lang="${$lang}"
       >
       <pre class="language-${lang}">${this.wrapCode(cacheCode, lang)}</pre>

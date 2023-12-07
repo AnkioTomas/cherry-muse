@@ -226,7 +226,9 @@
     background-color: #f6f8fa;
     border-radius: 6px;
   }
-
+.cherry-list__default{
+  margin-top: 0;
+}
   // 适配历史文章样式
   @import 'prettyprint/prettyprint.scss';
 
@@ -478,7 +480,7 @@ div[data-type='codeBlock'] {
       border-radius: 8px;
     }
     .cherry-detail-body {
-      padding: 15px 25px 0 25px;
+      padding: 15px 25px 15px 25px;
     }
   }
 }

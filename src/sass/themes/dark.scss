@@ -8,7 +8,6 @@ $toolbarBtnColor: $toolbarBtnColorDark;
 $toolbarBtnBgHover: $dark-dark;
 $toolbarBtnHoverColor: $light-light;
 $toolbarColorItemHoverBorderColor: $dark-dark;
-$sidebarShadow: $shadow;
 /** 编辑区域样式 */
 $editorBg: $dark-light;
 $editorColor: $dark-very-light;
@@ -40,7 +39,7 @@ $mdSvgTextColor: $light-dark;
   --bodyBg:#{$mdLineColor};
   background-color: $dark-dark;
   /** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 */
-  .cherry-toolbar, .cherry-floatmenu, .cherry-bubble, .cherry-sidebar {
+  .cherry-toolbar, .cherry-floatmenu, .cherry-bubble{
     background: $toolbarBg;
     border-color: $toolbarBg;
     .cherry-toolbar-button {
@@ -122,9 +121,7 @@ $mdSvgTextColor: $light-dark;
     }
   }
 
-  .cherry-sidebar {
-    box-shadow: $sidebarShadow;
-  }
+
 
   .cherry-previewer {
     background-color: $previewBg;
