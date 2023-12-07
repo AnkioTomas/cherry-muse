@@ -64,6 +64,7 @@ import Badge from './hooks/Badge';
 import ECharts from './hooks/ECharts';
 import Card from '@/toolbars/hooks/Card';
 import TocList from '@/toolbars/hooks/TocList';
+import Formula from '@/toolbars/hooks/Formula';
 
 // 定义默认支持的工具栏
 // 目前不支持按需动态加载
@@ -115,6 +116,7 @@ const HookList = {
   echarts: ECharts,
   card: Card,
   tocList: TocList,
+  formula: Formula,
 };
 
 export default class HookCenter {

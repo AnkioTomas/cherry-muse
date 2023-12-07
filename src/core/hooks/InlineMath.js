@@ -35,8 +35,9 @@ export default class InlineMath extends ParagraphBase {
     this.MathJax = MathJax || window.MathJax;
     if (this.api) {
       const that = this;
-      Event.on('Theme', 'change', function (isDark) {
+      Event.on('Theme', 'change', function ([isDark]) {
         const images = that.$engine.$cherry.wrapperDom.querySelectorAll('img.Cherry-Math-Latex-Inline');
+        console.log(images);
         images.forEach(function (item) {
           if (item instanceof HTMLImageElement) {
             item.src = item.src.replace(isDark ? 'color=black' : 'color=white', isDark ? 'color=white' : 'color=black');

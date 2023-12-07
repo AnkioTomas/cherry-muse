@@ -31,7 +31,7 @@ export default class MathBlock extends ParagraphBase {
     this.MathJax = MathJax || window.MathJax;
     if (this.api) {
       const that = this;
-      Event.on('Theme', 'change', function (isDark) {
+      Event.on('Theme', 'change', function ([isDark]) {
         const images = that.$engine.$cherry.wrapperDom.querySelectorAll('img.Cherry-Math-Latex');
         images.forEach(function (item, index) {
           if (item instanceof HTMLImageElement) {
