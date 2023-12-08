@@ -89,10 +89,10 @@ export function getThemeFromLocal(fullClass = false) {
  * @param {string} theme 如果没有传theme，则从本地缓存里取
  */
 export function changeTheme($cherry, theme = '') {
-  const newTheme = (theme ? theme : getThemeFromLocal()).replace(/^.*theme__/, '');
+  const newTheme = (theme ? theme : getThemeFromLocal()).replace(/^.*theme__/, ' ');
   const newClass = ` theme__${newTheme}`;
-  $cherry.wrapperDom.className = $cherry.wrapperDom.className.replace(/ theme__[^ $]+?( |$)/g, '') + newClass;
+  $cherry.wrapperDom.className = $cherry.wrapperDom.className.replace(/ theme__[^ $]+?( |$)/g, ' ') + newClass;
   $cherry.previewer.getDomContainer().className =
-    $cherry.previewer.getDomContainer().className.replace(/ theme__[^ $]+?( |$)/g, '') + newClass;
+    $cherry.previewer.getDomContainer().className.replace(/ theme__[^ $]+?( |$)/g, ' ') + newClass;
   saveThemeToLocal(newTheme);
 }
