@@ -15,24 +15,20 @@
  */
 import { createElement } from '@/utils/dom';
 import Event from '../Event';
-/**
- */
 export default class SideToc {
   constructor() {
     const that = this;
     Event.on('editor', 'change', function (editor) {
-      if (localStorage.getItem('tocShow')) {
-        // 只有目录打开的时候才需要
-        that.renderToc(editor[0].getToc());
-      }
+      that.renderToc(editor[0].getToc());
     });
   }
   createTocList() {
     this.tocList = createElement('div', 'cherry-toc');
+    this.tocList.style.display = 'none'; // 默认隐藏目录
     return this.tocList;
   }
   renderToc(data) {
-    console.log(data);
+    if (data.length === 0) return;
     const container = this.tocList;
     container.innerHTML = '';
     const currentList = document.createElement('ul');

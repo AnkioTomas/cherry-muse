@@ -26,13 +26,13 @@ import getPosBydiffs from './utils/recount-pos';
 import defaultConfig from './Cherry.config';
 import cloneDeep from 'lodash/cloneDeep';
 import Event from './Event';
-import locales from '@/locales/index';
+import locales from './locales/index';
 
 import { urlProcessorProxy } from './UrlCache';
 import { CherryStatic } from './CherryStatic';
-import { LIST_CONTENT } from '@/utils/regexp';
-import { Theme } from '@/Theme';
-import SideToc from '@/toolbars/SideToc';
+import { LIST_CONTENT } from './utils/regexp';
+import { Theme } from './Theme';
+import SideToc from './toolbars/SideToc';
 
 export default class Cherry extends CherryStatic {
   /**
