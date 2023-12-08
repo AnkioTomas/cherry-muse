@@ -28,7 +28,6 @@ export default class SideToc {
     return this.tocList;
   }
   renderToc(data) {
-    if (data.length === 0) return;
     const container = this.tocList;
     container.innerHTML = '';
     const currentList = document.createElement('ul');
