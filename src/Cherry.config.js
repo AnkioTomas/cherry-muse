@@ -276,8 +276,7 @@ const defaultConfig = {
       'undo',
     ],
     toolbarRight: ['fullScreen', '|', 'export', '|', 'switchModel'],
-    bubble: ['bold', 'italic', 'underline', 'strikethrough', 'sub', 'sup', 'quote', '|', 'size', 'color'], // array or false
-    float: ['h1', 'h2', 'h3', '|', 'checklist', 'quote', 'table', 'code'], // array or false
+    bubble: ['bold', 'italic', 'header', 'underline', 'strikethrough', 'sub', 'sup', 'quote', '|', 'size', 'color'], // array or false
     // 快捷键配置，如果配置为空，则使用toolbar的配置
     shortcutKey: {
       // 'Alt-1': 'header',

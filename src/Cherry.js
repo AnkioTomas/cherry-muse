@@ -33,6 +33,7 @@ import { CherryStatic } from './CherryStatic';
 import { LIST_CONTENT } from './utils/regexp';
 import { Theme } from './Theme';
 import SideToc from './toolbars/SideToc';
+import Bubble from './toolbars/Bubble';
 
 export default class Cherry extends CherryStatic {
   /**
@@ -143,6 +144,8 @@ export default class Cherry extends CherryStatic {
 
     editor.init(previewer);
 
+    this.createBubble();
+
     previewer.init(editor);
 
     previewer.registerAfterUpdate(this.engine.mounted.bind(this.engine));
@@ -177,6 +180,24 @@ export default class Cherry extends CherryStatic {
     Theme.init(this);
   }
 
+  /**
+   * @private
+   * @returns
+   */
+  createBubble() {
+    if (this.options.toolbars.bubble) {
+      const dom = createElement('div', 'cherry-bubble');
+      $expectTarget(this.options.toolbars.bubble, Array);
+      this.bubble = new Bubble({
+        dom,
+        $cherry: this,
+        buttonConfig: this.options.toolbars.bubble,
+        customMenu: this.options.toolbars.customMenu,
+        engine: this.engine,
+      });
+      this.toolbar.collectMenuInfo(this.bubble);
+    }
+  }
   /**
    * 切换编辑模式
    * @param {'edit&preview'|'editOnly'|'previewOnly'} [model=edit&preview] 模式类型

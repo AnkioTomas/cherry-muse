@@ -166,7 +166,9 @@
     }
   }
 }
-
+.cherry-bubble .material-symbols-outlined{
+  transform: translateY(-70%);
+}
 .cherry-toolbar {
   position: relative;
   display: flex;
@@ -333,53 +335,6 @@
 
 @import './components/bubble';
 
-.cherry-floatmenu {
-  z-index: 4;
-  display: none;
-  position: absolute;
-  left: 30px;
-  margin-left: 60px;
-  height: $lineHeight;
-  line-height: $lineHeight;
-  border-radius: $borderRadius;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  .cherry-toolbar-button {
-    float: left;
-    padding: 0 5px;
-    margin: 0;
-    height: $lineHeight;
-    line-height: $lineHeight;
-    font-size: 14px;
-    color: $fontColor;
-    overflow: hidden;
-    vertical-align: middle;
-    text-align: center;
-    border: 0;
-    cursor: pointer;
-    font-style: normal;
-
-    &.cherry-toolbar-split {
-      border-left: 1px solid $borderColor;
-      width: 0;
-      padding: 0;
-      overflow: hidden;
-      height: 25px;
-    }
-
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.05);
-
-      .ch-icon {
-        color: $toolbarBtnColorLight;
-      }
-    }
-  }
-}
 
 .cherry-editor {
   position: relative;
