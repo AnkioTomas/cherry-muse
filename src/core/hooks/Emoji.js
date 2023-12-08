@@ -39,7 +39,7 @@ export function fuzzySearchKeysWithValues(query, options) {
     }
   }
 
-  return combinedValues.length <= 0 ? false : combinedValues;
+  return combinedValues;
 }
 
 function getEmoji(key, options) {

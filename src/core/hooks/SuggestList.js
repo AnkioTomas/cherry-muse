@@ -22,6 +22,7 @@
  * 外加配置系统联想词
  */
 import { fuzzySearchKeysWithValues } from '@/core/hooks/Emoji';
+import { expandList, getSuggestList } from './Suggester';
 
 /**
  *
@@ -31,23 +32,27 @@ import { fuzzySearchKeysWithValues } from '@/core/hooks/Emoji';
 export const systemSuggests = [
   {
     keyword: ':：；;',
-    data(keywords, callback, $cherry) {
+    data(keywords, callback, $cherry, key) {
       // 面板语法提示
-      if (
-        ['::', '：：', ';;', '；；', ':', '：', ';', '；'].includes(keywords) ||
-        (keywords && 'panel'.includes(keywords))
-      ) {
-        callback([
+      getSuggestList(
+        expandList($cherry, [
           {
             toolbar: 'panel',
             keyword: 'panel',
             goLeft: 4,
           },
-        ]);
-        return;
-      }
-      // emoji搜索
-      callback(fuzzySearchKeysWithValues(keywords, $cherry.options.engine.syntax.emoji));
+        ]),
+        key,
+        keywords,
+        (res) => {
+          let ret = [];
+          if (res) {
+            ret = ret.concat(res);
+          }
+          ret = ret.concat(fuzzySearchKeysWithValues(keywords, $cherry.options.engine.syntax.emoji));
+          callback(ret);
+        },
+      );
     },
   },
   {
@@ -111,17 +116,18 @@ export const systemSuggests = [
       },
       {
         toolbar: 'link',
+        keyword: 'link',
       },
       {
         icon: 'edit_note',
         key: 'footNoteTitle',
-        keyword: '[^',
+        keyword: '^',
         value: `[^脚注标题]`,
       },
       {
         icon: 'text_snippet',
         key: 'footNoteText',
-        keyword: '[^',
+        keyword: '^',
         value: `[^脚注标题]: 脚注内容`,
       },
       {

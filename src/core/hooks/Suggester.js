@@ -194,12 +194,81 @@ export default class Suggester extends SyntaxBase {
       this.suggesterPanel.setEditor(editor);
       this.suggesterPanel.setSuggester(this.suggester);
       this.suggesterPanel.bindEvent();
-      this.suggesterPanel.setLocale(this.$locale);
-      this.suggesterPanel.setToolbar(this.$engine.$cherry.toolbar);
+      this.suggesterPanel.setCherry(this.$engine.$cherry);
     }
   }
 }
 
+export function getSuggestList(_list, _key, _word, callback) {
+  // 将word全转成小写
+  const word = _word.toLowerCase();
+  // 加个空格就直接退出联想
+  if (/^\s$/.test(word)) {
+    callback(false);
+    return;
+  }
+  function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& 表示整个匹配到的字符串
+  }
+  const keyword = word
+    .replace(/\s+/g, '') // 删掉空格，避免产生不必要的空数组元素
+    .replace(new RegExp(`^${escapeRegExp(_key)}`, 'g'), '') // 删掉word当中suggesterKeywords出现的字符
+    .split('')
+    .map((item) => escapeRegExp(item))
+    .join('.*?');
+
+  const test = new RegExp(`^.*?${keyword}.*?$`, 'i');
+
+  const suggestList = _list.filter((item) => {
+    return !word || test.test(item.keyword);
+  });
+
+  // 当没有候选项时直接推出联想
+  callback(suggestList.length === 0 ? false : suggestList);
+}
+
+/**
+ *
+ * @param {Cherry} $cherry
+ * @param {array} list
+ * @returns {*[]}
+ */
+export function expandList($cherry, list) {
+  const retList = [];
+  list.forEach(function (suggest) {
+    if (suggest.toolbar) {
+      const toolbar = $cherry.toolbar.menus.hooks[suggest.toolbar];
+      if (toolbar) {
+        if (toolbar.subMenuConfig && toolbar.subMenuConfig.length > 0) {
+          toolbar.subMenuConfig.forEach(function (menu) {
+            const menuItem = {};
+            menuItem.icon = menu.iconName;
+            menuItem.key = $cherry.locale[menu.name] ?? menu.name;
+            menuItem.keyword = `${suggest.keyword} ${menu.name}`;
+            menuItem.value = function (event, dom) {
+              menu.dom = dom;
+              return menu.onclick();
+            };
+            retList.push(menuItem);
+          });
+        } else {
+          suggest.icon = toolbar.iconName;
+          suggest.key = $cherry.locale[toolbar.name] ?? toolbar.name;
+          suggest.value = function (event, dom) {
+            toolbar.dom = dom;
+            toolbar.fire(event, toolbar);
+            return '';
+          };
+          retList.push(suggest);
+        }
+      }
+    } else {
+      suggest.key = $cherry.locale[suggest.key] ?? suggest.key;
+      retList.push(suggest);
+    }
+  });
+  return retList;
+}
 class SuggesterPanel {
   constructor() {
     this.searchCache = false;
@@ -207,14 +276,10 @@ class SuggesterPanel {
     this.optionList = [];
     this.cursorMove = true;
     this.suggesterConfig = {};
-    this.$locale = {};
-    this.$toolbar = null;
+    this.$cherry = null;
   }
-  setToolbar($toolbar) {
-    this.$toolbar = $toolbar;
-  }
-  setLocale($locale) {
-    this.$locale = $locale;
+  setCherry($cherry) {
+    this.$cherry = $cherry;
   }
 
   /**
@@ -554,30 +619,7 @@ class SuggesterPanel {
   enableRelate() {
     return this.searchCache;
   }
-  getSuggestList(_list, _key, _word, callback) {
-    // 将word全转成小写
-    const word = _word.toLowerCase();
-    // 加个空格就直接退出联想
-    if (/^\s$/.test(word)) {
-      callback(false);
-      return;
-    }
-    function escapeRegExp(string) {
-      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& 表示整个匹配到的字符串
-    }
-    const keyword = word
-      .replace(/\s+/g, '') // 删掉空格，避免产生不必要的空数组元素
-      .replace(new RegExp(`^${escapeRegExp(_key)}`, 'g'), '') // 删掉word当中suggesterKeywords出现的字符
-      .split('')
-      .join('.*?');
-    const test = new RegExp(`^.*?${keyword}.*?$`, 'i');
-    const suggestList = _list.filter((item) => {
-      return !word || test.test(item.keyword);
-    });
 
-    // 当没有候选项时直接推出联想
-    callback(suggestList.length === 0 ? false : suggestList);
-  }
   /**
    *  codeMirror change事件
    * @param {CodeMirror.Editor} codemirror
@@ -609,44 +651,9 @@ class SuggesterPanel {
           that.stopRelate();
           return;
         }
-
         // 回显命中的结果
-        const optionList = !res || !res.length ? [] : res.slice(0, 200); // 只要前200个，太多影响性能
-        that.optionList = [];
-        optionList.forEach(function (suggest) {
-          if (suggest.toolbar) {
-            const toolbar = that.$toolbar.menus.hooks[suggest.toolbar];
-            if (toolbar) {
-              if (toolbar.subMenuConfig && toolbar.subMenuConfig.length > 0) {
-                toolbar.subMenuConfig.forEach(function (menu) {
-                  const menuItem = {};
-                  menuItem.icon = menu.iconName;
-                  menuItem.key = that.$locale[menu.name] ?? menu.name;
-                  menuItem.keyword = suggest.keyword;
-                  menuItem.value = function (event, dom) {
-                    menu.dom = dom;
-                    // 删除前面的字符
-                    return menu.onclick();
-                  };
-                  that.optionList.push(menuItem);
-                });
-              } else {
-                suggest.icon = toolbar.iconName;
-                suggest.key = that.$locale[toolbar.name] ?? toolbar.name;
-                suggest.value = function (event, dom) {
-                  toolbar.dom = dom;
-                  toolbar.fire(event, toolbar);
-                  return '';
-                };
-                that.optionList.push(suggest);
-              }
-            }
-          } else {
-            suggest.key = that.$locale[suggest.key] ?? suggest.key;
-            that.optionList.push(suggest);
-          }
-        });
-        that.updatePanel(that.optionList);
+        that.optionList = !res || !res.length ? [] : res.slice(0, 200); // 只要前200个，太多影响性能
+        that.updatePanel(expandList(that.$cherry, that.optionList));
       }
       // 展示推荐列表
       if (typeof this.suggesterConfig[this.keyword]?.data === 'function') {
@@ -657,13 +664,14 @@ class SuggesterPanel {
             // 如果返回了false，则强制退出联想
             callbackResult(res);
           },
-          this.editor.$cherry,
+          this.$cherry,
+          this.keyword,
         );
       } else if (typeof this.suggesterConfig[this.keyword]?.data === 'object') {
-        this.getSuggestList(
-          this.suggesterConfig[this.keyword]?.data,
+        getSuggestList(
+          expandList(this.$cherry, this.suggesterConfig[this.keyword]?.data),
           this.keyword,
-          this.searchKeyCache.join(''),
+          this.searchKeyCache.join('').slice(1),
           (res) => {
             callbackResult(res);
           },
