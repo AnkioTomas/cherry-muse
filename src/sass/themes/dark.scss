@@ -38,6 +38,16 @@ $mdSvgTextColor: $light-dark;
   --borderColor:#{$mdLineColor};
   --bodyBg:#{$mdLineColor};
   background-color: $dark-dark;
+  .ace_search,.ace_search_field,.ace_searchbtn, .ace_replacebtn {
+    background-color: $toolbarBtnBgHover;
+    color: $toolbarBtnHoverColor !important;
+  }
+  .ace_button{
+    color: $toolbarBtnHoverColor !important;
+  }
+  .ace_button:hover {
+    background-color: $toolbarBg;
+  }
   /** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 */
   .cherry-toolbar, .cherry-floatmenu, .cherry-bubble{
     background: $toolbarBg;
