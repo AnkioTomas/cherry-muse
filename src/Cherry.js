@@ -296,7 +296,7 @@ export default class Cherry extends CherryStatic {
    * @returns {HeaderList} 标题head数组
    */
   getToc() {
-    const str = this.getHtml();
+    const str = this.engine.makeHtml(this.getValue());
     /** @type {({level: number;id: string;text: string})[]} */
     const headerList = [];
     const headerRegex = /<h([1-6]).*?id="([^"]+?)".*?>(.+?)<\/h[0-6]>/g;
