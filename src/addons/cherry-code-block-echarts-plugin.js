@@ -124,7 +124,7 @@ export default class EChartsCodeEngine {
         }
       }
     });
-    Event.on('Theme', 'change', function (isDark) {
+    Event.on('Theme', 'change', function ([isDark]) {
       renderChart(isDark);
     });
   }

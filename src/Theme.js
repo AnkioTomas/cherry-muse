@@ -32,14 +32,18 @@ export const Theme = {
   setTheme($cherry, isDark) {
     if (isDark) {
       changeTheme($cherry, 'dark');
-      document.querySelector('.cherry').setAttribute('data-code-block-theme', 'dark');
+      document.querySelectorAll('.cherry').forEach(function (elem) {
+        elem.setAttribute('data-code-block-theme', 'dark');
+      });
       localStorage.setItem('cherry-theme', 'dark');
       document.querySelectorAll('.cherry__theme__light').forEach(function (elem) {
         elem.classList.replace('cherry__theme__light', 'cherry__theme__dark');
       });
     } else {
       changeTheme($cherry, 'light');
-      document.querySelector('.cherry').setAttribute('data-code-block-theme', 'light');
+      document.querySelectorAll('.cherry').forEach(function (elem) {
+        elem.setAttribute('data-code-block-theme', 'light');
+      });
       localStorage.setItem('cherry-theme', 'light');
       document.querySelectorAll('.cherry__theme__dark').forEach(function (elem) {
         elem.classList.replace('cherry__theme__dark', 'cherry__theme__light');
