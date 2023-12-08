@@ -45,8 +45,6 @@
     "lint": "eslint --plugin file-progress --rule \"file-progress/activate: 1\" --ext .js .",
     "lint:fix": "yarn lint --fix",
     "lint:ci": "eslint --max-warnings=0 --ext .js .",
-    "commit": "./node_modules/cz-customizable/standalone.js",
-    "release": "standard-version",
     "prepare": "husky install",
     "publish": "git push --follow-tags origin main",
     "examples": "serve -p 3000 ."
@@ -94,7 +92,6 @@
     "commitizen": "^4.0.5",
     "core-js-pure": "^3.8.2",
     "cross-env": "^7.0.2",
-    "cz-customizable": "^6.2.0",
     "dom-parser": "^0.1.6",
     "dompurify": "^2.0.11",
     "es-check": "^7.1.1",
@@ -132,9 +129,6 @@
     "sass": "^1.52.3",
     "serve": "^14.2.0",
     "standard-version": "^9.3.2",
-    "ts-jest": "^27.1.1",
-    "ts-node": "^10.7.0",
-    "typescript": "4.5.5",
     "virtual-dom": "^2.1.1"
   },
   "dependencies": {
@@ -153,9 +147,7 @@
     "glob-watcher": "6.0.0"
   },
   "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-customizable"
-    }
+
   },
   "lint-staged": {
     "*.js": "eslint --fix"
