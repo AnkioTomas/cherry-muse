@@ -20,6 +20,7 @@ import { gfmUnicode } from './Emoji.config';
 
 // ref: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 export function convertToUnicode(code) {
+  if (!code) return '';
   // 分割字符串为两部分
   const parts = code.split('-').map((part) => parseInt(part, 16));
 
@@ -44,7 +45,12 @@ export function fuzzySearchKeysWithValues(query, options) {
 
 function getEmoji(key, options) {
   if (options.useUnicode) {
-    return convertToUnicode(gfmUnicode.emojis[key]);
+    try {
+      return convertToUnicode(gfmUnicode.emojis[key]);
+    } catch (e) {
+      console.error(e);
+      return key;
+    }
   }
   const src = options.resourceURL.replace(/\$\{code\}/g, gfmUnicode.emojis[key].toLowerCase());
   return `<img class="emoji" src="${src}" alt="${_e(key)}" />`;
