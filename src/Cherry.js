@@ -117,7 +117,7 @@ export default class Cherry extends CherryStatic {
     // 创建预览区
     const previewer = this.createPreviewer();
 
-    if (this.options.toolbars.showToolbar === false || this.options.toolbars.toolbar === false) {
+    if (this.options.toolbars.toolbar === false) {
       // 即便配置了不展示工具栏，也要让工具栏加载对应的语法hook
       wrapperDom.classList.add('cherry--no-toolbar');
       this.options.toolbars.toolbar = this.defaultToolbar;
@@ -131,7 +131,7 @@ export default class Cherry extends CherryStatic {
     wrapperFragment.appendChild(this.toolbar.options.dom);
     wrapperFragment.appendChild(this.tocList);
     wrapperFragment.appendChild(editor.options.editorDom);
-    // 创建预览区域的侧边工具栏
+
     if (!this.options.previewer.dom) {
       wrapperFragment.appendChild(previewer.options.previewerDom);
     }
@@ -204,6 +204,7 @@ export default class Cherry extends CherryStatic {
    * 一般纯预览模式和纯编辑模式适合在屏幕较小的终端使用，比如手机移动端
    */
   switchModel(model = 'edit&preview') {
+    this.model = model;
     switch (model) {
       case 'edit&preview':
         if (this.previewer) {
@@ -460,14 +461,15 @@ export default class Cherry extends CherryStatic {
     const autonumberClass = anchorStyle === 'autonumber' ? ' head-num' : '';
     const { className, dom, enablePreviewerBubble } = this.options.previewer;
     const previewerClassName = [
-      'cherry-previewer cherry-markdown',
+      'cherry-previewer',
+      'cherry-markdown',
       className || '',
       autonumberClass,
       getThemeFromLocal(true),
     ].join(' ');
     if (dom) {
       previewer = dom;
-      previewer.className += ` ${previewerClassName}`;
+      previewer.className += ` ${previewerClassName} `;
     } else {
       previewer = createElement('div', previewerClassName);
     }

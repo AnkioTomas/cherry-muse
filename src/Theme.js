@@ -3,6 +3,9 @@ import { changeTheme } from './utils/config';
 import Event from './Event';
 
 export const Theme = {
+  /**
+   * @param {Cherry} $cherry
+   */
   init($cherry) {
     const isDark = window.matchMedia('(prefers-color-scheme:  dark)').matches;
     window.matchMedia('(prefers-color-scheme:  dark)').addEventListener('change', () => {
@@ -11,6 +14,7 @@ export const Theme = {
     });
     Theme.setTheme($cherry, isDark);
     window.addEventListener('resize', function () {
+      if ($cherry.model === 'previewOnly') return;
       if (window.outerWidth > 600) {
         $cherry.switchModel('edit&preview');
       } else {
