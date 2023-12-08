@@ -79,38 +79,38 @@ export const systemSuggests = [
     data: [
       {
         key: '[]',
-        keyword: '[',
+        keyword: '',
         value: `[]`,
         goLeft: 1,
       },
       {
         key: '【】',
-        keyword: '【',
+        keyword: '',
         value: `【】`,
         goLeft: 1,
       },
 
       {
         key: '()',
-        keyword: '（',
+        keyword: '',
         value: `()`,
         goLeft: 1,
       },
       {
         key: '（）',
-        keyword: '（',
+        keyword: '',
         value: `（）`,
         goLeft: 1,
       },
       {
         key: '<>',
-        keyword: '<',
+        keyword: '',
         value: `<>`,
         goLeft: 1,
       },
       {
         key: '《》',
-        keyword: '《',
+        keyword: '',
         value: `《》`,
         goLeft: 1,
       },
@@ -121,13 +121,13 @@ export const systemSuggests = [
       {
         icon: 'edit_note',
         key: 'footNoteTitle',
-        keyword: '^',
+        keyword: '……^',
         value: `[^脚注标题]`,
       },
       {
         icon: 'text_snippet',
         key: 'footNoteText',
-        keyword: '^',
+        keyword: '……^',
         value: `[^脚注标题]: 脚注内容`,
       },
       {
@@ -183,19 +183,24 @@ export const systemSuggests = [
       },
       {
         toolbar: 'checklist',
+        keyword: '[',
         goLeft: 3,
       },
       {
         toolbar: 'ol',
+        keyword: '[',
       },
       {
         toolbar: 'ul',
+        keyword: '[',
       },
       {
         toolbar: 'strikethrough',
+        keyword: '-',
       },
       {
         toolbar: 'underline',
+        keyword: '-',
       },
     ],
   },
