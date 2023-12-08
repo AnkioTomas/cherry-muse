@@ -59,9 +59,11 @@ export default class MermaidCodeEngine {
     this.api = !mermaid && !window.mermaid;
     this.apiHost = apiHost;
     this.options = { ...DEFAULT_OPTIONS, ...(mermaidOptions || {}) };
+    if (!this.api) {
+      this.mermaidAPIRefs = mermaid || window.mermaid;
+      this.mermaidAPIRefs.initialize(this.options);
+    }
 
-    this.mermaidAPIRefs = mermaid || window.mermaid;
-    this.mermaidAPIRefs.initialize(this.options);
     const that = this;
     Event.on('previewer', 'beforeRenderDom', function ([sign, dom]) {});
     Event.on('previewer', 'afterRenderDom', function ([sign, dom]) {
