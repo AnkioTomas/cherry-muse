@@ -55,7 +55,7 @@ export default new (class Event {
    * 触发事件
    * @param {string} instanceId 发送消息的频道
    * @param {string} event 要触发的事件
-   * @param {array} param 触发时传入的参数
+   * @param {any} param 触发时传入的参数
    */
   emit(instanceId, event, ...param) {
     // console.warn('事件触发', `${instanceId}:${event}`, param);
