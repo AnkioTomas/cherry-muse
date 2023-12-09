@@ -153,6 +153,23 @@ export const systemSuggests = [
     ],
   },
   {
+    keyword: '+', // 引用
+    data: [
+      {
+        icon: 'detail',
+        key: 'detailOpen',
+        keyword: '+',
+        value: `++ 标题\n内容\n+++\n`,
+      },
+      {
+        icon: 'detail',
+        key: 'detailClose',
+        keyword: '-',
+        value: `++- 标题\n内容\n+++\n`,
+      },
+    ],
+  },
+  {
     keyword: '#', // 标题
     data: [
       {

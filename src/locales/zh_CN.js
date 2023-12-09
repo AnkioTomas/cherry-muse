@@ -52,6 +52,9 @@ export default {
   copy: '复制内容',
   detail: '详情',
 
+  detailOpen: '默认展开详情',
+  detailClose: '默认关闭详情',
+
   echarts: '图表',
   basicBarChart: '基本柱状图',
   stackedBarChart: '堆叠柱状图',
