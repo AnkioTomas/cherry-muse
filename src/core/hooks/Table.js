@@ -178,8 +178,6 @@ export default class Table extends ParagraphBase {
         });
       }
     }
-
-    console.warn(chartOptions.type, chartOptions.options, tableObject);
     const chart = this.chartRenderEngine.render(option, `table_chart_${chartOptionsSign}_${tableResult.sign}`);
     const chartHtml = `<figure id="table_chart_${chartOptionsSign}_${tableResult.sign}"
       data-sign="table_chart_${chartOptionsSign}_${tableResult.sign}" data-lines="0">${chart}</figure>`;
