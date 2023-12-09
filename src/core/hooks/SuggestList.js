@@ -75,7 +75,7 @@ export const systemSuggests = [
     ],
   },
   {
-    keyword: '<《【{[', // 括号、脚注、链接、徽章
+    keyword: '<《【{[『「', // 括号、脚注、链接、徽章
     data: [
       {
         key: '[]',
@@ -84,18 +84,24 @@ export const systemSuggests = [
         goLeft: 1,
       },
       {
+        key: '「」',
+        keyword: '',
+        value: `「」`,
+        goLeft: 1,
+      },
+      {
         key: '【】',
         keyword: '',
         value: `【】`,
         goLeft: 1,
       },
-
       {
-        key: '()',
+        key: '『』',
         keyword: '',
-        value: `()`,
+        value: `『』`,
         goLeft: 1,
       },
+
       {
         key: '（）',
         keyword: '',

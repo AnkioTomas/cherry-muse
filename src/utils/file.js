@@ -18,10 +18,10 @@ export function splitFileName(filename) {
   const result = /^(.+?)(\.[^.]*$|$)/.exec(filename);
 
   // 如果没有扩展名，返回原始文件名
-  if (!result) return { name: filename, ext: null };
+  if (!result) return { title: filename, ext: null };
 
   // 返回文件名和扩展名
-  return { name: result[1], ext: result[2] ? result[2].substring(1) : null };
+  return { title: result[1], ext: result[2] ? result[2].substring(1) : null };
 }
 /**
  * 上传文件的逻辑，如果有callback，则不再走默认的替换文本的逻辑，而是调用callback
@@ -59,9 +59,9 @@ export function handleUpload(editor, type = 'image', accept = '*', callback = nu
         // 如果是音频，则返回固定的音频markdown源码
         code = `!audio[${file.name}](${url})`;
       } else {
-        const { name, ext } = splitFileName(file.name);
+        const { title, ext } = splitFileName(file.name);
         // 默认返回超链接
-        code = `!file[${name}|${ext}](${url})`;
+        code = `!file[${title}|${ext}](${url})`;
       }
 
       // 替换选中区域

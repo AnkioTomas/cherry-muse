@@ -40,7 +40,6 @@ export default class Video extends MenuBase {
       });
       const finalName = params.name ? params.name : name;
       const { title, ext } = splitFileName(finalName);
-
       return `${begin}${title}|${ext}${handleParams(params)}${end}`;
     }
     const accept = this.$cherry.options?.fileTypeLimitMap?.file ?? '*';
