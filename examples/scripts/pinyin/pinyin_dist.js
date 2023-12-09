@@ -5,9 +5,9 @@ function pinyin(word,splitStr) {
     var str = '';
     var s;
     for (var i = 0; i < word.length; i++) {
-        if (hzpy.indexOf(word.charAt(i)) != -1 && word.charCodeAt(i) > 200) {
+        if (hzpy.indexOf(word.charAt(i)) !== -1 && word.charCodeAt(i) > 200) {
             s = 1;
-            while (hzpy.charAt(hzpy.indexOf(word.charAt(i)) + s) != ",") {
+            while (hzpy.charAt(hzpy.indexOf(word.charAt(i)) + s) !== ",") {
                 str += hzpy.charAt(hzpy.indexOf(word.charAt(i)) + s);
                 s++;
             }
