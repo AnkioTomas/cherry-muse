@@ -96,23 +96,24 @@ export default class EChartsCodeEngine {
           } else {
             queryElement.src = queryElement.src.replace('theme%22%3A%22dark%22', 'theme%22%3A%22%22');
           }
-          continue;
+        } else {
+          const item = sessionStorage.getItem(queryElement.dataset.json);
+          if (!item) continue;
+          const json = JSON.parse(item);
+          let myChart = that.echartsInstanceRef.getInstanceByDom(queryElement);
+          if (myChart) {
+            myChart.dispose();
+          }
+          myChart = that.echartsInstanceRef.init(queryElement, isDark ? 'dark' : '', {
+            renderer: 'svg',
+          });
+          myChart.setOption(json);
         }
-        const item = sessionStorage.getItem(queryElement.dataset.json);
-        if (!item) continue;
-        const json = JSON.parse(item);
-        let myChart = that.echartsInstanceRef.getInstanceByDom(queryElement);
-        if (myChart) {
-          myChart.dispose();
-        }
-        myChart = that.echartsInstanceRef.init(queryElement, isDark ? 'dark' : '', {
-          renderer: 'svg',
-        });
-        myChart.setOption(json);
       }
     }
 
     window.addEventListener('resize', function () {
+      if (this.api) return;
       const query = document.querySelectorAll('.echart-container');
       if (!query) {
         return;
