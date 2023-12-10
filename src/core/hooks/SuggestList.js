@@ -78,49 +78,6 @@ export const systemSuggests = [
     keyword: '<《【{[『「', // 括号、脚注、链接、徽章
     data: [
       {
-        key: '[]',
-        keyword: '',
-        value: `[]`,
-        goLeft: 1,
-      },
-      {
-        key: '「」',
-        keyword: '',
-        value: `「」`,
-        goLeft: 1,
-      },
-      {
-        key: '【】',
-        keyword: '',
-        value: `【】`,
-        goLeft: 1,
-      },
-      {
-        key: '『』',
-        keyword: '',
-        value: `『』`,
-        goLeft: 1,
-      },
-
-      {
-        key: '（）',
-        keyword: '',
-        value: `（）`,
-        goLeft: 1,
-      },
-      {
-        key: '<>',
-        keyword: '',
-        value: `<>`,
-        goLeft: 1,
-      },
-      {
-        key: '《》',
-        keyword: '',
-        value: `《》`,
-        goLeft: 1,
-      },
-      {
         toolbar: 'link',
         keyword: 'link',
       },
@@ -156,13 +113,13 @@ export const systemSuggests = [
     keyword: '+', // 引用
     data: [
       {
-        icon: 'detail',
+        icon: 'more_horiz',
         key: 'detailOpen',
         keyword: '+',
         value: `++ 标题\n内容\n+++\n`,
       },
       {
-        icon: 'detail',
+        icon: 'more_horiz',
         key: 'detailClose',
         keyword: '-',
         value: `++- 标题\n内容\n+++\n`,
@@ -277,20 +234,8 @@ export const systemSuggests = [
     ],
   },
   {
-    keyword: '\'"`', // 代码相关
+    keyword: '\'"`·', // 代码相关
     data: [
-      {
-        key: '" "',
-        keyword: '"',
-        value: `""`,
-        goLeft: 1,
-      },
-      {
-        key: `' '`,
-        keyword: `'`,
-        value: `''`,
-        goLeft: 1,
-      },
       {
         icon: 'code',
         key: 'codeBlock',
