@@ -27,12 +27,10 @@ let config1 = {
 }
 let config2 = {
   id:"markdown",
-/*  toolbars: {
-    toolbars:false
+  toolbars: {
+    toolbars:false,
+    bubble: false
   },
-  editor: {
-    defaultModel: 'previewOnly',
-  },*/
 
 }
 window.cherry = new Cherry(config2);

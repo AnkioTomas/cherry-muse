@@ -34296,23 +34296,21 @@
 	            } else {
 	              queryElement.src = queryElement.src.replace('theme%22%3A%22dark%22', 'theme%22%3A%22%22');
 	            }
+	          } else {
+	            var item = sessionStorage.getItem(queryElement.dataset.json);
+	            if (!item) continue;
+	            var json = JSON.parse(item);
+	            var myChart = that.echartsInstanceRef.getInstanceByDom(queryElement);
 
-	            continue;
+	            if (myChart) {
+	              myChart.dispose();
+	            }
+
+	            myChart = that.echartsInstanceRef.init(queryElement, isDark ? 'dark' : '', {
+	              renderer: 'svg'
+	            });
+	            myChart.setOption(json);
 	          }
-
-	          var item = sessionStorage.getItem(queryElement.dataset.json);
-	          if (!item) continue;
-	          var json = JSON.parse(item);
-	          var myChart = that.echartsInstanceRef.getInstanceByDom(queryElement);
-
-	          if (myChart) {
-	            myChart.dispose();
-	          }
-
-	          myChart = that.echartsInstanceRef.init(queryElement, isDark ? 'dark' : '', {
-	            renderer: 'svg'
-	          });
-	          myChart.setOption(json);
 	        }
 	      } catch (err) {
 	        _iterator3.e(err);
@@ -34322,6 +34320,7 @@
 	    }
 
 	    window.addEventListener('resize', function () {
+	      if (that.api) return;
 	      var query = document.querySelectorAll('.echart-container');
 
 	      if (!query) {
@@ -34676,7 +34675,6 @@
 	        _iterator.f();
 	      }
 
-	      console.warn(chartOptions.type, chartOptions.options, tableObject);
 	      var chart = this.chartRenderEngine.render(option, concat$1(_context8 = "table_chart_".concat(chartOptionsSign, "_")).call(_context8, tableResult.sign));
 
 	      var chartHtml = concat$1(_context9 = concat$1(_context10 = concat$1(_context11 = concat$1(_context12 = "<figure id=\"table_chart_".concat(chartOptionsSign, "_")).call(_context12, tableResult.sign, "\"\n      data-sign=\"table_chart_")).call(_context11, chartOptionsSign, "_")).call(_context10, tableResult.sign, "\" data-lines=\"0\">")).call(_context9, chart, "</figure>");
@@ -41823,41 +41821,6 @@
 	  keyword: '<《【{[『「',
 	  // 括号、脚注、链接、徽章
 	  data: [{
-	    key: '[]',
-	    keyword: '',
-	    value: "[]",
-	    goLeft: 1
-	  }, {
-	    key: '「」',
-	    keyword: '',
-	    value: "\u300C\u300D",
-	    goLeft: 1
-	  }, {
-	    key: '【】',
-	    keyword: '',
-	    value: "\u3010\u3011",
-	    goLeft: 1
-	  }, {
-	    key: '『』',
-	    keyword: '',
-	    value: "\u300E\u300F",
-	    goLeft: 1
-	  }, {
-	    key: '（）',
-	    keyword: '',
-	    value: "\uFF08\uFF09",
-	    goLeft: 1
-	  }, {
-	    key: '<>',
-	    keyword: '',
-	    value: "<>",
-	    goLeft: 1
-	  }, {
-	    key: '《》',
-	    keyword: '',
-	    value: "\u300A\u300B",
-	    goLeft: 1
-	  }, {
 	    toolbar: 'link',
 	    keyword: 'link'
 	  }, {
@@ -41886,12 +41849,12 @@
 	  keyword: '+',
 	  // 引用
 	  data: [{
-	    icon: 'detail',
+	    icon: 'more_horiz',
 	    key: 'detailOpen',
 	    keyword: '+',
 	    value: "++ \u6807\u9898\n\u5185\u5BB9\n+++\n"
 	  }, {
-	    icon: 'detail',
+	    icon: 'more_horiz',
 	    key: 'detailClose',
 	    keyword: '-',
 	    value: "++- \u6807\u9898\n\u5185\u5BB9\n+++\n"
@@ -41982,19 +41945,9 @@
 	    goLeft: 1
 	  }]
 	}, {
-	  keyword: '\'"`',
+	  keyword: '\'"`·',
 	  // 代码相关
 	  data: [{
-	    key: '" "',
-	    keyword: '"',
-	    value: "\"\"",
-	    goLeft: 1
-	  }, {
-	    key: "' '",
-	    keyword: "'",
-	    value: "''",
-	    goLeft: 1
-	  }, {
 	    icon: 'code',
 	    key: 'codeBlock',
 	    keyword: '``',
@@ -60829,7 +60782,7 @@
 	  });
 	}
 
-	var VERSION = "0.8.29-f36ab336";
+	var VERSION = "0.8.29-6c581085";
 	var CherryStatic = /*#__PURE__*/function () {
 	  // for type check only
 	  // TODO: fix this error

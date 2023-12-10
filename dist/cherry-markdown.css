@@ -940,9 +940,6 @@ span.CodeMirror-selectedtext {
   max-width: 100%;
   overflow-x: auto;
 }
-.cherry-markdown .cherry-table-container .cherry-table {
-  margin: 0 auto;
-}
 .cherry-markdown .cherry-table-container .cherry-table th,
 .cherry-markdown .cherry-table-container .cherry-table td {
   border: 1px solid hsl(0deg, 0%, 65%);
