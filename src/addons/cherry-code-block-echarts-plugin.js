@@ -113,7 +113,7 @@ export default class EChartsCodeEngine {
     }
 
     window.addEventListener('resize', function () {
-      if (this.api) return;
+      if (that.api) return;
       const query = document.querySelectorAll('.echart-container');
       if (!query) {
         return;
