@@ -22115,7 +22115,7 @@
 	  return ret;
 	} // 匹配图片URL里的base64
 
-	var imgBase64Reg = /(!\[[^\n]*?\]\(data:image\/[a-z]{1,10};base64,)([^)]+)\)/g; // 匹配图片{}里的data-xml属性
+	var imgBase64Reg = /(\[[^\n]*?\]\(data:image\/[a-z]{1,10};base64,)([^)]+)\)/g; // 匹配图片{}里的data-xml属性
 
 	var imgDrawioXmlReg = /(!\[[^\n]*?\]\([^)]+\)\{[^}]* data-xml=)([^}]+)\}/g;
 	/**
@@ -22773,7 +22773,10 @@
 
 	      if (this.options.writingStyle !== 'normal') {
 	        this.initWritingStyle();
-	      }
+	      } // 处理特殊字符，主要将base64等大文本替换成占位符，以提高可读性
+
+
+	      this.dealSpecialWords();
 	    }
 	    /**
 	     *
@@ -24026,16 +24029,16 @@
 	  return encodeURI(str).replace(/%25/g, '%');
 	}
 
-	function _createSuper$1n(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1o(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1o(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1p(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1o() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1p() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	var cacheCounter = 0; // ~~C${cacheCounter}I${cacheIndex}$
 	// let cacheMap = {};
 
 	var ParagraphBase = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(ParagraphBase, _SyntaxBase);
 
-	  var _super = _createSuper$1n(ParagraphBase);
+	  var _super = _createSuper$1o(ParagraphBase);
 
 	  // 不需要排他的sign前缀，如~~C0I${IN_PARAGRAPH_CACHE_KEY_PREFIX}sign$
 	  function ParagraphBase() {
@@ -25289,7 +25292,7 @@
 
 	var bind$1 = bind$2;
 
-	function _isNativeReflectConstruct$1n() {
+	function _isNativeReflectConstruct$1o() {
 	  if (typeof Reflect === "undefined" || !construct) return false;
 	  if (construct.sham) return false;
 	  if (typeof Proxy === "function") return true;
@@ -25303,7 +25306,7 @@
 	}
 
 	function _construct(Parent, args, Class) {
-	  if (_isNativeReflectConstruct$1n()) {
+	  if (_isNativeReflectConstruct$1o()) {
 	    _construct = construct;
 	  } else {
 	    _construct = function _construct(Parent, args, Class) {
@@ -25355,9 +25358,9 @@
 	  return _wrapNativeSuper(Class);
 	}
 
-	function _createSuper$1m(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1m(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1n(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1n(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1m() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1n() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	/**
 	 * Copyright (C) 2021 THL A29 Limited, a Tencent company.
@@ -25406,7 +25409,7 @@
 	var NestedError = /*#__PURE__*/function (_Error) {
 	  _inherits(NestedError, _Error);
 
-	  var _super = _createSuper$1m(NestedError);
+	  var _super = _createSuper$1n(NestedError);
 
 	  function NestedError(message, nested) {
 	    var _this;
@@ -25892,14 +25895,14 @@
 	  return replaceStringByBuffer(str, replaceBuffer);
 	}
 
-	function _createSuper$1l(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1l(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1m(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1m(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1l() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1m() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Color$1 = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Color, _SyntaxBase);
 
-	  var _super = _createSuper$1l(Color);
+	  var _super = _createSuper$1m(Color);
 
 	  function Color() {
 	    _classCallCheck(this, Color);
@@ -25944,14 +25947,14 @@
 
 	_defineProperty$1(Color$1, "HOOK_NAME", 'fontColor');
 
-	function _createSuper$1k(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1k(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1l(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1l(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1k() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1l() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var BackgroundColor = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(BackgroundColor, _SyntaxBase);
 
-	  var _super = _createSuper$1k(BackgroundColor);
+	  var _super = _createSuper$1l(BackgroundColor);
 
 	  function BackgroundColor() {
 	    _classCallCheck(this, BackgroundColor);
@@ -25996,14 +25999,14 @@
 
 	_defineProperty$1(BackgroundColor, "HOOK_NAME", 'bgColor');
 
-	function _createSuper$1j(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1j(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1k(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1k(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1j() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1k() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Size$1 = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Size, _SyntaxBase);
 
-	  var _super = _createSuper$1j(Size);
+	  var _super = _createSuper$1k(Size);
 
 	  function Size() {
 	    _classCallCheck(this, Size);
@@ -26056,9 +26059,9 @@
 
 	function _objectSpread$8(target) { for (var i = 1; i < arguments.length; i++) { var _context, _context2; var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? forEach$5(_context = ownKeys$8(Object(source), !0)).call(_context, function (key) { _defineProperty$1(target, key, source[key]); }) : getOwnPropertyDescriptors ? defineProperties(target, getOwnPropertyDescriptors(source)) : forEach$5(_context2 = ownKeys$8(Object(source))).call(_context2, function (key) { defineProperty$8(target, key, getOwnPropertyDescriptor$6(source, key)); }); } return target; }
 
-	function _createSuper$1i(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1i(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1j(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1j(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1i() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1j() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 删除线语法
 	 */
@@ -26066,7 +26069,7 @@
 	var Strikethrough$1 = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Strikethrough, _SyntaxBase);
 
-	  var _super = _createSuper$1i(Strikethrough);
+	  var _super = _createSuper$1j(Strikethrough);
 
 	  function Strikethrough() {
 	    var _this;
@@ -26142,14 +26145,14 @@
 
 	_defineProperty$1(Strikethrough$1, "HOOK_NAME", 'strikethrough');
 
-	function _createSuper$1h(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1h(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1i(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1i(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1h() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1i() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Sup$1 = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Sup, _SyntaxBase);
 
-	  var _super = _createSuper$1h(Sup);
+	  var _super = _createSuper$1i(Sup);
 
 	  function Sup() {
 	    _classCallCheck(this, Sup);
@@ -26194,14 +26197,14 @@
 
 	_defineProperty$1(Sup$1, "HOOK_NAME", 'sup');
 
-	function _createSuper$1g(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1g(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1h(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1h(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1g() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1h() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Sub$1 = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Sub, _SyntaxBase);
 
-	  var _super = _createSuper$1g(Sub);
+	  var _super = _createSuper$1h(Sub);
 
 	  function Sub() {
 	    _classCallCheck(this, Sub);
@@ -32179,9 +32182,9 @@
 
 	function _objectSpread$7(target) { for (var i = 1; i < arguments.length; i++) { var _context22, _context23; var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? forEach$5(_context22 = ownKeys$7(Object(source), !0)).call(_context22, function (key) { _defineProperty$1(target, key, source[key]); }) : getOwnPropertyDescriptors ? defineProperties(target, getOwnPropertyDescriptors(source)) : forEach$5(_context23 = ownKeys$7(Object(source))).call(_context23, function (key) { defineProperty$8(target, key, getOwnPropertyDescriptor$6(source, key)); }); } return target; }
 
-	function _createSuper$1f(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1f(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1g(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1g(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1f() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1g() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	prismCore.manual = true;
 	var CUSTOM_WRAPPER = {
 	  figure: 'figure'
@@ -32190,7 +32193,7 @@
 	var CodeBlock = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(CodeBlock, _ParagraphBase);
 
-	  var _super = _createSuper$1f(CodeBlock);
+	  var _super = _createSuper$1g(CodeBlock);
 
 	  function CodeBlock(_ref) {
 	    var _this;
@@ -32642,14 +32645,14 @@
 
 	_defineProperty$1(CodeBlock, "inlineCodeCache", {});
 
-	function _createSuper$1e(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1e(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1f(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1f(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1e() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1f() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var InlineCode = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(InlineCode, _ParagraphBase);
 
-	  var _super = _createSuper$1e(InlineCode);
+	  var _super = _createSuper$1f(InlineCode);
 
 	  function InlineCode() {
 	    _classCallCheck(this, InlineCode);
@@ -33129,14 +33132,14 @@
 	  return UrlCache;
 	}();
 
-	function _createSuper$1d(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1d(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1e(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1e(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1d() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1e() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Link$1 = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Link, _SyntaxBase);
 
-	  var _super = _createSuper$1d(Link);
+	  var _super = _createSuper$1e(Link);
 
 	  function Link(_ref) {
 	    var _this;
@@ -33351,14 +33354,14 @@
 
 	var repeat = repeat$1;
 
-	function _createSuper$1c(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1c(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1d(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1d(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1c() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1d() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Emphasis = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Emphasis, _SyntaxBase);
 
-	  var _super = _createSuper$1c(Emphasis);
+	  var _super = _createSuper$1d(Emphasis);
 
 	  function Emphasis() {
 	    var _this;
@@ -33511,9 +33514,9 @@
 
 	_defineProperty$1(Emphasis, "HOOK_NAME", 'fontEmphasis');
 
-	function _createSuper$1b(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1b(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1c(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1c(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1b() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1c() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 段落级语法
 	 * 段落级语法可以具备以下特性：
@@ -33530,7 +33533,7 @@
 	var Paragraph = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(Paragraph, _ParagraphBase);
 
-	  var _super = _createSuper$1b(Paragraph);
+	  var _super = _createSuper$1c(Paragraph);
 
 	  function Paragraph(options) {
 	    var _this;
@@ -33694,9 +33697,9 @@
 	  return _get.apply(this, arguments);
 	}
 
-	function _createSuper$1a(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1a(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1b(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1b(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$1a() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1b() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	var ATX_HEADER = 'atx';
 	var SETEXT_HEADER = 'setext';
 	var toDashChars = /[\s\-_]/;
@@ -33706,7 +33709,7 @@
 	var Header$1 = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(Header, _ParagraphBase);
 
-	  var _super = _createSuper$1a(Header);
+	  var _super = _createSuper$1b(Header);
 
 	  function Header() {
 	    var _this;
@@ -33986,14 +33989,14 @@
 
 	_defineProperty$1(Header$1, "HOOK_NAME", 'header');
 
-	function _createSuper$19(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$19(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$1a(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1a(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$19() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$1a() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Transfer = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Transfer, _SyntaxBase);
 
-	  var _super = _createSuper$19(Transfer);
+	  var _super = _createSuper$1a(Transfer);
 
 	  function Transfer() {
 	    _classCallCheck(this, Transfer);
@@ -34418,16 +34421,16 @@
 
 	function _objectSpread$5(target) { for (var i = 1; i < arguments.length; i++) { var _context24, _context25; var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? forEach$5(_context24 = ownKeys$5(Object(source), !0)).call(_context24, function (key) { _defineProperty$1(target, key, source[key]); }) : getOwnPropertyDescriptors ? defineProperties(target, getOwnPropertyDescriptors(source)) : forEach$5(_context25 = ownKeys$5(Object(source))).call(_context25, function (key) { defineProperty$8(target, key, getOwnPropertyDescriptor$6(source, key)); }); } return target; }
 
-	function _createSuper$18(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$18(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$19(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$19(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$18() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$19() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	var TABLE_LOOSE = 'loose';
 	var TABLE_STRICT = 'strict';
 
 	var Table$1 = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(Table, _ParagraphBase);
 
-	  var _super = _createSuper$18(Table);
+	  var _super = _createSuper$19(Table);
 
 	  function Table(_ref) {
 	    var _this;
@@ -34825,14 +34828,14 @@
 	  return (typeof window === "undefined" ? "undefined" : _typeof(window)) === 'object';
 	}
 
-	function _createSuper$17(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$17(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$18(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$18(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$17() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$18() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Br$1 = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(Br, _ParagraphBase);
 
-	  var _super = _createSuper$17(Br);
+	  var _super = _createSuper$18(Br);
 
 	  function Br(options) {
 	    var _this;
@@ -34929,9 +34932,9 @@
 
 	_defineProperty$1(Br$1, "HOOK_NAME", 'br');
 
-	function _createSuper$16(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$16(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$17(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$17(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$16() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$17() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 分割线语法
 	 */
@@ -34939,7 +34942,7 @@
 	var Hr$1 = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(Hr, _ParagraphBase);
 
-	  var _super = _createSuper$16(Hr);
+	  var _super = _createSuper$17(Hr);
 
 	  function Hr() {
 	    _classCallCheck(this, Hr);
@@ -35165,9 +35168,9 @@
 
 	function _objectSpread$4(target) { for (var i = 1; i < arguments.length; i++) { var _context26, _context27; var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? forEach$5(_context26 = ownKeys$4(Object(source), !0)).call(_context26, function (key) { _defineProperty$1(target, key, source[key]); }) : getOwnPropertyDescriptors ? defineProperties(target, getOwnPropertyDescriptors(source)) : forEach$5(_context27 = ownKeys$4(Object(source))).call(_context27, function (key) { defineProperty$8(target, key, getOwnPropertyDescriptor$6(source, key)); }); } return target; }
 
-	function _createSuper$15(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$15(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$16(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$16(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$15() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$16() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var replacerFactory = function replacerFactory(type, match, leadingChar, alt, link, title, posterContent, config, globalConfig) {
 	  var refType = typeof link === 'undefined' ? 'ref' : 'url';
@@ -35291,7 +35294,7 @@
 	var Image$2 = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Image, _SyntaxBase);
 
-	  var _super = _createSuper$15(Image);
+	  var _super = _createSuper$16(Image);
 
 	  function Image(_ref4) {
 	    var _this;
@@ -35464,9 +35467,9 @@
 
 	function _objectSpread$3(target) { for (var i = 1; i < arguments.length; i++) { var _context10, _context11; var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? forEach$5(_context10 = ownKeys$3(Object(source), !0)).call(_context10, function (key) { _defineProperty$1(target, key, source[key]); }) : getOwnPropertyDescriptors ? defineProperties(target, getOwnPropertyDescriptors(source)) : forEach$5(_context11 = ownKeys$3(Object(source))).call(_context11, function (key) { defineProperty$8(target, key, getOwnPropertyDescriptor$6(source, key)); }); } return target; }
 
-	function _createSuper$14(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$14(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$15(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$15(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$14() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$15() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	var INDENT_SPACE_NUM = 4; // commonmark default use 1~4 spaces for indent
 
 	var TAB_SPACE_NUM = 4; // 1 tab === 4 space
@@ -35569,7 +35572,7 @@
 	var List$1 = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(List, _ParagraphBase);
 
-	  var _super = _createSuper$14(List);
+	  var _super = _createSuper$15(List);
 
 	  function List(_ref) {
 	    var _this;
@@ -35781,9 +35784,9 @@
 
 	_defineProperty$1(List$1, "HOOK_NAME", 'list');
 
-	function _createSuper$13(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$13(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$14(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$14(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$13() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$14() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	function computeLeadingSpaces(leadingChars) {
 	  var indentRegex = /^(\t|[ ]{1,4})/;
@@ -35801,7 +35804,7 @@
 	var Blockquote = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(Blockquote, _ParagraphBase);
 
-	  var _super = _createSuper$13(Blockquote);
+	  var _super = _createSuper$14(Blockquote);
 
 	  function Blockquote() {
 	    _classCallCheck(this, Blockquote);
@@ -35916,14 +35919,14 @@
 
 	_defineProperty$1(Blockquote, "HOOK_NAME", 'blockquote');
 
-	function _createSuper$12(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$12(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$13(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$13(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$12() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$13() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var AutoLink = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(AutoLink, _SyntaxBase);
 
-	  var _super = _createSuper$12(AutoLink);
+	  var _super = _createSuper$13(AutoLink);
 
 	  function AutoLink(_ref) {
 	    var _this;
@@ -36234,14 +36237,14 @@
 	  }
 	};
 
-	function _createSuper$11(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$11(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$12(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$12(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$11() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$12() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var MathBlock = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(MathBlock, _ParagraphBase);
 
-	  var _super = _createSuper$11(MathBlock);
+	  var _super = _createSuper$12(MathBlock);
 
 	  function MathBlock(_ref) {
 	    var _this;
@@ -36356,9 +36359,9 @@
 
 	_defineProperty$1(MathBlock, "HOOK_NAME", 'mathBlock');
 
-	function _createSuper$10(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$10(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$11(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$11(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$10() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$11() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 行内公式的语法
 	 * 虽然叫做行内公式，Cherry依然将其视为“段落级语法”，因为其具备排他性并且需要优先渲染
@@ -36367,7 +36370,7 @@
 	var InlineMath = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(InlineMath, _ParagraphBase);
 
-	  var _super = _createSuper$10(InlineMath);
+	  var _super = _createSuper$11(InlineMath);
 
 	  function InlineMath(_ref) {
 	    var _this;
@@ -36529,9 +36532,9 @@
 
 	var fill = fill$1;
 
-	function _createSuper$$(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$$(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$10(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$10(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$$() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$10() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	function defaultLinkProcessor(link) {
 	  return link;
@@ -36550,7 +36553,7 @@
 	var Toc$1 = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(Toc, _ParagraphBase);
 
-	  var _super = _createSuper$$(Toc);
+	  var _super = _createSuper$10(Toc);
 
 	  // plain or nested
 
@@ -36919,14 +36922,14 @@
 
 	_defineProperty$1(Toc$1, "HOOK_NAME", 'toc');
 
-	function _createSuper$_(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$_(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$$(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$$(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$_() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$$() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Footnote = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(Footnote, _ParagraphBase);
 
-	  var _super = _createSuper$_(Footnote);
+	  var _super = _createSuper$$(Footnote);
 
 	  function Footnote(_ref) {
 	    var _this;
@@ -37078,9 +37081,9 @@
 
 	_defineProperty$1(Footnote, "HOOK_NAME", 'footnote');
 
-	function _createSuper$Z(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$Z(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$_(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$_(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$Z() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$_() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 脚注和引用语法
 	 * 示例：
@@ -37095,7 +37098,7 @@
 	var CommentReference = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(CommentReference, _ParagraphBase);
 
-	  var _super = _createSuper$Z(CommentReference);
+	  var _super = _createSuper$_(CommentReference);
 
 	  function CommentReference(_ref) {
 	    var _this;
@@ -38932,14 +38935,14 @@
 
 	var sanitizer = createDOMPurify(window);
 
-	function _createSuper$Y(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$Y(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$Z(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$Z(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$Y() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$Z() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var HtmlBlock = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(HtmlBlock, _ParagraphBase);
 
-	  var _super = _createSuper$Y(HtmlBlock);
+	  var _super = _createSuper$Z(HtmlBlock);
 
 	  function HtmlBlock() {
 	    _classCallCheck(this, HtmlBlock);
@@ -40873,9 +40876,9 @@
 
 	function _objectSpread$2(target) { for (var i = 1; i < arguments.length; i++) { var _context4, _context5; var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? forEach$5(_context4 = ownKeys$2(Object(source), !0)).call(_context4, function (key) { _defineProperty$1(target, key, source[key]); }) : getOwnPropertyDescriptors ? defineProperties(target, getOwnPropertyDescriptors(source)) : forEach$5(_context5 = ownKeys$2(Object(source))).call(_context5, function (key) { defineProperty$8(target, key, getOwnPropertyDescriptor$6(source, key)); }); } return target; }
 
-	function _createSuper$X(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$X(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$Y(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$Y(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$X() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$Y() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	function _createForOfIteratorHelper$1(o, allowArrayLike) { var it = typeof symbol !== "undefined" && getIteratorMethod(o) || o["@@iterator"]; if (!it) { if (isArray$1(o) || (it = _unsupportedIterableToArray$1(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
@@ -40980,7 +40983,7 @@
 	var Emoji = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Emoji, _SyntaxBase);
 
-	  var _super = _createSuper$X(Emoji);
+	  var _super = _createSuper$Y(Emoji);
 
 	  function Emoji() {
 	    var _this;
@@ -41066,14 +41069,14 @@
 
 	_defineProperty$1(Emoji, "HOOK_NAME", 'emoji');
 
-	function _createSuper$W(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$W(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$X(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$X(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$W() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$X() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Underline$1 = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Underline, _SyntaxBase);
 
-	  var _super = _createSuper$W(Underline);
+	  var _super = _createSuper$X(Underline);
 
 	  function Underline() {
 	    _classCallCheck(this, Underline);
@@ -41111,14 +41114,14 @@
 
 	_defineProperty$1(Underline$1, "HOOK_NAME", 'underline');
 
-	function _createSuper$V(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$V(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$W(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$W(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$V() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$W() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var HighLight = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(HighLight, _SyntaxBase);
 
-	  var _super = _createSuper$V(HighLight);
+	  var _super = _createSuper$W(HighLight);
 
 	  function HighLight() {
 	    _classCallCheck(this, HighLight);
@@ -41153,14 +41156,14 @@
 
 	_defineProperty$1(HighLight, "HOOK_NAME", 'highLight');
 
-	function _createSuper$U(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$U(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$V(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$V(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$U() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$V() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Ruby$1 = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Ruby, _SyntaxBase);
 
-	  var _super = _createSuper$U(Ruby);
+	  var _super = _createSuper$V(Ruby);
 
 	  function Ruby() {
 	    _classCallCheck(this, Ruby);
@@ -41195,9 +41198,9 @@
 
 	_defineProperty$1(Ruby$1, "HOOK_NAME", 'ruby');
 
-	function _createSuper$T(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$T(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$U(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$U(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$T() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$U() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 面板语法
 	 * 例：
@@ -41215,7 +41218,7 @@
 	var Panel$1 = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(Panel, _ParagraphBase);
 
-	  var _super = _createSuper$T(Panel);
+	  var _super = _createSuper$U(Panel);
 
 	  function Panel(options) {
 	    var _this;
@@ -41378,9 +41381,9 @@
 
 	_defineProperty$1(Panel$1, "HOOK_NAME", 'panel');
 
-	function _createSuper$S(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$S(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$T(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$T(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$S() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$T() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * +++(-) 点击查看详情
 	 * body
@@ -41395,7 +41398,7 @@
 	var Detail$1 = /*#__PURE__*/function (_ParagraphBase) {
 	  _inherits(Detail, _ParagraphBase);
 
-	  var _super = _createSuper$S(Detail);
+	  var _super = _createSuper$T(Detail);
 
 	  function Detail() {
 	    _classCallCheck(this, Detail);
@@ -41510,14 +41513,14 @@
 
 	_defineProperty$1(Detail$1, "HOOK_NAME", 'detail');
 
-	function _createSuper$R(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$R(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$S(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$S(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$R() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$S() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Mark = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Mark, _SyntaxBase);
 
-	  var _super = _createSuper$R(Mark);
+	  var _super = _createSuper$S(Mark);
 
 	  function Mark() {
 	    _classCallCheck(this, Mark);
@@ -41568,14 +41571,14 @@
 
 	var set$1 = set$2;
 
-	function _createSuper$Q(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$Q(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$R(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$R(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$Q() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$R() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Badge$1 = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Badge, _SyntaxBase);
 
-	  var _super = _createSuper$Q(Badge);
+	  var _super = _createSuper$R(Badge);
 
 	  function Badge() {
 	    _classCallCheck(this, Badge);
@@ -41985,9 +41988,9 @@
 
 	function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-	function _createSuper$P(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$P(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$Q(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$Q(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$P() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$Q() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * @typedef {import('codemirror')} CodeMirror
 	 */
@@ -42015,7 +42018,7 @@
 	var Suggester = /*#__PURE__*/function (_SyntaxBase) {
 	  _inherits(Suggester, _SyntaxBase);
 
-	  var _super = _createSuper$P(Suggester);
+	  var _super = _createSuper$Q(Suggester);
 
 	  function Suggester(_ref) {
 	    var _this;
@@ -53603,9 +53606,9 @@
 	  return MenuBase;
 	}();
 
-	function _createSuper$O(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$O(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$P(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$P(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$O() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$P() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 加粗按钮
 	 */
@@ -53613,7 +53616,7 @@
 	var Bold = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Bold, _MenuBase);
 
-	  var _super = _createSuper$O(Bold);
+	  var _super = _createSuper$P(Bold);
 
 	  function Bold($cherry) {
 	    var _this;
@@ -53689,9 +53692,9 @@
 	  return Bold;
 	}(MenuBase);
 
-	function _createSuper$N(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$N(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$O(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$O(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$N() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$O() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入斜体的按钮
 	 */
@@ -53699,7 +53702,7 @@
 	var Italic = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Italic, _MenuBase);
 
-	  var _super = _createSuper$N(Italic);
+	  var _super = _createSuper$O(Italic);
 
 	  function Italic($cherry) {
 	    var _this;
@@ -53775,9 +53778,9 @@
 	  return Italic;
 	}(MenuBase);
 
-	function _createSuper$M(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$M(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$N(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$N(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$M() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$N() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 工具栏里的分割线，用来切分不同类型按钮的区域
 	 * 一个实例中可以配置多个分割线
@@ -53786,7 +53789,7 @@
 	var Split = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Split, _MenuBase);
 
-	  var _super = _createSuper$M(Split);
+	  var _super = _createSuper$N(Split);
 
 	  function Split($cherry) {
 	    var _this;
@@ -53893,9 +53896,9 @@
 	  }
 	}
 
-	function _createSuper$L(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$L(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$M(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$M(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$L() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$M() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 删除线的按钮
 	 */
@@ -53903,7 +53906,7 @@
 	var Strikethrough = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Strikethrough, _MenuBase);
 
-	  var _super = _createSuper$L(Strikethrough);
+	  var _super = _createSuper$M(Strikethrough);
 
 	  function Strikethrough($cherry) {
 	    var _this;
@@ -53977,9 +53980,9 @@
 	  return Strikethrough;
 	}(MenuBase);
 
-	function _createSuper$K(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$K(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$L(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$L(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$K() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$L() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 下标的按钮
 	 **/
@@ -53987,7 +53990,7 @@
 	var Sub = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Sub, _MenuBase);
 
-	  var _super = _createSuper$K(Sub);
+	  var _super = _createSuper$L(Sub);
 
 	  function Sub($cherry) {
 	    var _this;
@@ -54047,9 +54050,9 @@
 	  return Sub;
 	}(MenuBase);
 
-	function _createSuper$J(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$J(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$K(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$K(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$J() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$K() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 上标的按钮
 	 **/
@@ -54057,7 +54060,7 @@
 	var Sup = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Sup, _MenuBase);
 
-	  var _super = _createSuper$J(Sup);
+	  var _super = _createSuper$K(Sup);
 
 	  function Sup($cherry) {
 	    var _this;
@@ -54117,9 +54120,9 @@
 	  return Sup;
 	}(MenuBase);
 
-	function _createSuper$I(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$I(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$J(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$J(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$I() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$J() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入字体颜色或者字体背景颜色的按钮
 	 */
@@ -54127,7 +54130,7 @@
 	var Color = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Color, _MenuBase);
 
-	  var _super = _createSuper$I(Color);
+	  var _super = _createSuper$J(Color);
 
 	  function Color($cherry) {
 	    var _this;
@@ -54396,9 +54399,9 @@
 	  return BubbleColor;
 	}();
 
-	function _createSuper$H(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$H(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$I(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$I(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$H() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$I() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入1级~5级标题
 	 */
@@ -54406,7 +54409,7 @@
 	var Header = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Header, _MenuBase);
 
-	  var _super = _createSuper$H(Header);
+	  var _super = _createSuper$I(Header);
 
 	  function Header($cherry) {
 	    var _context, _context2, _context3, _context4, _context5;
@@ -54538,9 +54541,9 @@
 	  return Header;
 	}(MenuBase);
 
-	function _createSuper$G(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$G(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$H(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$H(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$G() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$H() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * "插入"按钮
 	 */
@@ -54548,7 +54551,7 @@
 	var Insert = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Insert, _MenuBase);
 
-	  var _super = _createSuper$G(Insert);
+	  var _super = _createSuper$H(Insert);
 
 	  function Insert($cherry) {
 	    var _this;
@@ -54580,9 +54583,9 @@
 	  return Insert;
 	}(MenuBase);
 
-	function _createSuper$F(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$F(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$G(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$G(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$F() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$G() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入有序/无序/checklist列表的按钮
 	 */
@@ -54590,7 +54593,7 @@
 	var List = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(List, _MenuBase);
 
-	  var _super = _createSuper$F(List);
+	  var _super = _createSuper$G(List);
 
 	  function List($cherry) {
 	    var _context, _context2, _context3;
@@ -54662,9 +54665,9 @@
 	  return List;
 	}(MenuBase);
 
-	function _createSuper$E(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$E(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$F(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$F(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$E() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$F() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 下标的按钮
 	 **/
@@ -54672,7 +54675,7 @@
 	var Ol = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Ol, _MenuBase);
 
-	  var _super = _createSuper$E(Ol);
+	  var _super = _createSuper$F(Ol);
 
 	  function Ol($cherry) {
 	    var _this;
@@ -54714,9 +54717,9 @@
 	  return Ol;
 	}(MenuBase);
 
-	function _createSuper$D(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$D(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$E(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$E(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$D() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$E() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 下标的按钮
 	 **/
@@ -54724,7 +54727,7 @@
 	var Ul = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Ul, _MenuBase);
 
-	  var _super = _createSuper$D(Ul);
+	  var _super = _createSuper$E(Ul);
 
 	  function Ul($cherry) {
 	    var _this;
@@ -54766,9 +54769,9 @@
 	  return Ul;
 	}(MenuBase);
 
-	function _createSuper$C(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$C(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$D(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$D(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$C() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$D() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 下标的按钮
 	 **/
@@ -54776,7 +54779,7 @@
 	var Checklist = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Checklist, _MenuBase);
 
-	  var _super = _createSuper$C(Checklist);
+	  var _super = _createSuper$D(Checklist);
 
 	  function Checklist($cherry) {
 	    var _this;
@@ -54818,9 +54821,9 @@
 	  return Checklist;
 	}(MenuBase);
 
-	function _createSuper$B(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$B(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$C(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$C(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$B() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$C() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入“画图”的按钮
 	 * 本功能依赖[Mermaid.js](https://mermaid-js.github.io)组件，请保证调用CherryMarkdown前已加载mermaid.js组件
@@ -54829,7 +54832,7 @@
 	var Graph = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Graph, _MenuBase);
 
-	  var _super = _createSuper$B(Graph);
+	  var _super = _createSuper$C(Graph);
 
 	  function Graph($cherry) {
 	    var _context, _context2, _context3, _context4, _context5, _context6, _context7, _context8, _context9, _context10, _context11, _context12, _context13, _context14, _context15, _context16;
@@ -54945,14 +54948,14 @@
 	  return Graph;
 	}(MenuBase);
 
-	function _createSuper$A(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$A(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$B(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$B(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$A() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$B() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Size = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Size, _MenuBase);
 
-	  var _super = _createSuper$A(Size);
+	  var _super = _createSuper$B(Size);
 
 	  function Size($cherry) {
 	    var _context, _context2, _context3, _context4;
@@ -55080,9 +55083,9 @@
 	  return Size;
 	}(MenuBase);
 
-	function _createSuper$z(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$z(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$A(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$A(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$z() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$A() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入1级标题
 	 */
@@ -55090,7 +55093,7 @@
 	var H1 = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(H1, _MenuBase);
 
-	  var _super = _createSuper$z(H1);
+	  var _super = _createSuper$A(H1);
 
 	  function H1($cherry) {
 	    var _this;
@@ -55168,9 +55171,9 @@
 	  return H1;
 	}(MenuBase);
 
-	function _createSuper$y(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$y(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$z(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$z(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$y() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$z() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入2级标题
 	 */
@@ -55178,7 +55181,7 @@
 	var H2 = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(H2, _MenuBase);
 
-	  var _super = _createSuper$y(H2);
+	  var _super = _createSuper$z(H2);
 
 	  function H2($cherry) {
 	    var _this;
@@ -55256,9 +55259,9 @@
 	  return H2;
 	}(MenuBase);
 
-	function _createSuper$x(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$x(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$y(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$y(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$x() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$y() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入3级标题
 	 */
@@ -55266,7 +55269,7 @@
 	var H3 = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(H3, _MenuBase);
 
-	  var _super = _createSuper$x(H3);
+	  var _super = _createSuper$y(H3);
 
 	  function H3($cherry) {
 	    var _this;
@@ -55344,9 +55347,9 @@
 	  return H3;
 	}(MenuBase);
 
-	function _createSuper$w(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$w(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$x(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$x(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$w() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$x() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入“引用”的按钮
 	 */
@@ -55354,7 +55357,7 @@
 	var Quote = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Quote, _MenuBase);
 
-	  var _super = _createSuper$w(Quote);
+	  var _super = _createSuper$x(Quote);
 
 	  function Quote($cherry) {
 	    var _this;
@@ -55402,9 +55405,9 @@
 	  return Quote;
 	}(MenuBase);
 
-	function _createSuper$v(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$v(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$w(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$w(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$v() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$w() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 关闭/展示预览区域的按钮
 	 */
@@ -55412,7 +55415,7 @@
 	var TogglePreview = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(TogglePreview, _MenuBase);
 
-	  var _super = _createSuper$v(TogglePreview);
+	  var _super = _createSuper$w(TogglePreview);
 
 	  /** @type {boolean} 当前预览状态 */
 	  function TogglePreview($cherry) {
@@ -55493,9 +55496,9 @@
 	  return TogglePreview;
 	}(MenuBase);
 
-	function _createSuper$u(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$u(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$v(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$v(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$u() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$v() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 全屏按钮
 	 */
@@ -55503,7 +55506,7 @@
 	var FullScreen = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(FullScreen, _MenuBase);
 
-	  var _super = _createSuper$u(FullScreen);
+	  var _super = _createSuper$v(FullScreen);
 
 	  function FullScreen($cherry) {
 	    var _this;
@@ -55554,9 +55557,9 @@
 	  return FullScreen;
 	}(MenuBase);
 
-	function _createSuper$t(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$t(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$u(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$u(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$t() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$u() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 撤销回退按钮，点击后触发编辑器的undo操作
 	 * 依赖codemirror的undo接口
@@ -55565,7 +55568,7 @@
 	var Undo = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Undo, _MenuBase);
 
-	  var _super = _createSuper$t(Undo);
+	  var _super = _createSuper$u(Undo);
 
 	  function Undo($cherry) {
 	    var _this;
@@ -55589,9 +55592,9 @@
 	  return Undo;
 	}(MenuBase);
 
-	function _createSuper$s(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$s(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$t(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$t(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$s() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$t() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 撤销/重做 里的“重做”按键
 	 * 依赖codemirror的undo接口
@@ -55600,7 +55603,7 @@
 	var Redo = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Redo, _MenuBase);
 
-	  var _super = _createSuper$s(Redo);
+	  var _super = _createSuper$t(Redo);
 
 	  function Redo($cherry) {
 	    var _this;
@@ -55628,9 +55631,9 @@
 	  return Redo;
 	}(MenuBase);
 
-	function _createSuper$r(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$r(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$s(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$s(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$r() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$s() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入代码块的按钮
 	 */
@@ -55638,7 +55641,7 @@
 	var Code = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Code, _MenuBase);
 
-	  var _super = _createSuper$r(Code);
+	  var _super = _createSuper$s(Code);
 
 	  function Code($cherry) {
 	    var _this;
@@ -55683,14 +55686,14 @@
 	  return Code;
 	}(MenuBase);
 
-	function _createSuper$q(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$q(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$r(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$r(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$q() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$r() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 	var Export = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Export, _MenuBase);
 
-	  var _super = _createSuper$q(Export);
+	  var _super = _createSuper$r(Export);
 
 	  function Export($cherry) {
 	    var _context, _context2, _context3;
@@ -55750,9 +55753,9 @@
 	  return Export;
 	}(MenuBase);
 
-	function _createSuper$p(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$p(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$q(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$q(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$p() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$q() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 下划线按钮
 	 **/
@@ -55760,7 +55763,7 @@
 	var Underline = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Underline, _MenuBase);
 
-	  var _super = _createSuper$p(Underline);
+	  var _super = _createSuper$q(Underline);
 
 	  function Underline($cherry) {
 	    var _this;
@@ -55830,9 +55833,9 @@
 	  return Underline;
 	}(MenuBase);
 
-	function _createSuper$o(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$o(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$p(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$p(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$o() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$p() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 切换预览/编辑模式的按钮
 	 * 该按钮不支持切换到双栏编辑模式
@@ -55842,7 +55845,7 @@
 	var SwitchModel = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(SwitchModel, _MenuBase);
 
-	  var _super = _createSuper$o(SwitchModel);
+	  var _super = _createSuper$p(SwitchModel);
 
 	  function SwitchModel($cherry) {
 	    var _this;
@@ -55898,9 +55901,9 @@
 	  return SwitchModel;
 	}(MenuBase);
 
-	function _createSuper$n(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$n(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$o(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$o(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$n() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$o() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入图片
 	 */
@@ -55908,7 +55911,7 @@
 	var Image$1 = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Image, _MenuBase);
 
-	  var _super = _createSuper$n(Image);
+	  var _super = _createSuper$o(Image);
 
 	  function Image($cherry) {
 	    var _this;
@@ -55982,9 +55985,9 @@
 	  return Image;
 	}(MenuBase);
 
-	function _createSuper$m(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$m(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$n(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$n(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$m() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$n() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入音频
 	 */
@@ -55992,7 +55995,7 @@
 	var Audio = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Audio, _MenuBase);
 
-	  var _super = _createSuper$m(Audio);
+	  var _super = _createSuper$n(Audio);
 
 	  function Audio($cherry) {
 	    var _this;
@@ -56057,9 +56060,9 @@
 	  return Audio;
 	}(MenuBase);
 
-	function _createSuper$l(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$l(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$m(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$m(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$l() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$m() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入视频
 	 */
@@ -56067,7 +56070,7 @@
 	var Video$1 = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Video, _MenuBase);
 
-	  var _super = _createSuper$l(Video);
+	  var _super = _createSuper$m(Video);
 
 	  function Video($cherry) {
 	    var _this;
@@ -56132,9 +56135,9 @@
 	  return Video;
 	}(MenuBase);
 
-	function _createSuper$k(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$k(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$l(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$l(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$k() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$l() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入换行
 	 */
@@ -56142,7 +56145,7 @@
 	var Br = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Br, _MenuBase);
 
-	  var _super = _createSuper$k(Br);
+	  var _super = _createSuper$l(Br);
 
 	  function Br($cherry) {
 	    var _this;
@@ -56172,9 +56175,9 @@
 	  return Br;
 	}(MenuBase);
 
-	function _createSuper$j(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$j(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$k(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$k(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$j() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$k() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入分割线
 	 */
@@ -56182,7 +56185,7 @@
 	var Hr = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Hr, _MenuBase);
 
-	  var _super = _createSuper$j(Hr);
+	  var _super = _createSuper$k(Hr);
 
 	  function Hr($cherry) {
 	    var _this;
@@ -56213,9 +56216,9 @@
 	  return Hr;
 	}(MenuBase);
 
-	function _createSuper$i(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$i(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$j(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$j(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$i() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$j() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入超链接
 	 */
@@ -56223,7 +56226,7 @@
 	var Link = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Link, _MenuBase);
 
-	  var _super = _createSuper$i(Link);
+	  var _super = _createSuper$j(Link);
 
 	  function Link($cherry) {
 	    var _this;
@@ -56466,9 +56469,9 @@
 	  return BubbleTableMenu;
 	}();
 
-	function _createSuper$h(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$h(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$i(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$i(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$h() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$i() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入普通表格
 	 */
@@ -56476,7 +56479,7 @@
 	var Table = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Table, _MenuBase);
 
-	  var _super = _createSuper$h(Table);
+	  var _super = _createSuper$i(Table);
 
 	  function Table($cherry) {
 	    var _this;
@@ -56539,9 +56542,9 @@
 	  return Table;
 	}(MenuBase);
 
-	function _createSuper$g(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$g(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$h(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$h(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$g() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$h() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入目录
 	 */
@@ -56549,7 +56552,7 @@
 	var Toc = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Toc, _MenuBase);
 
-	  var _super = _createSuper$g(Toc);
+	  var _super = _createSuper$h(Toc);
 
 	  function Toc($cherry) {
 	    var _this;
@@ -56580,9 +56583,9 @@
 	  return Toc;
 	}(MenuBase);
 
-	function _createSuper$f(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$f(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$g(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$g(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$f() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$g() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入折线图+表格
 	 */
@@ -56590,7 +56593,7 @@
 	var LineTable = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(LineTable, _MenuBase);
 
-	  var _super = _createSuper$f(LineTable);
+	  var _super = _createSuper$g(LineTable);
 
 	  function LineTable($cherry) {
 	    var _this;
@@ -56622,9 +56625,9 @@
 	  return LineTable;
 	}(MenuBase);
 
-	function _createSuper$e(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$e(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$f(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$f(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$e() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$f() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入柱状图图+表格
 	 */
@@ -56632,7 +56635,7 @@
 	var BarTable = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(BarTable, _MenuBase);
 
-	  var _super = _createSuper$e(BarTable);
+	  var _super = _createSuper$f(BarTable);
 
 	  function BarTable($cherry) {
 	    var _this;
@@ -56664,9 +56667,9 @@
 	  return BarTable;
 	}(MenuBase);
 
-	function _createSuper$d(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$d(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$e(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$e(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$d() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$e() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入文件
 	 */
@@ -56674,7 +56677,7 @@
 	var Video = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Video, _MenuBase);
 
-	  var _super = _createSuper$d(Video);
+	  var _super = _createSuper$e(Video);
 
 	  function Video($cherry) {
 	    var _this;
@@ -56744,9 +56747,9 @@
 	  return Video;
 	}(MenuBase);
 
-	function _createSuper$c(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$c(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$d(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$d(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$c() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$d() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 生成ruby，使用场景：给中文增加拼音、给中文增加英文、给英文增加中文等等
 	 */
@@ -56754,7 +56757,7 @@
 	var Ruby = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Ruby, _MenuBase);
 
-	  var _super = _createSuper$c(Ruby);
+	  var _super = _createSuper$d(Ruby);
 
 	  function Ruby($cherry) {
 	    var _this;
@@ -56820,9 +56823,9 @@
 
 	var promise = promise$5;
 
-	function _createSuper$b(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$b(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$c(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$c(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$b() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$c() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 复制按钮，用来复制预览区的html内容
 	 * 该操作会将预览区的css样式以行内样式的形式插入到html内容里，从而保证粘贴时样式一致
@@ -56831,7 +56834,7 @@
 	var Copy = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Copy, _MenuBase);
 
-	  var _super = _createSuper$b(Copy);
+	  var _super = _createSuper$c(Copy);
 
 	  function Copy($cherry) {
 	    var _this;
@@ -57007,9 +57010,9 @@
 	  });
 	}
 
-	function _createSuper$a(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$a(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$b(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$b(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$a() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$b() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入面板
 	 */
@@ -57017,7 +57020,7 @@
 	var Panel = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Panel, _MenuBase);
 
-	  var _super = _createSuper$a(Panel);
+	  var _super = _createSuper$b(Panel);
 
 	  function Panel($cherry) {
 	    var _context, _context2, _context3, _context4, _context5, _context6, _context7, _context8;
@@ -57183,9 +57186,9 @@
 	  return Panel;
 	}(MenuBase);
 
-	function _createSuper$9(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$9(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$a(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$a(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$9() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$a() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入手风琴
 	 */
@@ -57193,7 +57196,7 @@
 	var Detail = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Detail, _MenuBase);
 
-	  var _super = _createSuper$9(Detail);
+	  var _super = _createSuper$a(Detail);
 
 	  function Detail($cherry) {
 	    var _this;
@@ -57270,9 +57273,9 @@
 	  return Detail;
 	}(MenuBase);
 
-	function _createSuper$8(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$8(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$9(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$9(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$8() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$9() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入面板
 	 */
@@ -57280,7 +57283,7 @@
 	var Badge = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Badge, _MenuBase);
 
-	  var _super = _createSuper$8(Badge);
+	  var _super = _createSuper$9(Badge);
 
 	  function Badge($cherry) {
 	    var _context, _context2, _context3, _context4, _context5, _context6, _context7, _context8;
@@ -57351,9 +57354,9 @@
 	  return Badge;
 	}(MenuBase);
 
-	function _createSuper$7(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$7(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$8(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$8(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$7() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$8() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入面板
 	 */
@@ -57361,7 +57364,7 @@
 	var ECharts = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(ECharts, _MenuBase);
 
-	  var _super = _createSuper$7(ECharts);
+	  var _super = _createSuper$8(ECharts);
 
 	  function ECharts($cherry) {
 	    var _context, _context2, _context3, _context4, _context5, _context6, _context7, _context8, _context9, _context10, _context11;
@@ -57602,9 +57605,9 @@
 	  return ECharts;
 	}(MenuBase);
 
-	function _createSuper$6(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$6(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$7(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$7(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$6() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$7() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 插入面板
 	 */
@@ -57612,7 +57615,7 @@
 	var Card = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Card, _MenuBase);
 
-	  var _super = _createSuper$6(Card);
+	  var _super = _createSuper$7(Card);
 
 	  function Card($cherry) {
 	    var _context, _context2, _context3;
@@ -57716,9 +57719,9 @@
 	  return Card;
 	}(MenuBase);
 
-	function _createSuper$5(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$5(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$6(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$6(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$5() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$6() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * 显示目录
 	 */
@@ -57726,7 +57729,7 @@
 	var TocList = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(TocList, _MenuBase);
 
-	  var _super = _createSuper$5(TocList);
+	  var _super = _createSuper$6(TocList);
 
 	  function TocList($cherry) {
 	    var _this;
@@ -57804,9 +57807,9 @@
 	  return TocList;
 	}(MenuBase);
 
-	function _createSuper$4(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$4(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+	function _createSuper$5(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$5(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-	function _isNativeReflectConstruct$4() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	function _isNativeReflectConstruct$5() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 	/**
 	 * "插入"按钮
 	 */
@@ -57814,7 +57817,7 @@
 	var Formula = /*#__PURE__*/function (_MenuBase) {
 	  _inherits(Formula, _MenuBase);
 
-	  var _super = _createSuper$4(Formula);
+	  var _super = _createSuper$5(Formula);
 
 	  function Formula($cherry) {
 	    var _this;
@@ -57844,6 +57847,112 @@
 	  }]);
 
 	  return Formula;
+	}(MenuBase);
+
+	function _createSuper$4(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$4(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = construct$4(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+	function _isNativeReflectConstruct$4() { if (typeof Reflect === "undefined" || !construct$4) return false; if (construct$4.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(construct$4(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+	/**
+	 * 字数统计
+	 */
+
+	var wordCount = /*#__PURE__*/function (_MenuBase) {
+	  _inherits(wordCount, _MenuBase);
+
+	  var _super = _createSuper$4(wordCount);
+
+	  function wordCount($cherry) {
+	    var _this;
+
+	    _classCallCheck(this, wordCount);
+
+	    _this = _super.call(this, $cherry);
+
+	    _this.setName('wordCount', 'hourglass_empty');
+
+	    _this.subMenuConfig = [{
+	      name: 'wordParagraphs',
+	      iconName: 'view_headline'
+	    }, {
+	      name: 'wordWords',
+	      iconName: 'hourglass_bottom'
+	    }, {
+	      name: 'wordCharacters',
+	      iconName: 'text_fields'
+	    }];
+	    Event$1.on('toolbar', 'show', function (_ref) {
+	      var _ref2 = _slicedToArray(_ref, 1),
+	          name = _ref2[0];
+
+	      if (name === 'wordCount') {
+	        // 改为弹窗统计
+	        var markdown = _this.$cherry.getMarkdown();
+
+	        var _this$wordCount = _this.wordCount(markdown),
+	            characters = _this$wordCount.characters,
+	            words = _this$wordCount.words,
+	            paragraphs = _this$wordCount.paragraphs;
+
+	        var dropdown = document.querySelectorAll('[name="wordCount"] .cherry-dropdown-item');
+
+	        if (dropdown) {
+	          var _context, _context2, _context3;
+
+	          dropdown.item(0).innerHTML = concat$1(_context = "<span class=\"material-symbols-outlined\">view_headline</span>".concat(_this.locale.wordParagraphs, "\uFF1A")).call(_context, paragraphs);
+	          dropdown.item(1).innerHTML = concat$1(_context2 = "<span class=\"material-symbols-outlined\">hourglass_bottom</span>".concat(_this.locale.wordWords, "\uFF1A")).call(_context2, words);
+	          dropdown.item(2).innerHTML = concat$1(_context3 = "<span class=\"material-symbols-outlined\">text_fields</span>".concat(_this.locale.wordCharacters, "\uFF1A")).call(_context3, characters);
+	        }
+	      }
+	    });
+	    return _this;
+	  }
+	  /**
+	   * 响应点击事件
+	   * @param {string} selection 被用户选中的文本内容
+	   * @returns {string} 回填到编辑器光标位置/选中文本区域的内容
+	   */
+
+
+	  _createClass(wordCount, [{
+	    key: "onClick",
+	    value: function onClick(selection) {
+	      return selection;
+	    }
+	    /**
+	     * 统计给定 Markdown 文本的字符数、单词数和段落数。
+	     * @param {string} markdown - 给定的 Markdown 文本字符串
+	     * @returns {Object} 包含字符数、单词数和段落数的对象
+	     */
+
+	  }, {
+	    key: "wordCount",
+	    value: function wordCount(markdown) {
+	      var _context4, _context5;
+
+	      // 匹配中文和标点符号
+	      var pattern = /[\u4e00-\u9fa5]|[\u3001\u3002\uff01\uff0c\uff1b\uff1a\u201c\u201d\u2018\u2019\u300a\u300b\u3008\u3009\u3010\u3011\u300e\u300f\u300c\u300d\uff08\uff09\u2014\u2026\u2013\uff0e]/g; // 统计字符数量，排除换行和空格
+
+	      var characters = markdown.replace(/\n|\s/g, '').length; // 统计中文和标点符号
+
+	      var chineseWords = (markdown.match(pattern) || []).length; // 统计英文单词
+
+	      var englishWords = filter(_context4 = markdown.replace(pattern, ' ').split(/[\s\n]+/)).call(_context4, Boolean).length;
+
+	      var words = chineseWords + englishWords; // 统计段落数量，使用至少两个连续换行符分割段落
+
+	      var paragraphs = filter(_context5 = markdown.split(/\n{2,}/)).call(_context5, function (line) {
+	        return trim$2(line).call(line) !== '';
+	      }).length;
+
+	      return {
+	        characters: characters,
+	        words: words,
+	        paragraphs: paragraphs
+	      };
+	    }
+	  }]);
+
+	  return wordCount;
 	}(MenuBase);
 
 	// 目前不支持按需动态加载
@@ -57896,7 +58005,8 @@
 	  echarts: ECharts,
 	  card: Card,
 	  tocList: TocList,
-	  formula: Formula
+	  formula: Formula,
+	  wordCount: wordCount
 	};
 
 	var HookCenter = /*#__PURE__*/function () {
@@ -58235,6 +58345,7 @@
 	        this.hideAllSubMenu();
 	        this.drawSubMenus(name);
 	        this.subMenus[name].style.display = 'block';
+	        Event$1.emit('toolbar', 'show', name);
 	        return;
 	      }
 
@@ -58243,6 +58354,7 @@
 	        this.hideAllSubMenu();
 	        this.subMenus[name].style.display = 'block';
 	        this.setSubMenuPosition(this.menus.hooks[name], this.subMenus[name]);
+	        Event$1.emit('toolbar', 'show', name);
 	      } else {
 	        // 如果是显示的，则隐藏当前二级菜单
 	        this.subMenus[name].style.display = 'none';
@@ -60312,7 +60424,7 @@
 	      strikethrough: ['strikethrough', 'underline', 'sub', 'sup', 'ruby', 'bold', 'italic', 'quote']
 	    }, 'size', '|', 'color', 'header', '|', 'badge', 'panel', {
 	      insert: ['ol', 'ul', 'checklist', 'image', 'audio', 'video', 'file', 'link', 'hr', 'br', 'code', 'formula', 'toc', 'table', 'detail', 'lineTable', 'barTable', 'emoji']
-	    }, 'graph', 'echarts', 'card', 'togglePreview', 'redo', 'undo'],
+	    }, 'graph', 'echarts', 'card', 'wordCount', 'togglePreview', 'redo', 'undo'],
 	    toolbarRight: ['fullScreen', '|', 'export', '|', 'switchModel'],
 	    bubble: ['bold', 'italic', 'header', 'underline', 'strikethrough', 'sub', 'sup', 'quote', '|', 'size', 'color'],
 	    // array or false
@@ -60540,7 +60652,11 @@
 	  latexFormulaInline: 'Latex行内公式',
 	  highlight: '高亮',
 	  footNoteTitle: '脚注标题',
-	  footNoteText: '脚注内容'
+	  footNoteText: '脚注内容',
+	  wordCount: '字数',
+	  wordParagraphs: '段落',
+	  wordWords: '字数',
+	  wordCharacters: '字符'
 	};
 
 	/**
@@ -60782,7 +60898,7 @@
 	  });
 	}
 
-	var VERSION = "0.8.29-6c581085";
+	var VERSION = "0.8.29-1af529a6";
 	var CherryStatic = /*#__PURE__*/function () {
 	  // for type check only
 	  // TODO: fix this error
