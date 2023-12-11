@@ -216,6 +216,7 @@ export default class Toolbar {
       this.hideAllSubMenu();
       this.drawSubMenus(name);
       this.subMenus[name].style.display = 'block';
+      Event.emit('toolbar', 'show', name);
       return;
     }
     if (this.subMenus[name].style.display === 'none') {
@@ -223,6 +224,7 @@ export default class Toolbar {
       this.hideAllSubMenu();
       this.subMenus[name].style.display = 'block';
       this.setSubMenuPosition(this.menus.hooks[name], this.subMenus[name]);
+      Event.emit('toolbar', 'show', name);
     } else {
       // 如果是显示的，则隐藏当前二级菜单
       this.subMenus[name].style.display = 'none';

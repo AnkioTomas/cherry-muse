@@ -161,4 +161,8 @@ export default {
   highlight: '高亮',
   footNoteTitle: '脚注标题',
   footNoteText: '脚注内容',
+  wordCount: '字数',
+  wordParagraphs: '段落',
+  wordWords: '字数',
+  wordCharacters: '字符',
 };

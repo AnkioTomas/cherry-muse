@@ -270,6 +270,7 @@ const defaultConfig = {
       'graph',
       'echarts',
       'card',
+      'wordCount',
       'togglePreview',
 
       'redo',
