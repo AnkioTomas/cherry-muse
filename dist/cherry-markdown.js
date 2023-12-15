@@ -47277,7 +47277,7 @@
 	  /**
 	   * 用来存放所有的数据
 	   */
-	  function TableHandler(trigger, target, container, previewerDom, codeMirror) {
+	  function TableHandler(trigger, target, container, previewerDom, codeMirror, tableElement) {
 	    _classCallCheck(this, TableHandler);
 
 	    _defineProperty$1(this, "tableEditor", {
@@ -47297,6 +47297,7 @@
 	    this.codeMirror = codeMirror;
 	    this.$initReg();
 	    this.$findTableInEditor();
+	    this.tableElement = tableElement;
 	  }
 
 	  _createClass(TableHandler, [{
@@ -47319,7 +47320,8 @@
 	          return this.$refreshPosition();
 
 	        case 'mousedown':
-	          return this.trigger !== 'click' && this.$drawDrag();
+	          // return this.trigger !== 'click' && this.$drawDrag();
+	          return;
 
 	        case 'mouseup':
 	          return this.trigger === 'click' && this.$tryRemoveMe(event, callback);
@@ -50963,7 +50965,7 @@
 	        return false;
 	      }
 
-	      return true;
+	      return container;
 	    }
 	    /**
 	     * 是否开启了预览区操作 && 是否有编辑区
@@ -51002,7 +51004,7 @@
 	            return;
 	          }
 
-	          if (!this.isCherryTable(e.target)) {
+	          if (false === this.isCherryTable(e.target)) {
 	            return;
 	          }
 
@@ -51138,7 +51140,9 @@
 	        case 'TD':
 	        case 'TH':
 	          if (target instanceof HTMLElement) {
-	            if (!this.isCherryTable(target)) {
+	            var table = this.isCherryTable(target);
+
+	            if (false === table) {
 	              return;
 	            }
 
@@ -51253,9 +51257,17 @@
 
 	  }, {
 	    key: "$showTablePreviewerBubbles",
-	    value: function $showTablePreviewerBubbles(trigger, htmlElement) {
+	    value: function $showTablePreviewerBubbles(trigger, htmlElement, tableElement) {
+	      if (this.bubbleHandler[trigger]) {
+	        if (this.bubbleHandler[trigger].tableElement === tableElement) {
+	          // 已经存在相同的target，直接返回
+	          this.bubbleHandler[trigger].showBubble();
+	          return;
+	        }
+	      }
+
 	      this.$createPreviewerBubbles(trigger, trigger === 'click' ? 'table-content-handler' : 'table-hover-handler');
-	      var handler = new TableHandler(trigger, htmlElement, this.bubble[trigger], this.previewerDom, this.editor.editor);
+	      var handler = new TableHandler(trigger, htmlElement, this.bubble[trigger], this.previewerDom, this.editor.editor, tableElement);
 	      handler.showBubble();
 	      this.bubbleHandler[trigger] = handler;
 	    }
@@ -60898,7 +60910,7 @@
 	  });
 	}
 
-	var VERSION = "0.8.29-1af529a6";
+	var VERSION = "0.8.29-26851146";
 	var CherryStatic = /*#__PURE__*/function () {
 	  // for type check only
 	  // TODO: fix this error
