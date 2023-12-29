@@ -1990,8 +1990,6 @@ div[data-type=codeBlock] .token.inserted {
 .cherry-toc a {
   text-decoration: none;
   color: #3B71CA;
-  width: 100%;
-  display: block;
 }
 .cherry-toc a:hover {
   color: hsl(213deg, 69%, 62%);

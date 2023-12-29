@@ -41780,198 +41780,37 @@
 	var escapeRegExp_1 = escapeRegExp;
 
 	/**
+	 * Tencent is pleased to support the open source community by making CherryMarkdown available.
+	 *
+	 * Copyright (C) 2021 THL A29 Limited, a Tencent company. All rights reserved.
+	 * The below software in this distribution may have been modified by THL A29 Limited ("Tencent Modifications").
+	 *
+	 * All Tencent Modifications are Copyright (C) THL A29 Limited.
+	 *
+	 * CherryMarkdown is licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 *     http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 */
+	/**
 	 *
 	 * @param {Suggester} suggester
 	 * @returns
 	 * */
 
 	var systemSuggests = [{
-	  keyword: ':：；;',
+	  keyword: ':',
 	  data: function data(keywords, callback, $cherry, key) {
 	    // 面板语法提示
-	    getSuggestList(expandList($cherry, [{
-	      toolbar: 'panel',
-	      keyword: 'panel',
-	      goLeft: 4
-	    }]), key, keywords, function (res) {
-	      var ret = [];
-
-	      if (res) {
-	        ret = concat$1(ret).call(ret, res);
-	      }
-
-	      ret = concat$1(ret).call(ret, fuzzySearchKeysWithValues(keywords, $cherry.options.engine.syntax.emoji));
-	      callback(ret);
-	    });
+	    callback(fuzzySearchKeysWithValues(keywords, $cherry.options.engine.syntax.emoji));
 	  }
-	}, {
-	  keyword: '￥$',
-	  // 公式语法提示
-	  data: [{
-	    key: 'latexFormulaInline',
-	    keyword: '',
-	    icon: 'function',
-	    value: "$x^2$",
-	    goLeft: 1
-	  }, {
-	    key: 'latexFormula',
-	    keyword: '$$',
-	    icon: 'function',
-	    value: "\n$$\nx^2\n$$\n",
-	    goLeft: 4
-	  }]
-	}, {
-	  keyword: '<《【{[『「',
-	  // 括号、脚注、链接、徽章
-	  data: [{
-	    toolbar: 'link',
-	    keyword: 'link'
-	  }, {
-	    icon: 'edit_note',
-	    key: 'footNoteTitle',
-	    keyword: '……^',
-	    value: "[^\u811A\u6CE8\u6807\u9898]"
-	  }, {
-	    icon: 'text_snippet',
-	    key: 'footNoteText',
-	    keyword: '……^',
-	    value: "[^\u811A\u6CE8\u6807\u9898]: \u811A\u6CE8\u5185\u5BB9"
-	  }, {
-	    toolbar: 'badge',
-	    keyword: 'badge'
-	  }]
-	}, {
-	  keyword: '>》',
-	  // 引用
-	  data: [{
-	    toolbar: 'quote',
-	    keyword: '',
-	    goLeft: 1
-	  }]
-	}, {
-	  keyword: '+',
-	  // 引用
-	  data: [{
-	    icon: 'more_horiz',
-	    key: 'detailOpen',
-	    keyword: '+',
-	    value: "++ \u6807\u9898\n\u5185\u5BB9\n+++\n"
-	  }, {
-	    icon: 'more_horiz',
-	    key: 'detailClose',
-	    keyword: '-',
-	    value: "++- \u6807\u9898\n\u5185\u5BB9\n+++\n"
-	  }]
-	}, {
-	  keyword: '#',
-	  // 标题
-	  data: [{
-	    toolbar: 'header',
-	    keyword: ''
-	  }]
-	}, {
-	  keyword: '*/',
-	  // 加粗、下划线、删除线
-	  data: [{
-	    toolbar: 'bold',
-	    keyword: ''
-	  }, {
-	    toolbar: 'italic',
-	    keyword: ''
-	  }, {
-	    toolbar: 'underline'
-	  }]
-	}, {
-	  keyword: '-=',
-	  // 高亮、checklist、列表、删除线、下划线
-	  data: [{
-	    icon: 'highlight',
-	    key: 'highlight',
-	    keyword: '==',
-	    value: "====",
-	    goLeft: 2
-	  }, {
-	    toolbar: 'checklist',
-	    keyword: '[',
-	    goLeft: 3
-	  }, {
-	    toolbar: 'ol',
-	    keyword: '['
-	  }, {
-	    toolbar: 'ul',
-	    keyword: '['
-	  }, {
-	    toolbar: 'strikethrough',
-	    keyword: '-'
-	  }, {
-	    toolbar: 'underline',
-	    keyword: '-'
-	  }]
-	}, {
-	  keyword: "|",
-	  // 各种表格
-	  data: [{
-	    toolbar: 'table'
-	  }, {
-	    toolbar: 'lineTable',
-	    keyword: 'line'
-	  }, {
-	    toolbar: 'barTable',
-	    keyword: 'bar'
-	  }]
-	}, {
-	  keyword: "!\uFF01",
-	  // 各种文件
-	  data: [{
-	    icon: 'image',
-	    key: 'image',
-	    keyword: '[',
-	    value: "![\u63CF\u8FF0#center](\u94FE\u63A5)",
-	    goLeft: 1
-	  }, {
-	    icon: 'videocam',
-	    key: 'video',
-	    keyword: 'video',
-	    value: "!video[\u63CF\u8FF0](\u94FE\u63A5)",
-	    goLeft: 1
-	  }, {
-	    icon: 'mic',
-	    key: 'audio',
-	    keyword: 'audio',
-	    value: "!audio[\u63CF\u8FF0](\u94FE\u63A5)",
-	    goLeft: 1
-	  }, {
-	    icon: 'attach_file',
-	    key: 'file',
-	    keyword: 'file',
-	    value: "!file[\u540D\u79F0|\u62D3\u5C55\u540D|\u5BC6\u7801](\u94FE\u63A5)",
-	    goLeft: 1
-	  }]
-	}, {
-	  keyword: '\'"`·',
-	  // 代码相关
-	  data: [{
-	    icon: 'code',
-	    key: 'codeBlock',
-	    keyword: '``',
-	    value: "```\n\n```\n",
-	    goLeft: 4
-	  }, {
-	    key: 'code',
-	    icon: 'code',
-	    keyword: '`',
-	    value: "``",
-	    goLeft: 1
-	  }, {
-	    toolbar: 'echarts',
-	    keyword: '```echarts'
-	  }, {
-	    toolbar: 'graph',
-	    keyword: '```mermaid'
-	  }, {
-	    toolbar: 'card',
-	    keyword: '```card'
-	  }]
 	}];
 
 	// handling this'.
@@ -60910,7 +60749,7 @@
 	  });
 	}
 
-	var VERSION = "0.8.29-26851146";
+	var VERSION = "0.8.29-b1b13aee";
 	var CherryStatic = /*#__PURE__*/function () {
 	  // for type check only
 	  // TODO: fix this error
