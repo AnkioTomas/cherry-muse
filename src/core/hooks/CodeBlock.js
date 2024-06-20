@@ -171,15 +171,20 @@ export default class CodeBlock extends ParagraphBase {
       // 平台自定义代码块样式
       cacheCode = this.customHighlighter(cacheCode, lang);
     } else {
-      Prism.plugins.autoloader.loadLanguages(
-        [lang],
-        function () {
-          that.$highlightCodeBlock($code, lang, `.code-${sign}`);
-        },
-        function () {
-          that.$highlightCodeBlock($code, 'text', `.code-${sign}`);
-        },
-      );
+      if (Prism.languages[lang]) {
+        cacheCode = Prism.highlight(cacheCode, Prism.languages[lang], lang);
+        cacheCode = this.renderLineNumber(cacheCode);
+      } else {
+        Prism.plugins.autoloader.loadLanguages(
+          [lang],
+          function () {
+            that.$highlightCodeBlock($code, lang, `.code-${sign}`);
+          },
+          function () {
+            that.$highlightCodeBlock($code, 'text', `.code-${sign}`);
+          },
+        );
+      }
     }
     cacheCode = `<div
         data-sign="${sign}"
@@ -187,8 +192,8 @@ export default class CodeBlock extends ParagraphBase {
         data-lines="${lines}" 
         data-edit-code="${this.editCode}" 
         data-copy-code="${this.copyCode}"
-     
         data-lang="${$lang}"
+        class="code-container-${sign}"
       >
       <pre class="language-${lang} code-${sign}">${this.wrapCode(cacheCode, lang)}</pre>
     </div>`;
@@ -202,7 +207,6 @@ export default class CodeBlock extends ParagraphBase {
     cacheCode = this.wrapCode(cacheCode, language);
     // 查找指定id
     document.querySelectorAll(clazz).forEach((codeBlock) => {
-      console.log(codeBlock);
       codeBlock.innerHTML = cacheCode;
     });
   }
