@@ -1,5 +1,5 @@
 @import './variable.scss';
-
+@import "core/CodeBlock";
 .cherry-markdown {
   word-break: break-all;
   h1,
@@ -232,57 +232,7 @@
   // 适配历史文章样式
   @import 'prettyprint/prettyprint.scss';
 
-  div[data-type='codeBlock'] {
-    display: inline-block;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 2px;
-    margin-bottom: 16px;
-    font-size: 14px;
-    overflow-x: auto;
 
-    & > pre {
-      margin: 0;
-      code[class*='language-'] {
-        counter-reset: line;
-        &.wrap {
-          white-space: pre-wrap;
-        }
-        .code-line {
-          display: inline-block;
-          position: relative;
-          padding-left: 3em;
-          height: 1.3em;
-          line-height: 2em;
-          &:before {
-            counter-increment: line;
-            content: counter(line);
-            margin-right: 1em;
-            position: absolute;
-            left: 0;
-          }
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-
-  /* Inline code */
-  :not(pre) > code {
-    margin: 0 4px;
-    padding: 2px 6px;
-    border-radius: 6px;
-    white-space: normal;
-    color: $primary;
-    background-color: $primary-very-light;
-
-    [data-inline-code-theme='black'] & {
-      color: $dark;
-      background-color: $dark-very-light;
-    }
-  }
 
   a.anchor:before {
     content: ''; // §
@@ -456,14 +406,7 @@
   }
 }
 
-div[data-type='codeBlock'] {
-  @import 'prism/dark';
 
-  [data-code-block-theme='light'] & {
-    @import 'prism/light';
-  }
-
-}
 
 .cherry-detail {
   details {

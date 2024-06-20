@@ -1,0 +1,47 @@
+@import '../variable.scss';
+
+.cherry-markdown{
+  div[data-type='codeBlock'] {
+    @import '../prism/dark';
+
+    [data-code-block-theme='light'] & {
+      @import '../prism/light';
+    }
+  }
+  div[data-type='codeBlock'] {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    overflow-x: auto;
+
+    & > pre {
+      margin: 0;
+      code[class*='language-'] {
+        counter-reset: line;
+        &.wrap {
+          white-space: pre-wrap;
+        }
+        .code-line {
+          display: inline-block;
+          position: relative;
+          padding-left: 3em;
+          height: 1.3em;
+          line-height: 2em;
+          &:before {
+            counter-increment: line;
+            content: counter(line);
+            margin-right: 1em;
+            position: absolute;
+            left: 0;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
