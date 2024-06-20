@@ -39,6 +39,9 @@ export default class CodeBlock extends ParagraphBase {
     this.lineNumber = config.lineNumber; // 是否显示行号
     this.copyCode = config.copyCode; // 是否显示“复制”按钮
     this.editCode = config.editCode; // 是否显示“编辑”按钮
+ 
+    this.selfClosing = config.selfClosing; // 自动闭合，为true时，当md中有奇数个```时，会自动在md末尾追加一个```
+    
     this.indentedCodeBlock = typeof config.indentedCodeBlock === 'undefined' ? true : config.indentedCodeBlock; // 是否支持缩进代码块
     this.INLINE_CODE_REGEX = /(`+)(.+?(?:\n.+?)*?)\1/g;
     if (config && config.customRenderer) {
@@ -240,8 +243,39 @@ export default class CodeBlock extends ParagraphBase {
     });
   }
 
+  $dealUnclosingCode(str) {
+    const codes = str.match(/(?:^|\n)(\n*((?:>[\t ]*)*)(?:[^\S\n]*))(`{3,})([^`]*?)(?=$|\n)/g);
+    if (!codes || codes.length <= 0) {
+      return str;
+    }
+    // 剔除异常的数据
+    let codeBegin = false;
+    const $codes = codes.filter((value) => {
+      if (codeBegin === false) {
+        codeBegin = true;
+        return true;
+      }
+      if (/```[^`\s]+/.test(value)) {
+        return false;
+      }
+      codeBegin = false;
+      return true;
+    });
+    // 如果有奇数个代码块关键字，则进行自动闭合
+    if ($codes.length % 2 === 1) {
+      const lastCode = $codes[$codes.length - 1].replace(/(`)[^`]+$/, '$1').replace(/\n+/, '');
+      const $str = str.replace(/\n+$/, '').replace(/\n`{1,2}$/, '');
+      return `${$str}\n${lastCode}\n`;
+    }
+    return str;
+  }
+
   beforeMakeHtml(str, sentenceMakeFunc, markdownParams) {
     let $str = str;
+
+    if (this.selfClosing || this.$engine.$cherry.options.engine.global.flowSessionContext) {
+      $str = this.$dealUnclosingCode($str);
+    }
 
     // 预处理缩进代码块
     $str = this.$replaceCodeInIndent($str);

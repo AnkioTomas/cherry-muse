@@ -24,13 +24,18 @@ export default new (class Event {
    * @property
    */
   Events = {
-    previewerClose: 'previewer:close',
-    previewerOpen: 'previewer:open',
-    editorClose: 'editor:close',
-    editorOpen: 'editor:open',
-    toolbarHide: 'toolbar:hide',
-    toolbarShow: 'toolbar:show',
+    previewerClose: 'previewerClose',
+    previewerOpen: 'previewerOpen',
+    editorClose: 'editorClose',
+    editorOpen: 'editorOpen',
+    toolbarHide: 'toolbarHide',
+    toolbarShow: 'toolbarShow',
     cleanAllSubMenus: 'cleanAllSubMenus', // 清除所有子菜单弹窗
+    afterChange: 'afterChange', // 编辑器内容变化
+    afterInit: 'afterInit', // 编辑器初始化完成
+    focus: 'focus', // 焦点
+    blur: 'blur', // 失焦
+    selectionChange: 'selectionChange', // 选区内容改变时触发
   };
 
   /**

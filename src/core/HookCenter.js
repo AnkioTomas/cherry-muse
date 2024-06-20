@@ -18,6 +18,14 @@ import ParagraphBase from './ParagraphBase';
 import { $expectTarget } from '@/utils/error';
 import Logger from '@/Logger';
 
+/**
+ * @typedef {import('~types/cherry').CherryOptions} CherryOptions
+ * @typedef {import('~types/cherry').CherryEngineOptions} CherryEngineOptions
+ * @typedef {import('~types/cherry').CustomSyntaxRegConfig} CustomSyntaxRegConfig
+ * @typedef { (SyntaxBase | ParagraphBase) & { Cherry$$CUSTOM: true } } CustomSyntax
+ * @typedef { (typeof SyntaxBase | typeof ParagraphBase) & { Cherry$$CUSTOM: true } } CustomSyntaxClass
+ */
+
 const WARN_DUPLICATED = -1;
 const WARN_NOT_A_VALID_HOOK = -2;
 
@@ -100,6 +108,7 @@ export default class HookCenter {
    */
   constructor(hooksConfig, editorConfig, cherry) {
     this.$locale = cherry.locale;
+    this.$cherry = cherry;
     /**
      * @property
      * @type {Record<import('./SyntaxBase').HookType, SyntaxBase[]>} hookList hook 名称 -> hook 类型的映射
@@ -201,6 +210,7 @@ export default class HookCenter {
     // filter Configs Here
     const { externals, engine } = editorConfig;
     const { syntax } = engine;
+    const { $cherry } = this;
 
     /** @type {SyntaxBase | CustomSyntax} */
     let instance;
@@ -225,7 +235,7 @@ export default class HookCenter {
       hookName = HookClass.HOOK_NAME;
       // TODO: 需要考虑自定义 hook 配置的传入方式
       const config = syntax?.[hookName] || {};
-      instance = new HookClass({ externals, config, globalConfig: engine.global });
+      instance = new HookClass({ externals, config, globalConfig: engine.global, cherry: $cherry });
       instance.afterInit(() => {
         instance.setLocale(this.$locale);
       });

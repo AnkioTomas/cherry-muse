@@ -98,6 +98,7 @@ export default class Cherry extends CherryStatic {
       if (!this.options.forceAppend) {
         return false;
       }
+      this.noMountEl = true;
       mountEl = document.createElement('div');
       mountEl.id = this.options.id || 'cherry-markdown';
       document.body.appendChild(mountEl);
@@ -117,10 +118,12 @@ export default class Cherry extends CherryStatic {
     // 创建预览区
     const previewer = this.createPreviewer();
 
-    if (this.options.toolbars.toolbar === false) {
+    if (this.options.toolbars.showToolbar === false || this.options.toolbars.toolbar === false) {
       // 即便配置了不展示工具栏，也要让工具栏加载对应的语法hook
       wrapperDom.classList.add('cherry--no-toolbar');
-      this.options.toolbars.toolbar = this.defaultToolbar;
+      this.options.toolbars.toolbar = this.options.toolbars.toolbar
+        ? this.options.toolbars.toolbar
+        : this.defaultToolbar;
     }
     $expectTarget(this.options.toolbars.toolbar, Array);
     // 创建顶部工具栏
@@ -175,8 +178,14 @@ export default class Cherry extends CherryStatic {
     });
 
     // 切换模式，有纯预览模式、纯编辑模式、双栏编辑模式
-    this.switchModel(this.options.editor.defaultModel);
+    this.switchModel(this.options.editor.defaultModel, this.options.toolbars.showToolbar);
 
+    // 如果配置了初始化后根据hash自动滚动
+    if (this.options.autoScrollByHashAfterInit) {
+      setTimeout(this.scrollByHash.bind(this));
+    }
+    // 强制进行一次渲染
+    this.editText(null, this.editor.editor);
     Theme.init(this);
   }
 
@@ -195,37 +204,81 @@ export default class Cherry extends CherryStatic {
         customMenu: this.options.toolbars.customMenu,
         engine: this.engine,
       });
-      this.toolbar.collectMenuInfo(this.bubble);
     }
+  }
+
+  /**
+   * 滚动到hash位置，实际上就是通过修改location.hash来触发hashChange事件，剩下的就交给浏览器了
+   */
+  scrollByHash() {
+    if (location.hash) {
+      try {
+        const { hash } = location;
+        // 检查是否有对应id的元素
+        const testDom = document.getElementById(hash.replace('#', ''));
+        if (testDom && this.previewer.getDomContainer().contains(testDom)) {
+          location.hash = '';
+          location.hash = hash;
+        }
+      } catch (error) {
+        // empty
+      }
+    }
+  }
+
+  $t(str) {
+    return this.locale[str] ? this.locale[str] : str;
+  }
+
+  addLocale(key, value) {
+    this.locale[key] = value;
+  }
+
+  addLocales(locales) {
+    this.locale = Object.assign(this.locale, locales);
+  }
+
+  getLocales() {
+    return this.locale;
   }
   /**
    * 切换编辑模式
    * @param {'edit&preview'|'editOnly'|'previewOnly'} [model=edit&preview] 模式类型
    * 一般纯预览模式和纯编辑模式适合在屏幕较小的终端使用，比如手机移动端
    */
-  switchModel(model = 'edit&preview') {
-    this.model = model;
+  switchModel(model = 'edit&preview', showToolbar = true) {
     switch (model) {
       case 'edit&preview':
         if (this.previewer) {
           this.previewer.editOnly(true);
           this.previewer.recoverPreviewer();
         }
-        if (this.toolbar) {
+        if (this.toolbar && showToolbar) {
           this.toolbar.showToolbar();
+        }
+        if (showToolbar) {
+          this.wrapperDom.classList.remove('cherry--no-toolbar');
+        } else {
+          this.wrapperDom.classList.add('cherry--no-toolbar');
         }
         break;
       case 'editOnly':
         if (!this.previewer.isPreviewerHidden()) {
           this.previewer.editOnly(true);
         }
-        if (this.toolbar) {
+        if (this.toolbar && showToolbar) {
           this.toolbar.showToolbar();
+        }
+        if (showToolbar) {
+          this.wrapperDom.classList.remove('cherry--no-toolbar');
+        } else {
+          this.wrapperDom.classList.add('cherry--no-toolbar');
         }
         break;
       case 'previewOnly':
         this.previewer.previewOnly();
         this.toolbar && this.toolbar.previewOnly();
+        this.wrapperDom.classList.add('cherry--no-toolbar');
         break;
     }
   }
@@ -297,12 +350,12 @@ export default class Cherry extends CherryStatic {
    * @returns {HeaderList} 标题head数组
    */
   getToc() {
-    const str = this.engine.makeHtml(this.getValue());
+    const str = this.getHtml();
     /** @type {({level: number;id: string;text: string})[]} */
     const headerList = [];
     const headerRegex = /<h([1-6]).*?id="([^"]+?)".*?>(.+?)<\/h[0-6]>/g;
     str.replace(headerRegex, (match, level, id, text) => {
-      headerList.push({ level: +level, id, text });
+      headerList.push({ level: +level, id, text: text.replace(/<a .+?<\/a>/, '') });
       return match;
     });
     return headerList;
@@ -314,6 +367,7 @@ export default class Cherry extends CherryStatic {
    * @param {boolean} keepCursor 是否保持光标位置
    */
   setValue(content, keepCursor = false) {
+    this.editor.storeDocumentScroll();
     if (keepCursor === false) {
       return this.editor.editor.setValue(content);
     }
@@ -324,6 +378,7 @@ export default class Cherry extends CherryStatic {
     codemirror.setValue(content);
     const cursor = codemirror.getDoc().posFromIndex(newPos);
     codemirror.setCursor(cursor);
+    this.editor.dealSpecialWords();
   }
 
   /**
@@ -394,16 +449,54 @@ export default class Cherry extends CherryStatic {
    * @returns {Toolbar}
    */
   createToolbar() {
-    const dom = createElement('div', 'cherry-toolbar');
-    this.toolbarContainer = dom;
+    if (!this.toolbarContainer) {
+      const dom = createElement('div', 'cherry-toolbar');
+      this.toolbarContainer = dom;
+    }
     this.toolbar = new Toolbar({
-      dom,
+      dom: this.toolbarContainer,
       $cherry: this,
       buttonConfig: this.options.toolbars.toolbar,
       customMenu: this.options.toolbars.customMenu,
       shortcutKey: this.options.toolbars.shortcutKey,
     });
     return this.toolbar;
+  }
+
+  /**
+   * 动态重置工具栏配置
+   * @public
+   * @param {'toolbar'|'toolbarRight'|'sidebar'|'bubble'|'float'} [type] 修改工具栏的类型
+   * @param {Array} [toolbar] 要重置的对应工具栏配置
+   * @returns {Boolean}
+   */
+  resetToolbar(type, toolbar) {
+    const $type = /(toolbar|toolbarRight|sidebar|bubble|float)/.test(type) ? type : false;
+    if ($type === false) {
+      return false;
+    }
+    if (this.toolbarContainer) {
+      this.toolbarContainer.innerHTML = '';
+    }
+    if (this.toolbarFloatContainer) {
+      this.toolbarFloatContainer.innerHTML = '';
+    }
+    if (this.toolbarBubbleContainer) {
+      this.toolbarBubbleContainer.innerHTML = '';
+    }
+    if (this.sidebarDom) {
+      this.sidebarDom.innerHTML = '';
+    }
+    this.cherryDom.querySelectorAll('.cherry-dropdown').forEach((item) => {
+      item.remove();
+    });
+    this.options.toolbars[type] = toolbar;
+    this.createToolbar();
+    this.createToolbarRight();
+    this.createBubble();
+    this.createFloatMenu();
+    this.createSidebar();
+    return true;
   }
 
   /**
@@ -521,18 +614,24 @@ export default class Cherry extends CherryStatic {
         clearTimeout(this.timer);
         this.timer = null;
       }
+      const interval = this.options.engine.global.flowSessionContext ? 10 : 50;
       this.timer = setTimeout(() => {
         const markdownText = codemirror.getValue();
-        const html = this.engine.makeHtml(markdownText);
-        this.previewer.update(html);
-        if (this.options.callback.afterChange) {
-          this.options.callback.afterChange(markdownText, html);
+        if (markdownText !== this.lastMarkdownText) {
+          this.lastMarkdownText = markdownText;
+          const html = this.engine.makeHtml(markdownText);
+          this.previewer.update(html);
+          Event.emit('afterChange', {
+            markdownText,
+            html,
+          });
         }
 
         Event.emit('editor', 'change', that);
         // 强制每次编辑（包括undo、redo）编辑器都会自动滚动到光标位置
         codemirror.scrollIntoView(null);
-      }, 50);
+        this.editor.restoreDocumentScroll();
+      }, interval);
     } catch (e) {
       throw new NestedError(e);
     }

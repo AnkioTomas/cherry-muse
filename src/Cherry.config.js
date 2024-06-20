@@ -56,6 +56,16 @@ const callbacks = {
   afterInit: (text, html) => {},
   beforeImageMounted: (srcProp, src) => ({ srcProp, src }),
   onClickPreview: (event) => {},
+  /**
+   * 粘贴时触发
+   * @param {ClipboardEvent['clipboardData']} clipboardData
+   * @returns
+   *    false: 走cherry粘贴的默认逻辑
+   *    string: 直接粘贴的内容
+   */
+  onPaste: (clipboardData) => {
+    return false;
+  },
   onCopyCode: (event, code) => {
     // 阻止默认的粘贴事件
     // return false;
@@ -102,6 +112,14 @@ const defaultConfig = {
        *    - 一般编辑权限可控的场景（如api文档系统）可以允许iframe、script等标签
        */
       htmlWhiteList: '',
+      /**
+       * 适配流式会话的场景，开启后将具备以下特性：
+       * 1. 代码块自动闭合，相当于强制 `engine.syntax.codeBlock.selfClosing=true`
+       * 2. 文章末尾的段横线标题语法（`\n-`）失效
+       *
+       * 后续如果有新的需求，可提issue反馈
+       */
+      flowSessionContext: true,
     },
     // 内置语法配置
     syntax: {
@@ -133,6 +151,7 @@ const defaultConfig = {
       },
       table: {
         enableChart: true,
+        selfClosing: false, // 自动闭合，为true时，当输入第一行table内容时，cherry会自动按表格进行解析
       },
       codeBlock: {
         wrap: true, // 超出长度是否换行，false则显示滚动条
@@ -171,6 +190,7 @@ const defaultConfig = {
          *           __hello__    ====>   <strong>hello</strong>
          */
         allowWhitespace: false,
+        selfClosing: false, // 自动闭合，为true时，当输入**XXX时，会自动在末尾追加**
       },
       strikethrough: {
         /**
@@ -198,6 +218,8 @@ const defaultConfig = {
       toc: {
         /** 默认只渲染一个目录 */
         allowMultiToc: false,
+        /** 是否显示自增序号 */
+        showAutoNumber: false,
       },
       header: {
         /**
@@ -229,6 +251,9 @@ const defaultConfig = {
       autofocus: true,
     },
     writingStyle: 'normal', // 书写风格，normal 普通 | typewriter 打字机 | focus 专注，默认normal
+    keepDocumentScrollAfterInit: false, // 在初始化后是否保持网页的滚动，true：保持滚动；false：网页自动滚动到cherry初始化的位置
+    showFullWidthMark: true, // 是否高亮全角符号 ·|￥|、|：|“|”|【|】|（|）|《|》
+    showSuggestList: true, // 是否显示联想框
   },
   toolbars: {
     theme: 'dark', // light or dark
@@ -309,6 +334,14 @@ const defaultConfig = {
     onCopyCode: callbacks.onCopyCode,
     // 把中文变成拼音的回调，当然也可以把中文变成英文、英文变成中文
     changeString2Pinyin: callbacks.changeString2Pinyin,
+    /**
+     * 粘贴时触发
+     * @param {ClipboardEvent['clipboardData']} clipboardData
+     * @returns
+     *    false: 走cherry粘贴的默认逻辑
+     *    string: 直接粘贴的内容
+     */
+    onPaste: callbacks.onPaste,
   },
   previewer: {
     dom: false,
@@ -357,6 +390,8 @@ const defaultConfig = {
   forceAppend: true,
   // The locale Cherry is going to use. Locales live in /src/locales/
   locale: 'zh_CN',
+  // cherry初始化后是否检查 location.hash 尝试滚动到对应位置
+  autoScrollByHashAfterInit: false,
 };
 if (window.outerWidth <= 600) {
   defaultConfig.toolbars.toolbar = ['tocList', 'togglePreview'];

@@ -115,6 +115,7 @@ export default class Color extends MenuBase {
 class BubbleColor {
   constructor($cherry) {
     this.editor = $cherry.editor;
+    this.$cherry = $cherry;
     this.init();
     this.initAction();
   }

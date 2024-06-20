@@ -17,14 +17,27 @@ import { isBrowser } from './env';
 import { PUNCTUATION } from './regexp';
 import { escapeHTMLSpecialChar } from './sanitize';
 
+/**
+ * 装饰器，挂载对应的模块到实例上
+ */
+export function LoadMathModule() {
+  if (!isBrowser()) {
+    return;
+  }
+  // @ts-ignore
+  this.katex = this.externals?.katex ?? window.katex;
+  // @ts-ignore
+  this.MathJax = this.externals?.MathJax ?? window.MathJax;
+}
+
 export const configureMathJax = (usePlugins) => {
   if (!isBrowser()) {
     console.log('mathjax disabled');
     return;
   }
   const plugins = usePlugins
-    ? ['input/asciimath', '[tex]/noerrors', '[tex]/cancel', '[tex]/color', '[tex]/boldsymbol']
-    : [];
+    ? ['input/asciimath', '[tex]/noerrors', '[tex]/cancel', '[tex]/color', '[tex]/boldsymbol', 'ui/safe']
+    : ['ui/safe'];
   // @ts-ignore
   window.MathJax = {
     startup: {

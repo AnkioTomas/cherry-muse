@@ -78,11 +78,11 @@ export default class Copy extends MenuBase {
   toggleLoading() {
     // 切换loading状态
     if (this.isLoading) {
-      const loadingButton = document.querySelector('.icon-loading');
-      loadingButton.outerHTML = `<i class="ch-icon ch-icon-copy" title="${this.locale.copy}"></i>`;
+      this.dom.lastElementChild.outerHTML = this.lastIconOuterHtml;
+      this.lastIconOuterHtml = '';
     } else {
-      const copyButton = document.querySelector('.ch-icon-copy');
-      copyButton.outerHTML = '<div class="icon-loading loading"></div>';
+      this.lastIconOuterHtml = this.dom.lastElementChild.outerHTML;
+      this.dom.lastElementChild.outerHTML = '<div class="icon-loading loading"></div>';
     }
     this.isLoading = !this.isLoading;
   }
@@ -103,9 +103,10 @@ export default class Copy extends MenuBase {
     // 将css样式以行内样式的形式插入到html内容里
     this.adaptWechat(html).then((html) => {
       copyToClip(
-        `<div data-inline-code-theme="${inlineCodeTheme}" data-code-block-theme="${codeBlockTheme}">
-            <div class="cherry-markdown">${html}</div>
-          </div>${mathStyle + echartStyle + cherryStyle}`,
+        `${mathStyle + echartStyle + cherryStyle}
+        <div data-inline-code-theme="${inlineCodeTheme}" data-code-block-theme="${codeBlockTheme}">
+          <div class="cherry-markdown">${html}</div>
+        </div>`,
       );
       this.toggleLoading();
     });
