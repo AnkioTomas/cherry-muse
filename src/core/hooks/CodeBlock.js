@@ -39,9 +39,10 @@ export default class CodeBlock extends ParagraphBase {
     this.lineNumber = config.lineNumber; // 是否显示行号
     this.copyCode = config.copyCode; // 是否显示“复制”按钮
     this.editCode = config.editCode; // 是否显示“编辑”按钮
- 
+    this.cdn = config.cdn; // 是否使用cdn
+    Prism.plugins.autoloader.languages_path = this.cdn;
     this.selfClosing = config.selfClosing; // 自动闭合，为true时，当md中有奇数个```时，会自动在md末尾追加一个```
-    
+
     this.indentedCodeBlock = typeof config.indentedCodeBlock === 'undefined' ? true : config.indentedCodeBlock; // 是否支持缩进代码块
     this.INLINE_CODE_REGEX = /(`+)(.+?(?:\n.+?)*?)\1/g;
     if (config && config.customRenderer) {
@@ -164,15 +165,21 @@ export default class CodeBlock extends ParagraphBase {
    */
   renderCodeBlock($code, $lang, sign, lines) {
     let cacheCode = $code;
-    let lang = $lang;
+    const lang = $lang;
+    const that = this;
     if (this.customHighlighter) {
       // 平台自定义代码块样式
       cacheCode = this.customHighlighter(cacheCode, lang);
     } else {
-      // 默认使用prism渲染代码块
-      if (!lang || !Prism.languages[lang]) lang = 'javascript'; // 如果没有写语言，默认用js样式渲染
-      cacheCode = Prism.highlight(cacheCode, Prism.languages[lang], lang);
-      cacheCode = this.renderLineNumber(cacheCode);
+      Prism.plugins.autoloader.loadLanguages(
+        [lang],
+        function () {
+          that.$highlightCodeBlock($code, lang, `.code-${sign}`);
+        },
+        function () {
+          that.$highlightCodeBlock($code, 'text', `.code-${sign}`);
+        },
+      );
     }
     cacheCode = `<div
         data-sign="${sign}"
@@ -183,9 +190,21 @@ export default class CodeBlock extends ParagraphBase {
      
         data-lang="${$lang}"
       >
-      <pre class="language-${lang}">${this.wrapCode(cacheCode, lang)}</pre>
+      <pre class="language-${lang} code-${sign}">${this.wrapCode(cacheCode, lang)}</pre>
     </div>`;
     return cacheCode;
+  }
+
+  $highlightCodeBlock(code, lang, clazz) {
+    const language = lang;
+    let cacheCode = Prism.highlight(code, Prism.languages[language], language);
+    cacheCode = this.renderLineNumber(cacheCode);
+    cacheCode = this.wrapCode(cacheCode, language);
+    // 查找指定id
+    document.querySelectorAll(clazz).forEach((codeBlock) => {
+      console.log(codeBlock);
+      codeBlock.innerHTML = cacheCode;
+    });
   }
 
   /**
