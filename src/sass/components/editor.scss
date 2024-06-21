@@ -26,6 +26,13 @@
       background-color: var(--item-hover-bg-color);
     }
 
+    .CodeMirror-vscrollbar {
+      scrollbar-color: var(--item-hover-bg-color) var(--bg-color); /* 滚动条和轨道颜色 */
+      &:hover{
+        scrollbar-color: var(--panel-border-color) var(--item-hover-bg-color); /* 滚动条和轨道颜色 */
+      }
+    }
+
     textarea {
       font-size: $lineHeight;
     }
@@ -42,6 +49,7 @@
 
   .CodeMirror-lines {
     padding: 0.9375rem 2.125rem  ;
+    width: 100%;
     .base64 {
       display: inline-block;
       overflow: hidden;
