@@ -36,6 +36,6 @@ let config2 = {
 window.cherry = new Cherry(config2);
 
 
-fetch('./markdown/basic.md').then((response) => response.text()).then((value) => {
+fetch('./markdown/theme.md').then((response) => response.text()).then((value) => {
   window.cherry.setMarkdown(value)
 });

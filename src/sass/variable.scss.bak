@@ -65,8 +65,7 @@ $linkHoverColor: $primary-light;
 $borderColor: $light-dark;
 $toolbarSplitColor: $light-dark;
 $fullWidthColor: $danger;
-$toolbarFontSize: 14px;
-$toolbarHeight: 48px;
+
 $elementGap: 16px;
 $elementLittleGap: 12px;
 $borderRadius: 3px;
@@ -129,3 +128,24 @@ $toolbarBtnBgHoverLight: $dark-very-light;
 $toolbarBtnHoverColorLight: $dark-light;
 $toolbarBtnDisabledLight: $dark-very-light;
 
+:root {
+  --bg-color:  #ffffff; /*change background*/
+  --text-color: #333333; /*change text color*/
+  --md-char-color: #C7C5C5; /*change color of meta characetrs like `*` in markdown */
+  --meta-content-color: #5b808d; /*change color of meta contents like image text or link address in markdown */
+
+  --primary-color: #428bca; /* color of primary buttons */
+  --primary-btn-border-color: #285e8e;
+  --primary-btn-text-color: #fff;
+
+  --window-border: 1px solid #eee; /*border for sidebar, etc*/
+
+  --active-file-bg-color: #eee; /*background color if list item in file tree or file list*/
+  --active-file-text-color: inherit;
+  --active-file-border-color: #777;
+
+  --side-bar-bg-color: var(--bg-color); /*change background of sidebar*/
+  --item-hover-bg-color: rgba(229, 229, 229, 0.59); /*background of control items when hover, like menu in sidebar*/
+  --item-hover-text-color: inherit;
+  --monospace: monospace; /*monospace font for codes, fences*/
+}

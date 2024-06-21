@@ -1,14 +1,15 @@
-@import '../variable.scss';
+/*
+@import '../variable';
 
-/** 色值可以参考：https://yeun.github.io/open-color/ */
+!** 色值可以参考：https://yeun.github.io/open-color/ *!
 
-/** 工具栏样式 */
+!** 工具栏样式 *!
 $toolbarBg: $dark-light;
 $toolbarBtnColor: $toolbarBtnColorDark;
 $toolbarBtnBgHover: $dark-dark;
 $toolbarBtnHoverColor: $light-light;
 $toolbarColorItemHoverBorderColor: $dark-dark;
-/** 编辑区域样式 */
+!** 编辑区域样式 *!
 $editorBg: $dark-light;
 $editorColor: $dark-very-light;
 $editorSelectedBg: $toolbarBtnBgHover;
@@ -16,10 +17,10 @@ $editorUrlBg:$primary-dark;
 $editorCursorColor: $light;
 $editorImportantColor: $light;
 $editorCodeColor:$light;
-/** 预览区域样式 */
+!** 预览区域样式 *!
 $previewBg: $dark-light;
 $previewMobileBgColor: $editorBg;
-/** markdown样式 */
+!** markdown样式 *!
 $mdColor: $editorColor;
 $mdHeaderColor: $editorImportantColor;
 $mdLineColor: $dark-dark;
@@ -31,7 +32,7 @@ $mdSvgTextColor: $light-dark;
 .theme__dark :root{
 
 }
-/** 编辑器样式 */
+!** 编辑器样式 *!
 .cherry.theme__dark {
   --mainBg:#{$mdLineColor};
   --textColor:#{$mdColor};
@@ -48,7 +49,7 @@ $mdSvgTextColor: $light-dark;
   .ace_button:hover {
     background-color: $toolbarBg;
   }
-  /** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 */
+  !** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 *!
   .cherry-toolbar, .cherry-floatmenu, .cherry-bubble{
     background: $toolbarBg;
     border-color: $toolbarBg;
@@ -65,7 +66,7 @@ $mdSvgTextColor: $light-dark;
     }
   }
 
-  /** 二级菜单 */
+  !** 二级菜单 *!
   .cherry-dropdown {
     background: $toolbarBg;
     .cherry-dropdown-item {
@@ -75,13 +76,13 @@ $mdSvgTextColor: $light-dark;
         color: $toolbarBtnHoverColor;
       }
     }
-    /** 选择颜色的按钮 */
+    !** 选择颜色的按钮 *!
     &.cherry-color-wrap {
-      /** 色盘的标题 */
+      !** 色盘的标题 *!
       h3 {
         color: $toolbarBtnColor;
       }
-      /** 色盘里的每一个色块 */
+      !** 色盘里的每一个色块 *!
       .cherry-color-item {
         // width: 15px;
         // border: none;
@@ -93,12 +94,12 @@ $mdSvgTextColor: $light-dark;
     }
   }
 
-  /** 选中文字时弹出的按钮 */
+  !** 选中文字时弹出的按钮 *!
   .cherry-bubble {
     .cherry-bubble-bottom {
       border-top-color: $toolbarBg;
     }
-    /** 粘贴HTML内容时弹出的选择按钮 */
+    !** 粘贴HTML内容时弹出的选择按钮 *!
     &.cherry-switch-paste {
       
     }
@@ -244,7 +245,7 @@ $mdSvgTextColor: $light-dark;
     color: $primary;
   }
 }
-/** 预览区域样式 */
+!** 预览区域样式 *!
 .cherry-markdown.theme__dark {
   color: $mdColor;
   background-color: $previewBg;
@@ -278,7 +279,7 @@ $mdSvgTextColor: $light-dark;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    /** 标题前面的锚点或序号 */
+    !** 标题前面的锚点或序号 *!
     .anchor {
 
     }
@@ -309,11 +310,11 @@ $mdSvgTextColor: $light-dark;
 
     }
 
-    /** checklist 模式，未勾选时 */
+    !** checklist 模式，未勾选时 *!
     .ch-icon-square {
 
     }
-    /** checklist 模式，勾选时 */
+    !** checklist 模式，勾选时 *!
     .ch-icon-check {
 
     }
@@ -374,16 +375,16 @@ $mdSvgTextColor: $light-dark;
 
   }
   
-  /** 行内代码 */
+  !** 行内代码 *!
   p code, li code {
     background-color: $mdInlineCodeBg;
     color: $mdInlineCodeColor;
     border: none;
   }
   
-  /** 
+  !**
   * 代码块
-  */
+  *!
   pre code {
 
   }
@@ -392,9 +393,9 @@ $mdSvgTextColor: $light-dark;
     background-color:$dark-dark
   }
 
-  /** 
+  !**
   * 表格
-  */
+  *!
   table, .cherry-table {
     color: $mdColor;
     th {
@@ -405,15 +406,15 @@ $mdSvgTextColor: $light-dark;
     }
   }
 
-  /** 可以理解为上下结构的音标，下部是文字，上部是对应的拼音 */
+  !** 可以理解为上下结构的音标，下部是文字，上部是对应的拼音 *!
   ruby {
-    /** 上部的拼音 */
+    !** 上部的拼音 *!
     rt {
 
     }
   }
   
-  /** 脚注 */
+  !** 脚注 *!
   .footnote {
     border-color: $mdLineColor;
     .footnote-title {
@@ -428,17 +429,17 @@ $mdSvgTextColor: $light-dark;
     }
   }
   
-  /** 行间公式 */
+  !** 行间公式 *!
   .Cherry-InlineMath {
     
   }
   
-  /** 段落公式 */
+  !** 段落公式 *!
   .Cherry-Math {
   
   }
 
-    /** 目录 */
+    !** 目录 *!
   .toc {
     border: 1px solid $mdLineColor;
     margin-top: 15px;
@@ -510,3 +511,4 @@ $mdSvgTextColor: $light-dark;
   }
 }
 
+*/

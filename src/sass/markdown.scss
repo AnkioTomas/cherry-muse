@@ -167,26 +167,7 @@
     color: $linkColor;
   }
 
-  a {
-    color: $linkColor;
-    position: relative;
-    text-decoration: none;
 
-    &[target='_blank'] {
-      padding: 0 2px;
-
-      &::after {
-        content: '';
-        font-size: 12px;
-        font-family: 'ch-icon';
-        margin: 0 2px;
-      }
-    }
-
-    &:hover {
-      color: $linkHoverColor;
-    }
-  }
 
   em {
     font-style: italic;
@@ -695,7 +676,7 @@
       .card-item {
         width: calc(100% / 3 - 1rem);
         margin: .5rem;
-        background: var(--mainBg);
+     /*   background: var(--mainBg);*/
         border: 1px solid rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
         border-radius: 3px;
@@ -872,3 +853,8 @@
 
 
 }
+
+.cherry-markdown{
+  background: var(--bg-color);
+}
+@import "core/AutoLink";

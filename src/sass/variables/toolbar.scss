@@ -1,0 +1,10 @@
+@use "colors" as *;
+$toolbarFontSize: 0.8rem;
+$toolbarHeight: 3rem;
+$toolbarShadow: 0;
+$toolbarBg: var(--bg-color);
+$toolbarBtnHover:var(--item-hover-text-color);
+$toolbarBtnBgHover:var(--item-hover-bg-color);
+$toolbarSplitColor:var(--item-hover-text-color);
+$toolbarBtnDisabled:var(--active-file-border-color);
+$toolbarBtn:var(--text-color);

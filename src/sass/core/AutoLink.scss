@@ -1,0 +1,29 @@
+.cherry-markdown{
+  a {
+    color: var(--primary-color);
+    position: relative;
+    text-decoration: none;
+
+    &[target='_blank'] {
+      padding: 0 2px;
+
+      &::after {
+        margin: 0 2px;
+      }
+    }
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+
+}
+
+.cherry-editor{
+  .cm-s-default{
+    .cm-link {
+      color: var(--primary-color);
+    }
+  }
+}

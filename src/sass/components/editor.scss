@@ -1,0 +1,101 @@
+@use "../variables/cherry" as *;
+.cherry-editor {
+  position: relative;
+  padding-top: 0.3125rem;
+  padding-right: 0.3125rem;
+  width: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border-right: 0.125rem solid #ebedee;
+
+  &.cherry-editor--full {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  &.cherry-editor--hidden {
+    display: none;
+  }
+
+  &-writing-style {
+    &--focus {
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        background: linear-gradient(to bottom, #00000006, #00000033);
+        pointer-events: none;
+        z-index: 11;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(to top, #00000006, #00000033);
+        pointer-events: none;
+        z-index: 11;
+      }
+    }
+
+    &--typewriter {
+      .CodeMirror-lines {
+        position: relative;
+
+        &::before {
+          content: '';
+          display: block;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+        }
+      }
+    }
+  }
+
+  .CodeMirror {
+    font-family: $fontFamily;
+    background: $editorBg;
+    color: $fontColor;
+
+    textarea {
+      font-size: $lineHeight;
+    }
+  }
+
+  .CodeMirror-lines {
+    padding: 0.9375rem 2.125rem;
+    .CodeMirror-code{
+      .CodeMirror-line{
+        padding: 0.5rem 0;
+      }
+
+    }
+    .drawio,
+    .base64 {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 5rem;
+      white-space: nowrap;
+      vertical-align: bottom;
+     // color: darkmagenta !important;
+      font-size: 0.75rem !important;
+    }
+  }
+
+
+  .CodeMirror pre {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+
+}

@@ -84,6 +84,15 @@ const callbacks = {
 };
 
 const defaultConfig = {
+  // 主题配置
+  themes: [
+    {
+      name: 'github',
+      dark: 'github-dark.css',
+      light: 'github-light.css',
+    },
+  ],
+  theme: 'github',
   // 第三方包
   externals: {
     // externals
@@ -394,7 +403,7 @@ const defaultConfig = {
   // The locale Cherry is going to use. Locales live in /src/locales/
   locale: 'zh_CN',
   // cherry初始化后是否检查 location.hash 尝试滚动到对应位置
-  autoScrollByHashAfterInit: false,
+  autoScrollByHashAfterInit: true,
 };
 if (window.outerWidth <= 600) {
   defaultConfig.toolbars.toolbar = ['tocList', 'togglePreview'];

@@ -1,0 +1,52 @@
+:root {
+  --bg-color:  #ffffff; /*change background*/
+  --text-color: #333333; /*change text color*/
+  --md-char-color: #C7C5C5; /*change color of meta characetrs like `*` in markdown */
+  --meta-content-color: #5b808d; /*change color of meta contents like image text or link address in markdown */
+
+  --primary-color: #428bca; /* color of primary buttons */
+  --primary-btn-border-color: #285e8e;
+  --primary-btn-text-color: #fff;
+
+
+  --active-file-bg-color: #eee; /*background color if list item in file tree or file list*/
+  --active-file-text-color: inherit;
+  --active-file-border-color: #777;
+
+  --side-bar-bg-color: var(--bg-color); /*change background of sidebar*/
+  --item-hover-bg-color: rgba(229, 229, 229, 0.59); /*background of control items when hover, like menu in sidebar*/
+  --item-hover-text-color: inherit;
+  --monospace: monospace; /*monospace font for codes, fences*/
+
+
+  --blur-text-color: #C8C8C8;
+
+  --drag-placeholder-color: #c7c5c5;
+  --panel-border-color: #777777;
+  --active-toggle-btn-color: #ddd;
+  --table-border-color: #ccc;
+
+
+
+  --search-select-bg-color: #000;
+  --search-select-text-color: #fff;
+
+  --heading-char-color: #ddd;
+  --color-popover-bg-color: #fafafa;
+
+  --control-text-color: var(--text-color);
+  --control-text-hover-color: var(--text-color);
+  --window-border: 1px solid #e9e9e9;
+
+
+  --focus-ring-color: #6eace2;
+
+
+
+  --side-bar-menu-active-tint: var(--side-bar-menu-active-tint);
+
+  --mac-title-bar-height: 20px;
+  --sidebar-width: 270px;
+
+  --rawblock-edit-panel-bd: #f5f6f7;
+}

@@ -1,0 +1,33 @@
+@use "../variables/toolbar" as *;
+.cherry{
+  .cherry-dropdown {
+    position: absolute;
+    width: 8.75rem;
+    min-height: 2.5rem;
+    background: $toolbarBg;
+    //border: 1px solid $borderColor;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+    margin-left: -3.75rem;
+    z-index: 11;
+
+    &-item {
+      width: 100%;
+      padding: 0 0.9375rem;
+      text-align: left;
+      display: inline-block;
+      height: 2.25rem;
+      line-height: 2.25rem;
+      font-size: 0.875rem;
+      font-style: normal;
+      cursor: pointer;
+      box-sizing: border-box;
+
+      &:hover {
+        background: $toolbarBtnBgHover;
+        color: $toolbarSplitColor;
+      }
+
+    }
+
+  }
+}

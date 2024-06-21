@@ -1,14 +1,15 @@
-@import '../variable.scss';
+/*
+@import '../variable';
 
-/** 色值可以参考：https://yeun.github.io/open-color/ */
+!** 色值可以参考：https://yeun.github.io/open-color/ *!
 
-/** 工具栏样式 */
+!** 工具栏样式 *!
 $toolbarBg: $toolbarBgLight;
 $toolbarBtnColor: $toolbarBtnColorLight;
 $toolbarBtnBgHover: $toolbarBtnBgHoverLight;
 $toolbarBtnHoverColor: $toolbarBtnHoverColorLight;
 $toolbarColorItemHoverBorderColor: $dark-light;
-/** 编辑区域样式 */
+!** 编辑区域样式 *!
 $editorBg: $light;
 $editorColor: $dark-light;
 $editorSelectedBg: $toolbarBtnBgHover;
@@ -16,10 +17,10 @@ $editorUrlBg: $primary-very-light;
 $editorCursorColor: $dark;
 $editorImportantColor: $primary;
 $editorCodeColor:$primary-light;
-/** 预览区域样式 */
+!** 预览区域样式 *!
 $previewBg: $light;
 $previewMobileBgColor: $editorBg;
-/** markdown样式 */
+!** markdown样式 *!
 $mdColor: $editorColor;
 $mdHeaderColor: $dark;
 $mdLineColor: $primary-light;
@@ -31,13 +32,13 @@ $mdBlockquoteBg:$light;
 .theme__light :root{
 
 }
-/** 编辑器样式 */
+!** 编辑器样式 *!
 .cherry.theme__light {
   --mainBg:#{$mdLineColor};
   --textColor:#{$mdColor};
   --borderColor:#{$mdLineColor};
   --bodyBg:#{$primary-very-light};
-  /** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 */
+  !** 顶部按钮, 选中文字时弹出的按钮, 光标focus到空行时联想出的按钮, 侧边栏按钮 *!
   .cherry-toolbar, .cherry-floatmenu, .cherry-bubble {
     background: $toolbarBg;
     border-color: $toolbarBg;
@@ -54,7 +55,7 @@ $mdBlockquoteBg:$light;
     }
   }
 
-  /** 二级菜单 */
+  !** 二级菜单 *!
   .cherry-dropdown {
     background: $toolbarBg;
     .cherry-dropdown-item {
@@ -64,13 +65,13 @@ $mdBlockquoteBg:$light;
         color: $toolbarBtnHoverColor;
       }
     }
-    /** 选择颜色的按钮 */
+    !** 选择颜色的按钮 *!
     &.cherry-color-wrap {
-      /** 色盘的标题 */
+      !** 色盘的标题 *!
       h3 {
         color: $toolbarBtnColor;
       }
-      /** 色盘里的每一个色块 */
+      !** 色盘里的每一个色块 *!
       .cherry-color-item {
         // width: 15px;
         // border: none;
@@ -82,12 +83,12 @@ $mdBlockquoteBg:$light;
     }
   }
 
-  /** 选中文字时弹出的按钮 */
+  !** 选中文字时弹出的按钮 *!
   .cherry-bubble {
     .cherry-bubble-bottom {
       border-top-color: $toolbarBg;
     }
-    /** 粘贴HTML内容时弹出的选择按钮 */
+    !** 粘贴HTML内容时弹出的选择按钮 *!
     &.cherry-switch-paste {
       
     }
@@ -139,7 +140,7 @@ $mdBlockquoteBg:$light;
   }
 
 }
-/** 预览区域样式 */
+!** 预览区域样式 *!
 .cherry-markdown.theme__light {
   color: $mdColor;
   background-color: $previewBg;
@@ -173,7 +174,7 @@ $mdBlockquoteBg:$light;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    /** 标题前面的锚点或序号 */
+    !** 标题前面的锚点或序号 *!
     .anchor {
 
     }
@@ -204,11 +205,11 @@ $mdBlockquoteBg:$light;
 
     }
 
-    /** checklist 模式，未勾选时 */
+    !** checklist 模式，未勾选时 *!
     .ch-icon-square {
 
     }
-    /** checklist 模式，勾选时 */
+    !** checklist 模式，勾选时 *!
     .ch-icon-check {
 
     }
@@ -272,23 +273,23 @@ $mdBlockquoteBg:$light;
 
   }
   
-  /** 行内代码 */
+  !** 行内代码 *!
   p code, li code {
     background-color: $mdInlineCodeBg;
     color: $mdInlineCodeColor;
     border: none;
   }
   
-  /** 
+  !**
   * 代码块
-  */
+  *!
   pre code {
     
   }
   
-  /** 
+  !**
   * 表格
-  */
+  *!
   table, .cherry-table {
     color: $mdColor;
     th {
@@ -299,15 +300,15 @@ $mdBlockquoteBg:$light;
     }
   }
 
-  /** 可以理解为上下结构的音标，下部是文字，上部是对应的拼音 */
+  !** 可以理解为上下结构的音标，下部是文字，上部是对应的拼音 *!
   ruby {
-    /** 上部的拼音 */
+    !** 上部的拼音 *!
     rt {
 
     }
   }
   
-  /** 脚注 */
+  !** 脚注 *!
   .footnote {
     border-color: $mdLineColor;
     .footnote-title {
@@ -322,17 +323,17 @@ $mdBlockquoteBg:$light;
     }
   }
   
-  /** 行间公式 */
+  !** 行间公式 *!
   .Cherry-InlineMath {
     
   }
   
-  /** 段落公式 */
+  !** 段落公式 *!
   .Cherry-Math {
   
   }
 
-    /** 目录 */
+    !** 目录 *!
   .toc {
     .toc-title {
     }
@@ -353,3 +354,4 @@ $mdBlockquoteBg:$light;
     }
   }
 }
+*/
