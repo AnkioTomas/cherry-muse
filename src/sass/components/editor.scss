@@ -27,9 +27,9 @@
     }
 
     .CodeMirror-vscrollbar {
-      scrollbar-color: var(--item-hover-bg-color) var(--bg-color); /* 滚动条和轨道颜色 */
+      scrollbar-color: var(--item-hover-bg-color) var(--bg-color);
       &:hover{
-        scrollbar-color: var(--panel-border-color) var(--item-hover-bg-color); /* 滚动条和轨道颜色 */
+        scrollbar-color: var(--panel-border-color) var(--bg-color);
       }
     }
 

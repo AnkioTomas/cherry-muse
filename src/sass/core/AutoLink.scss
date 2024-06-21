@@ -1,4 +1,4 @@
-.cherry-markdown{
+.cherry-previewer{
   a {
     color: var(--primary-color);
     position: relative;
@@ -16,14 +16,10 @@
       color: var(--primary-color);
     }
   }
-
-
-}
-
-.cherry-editor{
-  .cm-s-default{
-    .cm-link {
-      color: var(--primary-color);
-    }
+  .cm-link {
+    color: var(--primary-color);
   }
+
+
 }
+

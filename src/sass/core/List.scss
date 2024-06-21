@@ -1,0 +1,45 @@
+.cherry-previewer {
+  ul,
+  ol,
+  dl {
+    margin: 0.8em 0;
+  }
+
+  li {
+    ol, ul {
+      margin: 0 0;
+    }
+
+    p {
+      .first {
+        display: inline-block;
+      }
+
+      list-style: inherit;
+      margin: 0;
+    }
+  }
+
+  ul,
+  ol {
+    padding-left: 1.4rem;
+  }
+
+  ul:first-child,
+  ol:first-child {
+    margin-top: 0;
+  }
+
+  ul:last-child,
+  ol:last-child {
+    margin-bottom: 0;
+  }
+
+  div {
+    ul,
+    ol {
+      margin-bottom: 0;
+    }
+  }
+
+}

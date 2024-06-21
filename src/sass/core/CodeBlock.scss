@@ -1,20 +1,17 @@
-@import '../variable.scss';
 
-.cherry-markdown{
+
+.cherry-previewer{
   div[data-type='codeBlock'] {
-    @import '../prism/dark';
+    @import '../components/prism';
 
-    [data-code-block-theme='light'] & {
-      @import '../prism/light';
-    }
   }
   div[data-type='codeBlock'] {
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    border-radius: 2px;
-    margin-bottom: 16px;
-    font-size: 14px;
+    border-radius: 0.1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
     overflow-x: auto;
 
     & > pre {
@@ -43,5 +40,13 @@
         }
       }
     }
+  }
+
+  code {
+    border: var(--window-border);
+    background-color: var(--color-popover-bg-color);
+    border-radius: 3px;
+    padding: 0 2px 0 2px;
+    font-size: 0.9em;
   }
 }

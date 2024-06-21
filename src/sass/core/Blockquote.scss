@@ -1,0 +1,11 @@
+.cherry-previewer {
+  blockquote {
+    border-left: 0.3rem solid var(--blur-text-color);
+    padding: 0 1rem;
+    color: var(--active-file-border-color);
+    margin: 0 0 1.3rem;
+  }
+  blockquote blockquote {
+    padding-right: 0;
+  }
+}

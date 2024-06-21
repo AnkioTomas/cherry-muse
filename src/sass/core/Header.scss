@@ -1,0 +1,91 @@
+.cherry-previewer {
+  word-break: break-all;
+
+  $heading-font-weight: 700;
+  $heading-line-height: 1.1;
+  $heading-color: var(--text-color);
+  $small-font-weight: normal;
+  $small-line-height: 1;
+  $small-color: var(--active-file-border-color);
+  $heading-margins: 1.3rem;
+  $small-font-size-h1-h3: 65%;
+  $small-font-size-h4-h6: 75%;
+  $heading-sizes: (2.25em, 1.75em, 1.5em, 1.25em, 1.1em, 1em);
+  $small-margins: 0.8rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: inherit;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    color: $heading-color;
+    a{
+      color: $heading-color;
+    }
+    small,
+    .small {
+      font-weight: $small-font-weight;
+      line-height: $small-line-height;
+      color: $small-color;
+    }
+  }
+
+  h1,.h1{
+    line-height: 1.2;
+  }
+  h2,.h2{
+    line-height: 1.225;
+  }
+  h3,.h3{
+    line-height: 1.43;
+  }
+  h1,h2,.h1,.h2{
+    border-bottom: 1px solid var(--active-file-bg-color);
+  }
+  h1,
+  h2,
+  h3,
+  .h1,
+  .h2,
+  .h3 {
+    margin-top: $heading-margins;
+    margin-bottom: $heading-margins;
+
+    small,
+    .small {
+      font-size: $small-font-size-h1-h3;
+    }
+  }
+
+  h4,
+  h5,
+  h6,
+  .h4,
+  .h5,
+  .h6 {
+    margin-top: $small-margins;
+    margin-bottom: $small-margins;
+
+    small,
+    .small {
+      font-size: $small-font-size-h4-h6;
+    }
+  }
+
+  @each $size, $index in $heading-sizes {
+    h#{1 + $index - 1},
+    .h#{1 + $index - 1} {
+      font-size: $size;
+    }
+  }
+}

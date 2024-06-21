@@ -7,6 +7,7 @@
 @use "components/dropdown" as *;
 @use "components/codemirror" as *;
 @use  "components/editor" as *;
+@use "components/preview" as *;
 
 .cherry {
   display: flex;
