@@ -66,15 +66,17 @@
   .cm-s-default .cm-property {
     color: #D94F8A;
   }
-
+  .cm-s-default  .cm-header{
+    font-weight: bold;
+  }
   .cm-s-default  .cm-header-1{
     font-size: 2rem;
-    line-height: 2rem;
+    line-height: 3rem;
   }
 
   .cm-s-default  .cm-header-2{
     font-size: 1.4rem;
-    line-height: 1.4rem;
+    line-height: 2rem;
   }
 
   .cm-s-default .cm-atom,
@@ -366,7 +368,7 @@
     border-width: 0;
     background: transparent;
     font-family: inherit;
-    font-size: inherit;
+    font-size: 1rem;
     margin: 0;
     white-space: pre;
     word-wrap: normal;
