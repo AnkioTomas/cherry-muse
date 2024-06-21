@@ -428,6 +428,7 @@ export default class Editor {
       throw new Error('The specific element is not a textarea.');
     }
     const editor = codemirror.fromTextArea(textArea, this.options.codemirror);
+    //   editor.refresh();
     editor.addOverlay({
       name: 'invisibles',
       token: function nextToken(stream) {
@@ -473,6 +474,21 @@ export default class Editor {
         // 将codemirror里的内容回写到textarea里
         codemirror.save();
       }
+    });
+    let currentLine = null;
+    // 监听光标移动事件
+    editor.on('cursorActivity', function () {
+      // 获取当前光标位置的行号
+      const { line } = editor.getCursor();
+
+      // 移除之前高亮的行
+      if (currentLine !== null) {
+        editor.removeLineClass(currentLine, 'background', 'cm-cursor-line');
+      }
+
+      // 添加新高亮的行
+      currentLine = line;
+      editor.addLineClass(currentLine, 'background', 'cm-cursor-line');
     });
 
     editor.on('keydown', (codemirror, evt) => {

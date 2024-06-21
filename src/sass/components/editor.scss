@@ -18,67 +18,30 @@
     display: none;
   }
 
-  &-writing-style {
-    &--focus {
-      &::before {
-        content: '';
-        display: block;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        background: linear-gradient(to bottom, #00000006, #00000033);
-        pointer-events: none;
-        z-index: 11;
-      }
-
-      &::after {
-        content: '';
-        display: block;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        background: linear-gradient(to top, #00000006, #00000033);
-        pointer-events: none;
-        z-index: 11;
-      }
-    }
-
-    &--typewriter {
-      .CodeMirror-lines {
-        position: relative;
-
-        &::before {
-          content: '';
-          display: block;
-        }
-
-        &::after {
-          content: '';
-          display: block;
-        }
-      }
-    }
-  }
-
   .CodeMirror {
     font-family: $fontFamily;
     background: $editorBg;
     color: $fontColor;
+    .cm-cursor-line {
+      background-color: var(--item-hover-bg-color);
+    }
 
     textarea {
       font-size: $lineHeight;
     }
+
+    .CodeMirror-gutter-wrapper {
+      position: absolute;
+      left: -3rem!important;
+
+    }
+    .CodeMirror-sizer{
+      margin-left: 1rem!important;
+    }
   }
 
   .CodeMirror-lines {
-    padding: 0.9375rem 2.125rem;
-    .CodeMirror-code{
-      .CodeMirror-line{
-       // padding: 0.5rem 0;
-      }
-
-    }
-    .drawio,
+    padding: 0.9375rem 2.125rem  ;
     .base64 {
       display: inline-block;
       overflow: hidden;

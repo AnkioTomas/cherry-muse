@@ -13,6 +13,24 @@
       height: 100%;
       overflow: hidden;
     }
+    /* 基础字体大小 */
+    html {
+      font-size: 18px; /* 默认字体大小 */
+    }
+
+    /* 小屏幕设备 */
+    @media (max-width: 600px) {
+      html {
+        font-size: 20px; /* 小屏幕上字体更大 */
+      }
+    }
+
+    /* 大屏幕设备 */
+    @media (min-width: 1400px) {
+      html {
+        font-size: 16px; /* 大屏幕上字体适中 */
+      }
+    }
 
 
   </style>
