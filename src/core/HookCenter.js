@@ -243,10 +243,7 @@ export default class HookCenter {
       // 添加自定义语法高亮
       const overlayMode = instance.overlayMode();
       if (overlayMode !== null) {
-        // TODO
-
         editorConfig.editor.overlay.push(overlayMode);
-        console.log(editorConfig.editor.overlay);
       }
     }
     // TODO: 待校验是否需要跳过禁用的自定义 hook
