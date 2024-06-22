@@ -26,9 +26,9 @@ export default class Panel extends MenuBase {
     this.panelRule = getPanelRule().reg;
     this.subMenuConfig = [
       {
-        iconName: 'question_mark',
-        name: 'panelTip',
-        onclick: this.bindSubClick.bind(this, 'primary'),
+        iconName: 'notification_important',
+        name: 'panelImportant',
+        onclick: this.bindSubClick.bind(this, 'important'),
       },
       {
         iconName: 'info_i',
@@ -46,9 +46,9 @@ export default class Panel extends MenuBase {
         onclick: this.bindSubClick.bind(this, 'danger'),
       },
       {
-        iconName: 'done',
-        name: 'panelSuccess',
-        onclick: this.bindSubClick.bind(this, 'success'),
+        iconName: 'emoji_objects',
+        name: 'panelTip',
+        onclick: this.bindSubClick.bind(this, 'tip'),
       },
       {
         iconName: 'align_justify_flex_start',

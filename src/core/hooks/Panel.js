@@ -17,6 +17,7 @@ import ParagraphBase from '@/core/ParagraphBase';
 import { prependLineFeedForParagraph } from '@/utils/lineFeed';
 import { getPanelRule } from '@/utils/regexp';
 import { blockNames } from '@/utils/sanitize';
+
 /**
  * 面板语法
  * 例：
@@ -105,37 +106,63 @@ export default class Panel extends ParagraphBase {
 
   $getTargetType(name) {
     const $name = /\s/.test(name.trim()) ? name.trim().replace(/\s.*$/, '') : name;
-    switch ($name.trim().toLowerCase()) {
-      case 'primary':
-      case 'p':
-        return 'primary';
-      case 'info':
+    const $item = $name.trim().toLowerCase();
+    switch ($item) {
+      case 'im':
+        return 'important';
       case 'i':
         return 'info';
-      case 'warning':
       case 'w':
         return 'warning';
-      case 'danger':
       case 'd':
         return 'danger';
-      case 'success':
-      case 's':
-        return 'success';
-      case 'right':
+      case 'n':
+        return 'note';
       case 'r':
         return 'right';
-      case 'center':
       case 'c':
         return 'center';
-      case 'left':
       case 'l':
         return 'left';
       default:
-        return 'primary';
+        return $item;
     }
   }
 
   rule() {
     return getPanelRule();
+  }
+
+  overlayMode() {
+    return {
+      inContainer: false,
+      inType: false,
+      name: 'panel',
+      token(stream, state) {
+        // 检查行的开头是否有 ':::'
+        if (stream.sol() && stream.match(':::')) {
+          this.inContainer = stream.peek() !== null;
+          this.inType = false;
+          return 'panel-container';
+        }
+
+        const rule = /\s(important|info|warning|danger|note|center|left|right)/;
+
+        // 尝试匹配规则
+        if (this.inContainer && stream.match(rule)) {
+          this.inContainer = false;
+          this.inType = true;
+          return 'panel-type';
+        }
+        if (this.inType && stream.match(/\s.*$/)) {
+          this.inType = false;
+          return 'panel-title';
+        }
+        this.inType = false;
+        this.inContainer = false;
+        stream.next(); // 前进到下一个字符
+        return null; // 默认返回 null
+      },
+    };
   }
 }

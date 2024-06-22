@@ -128,7 +128,7 @@ export default {
   panelInfo: '信息面板',
   panelWarn: '警告面板',
   panelDanger: '危险面板',
-  panelSuccess: '成功面板',
+  panelImportant: '重要面板',
   panelTop: '偏左面板',
   panelCenter: '居中面板',
   panelBottom: '偏右面板',

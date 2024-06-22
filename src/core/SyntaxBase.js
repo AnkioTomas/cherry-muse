@@ -191,4 +191,7 @@ export default class SyntaxBase {
   mounted() {
     // console.log('base mounted');
   }
+  overlayMode() {
+    return null;
+  }
 }

@@ -1,8 +1,11 @@
 @use "../core/AutoLink";
+@use "../core/Paragraph";
 @use "../core/List";
 @use "../core/Blockquote";
 @use "../core/CodeBlock";
 @use "../core/Header";
+@use "../core/Panel";
+@use "../core/Detail";
 .cherry-previewer {
   padding: 1.25rem 2.8125rem 1.25rem 1.25rem;
   border-left: 0.125rem solid #ebedee;

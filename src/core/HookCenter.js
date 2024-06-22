@@ -105,6 +105,7 @@ export default class HookCenter {
    *
    * @param {(typeof SyntaxBase)[]} hooksConfig
    * @param {Partial<CherryOptions>} editorConfig
+   * @param {import('../Cherry').default} cherry
    */
   constructor(hooksConfig, editorConfig, cherry) {
     this.$locale = cherry.locale;
@@ -239,6 +240,14 @@ export default class HookCenter {
       instance.afterInit(() => {
         instance.setLocale(this.$locale);
       });
+      // 添加自定义语法高亮
+      const overlayMode = instance.overlayMode();
+      if (overlayMode !== null) {
+        // TODO
+
+        editorConfig.editor.overlay.push(overlayMode);
+        console.log(editorConfig.editor.overlay);
+      }
     }
     // TODO: 待校验是否需要跳过禁用的自定义 hook
     // Skip Disabled Internal Hooks

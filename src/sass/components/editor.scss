@@ -37,18 +37,15 @@
       font-size: $lineHeight;
     }
 
-    .CodeMirror-gutter-wrapper {
-      position: absolute;
-      left: -3rem!important;
+    .CodeMirror-line {
+    padding-left: 1rem;
 
     }
-    .CodeMirror-sizer{
-      margin-left: 1rem!important;
-    }
+
   }
 
   .CodeMirror-lines {
-    padding: 0.9375rem 2.125rem  ;
+    padding: 0.9375rem 2.125rem 0.9375rem 0;
     width: 100%;
     .base64 {
       display: inline-block;

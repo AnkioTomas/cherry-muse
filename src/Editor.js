@@ -451,6 +451,11 @@ export default class Editor {
         return tokenClass;
       },
     });
+
+    for (const item of this.options.overlay) {
+      editor.addOverlay(item);
+    }
+
     this.previewer = previewer;
     this.disableScrollListener = false;
 
