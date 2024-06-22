@@ -14,44 +14,72 @@
     border-radius: .5rem;
     background: var(--detail-bg-color);
     color: var(--detail-text-color);
-    summary {
-      position: relative;
-      margin: -1.5rem;
-      padding-block: 1.5rem;
-      padding-inline: 4rem 1.5rem;
-      list-style: none;
-      cursor: pointer;
-    }
-  }
-  .cherry-detail {
-    details {
-      background: #f8f9faaa;
-      border-radius: 8px;
-      overflow: hidden;
-      margin-bottom: 10px;
+    details{
       summary {
-        user-select: none;
-        padding: 5px 10px;
-        background-color: #6c757d;
-        color: #fff;
-        border-radius: 8px;
+        position: relative;
+        margin: -1.5rem;
+        padding-block: 1.5rem;
+        padding-inline: 4rem 1.5rem;
+        list-style: none;
+        cursor: pointer;
+
+
       }
-      .cherry-detail-body {
-        padding: 15px 25px 0 25px;
+
+      summary:before{
+        content: " ";
+        position: absolute;
+        inset-inline-start: 1.5rem;
+        top: calc(50% - .75rem);
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background: #ccc;
+        transition: background var(--vp-ct), transform var(--vp-tt);
       }
+
+      summary:after {
+        content: " ";
+        position: absolute;
+        inset-inline-start: 1.5rem;
+        top: calc(50% - .75rem);
+        width: 1.5rem;
+        height: 1.5rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='rgb(0,0,0,0.5)' d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/%3E%3C/svg%3E");
+        line-height: normal;
+        transition: transform .3s ease;
+        transform: rotate(90deg)
+      }
+
+
+    }
+    &.cherry-detail__multiple {
+      summary {
+        margin: -0.8rem;
+      }
+    }
+
+
+    details[open]{
+      summary:after{
+        transform: rotate(180deg);
+      }
+    }
+    .cherry-detail-body {
+      padding: 1rem 1.5rem 0 1.5rem;
     }
   }
 
-  .cherry-detail__multiple {
-    border-radius: 8px;
-    overflow: hidden;
-    details {
-      margin-bottom: 1px;
-      border-radius: 0;
-      border: none;
-      summary {
-        border-radius: 0;
-      }
-    }
+
+}
+
+.cherry-editor {
+  .cm-detail-container {
+    color: #4A5A9F;
+    font-family: monospace;
+  }
+  .cm-detail-title {
+    color: #05a;
   }
 }
+

@@ -51,7 +51,8 @@ export default class Detail extends ParagraphBase {
 
   $getDetailInfo(isOpen, title, str, sentenceMakeFunc) {
     const type = /\n\s*(\+\+|\+\+-)\s*[^\n]+\n/.test(str) ? 'multiple' : 'single';
-    const arr = str.split(/\n\s*(\+\+[-]{0,1}\s*[^\n]+)\n/);
+    const arr = str.split(/\n\s*(\+\+-?\s*[^\n]+)\n/);
+    console.warn('手风琴', arr);
     let defaultOpen = isOpen === '-';
     let currentTitle = title;
     let html = '';
@@ -59,7 +60,7 @@ export default class Detail extends ParagraphBase {
       arr.forEach((item) => {
         if (/^\s*\+\+/.test(item)) {
           defaultOpen = /^\s*\+\+-/.test(item);
-          currentTitle = item.replace(/\+\+[-]{0,1}\s*([^\n]+)$/, '$1');
+          currentTitle = item.replace(/\+\+-?\s*([^\n]+)$/, '$1');
           return true;
         }
         html += this.$getDetailHtml(defaultOpen, currentTitle, item, sentenceMakeFunc);
@@ -100,5 +101,39 @@ export default class Detail extends ParagraphBase {
 
   rule() {
     return getDetailRule();
+  }
+
+  overlayMode() {
+    return {
+      inDetailContainer: false,
+      name: 'detail',
+      token(stream, state) {
+        // 检查行的开头是否有 ':::'
+        if (stream.sol() && stream.match('+++')) {
+          this.inDetailContainer = stream.peek() !== null;
+          return 'detail-container';
+        }
+
+        if (stream.sol() && stream.match('++-')) {
+          this.inDetailContainer = true;
+          return 'detail-container';
+        }
+
+        if (stream.sol() && stream.match('++')) {
+          this.inDetailContainer = true;
+          return 'detail-container';
+        }
+
+        const rule = /\s.*$/;
+        // 尝试匹配规则
+        if (this.inDetailContainer && stream.match(rule)) {
+          this.inDetailContainer = false;
+          return 'detail-title';
+        }
+        this.inDetailContainer = false;
+        stream.next(); // 前进到下一个字符
+        return null; // 默认返回 null
+      },
+    };
   }
 }
