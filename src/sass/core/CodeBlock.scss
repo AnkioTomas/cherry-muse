@@ -49,4 +49,9 @@
     padding: 0 2px 0 2px;
     font-size: 0.9em;
   }
+  pre{
+    code{
+      border: unset;
+    }
+  }
 }
