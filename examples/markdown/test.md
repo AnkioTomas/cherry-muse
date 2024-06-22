@@ -1,5 +1,5 @@
 
-::: primary 提示
+::: tip 提示
 此处的语法兼容大多数Markdown编辑器（Typora、Github等）。
 :::
 
@@ -238,7 +238,7 @@ See the section on [`code`](#code).
 +++
 
 
-::: primary 提示
+::: tip 提示
 此处的语法是大部分编辑器（Typora、Githubd）可使用的语法。
 :::
 # 表格
@@ -704,27 +704,27 @@ https://www.qq.com?param=中文
 
 
 ```markdown
-{badge: 内容|primary|center}
+{badge: 内容|tip|center}
 {badge: 内容|info|center}
 {badge: 内容|warning|center}
 {badge: 内容|danger|center}
 {badge: 内容|success|center}
-{badge: 内容|primary|top}
-{badge: 内容|primary|center}
-{badge: 内容|primary|bottom}
+{badge: 内容|tip|top}
+{badge: 内容|tip|center}
+{badge: 内容|tip|bottom}
 {badge: 内容|#000000|bottom}
 ```
 
 +++ 语法演示
 
-{badge: 内容|primary|center}
+{badge: 内容|tip|center}
 {badge: 内容|info|center}
 {badge: 内容|warning|center}
 {badge: 内容|danger|center}
 {badge: 内容|success|center}
-{badge: 内容|primary|top}
-{badge: 内容|primary|center}
-{badge: 内容|primary|bottom}
+{badge: 内容|tip|top}
+{badge: 内容|tip|center}
+{badge: 内容|tip|bottom}
 {badge: 内容|#000000|bottom}
 +++
 

@@ -38,14 +38,22 @@
     }
 
     .CodeMirror-line {
-    padding-left: 1rem;
-
+    padding-left: 2rem;
+      padding-right: 2rem;
     }
 
   }
-
+  .CodeMirror-scroll {
+    margin-right: 0;
+    padding-right: 0;
+    .CodeMirror-sizer{
+      margin-right: 0;
+      padding-right: 0!important;
+      border-right-width: 0!important;
+    }
+  }
   .CodeMirror-lines {
-    padding: 0.9375rem 2.125rem 0.9375rem 0;
+    padding: 0.9375rem 0 0.9375rem 0;
     width: 100%;
     .base64 {
       display: inline-block;
