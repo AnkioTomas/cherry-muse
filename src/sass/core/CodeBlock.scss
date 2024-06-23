@@ -3,21 +3,27 @@
 .cherry-previewer{
   div[data-type='codeBlock'] {
     @import '../components/prism';
-
+    pre{
+      border-radius: var(--border-radius);
+    }
   }
   div[data-type='codeBlock'] {
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    border-radius: 0.1rem;
+    border-radius: var(--border-radius);
     margin-bottom: 1rem;
     font-size: 0.8rem;
     overflow-x: auto;
 
+    pre[class*=language-]{
+      padding:1.5rem
+    }
     & > pre {
       margin: 0;
       code[class*='language-'] {
         counter-reset: line;
+
         &.wrap {
           white-space: pre-wrap;
         }
@@ -45,7 +51,7 @@
   code {
     border: var(--window-border);
     background-color: var(--color-popover-bg-color);
-    border-radius: 3px;
+    border-radius: var(--border-radius);
     padding: 0 2px 0 2px;
     font-size: 0.9em;
   }
@@ -54,4 +60,62 @@
       border: unset;
     }
   }
+
+}
+
+.cherry{
+  .cherry-previewer-codeBlock-content-handler {
+    .cherry-previewer-codeBlock-content-handler__input {
+      position: absolute;
+    }
+  }
+  .cherry-previewer-codeBlock-click-handler {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .cherry-previewer-codeBlock-hover-handler {
+    z-index: 0;
+    position: absolute;
+
+    .cherry-copy-code-block,
+    .cherry-edit-code-block {
+      .material-symbols-outlined{
+
+        font-size: 1.2rem;
+      }
+      position: relative;
+      width: 2.5rem; // 25px converted to rem (25 / 16)
+      text-align: center;
+      height: 2.5rem; // 25px converted to rem
+      cursor: pointer;
+      float: right;
+      top: 1rem; // 15px converted to rem (15 / 16)
+      margin-left: -1.5rem; // 27px converted to rem (27 / 16)
+      transition: all 0.3s;
+      z-index: 2;
+      color: var(--panel-border-color);
+      background-color: transparent;
+    }
+
+    .cherry-copy-code-block {
+      right: 0; // 10px converted to rem (10 / 16)
+    }
+
+    .cherry-edit-code-block {
+      right: 3.5rem; // 10px + 25px + 10px converted to rem
+    }
+
+    .cherry-copy-code-block:hover,
+    .cherry-edit-code-block:hover {
+      background-color: var(--code-hover-bg-color);
+      border-radius: var(--border-radius);
+    }
+
+    .cherry-code-preview-lang-select {
+      position: absolute;
+      transform: translate(0.125rem, -50%); // 2px converted to rem (2 / 16)
+    }
+  }
+
 }

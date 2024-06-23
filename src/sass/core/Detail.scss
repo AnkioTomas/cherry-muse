@@ -11,7 +11,7 @@
     display: block;
     margin: 1rem 0;
     padding: 1.5rem;
-    border-radius: .5rem;
+    border-radius: var(--border-radius);
     background: var(--detail-bg-color);
     color: var(--detail-text-color);
     details{
@@ -33,7 +33,7 @@
         top: calc(50% - .75rem);
         width: 1.5rem;
         height: 1.5rem;
-        border-radius: 50%;
+        border-radius: var(--border-radius);
         background: #ccc;
         transition: background var(--vp-ct), transform var(--vp-tt);
       }
@@ -67,6 +67,9 @@
     }
     .cherry-detail-body {
       padding: 1rem 1.5rem 0 1.5rem;
+      :last-child {
+        margin-bottom: 0;
+      }
     }
   }
 

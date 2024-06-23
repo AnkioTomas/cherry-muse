@@ -1,5 +1,5 @@
 :root {
-  --bg-color:  #ffffff; /*change background*/
+  --bg-color: #ffffff; /*change background*/
   --text-color: #333333; /*change text color*/
   --md-char-color: #C7C5C5; /*change color of meta characetrs like `*` in markdown */
   --meta-content-color: #5b808d; /*change color of meta contents like image text or link address in markdown */
@@ -27,7 +27,6 @@
   --table-border-color: #ccc;
 
 
-
   --search-select-bg-color: #000;
   --search-select-text-color: #fff;
 
@@ -42,11 +41,12 @@
   --focus-ring-color: #6eace2;
 
 
-
   --side-bar-menu-active-tint: var(--side-bar-menu-active-tint);
 
   --mac-title-bar-height: 20px;
   --sidebar-width: 270px;
 
   --rawblock-edit-panel-bd: #f5f6f7;
+  --code-hover-bg-color: var(--item-hover-bg-color);
+  --border-radius: 0.5rem
 }

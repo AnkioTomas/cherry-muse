@@ -1,7 +1,7 @@
 @use "colors" as *;
 $toolbarFontSize: 0.8rem;
 $toolbarHeight: 3rem;
-$toolbarShadow: 0;
+$toolbarShadow: 0 0 0.8rem rgba(128, 145, 165, 0.2);;
 $toolbarBg: var(--bg-color);
 $toolbarBtnHover:var(--item-hover-text-color);
 $toolbarBtnBgHover:var(--item-hover-bg-color);

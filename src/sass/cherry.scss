@@ -2,7 +2,7 @@
 
 @use "variables/cherry" as *;
 @use  "variables/toolbar" as *;
-
+@use "components/bubble";
 @use  "components/toolbar" as *;
 @use "components/dropdown" as *;
 @use "components/codemirror" as *;
