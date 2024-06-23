@@ -1,9 +1,10 @@
 .cherry-previewer {
   blockquote {
-    border-left: 0.3rem solid var(--blur-text-color);
-    padding: 0 1rem;
+    border-left: 0.5rem solid var(--blur-text-color);
+    padding: 1rem 1rem;
     color: var(--active-file-border-color);
     margin: 0 0 1.3rem;
+    background: var(--item-hover-bg-color);
   }
   blockquote blockquote {
     padding-right: 0;
