@@ -52,7 +52,6 @@ export default class Detail extends ParagraphBase {
   $getDetailInfo(isOpen, title, str, sentenceMakeFunc) {
     const type = /\n\s*(\+\+|\+\+-)\s*[^\n]+\n/.test(str) ? 'multiple' : 'single';
     const arr = str.split(/\n\s*(\+\+-?\s*[^\n]+)\n/);
-    console.warn('手风琴', arr);
     let defaultOpen = isOpen === '-';
     let currentTitle = title;
     let html = '';
