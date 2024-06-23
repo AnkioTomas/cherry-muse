@@ -93,16 +93,20 @@ const replacerFileFactory = function (match, leadingChar, alt, link, title, post
   const titleSplit = titleInfo.split('|');
   const [name = 'file', ext = 'file', password = ''] = titleSplit;
 
-  return `<div class="card cardListContainer fileContainer"><div class="card-list">
-  <a href="${link}" target="_blank" class="card-item row-1" style="padding:0;background-color:var(--bodyBg);border-radius: 5px">
-       <span class="material-symbols-outlined">${getIcon(ext)}</span><div><p class="name">${name}</p>${
-    password !== ''
-      ? `<p class="desc" ><span class="material-symbols-outlined" style="margin-right: 5px">lock_open</span> ${password}</p>`
-      : ''
-  }</div></a>
-
-  </div></div>
-`;
+  return ` <a href="${link}" target="_blank" class="cherry-file">
+        <div class="cherry-file-icon">
+           <span class="material-symbols-outlined">${getIcon(ext)}</span>
+        </div>
+        <div class="cherry-file-content">
+            <h2>${name}</h2>
+            ${
+              password !== ''
+                ? `<p class="desc" ><span class="material-symbols-outlined" style="margin-right: 5px">lock_open</span> ${password}</p>`
+                : ''
+            }
+        </div>
+    </a>
+  `;
 };
 
 export default class Image extends SyntaxBase {
@@ -234,5 +238,33 @@ export default class Image extends SyntaxBase {
     }
     ret.reg = compileRegExp(ret, 'g');
     return ret;
+  }
+  overlayMode() {
+    return {
+      inImageContainer: false,
+      name: 'panel',
+      token(stream, state) {
+        // 检查行的开头是否有 ':::'
+        if (stream.sol() && stream.match('!')) {
+          this.inImageContainer = stream.peek() !== null;
+          return null;
+        }
+
+        if (this.inImageContainer && stream.match(/(video|audio|file)?/)) {
+          this.inImageContainer = false;
+          if (stream.peek() === '[') {
+            return 'image-type';
+          }
+        }
+
+        if (stream.match('#')) {
+          return 'image-split';
+        }
+
+        this.inImageContainer = false;
+        stream.next(); // 前进到下一个字符
+        return null; // 默认返回 null
+      },
+    };
   }
 }
