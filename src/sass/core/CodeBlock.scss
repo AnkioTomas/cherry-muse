@@ -6,8 +6,7 @@
     pre{
       border-radius: var(--border-radius);
     }
-  }
-  div[data-type='codeBlock'] {
+
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
@@ -48,13 +47,15 @@
     }
   }
 
-  code {
+  :not(pre) > code {
     border: var(--window-border);
     background-color: var(--color-popover-bg-color);
     border-radius: var(--border-radius);
-    padding: 0 2px 0 2px;
+    padding: 0.1rem 0.3rem;
+    margin: 0 0.2rem;
     font-size: 0.9em;
   }
+
   pre{
     code{
       border: unset;
