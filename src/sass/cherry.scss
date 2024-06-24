@@ -46,4 +46,45 @@
   font-size: $fontSize;
   font-family: $fontFamily;
 
+  .cherry-drag {
+    width: 1rem;
+    cursor: ew-resize;
+    position: absolute;
+    z-index: 12;
+    background: transparent;
+
+    &.cherry-drag--show {
+      width: 0.5rem;
+      display: block;
+      background: #dfe6ee;
+    }
+
+    &.cherry-drag--hidden {
+      display: none;
+    }
+  }
+
+  .cherry-editor-mask {
+    z-index: 10;
+    position: absolute;
+    display: none;
+    background: rgba(0, 0, 0, 0.2);
+
+    &.cherry-editor-mask--show {
+      display: block;
+    }
+  }
+
+  .cherry-previewer-mask {
+    z-index: 10;
+    position: absolute;
+    display: none;
+    background: rgba(0, 0, 0, 0.4);
+
+    &.cherry-previewer-mask--show {
+      display: block;
+    }
+  }
+
+
 }

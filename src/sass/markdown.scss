@@ -6,18 +6,6 @@
 
 
 
-  table {
-    border-collapse: collapse;
-    th,
-    td {
-      border: 1px solid $borderColor;
-      padding: 0.2em 0.4em;
-      min-width: 100px;
-    }
-    th {
-      background-color: #eee;
-    }
-  }
 
   .link-quote {
     color: $linkColor;
@@ -130,21 +118,7 @@
     }
   }
 
-  .cherry-table-container {
-    max-width: 100%;
-    overflow-x: auto;
-    .cherry-table {
-      th,
-      td {
-        border: 1px solid $borderColor;
-        padding: 0.2em 0.4em;
-        min-width: 100px;
-      }
-      th {
-        white-space: nowrap;
-      }
-    }
-  }
+
 
   video,audio {
     max-width: 100%;
