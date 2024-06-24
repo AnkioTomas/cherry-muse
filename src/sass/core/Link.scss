@@ -1,0 +1,13 @@
+.cherry{
+  a[target=_blank] {
+    padding: 0 0.1rem;
+    &::after {
+      font-size: 1rem;
+      margin: 0 0.1rem;
+      content: 'open_in_new';
+      inset-inline-start: 0;
+      font-family: "Material Symbols Outlined", serif;
+    }
+
+}
+}

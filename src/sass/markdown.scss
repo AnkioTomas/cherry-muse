@@ -4,14 +4,7 @@
   word-break: break-all;
 
 
-  hr {
-    height: 0;
-    border: 0;
-    border-top: 1px solid $borderColor;
-    margin: $elementGap 0;
-    box-sizing: content-box;
-    overflow: visible;
-  }
+
 
   table {
     border-collapse: collapse;

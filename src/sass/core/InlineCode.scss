@@ -1,17 +1,10 @@
-@import '../variable.scss';
-.cherry-markdown{
-  /* Inline code */
+.cherry-previewer{
   :not(pre) > code {
-    margin: 0 4px;
-    padding: 2px 6px;
-    border-radius: 6px;
-    white-space: normal;
-    color: $primary;
-    background-color: $primary-very-light;
-
-    [data-inline-code-theme='black'] & {
-      color: $dark;
-      background-color: $dark-very-light;
-    }
+    border: var(--window-border);
+    background-color: var(--color-popover-bg-color);
+    border-radius: var(--border-radius);
+    padding: 0.1rem 0.3rem;
+    margin: 0 0.2rem;
+    font-size: 0.9em;
   }
 }

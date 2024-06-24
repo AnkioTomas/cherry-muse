@@ -1,0 +1,10 @@
+.cherry-previewer{
+  hr {
+    height: 0;
+    border: 0;
+    border-top: var(--window-border);
+    margin: 1rem 0;
+    box-sizing: content-box;
+    overflow: visible;
+  }
+}

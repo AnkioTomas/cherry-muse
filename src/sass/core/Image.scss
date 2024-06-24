@@ -49,11 +49,16 @@
 
 }
 .cherry-editor {
+  .cm-s-default {
+    .cm-image-type {
+      color: #05a;
+    }
+    .cm-image-split {
+      color: #05a;
+    }
+    .cm-image-split-v2 {
+      color: #05a;
+    }
+  }
 
-  .cm-image-type {
-    color: #05a;
-  }
-  .cm-image-split {
-    color: #05a;
-  }
 }
