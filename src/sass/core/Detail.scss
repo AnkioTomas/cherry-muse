@@ -1,5 +1,6 @@
 .cherry-previewer {
   --detail-bg-color: #eee;
+  --detail-summary-icon-bg:#ccc;
   --detail-text-color: inherit;
   --detail-code-bg-color: rgb(127 127 127 / 15%);
   .cherry-dark {
@@ -34,8 +35,7 @@
         width: 1.5rem;
         height: 1.5rem;
         border-radius: var(--border-radius);
-        background: #ccc;
-        transition: background var(--vp-ct), transform var(--vp-tt);
+        background: var(--detail-summary-icon-bg);
       }
 
       summary:after {
@@ -81,11 +81,11 @@
 
 .cherry-editor {
   .cm-detail-container {
-    color: #4A5A9F;
+    color: var(--codemirror-start-code-color);
     font-family: monospace;
   }
   .cm-detail-title {
-    color: #05a;
+    color: var(--codemirror-operator-color);
   }
 }
 

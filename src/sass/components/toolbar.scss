@@ -1,28 +1,28 @@
-@use "../variables/toolbar" as *;
-
 .cherry{
+  --toolbar-height:3rem;
+  --toolbar-fontsize:0.9rem;
   .cherry-toolbar {
     position: relative;
     display: flex;
     // align-items: center;
     justify-content: space-between;
     padding: 0 1.2rem;
-    height: $toolbarHeight;
-    font-size: $toolbarFontSize;
+    height: var(--toolbar-height);
+    font-size: var(--toolbar-fontsize);
     line-height: 2.8;
     flex-basis: 100%;
     box-sizing: border-box;
     z-index: 2;
     user-select: none;
-    box-shadow: $toolbarShadow;
-    background: $toolbarBg;
+    box-shadow: var(--shadow);
+    background: var(--bg-color);
     overflow: hidden;
 
     .toolbar-left,
     .toolbar-right {
       display: flex;
       align-items: center;
-      height: $toolbarHeight;
+      height: var(--toolbar-height);
       overflow: hidden;
     }
 
@@ -53,17 +53,19 @@
       padding: 0 0.4rem;
       // margin: 4px 0;
       height: 3rem;
-      color: $toolbarBtn;
+      color: var(--text-color);
       background: transparent;
       border: 1px solid transparent;
       -webkit-transition: background-color ease-in-out 0.15s, color ease-in-out 0.15s, border-color ease-in-out 0.15s;
       transition: background-color ease-in-out 0.15s, color ease-in-out 0.15s, border-color ease-in-out 0.15s;
       cursor: pointer;
       font-style: normal;
-
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
       &:hover {
-        color: $toolbarBtnHover;
-        background: $toolbarBtnBgHover;
+        color: var(--hover-text-color);
+        background: var(--hover-bg-color);
       }
 
       &.cherry-toolbar-split {
@@ -72,14 +74,14 @@
         padding: 0;
         margin: 0.8rem 0.4rem;
         border: 0.1rem solid transparent;
-        border-left-color: $toolbarSplitColor;
+        border-left-color: var(--border-color);
         pointer-events: none;
         overflow: hidden;
         opacity: 0.5;
       }
 
       &.disabled {
-        color: $toolbarBtnDisabled;
+        color: var(--disabled-text-color);
       }
     }
   }

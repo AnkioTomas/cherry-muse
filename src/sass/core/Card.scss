@@ -16,24 +16,24 @@
         width: calc(100% / 3 - 0.7rem);
         margin: 0.35rem;
         background: var(--bg-color);
-        border: var(--window-border);
+        border: var(--border);
         border-radius: var(--border-radius);
         color: var(--text-color);
         display: flex;
-        box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.06);
+        box-shadow: var(--shadow);
         transition: all 0.4s;
 
         &:hover {
           text-decoration: none;
-          box-shadow: 0 10px 20px -10px var(--randomColor, rgba(0, 0, 0, 0.15));
+          box-shadow: var(--shadow);
           transform: translateY(-3px) scale(1.01);
 
           img {
-            box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow);
           }
 
           div p {
-            text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.15);
+            text-shadow: var(--shadow);
           }
         }
 
@@ -41,9 +41,9 @@
           width: 60px;
           height: 60px;
           border-radius: 50%;
-          border: 2px solid #fff;
+          border: var(--border);
           margin: 1rem 0 1rem 1rem;
-          box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.08);
+          box-shadow: var(--shadow);
           transition: all 0.4s;
         }
 
@@ -123,11 +123,11 @@
           width: calc(100% / 3 - 1rem);
           margin: 0.5rem;
           background: var(--bg-color);
-          border: var(--window-border);
+          border: var(--border);
           border-radius: var(--border-radius);
           overflow: hidden;
           color: var(--text-color);
-          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.04);
+          box-shadow: unset;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
@@ -135,14 +135,14 @@
           transition: all 0.4s;
 
           &:hover {
-            box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
             transform: translateY(-3px);
           }
 
           .box-img {
             overflow: hidden;
             position: relative;
-            background: #eee;
+            background: var(--bg-color);
 
             img {
               display: block;
@@ -184,7 +184,7 @@
           .box-footer {
             overflow: hidden;
             padding: 0.8rem 1rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: var(--border);
 
             img {
               width: 1.8rem;
@@ -219,17 +219,6 @@
         }
       }
 
-      .theme-mode-dark & {
-        .card-list {
-          .card-item {
-            border-color: var(--active-file-border-color);
-
-            .box-footer {
-              border-color: var(--active-file-border-color);
-            }
-          }
-        }
-      }
     }
   }
 

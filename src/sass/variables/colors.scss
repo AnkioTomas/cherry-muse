@@ -1,53 +1,38 @@
 :root {
-  --bg-color: #ffffff; /*change background*/
-  --text-color: #333333; /*change text color*/
-  --md-char-color: #C7C5C5; /*change color of meta characetrs like `*` in markdown */
-  --meta-content-color: #5b808d; /*change color of meta contents like image text or link address in markdown */
+  --bg-color: #ffffff; /*背景色*/
+  --text-color: #333333; /*文本颜色*/
+
+  --hover-bg-color: rgba(229, 229, 229, 0.59); /*浮动的背景色*/
+  --hover-text-color: inherit;
+
 
   --primary-color: #428bca; /* color of primary buttons */
   --primary-btn-border-color: #285e8e;
   --primary-btn-text-color: #fff;
 
 
-  --active-file-bg-color: #eee; /*background color if list item in file tree or file list*/
-  --active-file-text-color: inherit;
-  --active-file-border-color: #777;
+  --border-radius: 0.5rem;
+  --border-color:#e9e9e9;
+  --panel-border-color: #777777;
+  --border: 1px solid var(--border-color);
 
-  --side-bar-bg-color: var(--bg-color); /*change background of sidebar*/
-  --item-hover-bg-color: rgba(229, 229, 229, 0.59); /*background of control items when hover, like menu in sidebar*/
-  --item-hover-text-color: inherit;
-  --monospace: monospace; /*monospace font for codes, fences*/
+  --disabled-text-color:#777;
+  --shadow:0 0 0.8rem rgba(128, 145, 165, 0.2);
 
+  --line-height:1.5;
 
+  --font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+  --monospace: 'Menlo', 'Liberation Mono', 'Consolas', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', 'andale mono', 'lucida console', monospace;
+  --font-size: 1rem;
+
+  --code-bg:#fafafa;
   --blur-text-color: #C8C8C8;
 
-  --drag-placeholder-color: #c7c5c5;
-  --panel-border-color: #777777;
-  --active-toggle-btn-color: #ddd;
-  --table-border-color: #ccc;
+  --codemirror-msg-color:#7e86a9;
+  --codemirror-start-code-color:#4A5A9F;
+  --codemirror-operator-color:#C47A0F;
 
 
-  --search-select-bg-color: #000;
-  --search-select-text-color: #fff;
-
-  --heading-char-color: #ddd;
-  --color-popover-bg-color: #fafafa;
-
-  --control-text-color: var(--text-color);
-  --control-text-hover-color: var(--text-color);
-  --window-border: 1px solid #e9e9e9;
 
 
-  --focus-ring-color: #6eace2;
-
-
-  --side-bar-menu-active-tint: var(--side-bar-menu-active-tint);
-
-  --mac-title-bar-height: 20px;
-  --sidebar-width: 270px;
-
-  --rawblock-edit-panel-bd: #f5f6f7;
-  --code-hover-bg-color: var(--item-hover-bg-color);
-  --border-radius: 0.5rem;
-  --bodyBg:var(--bg-color)
 }

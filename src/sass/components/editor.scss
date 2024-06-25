@@ -1,4 +1,3 @@
-@use "../variables/cherry" as *;
 .cherry-editor {
   position: relative;
   padding-top: 0.3125rem;
@@ -7,7 +6,7 @@
   box-sizing: border-box;
   overflow: hidden;
 
-  border-right: 0.125rem solid #ebedee;
+  border-right: 0.125rem solid var(--border-color);
 
   &.cherry-editor--full {
     width: 100%;
@@ -18,23 +17,24 @@
     display: none;
   }
 
+
   .CodeMirror {
-    font-family: $fontFamily;
-    background: $editorBg;
-    color: $fontColor;
+    font-family: var(--font-family), serif;
+    background: var(--bg-color);
+    color: var(--text-color);
     .cm-cursor-line {
-      background-color: var(--item-hover-bg-color);
+      background-color: var(--hover-bg-color);
     }
 
     .CodeMirror-vscrollbar {
-      scrollbar-color: var(--item-hover-bg-color) var(--bg-color);
+      scrollbar-color: var(--hover-bg-color) var(--bg-color);
       &:hover{
         scrollbar-color: var(--panel-border-color) var(--bg-color);
       }
     }
 
     textarea {
-      font-size: $lineHeight;
+      font-size: var(--font-size);
     }
 
     .CodeMirror-line {
@@ -69,9 +69,9 @@
 
 
   .CodeMirror pre {
-    font-family: $fontFamily;
-    font-size: $fontSize;
-    line-height: $lineHeight;
+    font-family: var(--font-family), serif;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
   }
 
 }

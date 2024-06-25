@@ -14,8 +14,8 @@ $bubble-min-height: 2.1875rem; // 35px converted to rem (35 / 16)
   min-height: $bubble-min-height;
   min-width: 3.125rem; // 50px converted to rem (50 / 16)
 
-  border: var(--window-border);
-  background-color: #fff;
+  border: var(--border);
+  background-color: var(--bg-color);
   box-shadow: 0 0.125rem 0.9375rem -0.3125rem rgba(0, 0, 0, 0.5); // 0 2px 15px -5px converted to rem
   border-radius: var(--border-radius);
   z-index: 8;
@@ -42,13 +42,13 @@ $bubble-min-height: 2.1875rem; // 35px converted to rem (35 / 16)
   .cherry-bubble-top {
     top: 0;
     transform: translateY(-100%);
-    border-bottom: 0.5rem solid #fff; // 8px converted to rem
+    border-bottom: 0.5rem solid var(--bg-color); // 8px converted to rem
   }
 
   .cherry-bubble-bottom {
     bottom: 0;
     transform: translateY(100%);
-    border-top: 0.5rem solid #fff; // 8px converted to rem
+    border-top: 0.5rem solid var(--bg-color); // 8px converted to rem
   }
 
   .cherry-toolbar-button {
@@ -64,7 +64,7 @@ $bubble-min-height: 2.1875rem; // 35px converted to rem (35 / 16)
 
     &:hover {
       border-color: var(--active-file-border-color);
-      background-color: var(--item-hover-bg-color);
+      background-color: var(--hover-bg-color);
     }
 
     &.cherry-toolbar-split {
@@ -104,7 +104,7 @@ $bubble-min-height: 2.1875rem; // 35px converted to rem (35 / 16)
       color: var(--text-color);
     }
     .cherry-md-btn {
-      color: var(--item-hover-text-color);
+      color: var(--hover-text-color);
     }
   }
   &[data-type='md'] {
@@ -112,7 +112,7 @@ $bubble-min-height: 2.1875rem; // 35px converted to rem (35 / 16)
       color: var(--text-color);
     }
     .cherry-text-btn {
-      color: var(--item-hover-text-color);
+      color: var(--hover-text-color);
     }
     .switch-btn--bg {
       left: 50%;

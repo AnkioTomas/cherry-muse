@@ -1,7 +1,6 @@
+@use "variables/colors";
 @use  "google-fonts" as *;
 
-@use "variables/cherry" as *;
-@use  "variables/toolbar" as *;
 @use "components/bubble";
 @use  "components/toolbar" as *;
 @use "components/dropdown" as *;
@@ -19,8 +18,8 @@
   position: relative;
   .cherry-editor,
   .cherry-previewer {
-    max-height: calc(100% - #{$toolbarHeight});
-    min-height: calc(100% - #{$toolbarHeight});
+    max-height: calc(100% - var(--toolbar-height));
+    min-height: calc(100% - var(--toolbar-height));
   }
   .CodeMirror {
     height: 100%;
@@ -39,12 +38,12 @@
       min-height: 100%;
     }
   }
-  line-height: $lineHeight;
-  color: $fontColor;
-  background: $editorBg;
-  box-shadow: $shadow;
-  font-size: $fontSize;
-  font-family: $fontFamily;
+  line-height: var(--line-height);
+  color: var(--text-color);
+  background: var(--bg-color);
+  box-shadow: var(--shadow);
+  font-size: var(--font-size);
+  font-family: var(--font-family), serif;
 
   .cherry-drag {
     width: 1rem;

@@ -15,26 +15,18 @@
 @use "../core/Table";
 .cherry-previewer {
   padding: 1.25rem;
-  border-left: 0.125rem solid #ebedee;
+  border-left: 0.125rem solid var(--border-color);
   width: 50%;
   box-sizing: border-box;
   background-color: var(--bg-color);
   min-height: auto;
   overflow-y: auto;
   -webkit-print-color-adjust: exact;
-  scrollbar-color: var(--item-hover-bg-color) var(--bg-color);
+  scrollbar-color: var(--hover-bg-color) var(--bg-color);
   &:hover{
     scrollbar-color: var(--panel-border-color) var(--bg-color);
   }
-  .cherry-mobile-previewer-content {
-    width: 23.4375rem;
-    height: 100%;
-    margin: 0 auto;
-    padding: 1.5625rem 1.875rem;
-    overflow-y: scroll;
-    box-shadow: 0 0 3.75rem rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-  }
+
 
   &.cherry-previewer--hidden {
     width: 0;
@@ -73,7 +65,7 @@
   width: auto;
   padding: 0.3125rem 0.625rem;
   z-index: 6;
-  background: #fff;
+  background: var(--bg-color);
 
   h3 {
     font-size: 0.75rem;
@@ -98,11 +90,11 @@
     float: left;
     width: 0.875rem;
     height: 0.875rem;
-    border: 0.0625rem solid #fff;
+    border: 0.0625rem solid var(--border-color);
     cursor: pointer;
 
     &:hover {
-      border: 0.0625rem solid #000;
+      border: 0.0625rem solid var(--text-color);
     }
   }
 }

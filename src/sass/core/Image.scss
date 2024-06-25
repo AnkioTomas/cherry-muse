@@ -6,7 +6,7 @@
   .cherry-file {
     display: flex;
     background-color: var(--bg-color);
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: unset;
     border-radius: var(--border-radius);
     overflow: hidden;
     width: 100%;
@@ -14,7 +14,7 @@
     text-decoration: none;
     color: inherit;
     &:hover{
-      box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow);
       transform: translateY(-3px);
     }
   }
@@ -44,20 +44,14 @@
   .cherry-file-content p {
     margin: 0.8rem 0 0;
     font-size: 1.2em;
-    color: var(--active-file-border-color);
+    color: var(--panel-border-color);
   }
 
 }
 .cherry-editor {
   .cm-s-default {
-    .cm-image-type {
-      color: #05a;
-    }
-    .cm-image-split {
-      color: #05a;
-    }
-    .cm-image-split-v2 {
-      color: #05a;
+    .cm-image-type,.cm-image-split,.cm-image-split-v2 {
+      color: var(--codemirror-operator-color);
     }
   }
 

@@ -2,9 +2,9 @@
   blockquote {
     border-left: 0.5rem solid var(--blur-text-color);
     padding: 1rem 1rem;
-    color: var(--active-file-border-color);
+    color: var(--panel-border-color);
     margin:  1rem 0;
-    background: var(--item-hover-bg-color);
+    background: var(--hover-bg-color);
   }
   blockquote blockquote {
     padding-right: 0;
