@@ -164,7 +164,7 @@ export default class ListHandler {
         if (!this.insertLineBreak) {
           const replaceHtml = !this.isCheckbox
             ? event.target.innerHTML
-            : event.target.innerHTML.replace(/<span class="ch-icon ch-icon-(square|check)"><\/span>/, '');
+            : event.target.innerHTML.replace(/<input[^>]*>/g, '');
           const md = this.editor.$cherry.engine.makeMarkdown(replaceHtml);
           const [from, to] = this.range;
           this.editor.editor.replaceRange(md, from, to);
