@@ -16,7 +16,7 @@
   &.cherry-editor--hidden {
     display: none;
   }
-
+  scrollbar-color: transparent transparent;
 
   .CodeMirror {
     font-family: var(--font-family), serif;
@@ -40,6 +40,9 @@
     .CodeMirror-line {
     padding-left: 2rem;
       padding-right: 2rem;
+    }
+    .CodeMirror-gutters,.CodeMirror-gutter{
+      padding-bottom: 0;
     }
 
   }
