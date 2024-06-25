@@ -31,7 +31,19 @@
     color: $heading-color;
     a{
       color: $heading-color;
+      &.anchor{
+        color: var(--primary-color);
+        display: none;
+      }
+
     }
+    &:hover{
+      a.anchor{
+        display: inline;
+      }
+    }
+
+
     small,
     .small {
       font-weight: $small-font-weight;

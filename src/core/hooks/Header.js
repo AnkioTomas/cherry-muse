@@ -110,7 +110,7 @@ export default class Header extends ParagraphBase {
     const sign = this.$engine.md5(`${level}-${processedText.sign}-${anchorID}-${dataLines}`);
     const result = [
       `<h${level} id="${safeAnchorID}" data-sign="${sign}" data-lines="${dataLines}">`,
-      this.$getAnchor(anchorID, html),
+      this.$getAnchor(safeAnchorID, html),
       // `${html}`,
       `</h${level}>`,
     ].join('');
@@ -122,7 +122,7 @@ export default class Header extends ParagraphBase {
     if (anchorStyle === 'none') {
       return '';
     }
-    return `<a class="anchor" href="#${anchorID}">${text}</a>`;
+    return `${text} <a class="anchor" href="#${anchorID}">#</a>`;
   }
 
   beforeMakeHtml(str) {

@@ -1,6 +1,7 @@
-.cherry{
+.cherry {
   a[target=_blank] {
     padding: 0 0.1rem;
+
     &::after {
       font-size: 1rem;
       margin: 0 0.1rem;
@@ -10,6 +11,6 @@
       line-height: 1rem; /* 与 font-size 相同 */
       vertical-align: middle; /* 垂直居中 */
     }
+  }
 
-}
 }
