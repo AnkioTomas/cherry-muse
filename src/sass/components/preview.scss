@@ -13,6 +13,7 @@
 @use "../core/Card";
 @use "../core/Hr";
 @use "../core/Table";
+@use "../core/Suggester";
 .cherry-previewer {
   padding: 1.25rem;
   border-left: 0.125rem solid var(--border-color);
