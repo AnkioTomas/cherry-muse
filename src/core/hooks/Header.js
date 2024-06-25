@@ -110,7 +110,7 @@ export default class Header extends ParagraphBase {
     const sign = this.$engine.md5(`${level}-${processedText.sign}-${anchorID}-${dataLines}`);
     const result = [
       `<h${level} id="${safeAnchorID}" data-sign="${sign}" data-lines="${dataLines}">`,
-      this.$getAnchor(safeAnchorID, html),
+      this.$getAnchor(anchorID, html),
       // `${html}`,
       `</h${level}>`,
     ].join('');
