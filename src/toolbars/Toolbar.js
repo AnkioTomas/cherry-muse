@@ -158,7 +158,7 @@ export default class Toolbar {
   setSubMenuPosition(menuObj, subMenuObj) {
     const pos = menuObj.getMenuPosition();
     subMenuObj.style.left = `${pos.left + pos.width / 2}px`;
-    subMenuObj.style.top = `${pos.top + pos.height}px`;
+    subMenuObj.style.top = `${pos.height}px`;
     subMenuObj.style.position = menuObj.positionModel;
   }
 
