@@ -1,0 +1,39 @@
+.cherry-color-wrap {
+  display: none;
+  position: fixed;
+  width: auto;
+  padding: 0.3125rem 0.625rem;
+  z-index: 6;
+  background: var(--bg-color);
+
+  h3 {
+    font-size: 0.75rem;
+    margin: 0;
+    font-weight: 400;
+  }
+
+
+  .cherry-color-text {
+    float: left;
+    width: 8rem;
+    margin: 0 0.5rem 0 0.3125rem;
+  }
+
+  .cherry-color-bg {
+    float: left;
+    width: 8rem;
+    margin-right: 0.3125rem;
+  }
+
+  .cherry-color-item {
+    float: left;
+    width: 0.875rem;
+    height: 0.875rem;
+    border: 0.0625rem solid var(--border-color);
+    cursor: pointer;
+
+    &:hover {
+      border: 0.0625rem solid var(--text-color);
+    }
+  }
+}
