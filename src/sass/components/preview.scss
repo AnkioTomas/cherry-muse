@@ -24,10 +24,6 @@
   min-height: auto;
   overflow-y: auto;
   -webkit-print-color-adjust: exact;
-  scrollbar-color: var(--hover-bg-color) var(--bg-color);
-  &:hover{
-    scrollbar-color: var(--panel-border-color) var(--bg-color);
-  }
 
 
   &.cherry-previewer--hidden {

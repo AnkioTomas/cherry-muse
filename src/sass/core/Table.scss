@@ -57,12 +57,12 @@
   box-shadow: var(--shadow);
   padding: 0.5rem;
   border-radius: var(--border-radius);
-  width: auto;
+  width: auto!important;
   height: auto;
 
   &-item {
     padding: 0.5rem;
-    border: var(--window-border);
+    border: var(--border);
 
     &.active {
       background-color: var(--hover-bg-color);

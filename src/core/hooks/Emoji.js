@@ -27,32 +27,71 @@ export function convertToUnicode(code) {
   // 转换为 Unicode 字符
   return fromCodePoint(...parts);
 }
+
 export function fuzzySearchKeysWithValues(query, options) {
-  const keys = Object.keys(gfmUnicode.emojis); // 获取所有键
-  const queryLower = query; // 将查询转换为小写以实现大小写不敏感的搜索
   const combinedValues = [];
-  for (const key of keys) {
-    if (key.includes(queryLower)) {
+
+  if (query === '') {
+    gfmUnicode.emojis.some((emoji) => {
+      if (combinedValues.length >= 50) return true; // 停止遍历
       combinedValues.push({
-        key: getEmoji(key, options),
-        value: `:${key}:`,
-      }); // 合并匹配键的值
-    }
+        key: getEmoji(emoji.emoji, options, true),
+        value: `:${emoji.aliases[0]}:`,
+      });
+      return false; // 继续遍历
+    });
+  } else {
+    gfmUnicode.emojis.some((emoji) => {
+      if (combinedValues.length >= 100) return true; // 停止遍历
+      emoji.aliases.some((alias) => {
+        if (alias.includes(query)) {
+          combinedValues.push({
+            key: getEmoji(emoji.emoji, options, true),
+            value: `:${emoji.aliases[0]}:`,
+          });
+          return combinedValues.length >= 100; // 停止遍历
+        }
+        return false; // 继续遍历
+      });
+      emoji.tags.some((tag) => {
+        if (tag.includes(query)) {
+          combinedValues.push({
+            key: getEmoji(emoji.emoji, options, true),
+            value: `:${emoji.aliases[0]}:`,
+          });
+          return combinedValues.length >= 100; // 停止遍历
+        }
+        return false; // 继续遍历
+      });
+      return false; // 继续遍历
+    });
   }
 
   return combinedValues;
 }
 
-function getEmoji(key, options) {
+function getEmojiByKey(key) {
+  let emojiKey = '1f600';
+  gfmUnicode.emojis.some((emoji) => {
+    if (emoji.aliases.includes(key)) {
+      emojiKey = emoji.emoji;
+      return true; // 这会停止遍历
+    }
+    return false; // 如果没有找到匹配，继续遍历
+  });
+  return emojiKey;
+}
+
+function getEmoji(key, options, isKey = false) {
   if (options.useUnicode) {
     try {
-      return convertToUnicode(gfmUnicode.emojis[key]);
+      return convertToUnicode(isKey ? key : getEmojiByKey(key));
     } catch (e) {
       console.error(e);
       return key;
     }
   }
-  const src = options.resourceURL.replace(/\$\{code\}/g, gfmUnicode.emojis[key].toLowerCase());
+  const src = options.resourceURL.replace(/\$\{code\}/g, (isKey ? key : getEmojiByKey(key)).toLowerCase());
   return `<img class="emoji" src="${src}" alt="${_e(key)}" />`;
 }
 

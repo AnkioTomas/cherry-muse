@@ -84,6 +84,23 @@
       display: block;
     }
   }
-
+  *::-webkit-scrollbar {
+    height: 0.5rem;
+    width: 0.5rem;
+    background: transparent;
+  }
+  *::-webkit-scrollbar:hover {
+    background: transparent;
+  }
+ *::-webkit-scrollbar-thumb {
+    background:  var(--hover-bg-color);
+    -webkit-border-radius: var(--border-radius);
+  }
+ *::-webkit-scrollbar-thumb:hover {
+    background:var(--panel-border-color);
+  }
+ *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 
 }

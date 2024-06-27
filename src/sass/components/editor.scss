@@ -16,7 +16,7 @@
   &.cherry-editor--hidden {
     display: none;
   }
-  scrollbar-color: transparent transparent;
+  /*scrollbar-color: transparent transparent;*/
 
   .CodeMirror {
     font-family: var(--font-family), serif;
@@ -27,10 +27,7 @@
     }
 
     .CodeMirror-vscrollbar {
-      scrollbar-color: var(--hover-bg-color) var(--bg-color);
-      &:hover{
-        scrollbar-color: var(--panel-border-color) var(--bg-color);
-      }
+      display: none !important;
     }
 
     textarea {

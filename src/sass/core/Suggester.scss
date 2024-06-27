@@ -33,6 +33,24 @@
         margin-right: 0.5rem;
       }
     }
+    &::-webkit-scrollbar {
+      height: 0.5rem;
+      width: 0.5rem;
+      background: var(--code-bg);
+    }
+    &::-webkit-scrollbar:hover {
+      background:  var(--hover-bg-color);
+    }
+    &::-webkit-scrollbar-thumb {
+      background:  var(--hover-bg-color);
+      -webkit-border-radius: var(--border-radius);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background:var(--panel-border-color);
+    }
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
   }
   .cherry-suggestion {
     background-color: var(--bg-on-bg-color);
