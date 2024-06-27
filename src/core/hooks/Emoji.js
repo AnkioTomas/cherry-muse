@@ -82,7 +82,7 @@ function getEmojiByKey(key) {
   return emojiKey;
 }
 
-function getEmoji(key, options, isKey = false) {
+export function getEmoji(key, options, isKey = false) {
   if (options.useUnicode) {
     try {
       return convertToUnicode(isKey ? key : getEmojiByKey(key));

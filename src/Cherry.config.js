@@ -280,6 +280,7 @@ const defaultConfig = {
       'size',
       '|',
       'color',
+      'emoji',
       'header',
       '|',
       'badge',

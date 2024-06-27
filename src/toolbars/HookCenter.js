@@ -66,6 +66,7 @@ import Card from '@/toolbars/hooks/Card';
 import TocList from '@/toolbars/hooks/TocList';
 import Formula from '@/toolbars/hooks/Formula';
 import WordCount from './hooks/WordCount';
+import Emoji from '@/toolbars/hooks/Emoji';
 // 定义默认支持的工具栏
 // 目前不支持按需动态加载
 // 如果对CherryMarkdown构建后的文件大小有比较严格的要求，可以根据实际情况删减hook
@@ -118,6 +119,7 @@ const HookList = {
   tocList: TocList,
   formula: Formula,
   wordCount: WordCount,
+  emoji:Emoji,
 };
 
 export default class HookCenter {
