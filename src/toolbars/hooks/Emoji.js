@@ -90,17 +90,17 @@ export default class Emoji extends MenuBase {
       const clientRect = $emojiDom.getBoundingClientRect();
       top = clientRect.top + $emojiDom.offsetHeight;
       left =
-        /** @type {HTMLElement}*/ (event.target.closest('.cherry-toolbar-format_emoji_fill')).offsetLeft +
+        /** @type {HTMLElement}*/ (event.target.closest('.cherry-toolbar-mood')).offsetLeft +
         clientRect.left;
     } else {
-      const $emojiDom = /** @type {HTMLElement}*/ (event.target.closest('.cherry-toolbar-format_emoji_fill'));
+      const $emojiDom = /** @type {HTMLElement}*/ (event.target.closest('.cherry-toolbar-mood'));
       const clientRect = $emojiDom.getBoundingClientRect();
       top = clientRect.top + $emojiDom.offsetHeight;
       left = clientRect.left;
     }
     this.updateMarkdown = false;
     // 【TODO】需要增加getMoreSelection的逻辑
-    this.bubbleColor.show({
+    this.bubbleEmoji.show({
       left,
       top,
       $emoji: this,
