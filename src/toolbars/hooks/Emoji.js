@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 import MenuBase from '@/toolbars/MenuBase';
-import { getSelection } from '@/utils/selection';
 import { gfmUnicode } from '@/core/hooks/Emoji.config';
 import { getEmoji } from '@/core/hooks/Emoji';
+import Event from "@/Event";
 /**
  * 插入Emoji的按钮
  */
@@ -26,10 +26,11 @@ export default class Emoji extends MenuBase {
     this.setName('emoji', 'mood');
     // this.bubbleMenu = true;
     this.bubbleEmoji = new BubbleEmoji($cherry);
-  }
-  $testIsEmoji(type, selection) {
-    const textReg = /^:[\w-]+:$/;
-    return textReg.test(selection);
+    let that = this;
+    this.showing = false;
+    Event.on('toolbar', "hideAll",() => {
+      that.showing = that.bubbleEmoji.isShow();
+    });
   }
 
   /**
@@ -45,6 +46,13 @@ export default class Emoji extends MenuBase {
       const { emoji } = this.getAndCleanCacheOnce();
       return `:${emoji}:`;
     }
+
+    if (this.showing) {
+      this.bubbleEmoji.hide();
+      return null;
+    }
+    this.showing = true;
+
 
     let top = 0;
     let left = 0;
@@ -74,6 +82,7 @@ export default class Emoji extends MenuBase {
  */
 class BubbleEmoji {
   constructor($cherry) {
+    this.hasShow = false;
     this.editor = $cherry.editor;
     this.$cherry = $cherry;
     this.init();
@@ -90,42 +99,41 @@ class BubbleEmoji {
 
   getEmojiDom() {
     let htmlHeader = `<div class="cherry-emoji-header">`;
-    let htmlSearch = `<div class="cherry-emoji-search"><input type="text" placeholder="Search emoji" class="cherry-emoji-search-input"></div>`;
+    const htmlSearch = `<div class="cherry-emoji-search"><input type="text" placeholder="Search emoji" class="cherry-emoji-search-input"></div>`;
     let htmlBody = `<div class="cherry-emoji-body">`;
     const emojiStackDOM = Object.entries(this.categorizedEmojis)
       .map(([category, emojis]) => {
-
-        let icon = "";
+        let icon = '';
         switch (category) {
-          case "Smileys & Emotion":
-            icon = "sentiment_satisfied";
+          case 'Smileys & Emotion':
+            icon = 'sentiment_satisfied';
             break;
-          case "People & Body":
-            icon = "person";
+          case 'People & Body':
+            icon = 'person';
             break;
-          case "Animals & Nature":
-            icon = "pets";
+          case 'Animals & Nature':
+            icon = 'pets';
             break;
-          case "Food & Drink":
-            icon = "restaurant_menu";
+          case 'Food & Drink':
+            icon = 'restaurant_menu';
             break;
-          case "Travel & Places":
-            icon = "directions_car";
+          case 'Travel & Places':
+            icon = 'directions_car';
             break;
-          case "Activities":
-            icon = "sports_basketball";
+          case 'Activities':
+            icon = 'sports_basketball';
             break;
-          case "Objects":
-            icon = "emoji_objects";
+          case 'Objects':
+            icon = 'emoji_objects';
             break;
-          case "Symbols":
-            icon = "favorite";
+          case 'Symbols':
+            icon = 'favorite';
             break;
-          case "Flags":
-            icon = "flag";
+          case 'Flags':
+            icon = 'flag';
             break;
           default:
-            icon = "sentiment_satisfied";
+            icon = 'sentiment_satisfied';
             break;
         }
 
@@ -161,7 +169,7 @@ ${icon}
   <div class="cherry-emoji-container">`;
 
     htmlBody += `</div></div>`;
-    return htmlHeader +htmlSearch+ htmlBody;
+    return htmlHeader + htmlSearch + htmlBody;
   }
 
   getDom() {
@@ -191,27 +199,26 @@ ${icon}
     }, {});
     this.dom = this.getDom();
     this.editor.options.wrapperDom.appendChild(this.dom);
-    this.setActive(".cherry-emoji-item_sentiment_satisfied");
+    this.setActive('.cherry-emoji-item_sentiment_satisfied');
   }
 
   onClick() {
     return `:${this.emojiKey}:`;
   }
 
-  removeAllActive(){
-    this.dom.querySelectorAll('.cherry-emoji-panel').forEach((item)=>{
+  removeAllActive() {
+    this.dom.querySelectorAll('.cherry-emoji-panel').forEach((item) => {
       item.classList.remove('show');
-    })
-    this.dom.querySelectorAll('.cherry-emoji-item-btn').forEach((item)=>{
+    });
+    this.dom.querySelectorAll('.cherry-emoji-item-btn').forEach((item) => {
       item.classList.remove('show');
-    })
+    });
   }
 
-  setActive(className){
-    this.dom.querySelectorAll(className).forEach((item)=>{
+  setActive(className) {
+    this.dom.querySelectorAll(className).forEach((item) => {
       item.classList.add('show');
-    })
-
+    });
   }
 
   initAction() {
@@ -231,17 +238,15 @@ ${icon}
         if (targetClassList.contains('cherry-emoji-item-btn')) {
           this.removeAllActive();
           for (let i = 0; i < targetClassList.length; i++) {
-            let item = targetClassList[i];
+            const item = targetClassList[i];
             if (item.startsWith('cherry-emoji-item_')) {
-              let selector = `.${item}`;
+              const selector = `.${item}`;
               this.setActive(selector);
               break; // 退出循环
             }
           }
           return false;
         }
-
-
 
         this.emojiValue = target.getAttribute('data-emoji');
         this.emojiKey = target.getAttribute('data-alias');
@@ -258,34 +263,31 @@ ${icon}
         this.dom.style.display = 'none';
       }
     });
-   let input = this.dom.querySelector('.cherry-emoji-search-input');
-   input.addEventListener('focus', (evt) => {
+    const input = this.dom.querySelector('.cherry-emoji-search-input');
+    input.addEventListener('focus', (evt) => {
       this.removeAllActive();
       this.setActive('.cherry-emoji-item_search');
-      //触发input事件
-      input.dispatchEvent(new Event('input'));
-   });
+    });
     input.addEventListener('input', (evt) => {
-      let value = input.value;
+      const { value } = input;
       if (value === '') {
         return;
       }
-      let searchResult = this.searchEmoji(value);
-      let html = searchResult
+      const searchResult = this.searchEmoji(value);
+      const html = searchResult
         .map((emoji) => {
           return `<span class="cherry-emoji-item" data-emoji="${emoji.emoji}" data-alias="${
             emoji.aliases[0]
           }">${getEmoji(emoji.emoji, this.$cherry.options.engine.syntax.emoji, true)}</span>`;
         })
         .join('');
-      let searchPanel = this.dom.querySelector('.cherry-emoji-item_search .cherry-emoji-container');
+      const searchPanel = this.dom.querySelector('.cherry-emoji-item_search .cherry-emoji-container');
       searchPanel.innerHTML = html;
     });
   }
   searchEmoji(value) {
-    let searchResult = [];
+    const searchResult = [];
     for (const emoji of gfmUnicode.emojis) {
-
       for (const alias of emoji.aliases) {
         if (alias.includes(value)) {
           searchResult.push(emoji);
@@ -310,5 +312,12 @@ ${icon}
     this.dom.style.top = `${top}px`;
     this.dom.style.display = 'block';
     this.$emoji = $emoji;
+  }
+  isShow(){
+    return this.dom.style.display === 'block';
+
+  }
+  hide() {
+    this.dom.style.display = 'none';
   }
 }

@@ -195,6 +195,7 @@ export default class Toolbar {
    * 处理点击事件
    */
   onClick(event, name, focusEvent = false) {
+
     const menu = this.menus.hooks[name];
     if (!menu) {
       return;
@@ -228,6 +229,7 @@ export default class Toolbar {
     } else {
       // 如果是显示的，则隐藏当前二级菜单
       this.subMenus[name].style.display = 'none';
+
     }
   }
 
@@ -235,6 +237,7 @@ export default class Toolbar {
    * 隐藏所有的二级菜单
    */
   hideAllSubMenu() {
+    Event.emit('toolbar', 'hideAll');
     this.$cherry.wrapperDom.querySelectorAll('.cherry-dropdown').forEach((dom) => {
       dom.style.display = 'none';
     });
