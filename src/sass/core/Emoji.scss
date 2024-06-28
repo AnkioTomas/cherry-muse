@@ -1,0 +1,105 @@
+.cherry{
+
+  .cherry-emoji-wrap {
+    display: none;
+    position: fixed;
+    width:20rem;
+    padding: 0.3125rem 0.625rem;
+    z-index: 6;
+    background: var(--bg-color);
+  }
+
+
+  .cherry-emoji-header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .cherry-emoji-item-btn {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &.show{
+      background-color: var(--hover-bg-color);
+    }
+    &:hover {
+      background-color:var(--hover-bg-color);
+    }
+    span.material-symbols-outlined{
+      margin: 0;
+      font-size: 1.2rem;
+    }
+  }
+
+
+  .cherry-emoji-search {
+    width: 100%;
+    margin-bottom: 0;
+    .cherry-emoji-search-input {
+      width: 100%;
+      padding: 0.6rem;
+      border: var(--border);
+      border-radius: var(--border-radius);
+      box-sizing: border-box;
+      &:focus {
+        border-color: var(--primary-color); /* 焦点时的边框颜色 */
+        outline: none; /* 移除默认的焦点轮廓 */
+      }
+    }
+  }
+
+
+
+  .cherry-emoji-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .cherry-emoji-panel{
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      &.show{
+        display: flex;
+      }
+      .cherry-emoji-category {
+        font-size: 1rem;
+        color: var(--text-color);
+        font-weight: bold;
+        padding: 0.3rem;
+        width: 100%;
+      }
+
+      .cherry-emoji-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-height: calc(50vh - 10rem);
+        overflow-y: scroll;
+        padding: 0.5rem 0;
+      }
+      .cherry-emoji-item{
+        cursor: pointer;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 1.5rem;
+        padding: 0.5rem;
+        border-radius: var(--border-radius);
+        transition: background-color 0.3s;
+        &:hover {
+          background: var(--hover-bg-color);
+        }
+      }
+
+
+    }
+  }
+
+
+}

@@ -32,43 +32,44 @@ export function fuzzySearchKeysWithValues(query, options) {
   const combinedValues = [];
 
   if (query === '') {
-    gfmUnicode.emojis.some((emoji) => {
-      if (combinedValues.length >= 50) return true; // 停止遍历
+    const limit = Math.min(50, gfmUnicode.emojis.length);
+    for (let i = 0; i < limit; i++) {
+      const emoji = gfmUnicode.emojis[i];
       combinedValues.push({
         key: getEmoji(emoji.emoji, options, true),
         value: `:${emoji.aliases[0]}:`,
       });
-      return false; // 继续遍历
-    });
+    }
   } else {
-    gfmUnicode.emojis.some((emoji) => {
-      if (combinedValues.length >= 100) return true; // 停止遍历
-      emoji.aliases.some((alias) => {
+    const limit = 100;
+    for (const emoji of gfmUnicode.emojis) {
+      if (combinedValues.length >= limit) break;
+
+      for (const alias of emoji.aliases) {
         if (alias.includes(query)) {
           combinedValues.push({
             key: getEmoji(emoji.emoji, options, true),
             value: `:${emoji.aliases[0]}:`,
           });
-          return combinedValues.length >= 100; // 停止遍历
+          if (combinedValues.length >= limit) break;
         }
-        return false; // 继续遍历
-      });
-      emoji.tags.some((tag) => {
+      }
+
+      for (const tag of emoji.tags) {
         if (tag.includes(query)) {
           combinedValues.push({
             key: getEmoji(emoji.emoji, options, true),
             value: `:${emoji.aliases[0]}:`,
           });
-          return combinedValues.length >= 100; // 停止遍历
+          if (combinedValues.length >= limit) break;
         }
-        return false; // 继续遍历
-      });
-      return false; // 继续遍历
-    });
+      }
+    }
   }
 
   return combinedValues;
 }
+
 
 function getEmojiByKey(key) {
   let emojiKey = '1f600';

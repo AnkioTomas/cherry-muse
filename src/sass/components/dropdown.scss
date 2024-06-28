@@ -9,7 +9,8 @@
     box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
     margin-left: -3.75rem;
     z-index: 11;
-
+    border-radius: var(--border-radius);
+    max-height: 50vh;
     &-item {
       width: 100%;
       padding: 0 0.9375rem;

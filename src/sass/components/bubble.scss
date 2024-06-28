@@ -65,6 +65,7 @@ $bubble-min-height: 2.1875rem; // 35px converted to rem (35 / 16)
     &:hover {
       border-color: var(--active-file-border-color);
       background-color: var(--hover-bg-color);
+
     }
 
     &.cherry-toolbar-split {

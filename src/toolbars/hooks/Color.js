@@ -214,8 +214,9 @@ class BubbleColor {
 
   getDom() {
     const $colorWrap = document.createElement('div');
-    $colorWrap.classList.add('cherry-color-wrap');
+
     $colorWrap.classList.add('cherry-dropdown');
+    $colorWrap.classList.add('cherry-color-wrap');
     const $textWrap = document.createElement('div');
     $textWrap.classList.add('cherry-color-text');
     $textWrap.innerHTML = this.getFontColorDom('文本颜色');
