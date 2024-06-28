@@ -245,6 +245,8 @@ export function expandList($cherry, list) {
             menuItem.icon = menu.iconName;
             menuItem.key = $cherry.locale[menu.name] ?? menu.name;
             menuItem.keyword = `${suggest.keyword} ${menu.name}`;
+            menuItem.goLeft = menu.goLeft;
+            menuItem.goTop = menu.goTop;
             menuItem.value = function (event, dom) {
               menu.dom = dom;
               return menu.onclick();
@@ -253,6 +255,8 @@ export function expandList($cherry, list) {
           });
         } else {
           suggest.icon = toolbar.iconName;
+          suggest.goLeft = toolbar.goLeft;
+          suggest.goTop = toolbar.goTop;
           suggest.key = $cherry.locale[toolbar.name] ?? toolbar.name;
           suggest.value = function (event, dom) {
             toolbar.dom = dom;
