@@ -16,7 +16,7 @@
 import MenuBase from '@/toolbars/MenuBase';
 import { gfmUnicode } from '@/core/hooks/Emoji.config';
 import { getEmoji } from '@/core/hooks/Emoji';
-import Event from "@/Event";
+import Event from '@/Event';
 /**
  * 插入Emoji的按钮
  */
@@ -26,9 +26,9 @@ export default class Emoji extends MenuBase {
     this.setName('emoji', 'mood');
     // this.bubbleMenu = true;
     this.bubbleEmoji = new BubbleEmoji($cherry);
-    let that = this;
+    const that = this;
     this.showing = false;
-    Event.on('toolbar', "hideAll",() => {
+    Event.on('toolbar', 'hideAll', () => {
       that.showing = that.bubbleEmoji.isShow();
     });
   }
@@ -52,7 +52,6 @@ export default class Emoji extends MenuBase {
       return null;
     }
     this.showing = true;
-
 
     let top = 0;
     let left = 0;
@@ -313,9 +312,8 @@ ${icon}
     this.dom.style.display = 'block';
     this.$emoji = $emoji;
   }
-  isShow(){
+  isShow() {
     return this.dom.style.display === 'block';
-
   }
   hide() {
     this.dom.style.display = 'none';

@@ -70,7 +70,6 @@ export function fuzzySearchKeysWithValues(query, options) {
   return combinedValues;
 }
 
-
 function getEmojiByKey(key) {
   let emojiKey = '1f600';
   gfmUnicode.emojis.some((emoji) => {

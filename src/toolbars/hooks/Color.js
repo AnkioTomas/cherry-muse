@@ -15,7 +15,7 @@
  */
 import MenuBase from '@/toolbars/MenuBase';
 import { getSelection } from '@/utils/selection';
-import Event from "@/Event";
+import Event from '@/Event';
 /**
  * 插入字体颜色或者字体背景颜色的按钮
  */
@@ -25,9 +25,9 @@ export default class Color extends MenuBase {
     this.setName('color', 'format_color_fill');
     // this.bubbleMenu = true;
     this.bubbleColor = new BubbleColor($cherry);
-    let that = this;
+    const that = this;
     this.showing = false;
-    Event.on('toolbar', "hideAll",() => {
+    Event.on('toolbar', 'hideAll', () => {
       that.showing = that.bubbleColor.isShow();
     });
   }

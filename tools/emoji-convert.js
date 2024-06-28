@@ -11,16 +11,18 @@ fs.readFile('emoji.raw.json', 'utf8', (err, data) => {
   const emojiList = JSON.parse(data);
 
   // 处理emoji列表
-  const processedEmojiList = emojiList.map(emojiData => {
+  const processedEmojiList = emojiList.map((emojiData) => {
     // 将emoji转换为Unicode编码
-    const emojiUnicode = Array.from(emojiData.emoji).map(c => c.codePointAt(0).toString(16).padStart(4, '0')).join('-');
+    const emojiUnicode = Array.from(emojiData.emoji)
+      .map((c) => c.codePointAt(0).toString(16).padStart(4, '0'))
+      .join('-');
 
     // 创建一个新的对象，只包含需要的字段
     const newEmojiData = {
-      "emoji": emojiUnicode,
-      "category": emojiData.category,
-      "aliases": emojiData.aliases,
-      "tags": emojiData.tags
+      emoji: emojiUnicode,
+      category: emojiData.category,
+      aliases: emojiData.aliases,
+      tags: emojiData.tags,
     };
     return newEmojiData;
   });

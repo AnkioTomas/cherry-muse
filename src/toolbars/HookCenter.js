@@ -119,7 +119,7 @@ const HookList = {
   tocList: TocList,
   formula: Formula,
   wordCount: WordCount,
-  emoji:Emoji,
+  emoji: Emoji,
 };
 
 export default class HookCenter {

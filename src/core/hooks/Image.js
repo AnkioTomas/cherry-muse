@@ -257,10 +257,10 @@ export default class Image extends SyntaxBase {
           }
         }
 
-        if (!stream.sol() && stream.match('#') && stream.peek() !== '#'  && stream.peek() !== ' ') {
+        if (!stream.sol() && stream.match('#') && stream.peek() !== '#' && stream.peek() !== ' ') {
           return 'image-split';
         }
-        if (stream.match('|') ) {
+        if (stream.match('|')) {
           return 'image-split-v2';
         }
 
