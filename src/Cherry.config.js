@@ -202,7 +202,7 @@ const defaultConfig = {
          *           __hello__    ====>   <strong>hello</strong>
          */
         allowWhitespace: false,
-        selfClosing: false, // 自动闭合，为true时，当输入**XXX时，会自动在末尾追加**
+        selfClosing: true, // 自动闭合，为true时，当输入**XXX时，会自动在末尾追加**
       },
       strikethrough: {
         /**

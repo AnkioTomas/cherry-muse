@@ -22,6 +22,7 @@
  * 外加配置系统联想词
  */
 import { fuzzySearchKeysWithValues } from '@/core/hooks/Emoji';
+import { supportLanguages } from '@/core/hooks/CodeBlock';
 
 /**
  *
@@ -34,6 +35,35 @@ export const systemSuggests = [
     data(keywords, callback, $cherry, key) {
       // 面板语法提示
       callback(fuzzySearchKeysWithValues(keywords, $cherry.options.engine.syntax.emoji));
+    },
+  },
+  {
+    keyword: '`', // 公式语法提示
+    data(keywords, callback, $cherry, key) {
+      const startKey = '```';
+      const keyLength = startKey.length;
+      const totalKey = key + keywords;
+      if (totalKey.startsWith(startKey)) {
+        const languages = [];
+        const word = totalKey.substring(keyLength);
+        for (let i = 0; i < supportLanguages.length; i++) {
+          const language = supportLanguages[i];
+          if (language.startsWith(word)) {
+            languages.push({
+              key: language,
+              value: `\`\`\`${language}
+              
+\`\`\`
+`,
+              goTop: 2,
+            });
+          }
+        }
+        console.log(languages);
+        if (languages.length > 0) {
+          callback(languages);
+        }
+      }
     },
   },
 ];

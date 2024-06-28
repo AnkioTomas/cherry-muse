@@ -6,7 +6,7 @@
     top: 0;
     background: var(--bg-color);
     // border: 1px solid #ccc;
-    border-radius: 2px;
+    border-radius: var(--border-radius);
     max-height: 50vh;
     box-shadow: var(--shadow);
     overflow-x: hidden;
@@ -22,9 +22,9 @@
       cursor: pointer;
 
       &.cherry-suggester-panel__item--selected {
-        background-color: #f2f2f5;
+        background-color: var(--hover-bg-color);
         text-decoration: none;
-        color: #eb7350;
+        color: var(--primary-color);
       }
 
       & > i {

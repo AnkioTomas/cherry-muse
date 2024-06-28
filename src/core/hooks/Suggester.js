@@ -589,6 +589,11 @@ class SuggesterPanel {
         const cursor = this.editor.editor.getCursor();
         this.editor.editor.setCursor(cursor.line, cursor.ch - this.optionList[idx].goLeft);
       }
+      // 控制光标上移若干位
+      if (this.optionList[idx].goTop) {
+        const cursor = this.editor.editor.getCursor();
+        this.editor.editor.setCursor(cursor.line - this.optionList[idx].goTop, cursor.ch);
+      }
       if (this.optionList[idx].selection) {
         const { line } = this.editor.editor.getCursor();
         const { ch } = this.editor.editor.getCursor();
