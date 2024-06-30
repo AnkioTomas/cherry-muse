@@ -35,8 +35,8 @@ export function fuzzySearchKeysWithValues(query, options) {
 
   function addResult(emoji) {
     combinedValues.push({
-      key: getEmoji(emoji.emoji, options, true),
-      value: `:${emoji.aliases[0]}:`,
+      key: getEmoji(emoji.e, options, true),
+      value: `:${emoji.a[0]}:`,
     });
   }
 
@@ -47,7 +47,7 @@ export function fuzzySearchKeysWithValues(query, options) {
       if (query === '') {
         addResult(emoji);
       } else {
-        if (emoji.aliases.some((alias) => alias.includes(query)) || emoji.tags.some((tag) => tag.includes(query))) {
+        if (emoji.a.some((alias) => alias.includes(query)) || emoji.t.some((tag) => tag.includes(query))) {
           addResult(emoji);
         }
       }
@@ -65,9 +65,9 @@ export function fuzzySearchKeysWithValues(query, options) {
 function getEmojiByKey(key) {
   for (const emojiCategoryKey in gfmUnicode.emojis) {
     const emojiCategory = gfmUnicode.emojis[emojiCategoryKey];
-    const emoji = emojiCategory.find((emoji) => emoji.aliases.includes(key));
+    const emoji = emojiCategory.find((emoji) => emoji.a.includes(key));
     if (emoji) {
-      return emoji.emoji;
+      return emoji.e;
     }
   }
   return '1f600';

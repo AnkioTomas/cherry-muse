@@ -22,9 +22,9 @@ fs.readFile('emoji.raw.json', 'utf8', (err, data) => {
 
     // 创建一个新的对象，只包含需要的字段
     const newEmojiData = {
-      emoji: emojiUnicode,
-      aliases: emojiData.aliases,
-      tags: emojiData.tags,
+      e: emojiUnicode,
+      a: emojiData.aliases,
+      t: emojiData.tags,
     };
 
     // 获取分类

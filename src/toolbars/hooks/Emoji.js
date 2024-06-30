@@ -147,9 +147,11 @@ ${icon}
   `;
         html += emojis
           .map((emoji) => {
-            return `<span class="cherry-emoji-item" data-emoji="${emoji.emoji}" data-alias="${
-              emoji.aliases[0]
-            }">${getEmoji(emoji.emoji, this.$cherry.options.engine.syntax.emoji, true)}</span>`;
+            return `<span class="cherry-emoji-item" data-emoji="${emoji.e}" data-alias="${emoji.a[0]}">${getEmoji(
+              emoji.e,
+              this.$cherry.options.engine.syntax.emoji,
+              true,
+            )}</span>`;
           })
           .join('');
 

@@ -18,32 +18,32 @@ export const gfmUnicode = {
   emojis:{
     "Smileys & Emotion": [
       {
-        "emoji": "1f600",
-        "aliases": [
+        "e": "1f600",
+        "a": [
           "grinning"
         ],
-        "tags": [
+        "t": [
           "smile",
           "happy"
         ]
       },
       {
-        "emoji": "1f603",
-        "aliases": [
+        "e": "1f603",
+        "a": [
           "smiley"
         ],
-        "tags": [
+        "t": [
           "happy",
           "joy",
           "haha"
         ]
       },
       {
-        "emoji": "1f604",
-        "aliases": [
+        "e": "1f604",
+        "a": [
           "smile"
         ],
-        "tags": [
+        "t": [
           "happy",
           "joy",
           "laugh",
@@ -51,901 +51,901 @@ export const gfmUnicode = {
         ]
       },
       {
-        "emoji": "1f601",
-        "aliases": [
+        "e": "1f601",
+        "a": [
           "grin"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f606",
-        "aliases": [
+        "e": "1f606",
+        "a": [
           "laughing",
           "satisfied"
         ],
-        "tags": [
+        "t": [
           "happy",
           "haha"
         ]
       },
       {
-        "emoji": "1f605",
-        "aliases": [
+        "e": "1f605",
+        "a": [
           "sweat_smile"
         ],
-        "tags": [
+        "t": [
           "hot"
         ]
       },
       {
-        "emoji": "1f923",
-        "aliases": [
+        "e": "1f923",
+        "a": [
           "rofl"
         ],
-        "tags": [
+        "t": [
           "lol",
           "laughing"
         ]
       },
       {
-        "emoji": "1f602",
-        "aliases": [
+        "e": "1f602",
+        "a": [
           "joy"
         ],
-        "tags": [
+        "t": [
           "tears"
         ]
       },
       {
-        "emoji": "1f642",
-        "aliases": [
+        "e": "1f642",
+        "a": [
           "slightly_smiling_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f643",
-        "aliases": [
+        "e": "1f643",
+        "a": [
           "upside_down_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fae0",
-        "aliases": [
+        "e": "1fae0",
+        "a": [
           "melting_face"
         ],
-        "tags": [
+        "t": [
           "sarcasm",
           "dread"
         ]
       },
       {
-        "emoji": "1f609",
-        "aliases": [
+        "e": "1f609",
+        "a": [
           "wink"
         ],
-        "tags": [
+        "t": [
           "flirt"
         ]
       },
       {
-        "emoji": "1f60a",
-        "aliases": [
+        "e": "1f60a",
+        "a": [
           "blush"
         ],
-        "tags": [
+        "t": [
           "proud"
         ]
       },
       {
-        "emoji": "1f607",
-        "aliases": [
+        "e": "1f607",
+        "a": [
           "innocent"
         ],
-        "tags": [
+        "t": [
           "angel"
         ]
       },
       {
-        "emoji": "1f970",
-        "aliases": [
+        "e": "1f970",
+        "a": [
           "smiling_face_with_three_hearts"
         ],
-        "tags": [
+        "t": [
           "love"
         ]
       },
       {
-        "emoji": "1f60d",
-        "aliases": [
+        "e": "1f60d",
+        "a": [
           "heart_eyes"
         ],
-        "tags": [
+        "t": [
           "love",
           "crush"
         ]
       },
       {
-        "emoji": "1f929",
-        "aliases": [
+        "e": "1f929",
+        "a": [
           "star_struck"
         ],
-        "tags": [
+        "t": [
           "eyes"
         ]
       },
       {
-        "emoji": "1f618",
-        "aliases": [
+        "e": "1f618",
+        "a": [
           "kissing_heart"
         ],
-        "tags": [
+        "t": [
           "flirt"
         ]
       },
       {
-        "emoji": "1f617",
-        "aliases": [
+        "e": "1f617",
+        "a": [
           "kissing"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "263a-fe0f",
-        "aliases": [
+        "e": "263a-fe0f",
+        "a": [
           "relaxed"
         ],
-        "tags": [
+        "t": [
           "blush",
           "pleased"
         ]
       },
       {
-        "emoji": "1f61a",
-        "aliases": [
+        "e": "1f61a",
+        "a": [
           "kissing_closed_eyes"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f619",
-        "aliases": [
+        "e": "1f619",
+        "a": [
           "kissing_smiling_eyes"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f972",
-        "aliases": [
+        "e": "1f972",
+        "a": [
           "smiling_face_with_tear"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f60b",
-        "aliases": [
+        "e": "1f60b",
+        "a": [
           "yum"
         ],
-        "tags": [
+        "t": [
           "tongue",
           "lick"
         ]
       },
       {
-        "emoji": "1f61b",
-        "aliases": [
+        "e": "1f61b",
+        "a": [
           "stuck_out_tongue"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f61c",
-        "aliases": [
+        "e": "1f61c",
+        "a": [
           "stuck_out_tongue_winking_eye"
         ],
-        "tags": [
+        "t": [
           "prank",
           "silly"
         ]
       },
       {
-        "emoji": "1f92a",
-        "aliases": [
+        "e": "1f92a",
+        "a": [
           "zany_face"
         ],
-        "tags": [
+        "t": [
           "goofy",
           "wacky"
         ]
       },
       {
-        "emoji": "1f61d",
-        "aliases": [
+        "e": "1f61d",
+        "a": [
           "stuck_out_tongue_closed_eyes"
         ],
-        "tags": [
+        "t": [
           "prank"
         ]
       },
       {
-        "emoji": "1f911",
-        "aliases": [
+        "e": "1f911",
+        "a": [
           "money_mouth_face"
         ],
-        "tags": [
+        "t": [
           "rich"
         ]
       },
       {
-        "emoji": "1f917",
-        "aliases": [
+        "e": "1f917",
+        "a": [
           "hugs"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f92d",
-        "aliases": [
+        "e": "1f92d",
+        "a": [
           "hand_over_mouth"
         ],
-        "tags": [
+        "t": [
           "quiet",
           "whoops"
         ]
       },
       {
-        "emoji": "1fae2",
-        "aliases": [
+        "e": "1fae2",
+        "a": [
           "face_with_open_eyes_and_hand_over_mouth"
         ],
-        "tags": [
+        "t": [
           "gasp",
           "shock"
         ]
       },
       {
-        "emoji": "1fae3",
-        "aliases": [
+        "e": "1fae3",
+        "a": [
           "face_with_peeking_eye"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f92b",
-        "aliases": [
+        "e": "1f92b",
+        "a": [
           "shushing_face"
         ],
-        "tags": [
+        "t": [
           "silence",
           "quiet"
         ]
       },
       {
-        "emoji": "1f914",
-        "aliases": [
+        "e": "1f914",
+        "a": [
           "thinking"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fae1",
-        "aliases": [
+        "e": "1fae1",
+        "a": [
           "saluting_face"
         ],
-        "tags": [
+        "t": [
           "respect"
         ]
       },
       {
-        "emoji": "1f910",
-        "aliases": [
+        "e": "1f910",
+        "a": [
           "zipper_mouth_face"
         ],
-        "tags": [
+        "t": [
           "silence",
           "hush"
         ]
       },
       {
-        "emoji": "1f928",
-        "aliases": [
+        "e": "1f928",
+        "a": [
           "raised_eyebrow"
         ],
-        "tags": [
+        "t": [
           "suspicious"
         ]
       },
       {
-        "emoji": "1f610",
-        "aliases": [
+        "e": "1f610",
+        "a": [
           "neutral_face"
         ],
-        "tags": [
+        "t": [
           "meh"
         ]
       },
       {
-        "emoji": "1f611",
-        "aliases": [
+        "e": "1f611",
+        "a": [
           "expressionless"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f636",
-        "aliases": [
+        "e": "1f636",
+        "a": [
           "no_mouth"
         ],
-        "tags": [
+        "t": [
           "mute",
           "silence"
         ]
       },
       {
-        "emoji": "1fae5",
-        "aliases": [
+        "e": "1fae5",
+        "a": [
           "dotted_line_face"
         ],
-        "tags": [
+        "t": [
           "invisible"
         ]
       },
       {
-        "emoji": "1f636-200d-1f32b-fe0f",
-        "aliases": [
+        "e": "1f636-200d-1f32b-fe0f",
+        "a": [
           "face_in_clouds"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f60f",
-        "aliases": [
+        "e": "1f60f",
+        "a": [
           "smirk"
         ],
-        "tags": [
+        "t": [
           "smug"
         ]
       },
       {
-        "emoji": "1f612",
-        "aliases": [
+        "e": "1f612",
+        "a": [
           "unamused"
         ],
-        "tags": [
+        "t": [
           "meh"
         ]
       },
       {
-        "emoji": "1f644",
-        "aliases": [
+        "e": "1f644",
+        "a": [
           "roll_eyes"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f62c",
-        "aliases": [
+        "e": "1f62c",
+        "a": [
           "grimacing"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f62e-200d-1f4a8",
-        "aliases": [
+        "e": "1f62e-200d-1f4a8",
+        "a": [
           "face_exhaling"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f925",
-        "aliases": [
+        "e": "1f925",
+        "a": [
           "lying_face"
         ],
-        "tags": [
+        "t": [
           "liar"
         ]
       },
       {
-        "emoji": "1fae8",
-        "aliases": [
+        "e": "1fae8",
+        "a": [
           "shaking_face"
         ],
-        "tags": [
+        "t": [
           "shock"
         ]
       },
       {
-        "emoji": "1f60c",
-        "aliases": [
+        "e": "1f60c",
+        "a": [
           "relieved"
         ],
-        "tags": [
+        "t": [
           "whew"
         ]
       },
       {
-        "emoji": "1f614",
-        "aliases": [
+        "e": "1f614",
+        "a": [
           "pensive"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f62a",
-        "aliases": [
+        "e": "1f62a",
+        "a": [
           "sleepy"
         ],
-        "tags": [
+        "t": [
           "tired"
         ]
       },
       {
-        "emoji": "1f924",
-        "aliases": [
+        "e": "1f924",
+        "a": [
           "drooling_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f634",
-        "aliases": [
+        "e": "1f634",
+        "a": [
           "sleeping"
         ],
-        "tags": [
+        "t": [
           "zzz"
         ]
       },
       {
-        "emoji": "1f637",
-        "aliases": [
+        "e": "1f637",
+        "a": [
           "mask"
         ],
-        "tags": [
+        "t": [
           "sick",
           "ill"
         ]
       },
       {
-        "emoji": "1f912",
-        "aliases": [
+        "e": "1f912",
+        "a": [
           "face_with_thermometer"
         ],
-        "tags": [
+        "t": [
           "sick"
         ]
       },
       {
-        "emoji": "1f915",
-        "aliases": [
+        "e": "1f915",
+        "a": [
           "face_with_head_bandage"
         ],
-        "tags": [
+        "t": [
           "hurt"
         ]
       },
       {
-        "emoji": "1f922",
-        "aliases": [
+        "e": "1f922",
+        "a": [
           "nauseated_face"
         ],
-        "tags": [
+        "t": [
           "sick",
           "barf",
           "disgusted"
         ]
       },
       {
-        "emoji": "1f92e",
-        "aliases": [
+        "e": "1f92e",
+        "a": [
           "vomiting_face"
         ],
-        "tags": [
+        "t": [
           "barf",
           "sick"
         ]
       },
       {
-        "emoji": "1f927",
-        "aliases": [
+        "e": "1f927",
+        "a": [
           "sneezing_face"
         ],
-        "tags": [
+        "t": [
           "achoo",
           "sick"
         ]
       },
       {
-        "emoji": "1f975",
-        "aliases": [
+        "e": "1f975",
+        "a": [
           "hot_face"
         ],
-        "tags": [
+        "t": [
           "heat",
           "sweating"
         ]
       },
       {
-        "emoji": "1f976",
-        "aliases": [
+        "e": "1f976",
+        "a": [
           "cold_face"
         ],
-        "tags": [
+        "t": [
           "freezing",
           "ice"
         ]
       },
       {
-        "emoji": "1f974",
-        "aliases": [
+        "e": "1f974",
+        "a": [
           "woozy_face"
         ],
-        "tags": [
+        "t": [
           "groggy"
         ]
       },
       {
-        "emoji": "1f635",
-        "aliases": [
+        "e": "1f635",
+        "a": [
           "dizzy_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f635-200d-1f4ab",
-        "aliases": [
+        "e": "1f635-200d-1f4ab",
+        "a": [
           "face_with_spiral_eyes"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f92f",
-        "aliases": [
+        "e": "1f92f",
+        "a": [
           "exploding_head"
         ],
-        "tags": [
+        "t": [
           "mind",
           "blown"
         ]
       },
       {
-        "emoji": "1f920",
-        "aliases": [
+        "e": "1f920",
+        "a": [
           "cowboy_hat_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f973",
-        "aliases": [
+        "e": "1f973",
+        "a": [
           "partying_face"
         ],
-        "tags": [
+        "t": [
           "celebration",
           "birthday"
         ]
       },
       {
-        "emoji": "1f978",
-        "aliases": [
+        "e": "1f978",
+        "a": [
           "disguised_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f60e",
-        "aliases": [
+        "e": "1f60e",
+        "a": [
           "sunglasses"
         ],
-        "tags": [
+        "t": [
           "cool"
         ]
       },
       {
-        "emoji": "1f913",
-        "aliases": [
+        "e": "1f913",
+        "a": [
           "nerd_face"
         ],
-        "tags": [
+        "t": [
           "geek",
           "glasses"
         ]
       },
       {
-        "emoji": "1f9d0",
-        "aliases": [
+        "e": "1f9d0",
+        "a": [
           "monocle_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f615",
-        "aliases": [
+        "e": "1f615",
+        "a": [
           "confused"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fae4",
-        "aliases": [
+        "e": "1fae4",
+        "a": [
           "face_with_diagonal_mouth"
         ],
-        "tags": [
+        "t": [
           "confused"
         ]
       },
       {
-        "emoji": "1f61f",
-        "aliases": [
+        "e": "1f61f",
+        "a": [
           "worried"
         ],
-        "tags": [
+        "t": [
           "nervous"
         ]
       },
       {
-        "emoji": "1f641",
-        "aliases": [
+        "e": "1f641",
+        "a": [
           "slightly_frowning_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2639-fe0f",
-        "aliases": [
+        "e": "2639-fe0f",
+        "a": [
           "frowning_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f62e",
-        "aliases": [
+        "e": "1f62e",
+        "a": [
           "open_mouth"
         ],
-        "tags": [
+        "t": [
           "surprise",
           "impressed",
           "wow"
         ]
       },
       {
-        "emoji": "1f62f",
-        "aliases": [
+        "e": "1f62f",
+        "a": [
           "hushed"
         ],
-        "tags": [
+        "t": [
           "silence",
           "speechless"
         ]
       },
       {
-        "emoji": "1f632",
-        "aliases": [
+        "e": "1f632",
+        "a": [
           "astonished"
         ],
-        "tags": [
+        "t": [
           "amazed",
           "gasp"
         ]
       },
       {
-        "emoji": "1f633",
-        "aliases": [
+        "e": "1f633",
+        "a": [
           "flushed"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f97a",
-        "aliases": [
+        "e": "1f97a",
+        "a": [
           "pleading_face"
         ],
-        "tags": [
+        "t": [
           "puppy",
           "eyes"
         ]
       },
       {
-        "emoji": "1f979",
-        "aliases": [
+        "e": "1f979",
+        "a": [
           "face_holding_back_tears"
         ],
-        "tags": [
+        "t": [
           "tears",
           "gratitude"
         ]
       },
       {
-        "emoji": "1f626",
-        "aliases": [
+        "e": "1f626",
+        "a": [
           "frowning"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f627",
-        "aliases": [
+        "e": "1f627",
+        "a": [
           "anguished"
         ],
-        "tags": [
+        "t": [
           "stunned"
         ]
       },
       {
-        "emoji": "1f628",
-        "aliases": [
+        "e": "1f628",
+        "a": [
           "fearful"
         ],
-        "tags": [
+        "t": [
           "scared",
           "shocked",
           "oops"
         ]
       },
       {
-        "emoji": "1f630",
-        "aliases": [
+        "e": "1f630",
+        "a": [
           "cold_sweat"
         ],
-        "tags": [
+        "t": [
           "nervous"
         ]
       },
       {
-        "emoji": "1f625",
-        "aliases": [
+        "e": "1f625",
+        "a": [
           "disappointed_relieved"
         ],
-        "tags": [
+        "t": [
           "phew",
           "sweat",
           "nervous"
         ]
       },
       {
-        "emoji": "1f622",
-        "aliases": [
+        "e": "1f622",
+        "a": [
           "cry"
         ],
-        "tags": [
+        "t": [
           "sad",
           "tear"
         ]
       },
       {
-        "emoji": "1f62d",
-        "aliases": [
+        "e": "1f62d",
+        "a": [
           "sob"
         ],
-        "tags": [
+        "t": [
           "sad",
           "cry",
           "bawling"
         ]
       },
       {
-        "emoji": "1f631",
-        "aliases": [
+        "e": "1f631",
+        "a": [
           "scream"
         ],
-        "tags": [
+        "t": [
           "horror",
           "shocked"
         ]
       },
       {
-        "emoji": "1f616",
-        "aliases": [
+        "e": "1f616",
+        "a": [
           "confounded"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f623",
-        "aliases": [
+        "e": "1f623",
+        "a": [
           "persevere"
         ],
-        "tags": [
+        "t": [
           "struggling"
         ]
       },
       {
-        "emoji": "1f61e",
-        "aliases": [
+        "e": "1f61e",
+        "a": [
           "disappointed"
         ],
-        "tags": [
+        "t": [
           "sad"
         ]
       },
       {
-        "emoji": "1f613",
-        "aliases": [
+        "e": "1f613",
+        "a": [
           "sweat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f629",
-        "aliases": [
+        "e": "1f629",
+        "a": [
           "weary"
         ],
-        "tags": [
+        "t": [
           "tired"
         ]
       },
       {
-        "emoji": "1f62b",
-        "aliases": [
+        "e": "1f62b",
+        "a": [
           "tired_face"
         ],
-        "tags": [
+        "t": [
           "upset",
           "whine"
         ]
       },
       {
-        "emoji": "1f971",
-        "aliases": [
+        "e": "1f971",
+        "a": [
           "yawning_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f624",
-        "aliases": [
+        "e": "1f624",
+        "a": [
           "triumph"
         ],
-        "tags": [
+        "t": [
           "smug"
         ]
       },
       {
-        "emoji": "1f621",
-        "aliases": [
+        "e": "1f621",
+        "a": [
           "rage",
           "pout"
         ],
-        "tags": [
+        "t": [
           "angry"
         ]
       },
       {
-        "emoji": "1f620",
-        "aliases": [
+        "e": "1f620",
+        "a": [
           "angry"
         ],
-        "tags": [
+        "t": [
           "mad",
           "annoyed"
         ]
       },
       {
-        "emoji": "1f92c",
-        "aliases": [
+        "e": "1f92c",
+        "a": [
           "cursing_face"
         ],
-        "tags": [
+        "t": [
           "foul"
         ]
       },
       {
-        "emoji": "1f608",
-        "aliases": [
+        "e": "1f608",
+        "a": [
           "smiling_imp"
         ],
-        "tags": [
+        "t": [
           "devil",
           "evil",
           "horns"
         ]
       },
       {
-        "emoji": "1f47f",
-        "aliases": [
+        "e": "1f47f",
+        "a": [
           "imp"
         ],
-        "tags": [
+        "t": [
           "angry",
           "devil",
           "evil",
@@ -953,859 +953,859 @@ export const gfmUnicode = {
         ]
       },
       {
-        "emoji": "1f480",
-        "aliases": [
+        "e": "1f480",
+        "a": [
           "skull"
         ],
-        "tags": [
+        "t": [
           "dead",
           "danger",
           "poison"
         ]
       },
       {
-        "emoji": "2620-fe0f",
-        "aliases": [
+        "e": "2620-fe0f",
+        "a": [
           "skull_and_crossbones"
         ],
-        "tags": [
+        "t": [
           "danger",
           "pirate"
         ]
       },
       {
-        "emoji": "1f4a9",
-        "aliases": [
+        "e": "1f4a9",
+        "a": [
           "hankey",
           "poop",
           "shit"
         ],
-        "tags": [
+        "t": [
           "crap"
         ]
       },
       {
-        "emoji": "1f921",
-        "aliases": [
+        "e": "1f921",
+        "a": [
           "clown_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f479",
-        "aliases": [
+        "e": "1f479",
+        "a": [
           "japanese_ogre"
         ],
-        "tags": [
+        "t": [
           "monster"
         ]
       },
       {
-        "emoji": "1f47a",
-        "aliases": [
+        "e": "1f47a",
+        "a": [
           "japanese_goblin"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f47b",
-        "aliases": [
+        "e": "1f47b",
+        "a": [
           "ghost"
         ],
-        "tags": [
+        "t": [
           "halloween"
         ]
       },
       {
-        "emoji": "1f47d",
-        "aliases": [
+        "e": "1f47d",
+        "a": [
           "alien"
         ],
-        "tags": [
+        "t": [
           "ufo"
         ]
       },
       {
-        "emoji": "1f47e",
-        "aliases": [
+        "e": "1f47e",
+        "a": [
           "space_invader"
         ],
-        "tags": [
+        "t": [
           "game",
           "retro"
         ]
       },
       {
-        "emoji": "1f916",
-        "aliases": [
+        "e": "1f916",
+        "a": [
           "robot"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f63a",
-        "aliases": [
+        "e": "1f63a",
+        "a": [
           "smiley_cat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f638",
-        "aliases": [
+        "e": "1f638",
+        "a": [
           "smile_cat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f639",
-        "aliases": [
+        "e": "1f639",
+        "a": [
           "joy_cat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f63b",
-        "aliases": [
+        "e": "1f63b",
+        "a": [
           "heart_eyes_cat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f63c",
-        "aliases": [
+        "e": "1f63c",
+        "a": [
           "smirk_cat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f63d",
-        "aliases": [
+        "e": "1f63d",
+        "a": [
           "kissing_cat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f640",
-        "aliases": [
+        "e": "1f640",
+        "a": [
           "scream_cat"
         ],
-        "tags": [
+        "t": [
           "horror"
         ]
       },
       {
-        "emoji": "1f63f",
-        "aliases": [
+        "e": "1f63f",
+        "a": [
           "crying_cat_face"
         ],
-        "tags": [
+        "t": [
           "sad",
           "tear"
         ]
       },
       {
-        "emoji": "1f63e",
-        "aliases": [
+        "e": "1f63e",
+        "a": [
           "pouting_cat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f648",
-        "aliases": [
+        "e": "1f648",
+        "a": [
           "see_no_evil"
         ],
-        "tags": [
+        "t": [
           "monkey",
           "blind",
           "ignore"
         ]
       },
       {
-        "emoji": "1f649",
-        "aliases": [
+        "e": "1f649",
+        "a": [
           "hear_no_evil"
         ],
-        "tags": [
+        "t": [
           "monkey",
           "deaf"
         ]
       },
       {
-        "emoji": "1f64a",
-        "aliases": [
+        "e": "1f64a",
+        "a": [
           "speak_no_evil"
         ],
-        "tags": [
+        "t": [
           "monkey",
           "mute",
           "hush"
         ]
       },
       {
-        "emoji": "1f48c",
-        "aliases": [
+        "e": "1f48c",
+        "a": [
           "love_letter"
         ],
-        "tags": [
+        "t": [
           "email",
           "envelope"
         ]
       },
       {
-        "emoji": "1f498",
-        "aliases": [
+        "e": "1f498",
+        "a": [
           "cupid"
         ],
-        "tags": [
+        "t": [
           "love",
           "heart"
         ]
       },
       {
-        "emoji": "1f49d",
-        "aliases": [
+        "e": "1f49d",
+        "a": [
           "gift_heart"
         ],
-        "tags": [
+        "t": [
           "chocolates"
         ]
       },
       {
-        "emoji": "1f496",
-        "aliases": [
+        "e": "1f496",
+        "a": [
           "sparkling_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f497",
-        "aliases": [
+        "e": "1f497",
+        "a": [
           "heartpulse"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f493",
-        "aliases": [
+        "e": "1f493",
+        "a": [
           "heartbeat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f49e",
-        "aliases": [
+        "e": "1f49e",
+        "a": [
           "revolving_hearts"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f495",
-        "aliases": [
+        "e": "1f495",
+        "a": [
           "two_hearts"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f49f",
-        "aliases": [
+        "e": "1f49f",
+        "a": [
           "heart_decoration"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2763-fe0f",
-        "aliases": [
+        "e": "2763-fe0f",
+        "a": [
           "heavy_heart_exclamation"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f494",
-        "aliases": [
+        "e": "1f494",
+        "a": [
           "broken_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2764-fe0f-200d-1f525",
-        "aliases": [
+        "e": "2764-fe0f-200d-1f525",
+        "a": [
           "heart_on_fire"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2764-fe0f-200d-1fa79",
-        "aliases": [
+        "e": "2764-fe0f-200d-1fa79",
+        "a": [
           "mending_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2764-fe0f",
-        "aliases": [
+        "e": "2764-fe0f",
+        "a": [
           "heart"
         ],
-        "tags": [
+        "t": [
           "love"
         ]
       },
       {
-        "emoji": "1fa77",
-        "aliases": [
+        "e": "1fa77",
+        "a": [
           "pink_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9e1",
-        "aliases": [
+        "e": "1f9e1",
+        "a": [
           "orange_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f49b",
-        "aliases": [
+        "e": "1f49b",
+        "a": [
           "yellow_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f49a",
-        "aliases": [
+        "e": "1f49a",
+        "a": [
           "green_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f499",
-        "aliases": [
+        "e": "1f499",
+        "a": [
           "blue_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa75",
-        "aliases": [
+        "e": "1fa75",
+        "a": [
           "light_blue_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f49c",
-        "aliases": [
+        "e": "1f49c",
+        "a": [
           "purple_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f90e",
-        "aliases": [
+        "e": "1f90e",
+        "a": [
           "brown_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5a4",
-        "aliases": [
+        "e": "1f5a4",
+        "a": [
           "black_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa76",
-        "aliases": [
+        "e": "1fa76",
+        "a": [
           "grey_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f90d",
-        "aliases": [
+        "e": "1f90d",
+        "a": [
           "white_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f48b",
-        "aliases": [
+        "e": "1f48b",
+        "a": [
           "kiss"
         ],
-        "tags": [
+        "t": [
           "lipstick"
         ]
       },
       {
-        "emoji": "1f4af",
-        "aliases": [
+        "e": "1f4af",
+        "a": [
           "100"
         ],
-        "tags": [
+        "t": [
           "score",
           "perfect"
         ]
       },
       {
-        "emoji": "1f4a2",
-        "aliases": [
+        "e": "1f4a2",
+        "a": [
           "anger"
         ],
-        "tags": [
+        "t": [
           "angry"
         ]
       },
       {
-        "emoji": "1f4a5",
-        "aliases": [
+        "e": "1f4a5",
+        "a": [
           "boom",
           "collision"
         ],
-        "tags": [
+        "t": [
           "explode"
         ]
       },
       {
-        "emoji": "1f4ab",
-        "aliases": [
+        "e": "1f4ab",
+        "a": [
           "dizzy"
         ],
-        "tags": [
+        "t": [
           "star"
         ]
       },
       {
-        "emoji": "1f4a6",
-        "aliases": [
+        "e": "1f4a6",
+        "a": [
           "sweat_drops"
         ],
-        "tags": [
+        "t": [
           "water",
           "workout"
         ]
       },
       {
-        "emoji": "1f4a8",
-        "aliases": [
+        "e": "1f4a8",
+        "a": [
           "dash"
         ],
-        "tags": [
+        "t": [
           "wind",
           "blow",
           "fast"
         ]
       },
       {
-        "emoji": "1f573-fe0f",
-        "aliases": [
+        "e": "1f573-fe0f",
+        "a": [
           "hole"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4ac",
-        "aliases": [
+        "e": "1f4ac",
+        "a": [
           "speech_balloon"
         ],
-        "tags": [
+        "t": [
           "comment"
         ]
       },
       {
-        "emoji": "1f441-fe0f-200d-1f5e8-fe0f",
-        "aliases": [
+        "e": "1f441-fe0f-200d-1f5e8-fe0f",
+        "a": [
           "eye_speech_bubble"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5e8-fe0f",
-        "aliases": [
+        "e": "1f5e8-fe0f",
+        "a": [
           "left_speech_bubble"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5ef-fe0f",
-        "aliases": [
+        "e": "1f5ef-fe0f",
+        "a": [
           "right_anger_bubble"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4ad",
-        "aliases": [
+        "e": "1f4ad",
+        "a": [
           "thought_balloon"
         ],
-        "tags": [
+        "t": [
           "thinking"
         ]
       },
       {
-        "emoji": "1f4a4",
-        "aliases": [
+        "e": "1f4a4",
+        "a": [
           "zzz"
         ],
-        "tags": [
+        "t": [
           "sleeping"
         ]
       }
     ],
     "People & Body": [
       {
-        "emoji": "1f44b",
-        "aliases": [
+        "e": "1f44b",
+        "a": [
           "wave"
         ],
-        "tags": [
+        "t": [
           "goodbye"
         ]
       },
       {
-        "emoji": "1f91a",
-        "aliases": [
+        "e": "1f91a",
+        "a": [
           "raised_back_of_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f590-fe0f",
-        "aliases": [
+        "e": "1f590-fe0f",
+        "a": [
           "raised_hand_with_fingers_splayed"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "270b",
-        "aliases": [
+        "e": "270b",
+        "a": [
           "hand",
           "raised_hand"
         ],
-        "tags": [
+        "t": [
           "highfive",
           "stop"
         ]
       },
       {
-        "emoji": "1f596",
-        "aliases": [
+        "e": "1f596",
+        "a": [
           "vulcan_salute"
         ],
-        "tags": [
+        "t": [
           "prosper",
           "spock"
         ]
       },
       {
-        "emoji": "1faf1",
-        "aliases": [
+        "e": "1faf1",
+        "a": [
           "rightwards_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faf2",
-        "aliases": [
+        "e": "1faf2",
+        "a": [
           "leftwards_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faf3",
-        "aliases": [
+        "e": "1faf3",
+        "a": [
           "palm_down_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faf4",
-        "aliases": [
+        "e": "1faf4",
+        "a": [
           "palm_up_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faf7",
-        "aliases": [
+        "e": "1faf7",
+        "a": [
           "leftwards_pushing_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faf8",
-        "aliases": [
+        "e": "1faf8",
+        "a": [
           "rightwards_pushing_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f44c",
-        "aliases": [
+        "e": "1f44c",
+        "a": [
           "ok_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f90c",
-        "aliases": [
+        "e": "1f90c",
+        "a": [
           "pinched_fingers"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f90f",
-        "aliases": [
+        "e": "1f90f",
+        "a": [
           "pinching_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "270c-fe0f",
-        "aliases": [
+        "e": "270c-fe0f",
+        "a": [
           "v"
         ],
-        "tags": [
+        "t": [
           "victory",
           "peace"
         ]
       },
       {
-        "emoji": "1f91e",
-        "aliases": [
+        "e": "1f91e",
+        "a": [
           "crossed_fingers"
         ],
-        "tags": [
+        "t": [
           "luck",
           "hopeful"
         ]
       },
       {
-        "emoji": "1faf0",
-        "aliases": [
+        "e": "1faf0",
+        "a": [
           "hand_with_index_finger_and_thumb_crossed"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f91f",
-        "aliases": [
+        "e": "1f91f",
+        "a": [
           "love_you_gesture"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f918",
-        "aliases": [
+        "e": "1f918",
+        "a": [
           "metal"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f919",
-        "aliases": [
+        "e": "1f919",
+        "a": [
           "call_me_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f448",
-        "aliases": [
+        "e": "1f448",
+        "a": [
           "point_left"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f449",
-        "aliases": [
+        "e": "1f449",
+        "a": [
           "point_right"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f446",
-        "aliases": [
+        "e": "1f446",
+        "a": [
           "point_up_2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f595",
-        "aliases": [
+        "e": "1f595",
+        "a": [
           "middle_finger",
           "fu"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f447",
-        "aliases": [
+        "e": "1f447",
+        "a": [
           "point_down"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "261d-fe0f",
-        "aliases": [
+        "e": "261d-fe0f",
+        "a": [
           "point_up"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faf5",
-        "aliases": [
+        "e": "1faf5",
+        "a": [
           "index_pointing_at_the_viewer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f44d",
-        "aliases": [
+        "e": "1f44d",
+        "a": [
           "+1",
           "thumbsup"
         ],
-        "tags": [
+        "t": [
           "approve",
           "ok"
         ]
       },
       {
-        "emoji": "1f44e",
-        "aliases": [
+        "e": "1f44e",
+        "a": [
           "-1",
           "thumbsdown"
         ],
-        "tags": [
+        "t": [
           "disapprove",
           "bury"
         ]
       },
       {
-        "emoji": "270a",
-        "aliases": [
+        "e": "270a",
+        "a": [
           "fist_raised",
           "fist"
         ],
-        "tags": [
+        "t": [
           "power"
         ]
       },
       {
-        "emoji": "1f44a",
-        "aliases": [
+        "e": "1f44a",
+        "a": [
           "fist_oncoming",
           "facepunch",
           "punch"
         ],
-        "tags": [
+        "t": [
           "attack"
         ]
       },
       {
-        "emoji": "1f91b",
-        "aliases": [
+        "e": "1f91b",
+        "a": [
           "fist_left"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f91c",
-        "aliases": [
+        "e": "1f91c",
+        "a": [
           "fist_right"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f44f",
-        "aliases": [
+        "e": "1f44f",
+        "a": [
           "clap"
         ],
-        "tags": [
+        "t": [
           "praise",
           "applause"
         ]
       },
       {
-        "emoji": "1f64c",
-        "aliases": [
+        "e": "1f64c",
+        "a": [
           "raised_hands"
         ],
-        "tags": [
+        "t": [
           "hooray"
         ]
       },
       {
-        "emoji": "1faf6",
-        "aliases": [
+        "e": "1faf6",
+        "a": [
           "heart_hands"
         ],
-        "tags": [
+        "t": [
           "love"
         ]
       },
       {
-        "emoji": "1f450",
-        "aliases": [
+        "e": "1f450",
+        "a": [
           "open_hands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f932",
-        "aliases": [
+        "e": "1f932",
+        "a": [
           "palms_up_together"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f91d",
-        "aliases": [
+        "e": "1f91d",
+        "a": [
           "handshake"
         ],
-        "tags": [
+        "t": [
           "deal"
         ]
       },
       {
-        "emoji": "1f64f",
-        "aliases": [
+        "e": "1f64f",
+        "a": [
           "pray"
         ],
-        "tags": [
+        "t": [
           "please",
           "hope",
           "wish"
         ]
       },
       {
-        "emoji": "270d-fe0f",
-        "aliases": [
+        "e": "270d-fe0f",
+        "a": [
           "writing_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f485",
-        "aliases": [
+        "e": "1f485",
+        "a": [
           "nail_care"
         ],
-        "tags": [
+        "t": [
           "beauty",
           "manicure"
         ]
       },
       {
-        "emoji": "1f933",
-        "aliases": [
+        "e": "1f933",
+        "a": [
           "selfie"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4aa",
-        "aliases": [
+        "e": "1f4aa",
+        "a": [
           "muscle"
         ],
-        "tags": [
+        "t": [
           "flex",
           "bicep",
           "strong",
@@ -1813,2478 +1813,2478 @@ export const gfmUnicode = {
         ]
       },
       {
-        "emoji": "1f9be",
-        "aliases": [
+        "e": "1f9be",
+        "a": [
           "mechanical_arm"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9bf",
-        "aliases": [
+        "e": "1f9bf",
+        "a": [
           "mechanical_leg"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9b5",
-        "aliases": [
+        "e": "1f9b5",
+        "a": [
           "leg"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9b6",
-        "aliases": [
+        "e": "1f9b6",
+        "a": [
           "foot"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f442",
-        "aliases": [
+        "e": "1f442",
+        "a": [
           "ear"
         ],
-        "tags": [
+        "t": [
           "hear",
           "sound",
           "listen"
         ]
       },
       {
-        "emoji": "1f9bb",
-        "aliases": [
+        "e": "1f9bb",
+        "a": [
           "ear_with_hearing_aid"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f443",
-        "aliases": [
+        "e": "1f443",
+        "a": [
           "nose"
         ],
-        "tags": [
+        "t": [
           "smell"
         ]
       },
       {
-        "emoji": "1f9e0",
-        "aliases": [
+        "e": "1f9e0",
+        "a": [
           "brain"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fac0",
-        "aliases": [
+        "e": "1fac0",
+        "a": [
           "anatomical_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fac1",
-        "aliases": [
+        "e": "1fac1",
+        "a": [
           "lungs"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9b7",
-        "aliases": [
+        "e": "1f9b7",
+        "a": [
           "tooth"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9b4",
-        "aliases": [
+        "e": "1f9b4",
+        "a": [
           "bone"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f440",
-        "aliases": [
+        "e": "1f440",
+        "a": [
           "eyes"
         ],
-        "tags": [
+        "t": [
           "look",
           "see",
           "watch"
         ]
       },
       {
-        "emoji": "1f441-fe0f",
-        "aliases": [
+        "e": "1f441-fe0f",
+        "a": [
           "eye"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f445",
-        "aliases": [
+        "e": "1f445",
+        "a": [
           "tongue"
         ],
-        "tags": [
+        "t": [
           "taste"
         ]
       },
       {
-        "emoji": "1f444",
-        "aliases": [
+        "e": "1f444",
+        "a": [
           "lips"
         ],
-        "tags": [
+        "t": [
           "kiss"
         ]
       },
       {
-        "emoji": "1fae6",
-        "aliases": [
+        "e": "1fae6",
+        "a": [
           "biting_lip"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f476",
-        "aliases": [
+        "e": "1f476",
+        "a": [
           "baby"
         ],
-        "tags": [
+        "t": [
           "child",
           "newborn"
         ]
       },
       {
-        "emoji": "1f9d2",
-        "aliases": [
+        "e": "1f9d2",
+        "a": [
           "child"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f466",
-        "aliases": [
+        "e": "1f466",
+        "a": [
           "boy"
         ],
-        "tags": [
+        "t": [
           "child"
         ]
       },
       {
-        "emoji": "1f467",
-        "aliases": [
+        "e": "1f467",
+        "a": [
           "girl"
         ],
-        "tags": [
+        "t": [
           "child"
         ]
       },
       {
-        "emoji": "1f9d1",
-        "aliases": [
+        "e": "1f9d1",
+        "a": [
           "adult"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f471",
-        "aliases": [
+        "e": "1f471",
+        "a": [
           "blond_haired_person"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468",
-        "aliases": [
+        "e": "1f468",
+        "a": [
           "man"
         ],
-        "tags": [
+        "t": [
           "mustache",
           "father",
           "dad"
         ]
       },
       {
-        "emoji": "1f9d4",
-        "aliases": [
+        "e": "1f9d4",
+        "a": [
           "bearded_person"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d4-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9d4-200d-2642-fe0f",
+        "a": [
           "man_beard"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d4-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9d4-200d-2640-fe0f",
+        "a": [
           "woman_beard"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f9b0",
-        "aliases": [
+        "e": "1f468-200d-1f9b0",
+        "a": [
           "red_haired_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f9b1",
-        "aliases": [
+        "e": "1f468-200d-1f9b1",
+        "a": [
           "curly_haired_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f9b3",
-        "aliases": [
+        "e": "1f468-200d-1f9b3",
+        "a": [
           "white_haired_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f9b2",
-        "aliases": [
+        "e": "1f468-200d-1f9b2",
+        "a": [
           "bald_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469",
-        "aliases": [
+        "e": "1f469",
+        "a": [
           "woman"
         ],
-        "tags": [
+        "t": [
           "girls"
         ]
       },
       {
-        "emoji": "1f469-200d-1f9b0",
-        "aliases": [
+        "e": "1f469-200d-1f9b0",
+        "a": [
           "red_haired_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f9b0",
-        "aliases": [
+        "e": "1f9d1-200d-1f9b0",
+        "a": [
           "person_red_hair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f9b1",
-        "aliases": [
+        "e": "1f469-200d-1f9b1",
+        "a": [
           "curly_haired_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f9b1",
-        "aliases": [
+        "e": "1f9d1-200d-1f9b1",
+        "a": [
           "person_curly_hair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f9b3",
-        "aliases": [
+        "e": "1f469-200d-1f9b3",
+        "a": [
           "white_haired_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f9b3",
-        "aliases": [
+        "e": "1f9d1-200d-1f9b3",
+        "a": [
           "person_white_hair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f9b2",
-        "aliases": [
+        "e": "1f469-200d-1f9b2",
+        "a": [
           "bald_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f9b2",
-        "aliases": [
+        "e": "1f9d1-200d-1f9b2",
+        "a": [
           "person_bald"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f471-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f471-200d-2640-fe0f",
+        "a": [
           "blond_haired_woman",
           "blonde_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f471-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f471-200d-2642-fe0f",
+        "a": [
           "blond_haired_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d3",
-        "aliases": [
+        "e": "1f9d3",
+        "a": [
           "older_adult"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f474",
-        "aliases": [
+        "e": "1f474",
+        "a": [
           "older_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f475",
-        "aliases": [
+        "e": "1f475",
+        "a": [
           "older_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f64d",
-        "aliases": [
+        "e": "1f64d",
+        "a": [
           "frowning_person"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f64d-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f64d-200d-2642-fe0f",
+        "a": [
           "frowning_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f64d-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f64d-200d-2640-fe0f",
+        "a": [
           "frowning_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f64e",
-        "aliases": [
+        "e": "1f64e",
+        "a": [
           "pouting_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f64e-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f64e-200d-2642-fe0f",
+        "a": [
           "pouting_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f64e-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f64e-200d-2640-fe0f",
+        "a": [
           "pouting_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f645",
-        "aliases": [
+        "e": "1f645",
+        "a": [
           "no_good"
         ],
-        "tags": [
+        "t": [
           "stop",
           "halt",
           "denied"
         ]
       },
       {
-        "emoji": "1f645-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f645-200d-2642-fe0f",
+        "a": [
           "no_good_man",
           "ng_man"
         ],
-        "tags": [
+        "t": [
           "stop",
           "halt",
           "denied"
         ]
       },
       {
-        "emoji": "1f645-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f645-200d-2640-fe0f",
+        "a": [
           "no_good_woman",
           "ng_woman"
         ],
-        "tags": [
+        "t": [
           "stop",
           "halt",
           "denied"
         ]
       },
       {
-        "emoji": "1f646",
-        "aliases": [
+        "e": "1f646",
+        "a": [
           "ok_person"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f646-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f646-200d-2642-fe0f",
+        "a": [
           "ok_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f646-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f646-200d-2640-fe0f",
+        "a": [
           "ok_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f481",
-        "aliases": [
+        "e": "1f481",
+        "a": [
           "tipping_hand_person",
           "information_desk_person"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f481-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f481-200d-2642-fe0f",
+        "a": [
           "tipping_hand_man",
           "sassy_man"
         ],
-        "tags": [
+        "t": [
           "information"
         ]
       },
       {
-        "emoji": "1f481-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f481-200d-2640-fe0f",
+        "a": [
           "tipping_hand_woman",
           "sassy_woman"
         ],
-        "tags": [
+        "t": [
           "information"
         ]
       },
       {
-        "emoji": "1f64b",
-        "aliases": [
+        "e": "1f64b",
+        "a": [
           "raising_hand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f64b-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f64b-200d-2642-fe0f",
+        "a": [
           "raising_hand_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f64b-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f64b-200d-2640-fe0f",
+        "a": [
           "raising_hand_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9cf",
-        "aliases": [
+        "e": "1f9cf",
+        "a": [
           "deaf_person"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9cf-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9cf-200d-2642-fe0f",
+        "a": [
           "deaf_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9cf-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9cf-200d-2640-fe0f",
+        "a": [
           "deaf_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f647",
-        "aliases": [
+        "e": "1f647",
+        "a": [
           "bow"
         ],
-        "tags": [
+        "t": [
           "respect",
           "thanks"
         ]
       },
       {
-        "emoji": "1f647-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f647-200d-2642-fe0f",
+        "a": [
           "bowing_man"
         ],
-        "tags": [
+        "t": [
           "respect",
           "thanks"
         ]
       },
       {
-        "emoji": "1f647-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f647-200d-2640-fe0f",
+        "a": [
           "bowing_woman"
         ],
-        "tags": [
+        "t": [
           "respect",
           "thanks"
         ]
       },
       {
-        "emoji": "1f926",
-        "aliases": [
+        "e": "1f926",
+        "a": [
           "facepalm"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f926-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f926-200d-2642-fe0f",
+        "a": [
           "man_facepalming"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f926-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f926-200d-2640-fe0f",
+        "a": [
           "woman_facepalming"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f937",
-        "aliases": [
+        "e": "1f937",
+        "a": [
           "shrug"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f937-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f937-200d-2642-fe0f",
+        "a": [
           "man_shrugging"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f937-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f937-200d-2640-fe0f",
+        "a": [
           "woman_shrugging"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-2695-fe0f",
-        "aliases": [
+        "e": "1f9d1-200d-2695-fe0f",
+        "a": [
           "health_worker"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-2695-fe0f",
-        "aliases": [
+        "e": "1f468-200d-2695-fe0f",
+        "a": [
           "man_health_worker"
         ],
-        "tags": [
+        "t": [
           "doctor",
           "nurse"
         ]
       },
       {
-        "emoji": "1f469-200d-2695-fe0f",
-        "aliases": [
+        "e": "1f469-200d-2695-fe0f",
+        "a": [
           "woman_health_worker"
         ],
-        "tags": [
+        "t": [
           "doctor",
           "nurse"
         ]
       },
       {
-        "emoji": "1f9d1-200d-1f393",
-        "aliases": [
+        "e": "1f9d1-200d-1f393",
+        "a": [
           "student"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f393",
-        "aliases": [
+        "e": "1f468-200d-1f393",
+        "a": [
           "man_student"
         ],
-        "tags": [
+        "t": [
           "graduation"
         ]
       },
       {
-        "emoji": "1f469-200d-1f393",
-        "aliases": [
+        "e": "1f469-200d-1f393",
+        "a": [
           "woman_student"
         ],
-        "tags": [
+        "t": [
           "graduation"
         ]
       },
       {
-        "emoji": "1f9d1-200d-1f3eb",
-        "aliases": [
+        "e": "1f9d1-200d-1f3eb",
+        "a": [
           "teacher"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f3eb",
-        "aliases": [
+        "e": "1f468-200d-1f3eb",
+        "a": [
           "man_teacher"
         ],
-        "tags": [
+        "t": [
           "school",
           "professor"
         ]
       },
       {
-        "emoji": "1f469-200d-1f3eb",
-        "aliases": [
+        "e": "1f469-200d-1f3eb",
+        "a": [
           "woman_teacher"
         ],
-        "tags": [
+        "t": [
           "school",
           "professor"
         ]
       },
       {
-        "emoji": "1f9d1-200d-2696-fe0f",
-        "aliases": [
+        "e": "1f9d1-200d-2696-fe0f",
+        "a": [
           "judge"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-2696-fe0f",
-        "aliases": [
+        "e": "1f468-200d-2696-fe0f",
+        "a": [
           "man_judge"
         ],
-        "tags": [
+        "t": [
           "justice"
         ]
       },
       {
-        "emoji": "1f469-200d-2696-fe0f",
-        "aliases": [
+        "e": "1f469-200d-2696-fe0f",
+        "a": [
           "woman_judge"
         ],
-        "tags": [
+        "t": [
           "justice"
         ]
       },
       {
-        "emoji": "1f9d1-200d-1f33e",
-        "aliases": [
+        "e": "1f9d1-200d-1f33e",
+        "a": [
           "farmer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f33e",
-        "aliases": [
+        "e": "1f468-200d-1f33e",
+        "a": [
           "man_farmer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f33e",
-        "aliases": [
+        "e": "1f469-200d-1f33e",
+        "a": [
           "woman_farmer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f373",
-        "aliases": [
+        "e": "1f9d1-200d-1f373",
+        "a": [
           "cook"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f373",
-        "aliases": [
+        "e": "1f468-200d-1f373",
+        "a": [
           "man_cook"
         ],
-        "tags": [
+        "t": [
           "chef"
         ]
       },
       {
-        "emoji": "1f469-200d-1f373",
-        "aliases": [
+        "e": "1f469-200d-1f373",
+        "a": [
           "woman_cook"
         ],
-        "tags": [
+        "t": [
           "chef"
         ]
       },
       {
-        "emoji": "1f9d1-200d-1f527",
-        "aliases": [
+        "e": "1f9d1-200d-1f527",
+        "a": [
           "mechanic"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f527",
-        "aliases": [
+        "e": "1f468-200d-1f527",
+        "a": [
           "man_mechanic"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f527",
-        "aliases": [
+        "e": "1f469-200d-1f527",
+        "a": [
           "woman_mechanic"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f3ed",
-        "aliases": [
+        "e": "1f9d1-200d-1f3ed",
+        "a": [
           "factory_worker"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f3ed",
-        "aliases": [
+        "e": "1f468-200d-1f3ed",
+        "a": [
           "man_factory_worker"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f3ed",
-        "aliases": [
+        "e": "1f469-200d-1f3ed",
+        "a": [
           "woman_factory_worker"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f4bc",
-        "aliases": [
+        "e": "1f9d1-200d-1f4bc",
+        "a": [
           "office_worker"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f4bc",
-        "aliases": [
+        "e": "1f468-200d-1f4bc",
+        "a": [
           "man_office_worker"
         ],
-        "tags": [
+        "t": [
           "business"
         ]
       },
       {
-        "emoji": "1f469-200d-1f4bc",
-        "aliases": [
+        "e": "1f469-200d-1f4bc",
+        "a": [
           "woman_office_worker"
         ],
-        "tags": [
+        "t": [
           "business"
         ]
       },
       {
-        "emoji": "1f9d1-200d-1f52c",
-        "aliases": [
+        "e": "1f9d1-200d-1f52c",
+        "a": [
           "scientist"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f52c",
-        "aliases": [
+        "e": "1f468-200d-1f52c",
+        "a": [
           "man_scientist"
         ],
-        "tags": [
+        "t": [
           "research"
         ]
       },
       {
-        "emoji": "1f469-200d-1f52c",
-        "aliases": [
+        "e": "1f469-200d-1f52c",
+        "a": [
           "woman_scientist"
         ],
-        "tags": [
+        "t": [
           "research"
         ]
       },
       {
-        "emoji": "1f9d1-200d-1f4bb",
-        "aliases": [
+        "e": "1f9d1-200d-1f4bb",
+        "a": [
           "technologist"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f4bb",
-        "aliases": [
+        "e": "1f468-200d-1f4bb",
+        "a": [
           "man_technologist"
         ],
-        "tags": [
+        "t": [
           "coder"
         ]
       },
       {
-        "emoji": "1f469-200d-1f4bb",
-        "aliases": [
+        "e": "1f469-200d-1f4bb",
+        "a": [
           "woman_technologist"
         ],
-        "tags": [
+        "t": [
           "coder"
         ]
       },
       {
-        "emoji": "1f9d1-200d-1f3a4",
-        "aliases": [
+        "e": "1f9d1-200d-1f3a4",
+        "a": [
           "singer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f3a4",
-        "aliases": [
+        "e": "1f468-200d-1f3a4",
+        "a": [
           "man_singer"
         ],
-        "tags": [
+        "t": [
           "rockstar"
         ]
       },
       {
-        "emoji": "1f469-200d-1f3a4",
-        "aliases": [
+        "e": "1f469-200d-1f3a4",
+        "a": [
           "woman_singer"
         ],
-        "tags": [
+        "t": [
           "rockstar"
         ]
       },
       {
-        "emoji": "1f9d1-200d-1f3a8",
-        "aliases": [
+        "e": "1f9d1-200d-1f3a8",
+        "a": [
           "artist"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f3a8",
-        "aliases": [
+        "e": "1f468-200d-1f3a8",
+        "a": [
           "man_artist"
         ],
-        "tags": [
+        "t": [
           "painter"
         ]
       },
       {
-        "emoji": "1f469-200d-1f3a8",
-        "aliases": [
+        "e": "1f469-200d-1f3a8",
+        "a": [
           "woman_artist"
         ],
-        "tags": [
+        "t": [
           "painter"
         ]
       },
       {
-        "emoji": "1f9d1-200d-2708-fe0f",
-        "aliases": [
+        "e": "1f9d1-200d-2708-fe0f",
+        "a": [
           "pilot"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-2708-fe0f",
-        "aliases": [
+        "e": "1f468-200d-2708-fe0f",
+        "a": [
           "man_pilot"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-2708-fe0f",
-        "aliases": [
+        "e": "1f469-200d-2708-fe0f",
+        "a": [
           "woman_pilot"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f680",
-        "aliases": [
+        "e": "1f9d1-200d-1f680",
+        "a": [
           "astronaut"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f680",
-        "aliases": [
+        "e": "1f468-200d-1f680",
+        "a": [
           "man_astronaut"
         ],
-        "tags": [
+        "t": [
           "space"
         ]
       },
       {
-        "emoji": "1f469-200d-1f680",
-        "aliases": [
+        "e": "1f469-200d-1f680",
+        "a": [
           "woman_astronaut"
         ],
-        "tags": [
+        "t": [
           "space"
         ]
       },
       {
-        "emoji": "1f9d1-200d-1f692",
-        "aliases": [
+        "e": "1f9d1-200d-1f692",
+        "a": [
           "firefighter"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f692",
-        "aliases": [
+        "e": "1f468-200d-1f692",
+        "a": [
           "man_firefighter"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f692",
-        "aliases": [
+        "e": "1f469-200d-1f692",
+        "a": [
           "woman_firefighter"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f46e",
-        "aliases": [
+        "e": "1f46e",
+        "a": [
           "police_officer",
           "cop"
         ],
-        "tags": [
+        "t": [
           "law"
         ]
       },
       {
-        "emoji": "1f46e-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f46e-200d-2642-fe0f",
+        "a": [
           "policeman"
         ],
-        "tags": [
+        "t": [
           "law",
           "cop"
         ]
       },
       {
-        "emoji": "1f46e-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f46e-200d-2640-fe0f",
+        "a": [
           "policewoman"
         ],
-        "tags": [
+        "t": [
           "law",
           "cop"
         ]
       },
       {
-        "emoji": "1f575-fe0f",
-        "aliases": [
+        "e": "1f575-fe0f",
+        "a": [
           "detective"
         ],
-        "tags": [
+        "t": [
           "sleuth"
         ]
       },
       {
-        "emoji": "1f575-fe0f-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f575-fe0f-200d-2642-fe0f",
+        "a": [
           "male_detective"
         ],
-        "tags": [
+        "t": [
           "sleuth"
         ]
       },
       {
-        "emoji": "1f575-fe0f-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f575-fe0f-200d-2640-fe0f",
+        "a": [
           "female_detective"
         ],
-        "tags": [
+        "t": [
           "sleuth"
         ]
       },
       {
-        "emoji": "1f482",
-        "aliases": [
+        "e": "1f482",
+        "a": [
           "guard"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f482-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f482-200d-2642-fe0f",
+        "a": [
           "guardsman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f482-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f482-200d-2640-fe0f",
+        "a": [
           "guardswoman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f977",
-        "aliases": [
+        "e": "1f977",
+        "a": [
           "ninja"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f477",
-        "aliases": [
+        "e": "1f477",
+        "a": [
           "construction_worker"
         ],
-        "tags": [
+        "t": [
           "helmet"
         ]
       },
       {
-        "emoji": "1f477-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f477-200d-2642-fe0f",
+        "a": [
           "construction_worker_man"
         ],
-        "tags": [
+        "t": [
           "helmet"
         ]
       },
       {
-        "emoji": "1f477-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f477-200d-2640-fe0f",
+        "a": [
           "construction_worker_woman"
         ],
-        "tags": [
+        "t": [
           "helmet"
         ]
       },
       {
-        "emoji": "1fac5",
-        "aliases": [
+        "e": "1fac5",
+        "a": [
           "person_with_crown"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f934",
-        "aliases": [
+        "e": "1f934",
+        "a": [
           "prince"
         ],
-        "tags": [
+        "t": [
           "crown",
           "royal"
         ]
       },
       {
-        "emoji": "1f478",
-        "aliases": [
+        "e": "1f478",
+        "a": [
           "princess"
         ],
-        "tags": [
+        "t": [
           "crown",
           "royal"
         ]
       },
       {
-        "emoji": "1f473",
-        "aliases": [
+        "e": "1f473",
+        "a": [
           "person_with_turban"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f473-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f473-200d-2642-fe0f",
+        "a": [
           "man_with_turban"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f473-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f473-200d-2640-fe0f",
+        "a": [
           "woman_with_turban"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f472",
-        "aliases": [
+        "e": "1f472",
+        "a": [
           "man_with_gua_pi_mao"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d5",
-        "aliases": [
+        "e": "1f9d5",
+        "a": [
           "woman_with_headscarf"
         ],
-        "tags": [
+        "t": [
           "hijab"
         ]
       },
       {
-        "emoji": "1f935",
-        "aliases": [
+        "e": "1f935",
+        "a": [
           "person_in_tuxedo"
         ],
-        "tags": [
+        "t": [
           "groom",
           "marriage",
           "wedding"
         ]
       },
       {
-        "emoji": "1f935-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f935-200d-2642-fe0f",
+        "a": [
           "man_in_tuxedo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f935-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f935-200d-2640-fe0f",
+        "a": [
           "woman_in_tuxedo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f470",
-        "aliases": [
+        "e": "1f470",
+        "a": [
           "person_with_veil"
         ],
-        "tags": [
+        "t": [
           "marriage",
           "wedding"
         ]
       },
       {
-        "emoji": "1f470-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f470-200d-2642-fe0f",
+        "a": [
           "man_with_veil"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f470-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f470-200d-2640-fe0f",
+        "a": [
           "woman_with_veil",
           "bride_with_veil"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f930",
-        "aliases": [
+        "e": "1f930",
+        "a": [
           "pregnant_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fac3",
-        "aliases": [
+        "e": "1fac3",
+        "a": [
           "pregnant_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fac4",
-        "aliases": [
+        "e": "1fac4",
+        "a": [
           "pregnant_person"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f931",
-        "aliases": [
+        "e": "1f931",
+        "a": [
           "breast_feeding"
         ],
-        "tags": [
+        "t": [
           "nursing"
         ]
       },
       {
-        "emoji": "1f469-200d-1f37c",
-        "aliases": [
+        "e": "1f469-200d-1f37c",
+        "a": [
           "woman_feeding_baby"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f37c",
-        "aliases": [
+        "e": "1f468-200d-1f37c",
+        "a": [
           "man_feeding_baby"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f37c",
-        "aliases": [
+        "e": "1f9d1-200d-1f37c",
+        "a": [
           "person_feeding_baby"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f47c",
-        "aliases": [
+        "e": "1f47c",
+        "a": [
           "angel"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f385",
-        "aliases": [
+        "e": "1f385",
+        "a": [
           "santa"
         ],
-        "tags": [
+        "t": [
           "christmas"
         ]
       },
       {
-        "emoji": "1f936",
-        "aliases": [
+        "e": "1f936",
+        "a": [
           "mrs_claus"
         ],
-        "tags": [
+        "t": [
           "santa"
         ]
       },
       {
-        "emoji": "1f9d1-200d-1f384",
-        "aliases": [
+        "e": "1f9d1-200d-1f384",
+        "a": [
           "mx_claus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9b8",
-        "aliases": [
+        "e": "1f9b8",
+        "a": [
           "superhero"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9b8-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9b8-200d-2642-fe0f",
+        "a": [
           "superhero_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9b8-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9b8-200d-2640-fe0f",
+        "a": [
           "superhero_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9b9",
-        "aliases": [
+        "e": "1f9b9",
+        "a": [
           "supervillain"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9b9-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9b9-200d-2642-fe0f",
+        "a": [
           "supervillain_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9b9-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9b9-200d-2640-fe0f",
+        "a": [
           "supervillain_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d9",
-        "aliases": [
+        "e": "1f9d9",
+        "a": [
           "mage"
         ],
-        "tags": [
+        "t": [
           "wizard"
         ]
       },
       {
-        "emoji": "1f9d9-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9d9-200d-2642-fe0f",
+        "a": [
           "mage_man"
         ],
-        "tags": [
+        "t": [
           "wizard"
         ]
       },
       {
-        "emoji": "1f9d9-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9d9-200d-2640-fe0f",
+        "a": [
           "mage_woman"
         ],
-        "tags": [
+        "t": [
           "wizard"
         ]
       },
       {
-        "emoji": "1f9da",
-        "aliases": [
+        "e": "1f9da",
+        "a": [
           "fairy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9da-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9da-200d-2642-fe0f",
+        "a": [
           "fairy_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9da-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9da-200d-2640-fe0f",
+        "a": [
           "fairy_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9db",
-        "aliases": [
+        "e": "1f9db",
+        "a": [
           "vampire"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9db-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9db-200d-2642-fe0f",
+        "a": [
           "vampire_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9db-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9db-200d-2640-fe0f",
+        "a": [
           "vampire_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9dc",
-        "aliases": [
+        "e": "1f9dc",
+        "a": [
           "merperson"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9dc-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9dc-200d-2642-fe0f",
+        "a": [
           "merman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9dc-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9dc-200d-2640-fe0f",
+        "a": [
           "mermaid"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9dd",
-        "aliases": [
+        "e": "1f9dd",
+        "a": [
           "elf"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9dd-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9dd-200d-2642-fe0f",
+        "a": [
           "elf_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9dd-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9dd-200d-2640-fe0f",
+        "a": [
           "elf_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9de",
-        "aliases": [
+        "e": "1f9de",
+        "a": [
           "genie"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9de-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9de-200d-2642-fe0f",
+        "a": [
           "genie_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9de-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9de-200d-2640-fe0f",
+        "a": [
           "genie_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9df",
-        "aliases": [
+        "e": "1f9df",
+        "a": [
           "zombie"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9df-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9df-200d-2642-fe0f",
+        "a": [
           "zombie_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9df-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9df-200d-2640-fe0f",
+        "a": [
           "zombie_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9cc",
-        "aliases": [
+        "e": "1f9cc",
+        "a": [
           "troll"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f486",
-        "aliases": [
+        "e": "1f486",
+        "a": [
           "massage"
         ],
-        "tags": [
+        "t": [
           "spa"
         ]
       },
       {
-        "emoji": "1f486-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f486-200d-2642-fe0f",
+        "a": [
           "massage_man"
         ],
-        "tags": [
+        "t": [
           "spa"
         ]
       },
       {
-        "emoji": "1f486-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f486-200d-2640-fe0f",
+        "a": [
           "massage_woman"
         ],
-        "tags": [
+        "t": [
           "spa"
         ]
       },
       {
-        "emoji": "1f487",
-        "aliases": [
+        "e": "1f487",
+        "a": [
           "haircut"
         ],
-        "tags": [
+        "t": [
           "beauty"
         ]
       },
       {
-        "emoji": "1f487-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f487-200d-2642-fe0f",
+        "a": [
           "haircut_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f487-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f487-200d-2640-fe0f",
+        "a": [
           "haircut_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b6",
-        "aliases": [
+        "e": "1f6b6",
+        "a": [
           "walking"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b6-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f6b6-200d-2642-fe0f",
+        "a": [
           "walking_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b6-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f6b6-200d-2640-fe0f",
+        "a": [
           "walking_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9cd",
-        "aliases": [
+        "e": "1f9cd",
+        "a": [
           "standing_person"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9cd-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9cd-200d-2642-fe0f",
+        "a": [
           "standing_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9cd-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9cd-200d-2640-fe0f",
+        "a": [
           "standing_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ce",
-        "aliases": [
+        "e": "1f9ce",
+        "a": [
           "kneeling_person"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ce-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9ce-200d-2642-fe0f",
+        "a": [
           "kneeling_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ce-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9ce-200d-2640-fe0f",
+        "a": [
           "kneeling_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f9af",
-        "aliases": [
+        "e": "1f9d1-200d-1f9af",
+        "a": [
           "person_with_probing_cane"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f9af",
-        "aliases": [
+        "e": "1f468-200d-1f9af",
+        "a": [
           "man_with_probing_cane"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f9af",
-        "aliases": [
+        "e": "1f469-200d-1f9af",
+        "a": [
           "woman_with_probing_cane"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f9bc",
-        "aliases": [
+        "e": "1f9d1-200d-1f9bc",
+        "a": [
           "person_in_motorized_wheelchair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f9bc",
-        "aliases": [
+        "e": "1f468-200d-1f9bc",
+        "a": [
           "man_in_motorized_wheelchair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f9bc",
-        "aliases": [
+        "e": "1f469-200d-1f9bc",
+        "a": [
           "woman_in_motorized_wheelchair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f9bd",
-        "aliases": [
+        "e": "1f9d1-200d-1f9bd",
+        "a": [
           "person_in_manual_wheelchair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f9bd",
-        "aliases": [
+        "e": "1f468-200d-1f9bd",
+        "a": [
           "man_in_manual_wheelchair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f9bd",
-        "aliases": [
+        "e": "1f469-200d-1f9bd",
+        "a": [
           "woman_in_manual_wheelchair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3c3",
-        "aliases": [
+        "e": "1f3c3",
+        "a": [
           "runner",
           "running"
         ],
-        "tags": [
+        "t": [
           "exercise",
           "workout",
           "marathon"
         ]
       },
       {
-        "emoji": "1f3c3-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f3c3-200d-2642-fe0f",
+        "a": [
           "running_man"
         ],
-        "tags": [
+        "t": [
           "exercise",
           "workout",
           "marathon"
         ]
       },
       {
-        "emoji": "1f3c3-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f3c3-200d-2640-fe0f",
+        "a": [
           "running_woman"
         ],
-        "tags": [
+        "t": [
           "exercise",
           "workout",
           "marathon"
         ]
       },
       {
-        "emoji": "1f483",
-        "aliases": [
+        "e": "1f483",
+        "a": [
           "woman_dancing",
           "dancer"
         ],
-        "tags": [
+        "t": [
           "dress"
         ]
       },
       {
-        "emoji": "1f57a",
-        "aliases": [
+        "e": "1f57a",
+        "a": [
           "man_dancing"
         ],
-        "tags": [
+        "t": [
           "dancer"
         ]
       },
       {
-        "emoji": "1f574-fe0f",
-        "aliases": [
+        "e": "1f574-fe0f",
+        "a": [
           "business_suit_levitating"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f46f",
-        "aliases": [
+        "e": "1f46f",
+        "a": [
           "dancers"
         ],
-        "tags": [
+        "t": [
           "bunny"
         ]
       },
       {
-        "emoji": "1f46f-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f46f-200d-2642-fe0f",
+        "a": [
           "dancing_men"
         ],
-        "tags": [
+        "t": [
           "bunny"
         ]
       },
       {
-        "emoji": "1f46f-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f46f-200d-2640-fe0f",
+        "a": [
           "dancing_women"
         ],
-        "tags": [
+        "t": [
           "bunny"
         ]
       },
       {
-        "emoji": "1f9d6",
-        "aliases": [
+        "e": "1f9d6",
+        "a": [
           "sauna_person"
         ],
-        "tags": [
+        "t": [
           "steamy"
         ]
       },
       {
-        "emoji": "1f9d6-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9d6-200d-2642-fe0f",
+        "a": [
           "sauna_man"
         ],
-        "tags": [
+        "t": [
           "steamy"
         ]
       },
       {
-        "emoji": "1f9d6-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9d6-200d-2640-fe0f",
+        "a": [
           "sauna_woman"
         ],
-        "tags": [
+        "t": [
           "steamy"
         ]
       },
       {
-        "emoji": "1f9d7",
-        "aliases": [
+        "e": "1f9d7",
+        "a": [
           "climbing"
         ],
-        "tags": [
+        "t": [
           "bouldering"
         ]
       },
       {
-        "emoji": "1f9d7-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9d7-200d-2642-fe0f",
+        "a": [
           "climbing_man"
         ],
-        "tags": [
+        "t": [
           "bouldering"
         ]
       },
       {
-        "emoji": "1f9d7-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9d7-200d-2640-fe0f",
+        "a": [
           "climbing_woman"
         ],
-        "tags": [
+        "t": [
           "bouldering"
         ]
       },
       {
-        "emoji": "1f93a",
-        "aliases": [
+        "e": "1f93a",
+        "a": [
           "person_fencing"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3c7",
-        "aliases": [
+        "e": "1f3c7",
+        "a": [
           "horse_racing"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26f7-fe0f",
-        "aliases": [
+        "e": "26f7-fe0f",
+        "a": [
           "skier"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3c2",
-        "aliases": [
+        "e": "1f3c2",
+        "a": [
           "snowboarder"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3cc-fe0f",
-        "aliases": [
+        "e": "1f3cc-fe0f",
+        "a": [
           "golfing"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3cc-fe0f-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f3cc-fe0f-200d-2642-fe0f",
+        "a": [
           "golfing_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3cc-fe0f-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f3cc-fe0f-200d-2640-fe0f",
+        "a": [
           "golfing_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3c4",
-        "aliases": [
+        "e": "1f3c4",
+        "a": [
           "surfer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3c4-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f3c4-200d-2642-fe0f",
+        "a": [
           "surfing_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3c4-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f3c4-200d-2640-fe0f",
+        "a": [
           "surfing_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6a3",
-        "aliases": [
+        "e": "1f6a3",
+        "a": [
           "rowboat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6a3-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f6a3-200d-2642-fe0f",
+        "a": [
           "rowing_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6a3-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f6a3-200d-2640-fe0f",
+        "a": [
           "rowing_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ca",
-        "aliases": [
+        "e": "1f3ca",
+        "a": [
           "swimmer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ca-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f3ca-200d-2642-fe0f",
+        "a": [
           "swimming_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ca-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f3ca-200d-2640-fe0f",
+        "a": [
           "swimming_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26f9-fe0f",
-        "aliases": [
+        "e": "26f9-fe0f",
+        "a": [
           "bouncing_ball_person"
         ],
-        "tags": [
+        "t": [
           "basketball"
         ]
       },
       {
-        "emoji": "26f9-fe0f-200d-2642-fe0f",
-        "aliases": [
+        "e": "26f9-fe0f-200d-2642-fe0f",
+        "a": [
           "bouncing_ball_man",
           "basketball_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26f9-fe0f-200d-2640-fe0f",
-        "aliases": [
+        "e": "26f9-fe0f-200d-2640-fe0f",
+        "a": [
           "bouncing_ball_woman",
           "basketball_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3cb-fe0f",
-        "aliases": [
+        "e": "1f3cb-fe0f",
+        "a": [
           "weight_lifting"
         ],
-        "tags": [
+        "t": [
           "gym",
           "workout"
         ]
       },
       {
-        "emoji": "1f3cb-fe0f-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f3cb-fe0f-200d-2642-fe0f",
+        "a": [
           "weight_lifting_man"
         ],
-        "tags": [
+        "t": [
           "gym",
           "workout"
         ]
       },
       {
-        "emoji": "1f3cb-fe0f-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f3cb-fe0f-200d-2640-fe0f",
+        "a": [
           "weight_lifting_woman"
         ],
-        "tags": [
+        "t": [
           "gym",
           "workout"
         ]
       },
       {
-        "emoji": "1f6b4",
-        "aliases": [
+        "e": "1f6b4",
+        "a": [
           "bicyclist"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b4-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f6b4-200d-2642-fe0f",
+        "a": [
           "biking_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b4-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f6b4-200d-2640-fe0f",
+        "a": [
           "biking_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b5",
-        "aliases": [
+        "e": "1f6b5",
+        "a": [
           "mountain_bicyclist"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b5-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f6b5-200d-2642-fe0f",
+        "a": [
           "mountain_biking_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b5-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f6b5-200d-2640-fe0f",
+        "a": [
           "mountain_biking_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f938",
-        "aliases": [
+        "e": "1f938",
+        "a": [
           "cartwheeling"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f938-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f938-200d-2642-fe0f",
+        "a": [
           "man_cartwheeling"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f938-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f938-200d-2640-fe0f",
+        "a": [
           "woman_cartwheeling"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f93c",
-        "aliases": [
+        "e": "1f93c",
+        "a": [
           "wrestling"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f93c-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f93c-200d-2642-fe0f",
+        "a": [
           "men_wrestling"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f93c-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f93c-200d-2640-fe0f",
+        "a": [
           "women_wrestling"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f93d",
-        "aliases": [
+        "e": "1f93d",
+        "a": [
           "water_polo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f93d-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f93d-200d-2642-fe0f",
+        "a": [
           "man_playing_water_polo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f93d-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f93d-200d-2640-fe0f",
+        "a": [
           "woman_playing_water_polo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f93e",
-        "aliases": [
+        "e": "1f93e",
+        "a": [
           "handball_person"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f93e-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f93e-200d-2642-fe0f",
+        "a": [
           "man_playing_handball"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f93e-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f93e-200d-2640-fe0f",
+        "a": [
           "woman_playing_handball"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f939",
-        "aliases": [
+        "e": "1f939",
+        "a": [
           "juggling_person"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f939-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f939-200d-2642-fe0f",
+        "a": [
           "man_juggling"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f939-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f939-200d-2640-fe0f",
+        "a": [
           "woman_juggling"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d8",
-        "aliases": [
+        "e": "1f9d8",
+        "a": [
           "lotus_position"
         ],
-        "tags": [
+        "t": [
           "meditation"
         ]
       },
       {
-        "emoji": "1f9d8-200d-2642-fe0f",
-        "aliases": [
+        "e": "1f9d8-200d-2642-fe0f",
+        "a": [
           "lotus_position_man"
         ],
-        "tags": [
+        "t": [
           "meditation"
         ]
       },
       {
-        "emoji": "1f9d8-200d-2640-fe0f",
-        "aliases": [
+        "e": "1f9d8-200d-2640-fe0f",
+        "a": [
           "lotus_position_woman"
         ],
-        "tags": [
+        "t": [
           "meditation"
         ]
       },
       {
-        "emoji": "1f6c0",
-        "aliases": [
+        "e": "1f6c0",
+        "a": [
           "bath"
         ],
-        "tags": [
+        "t": [
           "shower"
         ]
       },
       {
-        "emoji": "1f6cc",
-        "aliases": [
+        "e": "1f6cc",
+        "a": [
           "sleeping_bed"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9d1-200d-1f91d-200d-1f9d1",
-        "aliases": [
+        "e": "1f9d1-200d-1f91d-200d-1f9d1",
+        "a": [
           "people_holding_hands"
         ],
-        "tags": [
+        "t": [
           "couple",
           "date"
         ]
       },
       {
-        "emoji": "1f46d",
-        "aliases": [
+        "e": "1f46d",
+        "a": [
           "two_women_holding_hands"
         ],
-        "tags": [
+        "t": [
           "couple",
           "date"
         ]
       },
       {
-        "emoji": "1f46b",
-        "aliases": [
+        "e": "1f46b",
+        "a": [
           "couple"
         ],
-        "tags": [
+        "t": [
           "date"
         ]
       },
       {
-        "emoji": "1f46c",
-        "aliases": [
+        "e": "1f46c",
+        "a": [
           "two_men_holding_hands"
         ],
-        "tags": [
+        "t": [
           "couple",
           "date"
         ]
       },
       {
-        "emoji": "1f48f",
-        "aliases": [
+        "e": "1f48f",
+        "a": [
           "couplekiss"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-2764-fe0f-200d-1f48b-200d-1f468",
-        "aliases": [
+        "e": "1f469-200d-2764-fe0f-200d-1f48b-200d-1f468",
+        "a": [
           "couplekiss_man_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-2764-fe0f-200d-1f48b-200d-1f468",
-        "aliases": [
+        "e": "1f468-200d-2764-fe0f-200d-1f48b-200d-1f468",
+        "a": [
           "couplekiss_man_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-2764-fe0f-200d-1f48b-200d-1f469",
-        "aliases": [
+        "e": "1f469-200d-2764-fe0f-200d-1f48b-200d-1f469",
+        "a": [
           "couplekiss_woman_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f491",
-        "aliases": [
+        "e": "1f491",
+        "a": [
           "couple_with_heart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-2764-fe0f-200d-1f468",
-        "aliases": [
+        "e": "1f469-200d-2764-fe0f-200d-1f468",
+        "a": [
           "couple_with_heart_woman_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-2764-fe0f-200d-1f468",
-        "aliases": [
+        "e": "1f468-200d-2764-fe0f-200d-1f468",
+        "a": [
           "couple_with_heart_man_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-2764-fe0f-200d-1f469",
-        "aliases": [
+        "e": "1f469-200d-2764-fe0f-200d-1f469",
+        "a": [
           "couple_with_heart_woman_woman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f46a",
-        "aliases": [
+        "e": "1f46a",
+        "a": [
           "family"
         ],
-        "tags": [
+        "t": [
           "home",
           "parents",
           "child"
         ]
       },
       {
-        "emoji": "1f468-200d-1f469-200d-1f466",
-        "aliases": [
+        "e": "1f468-200d-1f469-200d-1f466",
+        "a": [
           "family_man_woman_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f469-200d-1f467",
-        "aliases": [
+        "e": "1f468-200d-1f469-200d-1f467",
+        "a": [
           "family_man_woman_girl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f469-200d-1f467-200d-1f466",
-        "aliases": [
+        "e": "1f468-200d-1f469-200d-1f467-200d-1f466",
+        "a": [
           "family_man_woman_girl_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f469-200d-1f466-200d-1f466",
-        "aliases": [
+        "e": "1f468-200d-1f469-200d-1f466-200d-1f466",
+        "a": [
           "family_man_woman_boy_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f469-200d-1f467-200d-1f467",
-        "aliases": [
+        "e": "1f468-200d-1f469-200d-1f467-200d-1f467",
+        "a": [
           "family_man_woman_girl_girl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f468-200d-1f466",
-        "aliases": [
+        "e": "1f468-200d-1f468-200d-1f466",
+        "a": [
           "family_man_man_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f468-200d-1f467",
-        "aliases": [
+        "e": "1f468-200d-1f468-200d-1f467",
+        "a": [
           "family_man_man_girl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f468-200d-1f467-200d-1f466",
-        "aliases": [
+        "e": "1f468-200d-1f468-200d-1f467-200d-1f466",
+        "a": [
           "family_man_man_girl_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f468-200d-1f466-200d-1f466",
-        "aliases": [
+        "e": "1f468-200d-1f468-200d-1f466-200d-1f466",
+        "a": [
           "family_man_man_boy_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f468-200d-1f467-200d-1f467",
-        "aliases": [
+        "e": "1f468-200d-1f468-200d-1f467-200d-1f467",
+        "a": [
           "family_man_man_girl_girl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f469-200d-1f466",
-        "aliases": [
+        "e": "1f469-200d-1f469-200d-1f466",
+        "a": [
           "family_woman_woman_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f469-200d-1f467",
-        "aliases": [
+        "e": "1f469-200d-1f469-200d-1f467",
+        "a": [
           "family_woman_woman_girl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f469-200d-1f467-200d-1f466",
-        "aliases": [
+        "e": "1f469-200d-1f469-200d-1f467-200d-1f466",
+        "a": [
           "family_woman_woman_girl_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f469-200d-1f466-200d-1f466",
-        "aliases": [
+        "e": "1f469-200d-1f469-200d-1f466-200d-1f466",
+        "a": [
           "family_woman_woman_boy_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f469-200d-1f467-200d-1f467",
-        "aliases": [
+        "e": "1f469-200d-1f469-200d-1f467-200d-1f467",
+        "a": [
           "family_woman_woman_girl_girl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f466",
-        "aliases": [
+        "e": "1f468-200d-1f466",
+        "a": [
           "family_man_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f466-200d-1f466",
-        "aliases": [
+        "e": "1f468-200d-1f466-200d-1f466",
+        "a": [
           "family_man_boy_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f467",
-        "aliases": [
+        "e": "1f468-200d-1f467",
+        "a": [
           "family_man_girl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f467-200d-1f466",
-        "aliases": [
+        "e": "1f468-200d-1f467-200d-1f466",
+        "a": [
           "family_man_girl_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f468-200d-1f467-200d-1f467",
-        "aliases": [
+        "e": "1f468-200d-1f467-200d-1f467",
+        "a": [
           "family_man_girl_girl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f466",
-        "aliases": [
+        "e": "1f469-200d-1f466",
+        "a": [
           "family_woman_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f466-200d-1f466",
-        "aliases": [
+        "e": "1f469-200d-1f466-200d-1f466",
+        "a": [
           "family_woman_boy_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f467",
-        "aliases": [
+        "e": "1f469-200d-1f467",
+        "a": [
           "family_woman_girl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f467-200d-1f466",
-        "aliases": [
+        "e": "1f469-200d-1f467-200d-1f466",
+        "a": [
           "family_woman_girl_boy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f469-200d-1f467-200d-1f467",
-        "aliases": [
+        "e": "1f469-200d-1f467-200d-1f467",
+        "a": [
           "family_woman_girl_girl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5e3-fe0f",
-        "aliases": [
+        "e": "1f5e3-fe0f",
+        "a": [
           "speaking_head"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f464",
-        "aliases": [
+        "e": "1f464",
+        "a": [
           "bust_in_silhouette"
         ],
-        "tags": [
+        "t": [
           "user"
         ]
       },
       {
-        "emoji": "1f465",
-        "aliases": [
+        "e": "1f465",
+        "a": [
           "busts_in_silhouette"
         ],
-        "tags": [
+        "t": [
           "users",
           "group",
           "team"
         ]
       },
       {
-        "emoji": "1fac2",
-        "aliases": [
+        "e": "1fac2",
+        "a": [
           "people_hugging"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f463",
-        "aliases": [
+        "e": "1f463",
+        "a": [
           "footprints"
         ],
-        "tags": [
+        "t": [
           "feet",
           "tracks"
         ]
@@ -4292,4765 +4292,4765 @@ export const gfmUnicode = {
     ],
     "Animals & Nature": [
       {
-        "emoji": "1f435",
-        "aliases": [
+        "e": "1f435",
+        "a": [
           "monkey_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f412",
-        "aliases": [
+        "e": "1f412",
+        "a": [
           "monkey"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f98d",
-        "aliases": [
+        "e": "1f98d",
+        "a": [
           "gorilla"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9a7",
-        "aliases": [
+        "e": "1f9a7",
+        "a": [
           "orangutan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f436",
-        "aliases": [
+        "e": "1f436",
+        "a": [
           "dog"
         ],
-        "tags": [
+        "t": [
           "pet"
         ]
       },
       {
-        "emoji": "1f415",
-        "aliases": [
+        "e": "1f415",
+        "a": [
           "dog2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ae",
-        "aliases": [
+        "e": "1f9ae",
+        "a": [
           "guide_dog"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f415-200d-1f9ba",
-        "aliases": [
+        "e": "1f415-200d-1f9ba",
+        "a": [
           "service_dog"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f429",
-        "aliases": [
+        "e": "1f429",
+        "a": [
           "poodle"
         ],
-        "tags": [
+        "t": [
           "dog"
         ]
       },
       {
-        "emoji": "1f43a",
-        "aliases": [
+        "e": "1f43a",
+        "a": [
           "wolf"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f98a",
-        "aliases": [
+        "e": "1f98a",
+        "a": [
           "fox_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f99d",
-        "aliases": [
+        "e": "1f99d",
+        "a": [
           "raccoon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f431",
-        "aliases": [
+        "e": "1f431",
+        "a": [
           "cat"
         ],
-        "tags": [
+        "t": [
           "pet"
         ]
       },
       {
-        "emoji": "1f408",
-        "aliases": [
+        "e": "1f408",
+        "a": [
           "cat2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f408-200d-2b1b",
-        "aliases": [
+        "e": "1f408-200d-2b1b",
+        "a": [
           "black_cat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f981",
-        "aliases": [
+        "e": "1f981",
+        "a": [
           "lion"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f42f",
-        "aliases": [
+        "e": "1f42f",
+        "a": [
           "tiger"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f405",
-        "aliases": [
+        "e": "1f405",
+        "a": [
           "tiger2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f406",
-        "aliases": [
+        "e": "1f406",
+        "a": [
           "leopard"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f434",
-        "aliases": [
+        "e": "1f434",
+        "a": [
           "horse"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1face",
-        "aliases": [
+        "e": "1face",
+        "a": [
           "moose"
         ],
-        "tags": [
+        "t": [
           "canada"
         ]
       },
       {
-        "emoji": "1facf",
-        "aliases": [
+        "e": "1facf",
+        "a": [
           "donkey"
         ],
-        "tags": [
+        "t": [
           "mule"
         ]
       },
       {
-        "emoji": "1f40e",
-        "aliases": [
+        "e": "1f40e",
+        "a": [
           "racehorse"
         ],
-        "tags": [
+        "t": [
           "speed"
         ]
       },
       {
-        "emoji": "1f984",
-        "aliases": [
+        "e": "1f984",
+        "a": [
           "unicorn"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f993",
-        "aliases": [
+        "e": "1f993",
+        "a": [
           "zebra"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f98c",
-        "aliases": [
+        "e": "1f98c",
+        "a": [
           "deer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ac",
-        "aliases": [
+        "e": "1f9ac",
+        "a": [
           "bison"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f42e",
-        "aliases": [
+        "e": "1f42e",
+        "a": [
           "cow"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f402",
-        "aliases": [
+        "e": "1f402",
+        "a": [
           "ox"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f403",
-        "aliases": [
+        "e": "1f403",
+        "a": [
           "water_buffalo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f404",
-        "aliases": [
+        "e": "1f404",
+        "a": [
           "cow2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f437",
-        "aliases": [
+        "e": "1f437",
+        "a": [
           "pig"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f416",
-        "aliases": [
+        "e": "1f416",
+        "a": [
           "pig2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f417",
-        "aliases": [
+        "e": "1f417",
+        "a": [
           "boar"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f43d",
-        "aliases": [
+        "e": "1f43d",
+        "a": [
           "pig_nose"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f40f",
-        "aliases": [
+        "e": "1f40f",
+        "a": [
           "ram"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f411",
-        "aliases": [
+        "e": "1f411",
+        "a": [
           "sheep"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f410",
-        "aliases": [
+        "e": "1f410",
+        "a": [
           "goat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f42a",
-        "aliases": [
+        "e": "1f42a",
+        "a": [
           "dromedary_camel"
         ],
-        "tags": [
+        "t": [
           "desert"
         ]
       },
       {
-        "emoji": "1f42b",
-        "aliases": [
+        "e": "1f42b",
+        "a": [
           "camel"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f999",
-        "aliases": [
+        "e": "1f999",
+        "a": [
           "llama"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f992",
-        "aliases": [
+        "e": "1f992",
+        "a": [
           "giraffe"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f418",
-        "aliases": [
+        "e": "1f418",
+        "a": [
           "elephant"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9a3",
-        "aliases": [
+        "e": "1f9a3",
+        "a": [
           "mammoth"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f98f",
-        "aliases": [
+        "e": "1f98f",
+        "a": [
           "rhinoceros"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f99b",
-        "aliases": [
+        "e": "1f99b",
+        "a": [
           "hippopotamus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f42d",
-        "aliases": [
+        "e": "1f42d",
+        "a": [
           "mouse"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f401",
-        "aliases": [
+        "e": "1f401",
+        "a": [
           "mouse2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f400",
-        "aliases": [
+        "e": "1f400",
+        "a": [
           "rat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f439",
-        "aliases": [
+        "e": "1f439",
+        "a": [
           "hamster"
         ],
-        "tags": [
+        "t": [
           "pet"
         ]
       },
       {
-        "emoji": "1f430",
-        "aliases": [
+        "e": "1f430",
+        "a": [
           "rabbit"
         ],
-        "tags": [
+        "t": [
           "bunny"
         ]
       },
       {
-        "emoji": "1f407",
-        "aliases": [
+        "e": "1f407",
+        "a": [
           "rabbit2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f43f-fe0f",
-        "aliases": [
+        "e": "1f43f-fe0f",
+        "a": [
           "chipmunk"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ab",
-        "aliases": [
+        "e": "1f9ab",
+        "a": [
           "beaver"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f994",
-        "aliases": [
+        "e": "1f994",
+        "a": [
           "hedgehog"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f987",
-        "aliases": [
+        "e": "1f987",
+        "a": [
           "bat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f43b",
-        "aliases": [
+        "e": "1f43b",
+        "a": [
           "bear"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f43b-200d-2744-fe0f",
-        "aliases": [
+        "e": "1f43b-200d-2744-fe0f",
+        "a": [
           "polar_bear"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f428",
-        "aliases": [
+        "e": "1f428",
+        "a": [
           "koala"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f43c",
-        "aliases": [
+        "e": "1f43c",
+        "a": [
           "panda_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9a5",
-        "aliases": [
+        "e": "1f9a5",
+        "a": [
           "sloth"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9a6",
-        "aliases": [
+        "e": "1f9a6",
+        "a": [
           "otter"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9a8",
-        "aliases": [
+        "e": "1f9a8",
+        "a": [
           "skunk"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f998",
-        "aliases": [
+        "e": "1f998",
+        "a": [
           "kangaroo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9a1",
-        "aliases": [
+        "e": "1f9a1",
+        "a": [
           "badger"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f43e",
-        "aliases": [
+        "e": "1f43e",
+        "a": [
           "feet",
           "paw_prints"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f983",
-        "aliases": [
+        "e": "1f983",
+        "a": [
           "turkey"
         ],
-        "tags": [
+        "t": [
           "thanksgiving"
         ]
       },
       {
-        "emoji": "1f414",
-        "aliases": [
+        "e": "1f414",
+        "a": [
           "chicken"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f413",
-        "aliases": [
+        "e": "1f413",
+        "a": [
           "rooster"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f423",
-        "aliases": [
+        "e": "1f423",
+        "a": [
           "hatching_chick"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f424",
-        "aliases": [
+        "e": "1f424",
+        "a": [
           "baby_chick"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f425",
-        "aliases": [
+        "e": "1f425",
+        "a": [
           "hatched_chick"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f426",
-        "aliases": [
+        "e": "1f426",
+        "a": [
           "bird"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f427",
-        "aliases": [
+        "e": "1f427",
+        "a": [
           "penguin"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f54a-fe0f",
-        "aliases": [
+        "e": "1f54a-fe0f",
+        "a": [
           "dove"
         ],
-        "tags": [
+        "t": [
           "peace"
         ]
       },
       {
-        "emoji": "1f985",
-        "aliases": [
+        "e": "1f985",
+        "a": [
           "eagle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f986",
-        "aliases": [
+        "e": "1f986",
+        "a": [
           "duck"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9a2",
-        "aliases": [
+        "e": "1f9a2",
+        "a": [
           "swan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f989",
-        "aliases": [
+        "e": "1f989",
+        "a": [
           "owl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9a4",
-        "aliases": [
+        "e": "1f9a4",
+        "a": [
           "dodo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fab6",
-        "aliases": [
+        "e": "1fab6",
+        "a": [
           "feather"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9a9",
-        "aliases": [
+        "e": "1f9a9",
+        "a": [
           "flamingo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f99a",
-        "aliases": [
+        "e": "1f99a",
+        "a": [
           "peacock"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f99c",
-        "aliases": [
+        "e": "1f99c",
+        "a": [
           "parrot"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fabd",
-        "aliases": [
+        "e": "1fabd",
+        "a": [
           "wing"
         ],
-        "tags": [
+        "t": [
           "fly"
         ]
       },
       {
-        "emoji": "1f426-200d-2b1b",
-        "aliases": [
+        "e": "1f426-200d-2b1b",
+        "a": [
           "black_bird"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fabf",
-        "aliases": [
+        "e": "1fabf",
+        "a": [
           "goose"
         ],
-        "tags": [
+        "t": [
           "honk"
         ]
       },
       {
-        "emoji": "1f438",
-        "aliases": [
+        "e": "1f438",
+        "a": [
           "frog"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f40a",
-        "aliases": [
+        "e": "1f40a",
+        "a": [
           "crocodile"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f422",
-        "aliases": [
+        "e": "1f422",
+        "a": [
           "turtle"
         ],
-        "tags": [
+        "t": [
           "slow"
         ]
       },
       {
-        "emoji": "1f98e",
-        "aliases": [
+        "e": "1f98e",
+        "a": [
           "lizard"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f40d",
-        "aliases": [
+        "e": "1f40d",
+        "a": [
           "snake"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f432",
-        "aliases": [
+        "e": "1f432",
+        "a": [
           "dragon_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f409",
-        "aliases": [
+        "e": "1f409",
+        "a": [
           "dragon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f995",
-        "aliases": [
+        "e": "1f995",
+        "a": [
           "sauropod"
         ],
-        "tags": [
+        "t": [
           "dinosaur"
         ]
       },
       {
-        "emoji": "1f996",
-        "aliases": [
+        "e": "1f996",
+        "a": [
           "t-rex"
         ],
-        "tags": [
+        "t": [
           "dinosaur"
         ]
       },
       {
-        "emoji": "1f433",
-        "aliases": [
+        "e": "1f433",
+        "a": [
           "whale"
         ],
-        "tags": [
+        "t": [
           "sea"
         ]
       },
       {
-        "emoji": "1f40b",
-        "aliases": [
+        "e": "1f40b",
+        "a": [
           "whale2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f42c",
-        "aliases": [
+        "e": "1f42c",
+        "a": [
           "dolphin",
           "flipper"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ad",
-        "aliases": [
+        "e": "1f9ad",
+        "a": [
           "seal"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f41f",
-        "aliases": [
+        "e": "1f41f",
+        "a": [
           "fish"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f420",
-        "aliases": [
+        "e": "1f420",
+        "a": [
           "tropical_fish"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f421",
-        "aliases": [
+        "e": "1f421",
+        "a": [
           "blowfish"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f988",
-        "aliases": [
+        "e": "1f988",
+        "a": [
           "shark"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f419",
-        "aliases": [
+        "e": "1f419",
+        "a": [
           "octopus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f41a",
-        "aliases": [
+        "e": "1f41a",
+        "a": [
           "shell"
         ],
-        "tags": [
+        "t": [
           "sea",
           "beach"
         ]
       },
       {
-        "emoji": "1fab8",
-        "aliases": [
+        "e": "1fab8",
+        "a": [
           "coral"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fabc",
-        "aliases": [
+        "e": "1fabc",
+        "a": [
           "jellyfish"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f40c",
-        "aliases": [
+        "e": "1f40c",
+        "a": [
           "snail"
         ],
-        "tags": [
+        "t": [
           "slow"
         ]
       },
       {
-        "emoji": "1f98b",
-        "aliases": [
+        "e": "1f98b",
+        "a": [
           "butterfly"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f41b",
-        "aliases": [
+        "e": "1f41b",
+        "a": [
           "bug"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f41c",
-        "aliases": [
+        "e": "1f41c",
+        "a": [
           "ant"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f41d",
-        "aliases": [
+        "e": "1f41d",
+        "a": [
           "bee",
           "honeybee"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fab2",
-        "aliases": [
+        "e": "1fab2",
+        "a": [
           "beetle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f41e",
-        "aliases": [
+        "e": "1f41e",
+        "a": [
           "lady_beetle"
         ],
-        "tags": [
+        "t": [
           "bug"
         ]
       },
       {
-        "emoji": "1f997",
-        "aliases": [
+        "e": "1f997",
+        "a": [
           "cricket"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fab3",
-        "aliases": [
+        "e": "1fab3",
+        "a": [
           "cockroach"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f577-fe0f",
-        "aliases": [
+        "e": "1f577-fe0f",
+        "a": [
           "spider"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f578-fe0f",
-        "aliases": [
+        "e": "1f578-fe0f",
+        "a": [
           "spider_web"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f982",
-        "aliases": [
+        "e": "1f982",
+        "a": [
           "scorpion"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f99f",
-        "aliases": [
+        "e": "1f99f",
+        "a": [
           "mosquito"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fab0",
-        "aliases": [
+        "e": "1fab0",
+        "a": [
           "fly"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fab1",
-        "aliases": [
+        "e": "1fab1",
+        "a": [
           "worm"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9a0",
-        "aliases": [
+        "e": "1f9a0",
+        "a": [
           "microbe"
         ],
-        "tags": [
+        "t": [
           "germ"
         ]
       },
       {
-        "emoji": "1f490",
-        "aliases": [
+        "e": "1f490",
+        "a": [
           "bouquet"
         ],
-        "tags": [
+        "t": [
           "flowers"
         ]
       },
       {
-        "emoji": "1f338",
-        "aliases": [
+        "e": "1f338",
+        "a": [
           "cherry_blossom"
         ],
-        "tags": [
+        "t": [
           "flower",
           "spring"
         ]
       },
       {
-        "emoji": "1f4ae",
-        "aliases": [
+        "e": "1f4ae",
+        "a": [
           "white_flower"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fab7",
-        "aliases": [
+        "e": "1fab7",
+        "a": [
           "lotus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f5-fe0f",
-        "aliases": [
+        "e": "1f3f5-fe0f",
+        "a": [
           "rosette"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f339",
-        "aliases": [
+        "e": "1f339",
+        "a": [
           "rose"
         ],
-        "tags": [
+        "t": [
           "flower"
         ]
       },
       {
-        "emoji": "1f940",
-        "aliases": [
+        "e": "1f940",
+        "a": [
           "wilted_flower"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f33a",
-        "aliases": [
+        "e": "1f33a",
+        "a": [
           "hibiscus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f33b",
-        "aliases": [
+        "e": "1f33b",
+        "a": [
           "sunflower"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f33c",
-        "aliases": [
+        "e": "1f33c",
+        "a": [
           "blossom"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f337",
-        "aliases": [
+        "e": "1f337",
+        "a": [
           "tulip"
         ],
-        "tags": [
+        "t": [
           "flower"
         ]
       },
       {
-        "emoji": "1fabb",
-        "aliases": [
+        "e": "1fabb",
+        "a": [
           "hyacinth"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f331",
-        "aliases": [
+        "e": "1f331",
+        "a": [
           "seedling"
         ],
-        "tags": [
+        "t": [
           "plant"
         ]
       },
       {
-        "emoji": "1fab4",
-        "aliases": [
+        "e": "1fab4",
+        "a": [
           "potted_plant"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f332",
-        "aliases": [
+        "e": "1f332",
+        "a": [
           "evergreen_tree"
         ],
-        "tags": [
+        "t": [
           "wood"
         ]
       },
       {
-        "emoji": "1f333",
-        "aliases": [
+        "e": "1f333",
+        "a": [
           "deciduous_tree"
         ],
-        "tags": [
+        "t": [
           "wood"
         ]
       },
       {
-        "emoji": "1f334",
-        "aliases": [
+        "e": "1f334",
+        "a": [
           "palm_tree"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f335",
-        "aliases": [
+        "e": "1f335",
+        "a": [
           "cactus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f33e",
-        "aliases": [
+        "e": "1f33e",
+        "a": [
           "ear_of_rice"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f33f",
-        "aliases": [
+        "e": "1f33f",
+        "a": [
           "herb"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2618-fe0f",
-        "aliases": [
+        "e": "2618-fe0f",
+        "a": [
           "shamrock"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f340",
-        "aliases": [
+        "e": "1f340",
+        "a": [
           "four_leaf_clover"
         ],
-        "tags": [
+        "t": [
           "luck"
         ]
       },
       {
-        "emoji": "1f341",
-        "aliases": [
+        "e": "1f341",
+        "a": [
           "maple_leaf"
         ],
-        "tags": [
+        "t": [
           "canada"
         ]
       },
       {
-        "emoji": "1f342",
-        "aliases": [
+        "e": "1f342",
+        "a": [
           "fallen_leaf"
         ],
-        "tags": [
+        "t": [
           "autumn"
         ]
       },
       {
-        "emoji": "1f343",
-        "aliases": [
+        "e": "1f343",
+        "a": [
           "leaves"
         ],
-        "tags": [
+        "t": [
           "leaf"
         ]
       },
       {
-        "emoji": "1fab9",
-        "aliases": [
+        "e": "1fab9",
+        "a": [
           "empty_nest"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faba",
-        "aliases": [
+        "e": "1faba",
+        "a": [
           "nest_with_eggs"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f344",
-        "aliases": [
+        "e": "1f344",
+        "a": [
           "mushroom"
         ],
-        "tags": [
+        "t": [
           "fungus"
         ]
       }
     ],
     "Food & Drink": [
       {
-        "emoji": "1f347",
-        "aliases": [
+        "e": "1f347",
+        "a": [
           "grapes"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f348",
-        "aliases": [
+        "e": "1f348",
+        "a": [
           "melon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f349",
-        "aliases": [
+        "e": "1f349",
+        "a": [
           "watermelon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f34a",
-        "aliases": [
+        "e": "1f34a",
+        "a": [
           "tangerine",
           "orange",
           "mandarin"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f34b",
-        "aliases": [
+        "e": "1f34b",
+        "a": [
           "lemon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f34c",
-        "aliases": [
+        "e": "1f34c",
+        "a": [
           "banana"
         ],
-        "tags": [
+        "t": [
           "fruit"
         ]
       },
       {
-        "emoji": "1f34d",
-        "aliases": [
+        "e": "1f34d",
+        "a": [
           "pineapple"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f96d",
-        "aliases": [
+        "e": "1f96d",
+        "a": [
           "mango"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f34e",
-        "aliases": [
+        "e": "1f34e",
+        "a": [
           "apple"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f34f",
-        "aliases": [
+        "e": "1f34f",
+        "a": [
           "green_apple"
         ],
-        "tags": [
+        "t": [
           "fruit"
         ]
       },
       {
-        "emoji": "1f350",
-        "aliases": [
+        "e": "1f350",
+        "a": [
           "pear"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f351",
-        "aliases": [
+        "e": "1f351",
+        "a": [
           "peach"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f352",
-        "aliases": [
+        "e": "1f352",
+        "a": [
           "cherries"
         ],
-        "tags": [
+        "t": [
           "fruit"
         ]
       },
       {
-        "emoji": "1f353",
-        "aliases": [
+        "e": "1f353",
+        "a": [
           "strawberry"
         ],
-        "tags": [
+        "t": [
           "fruit"
         ]
       },
       {
-        "emoji": "1fad0",
-        "aliases": [
+        "e": "1fad0",
+        "a": [
           "blueberries"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f95d",
-        "aliases": [
+        "e": "1f95d",
+        "a": [
           "kiwi_fruit"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f345",
-        "aliases": [
+        "e": "1f345",
+        "a": [
           "tomato"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fad2",
-        "aliases": [
+        "e": "1fad2",
+        "a": [
           "olive"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f965",
-        "aliases": [
+        "e": "1f965",
+        "a": [
           "coconut"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f951",
-        "aliases": [
+        "e": "1f951",
+        "a": [
           "avocado"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f346",
-        "aliases": [
+        "e": "1f346",
+        "a": [
           "eggplant"
         ],
-        "tags": [
+        "t": [
           "aubergine"
         ]
       },
       {
-        "emoji": "1f954",
-        "aliases": [
+        "e": "1f954",
+        "a": [
           "potato"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f955",
-        "aliases": [
+        "e": "1f955",
+        "a": [
           "carrot"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f33d",
-        "aliases": [
+        "e": "1f33d",
+        "a": [
           "corn"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f336-fe0f",
-        "aliases": [
+        "e": "1f336-fe0f",
+        "a": [
           "hot_pepper"
         ],
-        "tags": [
+        "t": [
           "spicy"
         ]
       },
       {
-        "emoji": "1fad1",
-        "aliases": [
+        "e": "1fad1",
+        "a": [
           "bell_pepper"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f952",
-        "aliases": [
+        "e": "1f952",
+        "a": [
           "cucumber"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f96c",
-        "aliases": [
+        "e": "1f96c",
+        "a": [
           "leafy_green"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f966",
-        "aliases": [
+        "e": "1f966",
+        "a": [
           "broccoli"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9c4",
-        "aliases": [
+        "e": "1f9c4",
+        "a": [
           "garlic"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9c5",
-        "aliases": [
+        "e": "1f9c5",
+        "a": [
           "onion"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f95c",
-        "aliases": [
+        "e": "1f95c",
+        "a": [
           "peanuts"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fad8",
-        "aliases": [
+        "e": "1fad8",
+        "a": [
           "beans"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f330",
-        "aliases": [
+        "e": "1f330",
+        "a": [
           "chestnut"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fada",
-        "aliases": [
+        "e": "1fada",
+        "a": [
           "ginger_root"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fadb",
-        "aliases": [
+        "e": "1fadb",
+        "a": [
           "pea_pod"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f35e",
-        "aliases": [
+        "e": "1f35e",
+        "a": [
           "bread"
         ],
-        "tags": [
+        "t": [
           "toast"
         ]
       },
       {
-        "emoji": "1f950",
-        "aliases": [
+        "e": "1f950",
+        "a": [
           "croissant"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f956",
-        "aliases": [
+        "e": "1f956",
+        "a": [
           "baguette_bread"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fad3",
-        "aliases": [
+        "e": "1fad3",
+        "a": [
           "flatbread"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f968",
-        "aliases": [
+        "e": "1f968",
+        "a": [
           "pretzel"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f96f",
-        "aliases": [
+        "e": "1f96f",
+        "a": [
           "bagel"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f95e",
-        "aliases": [
+        "e": "1f95e",
+        "a": [
           "pancakes"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9c7",
-        "aliases": [
+        "e": "1f9c7",
+        "a": [
           "waffle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9c0",
-        "aliases": [
+        "e": "1f9c0",
+        "a": [
           "cheese"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f356",
-        "aliases": [
+        "e": "1f356",
+        "a": [
           "meat_on_bone"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f357",
-        "aliases": [
+        "e": "1f357",
+        "a": [
           "poultry_leg"
         ],
-        "tags": [
+        "t": [
           "meat",
           "chicken"
         ]
       },
       {
-        "emoji": "1f969",
-        "aliases": [
+        "e": "1f969",
+        "a": [
           "cut_of_meat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f953",
-        "aliases": [
+        "e": "1f953",
+        "a": [
           "bacon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f354",
-        "aliases": [
+        "e": "1f354",
+        "a": [
           "hamburger"
         ],
-        "tags": [
+        "t": [
           "burger"
         ]
       },
       {
-        "emoji": "1f35f",
-        "aliases": [
+        "e": "1f35f",
+        "a": [
           "fries"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f355",
-        "aliases": [
+        "e": "1f355",
+        "a": [
           "pizza"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f32d",
-        "aliases": [
+        "e": "1f32d",
+        "a": [
           "hotdog"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f96a",
-        "aliases": [
+        "e": "1f96a",
+        "a": [
           "sandwich"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f32e",
-        "aliases": [
+        "e": "1f32e",
+        "a": [
           "taco"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f32f",
-        "aliases": [
+        "e": "1f32f",
+        "a": [
           "burrito"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fad4",
-        "aliases": [
+        "e": "1fad4",
+        "a": [
           "tamale"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f959",
-        "aliases": [
+        "e": "1f959",
+        "a": [
           "stuffed_flatbread"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9c6",
-        "aliases": [
+        "e": "1f9c6",
+        "a": [
           "falafel"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f95a",
-        "aliases": [
+        "e": "1f95a",
+        "a": [
           "egg"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f373",
-        "aliases": [
+        "e": "1f373",
+        "a": [
           "fried_egg"
         ],
-        "tags": [
+        "t": [
           "breakfast"
         ]
       },
       {
-        "emoji": "1f958",
-        "aliases": [
+        "e": "1f958",
+        "a": [
           "shallow_pan_of_food"
         ],
-        "tags": [
+        "t": [
           "paella",
           "curry"
         ]
       },
       {
-        "emoji": "1f372",
-        "aliases": [
+        "e": "1f372",
+        "a": [
           "stew"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fad5",
-        "aliases": [
+        "e": "1fad5",
+        "a": [
           "fondue"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f963",
-        "aliases": [
+        "e": "1f963",
+        "a": [
           "bowl_with_spoon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f957",
-        "aliases": [
+        "e": "1f957",
+        "a": [
           "green_salad"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f37f",
-        "aliases": [
+        "e": "1f37f",
+        "a": [
           "popcorn"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9c8",
-        "aliases": [
+        "e": "1f9c8",
+        "a": [
           "butter"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9c2",
-        "aliases": [
+        "e": "1f9c2",
+        "a": [
           "salt"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f96b",
-        "aliases": [
+        "e": "1f96b",
+        "a": [
           "canned_food"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f371",
-        "aliases": [
+        "e": "1f371",
+        "a": [
           "bento"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f358",
-        "aliases": [
+        "e": "1f358",
+        "a": [
           "rice_cracker"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f359",
-        "aliases": [
+        "e": "1f359",
+        "a": [
           "rice_ball"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f35a",
-        "aliases": [
+        "e": "1f35a",
+        "a": [
           "rice"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f35b",
-        "aliases": [
+        "e": "1f35b",
+        "a": [
           "curry"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f35c",
-        "aliases": [
+        "e": "1f35c",
+        "a": [
           "ramen"
         ],
-        "tags": [
+        "t": [
           "noodle"
         ]
       },
       {
-        "emoji": "1f35d",
-        "aliases": [
+        "e": "1f35d",
+        "a": [
           "spaghetti"
         ],
-        "tags": [
+        "t": [
           "pasta"
         ]
       },
       {
-        "emoji": "1f360",
-        "aliases": [
+        "e": "1f360",
+        "a": [
           "sweet_potato"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f362",
-        "aliases": [
+        "e": "1f362",
+        "a": [
           "oden"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f363",
-        "aliases": [
+        "e": "1f363",
+        "a": [
           "sushi"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f364",
-        "aliases": [
+        "e": "1f364",
+        "a": [
           "fried_shrimp"
         ],
-        "tags": [
+        "t": [
           "tempura"
         ]
       },
       {
-        "emoji": "1f365",
-        "aliases": [
+        "e": "1f365",
+        "a": [
           "fish_cake"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f96e",
-        "aliases": [
+        "e": "1f96e",
+        "a": [
           "moon_cake"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f361",
-        "aliases": [
+        "e": "1f361",
+        "a": [
           "dango"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f95f",
-        "aliases": [
+        "e": "1f95f",
+        "a": [
           "dumpling"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f960",
-        "aliases": [
+        "e": "1f960",
+        "a": [
           "fortune_cookie"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f961",
-        "aliases": [
+        "e": "1f961",
+        "a": [
           "takeout_box"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f980",
-        "aliases": [
+        "e": "1f980",
+        "a": [
           "crab"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f99e",
-        "aliases": [
+        "e": "1f99e",
+        "a": [
           "lobster"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f990",
-        "aliases": [
+        "e": "1f990",
+        "a": [
           "shrimp"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f991",
-        "aliases": [
+        "e": "1f991",
+        "a": [
           "squid"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9aa",
-        "aliases": [
+        "e": "1f9aa",
+        "a": [
           "oyster"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f366",
-        "aliases": [
+        "e": "1f366",
+        "a": [
           "icecream"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f367",
-        "aliases": [
+        "e": "1f367",
+        "a": [
           "shaved_ice"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f368",
-        "aliases": [
+        "e": "1f368",
+        "a": [
           "ice_cream"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f369",
-        "aliases": [
+        "e": "1f369",
+        "a": [
           "doughnut"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f36a",
-        "aliases": [
+        "e": "1f36a",
+        "a": [
           "cookie"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f382",
-        "aliases": [
+        "e": "1f382",
+        "a": [
           "birthday"
         ],
-        "tags": [
+        "t": [
           "party"
         ]
       },
       {
-        "emoji": "1f370",
-        "aliases": [
+        "e": "1f370",
+        "a": [
           "cake"
         ],
-        "tags": [
+        "t": [
           "dessert"
         ]
       },
       {
-        "emoji": "1f9c1",
-        "aliases": [
+        "e": "1f9c1",
+        "a": [
           "cupcake"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f967",
-        "aliases": [
+        "e": "1f967",
+        "a": [
           "pie"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f36b",
-        "aliases": [
+        "e": "1f36b",
+        "a": [
           "chocolate_bar"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f36c",
-        "aliases": [
+        "e": "1f36c",
+        "a": [
           "candy"
         ],
-        "tags": [
+        "t": [
           "sweet"
         ]
       },
       {
-        "emoji": "1f36d",
-        "aliases": [
+        "e": "1f36d",
+        "a": [
           "lollipop"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f36e",
-        "aliases": [
+        "e": "1f36e",
+        "a": [
           "custard"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f36f",
-        "aliases": [
+        "e": "1f36f",
+        "a": [
           "honey_pot"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f37c",
-        "aliases": [
+        "e": "1f37c",
+        "a": [
           "baby_bottle"
         ],
-        "tags": [
+        "t": [
           "milk"
         ]
       },
       {
-        "emoji": "1f95b",
-        "aliases": [
+        "e": "1f95b",
+        "a": [
           "milk_glass"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2615",
-        "aliases": [
+        "e": "2615",
+        "a": [
           "coffee"
         ],
-        "tags": [
+        "t": [
           "cafe",
           "espresso"
         ]
       },
       {
-        "emoji": "1fad6",
-        "aliases": [
+        "e": "1fad6",
+        "a": [
           "teapot"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f375",
-        "aliases": [
+        "e": "1f375",
+        "a": [
           "tea"
         ],
-        "tags": [
+        "t": [
           "green",
           "breakfast"
         ]
       },
       {
-        "emoji": "1f376",
-        "aliases": [
+        "e": "1f376",
+        "a": [
           "sake"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f37e",
-        "aliases": [
+        "e": "1f37e",
+        "a": [
           "champagne"
         ],
-        "tags": [
+        "t": [
           "bottle",
           "bubbly",
           "celebration"
         ]
       },
       {
-        "emoji": "1f377",
-        "aliases": [
+        "e": "1f377",
+        "a": [
           "wine_glass"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f378",
-        "aliases": [
+        "e": "1f378",
+        "a": [
           "cocktail"
         ],
-        "tags": [
+        "t": [
           "drink"
         ]
       },
       {
-        "emoji": "1f379",
-        "aliases": [
+        "e": "1f379",
+        "a": [
           "tropical_drink"
         ],
-        "tags": [
+        "t": [
           "summer",
           "vacation"
         ]
       },
       {
-        "emoji": "1f37a",
-        "aliases": [
+        "e": "1f37a",
+        "a": [
           "beer"
         ],
-        "tags": [
+        "t": [
           "drink"
         ]
       },
       {
-        "emoji": "1f37b",
-        "aliases": [
+        "e": "1f37b",
+        "a": [
           "beers"
         ],
-        "tags": [
+        "t": [
           "drinks"
         ]
       },
       {
-        "emoji": "1f942",
-        "aliases": [
+        "e": "1f942",
+        "a": [
           "clinking_glasses"
         ],
-        "tags": [
+        "t": [
           "cheers",
           "toast"
         ]
       },
       {
-        "emoji": "1f943",
-        "aliases": [
+        "e": "1f943",
+        "a": [
           "tumbler_glass"
         ],
-        "tags": [
+        "t": [
           "whisky"
         ]
       },
       {
-        "emoji": "1fad7",
-        "aliases": [
+        "e": "1fad7",
+        "a": [
           "pouring_liquid"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f964",
-        "aliases": [
+        "e": "1f964",
+        "a": [
           "cup_with_straw"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9cb",
-        "aliases": [
+        "e": "1f9cb",
+        "a": [
           "bubble_tea"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9c3",
-        "aliases": [
+        "e": "1f9c3",
+        "a": [
           "beverage_box"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9c9",
-        "aliases": [
+        "e": "1f9c9",
+        "a": [
           "mate"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ca",
-        "aliases": [
+        "e": "1f9ca",
+        "a": [
           "ice_cube"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f962",
-        "aliases": [
+        "e": "1f962",
+        "a": [
           "chopsticks"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f37d-fe0f",
-        "aliases": [
+        "e": "1f37d-fe0f",
+        "a": [
           "plate_with_cutlery"
         ],
-        "tags": [
+        "t": [
           "dining",
           "dinner"
         ]
       },
       {
-        "emoji": "1f374",
-        "aliases": [
+        "e": "1f374",
+        "a": [
           "fork_and_knife"
         ],
-        "tags": [
+        "t": [
           "cutlery"
         ]
       },
       {
-        "emoji": "1f944",
-        "aliases": [
+        "e": "1f944",
+        "a": [
           "spoon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f52a",
-        "aliases": [
+        "e": "1f52a",
+        "a": [
           "hocho",
           "knife"
         ],
-        "tags": [
+        "t": [
           "cut",
           "chop"
         ]
       },
       {
-        "emoji": "1fad9",
-        "aliases": [
+        "e": "1fad9",
+        "a": [
           "jar"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3fa",
-        "aliases": [
+        "e": "1f3fa",
+        "a": [
           "amphora"
         ],
-        "tags": []
+        "t": []
       }
     ],
     "Travel & Places": [
       {
-        "emoji": "1f30d",
-        "aliases": [
+        "e": "1f30d",
+        "a": [
           "earth_africa"
         ],
-        "tags": [
+        "t": [
           "globe",
           "world",
           "international"
         ]
       },
       {
-        "emoji": "1f30e",
-        "aliases": [
+        "e": "1f30e",
+        "a": [
           "earth_americas"
         ],
-        "tags": [
+        "t": [
           "globe",
           "world",
           "international"
         ]
       },
       {
-        "emoji": "1f30f",
-        "aliases": [
+        "e": "1f30f",
+        "a": [
           "earth_asia"
         ],
-        "tags": [
+        "t": [
           "globe",
           "world",
           "international"
         ]
       },
       {
-        "emoji": "1f310",
-        "aliases": [
+        "e": "1f310",
+        "a": [
           "globe_with_meridians"
         ],
-        "tags": [
+        "t": [
           "world",
           "global",
           "international"
         ]
       },
       {
-        "emoji": "1f5fa-fe0f",
-        "aliases": [
+        "e": "1f5fa-fe0f",
+        "a": [
           "world_map"
         ],
-        "tags": [
+        "t": [
           "travel"
         ]
       },
       {
-        "emoji": "1f5fe",
-        "aliases": [
+        "e": "1f5fe",
+        "a": [
           "japan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ed",
-        "aliases": [
+        "e": "1f9ed",
+        "a": [
           "compass"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3d4-fe0f",
-        "aliases": [
+        "e": "1f3d4-fe0f",
+        "a": [
           "mountain_snow"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26f0-fe0f",
-        "aliases": [
+        "e": "26f0-fe0f",
+        "a": [
           "mountain"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f30b",
-        "aliases": [
+        "e": "1f30b",
+        "a": [
           "volcano"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5fb",
-        "aliases": [
+        "e": "1f5fb",
+        "a": [
           "mount_fuji"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3d5-fe0f",
-        "aliases": [
+        "e": "1f3d5-fe0f",
+        "a": [
           "camping"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3d6-fe0f",
-        "aliases": [
+        "e": "1f3d6-fe0f",
+        "a": [
           "beach_umbrella"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3dc-fe0f",
-        "aliases": [
+        "e": "1f3dc-fe0f",
+        "a": [
           "desert"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3dd-fe0f",
-        "aliases": [
+        "e": "1f3dd-fe0f",
+        "a": [
           "desert_island"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3de-fe0f",
-        "aliases": [
+        "e": "1f3de-fe0f",
+        "a": [
           "national_park"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3df-fe0f",
-        "aliases": [
+        "e": "1f3df-fe0f",
+        "a": [
           "stadium"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3db-fe0f",
-        "aliases": [
+        "e": "1f3db-fe0f",
+        "a": [
           "classical_building"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3d7-fe0f",
-        "aliases": [
+        "e": "1f3d7-fe0f",
+        "a": [
           "building_construction"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9f1",
-        "aliases": [
+        "e": "1f9f1",
+        "a": [
           "bricks"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faa8",
-        "aliases": [
+        "e": "1faa8",
+        "a": [
           "rock"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fab5",
-        "aliases": [
+        "e": "1fab5",
+        "a": [
           "wood"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6d6",
-        "aliases": [
+        "e": "1f6d6",
+        "a": [
           "hut"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3d8-fe0f",
-        "aliases": [
+        "e": "1f3d8-fe0f",
+        "a": [
           "houses"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3da-fe0f",
-        "aliases": [
+        "e": "1f3da-fe0f",
+        "a": [
           "derelict_house"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3e0",
-        "aliases": [
+        "e": "1f3e0",
+        "a": [
           "house"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3e1",
-        "aliases": [
+        "e": "1f3e1",
+        "a": [
           "house_with_garden"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3e2",
-        "aliases": [
+        "e": "1f3e2",
+        "a": [
           "office"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3e3",
-        "aliases": [
+        "e": "1f3e3",
+        "a": [
           "post_office"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3e4",
-        "aliases": [
+        "e": "1f3e4",
+        "a": [
           "european_post_office"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3e5",
-        "aliases": [
+        "e": "1f3e5",
+        "a": [
           "hospital"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3e6",
-        "aliases": [
+        "e": "1f3e6",
+        "a": [
           "bank"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3e8",
-        "aliases": [
+        "e": "1f3e8",
+        "a": [
           "hotel"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3e9",
-        "aliases": [
+        "e": "1f3e9",
+        "a": [
           "love_hotel"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ea",
-        "aliases": [
+        "e": "1f3ea",
+        "a": [
           "convenience_store"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3eb",
-        "aliases": [
+        "e": "1f3eb",
+        "a": [
           "school"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ec",
-        "aliases": [
+        "e": "1f3ec",
+        "a": [
           "department_store"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ed",
-        "aliases": [
+        "e": "1f3ed",
+        "a": [
           "factory"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ef",
-        "aliases": [
+        "e": "1f3ef",
+        "a": [
           "japanese_castle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f0",
-        "aliases": [
+        "e": "1f3f0",
+        "a": [
           "european_castle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f492",
-        "aliases": [
+        "e": "1f492",
+        "a": [
           "wedding"
         ],
-        "tags": [
+        "t": [
           "marriage"
         ]
       },
       {
-        "emoji": "1f5fc",
-        "aliases": [
+        "e": "1f5fc",
+        "a": [
           "tokyo_tower"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5fd",
-        "aliases": [
+        "e": "1f5fd",
+        "a": [
           "statue_of_liberty"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26ea",
-        "aliases": [
+        "e": "26ea",
+        "a": [
           "church"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f54c",
-        "aliases": [
+        "e": "1f54c",
+        "a": [
           "mosque"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6d5",
-        "aliases": [
+        "e": "1f6d5",
+        "a": [
           "hindu_temple"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f54d",
-        "aliases": [
+        "e": "1f54d",
+        "a": [
           "synagogue"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26e9-fe0f",
-        "aliases": [
+        "e": "26e9-fe0f",
+        "a": [
           "shinto_shrine"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f54b",
-        "aliases": [
+        "e": "1f54b",
+        "a": [
           "kaaba"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26f2",
-        "aliases": [
+        "e": "26f2",
+        "a": [
           "fountain"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26fa",
-        "aliases": [
+        "e": "26fa",
+        "a": [
           "tent"
         ],
-        "tags": [
+        "t": [
           "camping"
         ]
       },
       {
-        "emoji": "1f301",
-        "aliases": [
+        "e": "1f301",
+        "a": [
           "foggy"
         ],
-        "tags": [
+        "t": [
           "karl"
         ]
       },
       {
-        "emoji": "1f303",
-        "aliases": [
+        "e": "1f303",
+        "a": [
           "night_with_stars"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3d9-fe0f",
-        "aliases": [
+        "e": "1f3d9-fe0f",
+        "a": [
           "cityscape"
         ],
-        "tags": [
+        "t": [
           "skyline"
         ]
       },
       {
-        "emoji": "1f304",
-        "aliases": [
+        "e": "1f304",
+        "a": [
           "sunrise_over_mountains"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f305",
-        "aliases": [
+        "e": "1f305",
+        "a": [
           "sunrise"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f306",
-        "aliases": [
+        "e": "1f306",
+        "a": [
           "city_sunset"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f307",
-        "aliases": [
+        "e": "1f307",
+        "a": [
           "city_sunrise"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f309",
-        "aliases": [
+        "e": "1f309",
+        "a": [
           "bridge_at_night"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2668-fe0f",
-        "aliases": [
+        "e": "2668-fe0f",
+        "a": [
           "hotsprings"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3a0",
-        "aliases": [
+        "e": "1f3a0",
+        "a": [
           "carousel_horse"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6dd",
-        "aliases": [
+        "e": "1f6dd",
+        "a": [
           "playground_slide"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3a1",
-        "aliases": [
+        "e": "1f3a1",
+        "a": [
           "ferris_wheel"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3a2",
-        "aliases": [
+        "e": "1f3a2",
+        "a": [
           "roller_coaster"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f488",
-        "aliases": [
+        "e": "1f488",
+        "a": [
           "barber"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3aa",
-        "aliases": [
+        "e": "1f3aa",
+        "a": [
           "circus_tent"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f682",
-        "aliases": [
+        "e": "1f682",
+        "a": [
           "steam_locomotive"
         ],
-        "tags": [
+        "t": [
           "train"
         ]
       },
       {
-        "emoji": "1f683",
-        "aliases": [
+        "e": "1f683",
+        "a": [
           "railway_car"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f684",
-        "aliases": [
+        "e": "1f684",
+        "a": [
           "bullettrain_side"
         ],
-        "tags": [
+        "t": [
           "train"
         ]
       },
       {
-        "emoji": "1f685",
-        "aliases": [
+        "e": "1f685",
+        "a": [
           "bullettrain_front"
         ],
-        "tags": [
+        "t": [
           "train"
         ]
       },
       {
-        "emoji": "1f686",
-        "aliases": [
+        "e": "1f686",
+        "a": [
           "train2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f687",
-        "aliases": [
+        "e": "1f687",
+        "a": [
           "metro"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f688",
-        "aliases": [
+        "e": "1f688",
+        "a": [
           "light_rail"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f689",
-        "aliases": [
+        "e": "1f689",
+        "a": [
           "station"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f68a",
-        "aliases": [
+        "e": "1f68a",
+        "a": [
           "tram"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f69d",
-        "aliases": [
+        "e": "1f69d",
+        "a": [
           "monorail"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f69e",
-        "aliases": [
+        "e": "1f69e",
+        "a": [
           "mountain_railway"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f68b",
-        "aliases": [
+        "e": "1f68b",
+        "a": [
           "train"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f68c",
-        "aliases": [
+        "e": "1f68c",
+        "a": [
           "bus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f68d",
-        "aliases": [
+        "e": "1f68d",
+        "a": [
           "oncoming_bus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f68e",
-        "aliases": [
+        "e": "1f68e",
+        "a": [
           "trolleybus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f690",
-        "aliases": [
+        "e": "1f690",
+        "a": [
           "minibus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f691",
-        "aliases": [
+        "e": "1f691",
+        "a": [
           "ambulance"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f692",
-        "aliases": [
+        "e": "1f692",
+        "a": [
           "fire_engine"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f693",
-        "aliases": [
+        "e": "1f693",
+        "a": [
           "police_car"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f694",
-        "aliases": [
+        "e": "1f694",
+        "a": [
           "oncoming_police_car"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f695",
-        "aliases": [
+        "e": "1f695",
+        "a": [
           "taxi"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f696",
-        "aliases": [
+        "e": "1f696",
+        "a": [
           "oncoming_taxi"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f697",
-        "aliases": [
+        "e": "1f697",
+        "a": [
           "car",
           "red_car"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f698",
-        "aliases": [
+        "e": "1f698",
+        "a": [
           "oncoming_automobile"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f699",
-        "aliases": [
+        "e": "1f699",
+        "a": [
           "blue_car"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6fb",
-        "aliases": [
+        "e": "1f6fb",
+        "a": [
           "pickup_truck"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f69a",
-        "aliases": [
+        "e": "1f69a",
+        "a": [
           "truck"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f69b",
-        "aliases": [
+        "e": "1f69b",
+        "a": [
           "articulated_lorry"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f69c",
-        "aliases": [
+        "e": "1f69c",
+        "a": [
           "tractor"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ce-fe0f",
-        "aliases": [
+        "e": "1f3ce-fe0f",
+        "a": [
           "racing_car"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3cd-fe0f",
-        "aliases": [
+        "e": "1f3cd-fe0f",
+        "a": [
           "motorcycle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6f5",
-        "aliases": [
+        "e": "1f6f5",
+        "a": [
           "motor_scooter"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9bd",
-        "aliases": [
+        "e": "1f9bd",
+        "a": [
           "manual_wheelchair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9bc",
-        "aliases": [
+        "e": "1f9bc",
+        "a": [
           "motorized_wheelchair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6fa",
-        "aliases": [
+        "e": "1f6fa",
+        "a": [
           "auto_rickshaw"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b2",
-        "aliases": [
+        "e": "1f6b2",
+        "a": [
           "bike"
         ],
-        "tags": [
+        "t": [
           "bicycle"
         ]
       },
       {
-        "emoji": "1f6f4",
-        "aliases": [
+        "e": "1f6f4",
+        "a": [
           "kick_scooter"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6f9",
-        "aliases": [
+        "e": "1f6f9",
+        "a": [
           "skateboard"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6fc",
-        "aliases": [
+        "e": "1f6fc",
+        "a": [
           "roller_skate"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f68f",
-        "aliases": [
+        "e": "1f68f",
+        "a": [
           "busstop"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6e3-fe0f",
-        "aliases": [
+        "e": "1f6e3-fe0f",
+        "a": [
           "motorway"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6e4-fe0f",
-        "aliases": [
+        "e": "1f6e4-fe0f",
+        "a": [
           "railway_track"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6e2-fe0f",
-        "aliases": [
+        "e": "1f6e2-fe0f",
+        "a": [
           "oil_drum"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26fd",
-        "aliases": [
+        "e": "26fd",
+        "a": [
           "fuelpump"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6de",
-        "aliases": [
+        "e": "1f6de",
+        "a": [
           "wheel"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6a8",
-        "aliases": [
+        "e": "1f6a8",
+        "a": [
           "rotating_light"
         ],
-        "tags": [
+        "t": [
           "911",
           "emergency"
         ]
       },
       {
-        "emoji": "1f6a5",
-        "aliases": [
+        "e": "1f6a5",
+        "a": [
           "traffic_light"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6a6",
-        "aliases": [
+        "e": "1f6a6",
+        "a": [
           "vertical_traffic_light"
         ],
-        "tags": [
+        "t": [
           "semaphore"
         ]
       },
       {
-        "emoji": "1f6d1",
-        "aliases": [
+        "e": "1f6d1",
+        "a": [
           "stop_sign"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6a7",
-        "aliases": [
+        "e": "1f6a7",
+        "a": [
           "construction"
         ],
-        "tags": [
+        "t": [
           "wip"
         ]
       },
       {
-        "emoji": "2693",
-        "aliases": [
+        "e": "2693",
+        "a": [
           "anchor"
         ],
-        "tags": [
+        "t": [
           "ship"
         ]
       },
       {
-        "emoji": "1f6df",
-        "aliases": [
+        "e": "1f6df",
+        "a": [
           "ring_buoy"
         ],
-        "tags": [
+        "t": [
           "life preserver"
         ]
       },
       {
-        "emoji": "26f5",
-        "aliases": [
+        "e": "26f5",
+        "a": [
           "boat",
           "sailboat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6f6",
-        "aliases": [
+        "e": "1f6f6",
+        "a": [
           "canoe"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6a4",
-        "aliases": [
+        "e": "1f6a4",
+        "a": [
           "speedboat"
         ],
-        "tags": [
+        "t": [
           "ship"
         ]
       },
       {
-        "emoji": "1f6f3-fe0f",
-        "aliases": [
+        "e": "1f6f3-fe0f",
+        "a": [
           "passenger_ship"
         ],
-        "tags": [
+        "t": [
           "cruise"
         ]
       },
       {
-        "emoji": "26f4-fe0f",
-        "aliases": [
+        "e": "26f4-fe0f",
+        "a": [
           "ferry"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6e5-fe0f",
-        "aliases": [
+        "e": "1f6e5-fe0f",
+        "a": [
           "motor_boat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6a2",
-        "aliases": [
+        "e": "1f6a2",
+        "a": [
           "ship"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2708-fe0f",
-        "aliases": [
+        "e": "2708-fe0f",
+        "a": [
           "airplane"
         ],
-        "tags": [
+        "t": [
           "flight"
         ]
       },
       {
-        "emoji": "1f6e9-fe0f",
-        "aliases": [
+        "e": "1f6e9-fe0f",
+        "a": [
           "small_airplane"
         ],
-        "tags": [
+        "t": [
           "flight"
         ]
       },
       {
-        "emoji": "1f6eb",
-        "aliases": [
+        "e": "1f6eb",
+        "a": [
           "flight_departure"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6ec",
-        "aliases": [
+        "e": "1f6ec",
+        "a": [
           "flight_arrival"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa82",
-        "aliases": [
+        "e": "1fa82",
+        "a": [
           "parachute"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4ba",
-        "aliases": [
+        "e": "1f4ba",
+        "a": [
           "seat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f681",
-        "aliases": [
+        "e": "1f681",
+        "a": [
           "helicopter"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f69f",
-        "aliases": [
+        "e": "1f69f",
+        "a": [
           "suspension_railway"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6a0",
-        "aliases": [
+        "e": "1f6a0",
+        "a": [
           "mountain_cableway"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6a1",
-        "aliases": [
+        "e": "1f6a1",
+        "a": [
           "aerial_tramway"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6f0-fe0f",
-        "aliases": [
+        "e": "1f6f0-fe0f",
+        "a": [
           "artificial_satellite"
         ],
-        "tags": [
+        "t": [
           "orbit",
           "space"
         ]
       },
       {
-        "emoji": "1f680",
-        "aliases": [
+        "e": "1f680",
+        "a": [
           "rocket"
         ],
-        "tags": [
+        "t": [
           "ship",
           "launch"
         ]
       },
       {
-        "emoji": "1f6f8",
-        "aliases": [
+        "e": "1f6f8",
+        "a": [
           "flying_saucer"
         ],
-        "tags": [
+        "t": [
           "ufo"
         ]
       },
       {
-        "emoji": "1f6ce-fe0f",
-        "aliases": [
+        "e": "1f6ce-fe0f",
+        "a": [
           "bellhop_bell"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9f3",
-        "aliases": [
+        "e": "1f9f3",
+        "a": [
           "luggage"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "231b",
-        "aliases": [
+        "e": "231b",
+        "a": [
           "hourglass"
         ],
-        "tags": [
+        "t": [
           "time"
         ]
       },
       {
-        "emoji": "23f3",
-        "aliases": [
+        "e": "23f3",
+        "a": [
           "hourglass_flowing_sand"
         ],
-        "tags": [
+        "t": [
           "time"
         ]
       },
       {
-        "emoji": "231a",
-        "aliases": [
+        "e": "231a",
+        "a": [
           "watch"
         ],
-        "tags": [
+        "t": [
           "time"
         ]
       },
       {
-        "emoji": "23f0",
-        "aliases": [
+        "e": "23f0",
+        "a": [
           "alarm_clock"
         ],
-        "tags": [
+        "t": [
           "morning"
         ]
       },
       {
-        "emoji": "23f1-fe0f",
-        "aliases": [
+        "e": "23f1-fe0f",
+        "a": [
           "stopwatch"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23f2-fe0f",
-        "aliases": [
+        "e": "23f2-fe0f",
+        "a": [
           "timer_clock"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f570-fe0f",
-        "aliases": [
+        "e": "1f570-fe0f",
+        "a": [
           "mantelpiece_clock"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f55b",
-        "aliases": [
+        "e": "1f55b",
+        "a": [
           "clock12"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f567",
-        "aliases": [
+        "e": "1f567",
+        "a": [
           "clock1230"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f550",
-        "aliases": [
+        "e": "1f550",
+        "a": [
           "clock1"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f55c",
-        "aliases": [
+        "e": "1f55c",
+        "a": [
           "clock130"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f551",
-        "aliases": [
+        "e": "1f551",
+        "a": [
           "clock2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f55d",
-        "aliases": [
+        "e": "1f55d",
+        "a": [
           "clock230"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f552",
-        "aliases": [
+        "e": "1f552",
+        "a": [
           "clock3"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f55e",
-        "aliases": [
+        "e": "1f55e",
+        "a": [
           "clock330"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f553",
-        "aliases": [
+        "e": "1f553",
+        "a": [
           "clock4"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f55f",
-        "aliases": [
+        "e": "1f55f",
+        "a": [
           "clock430"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f554",
-        "aliases": [
+        "e": "1f554",
+        "a": [
           "clock5"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f560",
-        "aliases": [
+        "e": "1f560",
+        "a": [
           "clock530"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f555",
-        "aliases": [
+        "e": "1f555",
+        "a": [
           "clock6"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f561",
-        "aliases": [
+        "e": "1f561",
+        "a": [
           "clock630"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f556",
-        "aliases": [
+        "e": "1f556",
+        "a": [
           "clock7"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f562",
-        "aliases": [
+        "e": "1f562",
+        "a": [
           "clock730"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f557",
-        "aliases": [
+        "e": "1f557",
+        "a": [
           "clock8"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f563",
-        "aliases": [
+        "e": "1f563",
+        "a": [
           "clock830"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f558",
-        "aliases": [
+        "e": "1f558",
+        "a": [
           "clock9"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f564",
-        "aliases": [
+        "e": "1f564",
+        "a": [
           "clock930"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f559",
-        "aliases": [
+        "e": "1f559",
+        "a": [
           "clock10"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f565",
-        "aliases": [
+        "e": "1f565",
+        "a": [
           "clock1030"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f55a",
-        "aliases": [
+        "e": "1f55a",
+        "a": [
           "clock11"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f566",
-        "aliases": [
+        "e": "1f566",
+        "a": [
           "clock1130"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f311",
-        "aliases": [
+        "e": "1f311",
+        "a": [
           "new_moon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f312",
-        "aliases": [
+        "e": "1f312",
+        "a": [
           "waxing_crescent_moon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f313",
-        "aliases": [
+        "e": "1f313",
+        "a": [
           "first_quarter_moon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f314",
-        "aliases": [
+        "e": "1f314",
+        "a": [
           "moon",
           "waxing_gibbous_moon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f315",
-        "aliases": [
+        "e": "1f315",
+        "a": [
           "full_moon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f316",
-        "aliases": [
+        "e": "1f316",
+        "a": [
           "waning_gibbous_moon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f317",
-        "aliases": [
+        "e": "1f317",
+        "a": [
           "last_quarter_moon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f318",
-        "aliases": [
+        "e": "1f318",
+        "a": [
           "waning_crescent_moon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f319",
-        "aliases": [
+        "e": "1f319",
+        "a": [
           "crescent_moon"
         ],
-        "tags": [
+        "t": [
           "night"
         ]
       },
       {
-        "emoji": "1f31a",
-        "aliases": [
+        "e": "1f31a",
+        "a": [
           "new_moon_with_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f31b",
-        "aliases": [
+        "e": "1f31b",
+        "a": [
           "first_quarter_moon_with_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f31c",
-        "aliases": [
+        "e": "1f31c",
+        "a": [
           "last_quarter_moon_with_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f321-fe0f",
-        "aliases": [
+        "e": "1f321-fe0f",
+        "a": [
           "thermometer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2600-fe0f",
-        "aliases": [
+        "e": "2600-fe0f",
+        "a": [
           "sunny"
         ],
-        "tags": [
+        "t": [
           "weather"
         ]
       },
       {
-        "emoji": "1f31d",
-        "aliases": [
+        "e": "1f31d",
+        "a": [
           "full_moon_with_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f31e",
-        "aliases": [
+        "e": "1f31e",
+        "a": [
           "sun_with_face"
         ],
-        "tags": [
+        "t": [
           "summer"
         ]
       },
       {
-        "emoji": "1fa90",
-        "aliases": [
+        "e": "1fa90",
+        "a": [
           "ringed_planet"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2b50",
-        "aliases": [
+        "e": "2b50",
+        "a": [
           "star"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f31f",
-        "aliases": [
+        "e": "1f31f",
+        "a": [
           "star2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f320",
-        "aliases": [
+        "e": "1f320",
+        "a": [
           "stars"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f30c",
-        "aliases": [
+        "e": "1f30c",
+        "a": [
           "milky_way"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2601-fe0f",
-        "aliases": [
+        "e": "2601-fe0f",
+        "a": [
           "cloud"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26c5",
-        "aliases": [
+        "e": "26c5",
+        "a": [
           "partly_sunny"
         ],
-        "tags": [
+        "t": [
           "weather",
           "cloud"
         ]
       },
       {
-        "emoji": "26c8-fe0f",
-        "aliases": [
+        "e": "26c8-fe0f",
+        "a": [
           "cloud_with_lightning_and_rain"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f324-fe0f",
-        "aliases": [
+        "e": "1f324-fe0f",
+        "a": [
           "sun_behind_small_cloud"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f325-fe0f",
-        "aliases": [
+        "e": "1f325-fe0f",
+        "a": [
           "sun_behind_large_cloud"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f326-fe0f",
-        "aliases": [
+        "e": "1f326-fe0f",
+        "a": [
           "sun_behind_rain_cloud"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f327-fe0f",
-        "aliases": [
+        "e": "1f327-fe0f",
+        "a": [
           "cloud_with_rain"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f328-fe0f",
-        "aliases": [
+        "e": "1f328-fe0f",
+        "a": [
           "cloud_with_snow"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f329-fe0f",
-        "aliases": [
+        "e": "1f329-fe0f",
+        "a": [
           "cloud_with_lightning"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f32a-fe0f",
-        "aliases": [
+        "e": "1f32a-fe0f",
+        "a": [
           "tornado"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f32b-fe0f",
-        "aliases": [
+        "e": "1f32b-fe0f",
+        "a": [
           "fog"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f32c-fe0f",
-        "aliases": [
+        "e": "1f32c-fe0f",
+        "a": [
           "wind_face"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f300",
-        "aliases": [
+        "e": "1f300",
+        "a": [
           "cyclone"
         ],
-        "tags": [
+        "t": [
           "swirl"
         ]
       },
       {
-        "emoji": "1f308",
-        "aliases": [
+        "e": "1f308",
+        "a": [
           "rainbow"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f302",
-        "aliases": [
+        "e": "1f302",
+        "a": [
           "closed_umbrella"
         ],
-        "tags": [
+        "t": [
           "weather",
           "rain"
         ]
       },
       {
-        "emoji": "2602-fe0f",
-        "aliases": [
+        "e": "2602-fe0f",
+        "a": [
           "open_umbrella"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2614",
-        "aliases": [
+        "e": "2614",
+        "a": [
           "umbrella"
         ],
-        "tags": [
+        "t": [
           "rain",
           "weather"
         ]
       },
       {
-        "emoji": "26f1-fe0f",
-        "aliases": [
+        "e": "26f1-fe0f",
+        "a": [
           "parasol_on_ground"
         ],
-        "tags": [
+        "t": [
           "beach_umbrella"
         ]
       },
       {
-        "emoji": "26a1",
-        "aliases": [
+        "e": "26a1",
+        "a": [
           "zap"
         ],
-        "tags": [
+        "t": [
           "lightning",
           "thunder"
         ]
       },
       {
-        "emoji": "2744-fe0f",
-        "aliases": [
+        "e": "2744-fe0f",
+        "a": [
           "snowflake"
         ],
-        "tags": [
+        "t": [
           "winter",
           "cold",
           "weather"
         ]
       },
       {
-        "emoji": "2603-fe0f",
-        "aliases": [
+        "e": "2603-fe0f",
+        "a": [
           "snowman_with_snow"
         ],
-        "tags": [
+        "t": [
           "winter",
           "christmas"
         ]
       },
       {
-        "emoji": "26c4",
-        "aliases": [
+        "e": "26c4",
+        "a": [
           "snowman"
         ],
-        "tags": [
+        "t": [
           "winter"
         ]
       },
       {
-        "emoji": "2604-fe0f",
-        "aliases": [
+        "e": "2604-fe0f",
+        "a": [
           "comet"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f525",
-        "aliases": [
+        "e": "1f525",
+        "a": [
           "fire"
         ],
-        "tags": [
+        "t": [
           "burn"
         ]
       },
       {
-        "emoji": "1f4a7",
-        "aliases": [
+        "e": "1f4a7",
+        "a": [
           "droplet"
         ],
-        "tags": [
+        "t": [
           "water"
         ]
       },
       {
-        "emoji": "1f30a",
-        "aliases": [
+        "e": "1f30a",
+        "a": [
           "ocean"
         ],
-        "tags": [
+        "t": [
           "sea"
         ]
       }
     ],
     "Activities": [
       {
-        "emoji": "1f383",
-        "aliases": [
+        "e": "1f383",
+        "a": [
           "jack_o_lantern"
         ],
-        "tags": [
+        "t": [
           "halloween"
         ]
       },
       {
-        "emoji": "1f384",
-        "aliases": [
+        "e": "1f384",
+        "a": [
           "christmas_tree"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f386",
-        "aliases": [
+        "e": "1f386",
+        "a": [
           "fireworks"
         ],
-        "tags": [
+        "t": [
           "festival",
           "celebration"
         ]
       },
       {
-        "emoji": "1f387",
-        "aliases": [
+        "e": "1f387",
+        "a": [
           "sparkler"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9e8",
-        "aliases": [
+        "e": "1f9e8",
+        "a": [
           "firecracker"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2728",
-        "aliases": [
+        "e": "2728",
+        "a": [
           "sparkles"
         ],
-        "tags": [
+        "t": [
           "shiny"
         ]
       },
       {
-        "emoji": "1f388",
-        "aliases": [
+        "e": "1f388",
+        "a": [
           "balloon"
         ],
-        "tags": [
+        "t": [
           "party",
           "birthday"
         ]
       },
       {
-        "emoji": "1f389",
-        "aliases": [
+        "e": "1f389",
+        "a": [
           "tada"
         ],
-        "tags": [
+        "t": [
           "hooray",
           "party"
         ]
       },
       {
-        "emoji": "1f38a",
-        "aliases": [
+        "e": "1f38a",
+        "a": [
           "confetti_ball"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f38b",
-        "aliases": [
+        "e": "1f38b",
+        "a": [
           "tanabata_tree"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f38d",
-        "aliases": [
+        "e": "1f38d",
+        "a": [
           "bamboo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f38e",
-        "aliases": [
+        "e": "1f38e",
+        "a": [
           "dolls"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f38f",
-        "aliases": [
+        "e": "1f38f",
+        "a": [
           "flags"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f390",
-        "aliases": [
+        "e": "1f390",
+        "a": [
           "wind_chime"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f391",
-        "aliases": [
+        "e": "1f391",
+        "a": [
           "rice_scene"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9e7",
-        "aliases": [
+        "e": "1f9e7",
+        "a": [
           "red_envelope"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f380",
-        "aliases": [
+        "e": "1f380",
+        "a": [
           "ribbon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f381",
-        "aliases": [
+        "e": "1f381",
+        "a": [
           "gift"
         ],
-        "tags": [
+        "t": [
           "present",
           "birthday",
           "christmas"
         ]
       },
       {
-        "emoji": "1f397-fe0f",
-        "aliases": [
+        "e": "1f397-fe0f",
+        "a": [
           "reminder_ribbon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f39f-fe0f",
-        "aliases": [
+        "e": "1f39f-fe0f",
+        "a": [
           "tickets"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ab",
-        "aliases": [
+        "e": "1f3ab",
+        "a": [
           "ticket"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f396-fe0f",
-        "aliases": [
+        "e": "1f396-fe0f",
+        "a": [
           "medal_military"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3c6",
-        "aliases": [
+        "e": "1f3c6",
+        "a": [
           "trophy"
         ],
-        "tags": [
+        "t": [
           "award",
           "contest",
           "winner"
         ]
       },
       {
-        "emoji": "1f3c5",
-        "aliases": [
+        "e": "1f3c5",
+        "a": [
           "medal_sports"
         ],
-        "tags": [
+        "t": [
           "gold",
           "winner"
         ]
       },
       {
-        "emoji": "1f947",
-        "aliases": [
+        "e": "1f947",
+        "a": [
           "1st_place_medal"
         ],
-        "tags": [
+        "t": [
           "gold"
         ]
       },
       {
-        "emoji": "1f948",
-        "aliases": [
+        "e": "1f948",
+        "a": [
           "2nd_place_medal"
         ],
-        "tags": [
+        "t": [
           "silver"
         ]
       },
       {
-        "emoji": "1f949",
-        "aliases": [
+        "e": "1f949",
+        "a": [
           "3rd_place_medal"
         ],
-        "tags": [
+        "t": [
           "bronze"
         ]
       },
       {
-        "emoji": "26bd",
-        "aliases": [
+        "e": "26bd",
+        "a": [
           "soccer"
         ],
-        "tags": [
+        "t": [
           "sports"
         ]
       },
       {
-        "emoji": "26be",
-        "aliases": [
+        "e": "26be",
+        "a": [
           "baseball"
         ],
-        "tags": [
+        "t": [
           "sports"
         ]
       },
       {
-        "emoji": "1f94e",
-        "aliases": [
+        "e": "1f94e",
+        "a": [
           "softball"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3c0",
-        "aliases": [
+        "e": "1f3c0",
+        "a": [
           "basketball"
         ],
-        "tags": [
+        "t": [
           "sports"
         ]
       },
       {
-        "emoji": "1f3d0",
-        "aliases": [
+        "e": "1f3d0",
+        "a": [
           "volleyball"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3c8",
-        "aliases": [
+        "e": "1f3c8",
+        "a": [
           "football"
         ],
-        "tags": [
+        "t": [
           "sports"
         ]
       },
       {
-        "emoji": "1f3c9",
-        "aliases": [
+        "e": "1f3c9",
+        "a": [
           "rugby_football"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3be",
-        "aliases": [
+        "e": "1f3be",
+        "a": [
           "tennis"
         ],
-        "tags": [
+        "t": [
           "sports"
         ]
       },
       {
-        "emoji": "1f94f",
-        "aliases": [
+        "e": "1f94f",
+        "a": [
           "flying_disc"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3b3",
-        "aliases": [
+        "e": "1f3b3",
+        "a": [
           "bowling"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3cf",
-        "aliases": [
+        "e": "1f3cf",
+        "a": [
           "cricket_game"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3d1",
-        "aliases": [
+        "e": "1f3d1",
+        "a": [
           "field_hockey"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3d2",
-        "aliases": [
+        "e": "1f3d2",
+        "a": [
           "ice_hockey"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f94d",
-        "aliases": [
+        "e": "1f94d",
+        "a": [
           "lacrosse"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3d3",
-        "aliases": [
+        "e": "1f3d3",
+        "a": [
           "ping_pong"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f8",
-        "aliases": [
+        "e": "1f3f8",
+        "a": [
           "badminton"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f94a",
-        "aliases": [
+        "e": "1f94a",
+        "a": [
           "boxing_glove"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f94b",
-        "aliases": [
+        "e": "1f94b",
+        "a": [
           "martial_arts_uniform"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f945",
-        "aliases": [
+        "e": "1f945",
+        "a": [
           "goal_net"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26f3",
-        "aliases": [
+        "e": "26f3",
+        "a": [
           "golf"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26f8-fe0f",
-        "aliases": [
+        "e": "26f8-fe0f",
+        "a": [
           "ice_skate"
         ],
-        "tags": [
+        "t": [
           "skating"
         ]
       },
       {
-        "emoji": "1f3a3",
-        "aliases": [
+        "e": "1f3a3",
+        "a": [
           "fishing_pole_and_fish"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f93f",
-        "aliases": [
+        "e": "1f93f",
+        "a": [
           "diving_mask"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3bd",
-        "aliases": [
+        "e": "1f3bd",
+        "a": [
           "running_shirt_with_sash"
         ],
-        "tags": [
+        "t": [
           "marathon"
         ]
       },
       {
-        "emoji": "1f3bf",
-        "aliases": [
+        "e": "1f3bf",
+        "a": [
           "ski"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6f7",
-        "aliases": [
+        "e": "1f6f7",
+        "a": [
           "sled"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f94c",
-        "aliases": [
+        "e": "1f94c",
+        "a": [
           "curling_stone"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3af",
-        "aliases": [
+        "e": "1f3af",
+        "a": [
           "dart"
         ],
-        "tags": [
+        "t": [
           "target"
         ]
       },
       {
-        "emoji": "1fa80",
-        "aliases": [
+        "e": "1fa80",
+        "a": [
           "yo_yo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa81",
-        "aliases": [
+        "e": "1fa81",
+        "a": [
           "kite"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f52b",
-        "aliases": [
+        "e": "1f52b",
+        "a": [
           "gun"
         ],
-        "tags": [
+        "t": [
           "shoot",
           "weapon"
         ]
       },
       {
-        "emoji": "1f3b1",
-        "aliases": [
+        "e": "1f3b1",
+        "a": [
           "8ball"
         ],
-        "tags": [
+        "t": [
           "pool",
           "billiards"
         ]
       },
       {
-        "emoji": "1f52e",
-        "aliases": [
+        "e": "1f52e",
+        "a": [
           "crystal_ball"
         ],
-        "tags": [
+        "t": [
           "fortune"
         ]
       },
       {
-        "emoji": "1fa84",
-        "aliases": [
+        "e": "1fa84",
+        "a": [
           "magic_wand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ae",
-        "aliases": [
+        "e": "1f3ae",
+        "a": [
           "video_game"
         ],
-        "tags": [
+        "t": [
           "play",
           "controller",
           "console"
         ]
       },
       {
-        "emoji": "1f579-fe0f",
-        "aliases": [
+        "e": "1f579-fe0f",
+        "a": [
           "joystick"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3b0",
-        "aliases": [
+        "e": "1f3b0",
+        "a": [
           "slot_machine"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3b2",
-        "aliases": [
+        "e": "1f3b2",
+        "a": [
           "game_die"
         ],
-        "tags": [
+        "t": [
           "dice",
           "gambling"
         ]
       },
       {
-        "emoji": "1f9e9",
-        "aliases": [
+        "e": "1f9e9",
+        "a": [
           "jigsaw"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9f8",
-        "aliases": [
+        "e": "1f9f8",
+        "a": [
           "teddy_bear"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa85",
-        "aliases": [
+        "e": "1fa85",
+        "a": [
           "pinata"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faa9",
-        "aliases": [
+        "e": "1faa9",
+        "a": [
           "mirror_ball"
         ],
-        "tags": [
+        "t": [
           "disco",
           "party"
         ]
       },
       {
-        "emoji": "1fa86",
-        "aliases": [
+        "e": "1fa86",
+        "a": [
           "nesting_dolls"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2660-fe0f",
-        "aliases": [
+        "e": "2660-fe0f",
+        "a": [
           "spades"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2665-fe0f",
-        "aliases": [
+        "e": "2665-fe0f",
+        "a": [
           "hearts"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2666-fe0f",
-        "aliases": [
+        "e": "2666-fe0f",
+        "a": [
           "diamonds"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2663-fe0f",
-        "aliases": [
+        "e": "2663-fe0f",
+        "a": [
           "clubs"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "265f-fe0f",
-        "aliases": [
+        "e": "265f-fe0f",
+        "a": [
           "chess_pawn"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f0cf",
-        "aliases": [
+        "e": "1f0cf",
+        "a": [
           "black_joker"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f004",
-        "aliases": [
+        "e": "1f004",
+        "a": [
           "mahjong"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3b4",
-        "aliases": [
+        "e": "1f3b4",
+        "a": [
           "flower_playing_cards"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ad",
-        "aliases": [
+        "e": "1f3ad",
+        "a": [
           "performing_arts"
         ],
-        "tags": [
+        "t": [
           "theater",
           "drama"
         ]
       },
       {
-        "emoji": "1f5bc-fe0f",
-        "aliases": [
+        "e": "1f5bc-fe0f",
+        "a": [
           "framed_picture"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3a8",
-        "aliases": [
+        "e": "1f3a8",
+        "a": [
           "art"
         ],
-        "tags": [
+        "t": [
           "design",
           "paint"
         ]
       },
       {
-        "emoji": "1f9f5",
-        "aliases": [
+        "e": "1f9f5",
+        "a": [
           "thread"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faa1",
-        "aliases": [
+        "e": "1faa1",
+        "a": [
           "sewing_needle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9f6",
-        "aliases": [
+        "e": "1f9f6",
+        "a": [
           "yarn"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faa2",
-        "aliases": [
+        "e": "1faa2",
+        "a": [
           "knot"
         ],
-        "tags": []
+        "t": []
       }
     ],
     "Objects": [
       {
-        "emoji": "1f453",
-        "aliases": [
+        "e": "1f453",
+        "a": [
           "eyeglasses"
         ],
-        "tags": [
+        "t": [
           "glasses"
         ]
       },
       {
-        "emoji": "1f576-fe0f",
-        "aliases": [
+        "e": "1f576-fe0f",
+        "a": [
           "dark_sunglasses"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f97d",
-        "aliases": [
+        "e": "1f97d",
+        "a": [
           "goggles"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f97c",
-        "aliases": [
+        "e": "1f97c",
+        "a": [
           "lab_coat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ba",
-        "aliases": [
+        "e": "1f9ba",
+        "a": [
           "safety_vest"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f454",
-        "aliases": [
+        "e": "1f454",
+        "a": [
           "necktie"
         ],
-        "tags": [
+        "t": [
           "shirt",
           "formal"
         ]
       },
       {
-        "emoji": "1f455",
-        "aliases": [
+        "e": "1f455",
+        "a": [
           "shirt",
           "tshirt"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f456",
-        "aliases": [
+        "e": "1f456",
+        "a": [
           "jeans"
         ],
-        "tags": [
+        "t": [
           "pants"
         ]
       },
       {
-        "emoji": "1f9e3",
-        "aliases": [
+        "e": "1f9e3",
+        "a": [
           "scarf"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9e4",
-        "aliases": [
+        "e": "1f9e4",
+        "a": [
           "gloves"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9e5",
-        "aliases": [
+        "e": "1f9e5",
+        "a": [
           "coat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9e6",
-        "aliases": [
+        "e": "1f9e6",
+        "a": [
           "socks"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f457",
-        "aliases": [
+        "e": "1f457",
+        "a": [
           "dress"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f458",
-        "aliases": [
+        "e": "1f458",
+        "a": [
           "kimono"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f97b",
-        "aliases": [
+        "e": "1f97b",
+        "a": [
           "sari"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa71",
-        "aliases": [
+        "e": "1fa71",
+        "a": [
           "one_piece_swimsuit"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa72",
-        "aliases": [
+        "e": "1fa72",
+        "a": [
           "swim_brief"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa73",
-        "aliases": [
+        "e": "1fa73",
+        "a": [
           "shorts"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f459",
-        "aliases": [
+        "e": "1f459",
+        "a": [
           "bikini"
         ],
-        "tags": [
+        "t": [
           "beach"
         ]
       },
       {
-        "emoji": "1f45a",
-        "aliases": [
+        "e": "1f45a",
+        "a": [
           "womans_clothes"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faad",
-        "aliases": [
+        "e": "1faad",
+        "a": [
           "folding_hand_fan"
         ],
-        "tags": [
+        "t": [
           "sensu"
         ]
       },
       {
-        "emoji": "1f45b",
-        "aliases": [
+        "e": "1f45b",
+        "a": [
           "purse"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f45c",
-        "aliases": [
+        "e": "1f45c",
+        "a": [
           "handbag"
         ],
-        "tags": [
+        "t": [
           "bag"
         ]
       },
       {
-        "emoji": "1f45d",
-        "aliases": [
+        "e": "1f45d",
+        "a": [
           "pouch"
         ],
-        "tags": [
+        "t": [
           "bag"
         ]
       },
       {
-        "emoji": "1f6cd-fe0f",
-        "aliases": [
+        "e": "1f6cd-fe0f",
+        "a": [
           "shopping"
         ],
-        "tags": [
+        "t": [
           "bags"
         ]
       },
       {
-        "emoji": "1f392",
-        "aliases": [
+        "e": "1f392",
+        "a": [
           "school_satchel"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa74",
-        "aliases": [
+        "e": "1fa74",
+        "a": [
           "thong_sandal"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f45e",
-        "aliases": [
+        "e": "1f45e",
+        "a": [
           "mans_shoe",
           "shoe"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f45f",
-        "aliases": [
+        "e": "1f45f",
+        "a": [
           "athletic_shoe"
         ],
-        "tags": [
+        "t": [
           "sneaker",
           "sport",
           "running"
         ]
       },
       {
-        "emoji": "1f97e",
-        "aliases": [
+        "e": "1f97e",
+        "a": [
           "hiking_boot"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f97f",
-        "aliases": [
+        "e": "1f97f",
+        "a": [
           "flat_shoe"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f460",
-        "aliases": [
+        "e": "1f460",
+        "a": [
           "high_heel"
         ],
-        "tags": [
+        "t": [
           "shoe"
         ]
       },
       {
-        "emoji": "1f461",
-        "aliases": [
+        "e": "1f461",
+        "a": [
           "sandal"
         ],
-        "tags": [
+        "t": [
           "shoe"
         ]
       },
       {
-        "emoji": "1fa70",
-        "aliases": [
+        "e": "1fa70",
+        "a": [
           "ballet_shoes"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f462",
-        "aliases": [
+        "e": "1f462",
+        "a": [
           "boot"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faae",
-        "aliases": [
+        "e": "1faae",
+        "a": [
           "hair_pick"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f451",
-        "aliases": [
+        "e": "1f451",
+        "a": [
           "crown"
         ],
-        "tags": [
+        "t": [
           "king",
           "queen",
           "royal"
         ]
       },
       {
-        "emoji": "1f452",
-        "aliases": [
+        "e": "1f452",
+        "a": [
           "womans_hat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3a9",
-        "aliases": [
+        "e": "1f3a9",
+        "a": [
           "tophat"
         ],
-        "tags": [
+        "t": [
           "hat",
           "classy"
         ]
       },
       {
-        "emoji": "1f393",
-        "aliases": [
+        "e": "1f393",
+        "a": [
           "mortar_board"
         ],
-        "tags": [
+        "t": [
           "education",
           "college",
           "university",
@@ -9058,5274 +9058,5274 @@ export const gfmUnicode = {
         ]
       },
       {
-        "emoji": "1f9e2",
-        "aliases": [
+        "e": "1f9e2",
+        "a": [
           "billed_cap"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa96",
-        "aliases": [
+        "e": "1fa96",
+        "a": [
           "military_helmet"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26d1-fe0f",
-        "aliases": [
+        "e": "26d1-fe0f",
+        "a": [
           "rescue_worker_helmet"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4ff",
-        "aliases": [
+        "e": "1f4ff",
+        "a": [
           "prayer_beads"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f484",
-        "aliases": [
+        "e": "1f484",
+        "a": [
           "lipstick"
         ],
-        "tags": [
+        "t": [
           "makeup"
         ]
       },
       {
-        "emoji": "1f48d",
-        "aliases": [
+        "e": "1f48d",
+        "a": [
           "ring"
         ],
-        "tags": [
+        "t": [
           "wedding",
           "marriage",
           "engaged"
         ]
       },
       {
-        "emoji": "1f48e",
-        "aliases": [
+        "e": "1f48e",
+        "a": [
           "gem"
         ],
-        "tags": [
+        "t": [
           "diamond"
         ]
       },
       {
-        "emoji": "1f507",
-        "aliases": [
+        "e": "1f507",
+        "a": [
           "mute"
         ],
-        "tags": [
+        "t": [
           "sound",
           "volume"
         ]
       },
       {
-        "emoji": "1f508",
-        "aliases": [
+        "e": "1f508",
+        "a": [
           "speaker"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f509",
-        "aliases": [
+        "e": "1f509",
+        "a": [
           "sound"
         ],
-        "tags": [
+        "t": [
           "volume"
         ]
       },
       {
-        "emoji": "1f50a",
-        "aliases": [
+        "e": "1f50a",
+        "a": [
           "loud_sound"
         ],
-        "tags": [
+        "t": [
           "volume"
         ]
       },
       {
-        "emoji": "1f4e2",
-        "aliases": [
+        "e": "1f4e2",
+        "a": [
           "loudspeaker"
         ],
-        "tags": [
+        "t": [
           "announcement"
         ]
       },
       {
-        "emoji": "1f4e3",
-        "aliases": [
+        "e": "1f4e3",
+        "a": [
           "mega"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4ef",
-        "aliases": [
+        "e": "1f4ef",
+        "a": [
           "postal_horn"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f514",
-        "aliases": [
+        "e": "1f514",
+        "a": [
           "bell"
         ],
-        "tags": [
+        "t": [
           "sound",
           "notification"
         ]
       },
       {
-        "emoji": "1f515",
-        "aliases": [
+        "e": "1f515",
+        "a": [
           "no_bell"
         ],
-        "tags": [
+        "t": [
           "volume",
           "off"
         ]
       },
       {
-        "emoji": "1f3bc",
-        "aliases": [
+        "e": "1f3bc",
+        "a": [
           "musical_score"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3b5",
-        "aliases": [
+        "e": "1f3b5",
+        "a": [
           "musical_note"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3b6",
-        "aliases": [
+        "e": "1f3b6",
+        "a": [
           "notes"
         ],
-        "tags": [
+        "t": [
           "music"
         ]
       },
       {
-        "emoji": "1f399-fe0f",
-        "aliases": [
+        "e": "1f399-fe0f",
+        "a": [
           "studio_microphone"
         ],
-        "tags": [
+        "t": [
           "podcast"
         ]
       },
       {
-        "emoji": "1f39a-fe0f",
-        "aliases": [
+        "e": "1f39a-fe0f",
+        "a": [
           "level_slider"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f39b-fe0f",
-        "aliases": [
+        "e": "1f39b-fe0f",
+        "a": [
           "control_knobs"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3a4",
-        "aliases": [
+        "e": "1f3a4",
+        "a": [
           "microphone"
         ],
-        "tags": [
+        "t": [
           "sing"
         ]
       },
       {
-        "emoji": "1f3a7",
-        "aliases": [
+        "e": "1f3a7",
+        "a": [
           "headphones"
         ],
-        "tags": [
+        "t": [
           "music",
           "earphones"
         ]
       },
       {
-        "emoji": "1f4fb",
-        "aliases": [
+        "e": "1f4fb",
+        "a": [
           "radio"
         ],
-        "tags": [
+        "t": [
           "podcast"
         ]
       },
       {
-        "emoji": "1f3b7",
-        "aliases": [
+        "e": "1f3b7",
+        "a": [
           "saxophone"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa97",
-        "aliases": [
+        "e": "1fa97",
+        "a": [
           "accordion"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3b8",
-        "aliases": [
+        "e": "1f3b8",
+        "a": [
           "guitar"
         ],
-        "tags": [
+        "t": [
           "rock"
         ]
       },
       {
-        "emoji": "1f3b9",
-        "aliases": [
+        "e": "1f3b9",
+        "a": [
           "musical_keyboard"
         ],
-        "tags": [
+        "t": [
           "piano"
         ]
       },
       {
-        "emoji": "1f3ba",
-        "aliases": [
+        "e": "1f3ba",
+        "a": [
           "trumpet"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3bb",
-        "aliases": [
+        "e": "1f3bb",
+        "a": [
           "violin"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa95",
-        "aliases": [
+        "e": "1fa95",
+        "a": [
           "banjo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f941",
-        "aliases": [
+        "e": "1f941",
+        "a": [
           "drum"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa98",
-        "aliases": [
+        "e": "1fa98",
+        "a": [
           "long_drum"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa87",
-        "aliases": [
+        "e": "1fa87",
+        "a": [
           "maracas"
         ],
-        "tags": [
+        "t": [
           "shaker"
         ]
       },
       {
-        "emoji": "1fa88",
-        "aliases": [
+        "e": "1fa88",
+        "a": [
           "flute"
         ],
-        "tags": [
+        "t": [
           "recorder"
         ]
       },
       {
-        "emoji": "1f4f1",
-        "aliases": [
+        "e": "1f4f1",
+        "a": [
           "iphone"
         ],
-        "tags": [
+        "t": [
           "smartphone",
           "mobile"
         ]
       },
       {
-        "emoji": "1f4f2",
-        "aliases": [
+        "e": "1f4f2",
+        "a": [
           "calling"
         ],
-        "tags": [
+        "t": [
           "call",
           "incoming"
         ]
       },
       {
-        "emoji": "260e-fe0f",
-        "aliases": [
+        "e": "260e-fe0f",
+        "a": [
           "phone",
           "telephone"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4de",
-        "aliases": [
+        "e": "1f4de",
+        "a": [
           "telephone_receiver"
         ],
-        "tags": [
+        "t": [
           "phone",
           "call"
         ]
       },
       {
-        "emoji": "1f4df",
-        "aliases": [
+        "e": "1f4df",
+        "a": [
           "pager"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4e0",
-        "aliases": [
+        "e": "1f4e0",
+        "a": [
           "fax"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f50b",
-        "aliases": [
+        "e": "1f50b",
+        "a": [
           "battery"
         ],
-        "tags": [
+        "t": [
           "power"
         ]
       },
       {
-        "emoji": "1faab",
-        "aliases": [
+        "e": "1faab",
+        "a": [
           "low_battery"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f50c",
-        "aliases": [
+        "e": "1f50c",
+        "a": [
           "electric_plug"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4bb",
-        "aliases": [
+        "e": "1f4bb",
+        "a": [
           "computer"
         ],
-        "tags": [
+        "t": [
           "desktop",
           "screen"
         ]
       },
       {
-        "emoji": "1f5a5-fe0f",
-        "aliases": [
+        "e": "1f5a5-fe0f",
+        "a": [
           "desktop_computer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5a8-fe0f",
-        "aliases": [
+        "e": "1f5a8-fe0f",
+        "a": [
           "printer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2328-fe0f",
-        "aliases": [
+        "e": "2328-fe0f",
+        "a": [
           "keyboard"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5b1-fe0f",
-        "aliases": [
+        "e": "1f5b1-fe0f",
+        "a": [
           "computer_mouse"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5b2-fe0f",
-        "aliases": [
+        "e": "1f5b2-fe0f",
+        "a": [
           "trackball"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4bd",
-        "aliases": [
+        "e": "1f4bd",
+        "a": [
           "minidisc"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4be",
-        "aliases": [
+        "e": "1f4be",
+        "a": [
           "floppy_disk"
         ],
-        "tags": [
+        "t": [
           "save"
         ]
       },
       {
-        "emoji": "1f4bf",
-        "aliases": [
+        "e": "1f4bf",
+        "a": [
           "cd"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4c0",
-        "aliases": [
+        "e": "1f4c0",
+        "a": [
           "dvd"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ee",
-        "aliases": [
+        "e": "1f9ee",
+        "a": [
           "abacus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3a5",
-        "aliases": [
+        "e": "1f3a5",
+        "a": [
           "movie_camera"
         ],
-        "tags": [
+        "t": [
           "film",
           "video"
         ]
       },
       {
-        "emoji": "1f39e-fe0f",
-        "aliases": [
+        "e": "1f39e-fe0f",
+        "a": [
           "film_strip"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4fd-fe0f",
-        "aliases": [
+        "e": "1f4fd-fe0f",
+        "a": [
           "film_projector"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ac",
-        "aliases": [
+        "e": "1f3ac",
+        "a": [
           "clapper"
         ],
-        "tags": [
+        "t": [
           "film"
         ]
       },
       {
-        "emoji": "1f4fa",
-        "aliases": [
+        "e": "1f4fa",
+        "a": [
           "tv"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4f7",
-        "aliases": [
+        "e": "1f4f7",
+        "a": [
           "camera"
         ],
-        "tags": [
+        "t": [
           "photo"
         ]
       },
       {
-        "emoji": "1f4f8",
-        "aliases": [
+        "e": "1f4f8",
+        "a": [
           "camera_flash"
         ],
-        "tags": [
+        "t": [
           "photo"
         ]
       },
       {
-        "emoji": "1f4f9",
-        "aliases": [
+        "e": "1f4f9",
+        "a": [
           "video_camera"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4fc",
-        "aliases": [
+        "e": "1f4fc",
+        "a": [
           "vhs"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f50d",
-        "aliases": [
+        "e": "1f50d",
+        "a": [
           "mag"
         ],
-        "tags": [
+        "t": [
           "search",
           "zoom"
         ]
       },
       {
-        "emoji": "1f50e",
-        "aliases": [
+        "e": "1f50e",
+        "a": [
           "mag_right"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f56f-fe0f",
-        "aliases": [
+        "e": "1f56f-fe0f",
+        "a": [
           "candle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4a1",
-        "aliases": [
+        "e": "1f4a1",
+        "a": [
           "bulb"
         ],
-        "tags": [
+        "t": [
           "idea",
           "light"
         ]
       },
       {
-        "emoji": "1f526",
-        "aliases": [
+        "e": "1f526",
+        "a": [
           "flashlight"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3ee",
-        "aliases": [
+        "e": "1f3ee",
+        "a": [
           "izakaya_lantern",
           "lantern"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa94",
-        "aliases": [
+        "e": "1fa94",
+        "a": [
           "diya_lamp"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4d4",
-        "aliases": [
+        "e": "1f4d4",
+        "a": [
           "notebook_with_decorative_cover"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4d5",
-        "aliases": [
+        "e": "1f4d5",
+        "a": [
           "closed_book"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4d6",
-        "aliases": [
+        "e": "1f4d6",
+        "a": [
           "book",
           "open_book"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4d7",
-        "aliases": [
+        "e": "1f4d7",
+        "a": [
           "green_book"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4d8",
-        "aliases": [
+        "e": "1f4d8",
+        "a": [
           "blue_book"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4d9",
-        "aliases": [
+        "e": "1f4d9",
+        "a": [
           "orange_book"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4da",
-        "aliases": [
+        "e": "1f4da",
+        "a": [
           "books"
         ],
-        "tags": [
+        "t": [
           "library"
         ]
       },
       {
-        "emoji": "1f4d3",
-        "aliases": [
+        "e": "1f4d3",
+        "a": [
           "notebook"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4d2",
-        "aliases": [
+        "e": "1f4d2",
+        "a": [
           "ledger"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4c3",
-        "aliases": [
+        "e": "1f4c3",
+        "a": [
           "page_with_curl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4dc",
-        "aliases": [
+        "e": "1f4dc",
+        "a": [
           "scroll"
         ],
-        "tags": [
+        "t": [
           "document"
         ]
       },
       {
-        "emoji": "1f4c4",
-        "aliases": [
+        "e": "1f4c4",
+        "a": [
           "page_facing_up"
         ],
-        "tags": [
+        "t": [
           "document"
         ]
       },
       {
-        "emoji": "1f4f0",
-        "aliases": [
+        "e": "1f4f0",
+        "a": [
           "newspaper"
         ],
-        "tags": [
+        "t": [
           "press"
         ]
       },
       {
-        "emoji": "1f5de-fe0f",
-        "aliases": [
+        "e": "1f5de-fe0f",
+        "a": [
           "newspaper_roll"
         ],
-        "tags": [
+        "t": [
           "press"
         ]
       },
       {
-        "emoji": "1f4d1",
-        "aliases": [
+        "e": "1f4d1",
+        "a": [
           "bookmark_tabs"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f516",
-        "aliases": [
+        "e": "1f516",
+        "a": [
           "bookmark"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f7-fe0f",
-        "aliases": [
+        "e": "1f3f7-fe0f",
+        "a": [
           "label"
         ],
-        "tags": [
+        "t": [
           "tag"
         ]
       },
       {
-        "emoji": "1f4b0",
-        "aliases": [
+        "e": "1f4b0",
+        "a": [
           "moneybag"
         ],
-        "tags": [
+        "t": [
           "dollar",
           "cream"
         ]
       },
       {
-        "emoji": "1fa99",
-        "aliases": [
+        "e": "1fa99",
+        "a": [
           "coin"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4b4",
-        "aliases": [
+        "e": "1f4b4",
+        "a": [
           "yen"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4b5",
-        "aliases": [
+        "e": "1f4b5",
+        "a": [
           "dollar"
         ],
-        "tags": [
+        "t": [
           "money"
         ]
       },
       {
-        "emoji": "1f4b6",
-        "aliases": [
+        "e": "1f4b6",
+        "a": [
           "euro"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4b7",
-        "aliases": [
+        "e": "1f4b7",
+        "a": [
           "pound"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4b8",
-        "aliases": [
+        "e": "1f4b8",
+        "a": [
           "money_with_wings"
         ],
-        "tags": [
+        "t": [
           "dollar"
         ]
       },
       {
-        "emoji": "1f4b3",
-        "aliases": [
+        "e": "1f4b3",
+        "a": [
           "credit_card"
         ],
-        "tags": [
+        "t": [
           "subscription"
         ]
       },
       {
-        "emoji": "1f9fe",
-        "aliases": [
+        "e": "1f9fe",
+        "a": [
           "receipt"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4b9",
-        "aliases": [
+        "e": "1f4b9",
+        "a": [
           "chart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2709-fe0f",
-        "aliases": [
+        "e": "2709-fe0f",
+        "a": [
           "envelope"
         ],
-        "tags": [
+        "t": [
           "letter",
           "email"
         ]
       },
       {
-        "emoji": "1f4e7",
-        "aliases": [
+        "e": "1f4e7",
+        "a": [
           "email",
           "e-mail"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4e8",
-        "aliases": [
+        "e": "1f4e8",
+        "a": [
           "incoming_envelope"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4e9",
-        "aliases": [
+        "e": "1f4e9",
+        "a": [
           "envelope_with_arrow"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4e4",
-        "aliases": [
+        "e": "1f4e4",
+        "a": [
           "outbox_tray"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4e5",
-        "aliases": [
+        "e": "1f4e5",
+        "a": [
           "inbox_tray"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4e6",
-        "aliases": [
+        "e": "1f4e6",
+        "a": [
           "package"
         ],
-        "tags": [
+        "t": [
           "shipping"
         ]
       },
       {
-        "emoji": "1f4eb",
-        "aliases": [
+        "e": "1f4eb",
+        "a": [
           "mailbox"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4ea",
-        "aliases": [
+        "e": "1f4ea",
+        "a": [
           "mailbox_closed"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4ec",
-        "aliases": [
+        "e": "1f4ec",
+        "a": [
           "mailbox_with_mail"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4ed",
-        "aliases": [
+        "e": "1f4ed",
+        "a": [
           "mailbox_with_no_mail"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4ee",
-        "aliases": [
+        "e": "1f4ee",
+        "a": [
           "postbox"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5f3-fe0f",
-        "aliases": [
+        "e": "1f5f3-fe0f",
+        "a": [
           "ballot_box"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "270f-fe0f",
-        "aliases": [
+        "e": "270f-fe0f",
+        "a": [
           "pencil2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2712-fe0f",
-        "aliases": [
+        "e": "2712-fe0f",
+        "a": [
           "black_nib"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f58b-fe0f",
-        "aliases": [
+        "e": "1f58b-fe0f",
+        "a": [
           "fountain_pen"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f58a-fe0f",
-        "aliases": [
+        "e": "1f58a-fe0f",
+        "a": [
           "pen"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f58c-fe0f",
-        "aliases": [
+        "e": "1f58c-fe0f",
+        "a": [
           "paintbrush"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f58d-fe0f",
-        "aliases": [
+        "e": "1f58d-fe0f",
+        "a": [
           "crayon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4dd",
-        "aliases": [
+        "e": "1f4dd",
+        "a": [
           "memo",
           "pencil"
         ],
-        "tags": [
+        "t": [
           "document",
           "note"
         ]
       },
       {
-        "emoji": "1f4bc",
-        "aliases": [
+        "e": "1f4bc",
+        "a": [
           "briefcase"
         ],
-        "tags": [
+        "t": [
           "business"
         ]
       },
       {
-        "emoji": "1f4c1",
-        "aliases": [
+        "e": "1f4c1",
+        "a": [
           "file_folder"
         ],
-        "tags": [
+        "t": [
           "directory"
         ]
       },
       {
-        "emoji": "1f4c2",
-        "aliases": [
+        "e": "1f4c2",
+        "a": [
           "open_file_folder"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5c2-fe0f",
-        "aliases": [
+        "e": "1f5c2-fe0f",
+        "a": [
           "card_index_dividers"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4c5",
-        "aliases": [
+        "e": "1f4c5",
+        "a": [
           "date"
         ],
-        "tags": [
+        "t": [
           "calendar",
           "schedule"
         ]
       },
       {
-        "emoji": "1f4c6",
-        "aliases": [
+        "e": "1f4c6",
+        "a": [
           "calendar"
         ],
-        "tags": [
+        "t": [
           "schedule"
         ]
       },
       {
-        "emoji": "1f5d2-fe0f",
-        "aliases": [
+        "e": "1f5d2-fe0f",
+        "a": [
           "spiral_notepad"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5d3-fe0f",
-        "aliases": [
+        "e": "1f5d3-fe0f",
+        "a": [
           "spiral_calendar"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4c7",
-        "aliases": [
+        "e": "1f4c7",
+        "a": [
           "card_index"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4c8",
-        "aliases": [
+        "e": "1f4c8",
+        "a": [
           "chart_with_upwards_trend"
         ],
-        "tags": [
+        "t": [
           "graph",
           "metrics"
         ]
       },
       {
-        "emoji": "1f4c9",
-        "aliases": [
+        "e": "1f4c9",
+        "a": [
           "chart_with_downwards_trend"
         ],
-        "tags": [
+        "t": [
           "graph",
           "metrics"
         ]
       },
       {
-        "emoji": "1f4ca",
-        "aliases": [
+        "e": "1f4ca",
+        "a": [
           "bar_chart"
         ],
-        "tags": [
+        "t": [
           "stats",
           "metrics"
         ]
       },
       {
-        "emoji": "1f4cb",
-        "aliases": [
+        "e": "1f4cb",
+        "a": [
           "clipboard"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4cc",
-        "aliases": [
+        "e": "1f4cc",
+        "a": [
           "pushpin"
         ],
-        "tags": [
+        "t": [
           "location"
         ]
       },
       {
-        "emoji": "1f4cd",
-        "aliases": [
+        "e": "1f4cd",
+        "a": [
           "round_pushpin"
         ],
-        "tags": [
+        "t": [
           "location"
         ]
       },
       {
-        "emoji": "1f4ce",
-        "aliases": [
+        "e": "1f4ce",
+        "a": [
           "paperclip"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f587-fe0f",
-        "aliases": [
+        "e": "1f587-fe0f",
+        "a": [
           "paperclips"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4cf",
-        "aliases": [
+        "e": "1f4cf",
+        "a": [
           "straight_ruler"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4d0",
-        "aliases": [
+        "e": "1f4d0",
+        "a": [
           "triangular_ruler"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2702-fe0f",
-        "aliases": [
+        "e": "2702-fe0f",
+        "a": [
           "scissors"
         ],
-        "tags": [
+        "t": [
           "cut"
         ]
       },
       {
-        "emoji": "1f5c3-fe0f",
-        "aliases": [
+        "e": "1f5c3-fe0f",
+        "a": [
           "card_file_box"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5c4-fe0f",
-        "aliases": [
+        "e": "1f5c4-fe0f",
+        "a": [
           "file_cabinet"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5d1-fe0f",
-        "aliases": [
+        "e": "1f5d1-fe0f",
+        "a": [
           "wastebasket"
         ],
-        "tags": [
+        "t": [
           "trash"
         ]
       },
       {
-        "emoji": "1f512",
-        "aliases": [
+        "e": "1f512",
+        "a": [
           "lock"
         ],
-        "tags": [
+        "t": [
           "security",
           "private"
         ]
       },
       {
-        "emoji": "1f513",
-        "aliases": [
+        "e": "1f513",
+        "a": [
           "unlock"
         ],
-        "tags": [
+        "t": [
           "security"
         ]
       },
       {
-        "emoji": "1f50f",
-        "aliases": [
+        "e": "1f50f",
+        "a": [
           "lock_with_ink_pen"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f510",
-        "aliases": [
+        "e": "1f510",
+        "a": [
           "closed_lock_with_key"
         ],
-        "tags": [
+        "t": [
           "security"
         ]
       },
       {
-        "emoji": "1f511",
-        "aliases": [
+        "e": "1f511",
+        "a": [
           "key"
         ],
-        "tags": [
+        "t": [
           "lock",
           "password"
         ]
       },
       {
-        "emoji": "1f5dd-fe0f",
-        "aliases": [
+        "e": "1f5dd-fe0f",
+        "a": [
           "old_key"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f528",
-        "aliases": [
+        "e": "1f528",
+        "a": [
           "hammer"
         ],
-        "tags": [
+        "t": [
           "tool"
         ]
       },
       {
-        "emoji": "1fa93",
-        "aliases": [
+        "e": "1fa93",
+        "a": [
           "axe"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26cf-fe0f",
-        "aliases": [
+        "e": "26cf-fe0f",
+        "a": [
           "pick"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2692-fe0f",
-        "aliases": [
+        "e": "2692-fe0f",
+        "a": [
           "hammer_and_pick"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6e0-fe0f",
-        "aliases": [
+        "e": "1f6e0-fe0f",
+        "a": [
           "hammer_and_wrench"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5e1-fe0f",
-        "aliases": [
+        "e": "1f5e1-fe0f",
+        "a": [
           "dagger"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2694-fe0f",
-        "aliases": [
+        "e": "2694-fe0f",
+        "a": [
           "crossed_swords"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4a3",
-        "aliases": [
+        "e": "1f4a3",
+        "a": [
           "bomb"
         ],
-        "tags": [
+        "t": [
           "boom"
         ]
       },
       {
-        "emoji": "1fa83",
-        "aliases": [
+        "e": "1fa83",
+        "a": [
           "boomerang"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f9",
-        "aliases": [
+        "e": "1f3f9",
+        "a": [
           "bow_and_arrow"
         ],
-        "tags": [
+        "t": [
           "archery"
         ]
       },
       {
-        "emoji": "1f6e1-fe0f",
-        "aliases": [
+        "e": "1f6e1-fe0f",
+        "a": [
           "shield"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa9a",
-        "aliases": [
+        "e": "1fa9a",
+        "a": [
           "carpentry_saw"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f527",
-        "aliases": [
+        "e": "1f527",
+        "a": [
           "wrench"
         ],
-        "tags": [
+        "t": [
           "tool"
         ]
       },
       {
-        "emoji": "1fa9b",
-        "aliases": [
+        "e": "1fa9b",
+        "a": [
           "screwdriver"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f529",
-        "aliases": [
+        "e": "1f529",
+        "a": [
           "nut_and_bolt"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2699-fe0f",
-        "aliases": [
+        "e": "2699-fe0f",
+        "a": [
           "gear"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5dc-fe0f",
-        "aliases": [
+        "e": "1f5dc-fe0f",
+        "a": [
           "clamp"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2696-fe0f",
-        "aliases": [
+        "e": "2696-fe0f",
+        "a": [
           "balance_scale"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9af",
-        "aliases": [
+        "e": "1f9af",
+        "a": [
           "probing_cane"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f517",
-        "aliases": [
+        "e": "1f517",
+        "a": [
           "link"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26d3-fe0f",
-        "aliases": [
+        "e": "26d3-fe0f",
+        "a": [
           "chains"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa9d",
-        "aliases": [
+        "e": "1fa9d",
+        "a": [
           "hook"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9f0",
-        "aliases": [
+        "e": "1f9f0",
+        "a": [
           "toolbox"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9f2",
-        "aliases": [
+        "e": "1f9f2",
+        "a": [
           "magnet"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa9c",
-        "aliases": [
+        "e": "1fa9c",
+        "a": [
           "ladder"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2697-fe0f",
-        "aliases": [
+        "e": "2697-fe0f",
+        "a": [
           "alembic"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ea",
-        "aliases": [
+        "e": "1f9ea",
+        "a": [
           "test_tube"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9eb",
-        "aliases": [
+        "e": "1f9eb",
+        "a": [
           "petri_dish"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ec",
-        "aliases": [
+        "e": "1f9ec",
+        "a": [
           "dna"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f52c",
-        "aliases": [
+        "e": "1f52c",
+        "a": [
           "microscope"
         ],
-        "tags": [
+        "t": [
           "science",
           "laboratory",
           "investigate"
         ]
       },
       {
-        "emoji": "1f52d",
-        "aliases": [
+        "e": "1f52d",
+        "a": [
           "telescope"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4e1",
-        "aliases": [
+        "e": "1f4e1",
+        "a": [
           "satellite"
         ],
-        "tags": [
+        "t": [
           "signal"
         ]
       },
       {
-        "emoji": "1f489",
-        "aliases": [
+        "e": "1f489",
+        "a": [
           "syringe"
         ],
-        "tags": [
+        "t": [
           "health",
           "hospital",
           "needle"
         ]
       },
       {
-        "emoji": "1fa78",
-        "aliases": [
+        "e": "1fa78",
+        "a": [
           "drop_of_blood"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f48a",
-        "aliases": [
+        "e": "1f48a",
+        "a": [
           "pill"
         ],
-        "tags": [
+        "t": [
           "health",
           "medicine"
         ]
       },
       {
-        "emoji": "1fa79",
-        "aliases": [
+        "e": "1fa79",
+        "a": [
           "adhesive_bandage"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa7c",
-        "aliases": [
+        "e": "1fa7c",
+        "a": [
           "crutch"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa7a",
-        "aliases": [
+        "e": "1fa7a",
+        "a": [
           "stethoscope"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa7b",
-        "aliases": [
+        "e": "1fa7b",
+        "a": [
           "x_ray"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6aa",
-        "aliases": [
+        "e": "1f6aa",
+        "a": [
           "door"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6d7",
-        "aliases": [
+        "e": "1f6d7",
+        "a": [
           "elevator"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa9e",
-        "aliases": [
+        "e": "1fa9e",
+        "a": [
           "mirror"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa9f",
-        "aliases": [
+        "e": "1fa9f",
+        "a": [
           "window"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6cf-fe0f",
-        "aliases": [
+        "e": "1f6cf-fe0f",
+        "a": [
           "bed"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6cb-fe0f",
-        "aliases": [
+        "e": "1f6cb-fe0f",
+        "a": [
           "couch_and_lamp"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa91",
-        "aliases": [
+        "e": "1fa91",
+        "a": [
           "chair"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6bd",
-        "aliases": [
+        "e": "1f6bd",
+        "a": [
           "toilet"
         ],
-        "tags": [
+        "t": [
           "wc"
         ]
       },
       {
-        "emoji": "1faa0",
-        "aliases": [
+        "e": "1faa0",
+        "a": [
           "plunger"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6bf",
-        "aliases": [
+        "e": "1f6bf",
+        "a": [
           "shower"
         ],
-        "tags": [
+        "t": [
           "bath"
         ]
       },
       {
-        "emoji": "1f6c1",
-        "aliases": [
+        "e": "1f6c1",
+        "a": [
           "bathtub"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faa4",
-        "aliases": [
+        "e": "1faa4",
+        "a": [
           "mouse_trap"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fa92",
-        "aliases": [
+        "e": "1fa92",
+        "a": [
           "razor"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9f4",
-        "aliases": [
+        "e": "1f9f4",
+        "a": [
           "lotion_bottle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9f7",
-        "aliases": [
+        "e": "1f9f7",
+        "a": [
           "safety_pin"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9f9",
-        "aliases": [
+        "e": "1f9f9",
+        "a": [
           "broom"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9fa",
-        "aliases": [
+        "e": "1f9fa",
+        "a": [
           "basket"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9fb",
-        "aliases": [
+        "e": "1f9fb",
+        "a": [
           "roll_of_paper"
         ],
-        "tags": [
+        "t": [
           "toilet"
         ]
       },
       {
-        "emoji": "1faa3",
-        "aliases": [
+        "e": "1faa3",
+        "a": [
           "bucket"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9fc",
-        "aliases": [
+        "e": "1f9fc",
+        "a": [
           "soap"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1fae7",
-        "aliases": [
+        "e": "1fae7",
+        "a": [
           "bubbles"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faa5",
-        "aliases": [
+        "e": "1faa5",
+        "a": [
           "toothbrush"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9fd",
-        "aliases": [
+        "e": "1f9fd",
+        "a": [
           "sponge"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ef",
-        "aliases": [
+        "e": "1f9ef",
+        "a": [
           "fire_extinguisher"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6d2",
-        "aliases": [
+        "e": "1f6d2",
+        "a": [
           "shopping_cart"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6ac",
-        "aliases": [
+        "e": "1f6ac",
+        "a": [
           "smoking"
         ],
-        "tags": [
+        "t": [
           "cigarette"
         ]
       },
       {
-        "emoji": "26b0-fe0f",
-        "aliases": [
+        "e": "26b0-fe0f",
+        "a": [
           "coffin"
         ],
-        "tags": [
+        "t": [
           "funeral"
         ]
       },
       {
-        "emoji": "1faa6",
-        "aliases": [
+        "e": "1faa6",
+        "a": [
           "headstone"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26b1-fe0f",
-        "aliases": [
+        "e": "26b1-fe0f",
+        "a": [
           "funeral_urn"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f9ff",
-        "aliases": [
+        "e": "1f9ff",
+        "a": [
           "nazar_amulet"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faac",
-        "aliases": [
+        "e": "1faac",
+        "a": [
           "hamsa"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f5ff",
-        "aliases": [
+        "e": "1f5ff",
+        "a": [
           "moyai"
         ],
-        "tags": [
+        "t": [
           "stone"
         ]
       },
       {
-        "emoji": "1faa7",
-        "aliases": [
+        "e": "1faa7",
+        "a": [
           "placard"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faaa",
-        "aliases": [
+        "e": "1faaa",
+        "a": [
           "identification_card"
         ],
-        "tags": []
+        "t": []
       }
     ],
     "Symbols": [
       {
-        "emoji": "1f3e7",
-        "aliases": [
+        "e": "1f3e7",
+        "a": [
           "atm"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6ae",
-        "aliases": [
+        "e": "1f6ae",
+        "a": [
           "put_litter_in_its_place"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b0",
-        "aliases": [
+        "e": "1f6b0",
+        "a": [
           "potable_water"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "267f",
-        "aliases": [
+        "e": "267f",
+        "a": [
           "wheelchair"
         ],
-        "tags": [
+        "t": [
           "accessibility"
         ]
       },
       {
-        "emoji": "1f6b9",
-        "aliases": [
+        "e": "1f6b9",
+        "a": [
           "mens"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6ba",
-        "aliases": [
+        "e": "1f6ba",
+        "a": [
           "womens"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6bb",
-        "aliases": [
+        "e": "1f6bb",
+        "a": [
           "restroom"
         ],
-        "tags": [
+        "t": [
           "toilet"
         ]
       },
       {
-        "emoji": "1f6bc",
-        "aliases": [
+        "e": "1f6bc",
+        "a": [
           "baby_symbol"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6be",
-        "aliases": [
+        "e": "1f6be",
+        "a": [
           "wc"
         ],
-        "tags": [
+        "t": [
           "toilet",
           "restroom"
         ]
       },
       {
-        "emoji": "1f6c2",
-        "aliases": [
+        "e": "1f6c2",
+        "a": [
           "passport_control"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6c3",
-        "aliases": [
+        "e": "1f6c3",
+        "a": [
           "customs"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6c4",
-        "aliases": [
+        "e": "1f6c4",
+        "a": [
           "baggage_claim"
         ],
-        "tags": [
+        "t": [
           "airport"
         ]
       },
       {
-        "emoji": "1f6c5",
-        "aliases": [
+        "e": "1f6c5",
+        "a": [
           "left_luggage"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26a0-fe0f",
-        "aliases": [
+        "e": "26a0-fe0f",
+        "a": [
           "warning"
         ],
-        "tags": [
+        "t": [
           "wip"
         ]
       },
       {
-        "emoji": "1f6b8",
-        "aliases": [
+        "e": "1f6b8",
+        "a": [
           "children_crossing"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26d4",
-        "aliases": [
+        "e": "26d4",
+        "a": [
           "no_entry"
         ],
-        "tags": [
+        "t": [
           "limit"
         ]
       },
       {
-        "emoji": "1f6ab",
-        "aliases": [
+        "e": "1f6ab",
+        "a": [
           "no_entry_sign"
         ],
-        "tags": [
+        "t": [
           "block",
           "forbidden"
         ]
       },
       {
-        "emoji": "1f6b3",
-        "aliases": [
+        "e": "1f6b3",
+        "a": [
           "no_bicycles"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6ad",
-        "aliases": [
+        "e": "1f6ad",
+        "a": [
           "no_smoking"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6af",
-        "aliases": [
+        "e": "1f6af",
+        "a": [
           "do_not_litter"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b1",
-        "aliases": [
+        "e": "1f6b1",
+        "a": [
           "non-potable_water"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6b7",
-        "aliases": [
+        "e": "1f6b7",
+        "a": [
           "no_pedestrians"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4f5",
-        "aliases": [
+        "e": "1f4f5",
+        "a": [
           "no_mobile_phones"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f51e",
-        "aliases": [
+        "e": "1f51e",
+        "a": [
           "underage"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2622-fe0f",
-        "aliases": [
+        "e": "2622-fe0f",
+        "a": [
           "radioactive"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2623-fe0f",
-        "aliases": [
+        "e": "2623-fe0f",
+        "a": [
           "biohazard"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2b06-fe0f",
-        "aliases": [
+        "e": "2b06-fe0f",
+        "a": [
           "arrow_up"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2197-fe0f",
-        "aliases": [
+        "e": "2197-fe0f",
+        "a": [
           "arrow_upper_right"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "27a1-fe0f",
-        "aliases": [
+        "e": "27a1-fe0f",
+        "a": [
           "arrow_right"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2198-fe0f",
-        "aliases": [
+        "e": "2198-fe0f",
+        "a": [
           "arrow_lower_right"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2b07-fe0f",
-        "aliases": [
+        "e": "2b07-fe0f",
+        "a": [
           "arrow_down"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2199-fe0f",
-        "aliases": [
+        "e": "2199-fe0f",
+        "a": [
           "arrow_lower_left"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2b05-fe0f",
-        "aliases": [
+        "e": "2b05-fe0f",
+        "a": [
           "arrow_left"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2196-fe0f",
-        "aliases": [
+        "e": "2196-fe0f",
+        "a": [
           "arrow_upper_left"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2195-fe0f",
-        "aliases": [
+        "e": "2195-fe0f",
+        "a": [
           "arrow_up_down"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2194-fe0f",
-        "aliases": [
+        "e": "2194-fe0f",
+        "a": [
           "left_right_arrow"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "21a9-fe0f",
-        "aliases": [
+        "e": "21a9-fe0f",
+        "a": [
           "leftwards_arrow_with_hook"
         ],
-        "tags": [
+        "t": [
           "return"
         ]
       },
       {
-        "emoji": "21aa-fe0f",
-        "aliases": [
+        "e": "21aa-fe0f",
+        "a": [
           "arrow_right_hook"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2934-fe0f",
-        "aliases": [
+        "e": "2934-fe0f",
+        "a": [
           "arrow_heading_up"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2935-fe0f",
-        "aliases": [
+        "e": "2935-fe0f",
+        "a": [
           "arrow_heading_down"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f503",
-        "aliases": [
+        "e": "1f503",
+        "a": [
           "arrows_clockwise"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f504",
-        "aliases": [
+        "e": "1f504",
+        "a": [
           "arrows_counterclockwise"
         ],
-        "tags": [
+        "t": [
           "sync"
         ]
       },
       {
-        "emoji": "1f519",
-        "aliases": [
+        "e": "1f519",
+        "a": [
           "back"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f51a",
-        "aliases": [
+        "e": "1f51a",
+        "a": [
           "end"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f51b",
-        "aliases": [
+        "e": "1f51b",
+        "a": [
           "on"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f51c",
-        "aliases": [
+        "e": "1f51c",
+        "a": [
           "soon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f51d",
-        "aliases": [
+        "e": "1f51d",
+        "a": [
           "top"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f6d0",
-        "aliases": [
+        "e": "1f6d0",
+        "a": [
           "place_of_worship"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "269b-fe0f",
-        "aliases": [
+        "e": "269b-fe0f",
+        "a": [
           "atom_symbol"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f549-fe0f",
-        "aliases": [
+        "e": "1f549-fe0f",
+        "a": [
           "om"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2721-fe0f",
-        "aliases": [
+        "e": "2721-fe0f",
+        "a": [
           "star_of_david"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2638-fe0f",
-        "aliases": [
+        "e": "2638-fe0f",
+        "a": [
           "wheel_of_dharma"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "262f-fe0f",
-        "aliases": [
+        "e": "262f-fe0f",
+        "a": [
           "yin_yang"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "271d-fe0f",
-        "aliases": [
+        "e": "271d-fe0f",
+        "a": [
           "latin_cross"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2626-fe0f",
-        "aliases": [
+        "e": "2626-fe0f",
+        "a": [
           "orthodox_cross"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "262a-fe0f",
-        "aliases": [
+        "e": "262a-fe0f",
+        "a": [
           "star_and_crescent"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "262e-fe0f",
-        "aliases": [
+        "e": "262e-fe0f",
+        "a": [
           "peace_symbol"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f54e",
-        "aliases": [
+        "e": "1f54e",
+        "a": [
           "menorah"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f52f",
-        "aliases": [
+        "e": "1f52f",
+        "a": [
           "six_pointed_star"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1faaf",
-        "aliases": [
+        "e": "1faaf",
+        "a": [
           "khanda"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2648",
-        "aliases": [
+        "e": "2648",
+        "a": [
           "aries"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2649",
-        "aliases": [
+        "e": "2649",
+        "a": [
           "taurus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "264a",
-        "aliases": [
+        "e": "264a",
+        "a": [
           "gemini"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "264b",
-        "aliases": [
+        "e": "264b",
+        "a": [
           "cancer"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "264c",
-        "aliases": [
+        "e": "264c",
+        "a": [
           "leo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "264d",
-        "aliases": [
+        "e": "264d",
+        "a": [
           "virgo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "264e",
-        "aliases": [
+        "e": "264e",
+        "a": [
           "libra"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "264f",
-        "aliases": [
+        "e": "264f",
+        "a": [
           "scorpius"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2650",
-        "aliases": [
+        "e": "2650",
+        "a": [
           "sagittarius"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2651",
-        "aliases": [
+        "e": "2651",
+        "a": [
           "capricorn"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2652",
-        "aliases": [
+        "e": "2652",
+        "a": [
           "aquarius"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2653",
-        "aliases": [
+        "e": "2653",
+        "a": [
           "pisces"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26ce",
-        "aliases": [
+        "e": "26ce",
+        "a": [
           "ophiuchus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f500",
-        "aliases": [
+        "e": "1f500",
+        "a": [
           "twisted_rightwards_arrows"
         ],
-        "tags": [
+        "t": [
           "shuffle"
         ]
       },
       {
-        "emoji": "1f501",
-        "aliases": [
+        "e": "1f501",
+        "a": [
           "repeat"
         ],
-        "tags": [
+        "t": [
           "loop"
         ]
       },
       {
-        "emoji": "1f502",
-        "aliases": [
+        "e": "1f502",
+        "a": [
           "repeat_one"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "25b6-fe0f",
-        "aliases": [
+        "e": "25b6-fe0f",
+        "a": [
           "arrow_forward"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23e9",
-        "aliases": [
+        "e": "23e9",
+        "a": [
           "fast_forward"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23ed-fe0f",
-        "aliases": [
+        "e": "23ed-fe0f",
+        "a": [
           "next_track_button"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23ef-fe0f",
-        "aliases": [
+        "e": "23ef-fe0f",
+        "a": [
           "play_or_pause_button"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "25c0-fe0f",
-        "aliases": [
+        "e": "25c0-fe0f",
+        "a": [
           "arrow_backward"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23ea",
-        "aliases": [
+        "e": "23ea",
+        "a": [
           "rewind"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23ee-fe0f",
-        "aliases": [
+        "e": "23ee-fe0f",
+        "a": [
           "previous_track_button"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f53c",
-        "aliases": [
+        "e": "1f53c",
+        "a": [
           "arrow_up_small"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23eb",
-        "aliases": [
+        "e": "23eb",
+        "a": [
           "arrow_double_up"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f53d",
-        "aliases": [
+        "e": "1f53d",
+        "a": [
           "arrow_down_small"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23ec",
-        "aliases": [
+        "e": "23ec",
+        "a": [
           "arrow_double_down"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23f8-fe0f",
-        "aliases": [
+        "e": "23f8-fe0f",
+        "a": [
           "pause_button"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23f9-fe0f",
-        "aliases": [
+        "e": "23f9-fe0f",
+        "a": [
           "stop_button"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23fa-fe0f",
-        "aliases": [
+        "e": "23fa-fe0f",
+        "a": [
           "record_button"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "23cf-fe0f",
-        "aliases": [
+        "e": "23cf-fe0f",
+        "a": [
           "eject_button"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3a6",
-        "aliases": [
+        "e": "1f3a6",
+        "a": [
           "cinema"
         ],
-        "tags": [
+        "t": [
           "film",
           "movie"
         ]
       },
       {
-        "emoji": "1f505",
-        "aliases": [
+        "e": "1f505",
+        "a": [
           "low_brightness"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f506",
-        "aliases": [
+        "e": "1f506",
+        "a": [
           "high_brightness"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4f6",
-        "aliases": [
+        "e": "1f4f6",
+        "a": [
           "signal_strength"
         ],
-        "tags": [
+        "t": [
           "wifi"
         ]
       },
       {
-        "emoji": "1f6dc",
-        "aliases": [
+        "e": "1f6dc",
+        "a": [
           "wireless"
         ],
-        "tags": [
+        "t": [
           "wifi"
         ]
       },
       {
-        "emoji": "1f4f3",
-        "aliases": [
+        "e": "1f4f3",
+        "a": [
           "vibration_mode"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4f4",
-        "aliases": [
+        "e": "1f4f4",
+        "a": [
           "mobile_phone_off"
         ],
-        "tags": [
+        "t": [
           "mute",
           "off"
         ]
       },
       {
-        "emoji": "2640-fe0f",
-        "aliases": [
+        "e": "2640-fe0f",
+        "a": [
           "female_sign"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2642-fe0f",
-        "aliases": [
+        "e": "2642-fe0f",
+        "a": [
           "male_sign"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26a7-fe0f",
-        "aliases": [
+        "e": "26a7-fe0f",
+        "a": [
           "transgender_symbol"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2716-fe0f",
-        "aliases": [
+        "e": "2716-fe0f",
+        "a": [
           "heavy_multiplication_x"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2795",
-        "aliases": [
+        "e": "2795",
+        "a": [
           "heavy_plus_sign"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2796",
-        "aliases": [
+        "e": "2796",
+        "a": [
           "heavy_minus_sign"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2797",
-        "aliases": [
+        "e": "2797",
+        "a": [
           "heavy_division_sign"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7f0",
-        "aliases": [
+        "e": "1f7f0",
+        "a": [
           "heavy_equals_sign"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "267e-fe0f",
-        "aliases": [
+        "e": "267e-fe0f",
+        "a": [
           "infinity"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "203c-fe0f",
-        "aliases": [
+        "e": "203c-fe0f",
+        "a": [
           "bangbang"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2049-fe0f",
-        "aliases": [
+        "e": "2049-fe0f",
+        "a": [
           "interrobang"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2753",
-        "aliases": [
+        "e": "2753",
+        "a": [
           "question"
         ],
-        "tags": [
+        "t": [
           "confused"
         ]
       },
       {
-        "emoji": "2754",
-        "aliases": [
+        "e": "2754",
+        "a": [
           "grey_question"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2755",
-        "aliases": [
+        "e": "2755",
+        "a": [
           "grey_exclamation"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2757",
-        "aliases": [
+        "e": "2757",
+        "a": [
           "exclamation",
           "heavy_exclamation_mark"
         ],
-        "tags": [
+        "t": [
           "bang"
         ]
       },
       {
-        "emoji": "3030-fe0f",
-        "aliases": [
+        "e": "3030-fe0f",
+        "a": [
           "wavy_dash"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4b1",
-        "aliases": [
+        "e": "1f4b1",
+        "a": [
           "currency_exchange"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4b2",
-        "aliases": [
+        "e": "1f4b2",
+        "a": [
           "heavy_dollar_sign"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2695-fe0f",
-        "aliases": [
+        "e": "2695-fe0f",
+        "a": [
           "medical_symbol"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "267b-fe0f",
-        "aliases": [
+        "e": "267b-fe0f",
+        "a": [
           "recycle"
         ],
-        "tags": [
+        "t": [
           "environment",
           "green"
         ]
       },
       {
-        "emoji": "269c-fe0f",
-        "aliases": [
+        "e": "269c-fe0f",
+        "a": [
           "fleur_de_lis"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f531",
-        "aliases": [
+        "e": "1f531",
+        "a": [
           "trident"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4db",
-        "aliases": [
+        "e": "1f4db",
+        "a": [
           "name_badge"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f530",
-        "aliases": [
+        "e": "1f530",
+        "a": [
           "beginner"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2b55",
-        "aliases": [
+        "e": "2b55",
+        "a": [
           "o"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2705",
-        "aliases": [
+        "e": "2705",
+        "a": [
           "white_check_mark"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2611-fe0f",
-        "aliases": [
+        "e": "2611-fe0f",
+        "a": [
           "ballot_box_with_check"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2714-fe0f",
-        "aliases": [
+        "e": "2714-fe0f",
+        "a": [
           "heavy_check_mark"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "274c",
-        "aliases": [
+        "e": "274c",
+        "a": [
           "x"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "274e",
-        "aliases": [
+        "e": "274e",
+        "a": [
           "negative_squared_cross_mark"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "27b0",
-        "aliases": [
+        "e": "27b0",
+        "a": [
           "curly_loop"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "27bf",
-        "aliases": [
+        "e": "27bf",
+        "a": [
           "loop"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "303d-fe0f",
-        "aliases": [
+        "e": "303d-fe0f",
+        "a": [
           "part_alternation_mark"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2733-fe0f",
-        "aliases": [
+        "e": "2733-fe0f",
+        "a": [
           "eight_spoked_asterisk"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2734-fe0f",
-        "aliases": [
+        "e": "2734-fe0f",
+        "a": [
           "eight_pointed_black_star"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2747-fe0f",
-        "aliases": [
+        "e": "2747-fe0f",
+        "a": [
           "sparkle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "00a9-fe0f",
-        "aliases": [
+        "e": "00a9-fe0f",
+        "a": [
           "copyright"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "00ae-fe0f",
-        "aliases": [
+        "e": "00ae-fe0f",
+        "a": [
           "registered"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2122-fe0f",
-        "aliases": [
+        "e": "2122-fe0f",
+        "a": [
           "tm"
         ],
-        "tags": [
+        "t": [
           "trademark"
         ]
       },
       {
-        "emoji": "0023-fe0f-20e3",
-        "aliases": [
+        "e": "0023-fe0f-20e3",
+        "a": [
           "hash"
         ],
-        "tags": [
+        "t": [
           "number"
         ]
       },
       {
-        "emoji": "002a-fe0f-20e3",
-        "aliases": [
+        "e": "002a-fe0f-20e3",
+        "a": [
           "asterisk"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "0030-fe0f-20e3",
-        "aliases": [
+        "e": "0030-fe0f-20e3",
+        "a": [
           "zero"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "0031-fe0f-20e3",
-        "aliases": [
+        "e": "0031-fe0f-20e3",
+        "a": [
           "one"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "0032-fe0f-20e3",
-        "aliases": [
+        "e": "0032-fe0f-20e3",
+        "a": [
           "two"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "0033-fe0f-20e3",
-        "aliases": [
+        "e": "0033-fe0f-20e3",
+        "a": [
           "three"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "0034-fe0f-20e3",
-        "aliases": [
+        "e": "0034-fe0f-20e3",
+        "a": [
           "four"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "0035-fe0f-20e3",
-        "aliases": [
+        "e": "0035-fe0f-20e3",
+        "a": [
           "five"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "0036-fe0f-20e3",
-        "aliases": [
+        "e": "0036-fe0f-20e3",
+        "a": [
           "six"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "0037-fe0f-20e3",
-        "aliases": [
+        "e": "0037-fe0f-20e3",
+        "a": [
           "seven"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "0038-fe0f-20e3",
-        "aliases": [
+        "e": "0038-fe0f-20e3",
+        "a": [
           "eight"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "0039-fe0f-20e3",
-        "aliases": [
+        "e": "0039-fe0f-20e3",
+        "a": [
           "nine"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f51f",
-        "aliases": [
+        "e": "1f51f",
+        "a": [
           "keycap_ten"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f520",
-        "aliases": [
+        "e": "1f520",
+        "a": [
           "capital_abcd"
         ],
-        "tags": [
+        "t": [
           "letters"
         ]
       },
       {
-        "emoji": "1f521",
-        "aliases": [
+        "e": "1f521",
+        "a": [
           "abcd"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f522",
-        "aliases": [
+        "e": "1f522",
+        "a": [
           "1234"
         ],
-        "tags": [
+        "t": [
           "numbers"
         ]
       },
       {
-        "emoji": "1f523",
-        "aliases": [
+        "e": "1f523",
+        "a": [
           "symbols"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f524",
-        "aliases": [
+        "e": "1f524",
+        "a": [
           "abc"
         ],
-        "tags": [
+        "t": [
           "alphabet"
         ]
       },
       {
-        "emoji": "1f170-fe0f",
-        "aliases": [
+        "e": "1f170-fe0f",
+        "a": [
           "a"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f18e",
-        "aliases": [
+        "e": "1f18e",
+        "a": [
           "ab"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f171-fe0f",
-        "aliases": [
+        "e": "1f171-fe0f",
+        "a": [
           "b"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f191",
-        "aliases": [
+        "e": "1f191",
+        "a": [
           "cl"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f192",
-        "aliases": [
+        "e": "1f192",
+        "a": [
           "cool"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f193",
-        "aliases": [
+        "e": "1f193",
+        "a": [
           "free"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2139-fe0f",
-        "aliases": [
+        "e": "2139-fe0f",
+        "a": [
           "information_source"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f194",
-        "aliases": [
+        "e": "1f194",
+        "a": [
           "id"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "24c2-fe0f",
-        "aliases": [
+        "e": "24c2-fe0f",
+        "a": [
           "m"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f195",
-        "aliases": [
+        "e": "1f195",
+        "a": [
           "new"
         ],
-        "tags": [
+        "t": [
           "fresh"
         ]
       },
       {
-        "emoji": "1f196",
-        "aliases": [
+        "e": "1f196",
+        "a": [
           "ng"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f17e-fe0f",
-        "aliases": [
+        "e": "1f17e-fe0f",
+        "a": [
           "o2"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f197",
-        "aliases": [
+        "e": "1f197",
+        "a": [
           "ok"
         ],
-        "tags": [
+        "t": [
           "yes"
         ]
       },
       {
-        "emoji": "1f17f-fe0f",
-        "aliases": [
+        "e": "1f17f-fe0f",
+        "a": [
           "parking"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f198",
-        "aliases": [
+        "e": "1f198",
+        "a": [
           "sos"
         ],
-        "tags": [
+        "t": [
           "help",
           "emergency"
         ]
       },
       {
-        "emoji": "1f199",
-        "aliases": [
+        "e": "1f199",
+        "a": [
           "up"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f19a",
-        "aliases": [
+        "e": "1f19a",
+        "a": [
           "vs"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f201",
-        "aliases": [
+        "e": "1f201",
+        "a": [
           "koko"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f202-fe0f",
-        "aliases": [
+        "e": "1f202-fe0f",
+        "a": [
           "sa"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f237-fe0f",
-        "aliases": [
+        "e": "1f237-fe0f",
+        "a": [
           "u6708"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f236",
-        "aliases": [
+        "e": "1f236",
+        "a": [
           "u6709"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f22f",
-        "aliases": [
+        "e": "1f22f",
+        "a": [
           "u6307"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f250",
-        "aliases": [
+        "e": "1f250",
+        "a": [
           "ideograph_advantage"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f239",
-        "aliases": [
+        "e": "1f239",
+        "a": [
           "u5272"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f21a",
-        "aliases": [
+        "e": "1f21a",
+        "a": [
           "u7121"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f232",
-        "aliases": [
+        "e": "1f232",
+        "a": [
           "u7981"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f251",
-        "aliases": [
+        "e": "1f251",
+        "a": [
           "accept"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f238",
-        "aliases": [
+        "e": "1f238",
+        "a": [
           "u7533"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f234",
-        "aliases": [
+        "e": "1f234",
+        "a": [
           "u5408"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f233",
-        "aliases": [
+        "e": "1f233",
+        "a": [
           "u7a7a"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "3297-fe0f",
-        "aliases": [
+        "e": "3297-fe0f",
+        "a": [
           "congratulations"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "3299-fe0f",
-        "aliases": [
+        "e": "3299-fe0f",
+        "a": [
           "secret"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f23a",
-        "aliases": [
+        "e": "1f23a",
+        "a": [
           "u55b6"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f235",
-        "aliases": [
+        "e": "1f235",
+        "a": [
           "u6e80"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f534",
-        "aliases": [
+        "e": "1f534",
+        "a": [
           "red_circle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7e0",
-        "aliases": [
+        "e": "1f7e0",
+        "a": [
           "orange_circle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7e1",
-        "aliases": [
+        "e": "1f7e1",
+        "a": [
           "yellow_circle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7e2",
-        "aliases": [
+        "e": "1f7e2",
+        "a": [
           "green_circle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f535",
-        "aliases": [
+        "e": "1f535",
+        "a": [
           "large_blue_circle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7e3",
-        "aliases": [
+        "e": "1f7e3",
+        "a": [
           "purple_circle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7e4",
-        "aliases": [
+        "e": "1f7e4",
+        "a": [
           "brown_circle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26ab",
-        "aliases": [
+        "e": "26ab",
+        "a": [
           "black_circle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "26aa",
-        "aliases": [
+        "e": "26aa",
+        "a": [
           "white_circle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7e5",
-        "aliases": [
+        "e": "1f7e5",
+        "a": [
           "red_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7e7",
-        "aliases": [
+        "e": "1f7e7",
+        "a": [
           "orange_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7e8",
-        "aliases": [
+        "e": "1f7e8",
+        "a": [
           "yellow_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7e9",
-        "aliases": [
+        "e": "1f7e9",
+        "a": [
           "green_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7e6",
-        "aliases": [
+        "e": "1f7e6",
+        "a": [
           "blue_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7ea",
-        "aliases": [
+        "e": "1f7ea",
+        "a": [
           "purple_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f7eb",
-        "aliases": [
+        "e": "1f7eb",
+        "a": [
           "brown_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2b1b",
-        "aliases": [
+        "e": "2b1b",
+        "a": [
           "black_large_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "2b1c",
-        "aliases": [
+        "e": "2b1c",
+        "a": [
           "white_large_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "25fc-fe0f",
-        "aliases": [
+        "e": "25fc-fe0f",
+        "a": [
           "black_medium_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "25fb-fe0f",
-        "aliases": [
+        "e": "25fb-fe0f",
+        "a": [
           "white_medium_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "25fe",
-        "aliases": [
+        "e": "25fe",
+        "a": [
           "black_medium_small_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "25fd",
-        "aliases": [
+        "e": "25fd",
+        "a": [
           "white_medium_small_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "25aa-fe0f",
-        "aliases": [
+        "e": "25aa-fe0f",
+        "a": [
           "black_small_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "25ab-fe0f",
-        "aliases": [
+        "e": "25ab-fe0f",
+        "a": [
           "white_small_square"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f536",
-        "aliases": [
+        "e": "1f536",
+        "a": [
           "large_orange_diamond"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f537",
-        "aliases": [
+        "e": "1f537",
+        "a": [
           "large_blue_diamond"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f538",
-        "aliases": [
+        "e": "1f538",
+        "a": [
           "small_orange_diamond"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f539",
-        "aliases": [
+        "e": "1f539",
+        "a": [
           "small_blue_diamond"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f53a",
-        "aliases": [
+        "e": "1f53a",
+        "a": [
           "small_red_triangle"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f53b",
-        "aliases": [
+        "e": "1f53b",
+        "a": [
           "small_red_triangle_down"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f4a0",
-        "aliases": [
+        "e": "1f4a0",
+        "a": [
           "diamond_shape_with_a_dot_inside"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f518",
-        "aliases": [
+        "e": "1f518",
+        "a": [
           "radio_button"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f533",
-        "aliases": [
+        "e": "1f533",
+        "a": [
           "white_square_button"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f532",
-        "aliases": [
+        "e": "1f532",
+        "a": [
           "black_square_button"
         ],
-        "tags": []
+        "t": []
       }
     ],
     "Flags": [
       {
-        "emoji": "1f3c1",
-        "aliases": [
+        "e": "1f3c1",
+        "a": [
           "checkered_flag"
         ],
-        "tags": [
+        "t": [
           "milestone",
           "finish"
         ]
       },
       {
-        "emoji": "1f6a9",
-        "aliases": [
+        "e": "1f6a9",
+        "a": [
           "triangular_flag_on_post"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f38c",
-        "aliases": [
+        "e": "1f38c",
+        "a": [
           "crossed_flags"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f4",
-        "aliases": [
+        "e": "1f3f4",
+        "a": [
           "black_flag"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f3-fe0f",
-        "aliases": [
+        "e": "1f3f3-fe0f",
+        "a": [
           "white_flag"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f3-fe0f-200d-1f308",
-        "aliases": [
+        "e": "1f3f3-fe0f-200d-1f308",
+        "a": [
           "rainbow_flag"
         ],
-        "tags": [
+        "t": [
           "pride"
         ]
       },
       {
-        "emoji": "1f3f3-fe0f-200d-26a7-fe0f",
-        "aliases": [
+        "e": "1f3f3-fe0f-200d-26a7-fe0f",
+        "a": [
           "transgender_flag"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f4-200d-2620-fe0f",
-        "aliases": [
+        "e": "1f3f4-200d-2620-fe0f",
+        "a": [
           "pirate_flag"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1e8",
-        "aliases": [
+        "e": "1f1e6-1f1e8",
+        "a": [
           "ascension_island"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1e9",
-        "aliases": [
+        "e": "1f1e6-1f1e9",
+        "a": [
           "andorra"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1ea",
-        "aliases": [
+        "e": "1f1e6-1f1ea",
+        "a": [
           "united_arab_emirates"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1eb",
-        "aliases": [
+        "e": "1f1e6-1f1eb",
+        "a": [
           "afghanistan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1ec",
-        "aliases": [
+        "e": "1f1e6-1f1ec",
+        "a": [
           "antigua_barbuda"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1ee",
-        "aliases": [
+        "e": "1f1e6-1f1ee",
+        "a": [
           "anguilla"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1f1",
-        "aliases": [
+        "e": "1f1e6-1f1f1",
+        "a": [
           "albania"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1f2",
-        "aliases": [
+        "e": "1f1e6-1f1f2",
+        "a": [
           "armenia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1f4",
-        "aliases": [
+        "e": "1f1e6-1f1f4",
+        "a": [
           "angola"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1f6",
-        "aliases": [
+        "e": "1f1e6-1f1f6",
+        "a": [
           "antarctica"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1f7",
-        "aliases": [
+        "e": "1f1e6-1f1f7",
+        "a": [
           "argentina"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1f8",
-        "aliases": [
+        "e": "1f1e6-1f1f8",
+        "a": [
           "american_samoa"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1f9",
-        "aliases": [
+        "e": "1f1e6-1f1f9",
+        "a": [
           "austria"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1fa",
-        "aliases": [
+        "e": "1f1e6-1f1fa",
+        "a": [
           "australia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1fc",
-        "aliases": [
+        "e": "1f1e6-1f1fc",
+        "a": [
           "aruba"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1fd",
-        "aliases": [
+        "e": "1f1e6-1f1fd",
+        "a": [
           "aland_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e6-1f1ff",
-        "aliases": [
+        "e": "1f1e6-1f1ff",
+        "a": [
           "azerbaijan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1e6",
-        "aliases": [
+        "e": "1f1e7-1f1e6",
+        "a": [
           "bosnia_herzegovina"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1e7",
-        "aliases": [
+        "e": "1f1e7-1f1e7",
+        "a": [
           "barbados"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1e9",
-        "aliases": [
+        "e": "1f1e7-1f1e9",
+        "a": [
           "bangladesh"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1ea",
-        "aliases": [
+        "e": "1f1e7-1f1ea",
+        "a": [
           "belgium"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1eb",
-        "aliases": [
+        "e": "1f1e7-1f1eb",
+        "a": [
           "burkina_faso"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1ec",
-        "aliases": [
+        "e": "1f1e7-1f1ec",
+        "a": [
           "bulgaria"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1ed",
-        "aliases": [
+        "e": "1f1e7-1f1ed",
+        "a": [
           "bahrain"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1ee",
-        "aliases": [
+        "e": "1f1e7-1f1ee",
+        "a": [
           "burundi"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1ef",
-        "aliases": [
+        "e": "1f1e7-1f1ef",
+        "a": [
           "benin"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1f1",
-        "aliases": [
+        "e": "1f1e7-1f1f1",
+        "a": [
           "st_barthelemy"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1f2",
-        "aliases": [
+        "e": "1f1e7-1f1f2",
+        "a": [
           "bermuda"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1f3",
-        "aliases": [
+        "e": "1f1e7-1f1f3",
+        "a": [
           "brunei"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1f4",
-        "aliases": [
+        "e": "1f1e7-1f1f4",
+        "a": [
           "bolivia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1f6",
-        "aliases": [
+        "e": "1f1e7-1f1f6",
+        "a": [
           "caribbean_netherlands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1f7",
-        "aliases": [
+        "e": "1f1e7-1f1f7",
+        "a": [
           "brazil"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1f8",
-        "aliases": [
+        "e": "1f1e7-1f1f8",
+        "a": [
           "bahamas"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1f9",
-        "aliases": [
+        "e": "1f1e7-1f1f9",
+        "a": [
           "bhutan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1fb",
-        "aliases": [
+        "e": "1f1e7-1f1fb",
+        "a": [
           "bouvet_island"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1fc",
-        "aliases": [
+        "e": "1f1e7-1f1fc",
+        "a": [
           "botswana"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1fe",
-        "aliases": [
+        "e": "1f1e7-1f1fe",
+        "a": [
           "belarus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e7-1f1ff",
-        "aliases": [
+        "e": "1f1e7-1f1ff",
+        "a": [
           "belize"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1e6",
-        "aliases": [
+        "e": "1f1e8-1f1e6",
+        "a": [
           "canada"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1e8",
-        "aliases": [
+        "e": "1f1e8-1f1e8",
+        "a": [
           "cocos_islands"
         ],
-        "tags": [
+        "t": [
           "keeling"
         ]
       },
       {
-        "emoji": "1f1e8-1f1e9",
-        "aliases": [
+        "e": "1f1e8-1f1e9",
+        "a": [
           "congo_kinshasa"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1eb",
-        "aliases": [
+        "e": "1f1e8-1f1eb",
+        "a": [
           "central_african_republic"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1ec",
-        "aliases": [
+        "e": "1f1e8-1f1ec",
+        "a": [
           "congo_brazzaville"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1ed",
-        "aliases": [
+        "e": "1f1e8-1f1ed",
+        "a": [
           "switzerland"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1ee",
-        "aliases": [
+        "e": "1f1e8-1f1ee",
+        "a": [
           "cote_divoire"
         ],
-        "tags": [
+        "t": [
           "ivory"
         ]
       },
       {
-        "emoji": "1f1e8-1f1f0",
-        "aliases": [
+        "e": "1f1e8-1f1f0",
+        "a": [
           "cook_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1f1",
-        "aliases": [
+        "e": "1f1e8-1f1f1",
+        "a": [
           "chile"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1f2",
-        "aliases": [
+        "e": "1f1e8-1f1f2",
+        "a": [
           "cameroon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1f3",
-        "aliases": [
+        "e": "1f1e8-1f1f3",
+        "a": [
           "cn"
         ],
-        "tags": [
+        "t": [
           "china"
         ]
       },
       {
-        "emoji": "1f1e8-1f1f4",
-        "aliases": [
+        "e": "1f1e8-1f1f4",
+        "a": [
           "colombia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1f5",
-        "aliases": [
+        "e": "1f1e8-1f1f5",
+        "a": [
           "clipperton_island"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1f7",
-        "aliases": [
+        "e": "1f1e8-1f1f7",
+        "a": [
           "costa_rica"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1fa",
-        "aliases": [
+        "e": "1f1e8-1f1fa",
+        "a": [
           "cuba"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1fb",
-        "aliases": [
+        "e": "1f1e8-1f1fb",
+        "a": [
           "cape_verde"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1fc",
-        "aliases": [
+        "e": "1f1e8-1f1fc",
+        "a": [
           "curacao"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1fd",
-        "aliases": [
+        "e": "1f1e8-1f1fd",
+        "a": [
           "christmas_island"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1fe",
-        "aliases": [
+        "e": "1f1e8-1f1fe",
+        "a": [
           "cyprus"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e8-1f1ff",
-        "aliases": [
+        "e": "1f1e8-1f1ff",
+        "a": [
           "czech_republic"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e9-1f1ea",
-        "aliases": [
+        "e": "1f1e9-1f1ea",
+        "a": [
           "de"
         ],
-        "tags": [
+        "t": [
           "flag",
           "germany"
         ]
       },
       {
-        "emoji": "1f1e9-1f1ec",
-        "aliases": [
+        "e": "1f1e9-1f1ec",
+        "a": [
           "diego_garcia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e9-1f1ef",
-        "aliases": [
+        "e": "1f1e9-1f1ef",
+        "a": [
           "djibouti"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e9-1f1f0",
-        "aliases": [
+        "e": "1f1e9-1f1f0",
+        "a": [
           "denmark"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e9-1f1f2",
-        "aliases": [
+        "e": "1f1e9-1f1f2",
+        "a": [
           "dominica"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e9-1f1f4",
-        "aliases": [
+        "e": "1f1e9-1f1f4",
+        "a": [
           "dominican_republic"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1e9-1f1ff",
-        "aliases": [
+        "e": "1f1e9-1f1ff",
+        "a": [
           "algeria"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ea-1f1e6",
-        "aliases": [
+        "e": "1f1ea-1f1e6",
+        "a": [
           "ceuta_melilla"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ea-1f1e8",
-        "aliases": [
+        "e": "1f1ea-1f1e8",
+        "a": [
           "ecuador"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ea-1f1ea",
-        "aliases": [
+        "e": "1f1ea-1f1ea",
+        "a": [
           "estonia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ea-1f1ec",
-        "aliases": [
+        "e": "1f1ea-1f1ec",
+        "a": [
           "egypt"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ea-1f1ed",
-        "aliases": [
+        "e": "1f1ea-1f1ed",
+        "a": [
           "western_sahara"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ea-1f1f7",
-        "aliases": [
+        "e": "1f1ea-1f1f7",
+        "a": [
           "eritrea"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ea-1f1f8",
-        "aliases": [
+        "e": "1f1ea-1f1f8",
+        "a": [
           "es"
         ],
-        "tags": [
+        "t": [
           "spain"
         ]
       },
       {
-        "emoji": "1f1ea-1f1f9",
-        "aliases": [
+        "e": "1f1ea-1f1f9",
+        "a": [
           "ethiopia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ea-1f1fa",
-        "aliases": [
+        "e": "1f1ea-1f1fa",
+        "a": [
           "eu",
           "european_union"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1eb-1f1ee",
-        "aliases": [
+        "e": "1f1eb-1f1ee",
+        "a": [
           "finland"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1eb-1f1ef",
-        "aliases": [
+        "e": "1f1eb-1f1ef",
+        "a": [
           "fiji"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1eb-1f1f0",
-        "aliases": [
+        "e": "1f1eb-1f1f0",
+        "a": [
           "falkland_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1eb-1f1f2",
-        "aliases": [
+        "e": "1f1eb-1f1f2",
+        "a": [
           "micronesia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1eb-1f1f4",
-        "aliases": [
+        "e": "1f1eb-1f1f4",
+        "a": [
           "faroe_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1eb-1f1f7",
-        "aliases": [
+        "e": "1f1eb-1f1f7",
+        "a": [
           "fr"
         ],
-        "tags": [
+        "t": [
           "france",
           "french"
         ]
       },
       {
-        "emoji": "1f1ec-1f1e6",
-        "aliases": [
+        "e": "1f1ec-1f1e6",
+        "a": [
           "gabon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1e7",
-        "aliases": [
+        "e": "1f1ec-1f1e7",
+        "a": [
           "gb",
           "uk"
         ],
-        "tags": [
+        "t": [
           "flag",
           "british"
         ]
       },
       {
-        "emoji": "1f1ec-1f1e9",
-        "aliases": [
+        "e": "1f1ec-1f1e9",
+        "a": [
           "grenada"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1ea",
-        "aliases": [
+        "e": "1f1ec-1f1ea",
+        "a": [
           "georgia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1eb",
-        "aliases": [
+        "e": "1f1ec-1f1eb",
+        "a": [
           "french_guiana"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1ec",
-        "aliases": [
+        "e": "1f1ec-1f1ec",
+        "a": [
           "guernsey"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1ed",
-        "aliases": [
+        "e": "1f1ec-1f1ed",
+        "a": [
           "ghana"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1ee",
-        "aliases": [
+        "e": "1f1ec-1f1ee",
+        "a": [
           "gibraltar"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1f1",
-        "aliases": [
+        "e": "1f1ec-1f1f1",
+        "a": [
           "greenland"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1f2",
-        "aliases": [
+        "e": "1f1ec-1f1f2",
+        "a": [
           "gambia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1f3",
-        "aliases": [
+        "e": "1f1ec-1f1f3",
+        "a": [
           "guinea"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1f5",
-        "aliases": [
+        "e": "1f1ec-1f1f5",
+        "a": [
           "guadeloupe"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1f6",
-        "aliases": [
+        "e": "1f1ec-1f1f6",
+        "a": [
           "equatorial_guinea"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1f7",
-        "aliases": [
+        "e": "1f1ec-1f1f7",
+        "a": [
           "greece"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1f8",
-        "aliases": [
+        "e": "1f1ec-1f1f8",
+        "a": [
           "south_georgia_south_sandwich_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1f9",
-        "aliases": [
+        "e": "1f1ec-1f1f9",
+        "a": [
           "guatemala"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1fa",
-        "aliases": [
+        "e": "1f1ec-1f1fa",
+        "a": [
           "guam"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1fc",
-        "aliases": [
+        "e": "1f1ec-1f1fc",
+        "a": [
           "guinea_bissau"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ec-1f1fe",
-        "aliases": [
+        "e": "1f1ec-1f1fe",
+        "a": [
           "guyana"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ed-1f1f0",
-        "aliases": [
+        "e": "1f1ed-1f1f0",
+        "a": [
           "hong_kong"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ed-1f1f2",
-        "aliases": [
+        "e": "1f1ed-1f1f2",
+        "a": [
           "heard_mcdonald_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ed-1f1f3",
-        "aliases": [
+        "e": "1f1ed-1f1f3",
+        "a": [
           "honduras"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ed-1f1f7",
-        "aliases": [
+        "e": "1f1ed-1f1f7",
+        "a": [
           "croatia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ed-1f1f9",
-        "aliases": [
+        "e": "1f1ed-1f1f9",
+        "a": [
           "haiti"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ed-1f1fa",
-        "aliases": [
+        "e": "1f1ed-1f1fa",
+        "a": [
           "hungary"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ee-1f1e8",
-        "aliases": [
+        "e": "1f1ee-1f1e8",
+        "a": [
           "canary_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ee-1f1e9",
-        "aliases": [
+        "e": "1f1ee-1f1e9",
+        "a": [
           "indonesia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ee-1f1ea",
-        "aliases": [
+        "e": "1f1ee-1f1ea",
+        "a": [
           "ireland"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ee-1f1f1",
-        "aliases": [
+        "e": "1f1ee-1f1f1",
+        "a": [
           "israel"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ee-1f1f2",
-        "aliases": [
+        "e": "1f1ee-1f1f2",
+        "a": [
           "isle_of_man"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ee-1f1f3",
-        "aliases": [
+        "e": "1f1ee-1f1f3",
+        "a": [
           "india"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ee-1f1f4",
-        "aliases": [
+        "e": "1f1ee-1f1f4",
+        "a": [
           "british_indian_ocean_territory"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ee-1f1f6",
-        "aliases": [
+        "e": "1f1ee-1f1f6",
+        "a": [
           "iraq"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ee-1f1f7",
-        "aliases": [
+        "e": "1f1ee-1f1f7",
+        "a": [
           "iran"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ee-1f1f8",
-        "aliases": [
+        "e": "1f1ee-1f1f8",
+        "a": [
           "iceland"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ee-1f1f9",
-        "aliases": [
+        "e": "1f1ee-1f1f9",
+        "a": [
           "it"
         ],
-        "tags": [
+        "t": [
           "italy"
         ]
       },
       {
-        "emoji": "1f1ef-1f1ea",
-        "aliases": [
+        "e": "1f1ef-1f1ea",
+        "a": [
           "jersey"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ef-1f1f2",
-        "aliases": [
+        "e": "1f1ef-1f1f2",
+        "a": [
           "jamaica"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ef-1f1f4",
-        "aliases": [
+        "e": "1f1ef-1f1f4",
+        "a": [
           "jordan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ef-1f1f5",
-        "aliases": [
+        "e": "1f1ef-1f1f5",
+        "a": [
           "jp"
         ],
-        "tags": [
+        "t": [
           "japan"
         ]
       },
       {
-        "emoji": "1f1f0-1f1ea",
-        "aliases": [
+        "e": "1f1f0-1f1ea",
+        "a": [
           "kenya"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f0-1f1ec",
-        "aliases": [
+        "e": "1f1f0-1f1ec",
+        "a": [
           "kyrgyzstan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f0-1f1ed",
-        "aliases": [
+        "e": "1f1f0-1f1ed",
+        "a": [
           "cambodia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f0-1f1ee",
-        "aliases": [
+        "e": "1f1f0-1f1ee",
+        "a": [
           "kiribati"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f0-1f1f2",
-        "aliases": [
+        "e": "1f1f0-1f1f2",
+        "a": [
           "comoros"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f0-1f1f3",
-        "aliases": [
+        "e": "1f1f0-1f1f3",
+        "a": [
           "st_kitts_nevis"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f0-1f1f5",
-        "aliases": [
+        "e": "1f1f0-1f1f5",
+        "a": [
           "north_korea"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f0-1f1f7",
-        "aliases": [
+        "e": "1f1f0-1f1f7",
+        "a": [
           "kr"
         ],
-        "tags": [
+        "t": [
           "korea"
         ]
       },
       {
-        "emoji": "1f1f0-1f1fc",
-        "aliases": [
+        "e": "1f1f0-1f1fc",
+        "a": [
           "kuwait"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f0-1f1fe",
-        "aliases": [
+        "e": "1f1f0-1f1fe",
+        "a": [
           "cayman_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f0-1f1ff",
-        "aliases": [
+        "e": "1f1f0-1f1ff",
+        "a": [
           "kazakhstan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f1-1f1e6",
-        "aliases": [
+        "e": "1f1f1-1f1e6",
+        "a": [
           "laos"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f1-1f1e7",
-        "aliases": [
+        "e": "1f1f1-1f1e7",
+        "a": [
           "lebanon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f1-1f1e8",
-        "aliases": [
+        "e": "1f1f1-1f1e8",
+        "a": [
           "st_lucia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f1-1f1ee",
-        "aliases": [
+        "e": "1f1f1-1f1ee",
+        "a": [
           "liechtenstein"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f1-1f1f0",
-        "aliases": [
+        "e": "1f1f1-1f1f0",
+        "a": [
           "sri_lanka"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f1-1f1f7",
-        "aliases": [
+        "e": "1f1f1-1f1f7",
+        "a": [
           "liberia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f1-1f1f8",
-        "aliases": [
+        "e": "1f1f1-1f1f8",
+        "a": [
           "lesotho"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f1-1f1f9",
-        "aliases": [
+        "e": "1f1f1-1f1f9",
+        "a": [
           "lithuania"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f1-1f1fa",
-        "aliases": [
+        "e": "1f1f1-1f1fa",
+        "a": [
           "luxembourg"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f1-1f1fb",
-        "aliases": [
+        "e": "1f1f1-1f1fb",
+        "a": [
           "latvia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f1-1f1fe",
-        "aliases": [
+        "e": "1f1f1-1f1fe",
+        "a": [
           "libya"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1e6",
-        "aliases": [
+        "e": "1f1f2-1f1e6",
+        "a": [
           "morocco"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1e8",
-        "aliases": [
+        "e": "1f1f2-1f1e8",
+        "a": [
           "monaco"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1e9",
-        "aliases": [
+        "e": "1f1f2-1f1e9",
+        "a": [
           "moldova"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1ea",
-        "aliases": [
+        "e": "1f1f2-1f1ea",
+        "a": [
           "montenegro"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1eb",
-        "aliases": [
+        "e": "1f1f2-1f1eb",
+        "a": [
           "st_martin"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1ec",
-        "aliases": [
+        "e": "1f1f2-1f1ec",
+        "a": [
           "madagascar"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1ed",
-        "aliases": [
+        "e": "1f1f2-1f1ed",
+        "a": [
           "marshall_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1f0",
-        "aliases": [
+        "e": "1f1f2-1f1f0",
+        "a": [
           "macedonia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1f1",
-        "aliases": [
+        "e": "1f1f2-1f1f1",
+        "a": [
           "mali"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1f2",
-        "aliases": [
+        "e": "1f1f2-1f1f2",
+        "a": [
           "myanmar"
         ],
-        "tags": [
+        "t": [
           "burma"
         ]
       },
       {
-        "emoji": "1f1f2-1f1f3",
-        "aliases": [
+        "e": "1f1f2-1f1f3",
+        "a": [
           "mongolia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1f4",
-        "aliases": [
+        "e": "1f1f2-1f1f4",
+        "a": [
           "macau"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1f5",
-        "aliases": [
+        "e": "1f1f2-1f1f5",
+        "a": [
           "northern_mariana_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1f6",
-        "aliases": [
+        "e": "1f1f2-1f1f6",
+        "a": [
           "martinique"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1f7",
-        "aliases": [
+        "e": "1f1f2-1f1f7",
+        "a": [
           "mauritania"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1f8",
-        "aliases": [
+        "e": "1f1f2-1f1f8",
+        "a": [
           "montserrat"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1f9",
-        "aliases": [
+        "e": "1f1f2-1f1f9",
+        "a": [
           "malta"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1fa",
-        "aliases": [
+        "e": "1f1f2-1f1fa",
+        "a": [
           "mauritius"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1fb",
-        "aliases": [
+        "e": "1f1f2-1f1fb",
+        "a": [
           "maldives"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1fc",
-        "aliases": [
+        "e": "1f1f2-1f1fc",
+        "a": [
           "malawi"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1fd",
-        "aliases": [
+        "e": "1f1f2-1f1fd",
+        "a": [
           "mexico"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1fe",
-        "aliases": [
+        "e": "1f1f2-1f1fe",
+        "a": [
           "malaysia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f2-1f1ff",
-        "aliases": [
+        "e": "1f1f2-1f1ff",
+        "a": [
           "mozambique"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1e6",
-        "aliases": [
+        "e": "1f1f3-1f1e6",
+        "a": [
           "namibia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1e8",
-        "aliases": [
+        "e": "1f1f3-1f1e8",
+        "a": [
           "new_caledonia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1ea",
-        "aliases": [
+        "e": "1f1f3-1f1ea",
+        "a": [
           "niger"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1eb",
-        "aliases": [
+        "e": "1f1f3-1f1eb",
+        "a": [
           "norfolk_island"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1ec",
-        "aliases": [
+        "e": "1f1f3-1f1ec",
+        "a": [
           "nigeria"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1ee",
-        "aliases": [
+        "e": "1f1f3-1f1ee",
+        "a": [
           "nicaragua"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1f1",
-        "aliases": [
+        "e": "1f1f3-1f1f1",
+        "a": [
           "netherlands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1f4",
-        "aliases": [
+        "e": "1f1f3-1f1f4",
+        "a": [
           "norway"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1f5",
-        "aliases": [
+        "e": "1f1f3-1f1f5",
+        "a": [
           "nepal"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1f7",
-        "aliases": [
+        "e": "1f1f3-1f1f7",
+        "a": [
           "nauru"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1fa",
-        "aliases": [
+        "e": "1f1f3-1f1fa",
+        "a": [
           "niue"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f3-1f1ff",
-        "aliases": [
+        "e": "1f1f3-1f1ff",
+        "a": [
           "new_zealand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f4-1f1f2",
-        "aliases": [
+        "e": "1f1f4-1f1f2",
+        "a": [
           "oman"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1e6",
-        "aliases": [
+        "e": "1f1f5-1f1e6",
+        "a": [
           "panama"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1ea",
-        "aliases": [
+        "e": "1f1f5-1f1ea",
+        "a": [
           "peru"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1eb",
-        "aliases": [
+        "e": "1f1f5-1f1eb",
+        "a": [
           "french_polynesia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1ec",
-        "aliases": [
+        "e": "1f1f5-1f1ec",
+        "a": [
           "papua_new_guinea"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1ed",
-        "aliases": [
+        "e": "1f1f5-1f1ed",
+        "a": [
           "philippines"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1f0",
-        "aliases": [
+        "e": "1f1f5-1f1f0",
+        "a": [
           "pakistan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1f1",
-        "aliases": [
+        "e": "1f1f5-1f1f1",
+        "a": [
           "poland"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1f2",
-        "aliases": [
+        "e": "1f1f5-1f1f2",
+        "a": [
           "st_pierre_miquelon"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1f3",
-        "aliases": [
+        "e": "1f1f5-1f1f3",
+        "a": [
           "pitcairn_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1f7",
-        "aliases": [
+        "e": "1f1f5-1f1f7",
+        "a": [
           "puerto_rico"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1f8",
-        "aliases": [
+        "e": "1f1f5-1f1f8",
+        "a": [
           "palestinian_territories"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1f9",
-        "aliases": [
+        "e": "1f1f5-1f1f9",
+        "a": [
           "portugal"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1fc",
-        "aliases": [
+        "e": "1f1f5-1f1fc",
+        "a": [
           "palau"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f5-1f1fe",
-        "aliases": [
+        "e": "1f1f5-1f1fe",
+        "a": [
           "paraguay"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f6-1f1e6",
-        "aliases": [
+        "e": "1f1f6-1f1e6",
+        "a": [
           "qatar"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f7-1f1ea",
-        "aliases": [
+        "e": "1f1f7-1f1ea",
+        "a": [
           "reunion"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f7-1f1f4",
-        "aliases": [
+        "e": "1f1f7-1f1f4",
+        "a": [
           "romania"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f7-1f1f8",
-        "aliases": [
+        "e": "1f1f7-1f1f8",
+        "a": [
           "serbia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f7-1f1fa",
-        "aliases": [
+        "e": "1f1f7-1f1fa",
+        "a": [
           "ru"
         ],
-        "tags": [
+        "t": [
           "russia"
         ]
       },
       {
-        "emoji": "1f1f7-1f1fc",
-        "aliases": [
+        "e": "1f1f7-1f1fc",
+        "a": [
           "rwanda"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1e6",
-        "aliases": [
+        "e": "1f1f8-1f1e6",
+        "a": [
           "saudi_arabia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1e7",
-        "aliases": [
+        "e": "1f1f8-1f1e7",
+        "a": [
           "solomon_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1e8",
-        "aliases": [
+        "e": "1f1f8-1f1e8",
+        "a": [
           "seychelles"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1e9",
-        "aliases": [
+        "e": "1f1f8-1f1e9",
+        "a": [
           "sudan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1ea",
-        "aliases": [
+        "e": "1f1f8-1f1ea",
+        "a": [
           "sweden"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1ec",
-        "aliases": [
+        "e": "1f1f8-1f1ec",
+        "a": [
           "singapore"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1ed",
-        "aliases": [
+        "e": "1f1f8-1f1ed",
+        "a": [
           "st_helena"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1ee",
-        "aliases": [
+        "e": "1f1f8-1f1ee",
+        "a": [
           "slovenia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1ef",
-        "aliases": [
+        "e": "1f1f8-1f1ef",
+        "a": [
           "svalbard_jan_mayen"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1f0",
-        "aliases": [
+        "e": "1f1f8-1f1f0",
+        "a": [
           "slovakia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1f1",
-        "aliases": [
+        "e": "1f1f8-1f1f1",
+        "a": [
           "sierra_leone"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1f2",
-        "aliases": [
+        "e": "1f1f8-1f1f2",
+        "a": [
           "san_marino"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1f3",
-        "aliases": [
+        "e": "1f1f8-1f1f3",
+        "a": [
           "senegal"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1f4",
-        "aliases": [
+        "e": "1f1f8-1f1f4",
+        "a": [
           "somalia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1f7",
-        "aliases": [
+        "e": "1f1f8-1f1f7",
+        "a": [
           "suriname"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1f8",
-        "aliases": [
+        "e": "1f1f8-1f1f8",
+        "a": [
           "south_sudan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1f9",
-        "aliases": [
+        "e": "1f1f8-1f1f9",
+        "a": [
           "sao_tome_principe"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1fb",
-        "aliases": [
+        "e": "1f1f8-1f1fb",
+        "a": [
           "el_salvador"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1fd",
-        "aliases": [
+        "e": "1f1f8-1f1fd",
+        "a": [
           "sint_maarten"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1fe",
-        "aliases": [
+        "e": "1f1f8-1f1fe",
+        "a": [
           "syria"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f8-1f1ff",
-        "aliases": [
+        "e": "1f1f8-1f1ff",
+        "a": [
           "swaziland"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1e6",
-        "aliases": [
+        "e": "1f1f9-1f1e6",
+        "a": [
           "tristan_da_cunha"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1e8",
-        "aliases": [
+        "e": "1f1f9-1f1e8",
+        "a": [
           "turks_caicos_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1e9",
-        "aliases": [
+        "e": "1f1f9-1f1e9",
+        "a": [
           "chad"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1eb",
-        "aliases": [
+        "e": "1f1f9-1f1eb",
+        "a": [
           "french_southern_territories"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1ec",
-        "aliases": [
+        "e": "1f1f9-1f1ec",
+        "a": [
           "togo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1ed",
-        "aliases": [
+        "e": "1f1f9-1f1ed",
+        "a": [
           "thailand"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1ef",
-        "aliases": [
+        "e": "1f1f9-1f1ef",
+        "a": [
           "tajikistan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1f0",
-        "aliases": [
+        "e": "1f1f9-1f1f0",
+        "a": [
           "tokelau"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1f1",
-        "aliases": [
+        "e": "1f1f9-1f1f1",
+        "a": [
           "timor_leste"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1f2",
-        "aliases": [
+        "e": "1f1f9-1f1f2",
+        "a": [
           "turkmenistan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1f3",
-        "aliases": [
+        "e": "1f1f9-1f1f3",
+        "a": [
           "tunisia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1f4",
-        "aliases": [
+        "e": "1f1f9-1f1f4",
+        "a": [
           "tonga"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1f7",
-        "aliases": [
+        "e": "1f1f9-1f1f7",
+        "a": [
           "tr"
         ],
-        "tags": [
+        "t": [
           "turkey"
         ]
       },
       {
-        "emoji": "1f1f9-1f1f9",
-        "aliases": [
+        "e": "1f1f9-1f1f9",
+        "a": [
           "trinidad_tobago"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1fb",
-        "aliases": [
+        "e": "1f1f9-1f1fb",
+        "a": [
           "tuvalu"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1fc",
-        "aliases": [
+        "e": "1f1f9-1f1fc",
+        "a": [
           "taiwan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1f9-1f1ff",
-        "aliases": [
+        "e": "1f1f9-1f1ff",
+        "a": [
           "tanzania"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fa-1f1e6",
-        "aliases": [
+        "e": "1f1fa-1f1e6",
+        "a": [
           "ukraine"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fa-1f1ec",
-        "aliases": [
+        "e": "1f1fa-1f1ec",
+        "a": [
           "uganda"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fa-1f1f2",
-        "aliases": [
+        "e": "1f1fa-1f1f2",
+        "a": [
           "us_outlying_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fa-1f1f3",
-        "aliases": [
+        "e": "1f1fa-1f1f3",
+        "a": [
           "united_nations"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fa-1f1f8",
-        "aliases": [
+        "e": "1f1fa-1f1f8",
+        "a": [
           "us"
         ],
-        "tags": [
+        "t": [
           "flag",
           "united",
           "america"
         ]
       },
       {
-        "emoji": "1f1fa-1f1fe",
-        "aliases": [
+        "e": "1f1fa-1f1fe",
+        "a": [
           "uruguay"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fa-1f1ff",
-        "aliases": [
+        "e": "1f1fa-1f1ff",
+        "a": [
           "uzbekistan"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fb-1f1e6",
-        "aliases": [
+        "e": "1f1fb-1f1e6",
+        "a": [
           "vatican_city"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fb-1f1e8",
-        "aliases": [
+        "e": "1f1fb-1f1e8",
+        "a": [
           "st_vincent_grenadines"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fb-1f1ea",
-        "aliases": [
+        "e": "1f1fb-1f1ea",
+        "a": [
           "venezuela"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fb-1f1ec",
-        "aliases": [
+        "e": "1f1fb-1f1ec",
+        "a": [
           "british_virgin_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fb-1f1ee",
-        "aliases": [
+        "e": "1f1fb-1f1ee",
+        "a": [
           "us_virgin_islands"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fb-1f1f3",
-        "aliases": [
+        "e": "1f1fb-1f1f3",
+        "a": [
           "vietnam"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fb-1f1fa",
-        "aliases": [
+        "e": "1f1fb-1f1fa",
+        "a": [
           "vanuatu"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fc-1f1eb",
-        "aliases": [
+        "e": "1f1fc-1f1eb",
+        "a": [
           "wallis_futuna"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fc-1f1f8",
-        "aliases": [
+        "e": "1f1fc-1f1f8",
+        "a": [
           "samoa"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fd-1f1f0",
-        "aliases": [
+        "e": "1f1fd-1f1f0",
+        "a": [
           "kosovo"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fe-1f1ea",
-        "aliases": [
+        "e": "1f1fe-1f1ea",
+        "a": [
           "yemen"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1fe-1f1f9",
-        "aliases": [
+        "e": "1f1fe-1f1f9",
+        "a": [
           "mayotte"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ff-1f1e6",
-        "aliases": [
+        "e": "1f1ff-1f1e6",
+        "a": [
           "south_africa"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ff-1f1f2",
-        "aliases": [
+        "e": "1f1ff-1f1f2",
+        "a": [
           "zambia"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f1ff-1f1fc",
-        "aliases": [
+        "e": "1f1ff-1f1fc",
+        "a": [
           "zimbabwe"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f4-e0067-e0062-e0065-e006e-e0067-e007f",
-        "aliases": [
+        "e": "1f3f4-e0067-e0062-e0065-e006e-e0067-e007f",
+        "a": [
           "england"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f4-e0067-e0062-e0073-e0063-e0074-e007f",
-        "aliases": [
+        "e": "1f3f4-e0067-e0062-e0073-e0063-e0074-e007f",
+        "a": [
           "scotland"
         ],
-        "tags": []
+        "t": []
       },
       {
-        "emoji": "1f3f4-e0067-e0062-e0077-e006c-e0073-e007f",
-        "aliases": [
+        "e": "1f3f4-e0067-e0062-e0077-e006c-e0073-e007f",
+        "a": [
           "wales"
         ],
-        "tags": []
+        "t": []
       }
     ]
   }
