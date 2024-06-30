@@ -29,40 +29,32 @@ export function convertToUnicode(code) {
 }
 
 export function fuzzySearchKeysWithValues(query, options) {
+  const limit = 50;
   const combinedValues = [];
+  let reachedLimit = false;
 
-  if (query === '') {
-    const limit = Math.min(50, gfmUnicode.emojis.length);
-    for (let i = 0; i < limit; i++) {
-      const emoji = gfmUnicode.emojis[i];
-      combinedValues.push({
-        key: getEmoji(emoji.emoji, options, true),
-        value: `:${emoji.aliases[0]}:`,
-      });
-    }
-  } else {
-    const limit = 100;
-    for (const emoji of gfmUnicode.emojis) {
-      if (combinedValues.length >= limit) break;
+  function addResult(emoji) {
+    combinedValues.push({
+      key: getEmoji(emoji.emoji, options, true),
+      value: `:${emoji.aliases[0]}:`,
+    });
+  }
 
-      for (const alias of emoji.aliases) {
-        if (alias.includes(query)) {
-          combinedValues.push({
-            key: getEmoji(emoji.emoji, options, true),
-            value: `:${emoji.aliases[0]}:`,
-          });
-          if (combinedValues.length >= limit) break;
+  for (const emojiCategoryKey in gfmUnicode.emojis) {
+    if (reachedLimit) break;
+
+    for (const emoji of gfmUnicode.emojis[emojiCategoryKey]) {
+      if (query === '') {
+        addResult(emoji);
+      } else {
+        if (emoji.aliases.some((alias) => alias.includes(query)) || emoji.tags.some((tag) => tag.includes(query))) {
+          addResult(emoji);
         }
       }
 
-      for (const tag of emoji.tags) {
-        if (tag.includes(query)) {
-          combinedValues.push({
-            key: getEmoji(emoji.emoji, options, true),
-            value: `:${emoji.aliases[0]}:`,
-          });
-          if (combinedValues.length >= limit) break;
-        }
+      if (combinedValues.length >= limit) {
+        reachedLimit = true;
+        break;
       }
     }
   }
@@ -71,15 +63,14 @@ export function fuzzySearchKeysWithValues(query, options) {
 }
 
 function getEmojiByKey(key) {
-  let emojiKey = '1f600';
-  gfmUnicode.emojis.some((emoji) => {
-    if (emoji.aliases.includes(key)) {
-      emojiKey = emoji.emoji;
-      return true; // 这会停止遍历
+  for (const emojiCategoryKey in gfmUnicode.emojis) {
+    const emojiCategory = gfmUnicode.emojis[emojiCategoryKey];
+    const emoji = emojiCategory.find((emoji) => emoji.aliases.includes(key));
+    if (emoji) {
+      return emoji.emoji;
     }
-    return false; // 如果没有找到匹配，继续遍历
-  });
-  return emojiKey;
+  }
+  return '1f600';
 }
 
 export function getEmoji(key, options, isKey = false) {

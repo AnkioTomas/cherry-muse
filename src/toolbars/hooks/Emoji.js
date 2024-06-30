@@ -185,17 +185,7 @@ ${icon}
 
   init() {
     // 使用reduce方法对数组进行分类
-    this.categorizedEmojis = gfmUnicode.emojis.reduce((acc, emoji) => {
-      // 检查累加器中是否已存在该类别
-      if (!acc[emoji.category]) {
-        // 如果不存在，创建一个新的类别数组
-        acc[emoji.category] = [];
-      }
-      // 将emoji对象推入对应的类别数组中
-      acc[emoji.category].push(emoji);
-      // 返回更新后的累加器对象
-      return acc;
-    }, {});
+    this.categorizedEmojis = gfmUnicode.emojis;
     this.dom = this.getDom();
     this.editor.options.wrapperDom.appendChild(this.dom);
     this.setActive('.cherry-emoji-item_sentiment_satisfied');
