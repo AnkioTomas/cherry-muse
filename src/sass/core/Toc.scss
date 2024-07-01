@@ -1,0 +1,28 @@
+.cherry-previewer{
+.toc {
+    margin-bottom: 1rem;
+    padding-left: 0;
+
+    .toc-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .toc-li {
+      border-bottom: var(--border);
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: var(--textColor);
+
+        &:hover {
+          color: var(--primary-color);
+        }
+        &.anchor{
+          display: none;
+        }
+      }
+    }
+  }
+}
