@@ -39,4 +39,18 @@ export default class Mark extends SyntaxBase {
       reg: new RegExp('==(.*?)==', 'g'),
     };
   }
+  overlayMode() {
+    return {
+      name: 'mark',
+      token(stream, state) {
+        // 检查行的开头是否有 ':::'
+        if (stream.match('==') && stream.peek() !== '=') {
+          return 'mark-container';
+        }
+
+        stream.next(); // 前进到下一个字符
+        return null; // 默认返回 null
+      },
+    };
+  }
 }
