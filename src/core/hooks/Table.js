@@ -287,7 +287,7 @@ export default class Table extends ParagraphBase {
       inTable: false,
       token(stream, state) {
         // 尝试匹配规则
-        if (stream.match(/^\|.*\|$/)) {
+        if (stream.match(/^\|.*\|(\s+)?$/)) {
           stream.backUp(stream.current().length); // 回退以单独处理
           this.inTable = true;
         }
