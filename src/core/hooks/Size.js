@@ -62,17 +62,18 @@ export default class Size extends SyntaxBase {
           this.countTotal = 0;
         }
 
-        if (this.inSizeContainer && stream.match('!')) {
-          this.countTotal += 1;
-          if (this.countTotal === 2) {
-            this.inSizeContainer = false;
-            this.countTotal = 0;
+        if (this.inSizeContainer) {
+          if (stream.match('!')) {
+            this.countTotal += 1;
+            if (this.countTotal === 2) {
+              this.inSizeContainer = false;
+              this.countTotal = 0;
+            }
+            return 'size-container'; // 自定义样式类名
           }
-          return 'size-container'; // 自定义样式类名
-        }
-
-        if (this.inSizeContainer && stream.match(/\d+/)) {
-          return 'size-number'; // 自定义样式类名
+          if (stream.match(/\d+/)) {
+            return 'size-number'; // 自定义样式类名
+          }
         }
 
         stream.next(); // 前进到下一个字符

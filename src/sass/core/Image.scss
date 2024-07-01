@@ -50,8 +50,8 @@
 }
 .cherry-editor {
   .cm-s-default {
-    .cm-image-type,.cm-image-split,.cm-image-split-v2 {
-      color: var(--codemirror-operator-color);
+    .cm-image-type,.cm-image-split {
+      color: var(--codemirror-operator-color-start);
     }
   }
 
