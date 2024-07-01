@@ -115,3 +115,14 @@
   }
 }
 
+.cherry-editor{
+  .cm-table-split{
+    color: var(--codemirror-operator-color);
+  }
+  .cm-table-line{
+    color: var(--codemirror-operator-inner-color);
+  }
+  .cm-table-position{
+    color: var(--codemirror-operator-text-color);
+  }
+}

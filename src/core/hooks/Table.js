@@ -281,4 +281,36 @@ export default class Table extends ParagraphBase {
   rule() {
     return /** @type {any} */ (getTableRule());
   }
+  overlayMode() {
+    return {
+      name: 'table',
+      inTable: false,
+      token(stream, state) {
+        // 尝试匹配规则
+        if (stream.match(/^\|.*\|$/)) {
+          stream.backUp(stream.current().length); // 回退以单独处理
+          this.inTable = true;
+        }
+
+        if (this.inTable) {
+          if (stream.match('|')) {
+            console.log(stream.peek());
+            if (stream.peek() === null || stream.peek() === undefined) {
+              this.inTable = false;
+            }
+            return 'table-split'; // 自定义样式类名
+          }
+          if (stream.match(/-/)) {
+            return 'table-line'; // 自定义样式类名
+          }
+          if (stream.match(/:/)) {
+            return 'table-position'; // 自定义样式类名
+          }
+        }
+
+        stream.next(); // 前进到下一个字符
+        return null; // 默认返回 null
+      },
+    };
+  }
 }
