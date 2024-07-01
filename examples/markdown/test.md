@@ -19,7 +19,7 @@ Heading level 2
 ---------------
 ```
 
-+++ 语法演示
+++- 语法演示
 # heading 1
 
 ## heading 2
@@ -45,7 +45,7 @@ _斜体_
 *斜体*
 ```
 
-+++ 语法演示
+++- 语法演示
 _斜体_
 *斜体*
 +++
@@ -57,7 +57,7 @@ __粗体__
 **粗体**
 ```
 
-+++ 语法演示
+++- 语法演示
 __粗体__
 **粗体**
 +++
@@ -72,7 +72,7 @@ _**粗体和斜体**_
 **_粗体和斜体_**
 ```
 
-+++ 语法演示
+++- 语法演示
 ___粗体和斜体___
 ***粗体和斜体***
 __*粗体和斜体*__
@@ -87,7 +87,7 @@ _**粗体和斜体**_
 >> 嵌套引用
 ```
 
-+++ 语法演示
+++- 语法演示
 > 引用文本
 >> 嵌套引用
 > >
@@ -103,7 +103,7 @@ _**粗体和斜体**_
 - 文本三
 ```
 
-+++ 语法演示
+++- 语法演示
 - 文本一
 - 文本二
 - 文本三
@@ -118,7 +118,7 @@ _**粗体和斜体**_
 3. 文本三
 ```
 
-+++ 语法演示
+++- 语法演示
 
 1. 文本一
 2. 文本二
@@ -138,7 +138,7 @@ _**粗体和斜体**_
 ```
 ````
 
-+++ 语法演示
+++- 语法演示
 
 ```html
 <html>
@@ -155,7 +155,7 @@ _**粗体和斜体**_
 `test`
 ```
 
-+++ 语法演示
+++- 语法演示
 `test`
 +++
 
@@ -165,7 +165,7 @@ _**粗体和斜体**_
 ``Use `code` in your Markdown file.``
 ```
 
-+++ 语法演示
+++- 语法演示
 ``Use `code` in your Markdown file.``
 +++
 
@@ -175,7 +175,7 @@ _**粗体和斜体**_
 ![profile.png](https://wiki.ankio.net/file/upload_6574546916e75.png)
 ```
 
-+++ 语法演示
+++- 语法演示
 ![profile.png](https://wiki.ankio.net/file/upload_6574546916e75.png)
 +++
 
@@ -188,7 +188,7 @@ ____
 ```
 
 
-+++ 语法演示
+++- 语法演示
 
 ****
 
@@ -206,7 +206,7 @@ ___
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 ```
 
-+++ 语法演示
+++- 语法演示
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 +++
 
@@ -217,7 +217,7 @@ My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 <fake@example.com>
 ```
 
-+++ 语法演示
+++- 语法演示
 <https://www.markdownguide.org>
 <fake@example.com>
 +++
@@ -231,7 +231,7 @@ See the section on [`code`](#code).
 
 ```
 
-+++ 语法演示
+++- 语法演示
 I love supporting the **[EFF](https://eff.org)**.
 This is the *[Markdown Guide](https://www.markdownguide.org)*.
 See the section on [`code`](#code).
@@ -251,7 +251,7 @@ See the section on [`code`](#code).
 | Paragraph   | Text        |
 ```
 
-+++ 语法演示
+++- 语法演示
 | Syntax | Description |
 | ----------- | ----------- |
 | Header | Title |
@@ -266,7 +266,7 @@ See the section on [`code`](#code).
 | Paragraph   | Text        | And more      |
 
 ```
-+++ 语法演示
+++- 语法演示
 | Syntax | Description | Test Text |
 | :--- |    :----:   | ---: |
 | Header | Title | Here's this |
@@ -279,7 +279,7 @@ See the section on [`code`](#code).
 ~~The world is flat.~~ We now know that the world is round.
 ```
 
-+++ 语法演示
+++- 语法演示
 ~~The world is flat.~~ We now know that the world is round.
 +++
 
@@ -291,7 +291,7 @@ See the section on [`code`](#code).
 - [ ] Contact the media
 ```
 
-+++ 语法演示
+++- 语法演示
 
 - [ ] Write the press release
 - [x] Update the website
@@ -307,7 +307,7 @@ Gone camping! :tent: Be back soon.
 That is so funny! :joy:
 ```
 
-+++ 语法演示
+++- 语法演示
 Gone camping! :tent: Be back soon.
 That is so funny! :joy:
 +++
@@ -319,7 +319,7 @@ I need to highlight these ==very important words==.
 I need to highlight these <mark>very important words</mark>.
 ```
 
-+++ 语法演示
+++- 语法演示
 I need to highlight these ==very important words==.
 I need to highlight these <mark>very important words</mark>.
 +++
@@ -331,7 +331,7 @@ H<sub>2</sub>O
 H^^2^^O
 ```
 
-+++ 语法演示
+++- 语法演示
 H<sub>2</sub>O
 H^^2^^O
 +++
@@ -343,7 +343,7 @@ X<sup>2</sup>
 X^2^
 ```
 
-+++ 语法演示
+++- 语法演示
 X<sup>2</sup>
 X^2^
 +++
@@ -355,7 +355,7 @@ Some of these words <ins>will be underlined</ins>.
 Some of these words /will/ be underlined.
 ```
 
-+++ 语法演示
+++- 语法演示
 Some of these words <ins>will be underlined</ins>.
 Some of these words /will/ be underlined/.
 +++
@@ -366,7 +366,7 @@ Some of these words /will/ be underlined/.
 <center>This text is centered.</center>
 ```
 
-+++ 语法演示
+++- 语法演示
 <center>This text is centered.</center>
 +++
 
@@ -376,7 +376,7 @@ Some of these words /will/ be underlined/.
 <font color="red">This text is red!</font>
 ```
 
-+++ 语法演示
+++- 语法演示
 <font color="red">This text is red!</font>
 +++
 
@@ -391,7 +391,7 @@ Some of these words /will/ be underlined/.
 ```markdown
 [[toc]]
 ```
-+++ 语法演示
+++- 语法演示
 [[toc]]
 +++
 
@@ -401,7 +401,7 @@ Some of these words /will/ be underlined/.
 鞋子 !32 特大号!
 # !大小 文本!
 ```
-+++ 语法演示
+++- 语法演示
 鞋子 !32 特大号!
 +++
 ## 字体颜色
@@ -411,7 +411,7 @@ Some of these words /will/ be underlined/.
 !!!#f9cb9c 背景颜色!!!
 [!!#ffffff !!!#000000 黑底白字超链接!!!!!](http://www.qq.com)
 ```
-+++ 语法演示
+++- 语法演示
 !!#ff0000 字体颜色!!
 !!!#f9cb9c 背景颜色!!!
 [!!#ffffff !!!#000000 黑底白字超链接!!!!!](http://www.qq.com)
@@ -422,7 +422,7 @@ Some of these words /will/ be underlined/.
 ```markdown
 https://www.qq.com?param=中文
 ```
-+++ 语法演示
+++- 语法演示
 https://www.qq.com?param=中文
 +++
 
@@ -432,7 +432,7 @@ https://www.qq.com?param=中文
 这是一个[引用一个链接]
 [引用一个链接]: https://www.qq.com
 ```
-+++ 语法演示
+++- 语法演示
 这是一个[引用一个链接]
 [引用一个链接]: https://www.qq.com
 +++
@@ -445,7 +445,7 @@ https://www.qq.com?param=中文
 ![profile.png#189px #189px](https://wiki.ankio.net/file/upload_6574546916e75.png)
 ```
 
-+++ 语法演示
+++- 语法演示
 ![profile.png#189px #189px](https://wiki.ankio.net/file/upload_6574546916e75.png)
 +++
 
@@ -455,7 +455,7 @@ https://www.qq.com?param=中文
 ![profile.png#10%#50px](https://wiki.ankio.net/file/upload_6574546916e75.png)
 ```
 
-+++ 语法演示
+++- 语法演示
 ![profile.png#10%#50px](https://wiki.ankio.net/file/upload_6574546916e75.png)
 +++
 
@@ -483,7 +483,7 @@ https://www.qq.com?param=中文
 ![profile.png#auto#100px#left#border](https://wiki.ankio.net/file/upload_6574546916e75.png)
 ```
 
-+++ 语法演示
+++- 语法演示
 ![profile.png#auto#100px#left#border](https://wiki.ankio.net/file/upload_6574546916e75.png)
 +++
 
@@ -493,7 +493,7 @@ https://www.qq.com?param=中文
 ![profile.png#auto#100px#center#B#shadow](https://wiki.ankio.net/file/upload_6574546916e75.png)
 ```
 
-+++ 语法演示
+++- 语法演示
 ![profile.png#auto#100px#center#B#shadow](https://wiki.ankio.net/file/upload_6574546916e75.png)
 +++
 
@@ -503,7 +503,7 @@ https://www.qq.com?param=中文
 ![profile.png#auto#100px#right#B#S#radius](https://wiki.ankio.net/file/upload_6574546916e75.png)
 ```
 
-+++ 语法演示
+++- 语法演示
 ![profile.png#auto#100px#right#B#S#radius](https://wiki.ankio.net/file/upload_6574546916e75.png)
 +++
 
@@ -515,13 +515,13 @@ https://www.qq.com?param=中文
 开心也是一天，不开心也是一天
 ```
 
-+++ 语法演示
+++- 语法演示
 ![profile.png#auto#100px#float-left#B#S#R](https://wiki.ankio.net/file/upload_6574546916e75.png)
 开心也是一天，不开心也是一天
 +++
 
 
-# 表格增强  {badge: Pro |success|top}
+# 表格增强  [[Pro:tip,top]]
 
 这是 Cherry Markdown 中未开放的功能。
 
@@ -535,7 +535,7 @@ https://www.qq.com?param=中文
 | z | 7 | 5 | 3 |
 ```
 
-+++ 语法演示
+++- 语法演示
 
 
 | :line: {x,y} | a | b | c |
@@ -557,7 +557,7 @@ https://www.qq.com?param=中文
 | z | 7 | 5 | 3 |
 ```
 
-+++ 语法演示
+++- 语法演示
 
 
 | :bar: {x,y} | a | b | c |
@@ -625,7 +625,7 @@ https://www.qq.com?param=中文
 # 手风琴（详细块）
 
 ```markdown
-+++ 点击展开更多
+++- 点击展开更多
 内容
 ++- 默认展开
 内容
@@ -635,7 +635,7 @@ https://www.qq.com?param=中文
 ```
 
 语法演示
-+++ 点击展开更多
+++- 点击展开更多
 内容
 ++- 默认展开
 内容
@@ -661,7 +661,7 @@ https://www.qq.com?param=中文
 - [x] Item 2
 ```
 
-+++ 语法演示
+++- 语法演示
 
 - [x] Item 1
   - [x] Item 1.1
@@ -675,7 +675,7 @@ https://www.qq.com?param=中文
 !audio[描述](链接)
 ```
 
-+++ 语法演示
+++- 语法演示
 
 !audio[描述](链接)
 
@@ -688,7 +688,7 @@ https://www.qq.com?param=中文
 !video[带封面演示视频](链接){poster=https://wiki.ankio.net/file/upload_6574546916e75.png}
 ```
 
-+++ 语法演示
+++- 语法演示
 
 !video[不带封面演示视频](链接)
 !video[带封面演示视频](链接){poster=https://wiki.ankio.net/file/upload_6574546916e75.png}
@@ -700,7 +700,7 @@ https://www.qq.com?param=中文
 ```markdown
 !file[文件名|类型|密码](链接)
 ```
-+++ 语法演示
+++- 语法演示
 
 !file[文件名|类型|密码](链接)
 
@@ -715,28 +715,21 @@ https://www.qq.com?param=中文
 
 
 ```markdown
-{badge: 内容|tip|center}
-{badge: 内容|info|center}
-{badge: 内容|warning|center}
-{badge: 内容|danger|center}
-{badge: 内容|success|center}
-{badge: 内容|tip|top}
-{badge: 内容|tip|center}
-{badge: 内容|tip|bottom}
-{badge: 内容|#000000|bottom}
+[[内容:tip,top]]
+[[内容:info,top]]
+[[内容:warning,top]]
+[[内容:danger,top]]
+[[内容:note,top]]
+[[内容:#000000|bottom]]
 ```
 
-+++ 语法演示
-
-{badge: 内容|tip|center}
-{badge: 内容|info|center}
-{badge: 内容|warning|center}
-{badge: 内容|danger|center}
-{badge: 内容|success|center}
-{badge: 内容|tip|top}
-{badge: 内容|tip|center}
-{badge: 内容|tip|bottom}
-{badge: 内容|#000000|bottom}
+++- 语法演示
+[[内容:tip,top]]
+[[内容:info,top]]
+[[内容:warning,top]]
+[[内容:danger,top]]
+[[内容:note,top]]
+[[内容:#000000|bottom]]
 +++
 
 # Emoji表情
@@ -749,7 +742,7 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 :+1:
 ```
 
-+++ 语法演示
+++- 语法演示
 :+1:
 +++
 
@@ -792,7 +785,7 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 
 ````
 
-+++ 语法演示
+++- 语法演示
 ```card
 {
   "count": 3,
@@ -853,7 +846,7 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 ```
 ````
 
-+++ 语法演示
+++- 语法演示
 ```card
 {
   "count": 2,
@@ -915,7 +908,7 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 
 ````
 
-+++ 语法演示
+++- 语法演示
 ```card
 {
   "count": 3,
@@ -963,7 +956,7 @@ $$
 
 ```
 
-+++ 语法演示
+++- 语法演示
 行内：$x^2$
 
 Latex语法块：
@@ -984,7 +977,7 @@ flowchart TD
 ```
 ````
 
-+++ 语法演示
+++- 语法演示
 ```mermaid
 flowchart TD
     Start --> Stop
@@ -1029,7 +1022,7 @@ flowchart TD
 ```
 ````
 
-+++ 语法演示
+++- 语法演示
 
 ```echarts
 {
@@ -1071,7 +1064,7 @@ flowchart TD
 [^脚注标题]: 脚注内容…
 ```
 
-+++ 语法演示
+++- 语法演示
 此处是个[^脚注标题]
 [^脚注标题]: 脚注内容…
 +++

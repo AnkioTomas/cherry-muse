@@ -1,0 +1,57 @@
+.cherry-previewer {
+  --badge-bg-color: var(--info-bg-color);
+  --badge-text-color: var(--info-title-color);
+  --badge-padding: 0.1rem 0.25rem;
+  --badge-font-size: 0.8rem;
+  --badge-line-height: 1.2;
+  --badge-border-color: var(--info-border-color);
+
+  .cherry-badge {
+    display: inline-block;
+    padding: var(--badge-padding);
+    background: var(--badge-bg-color);
+    color: var(--badge-text-color);
+    font-size: var(--badge-font-size);
+    line-height: var(--badge-line-height);
+    border: 1px solid  var(--badge-border);
+    border-radius: var(--border-radius);
+    $panel-types: important, info, note, tip, warning, danger;
+    @each $type in $panel-types {
+      &.cherry-badge-#{$type} {
+        border-color: var(--#{$type}-title-color);
+        background: var(--#{$type}-border-color);
+        color: var(--#{$type}-bg-color);
+      }
+    }
+
+    &.cherry-badge-top {
+      vertical-align: top;
+      margin-bottom: 4px; // 调整徽章与下方元素的间距
+    }
+
+    &.cherry-badge-center {
+      vertical-align: middle;
+    }
+
+    &.cherry-badge-bottom {
+      vertical-align: bottom;
+      margin-top: 4px; // 调整徽章与上方元素的间距
+    }
+  }
+
+
+}
+
+.cherry-editor {
+  .cm-s-default{
+    .cm-badge-container {
+      color: var(--codemirror-operator-color);
+    }
+    .cm-badge-position {
+      color: var(--codemirror-operator-inner-color);
+    }
+    .cm-badge-text {
+      color: var(--codemirror-operator-text-color);
+    }
+  }
+}

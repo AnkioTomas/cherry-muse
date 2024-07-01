@@ -16,6 +16,12 @@
 @use "../core/Suggester";
 @use "../core/Color";
 @use "../core/Emoji";
+@use "../core/Sub";
+@use "../core/Sup";
+@use "../core/Toc";
+@use "../core/Size";
+@use "../core/Mark";
+@use "../core/Badge";
 .cherry-previewer {
   padding: 1.25rem  2rem;
   border-left: 0.125rem solid var(--border-color);

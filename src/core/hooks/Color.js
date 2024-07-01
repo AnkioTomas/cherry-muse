@@ -43,4 +43,36 @@ export default class Color extends SyntaxBase {
     ret.reg = new RegExp(ret.begin + ret.content + ret.end, 'g');
     return ret;
   }
+  overlayMode() {
+    return {
+      name: 'color',
+      inSizeContainer: false,
+      countTotal: 0,
+      token(stream, state) {
+        // 前景色
+        if (stream.match(/!!#\w+\s.*?!!/) || stream.match(/!!!#\w+\s.*?!!!/)) {
+          stream.backUp(stream.current().length); // 回退以单独处理
+          this.inSizeContainer = true;
+          this.countTotal = 0;
+        }
+
+        if (this.inSizeContainer) {
+          if (stream.match(/!+/) && stream.peek() !== '!') {
+            this.countTotal += 1;
+            if (this.countTotal === 2) {
+              this.inSizeContainer = false;
+              this.countTotal = 0;
+            }
+            return 'size-container'; // 自定义样式类名
+          }
+          if (stream.match(/#\w+/)) {
+            return 'size-number'; // 自定义样式类名
+          }
+        }
+
+        stream.next(); // 前进到下一个字符
+        return null; // 默认返回 null
+      },
+    };
+  }
 }

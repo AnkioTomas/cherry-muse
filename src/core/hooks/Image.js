@@ -242,30 +242,34 @@ export default class Image extends SyntaxBase {
   overlayMode() {
     return {
       inImageContainer: false,
-      name: 'panel',
+      inImageUrl: false,
+      name: 'image',
       token(stream, state) {
         // 检查行的开头是否有 ':::'
-        if (stream.sol() && stream.match('!')) {
-          this.inImageContainer = stream.peek() !== null;
-          return null;
-        }
 
-        if (this.inImageContainer && stream.match(/(video|audio|file)?/)) {
-          this.inImageContainer = false;
-          if (stream.peek() === '[') {
+        if (stream.match(/!(\w+)?\[.*?]\(.*?\)/)) {
+          stream.backUp(stream.current().length); // 回退以单独处理
+          this.inImageContainer = true;
+        }
+        if (this.inImageContainer) {
+          if (stream.peek() === '(') {
+            this.inImageUrl = true;
+          }
+          if (this.inImageUrl && stream.peek() === ')') {
+            this.inImageUrl = false;
+            this.inImageContainer = false;
+          }
+          if (stream.match('!') && !this.inImageUrl) {
+            return 'image-marker';
+          }
+          if (stream.match(/video|audio|file/) && stream.peek() === '[') {
             return 'image-type';
           }
+          if ((stream.match('#') || stream.match('|')) && !this.inImageUrl) {
+            return 'image-split';
+          }
         }
-
-        if (!stream.sol() && stream.match('#') && stream.peek() !== '#' && stream.peek() !== ' ') {
-          return 'image-split';
-        }
-        if (stream.match('|')) {
-          return 'image-split-v2';
-        }
-
-        this.inImageContainer = false;
-        stream.next(); // 前进到下一个字符
+        stream.next();
         return null; // 默认返回 null
       },
     };

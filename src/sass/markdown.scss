@@ -66,29 +66,7 @@
     margin-left: -15px;
   }
 
-  .toc {
-    margin-bottom: $elementGap;
-    padding-left: 0;
 
-    .toc-title {
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-
-    .toc-li {
-      border-bottom: 1px ridge $borderColor;
-      list-style: none;
-
-      a {
-        text-decoration: none;
-        color: $fontColor;
-
-        &:hover {
-          color: $linkHoverColor;
-        }
-      }
-    }
-  }
 
   .check-list-item {
     list-style: none;

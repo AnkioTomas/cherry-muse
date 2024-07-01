@@ -161,13 +161,11 @@
 
   .cm-s-default .cm-table-row,
   .cm-s-default .cm-block-start{
-    font-family: monospace;
   }
 
   .cm-s-default .cm-comment,
   .cm-s-default .cm-code{
     color: #4A5A9F;
-    font-family: monospace;
   }
 
   .cm-s-default .cm-tag{
@@ -189,8 +187,7 @@
   }
 
   .cm-s-default .cm-overlay {
-    font-size: 1rem;
-    font-family: monospace;
+
   }
 
   .CodeMirror.cm-s-default div.CodeMirror-cursor{
@@ -231,7 +228,6 @@
   .cm-trailing-space-a,
   .cm-trailing-space-b,
   .cm-trailing-space-new-line  {
-    font-family: monospace;
     position:relative;
   }
 
