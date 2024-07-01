@@ -131,16 +131,15 @@
 
 .cherry-editor {
   .cm-panel-container {
-    color: var(--codemirror-start-code-color);
-    font-family: monospace;
+    color: var(--codemirror-operator-color);
   }
 
   .cm-panel-type {
-    color: var(--codemirror-start-code-color);
+    color: var(--codemirror-operator-inner-color);
   }
 
   .cm-panel-title {
-    color: var(--codemirror-operator-color);
+    color: var(--codemirror-operator-text-color);
   }
 }
 

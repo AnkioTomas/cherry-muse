@@ -1,8 +1,8 @@
 .cherry-editor{
   .cm-size-container{
-    color: var(--codemirror-operator-color-start);
+    color: var(--codemirror-operator-color);
   }
   .cm-size-number{
-    color: var(--codemirror-operator-color);
+    color: var(--codemirror-operator-text-color);
   }
 }

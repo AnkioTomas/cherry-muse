@@ -81,11 +81,10 @@
 
 .cherry-editor {
   .cm-detail-container {
-    color: var(--codemirror-start-code-color);
-    font-family: monospace;
+    color: var(--codemirror-operator-color);
   }
   .cm-detail-title {
-    color: var(--codemirror-operator-color);
+    color: var(--codemirror-operator-text-color);
   }
 }
 
