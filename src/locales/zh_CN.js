@@ -29,7 +29,7 @@ export default {
   badgeInfo: '信息徽章',
   badgeWarn: '警告徽章',
   badgeDanger: '危险徽章',
-  badgeSuccess: '成功徽章',
+  badgeImportant: '重要徽章',
   badgeTop: '上标徽章',
   badgeCenter: '居中徽章',
   badgeBottom: '下标徽章',

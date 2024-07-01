@@ -25,6 +25,33 @@ import { fuzzySearchKeysWithValues } from '@/core/hooks/Emoji';
 import { supportLanguages } from '@/core/hooks/CodeBlock';
 import { expandList } from '@/core/hooks/Suggester';
 
+const Brackets = [
+  {
+    key: '[ ]',
+    value: `[]`,
+    goLeft: 1,
+  },
+  {
+    key: '{ }',
+    value: `{}`,
+    goLeft: 1,
+  },
+  {
+    key: '【 】',
+    value: `[]`,
+    goLeft: 1,
+  },
+  {
+    key: '『  』',
+    value: `『』`,
+    goLeft: 1,
+  },
+  {
+    key: '「  」',
+    value: `「」`,
+    goLeft: 1,
+  },
+];
 /**
  *
  * @param {Suggester} suggester
@@ -121,6 +148,87 @@ export const systemSuggests = [
           },
         ]);
       }
+    },
+  },
+  {
+    keyword: '[',
+    data(keywords, callback, $cherry, key) {
+      const result = [];
+      let startKey = '[';
+      if (keywords.startsWith(startKey)) {
+        const list = expandList($cherry, [
+          {
+            toolbar: 'badge',
+            keyword: '',
+          },
+        ]);
+        const keyword = keywords.replace(startKey, '').trim();
+        for (let i = 0; i < list.length; i++) {
+          const item = list[i];
+          const itemKey = item.keyword.replace('badge', '').toLowerCase().trim();
+          if (itemKey.startsWith(keyword)) {
+            switch (itemKey) {
+              case 'important':
+                item.goLeft = 19;
+                break;
+              case 'info':
+                item.goLeft = 14;
+                break;
+              case 'warning':
+                item.goLeft = 17;
+                break;
+              case 'danger':
+                item.goLeft = 16;
+                break;
+              case 'tip':
+                item.goLeft = 13;
+                break;
+              case 'top':
+                item.goLeft = 11;
+                break;
+              case 'center':
+                item.goLeft = 14;
+                break;
+              case 'bottom':
+                item.goLeft = 14;
+                break;
+            }
+
+            result.push(item);
+          }
+        }
+        if (result.length > 0) {
+          callback(result);
+        }
+        return;
+      }
+      startKey = '^';
+      if (keywords.startsWith(startKey)) {
+        callback([
+          {
+            icon: 'edit_note',
+            key: 'footNoteTitle',
+            keyword: '……^',
+            value: `[^脚注标题]`,
+            goLeft: 5,
+          },
+          {
+            icon: 'text_snippet',
+            key: 'footNoteText',
+            keyword: '……^',
+            value: `[^脚注标题]: 脚注内容`,
+            goLeft: 11,
+          },
+        ]);
+        return;
+      }
+      const list = expandList($cherry, [
+        {
+          toolbar: 'link',
+          keyword: '',
+        },
+      ]);
+      callback(list.concat(Brackets));
     },
   },
 ];

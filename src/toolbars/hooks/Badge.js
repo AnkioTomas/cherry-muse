@@ -24,9 +24,9 @@ export default class Badge extends MenuBase {
     this.setName('badge', 'app_badging');
     this.subMenuConfig = [
       {
-        iconName: 'question_mark',
-        name: 'badgeTip',
-        onclick: this.bindSubClick.bind(this, 'primary'),
+        iconName: 'notification_important',
+        name: 'badgeImportant',
+        onclick: this.bindSubClick.bind(this, 'important'),
       },
       {
         iconName: 'info_i',
@@ -44,24 +44,24 @@ export default class Badge extends MenuBase {
         onclick: this.bindSubClick.bind(this, 'danger'),
       },
       {
-        iconName: 'done',
-        name: 'badgeSuccess',
-        onclick: this.bindSubClick.bind(this, 'success'),
+        iconName: 'emoji_objects',
+        name: 'badgeTip',
+        onclick: this.bindSubClick.bind(this, 'tip'),
       },
       {
         iconName: 'align_flex_start',
         name: 'badgeTop',
-        onclick: this.bindSubClick.bind(this, ['primary', 'top']),
+        onclick: this.bindSubClick.bind(this, ['info', 'top']),
       },
       {
         iconName: 'align_center',
         name: 'badgeCenter',
-        onclick: this.bindSubClick.bind(this, ['primary', 'center']),
+        onclick: this.bindSubClick.bind(this, ['info', 'center']),
       },
       {
         iconName: 'align_flex_end',
         name: 'badgeBottom',
-        onclick: this.bindSubClick.bind(this, ['primary', 'bottom']),
+        onclick: this.bindSubClick.bind(this, ['info', 'bottom']),
       },
     ];
   }
@@ -75,6 +75,6 @@ export default class Badge extends MenuBase {
   onClick(selection, shortKey = '') {
     const keys = typeof shortKey === 'string' ? [shortKey] : shortKey;
     const $selection = getSelection(this.editor.editor, selection, 'line', true) || '内容';
-    return `{badge: ${$selection}|${keys[0]}|${keys.length > 1 ? keys[1] : 'center'}}`;
+    return `[[${$selection}:${keys[0]},${keys.length > 1 ? keys[1] : 'center'}]]`;
   }
 }
