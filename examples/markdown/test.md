@@ -752,33 +752,18 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 ````markdown
 ```card
 {
-  "count": 3,
-  "type": "card",
+  "count": "auto",
+  "type": "list",
   "data": [
     {
-      "name": "麋鹿鲁哟",
-      "desc": "大道至简，知易行难",
-      "avatar": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200122153807.jpg",
-      "link": "https://www.cnblogs.com/miluluyo/",
-      "bgColor": "#CBEAFA",
-      "textColor": "#6854A1"
+      "title": "标题",
+      "desc": "描述",
+      "image": "图片",
+      "link": "链接",
+      "bgColor": "",
+      "textColor": ""
     },
-    {
-      "name": "XAOXUU",
-      "desc": "#IOS #Volantis主题作者",
-      "avatar": "https://jsd.cdn.zzko.cn/gh/xaoxuu/assets@master/avatar/avatar.png",
-      "link": "https://xaoxuu.com",
-      "bgColor": "#718971",
-      "textColor": "#fff"
-    },
-    {
-      "name": "平凡的你我",
-      "desc": "理想成为大牛的小陈同学",
-      "avatar": "https://reinness.com/avatar.png",
-      "link": "https://reinness.com",
-      "bgColor": "#FCDBA0",
-      "textColor": "#A05F2C"
-    }
+    
   ]
 }
 ```
@@ -788,33 +773,18 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 ++- 语法演示
 ```card
 {
-  "count": 3,
-  "type": "card",
+  "count": "auto",
+  "type": "list",
   "data": [
     {
-      "name": "麋鹿鲁哟",
-      "desc": "大道至简，知易行难",
-      "avatar": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200122153807.jpg",
-      "link": "https://www.cnblogs.com/miluluyo/",
-      "bgColor": "#CBEAFA",
-      "textColor": "#6854A1"
+      "title": "标题",
+      "desc": "描述",
+      "image": "图片",
+      "link": "链接",
+      "bgColor": "",
+      "textColor": ""
     },
-    {
-      "name": "XAOXUU",
-      "desc": "#IOS #Volantis主题作者",
-      "avatar": "https://jsd.cdn.zzko.cn/gh/xaoxuu/assets@master/avatar/avatar.png",
-      "link": "https://xaoxuu.com",
-      "bgColor": "#718971",
-      "textColor": "#fff"
-    },
-    {
-      "name": "平凡的你我",
-      "desc": "理想成为大牛的小陈同学",
-      "avatar": "https://reinness.com/avatar.png",
-      "link": "https://reinness.com",
-      "bgColor": "#FCDBA0",
-      "textColor": "#A05F2C"
-    }
+    
   ]
 }
 ```
@@ -825,22 +795,17 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 ````markdown
 ```card
 {
-  "count": 2,
-  "type": "card",
+  "count": 1,
+  "type": "list",
   "data": [
-    {
-      "name": "《静夜思》",
-      "desc": "床前明月光，疑是地上霜。举头望明月，低头思故乡。",
-      "bgColor": "#F0DFB1",
-      "textColor": "#242A38"
+     {
+      "title": "标题",
+      "desc": "描述",
+      "image": "",
+      "link": "链接",
+      "bgColor": "",
+      "textColor": ""
     },
-    {
-      "name": "Vdoing",
-      "desc": "🚀一款简洁高效的VuePress 知识管理&博客(blog) 主题",
-      "link": "https://github.com/xugaoyi/vuepress-theme-vdoing",
-      "bgColor": "#DFEEE7",
-      "textColor": "#2A3344"
-    }
   ]
 }
 ```
@@ -849,22 +814,17 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 ++- 语法演示
 ```card
 {
-  "count": 2,
-  "type": "card",
+  "count": 1,
+  "type": "list",
   "data": [
-    {
-      "name": "《静夜思》",
-      "desc": "床前明月光，疑是地上霜。举头望明月，低头思故乡。",
-      "bgColor": "#F0DFB1",
-      "textColor": "#242A38"
+     {
+      "title": "标题",
+      "desc": "描述",
+      "image": "",
+      "link": "链接",
+      "bgColor": "",
+      "textColor": ""
     },
-    {
-      "name": "Vdoing",
-      "desc": "🚀一款简洁高效的VuePress 知识管理&博客(blog) 主题",
-      "link": "https://github.com/xugaoyi/vuepress-theme-vdoing",
-      "bgColor": "#DFEEE7",
-      "textColor": "#2A3344"
-    }
   ]
 }
 ```
@@ -876,32 +836,15 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 ```card
 {
   "count": 3,
-  "type": "cardImage",
+  "type": "image",
   "data": [
     {
-      "img": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200529162253.jpg",
-      "link": "https://xugaoyi.com/",
-      "name": "标题",
-      "desc": "描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容",
-      "author": "Evan Xu",
-      "avatar": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200103123203.jpg"
+      "img": "图片",
+      "link": "链接",
+      "title": "标题",
+      "desc": "描述内容",
     },
-    {
-      "img": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200530100256.jpg",
-      "link": "https://xugaoyi.com/",
-      "name": "标题",
-      "desc": "描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容",
-      "author": "Evan Xu",
-      "avatar": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200103123203.jpg"
-    },
-    {
-      "img": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200530100257.jpg",
-      "link": "https://xugaoyi.com/",
-      "name": "标题",
-      "desc": "描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容",
-      "author": "Evan Xu",
-      "avatar": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200103123203.jpg"
-    }
+   
   ]
 }
 ```
@@ -912,32 +855,15 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 ```card
 {
   "count": 3,
-  "type": "cardImage",
+  "type": "image",
   "data": [
     {
-      "img": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200529162253.jpg",
-      "link": "https://xugaoyi.com/",
-      "name": "标题",
-      "desc": "描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容",
-      "author": "Evan Xu",
-      "avatar": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200103123203.jpg"
+      "img": "图片",
+      "link": "链接",
+      "title": "标题",
+      "desc": "描述内容",
     },
-    {
-      "img": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200530100256.jpg",
-      "link": "https://xugaoyi.com/",
-      "name": "标题",
-      "desc": "描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容",
-      "author": "Evan Xu",
-      "avatar": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200103123203.jpg"
-    },
-    {
-      "img": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200530100257.jpg",
-      "link": "https://xugaoyi.com/",
-      "name": "标题",
-      "desc": "描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容",
-      "author": "Evan Xu",
-      "avatar": "https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200103123203.jpg"
-    }
+   
   ]
 }
 ```

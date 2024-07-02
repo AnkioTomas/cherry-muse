@@ -1,27 +1,72 @@
 .cherry-previewer {
-  .cardListContainer, .cardImgListContainer {
+  .cherry-card {
     margin: 0.7rem 0;
 
-    & > :not(.card-list) {
+    a::after {
+      content: "";
       display: none;
+      clear: both;
     }
 
-    .card-list {
+    .cherry-card-item {
+      width: calc(100% / 3 - 1rem);
+      margin: 0.35rem;
+      background: var(--bg-color);
+      border-radius: var(--border-radius);
+      color: var(--text-color);
+      display: flex;
+      box-shadow: var(--shadow);
+      transition: all 0.4s;
+
+      &.cherry-card-row-1 {
+        width: calc(100% - 1rem);
+      }
+
+      &.cherry-card-row-2 {
+        width: calc(100% / 2 - 1rem);
+        @media  screen and (max-width: 500px) {
+          width: calc(100% - 1rem);
+        }
+      }
+
+      &.cherry-card-row-3 {
+        width: calc(100% / 3 - 1rem);
+        @media  screen and (max-width: 720px) {
+          width: calc(100% / 2 - 1rem);
+        }
+        @media (max-width: 500px) {
+          width: calc(100% - 1rem);
+        }
+      }
+
+      &.cherry-card-row-4 {
+        width: calc(100% / 4 - 1rem);
+        @media  screen and (max-width: 900px) {
+          width: calc(100% / 3 - 1rem);
+        }
+        @media  screen and (max-width: 720px) {
+          width: calc(100% / 2 - 1rem);
+        }
+        @media  screen and (max-width: 500px) {
+          width: calc(100% - 1rem);
+        }
+      }
+
+    }
+
+    &.cherry-card-list-container {
       margin: -0.35rem;
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
 
-      .card-item {
-        width: calc(100% / 3 - 0.7rem);
-        margin: 0.35rem;
-        background: var(--bg-color);
-        border: var(--border);
-        border-radius: var(--border-radius);
-        color: var(--text-color);
-        display: flex;
-        box-shadow: var(--shadow);
-        transition: all 0.4s;
+      .cherry-card-item {
+
+
+        .cherry-card-body {
+          height: 4rem;
+          width: calc(100% - 6rem);
+        }
 
         &:hover {
           text-decoration: none;
@@ -38,8 +83,8 @@
         }
 
         img {
-          width: 60px;
-          height: 60px;
+          width: 4rem;
+          height: 4rem;
           border-radius: 50%;
           border: var(--border);
           margin: 1rem 0 1rem 1rem;
@@ -60,204 +105,115 @@
             text-align: center;
           }
 
-          .name {
+          .cherry-card-title {
             margin: 0.2rem 0 0.3rem;
+            font-size: 1rem;
+            font-weight: bold;
+            white-space: nowrap; /* 文本不换行 */
+            overflow: hidden; /* 隐藏超出容器的内容 */
+            text-overflow: ellipsis; /* 超出部分显示省略号 */
           }
 
-          .desc {
+          .cherry-card-desc {
             font-size: 0.8rem;
-            line-height: 1.1rem;
             opacity: 0.8;
             margin-bottom: 0.2rem;
+            overflow: hidden; /* 隐藏超出容器的内容 */
+            display: -webkit-box; /* 使用弹性盒子模型 */
+            -webkit-box-orient: vertical; /* 垂直布局 */
+            -webkit-line-clamp: 2; /* 限制显示的行数为 2 行 */
+            text-overflow: ellipsis; /* 超出部分显示省略号 */
+            line-height: 1.5; /* 设置行高 */
+            max-height: 3em; /* 行高的倍数（2行 * 1.5行高 = 3em） */
           }
         }
 
-        &.row-1 {
-          width: calc(100% - 0.7rem);
+        &.cherry-card-row-1 {
+
 
           img {
             margin-left: 2rem;
           }
         }
 
-        &.row-2 {
-          width: calc(100% / 2 - 0.7rem);
-
+        &.cherry-card-row-2 {
           img {
             margin-left: 1.5rem;
           }
         }
 
-        &.row-3 {
-          width: calc(100% / 3 - 0.7rem);
-        }
-
-        &.row-4 {
-          width: calc(100% / 4 - 0.7rem);
-        }
       }
     }
 
-    &.fileContainer {
-      span.material-symbols-outlined {
-        position: absolute;
-        margin-left: 30px;
-        font-size: 60px;
-      }
-
-      .desc span.material-symbols-outlined {
-        position: relative;
-        font-size: 22px;
-        transform: translateY(20%);
-        margin-left: 0;
-      }
-    }
-
-    &.cardImgListContainer {
+    &.cherry-card-image-container {
       margin: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
 
-      .card-list {
-        margin: -0.5rem;
+      .cherry-card-item {
+        background: transparent;
 
-        .card-item {
-          width: calc(100% / 3 - 1rem);
-          margin: 0.5rem;
-          background: var(--bg-color);
-          border: var(--border);
-          border-radius: var(--border-radius);
+
+        &:hover {
+          box-shadow: var(--shadow);
+          transform: translateY(-3px);
+        }
+
+        .cherry-card-box-img {
+          border-radius: var(--border-radius) var(--border-radius) 0 0;
           overflow: hidden;
-          color: var(--text-color);
-          box-shadow: unset;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: stretch;
-          transition: all 0.4s;
+          position: relative;
+          background: transparent;
+          height: 8rem;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s;
+          }
+        }
+
+        a {
+          color: var(--textColor);
+          transition: color 0.3s;
 
           &:hover {
-            box-shadow: var(--shadow);
-            transform: translateY(-3px);
+            text-decoration: none;
           }
+        }
 
-          .box-img {
+        .cherry-card-box-info {
+          border-radius: 0 0 var(--border-radius) var(--border-radius);
+          padding: 0.8rem 1rem;
+          background: var(--bg-color);
+
+          p {
+            margin: 0;
+          }
+          .cherry-card-title {
+            font-size: 1rem;
+            font-weight: bold;
+          }
+          .cherry-card-desc {
+            margin-top: 0.3rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+            line-height: 1.1rem;
             overflow: hidden;
-            position: relative;
-            background: var(--bg-color);
-
-            img {
-              display: block;
-              width: 100%;
-              height: 100%;
-              transition: all 0.3s;
-            }
+            white-space: normal;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
           }
 
-          a {
-            color: var(--textColor);
-            transition: color 0.3s;
-
-            &:hover {
-              text-decoration: none;
-            }
-          }
-
-          .box-info {
-            padding: 0.8rem 1rem;
-
-            p {
-              margin: 0;
-            }
-
-            .desc {
-              margin-top: 0.3rem;
-              opacity: 0.8;
-              font-size: 0.9rem;
-              line-height: 1.1rem;
-              overflow: hidden;
-              white-space: normal;
-              text-overflow: ellipsis;
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-            }
-          }
-
-          .box-footer {
-            overflow: hidden;
-            padding: 0.8rem 1rem;
-            border-top: var(--border);
-
-            img {
-              width: 1.8rem;
-              height: 1.8rem;
-              border-radius: 50%;
-              float: left;
-            }
-
-            span {
-              line-height: 1.8rem;
-              float: left;
-              margin-left: 0.6rem;
-              font-size: 0.8rem;
-            }
-          }
-
-          &.row-1 {
-            width: calc(100% - 1rem);
-          }
-
-          &.row-2 {
-            width: calc(100% / 2 - 1rem);
-          }
-
-          &.row-3 {
-            width: calc(100% / 3 - 1rem);
-          }
-
-          &.row-4 {
-            width: calc(100% / 4 - 1rem);
-          }
         }
-      }
 
-    }
-  }
 
-  // 响应式媒体查询
-  @media (max-width: 900px) {
-    .cardListContainer, .cardImgListContainer {
-      .card-list {
-        .card-item.row-4 {
-          width: calc(100% / 3 - 0.7rem);
-        }
       }
     }
   }
 
-  @media (max-width: 720px) {
-    .cardListContainer, .cardImgListContainer {
-      .card-list {
-        .card-item.row-3, .card-item.row-4 {
-          width: calc(100% / 2 - 0.7rem);
-
-          img {
-            margin-left: 1.5rem;
-          }
-        }
-      }
-    }
-  }
-
-  @media (max-width: 500px) {
-    .cardListContainer, .cardImgListContainer {
-      .card-list {
-        .card-item.row-1, .card-item.row-2, .card-item.row-3, .card-item.row-4 {
-          width: calc(100% - 0.7rem);
-
-          img {
-            margin-left: 1.5rem;
-          }
-        }
-      }
-    }
-  }
 }
