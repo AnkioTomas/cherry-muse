@@ -197,6 +197,15 @@ export const systemSuggests = [
             result.push(item);
           }
         }
+        if ('toc'.startsWith(keyword)) {
+          result.push({
+            icon: 'toc',
+            key: 'toc',
+            keyword: 'toc',
+            value: `[[TOC]]\n`,
+            goLeft: 0,
+          });
+        }
         if (result.length > 0) {
           callback(result);
         }
@@ -230,5 +239,11 @@ export const systemSuggests = [
       ]);
       callback(list.concat(Brackets));
     },
+  },
+  {
+    keyword: '+',
+    data(keywords, callback, $cherry, key) {
+
+    }
   },
 ];
