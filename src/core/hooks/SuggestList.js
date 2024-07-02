@@ -243,7 +243,31 @@ export const systemSuggests = [
   {
     keyword: '+',
     data(keywords, callback, $cherry, key) {
+      const result = [];
+      const list = [
+        {
+          icon: 'more_horiz',
+          key: 'detailOpen',
+          keyword: '+',
+          value: `++ 标题\n内容\n+++\n`,
+          goTop: 2,
+        },
+        {
+          icon: 'more_horiz',
+          key: 'detailClose',
+          keyword: '-',
+          value: `++- 标题\n内容\n+++\n`,
+          goTop: 2,
+        },
+      ];
 
-    }
+      for (const listElement of list) {
+        if (listElement.keyword.startsWith(keywords) || keywords === '') {
+          result.push(listElement);
+        }
+      }
+
+      callback(result);
+    },
   },
 ];
