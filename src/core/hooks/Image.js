@@ -93,20 +93,19 @@ const replacerFileFactory = function (match, leadingChar, alt, link, title, post
   const titleSplit = titleInfo.split('|');
   const [name = 'file', ext = 'file', password = ''] = titleSplit;
 
-  return ` <a href="${link}" target="_blank" class="cherry-file">
-        <div class="cherry-file-icon">
-           <span class="material-symbols-outlined">${getIcon(ext)}</span>
+  return `<div class=" cherry-card cherry-file cherry-card-list-container">
+<a href="链接" target="_blank" class="cherry-card-item cherry-card-row-1" >
+        <span class="cherry-card-image material-symbols-outlined" >${getIcon(ext)}</span>
+        <div class="cherry-card-body ${password !== '' ? '' : 'cherry-no-desc'}">
+          <p class="cherry-card-title">${name}</p>
+          ${
+            password !== ''
+              ? `<p class="cherry-card-desc" ><span class="material-symbols-outlined" style="margin-right: 5px">lock_open</span> <span>${password}</span></p>`
+              : ''
+          }
         </div>
-        <div class="cherry-file-content">
-            <h2>${name}</h2>
-            ${
-              password !== ''
-                ? `<p class="desc" ><span class="material-symbols-outlined" style="margin-right: 5px">lock_open</span> ${password}</p>`
-                : ''
-            }
-        </div>
-    </a>
-  `;
+      </a>
+</div>`;
 };
 
 export default class Image extends SyntaxBase {

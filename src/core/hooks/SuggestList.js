@@ -151,7 +151,7 @@ export const systemSuggests = [
     },
   },
   {
-    keyword: '[',
+    keyword: '[【',
     data(keywords, callback, $cherry, key) {
       const result = [];
       let startKey = '[';
@@ -258,6 +258,50 @@ export const systemSuggests = [
           keyword: '-',
           value: `++- 标题\n内容\n+++\n`,
           goTop: 2,
+        },
+      ];
+
+      for (const listElement of list) {
+        if (listElement.keyword.startsWith(keywords) || keywords === '') {
+          result.push(listElement);
+        }
+      }
+
+      callback(result);
+    },
+  },
+  {
+    keyword: '!',
+    data(keywords, callback, $cherry, key) {
+      const result = [];
+      const list = [
+        {
+          icon: 'image',
+          key: 'image',
+          keyword: '[',
+          value: `![描述#center](链接)`,
+          goLeft: 14,
+        },
+        {
+          icon: 'videocam',
+          key: 'video',
+          keyword: 'video',
+          value: `!video[描述](链接){poster=封面链接}`,
+          goLeft: 20,
+        },
+        {
+          icon: 'mic',
+          key: 'audio',
+          keyword: 'audio',
+          value: `!audio[描述](链接)`,
+          goLeft: 7,
+        },
+        {
+          icon: 'attach_file',
+          key: 'file',
+          keyword: 'file',
+          value: `!file[名称|拓展名|密码](链接)`,
+          goLeft: 14,
         },
       ];
 

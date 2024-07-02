@@ -2,50 +2,51 @@
   img ,video,audio {
     max-width: 100%;
   }
+  a[target=_blank].cherry-file{
+    padding: 0!important;
+    &::after {
+      content: '';
+      display: none;
+    }
+  }
+
 
   .cherry-file {
-    display: flex;
-    background-color: var(--bg-color);
-    box-shadow: unset;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    width: 100%;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    &:hover{
-      box-shadow: var(--shadow);
-      transform: translateY(-3px);
+    max-width:300px;
+    &.cherry-card-list-container{
+      margin: 0!important;
+    }
+    .cherry-card-item{
+      padding: 0;
+      background: var(--primary-color)!important;
+      color: var(--primary-btn-text-color)!important;
+    }
+   .cherry-card-image{
+     font-size: 4rem;
+     position: unset;
+     transform: none;
+     display: flex;
+     align-items: center;
+     margin-left: 1rem;
+   }
+   .cherry-no-desc {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cherry-card-desc{
+      display: flex!important;
+      align-items: center; /* 垂直对齐 */
+      justify-content: center;
+      span{
+        position: unset;
+        transform: none;
+
+      }
     }
   }
 
-  .cherry-file-icon {
-    background-color: var(--primary-color);
-    color: var(--primary-btn-text-color);
-    padding: 1.5rem;
-    .material-symbols-outlined {
-      font-size: 3rem;
-    }
-  }
-
-  .cherry-file-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .cherry-file-content h2 {
-    margin: 0;
-    font-size: 1.5em;
-  }
-
-  .cherry-file-content p {
-    margin: 0.8rem 0 0;
-    font-size: 1.2em;
-    color: var(--panel-border-color);
-  }
 
 }
 .cherry-editor {

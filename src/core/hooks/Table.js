@@ -294,7 +294,6 @@ export default class Table extends ParagraphBase {
 
         if (this.inTable) {
           if (stream.match('|')) {
-            console.log(stream.peek());
             if (stream.peek() === null || stream.peek() === undefined) {
               this.inTable = false;
             }

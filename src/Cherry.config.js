@@ -261,7 +261,7 @@ const defaultConfig = {
     codemirror: {
       // 是否自动focus 默认为true
       autofocus: true,
-      lineNumber: true,
+      lineNumbers: false,
       cursorHeight: 1,
     },
     overlay: [],
