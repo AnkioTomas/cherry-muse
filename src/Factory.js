@@ -18,18 +18,18 @@ import ParagraphBase from './core/ParagraphBase';
 import MenuBase from './toolbars/MenuBase';
 
 /**
- * ÊôÐÔÀàÐÍÆ¥Åä
- * @param {object} obj ´ýÆ¥ÅäµÄ¶ÔÏó
- * @param {string} key ´ýÆ¥ÅäµÄÊôÐÔÃû
- * @param {any} type Æ¥ÅäµÄÀàÐÍ
+ * å±žæ€§ç±»åž‹åŒ¹é…
+ * @param {object} obj å¾…åŒ¹é…çš„å¯¹è±¡
+ * @param {string} key å¾…åŒ¹é…çš„å±žæ€§å
+ * @param {any} type åŒ¹é…çš„ç±»åž‹
  */
 function matchPropTypes(obj, key, type) {
   if (typeof obj !== 'object' || !obj) {
     throw TypeError(`first argument must be a object, but get ${typeof obj}`);
   }
-  // ²»ÓÃ¼ì²â£¬»á´æÔÚ undefined µÄÇé¿ö
+  // ä¸ç”¨æ£€æµ‹ï¼Œä¼šå­˜åœ¨ undefined çš„æƒ…å†µ
   // if (!Object.keys(obj).includes(key))
-  // µÝ¹é
+  // é€’å½’
   if (
     !Array.isArray(type) &&
     typeof type === 'object' &&
@@ -37,7 +37,7 @@ function matchPropTypes(obj, key, type) {
     typeof obj[key] === 'object' &&
     obj[key] !== null
   ) {
-    // µÝ¹éÊ±£¬È¡¶ÔÏóÀïÃ¿¸öÊôÐÔ½øÐÐÆ¥Åä£¬±ØÐëÈ«²¿Æ¥Åä²Å·µ»Øtrue
+    // é€’å½’æ—¶ï¼Œå–å¯¹è±¡é‡Œæ¯ä¸ªå±žæ€§è¿›è¡ŒåŒ¹é…ï¼Œå¿…é¡»å…¨éƒ¨åŒ¹é…æ‰è¿”å›žtrue
     return Object.keys(obj[key]).every((objKey) => matchPropTypes(obj[key], objKey, type[objKey]));
   }
   if (typeof type === 'string' && typeof obj[key] === type) {
@@ -46,7 +46,7 @@ function matchPropTypes(obj, key, type) {
   if (typeof type === 'function' && obj[key] instanceof type) {
     return true;
   }
-  // ÁªºÏÀàÐÍ
+  // è”åˆç±»åž‹
   if (Array.isArray(type)) {
     return type.some((type) => matchPropTypes(obj, key, type));
   }
@@ -153,6 +153,7 @@ export function createMenuHook(name, options) {
       }
       if (filteredOptions.icon) {
         this.$currentMenuOptions.icon = filteredOptions.icon;
+        this.name = name;
       } else {
         this.setName(name, filteredOptions.iconName);
       }
@@ -167,6 +168,9 @@ export function createMenuHook(name, options) {
     }
 
     get shortcutKeys() {
+      console.warn(
+        'shortcutKeys will deprecated in the future, please use shortcutKeyMap instead, get more info at https://github.com/Tencent/cherry-markdown/wiki',
+      );
       if (filteredOptions.shortcutKeys) {
         return filteredOptions.shortcutKeys;
       }
