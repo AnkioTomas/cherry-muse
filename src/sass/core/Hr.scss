@@ -1,8 +1,8 @@
-.cherry-previewer{
+.cherry-previewer {
   hr {
     height: 0;
     border: 0;
-    border-top: var(--border);
+    border-top: 2px solid var(--border-color2);
     margin: 1rem 0;
     box-sizing: content-box;
     overflow: visible;
