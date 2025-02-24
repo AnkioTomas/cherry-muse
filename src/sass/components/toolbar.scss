@@ -1,10 +1,9 @@
 .cherry{
-  --toolbar-height:3rem;
-  --toolbar-fontsize:0.9rem;
+  --toolbar-height: 3rem;
+  --toolbar-fontsize: 0.9rem;
   .cherry-toolbar {
     position: relative;
     display: flex;
-    // align-items: center;
     justify-content: space-between;
     padding: 0 1.2rem;
     height: var(--toolbar-height);
@@ -28,9 +27,31 @@
     .toolbar-left {
       flex: 1 1 auto;
       margin-right: 1.2rem;
-      flex-wrap: wrap;
-      min-height: var(--toolbar-height);
-      align-content: center;
+      position: relative;
+      overflow-x: auto;
+      overflow-y: hidden;
+      mask-image: linear-gradient(to right, black calc(100% - 2rem), transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, black calc(100% - 2rem), transparent 100%);
+
+      &::-webkit-scrollbar {
+        height: 4px;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background: var(--hover-bg-color);
+        border-radius: var(--border-radius);
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      
+      .cherry-toolbar-button {
+        flex-shrink: 0;
+      }
+
+      padding-right: 2rem;
     }
 
     .toolbar-right {
