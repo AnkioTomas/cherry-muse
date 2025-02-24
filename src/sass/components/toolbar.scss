@@ -23,16 +23,18 @@
       display: flex;
       align-items: center;
       height: var(--toolbar-height);
-      overflow: hidden;
     }
 
     .toolbar-left {
-      flex: 0 0 auto;
+      flex: 1 1 auto;
       margin-right: 1.2rem;
+      flex-wrap: wrap;
+      min-height: var(--toolbar-height);
+      align-content: center;
     }
 
     .toolbar-right {
-      flex: 0 1 auto;
+      flex: 0 0 auto;
       flex-direction: row-reverse;
       margin-left: 0.8rem;
       box-sizing: border-box;
@@ -51,7 +53,6 @@
     &-button {
       float: left;
       padding: 0 0.4rem;
-      // margin: 4px 0;
       height: 3rem;
       color: var(--text-color);
       background: transparent;
@@ -60,9 +61,16 @@
       transition: background-color ease-in-out 0.15s, color ease-in-out 0.15s, border-color ease-in-out 0.15s;
       cursor: pointer;
       font-style: normal;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      
+      i.material-symbols-outlined {
+        font-size: 1.4rem;
+        margin: 0 0.3rem;
+        position: static;
+        transform: none;
+      }
+
       &:hover {
         color: var(--hover-text-color);
         background: var(--hover-bg-color);
