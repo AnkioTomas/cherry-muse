@@ -15,7 +15,7 @@
  */
 import mergeWith from 'lodash/mergeWith';
 import Event from '@/Event';
-import { deflate } from 'pako';
+import { toBase64 } from 'js-base64';
 
 const DEFAULT_OPTIONS = {
   theme: 'default',
@@ -84,34 +84,26 @@ export default class MermaidCodeEngine {
 
       sessionStorage.removeItem(mermaidClazz);
     });
+    Event.on('Theme', 'change', function ([isDark]) {});
   }
 
-  fromUint8Array(u8a) {
-    const fromCC = String.fromCharCode.bind(String);
-    const maxargs = 0x1000;
-    const strs = [];
-    for (let i = 0, l = u8a.length; i < l; i += maxargs) {
-      // eslint-disable-next-line prefer-spread
-      strs.push(fromCC.apply(null, u8a.subarray(i, i + maxargs)));
-    }
-    return btoa(strs.join(''));
-  }
   renderFromApi(src) {
+    // code: string;
+    //   mermaid: string;
+    //   updateDiagram: boolean;
+    //   autoSync: boolean;
+    //   rough: boolean;
+    //   editorMode?: EditorMode;
+    //   panZoom?: boolean;
+    //   pan?: { x: number; y: number };
+    //   zoom?: number;
+    //   loader?: LoaderConfig;
     const convert = {
       code: src,
-      mermaid: '',
-      updateDiagram: false,
-      autoSync: false,
-      editorMode: {},
-      panZoom: false,
-      pan: { x: 100, y: 100 },
-      zoom: 100,
-      loader: {},
     };
-    const data = new TextEncoder().encode(JSON.stringify(convert));
-    const compressed = deflate(data, { level: 9 });
-    const image = this.fromUint8Array(compressed);
-    return `<img src="${this.apiHost}/img/pako:${encodeURIComponent(image)}" style="max-width: 100%"  alt=""/>`;
+    const compressed = toBase64(JSON.stringify(convert), true);
+    console.log(compressed, 'base64');
+    return `<img src="${this.apiHost}/img/${compressed}" style="max-width: 100%"  alt="m"/>`;
   }
   render(src, sign, $engine, config = {}) {
     let $sign = sign;

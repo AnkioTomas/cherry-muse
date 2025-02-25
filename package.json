@@ -134,8 +134,8 @@
   "dependencies": {
     "@types/codemirror": "^0.0.108",
     "@types/dompurify": "^2.2.3",
-    "jsdom": "~19.0.0",
-    "pako": "^2.1.0"
+    "js-base64": "^3.7.7",
+    "jsdom": "~19.0.0"
   },
   "resolutions": {
     "glob-parent": "5.1.2",
@@ -146,9 +146,7 @@
     "ansi-regex": "5.0.1",
     "glob-watcher": "6.0.0"
   },
-  "config": {
-
-  },
+  "config": {},
   "lint-staged": {
     "*.js": "eslint --fix"
   },
