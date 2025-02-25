@@ -2,5 +2,14 @@
   .cm-mark-container{
     font-size: unset;
     background: #f0ff0b;
+    color:var(--text-color);
+  }
+}
+
+// 添加夜间模式样式
+.theme__dark .cherry-editor {
+  .cm-mark-container {
+    background: #5c5c00; // 使用较深的黄色，以适应夜间模式
+
   }
 }
