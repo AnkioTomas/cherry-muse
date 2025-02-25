@@ -1,4 +1,4 @@
-.cherry-editor{
+
   /* BASICS */
 
   .CodeMirror {
@@ -455,11 +455,10 @@
     }
   }
 
-}
+
 
 /* DARK THEME */
 .theme__dark {
-  .cherry-editor {
     .CodeMirror {
       color: #d4d4d4;
       background: #1e1e1e;
@@ -627,4 +626,3 @@
       border-left: 3px solid #ff79c6;
     }
   }
-}
