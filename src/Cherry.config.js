@@ -84,15 +84,7 @@ const callbacks = {
 };
 
 const defaultConfig = {
-  // 主题配置
-  themes: [
-    {
-      name: 'github',
-      dark: 'github-dark.css',
-      light: 'github-light.css',
-    },
-  ],
-  theme: 'github',
+  theme: 'default',
   // 第三方包
   externals: {
     // externals
