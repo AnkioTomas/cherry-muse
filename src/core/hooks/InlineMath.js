@@ -21,7 +21,7 @@ import { Theme } from '@/Theme';
 import Event from '../../Event';
 /**
  * 行内公式的语法
- * 虽然叫做行内公式，Cherry依然将其视为“段落级语法”，因为其具备排他性并且需要优先渲染
+ * 虽然叫做行内公式，Cherry依然将其视为"段落级语法"，因为其具备排他性并且需要优先渲染
  */
 export default class InlineMath extends ParagraphBase {
   static HOOK_NAME = 'inlineMath';
@@ -107,5 +107,35 @@ export default class InlineMath extends ParagraphBase {
     };
     ret.reg = new RegExp(ret.begin + ret.content + ret.end, 'g');
     return ret;
+  }
+  overlayMode() {
+    return {
+      name: 'inlineMath',
+      inMath: false,
+      passLeftKey: false,
+      token(stream, state) {
+        // 检查行内数学公式
+        if (!this.inMath && stream.match(/\$.*?\$/)) {
+          this.inMath = true;
+          stream.backUp(stream.current().length);
+        }
+        if (this.inMath) {
+          if (stream.match('$')) {
+            if (!this.passLeftKey) {
+              this.passLeftKey = true;
+            } else {
+              this.inMath = false;
+            }
+            return 'math-container';
+          }
+          if (stream.match(/.*?\$/)) {
+            stream.backUp(1);
+            return 'math-text';
+          }
+        }
+        stream.next();
+        return null;
+      },
+    };
   }
 }

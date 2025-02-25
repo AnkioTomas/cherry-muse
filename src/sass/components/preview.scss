@@ -22,6 +22,7 @@
 @use "../core/Size";
 @use "../core/Mark";
 @use "../core/Badge";
+@use "../core/InlineMath";
 .cherry-previewer {
   padding: 1.25rem  2rem;
   border-left: 0.125rem solid var(--border-color);
