@@ -123,3 +123,8 @@ pre[class*="language-"] {
   color: green;
 }
 
+code[class*="language-"],
+pre[class*="language-"]{
+  text-shadow: none;
+}
+

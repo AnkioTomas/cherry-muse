@@ -41,4 +41,38 @@
   --codemirror-operator-inner-color: #C70039;  /* 道奇蓝 */
 
 
+
+}
+
+.theme__dark {
+  --bg-color: #1a1a1a; /*背景色*/
+  --text-color: #e0e0e0; /*文本颜色*/
+
+  --hover-bg-color: rgba(55, 55, 55, 0.59); /*浮动的背景色*/
+  --hover-text-color: inherit;
+
+  --primary-color: #5499dd; /* color of primary buttons */
+  --primary-btn-border-color: #3d7ab8;
+  --primary-btn-text-color: #fff;
+
+  --border-color: #404040;
+  --panel-border-color: #666666;
+  --border-color2: #333333;
+  --border: 1px solid var(--border-color);
+
+  --disabled-text-color: #888888;
+  --shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+  --shadow-bold: 0 0 1rem rgba(0, 0, 0, 0.4);
+
+  --code-bg: #2d2d2d;
+  --blur-text-color: #666666;
+
+  --bg-on-bg-color: #2b3b50;
+
+  --table-bg-color: #2d2d2d;
+  --table-border-color: #404040;
+
+  --codemirror-operator-text-color: #ff7f66; /* 浅橙红色 */
+  --codemirror-operator-color: #47a3ff; /* 亮道奇蓝 */
+  --codemirror-operator-inner-color: #ff1a1a; /* 亮红色 */
 }

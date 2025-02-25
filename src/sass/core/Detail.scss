@@ -4,8 +4,10 @@
   --detail-text-color: inherit;
   --detail-code-bg-color: rgb(127 127 127 / 15%);
   .cherry-dark {
-    --detail-bg-color: #333;
-    --detail-text-color: #a8a8a8;
+    --detail-bg-color: #2d2d2d;
+    --detail-summary-icon-bg: #444444;
+    --detail-text-color: #e0e0e0;
+    --detail-code-bg-color: rgb(0 0 0 / 20%);
   }
   .cherry-detail{
     position: relative;

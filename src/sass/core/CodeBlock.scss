@@ -1,8 +1,14 @@
 
 
 .cherry-previewer{
+
+
+
   div[data-type='codeBlock'] {
+
     @import '../components/prism';
+
+
     pre{
       border-radius: var(--border-radius);
     }
@@ -56,6 +62,24 @@
   }
 
 }
+.theme__dark{
+  .cherry-previewer {
+    div[data-type='codeBlock'] {
+      @import '../prism/light';
+    }
+  }
+}
+.theme__dark{
+  .cherry-previewer {
+
+
+    div[data-type='codeBlock'] {
+
+      @import '../prism/dark';
+    }
+  }
+}
+
 
 .cherry{
   .cherry-previewer-codeBlock-content-handler {
