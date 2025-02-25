@@ -407,51 +407,34 @@ export default class Previewer {
         this.editor.scrollToLineNum(null);
         return;
       }
-      // 获取预览容器基准坐标
-      const basePoint = domContainer.getBoundingClientRect();
-      // 观察点坐标，取容器中轴线
-      const watchPoint = {
-        x: basePoint.left + basePoint.width / 2,
-        y: basePoint.top + 1,
-      };
-      // 获取观察点处的DOM
-      const targetElements = elementsFromPoint(watchPoint.x, watchPoint.y);
+      const domPosition = domContainer.getBoundingClientRect();
       let targetElement;
-      for (let i = 0; i < targetElements.length; i++) {
-        if (domContainer.contains(targetElements[i])) {
-          targetElement = targetElements[i];
+      let lines = 0;
+      const elements = domContainer.children;
+      for (let i = 0; i < elements.length; i++) {
+        const element = elements[i];
+        if (element.getBoundingClientRect().top < domPosition.top) {
+          targetElement = element;
+          const currentLines = element.getAttribute('data-lines') ?? 0;
+          lines += +currentLines;
+        } else {
           break;
         }
       }
-      if (!targetElement || targetElement === domContainer) {
+      if (!targetElement) {
+        this.editor.scrollToLineNum(0, 0, 1);
         return;
-      }
-      // 获取观察点处最近的markdown元素
-      let mdElement = targetElement.closest('[data-sign]');
-      // 由于新增脚注，内部容器也有可能存在data-sign，所以需要循环往父级找
-      while (mdElement && mdElement.parentElement && mdElement.parentElement !== domContainer) {
-        mdElement = mdElement.parentElement.closest('[data-sign]');
-      }
-      if (!mdElement) {
-        return;
-      }
-      // 计算当前焦点容器的所在行数
-      let lines = 0;
-      let element = mdElement;
-      while (element) {
-        lines += +element.getAttribute('data-lines');
-        element = element.previousElementSibling; // 取上一个兄弟节点，直到为null
       }
       // markdown元素存在margin，getBoundingRect不能获取到margin
-      const mdElementStyle = getComputedStyle(mdElement);
+      const mdElementStyle = getComputedStyle(targetElement);
       const marginTop = parseFloat(mdElementStyle.marginTop);
       const marginBottom = parseFloat(mdElementStyle.marginBottom);
       // markdown元素基于当前页面的矩形模型
-      const mdRect = mdElement.getBoundingClientRect();
+      const mdRect = targetElement.getBoundingClientRect();
       const mdActualHeight = mdRect.height + marginTop + marginBottom;
       // (mdRect.y - marginTop)为顶部触达区域，basePoint.y为预览区域的顶部，故可视范围应减去预览区域的偏移
-      const mdOffsetTop = mdRect.y - marginTop - basePoint.y;
-      const lineNum = +mdElement.getAttribute('data-lines'); // 当前markdown元素所占行数
+      const mdOffsetTop = mdRect.y - marginTop - domPosition.y;
+      const lineNum = +targetElement.getAttribute('data-lines'); // 当前markdown元素所占行数
       const percent = (100 * Math.abs(mdOffsetTop)) / mdActualHeight / 100;
       // console.log('destLine:', lines, percent,
       //  mdRect.height + marginTop + marginBottom, mdOffsetTop, mdElement);
@@ -936,24 +919,131 @@ export default class Previewer {
   }
 
   /**
+   * 滚动到对应位置
+   * @param {number} scrollTop 元素的id属性值
+   * @param {'auto'|'smooth'|'instant'} behavior 滚动方式
+   */
+  scrollToTop(scrollTop, behavior = 'auto') {
+    const previewDom = this.getDomContainer();
+    const scrollDom = this.getDomCanScroll(previewDom);
+    scrollDom.scrollTo({
+      top: scrollTop,
+      left: 0,
+      behavior,
+    });
+  }
+
+  /**
    * 滚动到对应id的位置，实现锚点滚动能力
    * @param {string} id 元素的id属性值
+   * @param {'smooth'|'instant'|'auto'} behavior 滚动方式
    * @return {boolean} 是否有对应id的元素并执行滚动
    */
-  scrollToId(id) {
-    const dom = this.getDomContainer();
+  scrollToId(id, behavior = 'smooth') {
+    const previewDom = this.getDomContainer();
+    const scrollDom = this.getDomCanScroll(previewDom);
+    // 设置未加载图片的默认尺寸
+    const images = previewDom.getElementsByTagName('img');
+    const modifiedImages = new Set(); // 记录被修改过样式的图片
+    let isDealScroll = false;
+    Array.from(images).forEach((img) => {
+      if (!img.hasAttribute('width') && !img.hasAttribute('height') && !img.style.width && !img.style.height) {
+        // img.style.minHeight = '200px';
+        // img.style.aspectRatio = '16/9';
+        modifiedImages.add(img);
+      }
+    });
+
     let $id = id.replace(/^\s*#/, '').trim();
-    $id = /%/.test($id) ? $id : encodeURIComponent($id);
-    const target = dom.querySelector(`[id="${$id}"]`) ?? false;
+    $id = /[%:]/.test($id) ? $id : encodeURIComponent($id);
+    const target = previewDom.querySelector(`[id="${$id}"]`) ?? false;
     if (target === false) {
       return false;
     }
-    const scrollTop = dom.scrollTop + target.getBoundingClientRect().y - dom.getBoundingClientRect().y - 20;
-    dom.scrollTo({
+
+    let scrollTop = 0;
+
+    if (scrollDom.nodeName === 'HTML') {
+      scrollTop = scrollDom.scrollTop + target.getBoundingClientRect().y - 10;
+    } else {
+      scrollTop = scrollDom.scrollTop + target.getBoundingClientRect().y - scrollDom.getBoundingClientRect().y - 10;
+    }
+
+    // 创建一个函数来清理图片样式并重新滚动
+    const cleanupAndScroll = () => {
+      // modifiedImages.forEach((img) => {
+      //   img.style.minHeight = '';
+      //   img.style.aspectRatio = '';
+      // });
+      modifiedImages.clear();
+
+      // 重新计算位置并滚动
+      let newScrollTop = 0;
+      if (scrollDom.nodeName === 'HTML') {
+        newScrollTop = scrollDom.scrollTop + target.getBoundingClientRect().y - 10;
+      } else {
+        newScrollTop =
+          scrollDom.scrollTop + target.getBoundingClientRect().y - scrollDom.getBoundingClientRect().y - 10;
+      }
+      // 如果位置有变化，使用instant行为重新滚动
+      if (Math.abs(newScrollTop - scrollTop) > 5) {
+        scrollDom.scrollTo({
+          top: newScrollTop,
+          left: 0,
+          behavior: 'instant',
+        });
+      }
+    };
+
+    // 监听滚动结束事件
+    const handleScrollEnd = () => {
+      if (isDealScroll) {
+        return;
+      }
+      isDealScroll = true;
+      // 移除滚动事件监听器
+      scrollDom.removeEventListener('scrollend', handleScrollEnd);
+      // 等待一小段时间确保图片开始加载
+      setTimeout(() => {
+        // 获取所有修改过的图片的加载状态
+        const imageLoadPromises = Array.from(modifiedImages).map((img) => {
+          if (img.complete) return Promise.resolve();
+          return new Promise((resolve) => {
+            const onLoad = () => {
+              img.removeEventListener('load', onLoad);
+              img.removeEventListener('error', onLoad);
+              resolve();
+            };
+            img.addEventListener('load', onLoad);
+            img.addEventListener('error', onLoad);
+          });
+        });
+
+        // 等待所有图片加载完成后再清理样式
+        Promise.all(imageLoadPromises).then(() => {
+          // 使用 requestAnimationFrame 确保在下一帧渲染时处理
+          requestAnimationFrame(cleanupAndScroll);
+        });
+      }, 100);
+    };
+
+    // 添加滚动结束事件监听器
+    scrollDom.addEventListener('scrollend', handleScrollEnd);
+
+    // 如果浏览器不支持 scrollend 事件，使用 setTimeout 作为后备方案
+    setTimeout(() => {
+      scrollDom.removeEventListener('scrollend', handleScrollEnd);
+      handleScrollEnd();
+    }, 1000);
+
+    // 开始滚动
+    scrollDom.scrollTo({
       top: scrollTop,
       left: 0,
-      behavior: 'smooth',
+      behavior,
     });
+
+    return true;
   }
 
   /**
@@ -988,17 +1078,30 @@ export default class Previewer {
     this.$scrollAnimation(top);
   }
 
+  /**
+   * 获取有滚动条的dom
+   */
+  getDomCanScroll(currentDom = this.getDomContainer()) {
+    if (currentDom.scrollHeight > currentDom.clientHeight || currentDom.clientHeight < window.innerHeight) {
+      return currentDom;
+    }
+    if (currentDom.parentElement) {
+      if (currentDom.nodeName === 'BODY') {
+        // 如果当前是body了，再往上就是html了
+        if (document.documentElement.scrollHeight > document.documentElement.clientHeight) {
+          return document.documentElement;
+        }
+        return currentDom;
+      }
+      return this.getDomCanScroll(currentDom.parentElement);
+    }
+  }
+
   scrollToHeadByIndex(index) {
     const previewDom = this.getDomContainer();
     const targetHead = previewDom.querySelectorAll('h1,h2,h3,h4,h5,h6,h7,h8')[index] ?? false;
     if (targetHead !== false) {
-      const scrollTop =
-        previewDom.scrollTop + targetHead.getBoundingClientRect().y - previewDom.getBoundingClientRect().y - 10;
-      previewDom.scrollTo({
-        top: scrollTop,
-        left: 0,
-        behavior: 'smooth',
-      });
+      this.scrollToId(targetHead.id);
     }
   }
 
@@ -1019,6 +1122,13 @@ export default class Previewer {
           const liNode = target.parentElement;
           const index = Array.from(liNode.parentElement.children).indexOf(liNode) - 1;
           this.scrollToHeadByIndex(index);
+          event.stopPropagation();
+          event.preventDefault();
+        }
+        /** 增加个潜规则逻辑，脚注跳转时是否更新location hash也跟随options.toolbars.toc.updateLocationHash 的配置 */
+        if (target instanceof Element && target.nodeName === 'A' && /(footnote|footnote-ref)/.test(target.className)) {
+          const id = target.getAttribute('href');
+          this.scrollToId(id);
           event.stopPropagation();
           event.preventDefault();
         }
