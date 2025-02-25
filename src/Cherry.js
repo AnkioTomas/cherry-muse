@@ -32,8 +32,8 @@ import { urlProcessorProxy } from './UrlCache';
 import { CherryStatic } from './CherryStatic';
 import { LIST_CONTENT } from './utils/regexp';
 import { Theme } from './Theme';
-import SideToc from './toolbars/SideToc';
 import Bubble from './toolbars/Bubble';
+import Toc from '@/toolbars/Toc';
 
 export default class Cherry extends CherryStatic {
   /**
@@ -111,8 +111,6 @@ export default class Cherry extends CherryStatic {
 
     // 蒙层dom，用来拖拽编辑区&预览区宽度时展示蒙层
     const wrapperDom = this.createWrapper();
-    // 创建目录预览区
-    this.tocList = new SideToc().createTocList();
     // 创建编辑区
     const editor = this.createEditor();
     // 创建预览区
@@ -132,7 +130,6 @@ export default class Cherry extends CherryStatic {
 
     const wrapperFragment = document.createDocumentFragment();
     wrapperFragment.appendChild(this.toolbar.options.dom);
-    wrapperFragment.appendChild(this.tocList);
     wrapperFragment.appendChild(editor.options.editorDom);
 
     if (!this.options.previewer.dom) {
@@ -185,8 +182,9 @@ export default class Cherry extends CherryStatic {
       setTimeout(this.scrollByHash.bind(this));
     }
     // 强制进行一次渲染
-    this.editText(null, this.editor.editor);
     Theme.init(this);
+    //
+    this.createToc();
   }
 
   /**
@@ -205,6 +203,25 @@ export default class Cherry extends CherryStatic {
         engine: this.engine,
       });
     }
+  }
+  createToc() {
+    if (this.options.toolbars.toc === false) {
+      this.toc = false;
+      return;
+    }
+    this.toc = new Toc({
+      $cherry: this,
+      // @ts-ignore
+      updateLocationHash: this.options.toolbars.toc.updateLocationHash ?? true,
+      // @ts-ignore
+      position: this.options.toolbars.toc.position ?? 'absolute',
+      // @ts-ignore
+      cssText: this.options.toolbars.toc.cssText ?? '',
+      // @ts-ignore
+      defaultModel: this.options.toolbars.toc.defaultModel ?? 'pure',
+      // @ts-ignore
+      showAutoNumber: this.options.toolbars.toc.showAutoNumber ?? false,
+    });
   }
 
   /**
@@ -471,21 +488,17 @@ export default class Cherry extends CherryStatic {
    * @returns {Boolean}
    */
   resetToolbar(type, toolbar) {
-    const $type = /(toolbar|toolbarRight|sidebar|bubble|float)/.test(type) ? type : false;
+    const $type = /(toolbar|toolbarRight|sidebar|bubble|float|toc)/.test(type) ? type : false;
     if ($type === false) {
       return false;
     }
     if (this.toolbarContainer) {
       this.toolbarContainer.innerHTML = '';
     }
-    if (this.toolbarFloatContainer) {
-      this.toolbarFloatContainer.innerHTML = '';
-    }
-    if (this.toolbarBubbleContainer) {
-      this.toolbarBubbleContainer.innerHTML = '';
-    }
-    if (this.sidebarDom) {
-      this.sidebarDom.innerHTML = '';
+
+    if (this.toc) {
+      // @ts-ignore
+      this.toc.tocDom.remove();
     }
     this.cherryDom.querySelectorAll('.cherry-dropdown').forEach((item) => {
       item.remove();
@@ -494,8 +507,8 @@ export default class Cherry extends CherryStatic {
     this.createToolbar();
     this.createToolbarRight();
     this.createBubble();
-    this.createFloatMenu();
-    this.createSidebar();
+    // this.createHiddenToolbar();
+    this.createToc();
     return true;
   }
 
@@ -699,5 +712,27 @@ export default class Cherry extends CherryStatic {
    */
   setWritingStyle(writingStyle) {
     this.editor.setWritingStyle(writingStyle);
+  }
+
+  /**
+   * 切换TOC的模式（极简 or 展开）
+   * @param {'full'|'pure'|''} focusModel 是否强制切换模式，如果为空，则根据当前模式切换
+   */
+  toggleToc(focusModel = '') {
+    if (!this.toc) {
+      return;
+    }
+    let targetModel = 'full';
+    if (focusModel === '') {
+      // @ts-ignore
+      const { model } = this.toc;
+      targetModel = model === 'full' ? 'pure' : 'full';
+    } else {
+      targetModel = focusModel;
+    }
+    // @ts-ignore
+    this.toc.$switchModel(targetModel);
+    // @ts-ignore
+    this.toc.setModelToLocalStorage(targetModel);
   }
 }

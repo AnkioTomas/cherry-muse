@@ -265,8 +265,8 @@ const defaultConfig = {
   toolbars: {
     theme: 'dark', // light or dark
     showToolbar: true, // false：不展示顶部工具栏； true：展示工具栏; toolbars.showToolbar=false 与 toolbars.toolbar=false 等效
+    toc: true,
     toolbar: [
-      'tocList',
       {
         strikethrough: ['strikethrough', 'underline', 'sub', 'sup', 'ruby', 'bold', 'italic', 'quote'],
       },
@@ -402,6 +402,6 @@ const defaultConfig = {
   autoScrollByHashAfterInit: true,
 };
 if (window.outerWidth <= 600) {
-  defaultConfig.toolbars.toolbar = ['tocList', 'togglePreview'];
+  defaultConfig.toolbars.toolbar = ['togglePreview'];
 }
 export default cloneDeep(defaultConfig);

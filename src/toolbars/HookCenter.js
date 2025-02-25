@@ -63,7 +63,6 @@ import Detail from './hooks/Detail';
 import Badge from './hooks/Badge';
 import ECharts from './hooks/ECharts';
 import Card from '@/toolbars/hooks/Card';
-import TocList from '@/toolbars/hooks/TocList';
 import Formula from '@/toolbars/hooks/Formula';
 import WordCount from './hooks/WordCount';
 import Emoji from '@/toolbars/hooks/Emoji';
@@ -116,7 +115,6 @@ const HookList = {
   badge: Badge,
   echarts: ECharts,
   card: Card,
-  tocList: TocList,
   formula: Formula,
   wordCount: WordCount,
   emoji: Emoji,
