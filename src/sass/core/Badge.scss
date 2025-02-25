@@ -18,9 +18,9 @@
     $panel-types: important, info, note, tip, warning, danger;
     @each $type in $panel-types {
       &.cherry-badge-#{$type} {
-        border-color: var(--#{$type}-title-color);
-        background: var(--#{$type}-border-color);
-        color: var(--#{$type}-bg-color);
+        border-color: var(--badge-#{$type}-border-color);
+        background: var(--badge-#{$type}-bg-color);
+        color: var(--badge-#{$type}-title-color);
       }
     }
 
@@ -54,4 +54,63 @@
       color: var(--codemirror-operator-text-color);
     }
   }
+}
+
+:root {
+  // info 蓝色系
+  --badge-info-border-color: #4cb3d4;
+  --badge-info-bg-color: #2171c1;
+  --badge-info-title-color: #ffffff;
+
+  // important 紫色系
+  --badge-important-border-color: #a371f7;
+  --badge-important-bg-color: #6a1b9a;
+  --badge-important-title-color: #ffffff;
+
+  // note 灰色系
+  --badge-note-border-color: #9e9e9e;
+  --badge-note-bg-color: #616161;
+  --badge-note-title-color: #ffffff;
+
+  // tip 绿色系
+  --badge-tip-border-color: #4caf50;
+  --badge-tip-bg-color: #2e7d32;
+  --badge-tip-title-color: #ffffff;
+
+  // warning 橙色系
+  --badge-warning-border-color: #ff9800;
+  --badge-warning-bg-color: #e65100;
+  --badge-warning-title-color: #ffffff;
+
+  // danger 红色系
+  --badge-danger-border-color: #f44336;
+  --badge-danger-bg-color: #c62828;
+  --badge-danger-title-color: #ffffff;
+}
+
+// 暗色主题下颜色稍微调暗一些
+.theme__dark {
+  // info 蓝色系
+  --badge-info-bg-color: #1565c0;
+  --badge-info-title-color: #e3f2fd;
+
+  // important 紫色系
+  --badge-important-bg-color: #4a148c;
+  --badge-important-title-color: #f3e5f5;
+
+  // note 灰色系
+  --badge-note-bg-color: #424242;
+  --badge-note-title-color: #f5f5f5;
+
+  // tip 绿色系
+  --badge-tip-bg-color: #1b5e20;
+  --badge-tip-title-color: #e8f5e9;
+
+  // warning 橙色系
+  --badge-warning-bg-color: #bf360c;
+  --badge-warning-title-color: #fff3e0;
+
+  // danger 红色系
+  --badge-danger-bg-color: #b71c1c;
+  --badge-danger-title-color: #ffebee;
 }
