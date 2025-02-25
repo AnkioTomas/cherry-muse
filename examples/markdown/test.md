@@ -2,7 +2,7 @@
 ::: tip 提示
 此处的语法兼容大多数Markdown编辑器（Typora、Github等）。
 :::
-
+# Cherry Markdown  { 简明手册 | jiǎn míng shǒu cè }
 
 # 标题
 
@@ -584,7 +584,7 @@ https://www.qq.com?param=中文
 ::: danger 标题
 内容
 :::
-::: success 标题
+::: tip 标题
 内容
 :::
 ::: left 标题
@@ -609,7 +609,7 @@ https://www.qq.com?param=中文
 ::: danger 标题
 内容
 :::
-::: success 标题
+::: tip 标题
 内容
 :::
 ::: left 标题
