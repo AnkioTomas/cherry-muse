@@ -103,3 +103,13 @@
 
 
 }
+.cherry-editor{
+  .cm-emoji-container{
+    color:var(--codemirror-operator-color);
+    font-weight: bold;
+  }
+  .cm-emoji-text{
+    color:var(--codemirror-operator-text-color);
+  }
+}
+

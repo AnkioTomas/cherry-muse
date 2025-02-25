@@ -79,6 +79,7 @@
 .cherry-editor {
   .cm-detail-container {
     color: var(--codemirror-operator-color);
+    font-weight: bold;
   }
   .cm-detail-title {
     color: var(--codemirror-operator-text-color);

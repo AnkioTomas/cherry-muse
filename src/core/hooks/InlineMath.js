@@ -120,15 +120,16 @@ export default class InlineMath extends ParagraphBase {
           stream.backUp(stream.current().length);
         }
         if (this.inMath) {
-          if (stream.match('$')) {
+          if (stream.match(/\$/)) {
             if (!this.passLeftKey) {
               this.passLeftKey = true;
             } else {
               this.inMath = false;
+              this.passLeftKey = false;
             }
             return 'math-container';
           }
-          if (stream.match(/.*?\$/)) {
+          if (stream.match(/.+?\$/)) {
             stream.backUp(1);
             return 'math-text';
           }

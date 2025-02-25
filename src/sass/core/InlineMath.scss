@@ -1,6 +1,7 @@
 .cherry-editor{
   .cm-math-container{
     color:var(--codemirror-operator-color);
+    font-weight: bold;
   }
   .cm-math-text{
     color:var(--codemirror-operator-text-color);

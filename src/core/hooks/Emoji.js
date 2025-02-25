@@ -171,4 +171,35 @@ export default class Emoji extends SyntaxBase {
     ret.reg = compileRegExp(ret, 'g');
     return ret;
   }
+  overlayMode() {
+    return {
+      name: 'emoji',
+      inEmoji: false,
+      passLeftKey: false,
+      token(stream, state) {
+        // 检查是否是 emoji，但排除连续的三个冒号
+        if (!this.inEmoji && stream.match(/:[^:]+:(?!:)/)) {
+          this.inEmoji = true;
+          stream.backUp(stream.current().length);
+        }
+        if (this.inEmoji) {
+          if (stream.match(':')) {
+            if (!this.passLeftKey) {
+              this.passLeftKey = true;
+            } else {
+              this.inEmoji = false;
+              this.passLeftKey = false;
+            }
+            return 'emoji-container';
+          }
+          if (stream.match(/.*?:/)) {
+            stream.backUp(1);
+            return 'emoji-text';
+          }
+        }
+        stream.next();
+        return null;
+      },
+    };
+  }
 }
