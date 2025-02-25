@@ -55,7 +55,7 @@
     &.cherry-drag--show {
       width: 0.5rem;
       display: block;
-      background: #dfe6ee;
+      background: var(--drag-bg-color);
     }
 
     &.cherry-drag--hidden {
@@ -67,7 +67,7 @@
     z-index: 10;
     position: absolute;
     display: none;
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--editor-mask-bg);
 
     &.cherry-editor-mask--show {
       display: block;
@@ -78,7 +78,7 @@
     z-index: 10;
     position: absolute;
     display: none;
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--previewer-mask-bg);
 
     &.cherry-previewer-mask--show {
       display: block;

@@ -40,39 +40,46 @@
   --codemirror-operator-color: #1E90FF;  /* 道奇蓝 */
   --codemirror-operator-inner-color: #C70039;  /* 道奇蓝 */
 
+  --drag-bg-color: #dfe6ee;
 
-
+  --editor-mask-bg: rgba(0, 0, 0, 0.2);
+  --previewer-mask-bg: rgba(0, 0, 0, 0.4);
 }
 
 .theme__dark {
-  --bg-color: #1a1a1a; /*背景色*/
-  --text-color: #e0e0e0; /*文本颜色*/
+  --bg-color: #1e1e1e; /* 稍微调亮一点，提高可读性 */
+  --text-color: #e6e6e6; /* 略微调亮文本颜色 */
 
-  --hover-bg-color: rgba(55, 55, 55, 0.59); /*浮动的背景色*/
+  --hover-bg-color: rgba(60, 60, 60, 0.59); /* 提高对比度 */
   --hover-text-color: inherit;
 
-  --primary-color: #5499dd; /* color of primary buttons */
-  --primary-btn-border-color: #3d7ab8;
-  --primary-btn-text-color: #fff;
+  --primary-color: #60a5e8; /* 调亮主色调，提高可见度 */
+  --primary-btn-border-color: #4785c4;
+  --primary-btn-text-color: #ffffff;
 
-  --border-color: #404040;
-  --panel-border-color: #666666;
-  --border-color2: #333333;
+  --border-color: #3a3a3a;
+  --panel-border-color: #838383;
+  --border-color2: #2d2d2d;
   --border: 1px solid var(--border-color);
 
-  --disabled-text-color: #888888;
-  --shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
-  --shadow-bold: 0 0 1rem rgba(0, 0, 0, 0.4);
+  --disabled-text-color: #808080;
+  --shadow: 0 0 0.8rem rgba(0, 0, 0, 0.35);
+  --shadow-bold: 0 0 1rem rgba(0, 0, 0, 0.45);
 
-  --code-bg: #2d2d2d;
-  --blur-text-color: #666666;
+  --code-bg: #282828;
+  --blur-text-color: #595959;
 
-  --bg-on-bg-color: #2b3b50;
+  --bg-on-bg-color: #2b3544;
 
-  --table-bg-color: #2d2d2d;
-  --table-border-color: #404040;
+  --table-bg-color: #282828;
+  --table-border-color: #383838;
 
-  --codemirror-operator-text-color: #ff7f66; /* 浅橙红色 */
-  --codemirror-operator-color: #47a3ff; /* 亮道奇蓝 */
-  --codemirror-operator-inner-color: #ff1a1a; /* 亮红色 */
+  --codemirror-operator-text-color: #ff8f7a; /* 调亮，提高可读性 */
+  --codemirror-operator-color: #5cacff; /* 调亮，提高可读性 */
+  --codemirror-operator-inner-color: #ff3333; /* 调亮，提高可读性 */
+
+  --drag-bg-color: #2d3642; /* 添加夜间模式的拖动条颜色 */
+
+  --editor-mask-bg: rgba(0, 0, 0, 0.3);
+  --previewer-mask-bg: rgba(0, 0, 0, 0.5);
 }
