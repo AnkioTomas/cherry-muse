@@ -98,7 +98,7 @@ class BubbleEmoji {
 
   getEmojiDom() {
     let htmlHeader = `<div class="cherry-emoji-header">`;
-    const htmlSearch = `<div class="cherry-emoji-search"><input type="text" placeholder="Search emoji" class="cherry-emoji-search-input"></div>`;
+    const htmlSearch = `<div class="cherry-emoji-search"><input type="text" placeholder="搜索表情" class="cherry-emoji-search-input"></div>`;
     let htmlBody = `<div class="cherry-emoji-body">`;
     const emojiStackDOM = Object.entries(this.categorizedEmojis)
       .map(([category, emojis]) => {
@@ -278,19 +278,28 @@ ${icon}
   }
   searchEmoji(value) {
     const searchResult = [];
-    for (const emoji of gfmUnicode.emojis) {
-      for (const alias of emoji.aliases) {
-        if (alias.includes(value)) {
-          searchResult.push(emoji);
+    // gfmUnicode.emojis 是一个对象，而不是数组，需要使用 Object.values() 来遍历
+    Object.values(gfmUnicode.emojis).forEach(emojiGroup => {
+      emojiGroup.forEach(emoji => {
+        // 检查别名
+        if (emoji.a.some(alias => alias.includes(value))) {
+          searchResult.push({
+            emoji: emoji.e,
+            aliases: emoji.a,
+            tags: emoji.t || []
+          });
+          return;
         }
-      }
-
-      for (const tag of emoji.tags) {
-        if (tag.includes(value)) {
-          searchResult.push(emoji);
+        // 检查标签
+        if ((emoji.t || []).some(tag => tag.includes(value))) {
+          searchResult.push({
+            emoji: emoji.e,
+            aliases: emoji.a,
+            tags: emoji.t || []
+          });
         }
-      }
-    }
+      });
+    });
     return searchResult;
   }
 

@@ -47,6 +47,7 @@
       border: var(--border);
       border-radius: var(--border-radius);
       box-sizing: border-box;
+      background: var(--hover-bg-color);
       &:focus {
         border-color: var(--primary-color); /* 焦点时的边框颜色 */
         outline: none; /* 移除默认的焦点轮廓 */
