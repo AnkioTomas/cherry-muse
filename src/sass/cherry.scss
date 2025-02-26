@@ -8,7 +8,7 @@
 @use "components/editor" as *;
 @use "components/preview" as *;
 @use "components/toc" as *;
-
+@use "components/stats" as * ;
 .cherry {
   display: flex;
   flex-flow: row wrap;

@@ -64,7 +64,6 @@ import Badge from './hooks/Badge';
 import ECharts from './hooks/ECharts';
 import Card from '@/toolbars/hooks/Card';
 import Formula from '@/toolbars/hooks/Formula';
-import WordCount from './hooks/WordCount';
 import Emoji from '@/toolbars/hooks/Emoji';
 // 定义默认支持的工具栏
 // 目前不支持按需动态加载
@@ -116,7 +115,6 @@ const HookList = {
   echarts: ECharts,
   card: Card,
   formula: Formula,
-  wordCount: WordCount,
   emoji: Emoji,
 };
 

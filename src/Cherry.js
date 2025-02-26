@@ -34,6 +34,7 @@ import { LIST_CONTENT } from './utils/regexp';
 import { Theme } from './Theme';
 import Bubble from './toolbars/Bubble';
 import Toc from '@/toolbars/Toc';
+import Stats from './Stats';
 
 export default class Cherry extends CherryStatic {
   /**
@@ -322,7 +323,11 @@ export default class Cherry extends CherryStatic {
    * @returns string
    */
   getValue() {
-    return this.editor.editor.getValue();
+     try{
+       return this.editor.editor.getValue();
+    }catch (e) {
+       return '';
+     }
   }
 
   /**
@@ -483,7 +488,7 @@ export default class Cherry extends CherryStatic {
   /**
    * 动态重置工具栏配置
    * @public
-   * @param {'toolbar'|'toolbarRight'|'sidebar'|'bubble'|'float'} [type] 修改工具栏的类型
+   * @param {'toolbar'|'toolbarRight|'sidebar'|'bubble'|'float'} [type] 修改工具栏的类型
    * @param {Array} [toolbar] 要重置的对应工具栏配置
    * @returns {Boolean}
    */
@@ -552,6 +557,14 @@ export default class Cherry extends CherryStatic {
       autoScrollByCursor: this.options.autoScrollByCursor,
       ...this.options.editor,
     });
+
+    // 初始化统计模块
+    if (this.options.editor.showStats !== false) {
+      this.stats = new Stats({
+        $cherry: this,
+      });
+    }
+
     return this.editor;
   }
 
@@ -630,6 +643,12 @@ export default class Cherry extends CherryStatic {
       const interval = this.options.engine.global.flowSessionContext ? 10 : 50;
       this.timer = setTimeout(() => {
         const markdownText = codemirror.getValue();
+        
+        // 更新统计信息
+        if (this.stats) {
+          this.stats.update(markdownText);
+        }
+
         if (markdownText !== this.lastMarkdownText) {
           this.lastMarkdownText = markdownText;
           const html = this.engine.makeHtml(markdownText);
@@ -641,7 +660,6 @@ export default class Cherry extends CherryStatic {
         }
 
         Event.emit('editor', 'change', that);
-        // 强制每次编辑（包括undo、redo）编辑器都会自动滚动到光标位置
         codemirror.scrollIntoView(null);
         this.editor.restoreDocumentScroll();
       }, interval);
