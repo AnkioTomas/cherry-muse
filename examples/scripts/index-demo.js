@@ -27,10 +27,7 @@ let config1 = {
 }
 let config2 = {
   id:"markdown",
-  toolbars: {
-    toolbars:false,
-    bubble: false
-  },
+
 
 }
 window.cherry = new Cherry(config2);
