@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 import Toolbar from './Toolbar';
+import Event from "../Event";
 /**
  * 在编辑区域选中文本时浮现的bubble工具栏
  */
@@ -176,7 +177,7 @@ export default class Bubble extends Toolbar {
         const selectionStr = selections.join('');
         if (selectionStr !== this.lastSelectionsStr && (selectionStr || this.lastSelectionsStr)) {
           this.lastSelections = !this.lastSelections ? [] : this.lastSelections;
-          this.$cherry.$event.emit('selectionChange', { selections, lastSelections: this.lastSelections, info });
+          Event.emit('Bubble', 'selectionChange', { selections, lastSelections: this.lastSelections, info });
           this.lastSelections = selections;
           this.lastSelectionsStr = selectionStr;
         }
