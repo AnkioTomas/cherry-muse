@@ -48,7 +48,7 @@ import Detail from './hooks/Detail';
 import Mark from '@/core/hooks/Mark';
 import Badge from '@/core/hooks/Badge';
 import Suggester from '@/core/hooks/Suggester';
-import Card from '@/core/hooks/Card';
+
 /**
  * 引擎各语法的配置
  * 主要决定支持哪些语法，以及各语法的执行顺序
@@ -73,7 +73,6 @@ const hooksConfig = [
   Hr,
   List,
   Detail,
-  Card,
   Panel,
   Paragraph, // 普通段落
 

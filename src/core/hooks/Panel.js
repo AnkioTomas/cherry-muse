@@ -146,7 +146,7 @@ export default class Panel extends ParagraphBase {
           return 'panel-container';
         }
 
-        const rule = /\s(important|info|tip|warning|danger|note|center|left|right)/;
+        const rule = /\s(important|info|warning|danger|note|center|left|right)/;
 
         // 尝试匹配规则
         if (this.inContainer && stream.match(rule)) {

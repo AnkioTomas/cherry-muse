@@ -2,7 +2,7 @@
 ::: tip 提示
 此处的语法兼容大多数Markdown编辑器（Typora、Github等）。
 :::
-# Cherry Markdown  { 简明手册 | jiǎn míng shǒu cè }
+
 
 # 标题
 
@@ -584,7 +584,7 @@ https://www.qq.com?param=中文
 ::: danger 标题
 内容
 :::
-::: tip 标题
+::: success 标题
 内容
 :::
 ::: left 标题
@@ -609,7 +609,7 @@ https://www.qq.com?param=中文
 ::: danger 标题
 内容
 :::
-::: tip 标题
+::: success 标题
 内容
 :::
 ::: left 标题
@@ -750,52 +750,123 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 
 ## 普通卡片
 ````markdown
-:::card 
-[标题](链接) ![描述](图片链接)
-:::
-
+```card
+{
+  "count": "auto",
+  "type": "list",
+  "data": [
+    {
+      "title": "标题",
+      "desc": "描述",
+      "image": "图片",
+      "link": "链接",
+      "bgColor": "",
+      "textColor": ""
+    },
+    
+  ]
+}
+```
 
 ````
 
 ++- 语法演示
 ```card
-:::card 2
-[标题](链接) ![描述](图片链接)
-[标题](链接) ![描述](图片链接)
-[标题](链接) ![描述](图片链接)
-:::
+{
+  "count": "auto",
+  "type": "list",
+  "data": [
+    {
+      "title": "标题",
+      "desc": "描述",
+      "image": "图片",
+      "link": "链接",
+      "bgColor": "",
+      "textColor": ""
+    },
+    
+  ]
+}
 ```
 +++
 
 ## 无图卡片
 
 ````markdown
-:::card
-[标题](链接)
-:::
+```card
+{
+  "count": 1,
+  "type": "list",
+  "data": [
+     {
+      "title": "标题",
+      "desc": "描述",
+      "image": "",
+      "link": "链接",
+      "bgColor": "",
+      "textColor": ""
+    },
+  ]
+}
+```
 ````
 
 ++- 语法演示
-:::card
-[标题](链接)
-:::
+```card
+{
+  "count": 1,
+  "type": "list",
+  "data": [
+     {
+      "title": "标题",
+      "desc": "描述",
+      "image": "",
+      "link": "链接",
+      "bgColor": "",
+      "textColor": ""
+    },
+  ]
+}
+```
 +++
 
 ## 图文卡片
 
 ````markdown
-:::cardImage 3
-[标题](链接) ![描述](图片链接)
-:::
+```card
+{
+  "count": 3,
+  "type": "image",
+  "data": [
+    {
+      "img": "图片",
+      "link": "链接",
+      "title": "标题",
+      "desc": "描述内容",
+    },
+   
+  ]
+}
+```
 
 ````
 
 ++- 语法演示
-
-:::cardImage 3
-[标题](链接) ![描述](图片链接)
-:::
-
+```card
+{
+  "count": 3,
+  "type": "image",
+  "data": [
+    {
+      "img": "图片",
+      "link": "链接",
+      "title": "标题",
+      "desc": "描述内容",
+    },
+   
+  ]
+}
+```
 +++
 
 # Latex语法支持
