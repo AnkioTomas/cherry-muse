@@ -25,58 +25,40 @@ export default class Card extends MenuBase {
       {
         name: 'normalCard',
         iconName: 'card_membership',
-        onclick: this.bindSubClick.bind(this, {
-          count: 'auto',
-          type: 'list',
-          data: [
-            {
-              title: '标题',
-              desc: '描述',
-              image: '',
-              link: '链接',
-              bgColor: '',
-              textColor: '',
-            },
-          ],
-        }),
+        onclick: this.bindSubClick.bind(
+          this,
+          `
+#list
+![](图片)[标题](链接) 描述
+`,
+        ),
       },
       {
         name: 'noImageCard',
         iconName: 'space_dashboard',
-        onclick: this.bindSubClick.bind(this, {
-          count: 2,
-          type: 'list',
-          data: [
-            {
-              title: '标题',
-              desc: '描述',
-              link: '链接',
-              bgColor: '',
-              textColor: '',
-            },
-          ],
-        }),
+        onclick: this.bindSubClick.bind(
+          this,
+          `
+#list/1
+[标题](链接) 描述
+`,
+        ),
       },
       {
         name: 'imageCard',
         iconName: 'badge',
-        onclick: this.bindSubClick.bind(this, {
-          count: 3,
-          type: 'image',
-          data: [
-            {
-              img: '图片',
-              link: '链接',
-              title: '标题',
-              desc: '描述内容',
-            },
-          ],
-        }),
+        onclick: this.bindSubClick.bind(
+          this,
+          `
+#image/3
+![标题](图片)[查看详情](链接) 描述内容
+`,
+        ),
       },
     ];
   }
 
   onClick(selection, shortKey) {
-    return `\`\`\`card\n${JSON.stringify(shortKey, null, 2)}\n\`\`\`\n`;
+    return `\`\`\`card${shortKey}\`\`\`\n`;
   }
 }

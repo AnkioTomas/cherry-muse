@@ -1,4 +1,3 @@
-
 ::: tip 提示
 此处的语法兼容大多数Markdown编辑器（Typora、Github等）。
 :::
@@ -749,125 +748,28 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 # 卡片
 
 ## 普通卡片
-````markdown
-```card
-{
-  "count": "auto",
-  "type": "list",
-  "data": [
-    {
-      "title": "标题",
-      "desc": "描述",
-      "image": "图片",
-      "link": "链接",
-      "bgColor": "",
-      "textColor": ""
-    },
-    
-  ]
-}
-```
 
-````
-
-++- 语法演示
 ```card
-{
-  "count": "auto",
-  "type": "list",
-  "data": [
-    {
-      "title": "标题",
-      "desc": "描述",
-      "image": "图片",
-      "link": "链接",
-      "bgColor": "",
-      "textColor": ""
-    },
-    
-  ]
-}
+#list
+![](https://example.com/logo.png)[Cherry Editor](https://cherry.editor.com) 新一代Markdown编辑器
+[使用文档](https://docs.cherry.com) 完整的使用说明和API文档
+[在线演示](https://demo.cherry.com) 立即体验编辑器功能
 ```
-+++
 
 ## 无图卡片
-
-````markdown
 ```card
-{
-  "count": 1,
-  "type": "list",
-  "data": [
-     {
-      "title": "标题",
-      "desc": "描述",
-      "image": "",
-      "link": "链接",
-      "bgColor": "",
-      "textColor": ""
-    },
-  ]
-}
+#list/1
+[技术支持](https://support.cherry.com) 获取专业的技术支持服务
+[问题反馈](https://feedback.cherry.com) 提交问题或建议
 ```
-````
-
-++- 语法演示
-```card
-{
-  "count": 1,
-  "type": "list",
-  "data": [
-     {
-      "title": "标题",
-      "desc": "描述",
-      "image": "",
-      "link": "链接",
-      "bgColor": "",
-      "textColor": ""
-    },
-  ]
-}
-```
-+++
 
 ## 图文卡片
-
-````markdown
 ```card
-{
-  "count": 3,
-  "type": "image",
-  "data": [
-    {
-      "img": "图片",
-      "link": "链接",
-      "title": "标题",
-      "desc": "描述内容",
-    },
-   
-  ]
-}
+#image/3
+![产品截图](https://example.com/shot1.jpg)[功能演示](https://demo.cherry.com) 查看核心功能演示
+![界面预览](https://example.com/shot2.jpg)[主题商店](https://themes.cherry.com) 选择你喜欢的界面主题
+![移动端](https://example.com/shot3.jpg)[APP下载](https://app.cherry.com) 获取移动端应用程序
 ```
-
-````
-
-++- 语法演示
-```card
-{
-  "count": 3,
-  "type": "image",
-  "data": [
-    {
-      "img": "图片",
-      "link": "链接",
-      "title": "标题",
-      "desc": "描述内容",
-    },
-   
-  ]
-}
-```
-+++
 
 # Latex语法支持
 

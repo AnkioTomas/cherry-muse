@@ -15,7 +15,6 @@
  * limitations under the License.
  */
 import mergeWith from 'lodash/mergeWith';
-import extraJSON from '../utils/jsonUtils';
 export default class CardCodeEngine {
   static install(cherryOptions, args) {
     mergeWith(cherryOptions, {
@@ -32,28 +31,73 @@ export default class CardCodeEngine {
   }
 
   render(src, sign, $engine, config = {}) {
-    const json = extraJSON(src);
-    let row = json.count;
-    if (row === 'auto') {
-      row = 3;
-      if (json.data.length < row) {
-        row = json.data.length;
+    const parseCardSyntax = (text) => {
+      const lines = text.trim().split('\n');
+      const result = {
+        type: lines[0].startsWith('#image') ? 'image' : 'list',
+        count: 'auto',
+        data: []
+      };
+      
+      // 处理配置行
+      if (lines[0].startsWith('#')) {
+        const [type, count] = lines[0].slice(1).split('/');
+        result.type = type || 'list';
+        result.count = count ? parseInt(count) : 'auto';
+        lines.shift();
       }
-    }
-    if (!row || row > 4 || row < 1) {
-      row = 3; // 默认 3
-    }
 
-    const { type } = json;
-    let listDOM = ``;
-    if (type === 'list') {
-      // 普通卡片列表
-      listDOM = this.getListDOM(json.data, row);
-    } else if (type === 'image') {
-      // 卡片图片列表
-      listDOM = this.getImageDOM(json.data, row);
+      // 解析每行
+      lines.forEach(line => {
+        line = line.trim();
+        if (!line) return;
+
+        // 匹配模式：![alt](image)[title](link) description
+        const regex = /(?:!\[(.*?)\]\((.*?)\))?\s*\[(.*?)\]\((.*?)\)(?:\s+(.*))?/;
+        const match = line.match(regex);
+        if (match) {
+          const [_, imgAlt, imgUrl, title, link, desc] = match;
+          result.data.push({
+            title: title || '',
+            desc: desc || '',
+            image: imgUrl || '',
+            link: link || '',
+            bgColor: '',  // 支持默认值
+            textColor: '' // 支持默认值
+          });
+        }
+      });
+
+      return result;
+    };
+
+    try {
+      const json = parseCardSyntax(src);
+      let row = json.count;
+      if (row === 'auto') {
+        row = 3;
+        if (json.data.length < row) {
+          row = json.data.length;
+        }
+      }
+      if (!row || row > 4 || row < 1) {
+        row = 3; // 默认 3
+      }
+
+      const { type } = json;
+      let listDOM = ``;
+      if (type === 'list') {
+        // 普通卡片列表
+        listDOM = this.getListDOM(json.data, row);
+      } else if (type === 'image') {
+        // 卡片图片列表
+        listDOM = this.getImageDOM(json.data, row);
+      }
+      return `<div class="cherry-card cherry-card-${type}-container">${listDOM}</div>`;
+    } catch (e) {
+      console.warn('Card syntax parse error:', e);
+      return `<div class="cherry-card-error">卡片语法错误，请检查格式</div>`;
     }
-    return `<div class="cherry-card cherry-card-${type}-container">${listDOM}</div>`;
   }
   getRandomColor() {
     const colors = [
