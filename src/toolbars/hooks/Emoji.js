@@ -279,23 +279,23 @@ ${icon}
   searchEmoji(value) {
     const searchResult = [];
     // gfmUnicode.emojis 是一个对象，而不是数组，需要使用 Object.values() 来遍历
-    Object.values(gfmUnicode.emojis).forEach(emojiGroup => {
-      emojiGroup.forEach(emoji => {
+    Object.values(gfmUnicode.emojis).forEach((emojiGroup) => {
+      emojiGroup.forEach((emoji) => {
         // 检查别名
-        if (emoji.a.some(alias => alias.includes(value))) {
+        if (emoji.a.some((alias) => alias.includes(value))) {
           searchResult.push({
             emoji: emoji.e,
             aliases: emoji.a,
-            tags: emoji.t || []
+            tags: emoji.t || [],
           });
           return;
         }
         // 检查标签
-        if ((emoji.t || []).some(tag => tag.includes(value))) {
+        if ((emoji.t || []).some((tag) => tag.includes(value))) {
           searchResult.push({
             emoji: emoji.e,
             aliases: emoji.a,
-            tags: emoji.t || []
+            tags: emoji.t || [],
           });
         }
       });

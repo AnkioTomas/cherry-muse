@@ -44,7 +44,6 @@ export default class CardCodeEngine {
       row = 3; // 默认 3
     }
 
-
     const { type } = json;
     let listDOM = ``;
     if (type === 'list') {
@@ -134,11 +133,7 @@ export default class CardCodeEngine {
   getImageDOM(dataList, row) {
     let listDOM = '';
     dataList.forEach((item) => {
-      let { link = '',
-        img = '',
-        title = '',
-        desc = '',
-      } = item;
+      let { link = '', img = '', title = '', desc = '' } = item;
 
       if (link === '') {
         link = null;

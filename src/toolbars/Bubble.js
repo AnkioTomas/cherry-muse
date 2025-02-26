@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import Toolbar from './Toolbar';
-import Event from "../Event";
+import Event from '../Event';
 /**
  * 在编辑区域选中文本时浮现的bubble工具栏
  */

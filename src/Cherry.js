@@ -323,11 +323,11 @@ export default class Cherry extends CherryStatic {
    * @returns string
    */
   getValue() {
-     try{
-       return this.editor.editor.getValue();
-    }catch (e) {
-       return '';
-     }
+    try {
+      return this.editor.editor.getValue();
+    } catch (e) {
+      return '';
+    }
   }
 
   /**
@@ -643,7 +643,7 @@ export default class Cherry extends CherryStatic {
       const interval = this.options.engine.global.flowSessionContext ? 10 : 50;
       this.timer = setTimeout(() => {
         const markdownText = codemirror.getValue();
-        
+
         // 更新统计信息
         if (this.stats) {
           this.stats.update(markdownText);

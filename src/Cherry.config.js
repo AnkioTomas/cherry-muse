@@ -244,7 +244,7 @@ const defaultConfig = {
     theme: 'default', // depend on codemirror theme name: https://codemirror.net/demo/theme.htm
     // 编辑器的高度，默认100%，如果挂载点存在内联设置的height则以内联样式为主
     height: '100%',
-    showStats: true, 
+    showStats: true,
     // defaultModel 编辑器初始化后的默认模式，一共有三种模式：1、双栏编辑预览模式；2、纯编辑模式；3、预览模式
     // edit&preview: 双栏编辑预览模式
     // editOnly: 纯编辑模式（没有预览，可通过toolbar切换成双栏或预览模式）
