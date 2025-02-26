@@ -15,6 +15,7 @@
     justify-content: space-around;
     width: 100%;
     margin-bottom: 0.5rem;
+
   }
 
   .cherry-emoji-item-btn {
@@ -113,3 +114,10 @@
   }
 }
 
+.theme__dark{
+  .cherry-emoji-header {
+    .material-symbols-outlined {
+      color: var(--text-color);
+    }
+  }
+}
