@@ -750,123 +750,52 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 
 ## 普通卡片
 ````markdown
-```card
-{
-  "count": "auto",
-  "type": "list",
-  "data": [
-    {
-      "title": "标题",
-      "desc": "描述",
-      "image": "图片",
-      "link": "链接",
-      "bgColor": "",
-      "textColor": ""
-    },
-    
-  ]
-}
-```
+:::card 
+[标题](链接) ![描述](图片链接)
+:::
+
 
 ````
 
 ++- 语法演示
 ```card
-{
-  "count": "auto",
-  "type": "list",
-  "data": [
-    {
-      "title": "标题",
-      "desc": "描述",
-      "image": "图片",
-      "link": "链接",
-      "bgColor": "",
-      "textColor": ""
-    },
-    
-  ]
-}
+:::card 2
+[标题](链接) ![描述](图片链接)
+[标题](链接) ![描述](图片链接)
+[标题](链接) ![描述](图片链接)
+:::
 ```
 +++
 
 ## 无图卡片
 
 ````markdown
-```card
-{
-  "count": 1,
-  "type": "list",
-  "data": [
-     {
-      "title": "标题",
-      "desc": "描述",
-      "image": "",
-      "link": "链接",
-      "bgColor": "",
-      "textColor": ""
-    },
-  ]
-}
-```
+:::card
+[标题](链接)
+:::
 ````
 
 ++- 语法演示
-```card
-{
-  "count": 1,
-  "type": "list",
-  "data": [
-     {
-      "title": "标题",
-      "desc": "描述",
-      "image": "",
-      "link": "链接",
-      "bgColor": "",
-      "textColor": ""
-    },
-  ]
-}
-```
+:::card
+[标题](链接)
+:::
 +++
 
 ## 图文卡片
 
 ````markdown
-```card
-{
-  "count": 3,
-  "type": "image",
-  "data": [
-    {
-      "img": "图片",
-      "link": "链接",
-      "title": "标题",
-      "desc": "描述内容",
-    },
-   
-  ]
-}
-```
+:::cardImage 3
+[标题](链接) ![描述](图片链接)
+:::
 
 ````
 
 ++- 语法演示
-```card
-{
-  "count": 3,
-  "type": "image",
-  "data": [
-    {
-      "img": "图片",
-      "link": "链接",
-      "title": "标题",
-      "desc": "描述内容",
-    },
-   
-  ]
-}
-```
+
+:::cardImage 3
+[标题](链接) ![描述](图片链接)
+:::
+
 +++
 
 # Latex语法支持
