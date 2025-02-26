@@ -15,16 +15,7 @@ var help = Cherry.createMenuHook('帮助中心',  {
       }},
   ]
 });
-let config1 = {
-  id:"markdown",
-  toolbars: {
 
-    customMenu: {
-      help: help
-    },
-    toolbarRight: ['fullScreen', '|', 'export', '|','help', '|', 'switchModel'],
-  }
-}
 let config2 = {
   id:"markdown",
 
