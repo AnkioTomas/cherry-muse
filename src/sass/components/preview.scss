@@ -23,6 +23,7 @@
 @use "../core/Mark";
 @use "../core/Badge";
 @use "../core/InlineMath";
+@use "../core/Footnote";
 .cherry-previewer {
   padding: 1.25rem  2rem;
   border-left: 0.125rem solid var(--border-color);

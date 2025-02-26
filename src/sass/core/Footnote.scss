@@ -1,0 +1,21 @@
+.cherry {
+  .footnote:not(a) {
+    .footnote-title {
+      font-size: 1.25rem;
+      margin-top: -2.375rem;
+      background-color: var(--bg-color);
+      width: 3.75rem;
+      margin-bottom: 1rem;
+    }
+
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 3.125rem;
+
+    .one-footnote {
+      color: var(--text-color);
+      margin-bottom:1rem;
+      border-bottom: 1px dotted var(--border-color);
+    }
+  }
+}
