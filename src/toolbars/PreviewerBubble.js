@@ -240,8 +240,15 @@ export default class PreviewerBubble {
       return;
     }
 
-    // 编辑draw.io不受enablePreviewerBubble配置的影响
-
+    // 点击展开代码块操作
+    if (target.className.indexOf('expand-btn') !== -1) {
+      const expandBtnDom = this.$getClosestNode(target, 'DIV');
+      expandBtnDom.parentNode.parentNode.classList.remove('cherry-code-unExpand');
+      expandBtnDom.parentNode.parentNode.classList.add('cherry-code-expand');
+      if (this.bubbleHandler?.hover?.unExpandDom) {
+        this.bubbleHandler.hover.unExpandDom.classList.remove('hidden');
+      }
+    }
     if (!this.enablePreviewerBubble) {
       return;
     }

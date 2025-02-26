@@ -443,6 +443,7 @@ export default class CodeBlock extends ParagraphBase {
     this.copyCode = config.copyCode; // 是否显示“复制”按钮
     this.editCode = config.editCode; // 是否显示“编辑”按钮
     this.cdn = config.cdn; // 是否使用cdn
+    this.expandCode = config.expandCode; // 是否支持展开代码块
     Prism.plugins.autoloader.languages_path = this.cdn;
     this.selfClosing = config.selfClosing; // 自动闭合，为true时，当md中有奇数个```时，会自动在md末尾追加一个```
 
@@ -593,17 +594,29 @@ export default class CodeBlock extends ParagraphBase {
         );
       }
     }
+    const needUnExpand = this.expandCode && $code.match(/\n/g)?.length > 10; // 是否需要收起代码块
     cacheCode = `<div
         data-sign="${sign}"
         data-type="codeBlock"
         data-lines="${lines}" 
         data-edit-code="${this.editCode}" 
         data-copy-code="${this.copyCode}"
+           data-expand-code="${this.expandCode}"
         data-lang="${$lang}"
-        class="code-container-${sign}"
+         style="position:relative"
+        class="code-container-${sign} ${needUnExpand ? 'cherry-code-unExpand' : 'cherry-code-expand'}"
       >
+   
       <pre class="language-${lang} code-${sign}">${this.wrapCode(cacheCode, lang)}</pre>
-    </div>`;
+   `;
+    if (needUnExpand) {
+      cacheCode += `<div class="cherry-mask-code-block">
+        <div class="expand-btn">
+          <span class="expand-btn material-symbols-outlined">keyboard_arrow_down</span>
+        </div>
+      </div>`;
+    }
+    cacheCode += '</div>';
     return cacheCode;
   }
 

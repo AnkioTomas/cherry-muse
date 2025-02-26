@@ -159,6 +159,7 @@ const defaultConfig = {
         lineNumber: true, // 默认显示行号
         copyCode: true, // 是否显示“复制”按钮
         editCode: true, // 是否显示“编辑”按钮
+        expandCode: true, // 是否显示“展开”按钮
         selfClosing: true, // 自动闭合，为true时，当输入```代码块语法时，会自动在末尾追加```
         cdn: 'https://unpkg.com/prismjs@1.29.0/components/', // 代码块的cdn地址
         customRenderer: {
@@ -309,7 +310,7 @@ const defaultConfig = {
       'redo',
       'undo',
     ],
-    toolbarRight: ['fullScreen', '|', 'export', '|', 'switchModel'],
+    toolbarRight: ['fullScreen', '|', 'export'],
     bubble: ['bold', 'italic', 'header', 'underline', 'strikethrough', 'sub', 'sup', 'quote', '|', 'size', 'color'], // array or false
     // 快捷键配置，如果配置为空，则使用toolbar的配置
     shortcutKey: {
