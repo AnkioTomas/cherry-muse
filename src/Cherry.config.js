@@ -299,7 +299,7 @@ const defaultConfig = {
           'detail',
           'lineTable',
           'barTable',
-          'emoji',
+          'iframe',
         ],
       },
       'graph',

@@ -65,6 +65,7 @@ import ECharts from './hooks/ECharts';
 import Card from '@/toolbars/hooks/Card';
 import Formula from '@/toolbars/hooks/Formula';
 import Emoji from '@/toolbars/hooks/Emoji';
+import Iframe from '@/toolbars/hooks/Iframe';
 // 定义默认支持的工具栏
 // 目前不支持按需动态加载
 // 如果对CherryMarkdown构建后的文件大小有比较严格的要求，可以根据实际情况删减hook
@@ -116,6 +117,7 @@ const HookList = {
   card: Card,
   formula: Formula,
   emoji: Emoji,
+  iframe: Iframe,
 };
 
 export default class HookCenter {

@@ -165,4 +165,6 @@ export default {
   wordParagraphs: '段落',
   wordWords: '字数',
   wordCharacters: '字符',
+  iframe: '嵌入网页',
+  emoji: `表情`,
 };
