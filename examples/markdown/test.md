@@ -5,20 +5,6 @@
 
 # 标题
 
-```markdown
-# heading 1
-## heading 2
-### heading 3
-#### heading 4
-##### heading 5
-###### heading 6
-Heading level 1
-===============
-Heading level 2
----------------
-```
-
-++- 语法演示
 # heading 1
 
 ## heading 2
@@ -35,206 +21,95 @@ Heading level 1
 ===============
 Heading level 2
 ---------------
-+++
 
 # 斜体
 
-```markdown
 _斜体_
 *斜体*
-```
-
-++- 语法演示
-_斜体_
-*斜体*
-+++
 
 # 粗体
 
-```markdown
 __粗体__
 **粗体**
-```
-
-++- 语法演示
-__粗体__
-**粗体**
-+++
 
 # 粗体和斜体
 
-```markdown
 ___粗体和斜体___
 ***粗体和斜体***
 __*粗体和斜体*__
 _**粗体和斜体**_
 **_粗体和斜体_**
-```
 
-++- 语法演示
-___粗体和斜体___
-***粗体和斜体***
-__*粗体和斜体*__
-_**粗体和斜体**_
-**_粗体和斜体_**
-+++
 
 ## 引用
 
-```markdown
 > 引用文本
 >> 嵌套引用
-```
-
-++- 语法演示
-> 引用文本
->> 嵌套引用
-> >
-+++
 
 # 列表
 
 ## 无序列表
 
-```markdown
 - 文本一
 - 文本二
 - 文本三
-```
-
-++- 语法演示
-- 文本一
-- 文本二
-- 文本三
-
-+++
 
 ## 有序列表
 
-```markdown
 1. 文本一
 2. 文本二
 3. 文本三
-```
-
-++- 语法演示
-
-1. 文本一
-2. 文本二
-3. 文本三
-
-+++
 
 # 代码块
-
-````markdown
-```html
-<html>
-   <head>
-     <title>Test</title>
-   </head>
-   </html>
-```
-````
-
-++- 语法演示
 
 ```html
 <html>
 <head>
-    <title>Test</title>
+  <title>Test</title>
 </head>
+</html>
 ```
 
-+++
+
 
 # 行内代码
 
-```markdown
 `test`
-```
-
-++- 语法演示
-`test`
-+++
 
 # 转义反引号
 
-```markdown
 ``Use `code` in your Markdown file.``
-```
-
-++- 语法演示
-``Use `code` in your Markdown file.``
-+++
 
 # 图片
 
-```markdown
-![profile.png](https://wiki.ankio.net/file/upload_6574546916e75.png)
-```
-
-++- 语法演示
-![profile.png](https://wiki.ankio.net/file/upload_6574546916e75.png)
-+++
+![profile.png](https://dummyimage.com/640x4:3/)
 
 # 水平线
-
-```markdown
-****
-----
-____
-```
-
-
-++- 语法演示
 
 ****
 
 ----
 
 ___
-+++
 
 
 # 链接
 
 ## 添加标题
 
-```markdown
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
-```
-
-++- 语法演示
-My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
-+++
 
 ## URL
 
-```markdown
 <https://www.markdownguide.org>
 <fake@example.com>
-```
-
-++- 语法演示
-<https://www.markdownguide.org>
-<fake@example.com>
-+++
 
 ### 格式化链接
 
-```markdown
 I love supporting the **[EFF](https://eff.org)**.
 This is the *[Markdown Guide](https://www.markdownguide.org)*.
 See the section on [`code`](#code).
 
-```
-
-++- 语法演示
-I love supporting the **[EFF](https://eff.org)**.
-This is the *[Markdown Guide](https://www.markdownguide.org)*.
-See the section on [`code`](#code).
-+++
 
 
 ::: tip 提示
@@ -243,143 +118,67 @@ See the section on [`code`](#code).
 # 表格
 ## 常规表格
 
-```markdown
 | Syntax      | Description |
 | ----------- | ----------- |
 | Header      | Title       |
 | Paragraph   | Text        |
-```
-
-++- 语法演示
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
-+++
 
 ## 对齐
-```markdown
+
 | Syntax      | Description | Test Text     |
 | :---        |    :----:   |          ---: |
 | Header      | Title       | Here's this   |
 | Paragraph   | Text        | And more      |
 
-```
-++- 语法演示
-| Syntax | Description | Test Text |
-| :--- |    :----:   | ---: |
-| Header | Title | Here's this |
-| Paragraph | Text | And more |
-+++
-
 # 删除线
 
-```markdown
 ~~The world is flat.~~ We now know that the world is round.
-```
-
-++- 语法演示
-~~The world is flat.~~ We now know that the world is round.
-+++
 
 # 任务列表
 
-```markdown
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
-```
 
-++- 语法演示
-
-- [ ] Write the press release
-- [x] Update the website
-- [ ] Contact the media
-
-+++
 
 # 表情符号
 
-```markdown
 Gone camping! :tent: Be back soon.
 
-That is so funny! :joy:
-```
-
-++- 语法演示
-Gone camping! :tent: Be back soon.
-That is so funny! :joy:
-+++
+That is so funny! :joy:is so funny! :joy:
 
 # 突出显示
 
-```markdown
 I need to highlight these ==very important words==.
 I need to highlight these <mark>very important words</mark>.
-```
-
-++- 语法演示
-I need to highlight these ==very important words==.
-I need to highlight these <mark>very important words</mark>.
-+++
 
 # 下标
 
-```markdown
 H<sub>2</sub>O
 H^^2^^O
-```
-
-++- 语法演示
-H<sub>2</sub>O
-H^^2^^O
-+++
 
 # 上标
 
-```markdown
 X<sup>2</sup>
 X^2^
-```
-
-++- 语法演示
-X<sup>2</sup>
-X^2^
-+++
 
 # 下划线
 
-```markdown
 Some of these words <ins>will be underlined</ins>.
 Some of these words /will/ be underlined.
-```
-
-++- 语法演示
-Some of these words <ins>will be underlined</ins>.
-Some of these words /will/ be underlined/.
-+++
 
 # 中心
 
-```markdown
 <center>This text is centered.</center>
-```
-
-++- 语法演示
-<center>This text is centered.</center>
-+++
 
 # 颜色
 
-```markdown
 <font color="red">This text is red!</font>
-```
 
-++- 语法演示
-<font color="red">This text is red!</font>
-+++
+# 字体大小
 
-
+鞋子 !32 特大号!
+# !大小 文本!
 
 ::: warning 警告
 此处的语法仅 Cherry Muse 或 Cherry Markdown 支持。
@@ -387,76 +186,44 @@ Some of these words /will/ be underlined/.
 
 # 目录
 
-```markdown
 [[toc]]
-```
-++- 语法演示
-[[toc]]
-+++
 
 # 字体增强
 ## 字体大小
-```markdown
+
 鞋子 !32 特大号!
-# !大小 文本!
-```
-++- 语法演示
-鞋子 !32 特大号!
-+++
+>  !大小 文本!
+
+
 ## 字体颜色
 
-```markdown
 !!#ff0000 字体颜色!!
 !!!#f9cb9c 背景颜色!!!
 [!!#ffffff !!!#000000 黑底白字超链接!!!!!](http://www.qq.com)
-```
-++- 语法演示
-!!#ff0000 字体颜色!!
-!!!#f9cb9c 背景颜色!!!
-[!!#ffffff !!!#000000 黑底白字超链接!!!!!](http://www.qq.com)
-+++
+
 
 # 超链接增强
 ## 自动识别
-```markdown
-https://www.qq.com?param=中文
-```
-++- 语法演示
-https://www.qq.com?param=中文
-+++
+
+https://example.com?param=中文
+
 
 ## 引用链接
 
-```markdown
+
 这是一个[引用一个链接]
-[引用一个链接]: https://www.qq.com
-```
-++- 语法演示
-这是一个[引用一个链接]
-[引用一个链接]: https://www.qq.com
-+++
+[引用一个链接]: https://example.com
+
 
 # 图像增强
 
 ## 设置大小
 
-```markdown
-![profile.png#189px #189px](https://wiki.ankio.net/file/upload_6574546916e75.png)
-```
-
-++- 语法演示
-![profile.png#189px #189px](https://wiki.ankio.net/file/upload_6574546916e75.png)
-+++
+![profile.png#189px #189px](https://dummyimage.com/640x4:3/)
 
 ## 设置相对大小&绝对大小
 
-```markdown
-![profile.png#10%#50px](https://wiki.ankio.net/file/upload_6574546916e75.png)
-```
-
-++- 语法演示
-![profile.png#10%#50px](https://wiki.ankio.net/file/upload_6574546916e75.png)
-+++
+![profile.png#10%#50px](https://dummyimage.com/640x4:3/)
 
 ## 设置图片对齐方式
 
@@ -478,64 +245,36 @@ https://www.qq.com?param=中文
 
 ### 左对齐+边框
 
-```markdown
-![profile.png#auto#100px#left#border](https://wiki.ankio.net/file/upload_6574546916e75.png)
-```
-
-++- 语法演示
-![profile.png#auto#100px#left#border](https://wiki.ankio.net/file/upload_6574546916e75.png)
-+++
+![profile.png#auto#100px#left#border](https://dummyimage.com/640x4:3/)
 
 ### 居中+边框+阴影
 
-```markdown
-![profile.png#auto#100px#center#B#shadow](https://wiki.ankio.net/file/upload_6574546916e75.png)
-```
+![profile.png#auto#100px#center#B#shadow](https://dummyimage.com/640x4:3/)
 
-++- 语法演示
-![profile.png#auto#100px#center#B#shadow](https://wiki.ankio.net/file/upload_6574546916e75.png)
-+++
 
 ### 右对齐+边框+阴影+圆角
 
-```markdown
-![profile.png#auto#100px#right#B#S#radius](https://wiki.ankio.net/file/upload_6574546916e75.png)
-```
 
-++- 语法演示
-![profile.png#auto#100px#right#B#S#radius](https://wiki.ankio.net/file/upload_6574546916e75.png)
-+++
+
+![profile.png#auto#100px#right#B#S#radius](https://dummyimage.com/640x4:3/)
+
 
 
 ### 浮动左对齐+边框+阴影+圆角
 
-```markdown
-![profile.png#auto#100px#float-left#B#S#R](https://wiki.ankio.net/file/upload_6574546916e75.png)
+![profile.png#auto#100px#float-left#B#S#R](https://dummyimage.com/640x4:3/)
 开心也是一天，不开心也是一天
-```
-
-++- 语法演示
-![profile.png#auto#100px#float-left#B#S#R](https://wiki.ankio.net/file/upload_6574546916e75.png)
-开心也是一天，不开心也是一天
-+++
 
 
-# 表格增强  [[Pro:tip,top]]
 
-这是 Cherry Markdown 中未开放的功能。
+
+
+# 表格增强
+
+
 
 ##  折线图表格
 
-```markdown
-| :line: {x,y} | a | b | c |
-| :-: | :-: | :-: | :-: |
-| x | 1 | 2 | 3 |
-| y | 2 | 4 | 6 |
-| z | 7 | 5 | 3 |
-```
-
-++- 语法演示
-
 
 | :line: {x,y} | a | b | c |
 | :-: | :-: | :-: | :-: |
@@ -544,36 +283,21 @@ https://www.qq.com?param=中文
 | z | 7 | 5 | 3 |
 
 
-+++
 
 ##  柱状图表格
 
-```markdown
-| :bar: {x,y} | a | b | c |
-| :-: | :-: | :-: | :-: |
-| x | 1 | 2 | 3 |
-| y | 2 | 4 | 6 |
-| z | 7 | 5 | 3 |
-```
-
-++- 语法演示
-
 
 | :bar: {x,y} | a | b | c |
 | :-: | :-: | :-: | :-: |
 | x | 1 | 2 | 3 |
 | y | 2 | 4 | 6 |
 | z | 7 | 5 | 3 |
-
-
-+++
 
 
 # 面板
 
 面板功能可以用来标注重点提示的信息。
 
-```markdown
 ::: info 标题
 内容
 :::
@@ -583,7 +307,7 @@ https://www.qq.com?param=中文
 ::: danger 标题
 内容
 :::
-::: success 标题
+::: tip 标题
 内容
 :::
 ::: left 标题
@@ -595,45 +319,13 @@ https://www.qq.com?param=中文
 ::: right 标题
 内容
 :::
-```
 
-语法演示
 
-::: info 标题
-内容
-:::
-::: warning 标题
-内容
-:::
-::: danger 标题
-内容
-:::
-::: success 标题
-内容
-:::
-::: left 标题
-内容
-:::
-::: center 标题
-内容
-:::
-::: right 标题
-内容
-:::
+
 
 # 手风琴（详细块）
 
-```markdown
-++- 点击展开更多
-内容
-++- 默认展开
-内容
-++ 默认收起
-内容
-+++
-```
 
-语法演示
 ++- 点击展开更多
 内容
 ++- 默认展开
@@ -641,6 +333,7 @@ https://www.qq.com?param=中文
 ++ 默认收起
 内容
 +++
+
 
 
 ++- 默认展开
@@ -654,82 +347,47 @@ https://www.qq.com?param=中文
 +++
 
 # 待办清单
-```
-- [x] Item 1
-    - [x] Item 1.1
-- [x] Item 2
-```
-
-++- 语法演示
 
 - [x] Item 1
   - [x] Item 1.1
 - [x] Item 2
 
-+++
+
 
 # 音频
 
-```
-!audio[描述](链接)
-```
 
-++- 语法演示
+!audio[描述](http://music.163.com/song/media/outer/url?id=29095562.mp3)
 
-!audio[描述](链接)
-
-+++
 
 # 视频
 
-```
-!video[不带封面演示视频](链接)
-!video[带封面演示视频](链接){poster=https://wiki.ankio.net/file/upload_6574546916e75.png}
-```
 
-++- 语法演示
+!video[不带封面演示视频](https://tencent.github.io/cherry-markdown/examples/images/demo.mp4)
+!video[带封面演示视频](https://tencent.github.io/cherry-markdown/examples/images/demo.mp4){poster=https://dummyimage.com/640x4:3/}
 
-!video[不带封面演示视频](链接)
-!video[带封面演示视频](链接){poster=https://wiki.ankio.net/file/upload_6574546916e75.png}
 
-+++
 
 # 文件
 
-```markdown
-!file[文件名|类型|密码](链接)
-```
-++- 语法演示
 
-!file[文件名|类型|密码](链接)
+!file[文件名|类型|密码](https://tencent.github.io/cherry-markdown/examples/images/demo.mp4)
 
-!file[文件名|mp3](链接)
+!file[文件名|mp3](https://tencent.github.io/cherry-markdown/examples/images/demo.mp4)
 
-!file[文件名|mp4](链接)
+!file[文件名|mp4](https://tencent.github.io/cherry-markdown/examples/images/demo.mp4)
 
-+++
+
 
 # 徽章
 
-
-
-```markdown
 [[内容:tip,top]]
 [[内容:info,top]]
 [[内容:warning,top]]
 [[内容:danger,top]]
 [[内容:note,top]]
 [[内容:#000000|bottom]]
-```
 
-++- 语法演示
-[[内容:tip,top]]
-[[内容:info,top]]
-[[内容:warning,top]]
-[[内容:danger,top]]
-[[内容:note,top]]
-[[内容:#000000|bottom]]
-+++
 
 # Emoji表情
 
@@ -737,13 +395,15 @@ https://www.qq.com?param=中文
 Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 :::
 
-```markdown
 :+1:
-```
 
-++- 语法演示
-:+1:
-+++
+# Iframe嵌入
+
+<!-- 原生iframe示例 -->
+<iframe src="https://example.com" width="100%" height="400" style="border:none; margin: 1em 0;"></iframe>
+
+<!-- Cherry简写语法示例 -->
+@@https://example.com
 
 # 卡片
 
@@ -751,40 +411,30 @@ Cherry Muse不能完全支持所有的Emoji（未经过完全测试）。
 
 ```card
 #list
-![](https://example.com/logo.png)[Cherry Editor](https://cherry.editor.com) 新一代Markdown编辑器
-[使用文档](https://docs.cherry.com) 完整的使用说明和API文档
-[在线演示](https://demo.cherry.com) 立即体验编辑器功能
+![](https://dummyimage.com/640x4:3/)[Cherry Editor](https://example.com) 新一代Markdown编辑器
+[使用文档](https://example.com) 完整的使用说明和API文档
+[在线演示](https://example.com) 立即体验编辑器功能
 ```
 
 ## 无图卡片
 ```card
 #list/1
-[技术支持](https://support.cherry.com) 获取专业的技术支持服务
-[问题反馈](https://feedback.cherry.com) 提交问题或建议
+[技术支持](https://example.com) 获取专业的技术支持服务
+[问题反馈](https://example.com) 提交问题或建议
 ```
 
 ## 图文卡片
 ```card
 #image/3
-![产品截图](https://example.com/shot1.jpg)[功能演示](https://demo.cherry.com) 查看核心功能演示
-![界面预览](https://example.com/shot2.jpg)[主题商店](https://themes.cherry.com) 选择你喜欢的界面主题
-![移动端](https://example.com/shot3.jpg)[APP下载](https://app.cherry.com) 获取移动端应用程序
+![产品截图](https://dummyimage.com/640x4:3/)[功能演示](https://example.com) 查看核心功能演示
+![界面预览](https://dummyimage.com/640x4:3/)[主题商店](https://example.com) 选择你喜欢的界面主题
+![移动端](https://dummyimage.com/640x4:3/)[APP下载](https://example.com) 获取移动端应用程序
 ```
 
 # Latex语法支持
 
-详细参考：[latexlive](https://www.latexlive.com/)
+> 详细参考：[latexlive](https://www.latexlive.com/)
 
-```markdown
-$x^2$
-
-$$
-x^2
-$$
-
-```
-
-++- 语法演示
 行内：$x^2$
 
 Latex语法块：
@@ -792,65 +442,19 @@ $$
 x^2
 $$
 
-+++
 
 # Mermaid语法支持
 
-详细参考：[mermaid官网](https://mermaid.js.org/syntax/flowchart.html)
+> 详细参考：[mermaid官网](https://mermaid.js.org/syntax/flowchart.html)
 
-````markdown
 ```mermaid
 flowchart TD
     Start --> Stop
 ```
-````
-
-++- 语法演示
-```mermaid
-flowchart TD
-    Start --> Stop
-```
-+++
-
 
 # Echarts语法支持
 
-详细参考：[echarts官网](https://echarts.apache.org/handbook/zh/concepts/chart-size) ，只需提供`options`选项即可。
-
-````markdown
-```echarts
-{
-  "xAxis": {
-    "data": [
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat",
-      "Sun"
-    ]
-  },
-  "yAxis": {},
-  "series": [
-    {
-      "type": "bar",
-      "data": [
-        23,
-        24,
-        18,
-        25,
-        27,
-        28,
-        25
-      ]
-    }
-  ]
-}
-```
-````
-
-++- 语法演示
+> 详细参考：[echarts官网](https://echarts.apache.org/handbook/zh/concepts/chart-size) ，只需提供`options`选项即可。
 
 ```echarts
 {
@@ -883,42 +487,12 @@ flowchart TD
 }
 ```
 
-+++
 
 # 脚注
 
-```markdown
+
 此处是个[^脚注标题]
 [^脚注标题]: 脚注内容…
-```
-
-++- 语法演示
-此处是个[^脚注标题]
-[^脚注标题]: 脚注内容…
-+++
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
