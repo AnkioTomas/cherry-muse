@@ -19,11 +19,13 @@
       display: inline-block;
       height: 2.25rem;
       line-height: 2.25rem;
-      font-size: 0.875rem;
+      font-size: 0.775rem;
       font-style: normal;
       cursor: pointer;
       box-sizing: border-box;
-
+      white-space: nowrap;       /* 不换行 */
+      overflow: hidden;          /* 超出隐藏 */
+      text-overflow: ellipsis;
       &:hover {
         background: var(--hover-bg-color);
         color: var(--hover-text-color);

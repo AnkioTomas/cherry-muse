@@ -272,6 +272,7 @@ const defaultConfig = {
       {
         strikethrough: ['strikethrough', 'underline', 'sub', 'sup', 'ruby', 'bold', 'italic', 'quote'],
       },
+      'togglePreview',
       'size',
       '|',
       'color',
@@ -305,7 +306,6 @@ const defaultConfig = {
       'graph',
       'echarts',
       'card',
-      'togglePreview',
 
       'redo',
       'undo',
