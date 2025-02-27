@@ -16,11 +16,13 @@
 import Cherry from './index.core';
 import MermaidCodeEngine from '@/addons/cherry-code-block-mermaid-plugin';
 import EChartsCodeEngine from '@/addons/cherry-code-block-echarts-plugin';
+import CardCodeEngine from '@/addons/cherry-code-block-card-plugin';
 
 Cherry.usePlugin(MermaidCodeEngine, {
   theme: 'default',
   sequence: { useMaxWidth: false },
 });
 Cherry.usePlugin(EChartsCodeEngine, {});
+Cherry.usePlugin(CardCodeEngine, {});
 export * from './index.core';
 export default Cherry;
