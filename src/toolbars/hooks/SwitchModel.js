@@ -23,35 +23,56 @@ import Event from '@/Event';
 export default class SwitchModel extends MenuBase {
   constructor($cherry) {
     super($cherry);
-    this.setName('switchPreview');
+    this.setName('switchPreview', 'preview');
     this.instanceId = $cherry.instanceId;
     this.attachEventListeners();
+    this.model = $cherry.model;
+    this.prevModel = this.model;
+  }
+
+  get isHidden() {
+    return this.$previewerHidden;
+  }
+
+  set isHidden(state) {
+    // 节流
+    if (state === this.$previewerHidden) {
+      return;
+    }
+    const icon = this.dom.querySelector('i');
+    // 隐藏预览，按钮状态为打开预览
+    if (state) {
+      icon.innerText = 'preview';
+      icon.title = this.locale.switchPreview;
+    } else {
+      icon.innerText = 'preview_off';
+      icon.title = this.locale.switchEdit;
+    }
+
+    this.$previewerHidden = state;
   }
 
   attachEventListeners() {
-    Event.on(this.instanceId, Event.Events.toolbarHide, () => {
-      // 当收到工具栏隐藏事件后，修改工具栏的内容为切换到编辑模式的内容
-      this.dom.textContent = this.locale.switchEdit;
-    });
-    Event.on(this.instanceId, Event.Events.toolbarShow, () => {
-      // 当收到工具栏显示事件后，修改工具栏的内容为切换到预览模式的内容
-      this.dom.textContent = this.locale.switchPreview;
+    Event.on(this.instanceId, Event.Events.modelChange, ([model]) => {
+      this.prevModel = this.model;
+      this.model = model;
     });
   }
 
   onClick() {
-    if (this.editor.previewer.isPreviewerHidden()) {
-      // 从编辑模式切换到预览模式
-      this.editor.previewer.previewOnly();
-      const toolbar = this.dom.parentElement.parentElement;
-      toolbar.classList.add('preview-only');
-      this.dom.textContent = this.locale.switchEdit;
+    // const toolbar = this.dom.parentElement.parentElement;
+    if (this.model !== 'previewOnly') {
+      this.$cherry.switchModel('previewOnly', true);
+      // toolbar.classList.add('preview-only');
+      this.isHidden = false;
     } else {
-      // 从预览模式切换到编辑模式
-      this.editor.previewer.editOnly(true);
-      const toolbar = this.dom.parentElement.parentElement;
-      toolbar.classList.remove('preview-only');
-      this.dom.textContent = this.locale.switchPreview;
+      // toolbar.classList.remove('preview-only');
+      if (this.prevModel === 'edit&preview') {
+        this.$cherry.switchModel('edit&preview', true);
+      } else if (this.prevModel === 'editOnly') {
+        this.$cherry.switchModel('editOnly', true);
+      }
+      this.isHidden = true;
     }
   }
 }

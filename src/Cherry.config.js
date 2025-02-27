@@ -269,10 +269,12 @@ const defaultConfig = {
     showToolbar: true, // false：不展示顶部工具栏； true：展示工具栏; toolbars.showToolbar=false 与 toolbars.toolbar=false 等效
     toc: true,
     toolbar: [
+      'togglePreview',
+      'switchModel',
       {
         strikethrough: ['strikethrough', 'underline', 'sub', 'sup', 'ruby', 'bold', 'italic', 'quote'],
       },
-      'togglePreview',
+
       'size',
       '|',
       'color',
@@ -403,6 +405,6 @@ const defaultConfig = {
   autoScrollByHashAfterInit: true,
 };
 if (window.outerWidth <= 600) {
-  defaultConfig.toolbars.toolbar = ['togglePreview'];
+  defaultConfig.toolbars.toolbar = ['switchModel'];
 }
 export default cloneDeep(defaultConfig);

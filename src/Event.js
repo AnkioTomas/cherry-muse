@@ -30,6 +30,7 @@ export default new (class Event {
     editorOpen: 'editorOpen',
     toolbarHide: 'toolbarHide',
     toolbarShow: 'toolbarShow',
+    modelChange: 'modelChange',
     cleanAllSubMenus: 'cleanAllSubMenus', // 清除所有子菜单弹窗
     afterChange: 'afterChange', // 编辑器内容变化
     afterInit: 'afterInit', // 编辑器初始化完成
