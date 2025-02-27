@@ -124,6 +124,8 @@ export default class Panel extends ParagraphBase {
         return 'center';
       case 'l':
         return 'left';
+      case 't':
+        return 'tip';
       default:
         return $item;
     }
@@ -146,7 +148,7 @@ export default class Panel extends ParagraphBase {
           return 'panel-container';
         }
 
-        const rule = /\s(important|info|warning|danger|note|center|left|right)/;
+        const rule = /\s(important|info|warning|danger|note|center|left|right|tip)/;
 
         // 尝试匹配规则
         if (this.inContainer && stream.match(rule)) {
