@@ -20,7 +20,7 @@ Cherry Muse 是基于腾讯开源的[CherryMarkdown](https://github.com/Tencent/
   - 增加`徽章`语法；
   - 移除plantuml语法；
   - checklist由图标换成input；
-  - 
+  - 增加iframe渲染语法；
 - 功能：
   - 重新规划联想功能；
   - 新增Emoji自动联想；
@@ -36,9 +36,11 @@ Cherry Muse 是基于腾讯开源的[CherryMarkdown](https://github.com/Tencent/
   - 所有需要前端渲染的图标，默认均使用API调用；
   - 移除FloatMenu；
   - 字数统计功能改成左下角显示；
+  - 重新优化编辑器预览切换功能，更自然；
 - 事件：
   - 新增编辑器渲染完成事件；
   - 新增二级菜单打开事件；
+  - 新增编辑器模式修改事件；
 - 代码：
   - 移除typescript相关内容；
   - 删除所有的测试用例；
