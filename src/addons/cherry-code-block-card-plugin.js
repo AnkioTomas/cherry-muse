@@ -177,13 +177,13 @@ export default class CardCodeEngine {
   getImageDOM(dataList, row) {
     let listDOM = '';
     dataList.forEach((item) => {
-      let { link = '', img = '', title = '', desc = '' } = item;
+      let { link = '', image = '', title = '', desc = '' } = item;
 
       if (link === '') {
         link = null;
       }
-      if (img === '') {
-        img = '';
+      if (image === '') {
+        image = '';
       }
       if (title === '') {
         title = '';
@@ -196,7 +196,7 @@ export default class CardCodeEngine {
       <div class="cherry-card-item ${row ? `cherry-card-row-${row}` : ''}" >
         <a href="${link}" target="_blank">
           <div class="cherry-card-box-img">
-              <img src="${img}" class="cherry-card-image" style="object-fit: cover" alt="">
+              <img src="${image}" class="cherry-card-image" style="object-fit: cover" alt="">
           </div>
           <div class="cherry-card-box-info">
               <p class="cherry-card-title">${title}</p>
