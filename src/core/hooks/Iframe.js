@@ -42,7 +42,6 @@ export default class Iframe extends SyntaxBase {
       loading="lazy"
       allow="fullscreen"
     ></iframe>`;
-      console.warn(iframe);
       return iframe;
     });
   }
