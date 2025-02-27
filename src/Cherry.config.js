@@ -112,7 +112,7 @@ const defaultConfig = {
        *    - 启用iframe、script等标签后，会产生xss注入，请根据实际场景判断是否需要启用
        *    - 一般编辑权限可控的场景（如api文档系统）可以允许iframe、script等标签
        */
-      htmlWhiteList: '',
+      htmlWhiteList: 'iframe',
       /**
        * 适配流式会话的场景，开启后将具备以下特性：
        * 1. 代码块自动闭合，相当于强制 `engine.syntax.codeBlock.selfClosing=true`

@@ -48,6 +48,7 @@ import Detail from './hooks/Detail';
 import Mark from '@/core/hooks/Mark';
 import Badge from '@/core/hooks/Badge';
 import Suggester from '@/core/hooks/Suggester';
+import Iframe from '@/core/hooks/Iframe';
 
 /**
  * 引擎各语法的配置
@@ -57,6 +58,7 @@ const hooksConfig = [
   // 段落级 Hook
   // 引擎会按当前排序顺序执行beforeMake、makeHtml方法
   // 引擎会按当前排序逆序执行afterMake方法
+
   CodeBlock,
   InlineCode,
   MathBlock,
@@ -74,8 +76,9 @@ const hooksConfig = [
   List,
   Detail,
   Panel,
-  Paragraph, // 普通段落
 
+  Paragraph, // 普通段落
+  Iframe,
   // 行内Hook
   // 引擎会按当前顺序执行makeHtml方法
   Emoji,

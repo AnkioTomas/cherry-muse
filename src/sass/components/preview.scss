@@ -24,6 +24,7 @@
 @use "../core/Badge";
 @use "../core/InlineMath";
 @use "../core/Footnote";
+@use "../core/Iframe";
 .cherry-previewer {
   padding: 1.25rem  2rem;
   border-left: 0.125rem solid var(--border-color);
