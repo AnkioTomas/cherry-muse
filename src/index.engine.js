@@ -17,7 +17,6 @@ import CherryEngine from './index.engine.core';
 import MermaidCodeEngine from './addons/cherry-code-block-mermaid-plugin';
 import Cherry from '@/index.core';
 import EChartsCodeEngine from '@/addons/cherry-code-block-echarts-plugin';
-import CardCodeEngine from '@/addons/cherry-code-block-card-plugin';
 
 CherryEngine.usePlugin(MermaidCodeEngine, {
   theme: 'default',
@@ -25,6 +24,5 @@ CherryEngine.usePlugin(MermaidCodeEngine, {
 });
 
 Cherry.usePlugin(EChartsCodeEngine, {});
-Cherry.usePlugin(CardCodeEngine, {});
 export * from './index.engine.core';
 export default CherryEngine;
