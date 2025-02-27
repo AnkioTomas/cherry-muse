@@ -24,7 +24,7 @@ export default class TogglePreview extends MenuBase {
 
   constructor($cherry) {
     super($cherry);
-    this.setName('previewClose', 'preview');
+    this.setName('previewClose', 'splitscreen_right');
     this.instanceId = $cherry.instanceId;
     this.updateMarkdown = false;
     this.attachEventListeners();
@@ -54,10 +54,10 @@ export default class TogglePreview extends MenuBase {
     const icon = this.dom.querySelector('i');
     // 隐藏预览，按钮状态为打开预览
     if (state) {
-      icon.innerText = 'preview';
+      icon.innerText = 'splitscreen_right';
       icon.title = this.locale.togglePreview;
     } else {
-      icon.innerText = 'preview_off';
+      icon.innerText = 'web_asset';
       icon.title = this.locale.previewClose;
     }
 
@@ -69,10 +69,10 @@ export default class TogglePreview extends MenuBase {
    */
   onClick() {
     if (this.editor.previewer.isPreviewerHidden()) {
-      this.editor.previewer.recoverPreviewer(true);
+      this.$cherry.switchModel('edit&preview');
       this.isHidden = false;
     } else {
-      this.editor.previewer.editOnly(true);
+      this.$cherry.switchModel('editOnly');
       this.isHidden = true;
     }
   }

@@ -265,6 +265,7 @@ export default class Cherry extends CherryStatic {
    * 一般纯预览模式和纯编辑模式适合在屏幕较小的终端使用，比如手机移动端
    */
   switchModel(model = 'edit&preview', showToolbar = true) {
+    this.model = model;
     switch (model) {
       case 'edit&preview':
         if (this.previewer) {
@@ -274,11 +275,6 @@ export default class Cherry extends CherryStatic {
         if (this.toolbar && showToolbar) {
           this.toolbar.showToolbar();
         }
-        if (showToolbar) {
-          this.wrapperDom.classList.remove('cherry--no-toolbar');
-        } else {
-          this.wrapperDom.classList.add('cherry--no-toolbar');
-        }
         break;
       case 'editOnly':
         if (!this.previewer.isPreviewerHidden()) {
@@ -287,18 +283,19 @@ export default class Cherry extends CherryStatic {
         if (this.toolbar && showToolbar) {
           this.toolbar.showToolbar();
         }
-        if (showToolbar) {
-          this.wrapperDom.classList.remove('cherry--no-toolbar');
-        } else {
-          this.wrapperDom.classList.add('cherry--no-toolbar');
-        }
         break;
       case 'previewOnly':
         this.previewer.previewOnly();
         this.toolbar && this.toolbar.previewOnly();
-        this.wrapperDom.classList.add('cherry--no-toolbar');
         break;
     }
+    if (showToolbar) {
+      this.wrapperDom.classList.remove('cherry--no-toolbar');
+    } else {
+      this.wrapperDom.classList.add('cherry--no-toolbar');
+    }
+
+    Event.emit(this.instanceId, Event.Events.modelChange, model);
   }
 
   /**
