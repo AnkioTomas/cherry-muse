@@ -1,3 +1,19 @@
+---
+lang: frontMatterSupport
+meta:
+  - name: 支持frontMatter语法
+    content: hello
+  - name: keywords
+    content: super duper SEO
+---	
+
+# {{ meta.0.name }}
+
+使用变量访问效果 {{ lang }}
+
+> 也可以在js中使用`Cherry.frontMatter`访问frontMatter变量
+
+
 ::: tip 提示
 此处的语法兼容大多数Markdown编辑器（Typora、Github等）。
 :::

@@ -21,6 +21,7 @@ Cherry Muse 是基于腾讯开源的[CherryMarkdown](https://github.com/Tencent/
   - 移除plantuml语法；
   - checklist由图标换成input；
   - 增加iframe渲染语法；
+  - frontMatter完整语法支持，可以使用`yaml`和`json`,可以在markdown中使用变量或者在js中的cherry对象使用frontMatter变量访问；
 - 功能：
   - 重新规划联想功能；
   - 新增Emoji自动联想；
