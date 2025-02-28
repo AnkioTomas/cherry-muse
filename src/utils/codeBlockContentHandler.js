@@ -279,7 +279,7 @@ export default class CodeBlockHandler {
    * 处理复制代码块的操作
    */
   $copyCodeBlock() {
-    const codeContent = this.target.lastElementChild.innerText;
+    const codeContent = this.target.querySelector('pre').innerText;
     const final = this.$cherry.options.callback.onCopyCode({ target: this.target }, codeContent);
     if (final === false) {
       return false;
