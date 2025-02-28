@@ -7,12 +7,16 @@ export const Theme = {
    * @param {Cherry} $cherry
    */
   init($cherry) {
-    const isDark = window.matchMedia('(prefers-color-scheme:  dark)').matches;
-    window.matchMedia('(prefers-color-scheme:  dark)').addEventListener('change', () => {
-      const systemPrefersDarkScheme = window.matchMedia('(prefers-color-scheme:  dark)').matches;
-      Theme.setTheme($cherry, systemPrefersDarkScheme);
+    const savedTheme = localStorage.getItem('cherry-theme') || 'auto';
+    Theme.setTheme($cherry, savedTheme);
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      if (Theme.getTheme() === 'auto') {
+        const systemPrefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        Theme.applyTheme($cherry, systemPrefersDarkScheme ? 'dark' : 'light');
+      }
     });
-    Theme.setTheme($cherry, isDark);
+
     window.addEventListener('resize', function () {
       if ($cherry.model === 'previewOnly') return;
       if (window.outerWidth > 600) {
@@ -23,32 +27,29 @@ export const Theme = {
     });
   },
   isDark() {
-    const theme = localStorage.getItem('cherry-theme');
-    return (theme !== null && theme === 'dark') || window.matchMedia('(prefers-color-scheme:  dark)').matches;
+    const theme = Theme.getTheme();
+    return theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
   },
   getTheme() {
-    return Theme.isDark() ? 'dark' : 'light';
+    return localStorage.getItem('cherry-theme') || 'auto';
   },
-  setTheme($cherry, isDark) {
-    if (isDark) {
-      changeTheme($cherry, 'dark');
-      document.querySelectorAll('.cherry').forEach(function (elem) {
-        elem.setAttribute('data-code-block-theme', 'dark');
-      });
-      localStorage.setItem('cherry-theme', 'dark');
-      document.querySelectorAll('.cherry__theme__light').forEach(function (elem) {
-        elem.classList.replace('cherry__theme__light', 'cherry__theme__dark');
-      });
+  setTheme($cherry, theme) {
+    localStorage.setItem('cherry-theme', theme);
+    if (theme === 'auto') {
+      const systemPrefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      Theme.applyTheme($cherry, systemPrefersDarkScheme ? 'dark' : 'light');
     } else {
-      changeTheme($cherry, 'light');
-      document.querySelectorAll('.cherry').forEach(function (elem) {
-        elem.setAttribute('data-code-block-theme', 'light');
-      });
-      localStorage.setItem('cherry-theme', 'light');
-      document.querySelectorAll('.cherry__theme__dark').forEach(function (elem) {
-        elem.classList.replace('cherry__theme__dark', 'cherry__theme__light');
-      });
+      Theme.applyTheme($cherry, theme);
     }
-    Event.emit('Theme', 'change', isDark);
+  },
+  applyTheme($cherry, theme) {
+    changeTheme($cherry, theme);
+    document.querySelectorAll('.cherry').forEach(function (elem) {
+      elem.setAttribute('data-code-block-theme', theme);
+    });
+    document.querySelectorAll(`.cherry__theme__${theme === 'dark' ? 'light' : 'dark'}`).forEach(function (elem) {
+      elem.classList.replace(`cherry__theme__${theme === 'dark' ? 'light' : 'dark'}`, `cherry__theme__${theme}`);
+    });
+    Event.emit('Theme', 'change', theme === 'dark');
   },
 };
