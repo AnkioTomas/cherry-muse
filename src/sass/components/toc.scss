@@ -3,7 +3,7 @@
     z-index: 11;
     position: absolute;
     width: 10rem;
-    height: calc(100% - 13.75rem);
+    height: calc(100% - 12.75rem);
     max-height: 37.5rem;
     right: 0;
     top: 12.5rem;
@@ -58,7 +58,7 @@
     }
     .cherry-toc-list {
       overflow-y: auto;
-      height: calc(100% - 2.5rem);
+      height: calc(100% - 3.8rem);
       overflow-x: hidden;
       width: 100%;
       padding-bottom: 0.625rem;
@@ -102,7 +102,7 @@
     }
     &.cherry-flex-toc__pure {
       width: 1.875rem;
-      height: calc(100% - 12.5rem);
+      height: calc(100% - 12.75rem);
       max-height: 37.5rem;
       background: transparent;
       box-shadow: none;
@@ -121,6 +121,7 @@
         }
       }
       .cherry-toc-list {
+        height: calc(100% - 1.5625rem);
         padding-left: 0.4375rem;
         .cherry-toc-one-a {
           overflow: hidden;
