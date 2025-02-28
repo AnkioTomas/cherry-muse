@@ -164,7 +164,7 @@ export default class Emoji extends SyntaxBase {
     const ret = {
       // ?<left>
       begin: ':',
-      content: '([a-zA-Z0-9+_-]+?)',
+      content: '([\\w+_-]+)',
       // ?<right>
       end: ':',
     };
@@ -178,7 +178,7 @@ export default class Emoji extends SyntaxBase {
       passLeftKey: false,
       token(stream, state) {
         // 检查是否是 emoji，但排除连续的三个冒号
-        if (!this.inEmoji && stream.match(/:[^:]+:(?!:)/)) {
+        if (!this.inEmoji && stream.match(/:[\w+_-]+:/)) {
           this.inEmoji = true;
           stream.backUp(stream.current().length);
         }
@@ -192,7 +192,7 @@ export default class Emoji extends SyntaxBase {
             }
             return 'emoji-container';
           }
-          if (stream.match(/.*?:/)) {
+          if (stream.match(/[\w+_-]+:/)) {
             stream.backUp(1);
             return 'emoji-text';
           }
