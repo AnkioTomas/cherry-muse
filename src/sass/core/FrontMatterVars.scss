@@ -1,0 +1,19 @@
+.cherry-editor{
+  .cm-vars-container{
+    color: #888888;
+  }
+  .cm-vars-text{
+    color: #4EC9B0;
+  }
+}
+
+.theme__dark .cherry-editor {
+  .cm-vars-container{
+    color: #6B6B6B;
+  }
+  .cm-vars-text{
+    color: #2EFFDC;
+    text-decoration: underline;
+    text-decoration-color: rgba(46, 255, 220, 0.3);
+  }
+}

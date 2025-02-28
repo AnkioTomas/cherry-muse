@@ -17,6 +17,7 @@
 import codemirror from 'codemirror';
 // import 'codemirror/mode/markdown/markdown';
 import 'codemirror/mode/gfm/gfm'; // https://codemirror.net/mode/gfm/index.html
+import 'codemirror/mode/yaml-frontmatter/yaml-frontmatter';
 // import 'codemirror/mode/xml/xml';
 import 'codemirror/addon/edit/continuelist';
 import 'codemirror/addon/edit/closetag';
@@ -73,7 +74,13 @@ export default class Editor {
         tabSize: 4, // 一个tab转换成的空格数量
         // styleActiveLine: false, // 当前行背景高亮
         // matchBrackets: true, // 括号匹配
-        mode: 'gfm', // 从markdown模式改成gfm模式，以使用默认高亮规则
+        mode: {
+          name: 'yaml-frontmatter', // yaml-frontmatter在gfm的基础上增加了对yaml的支持
+          base: {
+            name: 'gfm',
+            gitHubSpice: false, // 修复github风格的markdown语法高亮，见[issue#925](https://github.com/Tencent/cherry-markdown/issues/925)
+          },
+        }, // 从markdown模式改成gfm模式，以使用默认高亮规则
         lineWrapping: true, // 自动换行
         indentWithTabs: true, // 缩进用tab表示
         autofocus: true,
