@@ -752,10 +752,10 @@ export default class Previewer {
     if (isEditOnly) {
       previewerDom.classList.add('cherry-previewer--hidden');
       editorDom.classList.add('cherry-editor--full');
-      previewerDom.classList.remove('cherry-preview--full');
+      previewerDom.classList.remove('cherry-previewer--full');
       editorDom.classList.remove('cherry-editor--hidden');
     } else {
-      previewerDom.classList.add('cherry-preview--full');
+      previewerDom.classList.add('cherry-previewer--full');
       editorDom.classList.add('cherry-editor--hidden');
       previewerDom.classList.remove('cherry-previewer--hidden');
       editorDom.classList.remove('cherry-editor--full');
