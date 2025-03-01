@@ -225,7 +225,25 @@ export default class AutoLink extends SyntaxBase {
     const processedURL = this.urlProcessor(url, 'autolink');
     const safeUri = encodeURIOnce(processedURL);
     const displayUri = $e(linkText);
-    const additionalAttrs = [this.target, this.rel].filter(Boolean).join(' ');
+    let additionalAttrs = ' ';
+    const isExternalLink = safeUri.startsWith('http') && !safeUri.startsWith(window.location.origin);
+    // 处理target属性
+    if (this.target) {
+      // 如果已配置target，优先使用配置的target
+      additionalAttrs += ` ${this.target}`;
+    } else if (isExternalLink) {
+      // 外部链接且未配置target时，默认使用_blank
+      additionalAttrs += ' target="_blank"';
+    }
+
+    // 处理rel属性
+    if (this.rel) {
+      additionalAttrs += ` ${this.rel}`;
+    } else if (isExternalLink) {
+      // 外部链接时，添加noopener noreferrer安全属性
+      additionalAttrs += ' rel="noopener noreferrer"';
+    }
+
     return `<a href="${AutoLink.escapePreservedSymbol(safeUri)}" title="${AutoLink.escapePreservedSymbol(
       displayUri,
     )}" ${additionalAttrs}>${AutoLink.escapePreservedSymbol(displayUri)}</a>`;

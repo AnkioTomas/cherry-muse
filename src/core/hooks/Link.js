@@ -85,8 +85,17 @@ export default class Link extends SyntaxBase {
       attrs = title && title.trim() !== '' ? ` title="${_e(title.replace(/["']/g, ''))}"` : '';
       if (target) {
         attrs += ` target="${target.replace(/{target\s*=\s*(.*?)}/, '$1')}"`;
-      } else if (this.target) {
-        attrs += ` ${this.target}`;
+      } else {
+        // 检查是否为外部链接，非同源时默认使用_blank打开
+        const isExternalLink = link.startsWith('http') && !link.startsWith(window.location.origin);
+        if (isExternalLink) {
+          attrs += ' target="_blank"';
+        } else if (this.target) {
+          attrs += ` ${this.target}`;
+        }
+      }
+      if (attrs.includes('_blank')) {
+        attrs += ' rel="noopener noreferrer"';
       }
       let processedURL = link.trim().replace(/~1D/g, '~D'); // 还原替换的$符号
       const processedText = coreText.replace(/~1D/g, '~D'); // 还原替换的$符号
