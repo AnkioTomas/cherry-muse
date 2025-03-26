@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry Markdown - 流式输出 Demo</title>
+    <link rel="stylesheet" href="../../dist/cherry-markdown.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 70vh;
+            overflow-y: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .message {
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 80%;
+        }
+        .user-message {
+            background-color: #e3f2fd;
+            align-self: flex-end;
+        }
+        .assistant-message {
+            background-color: #f5f5f5;
+            align-self: flex-start;
+        }
+        .input-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            position: sticky;
+            bottom: 0;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+        #userInput {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #4CAF50;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .file-info {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+            text-align: right;
+        }
+        .message-content {
+            margin-bottom: 5px;
+        }
+        .error-message {
+            background-color: #ffebee;
+            color: #c62828;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .typing-indicator {
+            display: inline-block;
+            margin-left: 5px;
+        }
+        .typing-indicator span {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            margin: 0 1px;
+            animation: typing 1s infinite;
+        }
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes typing {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cherry Markdown - 流式输出 Demo</h1>
+        <div class="chat-container" id="chatContainer"></div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="输入消息...">
+            <button onclick="sendMessage()" id="sendButton">发送</button>
+        </div>
+    </div>
+
+    <script src="../../dist/cherry-markdown.js"></script>
+    <script>
+        // 配置对象
+        const CONFIG = {
+            typingSpeed: 30,
+            maxRetries: 3,
+            retryDelay: 1000,
+            maxMessages: 50
+        };
+
+        // 预设消息列表
+        const msgList = [
+            '在流式输出的情况下cherry提供了更快的渲染频率（最快每**10ms渲染一次**）\n在关闭流式输出时，cherry的渲染频率为最快**50ms渲染一次**。',
+            '在流式输出的情况下输出**加粗文字时，cherry会自动补全加粗文字**。\n在流式输出的情况下输出*斜体文字时，cherry会自动补全斜体文字*。',
+            '在流式输出的情况下，文字会一个一个的输出到页面上\n在输出**代码块**时，cherry会自动补全代码块：\n```\nalert("hello world");\nalert("hello world");\n```\n代码块输出结束了。',
+            '在流式输出的情况下输出**无序列表**的时候，cherry会自动修复无序列表的内容，使内容在输出时不会命中标题语法：\n- 无序列表第一行\n- 无序列表第二行\n- 无序列表第三行\n\n无序列表结束了。\n用短横线命中标题\n--\n标题结束了。',
+            '在流式输出的情况下输出**表格**时，在输出第一行表格内容后，cherry自动补全表格的第二行：\n|项目（居中对齐）|价格（右对齐）|数量（左对齐）|\n|:-:|-:|:-|\n|计算机|￥1600|5|\n|手机机|￥12|50|\n表格输出结束了。',
+            '输出比较丰富的富媒体内容：\n## 字体样式\n\n**说明**\n\n- 使用`*(或_)` 和 `**(或__)` 表示*斜体*和 **粗体**\n- 使用 `/` 表示 /下划线/ ,使用`~~` 表示~~删除线~~\n- 使用`^(或^^)`表示^上标^或^^下标^^\n- 使用 ! 号+数字 表示字体 !24 大! !12 小! [^专有语法提醒]\n- 使用两个(三个)!号+RGB 颜色 表示!!#ff0000 字体颜色!!(!!!#f9cb9c 背景颜色!!!)[^专有语法提醒]\n\n**示例**\n\n```markdown\n[!!#ff0000 红色超链接!!](http://www.qq.com)\n[!!#ffffff !!!#000000 黑底白字超链接!!!!!](http://www.qq.com)\n[新窗口打开](http://www.qq.com){target=_blank}\n鞋子 !32 特大号!\n大头 ^`儿子`^ 和小头 ^^`爸爸`^^\n爱在~~西元前~~**当下**\n```\n\n**效果**\n[!!#ff0000 红色超链接!!](http://www.qq.com)\n[!!#ffffff !!!#000000 黑底白字超链接!!!!!](http://www.qq.com)\n[新窗口打开](http://www.qq.com){target=_blank}\n鞋子 !32 特大号!\n大头 ^`儿子`^ 和小头 ^^`爸爸`^^\n爱在~~西元前~~**当下**\n\n---\n\n## 标题设置\n\n**说明**\n\n- 在文字下方加 === 可使上一行文字变成一级标题\n- 在文字下方加 --- 可使上一行文字变成二级标题\n- 在行首加井号（#）表示不同级别的标题，例如：# H1, ##H2, ###H3\n\n---\n## 信息面板\n\n**说明**\n使用连续三个冒号`:::`和关键字（`[primary | info | warning | danger | success]`）来声明\n\n```markdown\n:::primary // [primary | info | warning | danger | success] 标题\n内容\n:::\n```\n\n**效果**\n:::p 标题\n内容\n:::\n:::success\n内容\n:::\n\n---\n\n## 手风琴\n\n**说明**\n使用连续三个加号`+++`和关键字（`[ + | - ]`）来声明，关键字`+`表示默认收起，关键字`-`表示默认展开\n\n```markdown\n+++ 点击展开更多\n内容\n++- 默认展开\n内容\n++ 默认收起\n内容\n+++\n```\n\n**效果**\n+++ 点击展开更多\n内容\n++- 默认展开\n内容\n++ 默认收起\n内容\n+++'
+        ];
+
+        // Cherry 配置
+        const cherryConfig = {
+            editor: {
+                height: 'auto',
+                defaultModel: 'previewOnly',
+            },
+            engine: {
+                global: {
+                    flowSessionContext: true,
+                    flowSessionCursor: 'default',
+                },
+                syntax: {
+                    codeBlock: {
+                        selfClosing: false,
+                    },
+                    header: {
+                        anchorStyle: 'none',
+                    },
+                    table: {
+                        selfClosing: false,
+                    },
+                    fontEmphasis: {
+                        selfClosing: false,
+                    }
+                }
+            },
+            previewer: {
+                enablePreviewerBubble: false,
+            },
+            toolbars:{
+                toc:false,
+            },
+            isPreviewOnly: true,
+        };
+
+        // 状态管理
+        const state = {
+            isProcessing: false,
+            currentCherry: null,
+            printing: false,
+            currentWordIndex: 0,
+            currentMsgIndex: msgList.length
+        };
+
+        // 工具函数
+        const utils = {
+            debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            },
+
+            scrollToBottom() {
+                const chatContainer = document.getElementById('chatContainer');
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            },
+
+            showError(message) {
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-message';
+                errorDiv.textContent = message;
+                document.getElementById('chatContainer').appendChild(errorDiv);
+                utils.scrollToBottom();
+            },
+
+            // 清理旧消息
+            cleanupOldMessages() {
+                const chatContainer = document.getElementById('chatContainer');
+                const messages = chatContainer.children;
+                if (messages.length > CONFIG.maxMessages) {
+                    const removeCount = messages.length - CONFIG.maxMessages;
+                    for (let i = 0; i < removeCount; i++) {
+                        chatContainer.removeChild(messages[0]);
+                    }
+                }
+            },
+
+            // 创建打字指示器（单例）
+            createTypingIndicator() {
+                if (!state.typingIndicator) {
+                    const indicator = document.createElement('span');
+                    indicator.className = 'typing-indicator';
+                    indicator.innerHTML = '<span></span><span></span><span></span>';
+                    state.typingIndicator = indicator;
+                }
+                return state.typingIndicator.cloneNode(true);
+            },
+
+            // 获取随机消息
+            getRandomMessage() {
+                return msgList[Math.floor(Math.random() * msgList.length)];
+            }
+        };
+
+        // 文件处理相关函数
+        const fileManager = {
+            async loadMarkdownFile(filename, retryCount = 0) {
+                try {
+                    const response = await fetch(`../markdown/${filename}`);
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return {
+                        content: await response.text(),
+                        filename
+                    };
+                } catch (error) {
+                    if (retryCount < CONFIG.maxRetries) {
+                        await new Promise(resolve => setTimeout(resolve, CONFIG.retryDelay));
+                        return this.loadMarkdownFile(filename, retryCount + 1);
+                    }
+                    throw error;
+                }
+            },
+
+            getRandomFile() {
+                return CONFIG.files[Math.floor(Math.random() * CONFIG.files.length)];
+            }
+        };
+
+        // 消息处理相关函数
+        const messageManager = {
+            createMessageElement(content, isUser = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${isUser ? 'user-message' : 'assistant-message'}`;
+                
+                if (isUser) {
+                    messageDiv.textContent = content;
+                } else {
+                    const contentDiv = document.createElement('div');
+                    contentDiv.className = 'message-content chat-one-msg';
+                    contentDiv.id = `message-${Date.now()}`;
+                    messageDiv.appendChild(contentDiv);
+                }
+                
+                document.getElementById('chatContainer').appendChild(messageDiv);
+                utils.scrollToBottom();
+                utils.cleanupOldMessages();
+                return messageDiv;
+            },
+
+            async streamOutput(text) {
+                const messageDiv = this.createMessageElement();
+                const contentDiv = messageDiv.querySelector('.chat-one-msg');
+                
+                // 添加打字指示器
+                const typingIndicator = utils.createTypingIndicator();
+                messageDiv.appendChild(typingIndicator);
+
+                // 创建新的 Cherry 实例
+                state.currentCherry = new Cherry({
+                    ...cherryConfig,
+                    el: contentDiv
+                });
+
+                // 开始流式输出
+                state.printing = true;
+                state.currentWordIndex = 0;
+
+                const beginPrint = () => {
+                    if (!state.printing) return;
+
+                    setTimeout(() => {
+                        const currentText = text.substring(0, state.currentWordIndex);
+                        state.currentCherry.setMarkdown(currentText);
+                        utils.scrollToBottom();
+
+                        if (state.currentWordIndex < text.length) {
+                            state.currentWordIndex++;
+                            beginPrint();
+                        } else {
+                            state.printing = false;
+                            state.currentWordIndex = 0;
+                            
+                            // 移除打字指示器
+                            typingIndicator.remove();
+                        }
+                    }, CONFIG.typingSpeed);
+                };
+
+                await beginPrint();
+            }
+        };
+
+        // 主函数
+        async function sendMessage() {
+            if (state.isProcessing || state.printing) return;
+            
+            const input = document.getElementById('userInput');
+            const sendButton = document.getElementById('sendButton');
+            const message = input.value.trim();
+            if (!message) return;
+
+            try {
+                state.isProcessing = true;
+                input.disabled = true;
+                sendButton.disabled = true;
+
+                messageManager.createMessageElement(message, true);
+                input.value = '';
+
+                const randomMessage = utils.getRandomMessage();
+                await messageManager.streamOutput(randomMessage);
+            } catch (error) {
+                utils.showError(`错误: ${error.message}`);
+            } finally {
+                state.isProcessing = false;
+                input.disabled = false;
+                sendButton.disabled = false;
+                input.focus();
+            }
+        }
+
+        // 初始化
+        window.onload = function() {
+            const input = document.getElementById('userInput');
+            const keypressHandler = e => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            };
+            
+            input.addEventListener('keypress', keypressHandler);
+            
+            // 清理函数
+            window.addEventListener('unload', () => {
+                input.removeEventListener('keypress', keypressHandler);
+                if (state.currentCherry) {
+                    state.currentCherry.destroy();
+                }
+            });
+        };
+    </script>
+</body>
+</html> 
