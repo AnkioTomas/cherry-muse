@@ -70,20 +70,25 @@ function getEmojiByKey(key) {
       return emoji.e;
     }
   }
-  return '1f600';
+  return null;
 }
 
 export function getEmoji(key, options, isKey = false) {
+  const emoji = getEmojiByKey(key);
+  if (!emoji) {
+    return null;
+  }
   if (options.useUnicode) {
     try {
-      return convertToUnicode(isKey ? key : getEmojiByKey(key));
+      return convertToUnicode(isKey ? key : emoji);
     } catch (e) {
       console.error(e);
-      return key;
+      return null;
     }
+  } else {
+    const src = options.resourceURL.replace(/\$\{code\}/g, (isKey ? key : emoji).toLowerCase());
+    return `<img class="emoji" src="${src}" alt="${_e(key)}" />`;
   }
-  const src = options.resourceURL.replace(/\$\{code\}/g, (isKey ? key : getEmojiByKey(key)).toLowerCase());
-  return `<img class="emoji" src="${src}" alt="${_e(key)}" />`;
 }
 
 function fromCodePoint(...args) {
@@ -155,7 +160,9 @@ export default class Emoji extends SyntaxBase {
       if (this.options.customHandled && typeof this.options.customRenderer === 'function') {
         return this.options.customRenderer(emojiKey);
       }
-      return getEmoji(emojiKey, this.options);
+      const emoji = getEmoji(emojiKey, this.options);
+      if (emoji === null) return str;
+      return emoji;
     });
   }
 
