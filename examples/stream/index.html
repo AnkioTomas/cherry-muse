@@ -155,7 +155,7 @@
             engine: {
                 global: {
                     flowSessionContext: true,
-                    flowSessionCursor: 'default',
+                    flowSessionCursor: '',
                 },
                 syntax: {
                     codeBlock: {
@@ -190,6 +190,7 @@
             currentMsgIndex: msgList.length
         };
 
+        let msgCount = 0;
         // 工具函数
         const utils = {
             debounce(func, wait) {
@@ -217,6 +218,15 @@
                 utils.scrollToBottom();
             },
 
+
+          async getNextMessage() {
+            if (msgList.length === msgCount) {
+              msgCount = 0;
+              return await fileManager.loadMarkdownFile("test.md")
+            }
+            return msgList[msgCount++];
+          },
+
             // 清理旧消息
             cleanupOldMessages() {
                 const chatContainer = document.getElementById('chatContainer');
@@ -240,10 +250,7 @@
                 return state.typingIndicator.cloneNode(true);
             },
 
-            // 获取随机消息
-            getRandomMessage() {
-                return msgList[Math.floor(Math.random() * msgList.length)];
-            }
+
         };
 
         // 文件处理相关函数
@@ -252,10 +259,7 @@
                 try {
                     const response = await fetch(`../markdown/${filename}`);
                     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                    return {
-                        content: await response.text(),
-                        filename
-                    };
+                    return await response.text();
                 } catch (error) {
                     if (retryCount < CONFIG.maxRetries) {
                         await new Promise(resolve => setTimeout(resolve, CONFIG.retryDelay));
@@ -265,9 +269,7 @@
                 }
             },
 
-            getRandomFile() {
-                return CONFIG.files[Math.floor(Math.random() * CONFIG.files.length)];
-            }
+
         };
 
         // 消息处理相关函数
@@ -351,7 +353,7 @@
                 messageManager.createMessageElement(message, true);
                 input.value = '';
 
-                const randomMessage = utils.getRandomMessage();
+                const randomMessage = await utils.getNextMessage();
                 await messageManager.streamOutput(randomMessage);
             } catch (error) {
                 utils.showError(`错误: ${error.message}`);
