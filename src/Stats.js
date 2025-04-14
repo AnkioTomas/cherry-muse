@@ -23,8 +23,26 @@ export default class Stats {
   }
 
   bindEvents() {
-    Event.on('editor', 'change', () => {
-      this.update(this.$cherry.getValue());
+    const cm = this.$cherry.editor.editor; // 你得确认这里能拿到 CodeMirror 实例
+    cm.on('change', (instance, changeObj) => {
+      const addedText = changeObj.text.join('\n');
+      const removedText = (changeObj.removed || []).join('\n');
+
+      this.incrementalUpdate(removedText, addedText);
+      this.render();
+    });
+  }
+
+  incrementalUpdate(removed, added) {
+    const addedStats = this.wordCount(added);
+    const removedStats = this.wordCount(removed);
+
+    this.stats.characters += addedStats.characters - removedStats.characters;
+    this.stats.words += addedStats.words - removedStats.words;
+    this.stats.paragraphs += addedStats.paragraphs - removedStats.paragraphs;
+
+    Object.keys(this.stats).forEach((key) => {
+      this.stats[key] = Math.max(0, this.stats[key]);
     });
   }
 
