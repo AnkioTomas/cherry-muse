@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { mac } from 'codemirror/src/util/browser';
 import HookCenter from './HookCenter';
 import Event from '@/Event';
 import { createElement } from '@/utils/dom';
@@ -74,6 +73,7 @@ export default class Toolbar {
     this.shortcutKeyMap = {};
     // 存储所有二级菜单面板
     this.subMenus = {};
+    this.currentActiveSubMenu = null;
     // 默认的菜单配置
     this.options = {
       dom: document.createElement('div'),
@@ -133,13 +133,33 @@ export default class Toolbar {
 
     this.menus.level1MenusName.forEach((name) => {
       const btn = this.menus.hooks[name].createBtn();
-      btn.addEventListener(
-        'pointerup',
-        (event) => {
-          this.onClick(event, name);
-        },
-        false,
-      );
+      if (typeof window === 'object' && 'onpointerup' in window) {
+        // 只有先down再up的才触发click逻辑，避免误触（尤其是float menu的场景）
+        btn.addEventListener(
+          'pointerdown',
+          () => {
+            this.isPointerDown = true;
+          },
+          false,
+        );
+        btn.addEventListener(
+          'pointerup',
+          (event) => {
+            this.isPointerDown && this.onClick(event, name);
+            this.isPointerDown = false;
+          },
+          false,
+        );
+      } else {
+        // vscode 插件里不支持 pointer event
+        btn.addEventListener(
+          'click',
+          (event) => {
+            this.onClick(event, name);
+          },
+          false,
+        );
+      }
       if (this.isHasSubMenu(name)) {
         btn.classList.add('cherry-toolbar-dropdown');
       }
@@ -158,7 +178,7 @@ export default class Toolbar {
   setSubMenuPosition(menuObj, subMenuObj) {
     const pos = menuObj.getMenuPosition();
     subMenuObj.style.left = `${pos.left + pos.width / 2}px`;
-    subMenuObj.style.top = `${pos.height}px`;
+    subMenuObj.style.top = `${pos.top + pos.height}px`;
     subMenuObj.style.position = menuObj.positionModel;
   }
 
@@ -184,7 +204,9 @@ export default class Toolbar {
     if (subMenuConfig.length > 0) {
       subMenuConfig.forEach((config) => {
         const btn = this.menus.hooks[name].createSubBtnByConfig(config);
-        btn.addEventListener('click', () => this.hideAllSubMenu(), false);
+        if (!config?.disabledHideAllSubMenu) {
+          btn.addEventListener('click', () => this.hideAllSubMenu(), false);
+        }
         this.subMenus[name].appendChild(btn);
       });
     }
@@ -202,8 +224,35 @@ export default class Toolbar {
     if (this.isHasSubMenu(name) && !focusEvent) {
       this.toggleSubMenu(name);
     } else {
-      this.hideAllSubMenu();
+      /**
+       * 如果定义了hideOtherSubMenu，则隐藏其他二级菜单，但不隐藏自己（因为其二级菜单是自己实现的独立逻辑）
+       *  比如：颜色选择器、快捷键配置
+       */
+      // @ts-ignore
+      if (typeof menu.hideOtherSubMenu === 'function') {
+        // @ts-ignore
+        menu.hideOtherSubMenu(() => this.hideAllSubMenu());
+      } else {
+        this.hideAllSubMenu();
+      }
       menu.fire(event, name);
+    }
+  }
+
+  /**
+   * 激活二级菜单添加选中颜色
+   * @param {string} name
+   */
+  activeSubMenuItem(name) {
+    const subMenu = this.subMenus[name];
+    const index = this.menus.hooks?.[name]?.getActiveSubMenuIndex(subMenu);
+    subMenu?.querySelectorAll('.cherry-dropdown-item').forEach((item, i) => {
+      item.classList.toggle('cherry-dropdown-item__selected', i === index);
+    });
+  }
+  updateSubMenuPosition() {
+    if (this.currentActiveSubMenu && this.subMenus[this.currentActiveSubMenu]) {
+      this.setSubMenuPosition(this.menus.hooks[this.currentActiveSubMenu], this.subMenus[this.currentActiveSubMenu]);
     }
   }
 
@@ -216,7 +265,8 @@ export default class Toolbar {
       this.hideAllSubMenu();
       this.drawSubMenus(name);
       this.subMenus[name].style.display = 'block';
-      Event.emit('toolbar', 'show', name);
+      this.activeSubMenuItem(name);
+      this.currentActiveSubMenu = name;
       return;
     }
     if (this.subMenus[name].style.display === 'none') {
@@ -224,10 +274,12 @@ export default class Toolbar {
       this.hideAllSubMenu();
       this.subMenus[name].style.display = 'block';
       this.setSubMenuPosition(this.menus.hooks[name], this.subMenus[name]);
-      Event.emit('toolbar', 'show', name);
+      this.activeSubMenuItem(name);
+      this.currentActiveSubMenu = name;
     } else {
       // 如果是显示的，则隐藏当前二级菜单
       this.subMenus[name].style.display = 'none';
+      this.currentActiveSubMenu = null;
     }
   }
 
@@ -235,7 +287,7 @@ export default class Toolbar {
    * 隐藏所有的二级菜单
    */
   hideAllSubMenu() {
-    Event.emit('toolbar', 'hideAll');
+    this.currentActiveSubMenu = null;
     this.$cherry.wrapperDom.querySelectorAll('.cherry-dropdown').forEach((dom) => {
       dom.style.display = 'none';
     });

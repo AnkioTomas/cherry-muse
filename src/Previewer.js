@@ -17,7 +17,7 @@ import vDH from 'virtual-dom/h';
 import vDDiff from 'virtual-dom/diff';
 import vDPatch from 'virtual-dom/patch';
 import MyersDiff from './utils/myersDiff';
-import { getBlockTopAndHeightWithMargin, elementsFromPoint } from './utils/dom';
+import { getBlockTopAndHeightWithMargin } from './utils/dom';
 import Logger from './Logger';
 import Event from './Event';
 // import locale from './utils/locale';
@@ -143,9 +143,18 @@ export default class Previewer {
     // 创建一个新的 ResizeObserver 实例
     const resizeObserver = new ResizeObserver(() => {
       this.syncVirtualLayoutFromReal();
+      this.subMenusPositionChange();
     });
     // 开始监听元素
     resizeObserver.observe(this.$cherry.wrapperDom);
+  }
+
+  subMenusPositionChange() {
+    ['toolbar', 'sidebar'].forEach((toolbarName) => {
+      if (this.$cherry[toolbarName]) {
+        this.$cherry[toolbarName].updateSubMenuPosition();
+      }
+    });
   }
 
   $initPreviewerBubble() {
@@ -562,11 +571,11 @@ export default class Previewer {
     }
     return false;
   }
-  $getSignData(dom) {
-    const list = dom.querySelectorAll('[data-sign]');
+  $getSignData(list) {
+    // const list = dom.querySelectorAll('[data-sign]');
     const ret = { list: [], signs: {} };
     for (let i = 0; i < list.length; i++) {
-      if (!this.$testChild(list[i])) {
+      if (!list[i].getAttribute('data-sign')) {
         continue;
       }
       const sign = list[i].getAttribute('data-sign');
@@ -607,7 +616,6 @@ export default class Previewer {
 
       switch (change.type) {
         case 'delete':
-          Event.emit('previewer', 'beforeRenderDom', oldContent[change.oldIndex].sign, oldContent[change.oldIndex].dom);
           domContainer.removeChild(oldContent[change.oldIndex].dom);
           break;
         case 'insert':
@@ -616,17 +624,8 @@ export default class Previewer {
           } else {
             domContainer.appendChild(newContent[change.newIndex].dom);
           }
-          setTimeout(function () {
-            Event.emit(
-              'previewer',
-              'afterRenderDom',
-              newContent[change.newIndex].sign,
-              newContent[change.newIndex].dom,
-            );
-          });
           break;
         case 'update':
-          Event.emit('previewer', 'beforeRenderDom', oldContent[change.oldIndex].sign, oldContent[change.oldIndex].dom);
           try {
             // 处理表格包含图表的特殊场景
             let hasUpdate = false;
@@ -654,14 +653,6 @@ export default class Previewer {
             domContainer.insertBefore(newContent[change.newIndex].dom, oldContent[change.oldIndex].dom);
             domContainer.removeChild(oldContent[change.oldIndex].dom);
           }
-          setTimeout(function () {
-            Event.emit(
-              'previewer',
-              'afterRenderDom',
-              newContent[change.newIndex].sign,
-              newContent[change.newIndex].dom,
-            );
-          });
       }
     });
   }
@@ -678,15 +669,11 @@ export default class Previewer {
         Logger.log('add all');
         newHtmlList.list.forEach((piece) => {
           domContainer.appendChild(piece.dom);
-          setTimeout(function () {
-            Event.emit('previewer', 'afterRenderDom', piece.sign, piece.dom);
-          });
         });
       } else if (!newHtmlList.list.length && oldHtmlList.list.length) {
         // 全删除
         Logger.log('delete all');
         oldHtmlList.list.forEach((piece) => {
-          Event.emit('previewer', 'beforeRenderDom', piece.sign, piece.dom);
           domContainer.removeChild(piece.dom);
         });
       }
@@ -702,8 +689,6 @@ export default class Previewer {
   }
 
   update(html) {
-    // 更新之前删除
-
     // 更新时保留图片懒加载逻辑
     const newHtml = this.lazyLoadImg.changeSrc2DataSrc(html);
     if (!this.isPreviewerHidden()) {
@@ -711,11 +696,24 @@ export default class Previewer {
       window.clearTimeout(this.syncScrollLockTimer);
       this.applyingDomChanges = true;
       // 预览区未隐藏时，直接更新
-      const tmpDiv = document.createElement('div');
       const domContainer = this.getDomContainer();
-      tmpDiv.innerHTML = newHtml;
-      const newHtmlList = this.$getSignData(tmpDiv);
-      const oldHtmlList = this.$getSignData(domContainer);
+      if (this.editor.selectAll) {
+        domContainer.innerHTML = '';
+      }
+      let tmpDiv = null;
+      if (typeof window.DOMParser !== 'undefined') {
+        // 如果支持DOMParser，则使用DOMParser将html字符串转成对应的HtmlElement
+        // 使用DOMParser是为了防止newHtml里的图片等资源自动加载
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(newHtml, 'text/html');
+        tmpDiv = doc.querySelector('body');
+      } else {
+        tmpDiv = document.createElement('div');
+        tmpDiv.innerHTML = newHtml;
+      }
+      const newHtmlList = this.$getSignData(tmpDiv.children);
+      const oldHtmlList = this.$getSignData(domContainer.children);
+
       try {
         this.$dealUpdate(domContainer, oldHtmlList, newHtmlList);
         this.afterUpdate();

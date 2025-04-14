@@ -18,7 +18,6 @@ import Editor from './Editor';
 import Engine from './Engine';
 import Previewer from './Previewer';
 import Toolbar from './toolbars/Toolbar';
-import ToolbarRight from './toolbars/ToolbarRight';
 import { createElement } from './utils/dom';
 import { customizer, getThemeFromLocal } from './utils/config';
 import NestedError, { $expectTarget } from './utils/error';
@@ -128,7 +127,6 @@ export default class Cherry extends CherryStatic {
     $expectTarget(this.options.toolbars.toolbar, Array);
     // 创建顶部工具栏
     this.createToolbar();
-    this.createToolbarRight();
 
     const wrapperFragment = document.createDocumentFragment();
     wrapperFragment.appendChild(this.toolbar.options.dom);
@@ -493,12 +491,12 @@ export default class Cherry extends CherryStatic {
   /**
    * 动态重置工具栏配置
    * @public
-   * @param {'toolbar'|'toolbarRight|'sidebar'|'bubble'|'float'} [type] 修改工具栏的类型
+   * @param {'toolbar'|'sidebar'|'bubble'|'float'} [type] 修改工具栏的类型
    * @param {Array} [toolbar] 要重置的对应工具栏配置
    * @returns {Boolean}
    */
   resetToolbar(type, toolbar) {
-    const $type = /(toolbar|toolbarRight|sidebar|bubble|float|toc)/.test(type) ? type : false;
+    const $type = /(toolbar|sidebar|bubble|float|toc)/.test(type) ? type : false;
     if ($type === false) {
       return false;
     }
@@ -520,21 +518,6 @@ export default class Cherry extends CherryStatic {
     // this.createHiddenToolbar();
     this.createToc();
     return true;
-  }
-
-  /**
-   * @private
-   * @returns {Toolbar}
-   */
-  createToolbarRight() {
-    this.toolbarRight = new ToolbarRight({
-      dom: this.toolbarContainer,
-      $cherry: this,
-      buttonConfig: this.options.toolbars.toolbarRight,
-      customMenu: this.options.toolbars.customMenu,
-    });
-    this.toolbar.collectMenuInfo(this.toolbarRight);
-    return this.toolbarRight;
   }
 
   /**
