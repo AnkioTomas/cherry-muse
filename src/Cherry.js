@@ -734,4 +734,16 @@ export default class Cherry extends CherryStatic {
     // @ts-ignore
     this.toc.setModelToLocalStorage(targetModel);
   }
+
+  /**
+   * 清空流程会话中添加的虚拟光标
+   */
+  clearFlowSessionCursor() {
+    if (this.options.engine.global.flowSessionCursor) {
+      this.previewer.getDom().innerHTML = this.previewer
+        .getDom()
+        // @ts-ignore
+        .innerHTML.replaceAll(this.options.engine.global.flowSessionCursor, '');
+    }
+  }
 }
