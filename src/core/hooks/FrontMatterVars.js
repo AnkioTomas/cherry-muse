@@ -1,4 +1,3 @@
-import SyntaxBase from '@/core/SyntaxBase';
 import { compileRegExp } from '@/utils/regexp';
 import ParagraphBase from '@/core/ParagraphBase';
 import md5 from 'md5';
@@ -9,10 +8,8 @@ export default class FrontMatterVars extends ParagraphBase {
   constructor() {
     super({ needCache: false });
   }
-  beforeMakeHtml(str, sentenceMakeFunc) {
-    if (!this.test(str)) {
-      return str;
-    }
+
+  makeHtml(str, sentenceMakeFunc) {
     return str.replace(this.RULE.reg, (match, a, varName) => {
       // Custom rendering logic
       const value = this.resolveNestedVar(varName.trim());

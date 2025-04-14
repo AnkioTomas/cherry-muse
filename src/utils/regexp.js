@@ -251,7 +251,7 @@ export function getPanelRule() {
  */
 export function getDetailRule() {
   const ret = {
-    begin: /(?:^|\n)(\n*[^\S\n]*)\+\+([+-]?)\s+([^\n]+)\n/,
+    begin: /(?:^|\n)(\n*(?:[^\S\n]*))\+\+\+([-]{0,1})\s+([^\n]+)\n/,
     content: /([\w\W]+?)/,
     end: /\n[ \t]*\+\+\+[ \t]*(?=$|\n+)/,
   };
@@ -261,6 +261,12 @@ export function getDetailRule() {
 
 // 匹配图片URL里的base64，[name](data:image/png;base64,xxx) 和 ![alt](data:image/png;base64,xxx) 这两种形式的都处理
 export const imgBase64Reg = /(\[[^\n]*?\]\(data:image\/[a-z]{1,10};base64,)([^)]+)\)/g;
+
+// 匹配base64数据
+export const base64Reg = /(data:image\/[a-z]{1,10};base64,)([0-9a-zA-Z+/]+)/g;
+
+// 匹配内容非常多的单行文本，为了避免表格的场景，所以特意避免表格的识别
+export const longTextReg = /([^\n]{100})([^\n|`\s]{5900,})/g;
 
 // 匹配图片{}里的data-xml属性
 export const imgDrawioXmlReg = /(!\[[^\n]*?\]\([^)]+\)\{[^}]* data-xml=)([^}]+)\}/g;

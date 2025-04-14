@@ -19,7 +19,7 @@ import NestedError, { $expectTarget, $expectInherit, $expectInstance } from './u
 import md5 from 'md5';
 import SyntaxBase from './core/SyntaxBase';
 import ParagraphBase from './core/ParagraphBase';
-import { PUNCTUATION } from './utils/regexp';
+import { PUNCTUATION, longTextReg, imgBase64Reg, imgDrawioXmlReg } from './utils/regexp';
 import { escapeHTMLSpecialChar } from './utils/sanitize';
 import Logger from './Logger';
 import { configureMathJax } from './utils/mathjax';
@@ -48,6 +48,7 @@ export default class Engine {
     this.hooks = this.hookCenter.getHookList();
     this.md5Cache = {};
     this.md5StrMap = {};
+    this.cachedBigData = {};
     this.markdownParams = markdownParams;
     this.currentStrMd5 = [];
     this.globalConfig = markdownParams.engine.global;
@@ -214,7 +215,7 @@ export default class Engine {
       this.md5Cache[sign] = func(str);
       if (BUILD_ENV !== 'production') {
         // 生产环境屏蔽
-        Logger.log('markdown引擎渲染了：', str);
+        Logger.log('markdown引擎渲染了：', str, new Error().stack);
       }
     }
     return { sign, html: this.md5Cache[sign] };
@@ -224,14 +225,96 @@ export default class Engine {
     return this.$fireHookAction(md, 'paragraph', 'makeHtml', this.$dealSentenceByCache.bind(this));
   }
 
+  // 缓存大文本数据，用以提升渲染性能
+  $cacheBigData(md) {
+    let $md = md.replace(imgBase64Reg, (whole, m1, m2) => {
+      const cacheKey = `bigDataBegin${this.hash(m2)}bigDataEnd`;
+      this.cachedBigData[cacheKey] = m2;
+      return `${m1}${cacheKey})`;
+    });
+    $md = $md.replace(imgDrawioXmlReg, (whole, m1, m2) => {
+      const cacheKey = `bigDataBegin${this.hash(m2)}bigDataEnd`;
+      this.cachedBigData[cacheKey] = m2;
+      return `${m1}${cacheKey}}`;
+    });
+    $md = $md.replace(longTextReg, (whole, m1, m2) => {
+      const cacheKey = `bigDataBegin${this.hash(m2)}bigDataEnd`;
+      this.cachedBigData[cacheKey] = m2;
+      return `${m1}${cacheKey}}`;
+    });
+    return $md;
+  }
+
+  $deCacheBigData(md) {
+    return md.replace(/bigDataBegin[^\n]+?bigDataEnd/g, (whole) => {
+      return this.cachedBigData[whole];
+    });
+  }
+
+  /**
+   * 流式输出场景时，在最后增加一个光标占位
+   * @param {string} md 内容
+   * @returns {string}
+   */
+  $setFlowSessionCursorCache(md) {
+    if (this.$cherry.options.engine.global.flowSessionContext && this.$cherry.options.engine.global.flowSessionCursor) {
+      return `${md}CHERRY_FLOW_SESSION_CURSOR`;
+    }
+    return md;
+  }
+
+  /**
+   * 流式输出场景时，把最后的光标占位替换为配置的dom元素，并在一段时间后删除该元素
+   * @param {string} md 内容
+   * @returns {string}
+   */
+  $clearFlowSessionCursorCache(md) {
+    if (this.$cherry.options.engine.global.flowSessionCursor) {
+      if (this.clearCursorTimer) {
+        clearTimeout(this.clearCursorTimer);
+      }
+      this.clearCursorTimer = setTimeout(() => {
+        this.$cherry.clearFlowSessionCursor();
+      }, 2560);
+      return md.replace(/CHERRY_FLOW_SESSION_CURSOR/g, this.$cherry.options.engine.global.flowSessionCursor);
+    }
+    return md;
+  }
+
   /**
    * @param {string} md md字符串
-   * @returns {string} 获取html
+   * @param {'string'|'object'} returnType 返回格式，string：返回html字符串，object：返回结构化数据
+   * @returns {string|HTMLCollection} 获取html
    */
-  makeHtml(md) {
-    let $md = this.$beforeMakeHtml(md);
+  makeHtml(md, returnType = 'string') {
+    let $md = this.$setFlowSessionCursorCache(md);
+    $md = this.$cacheBigData($md);
+    $md = this.$beforeMakeHtml($md);
     $md = this.$dealParagraph($md);
     $md = this.$afterMakeHtml($md);
+    this.$fireHookAction($md, 'paragraph', '$cleanCache');
+    $md = this.$deCacheBigData($md);
+    $md = this.$clearFlowSessionCursorCache($md);
+    if (returnType === 'object') {
+      let ret = null;
+      if (typeof window.DOMParser !== 'undefined') {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString($md, 'text/html');
+        ret = doc.querySelector('body').children;
+      } else {
+        const tmpDiv = document.createElement('div');
+        tmpDiv.innerHTML = $md;
+        ret = tmpDiv.children;
+      }
+      return ret;
+    }
+    return $md;
+  }
+
+  makeHtmlForBlockquote(md) {
+    let $md = md;
+    $md = this.$dealParagraph($md);
+    $md = this.$fireHookAction($md, 'paragraph', 'afterMakeHtml');
     return $md;
   }
 

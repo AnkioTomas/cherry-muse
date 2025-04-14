@@ -114,6 +114,7 @@ export default class Cherry extends CherryStatic {
     const wrapperDom = this.createWrapper();
     // 创建编辑区
     const editor = this.createEditor();
+
     // 创建预览区
     const previewer = this.createPreviewer();
 
@@ -144,6 +145,13 @@ export default class Cherry extends CherryStatic {
     mountEl.appendChild(wrapperDom);
 
     editor.init(previewer);
+
+    // 初始化统计模块
+    if (this.options.editor.showStats !== false) {
+      this.stats = new Stats({
+        $cherry: this,
+      });
+    }
 
     this.createBubble();
 
@@ -554,13 +562,6 @@ export default class Cherry extends CherryStatic {
       autoScrollByCursor: this.options.autoScrollByCursor,
       ...this.options.editor,
     });
-
-    // 初始化统计模块
-    if (this.options.editor.showStats !== false) {
-      this.stats = new Stats({
-        $cherry: this,
-      });
-    }
 
     return this.editor;
   }

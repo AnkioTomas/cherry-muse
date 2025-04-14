@@ -7,9 +7,9 @@ meta:
     content: super duper SEO
 ---	
 
-# {{ meta.0.name }}
+# 支持frontMatter语法
 
-使用变量访问效果 {{ lang }}
+使用变量访问效果 {{ lang }}，就像我说的一样：{{ meta.0.name }}
 
 > 也可以在js中使用`Cherry.frontMatter`访问frontMatter变量
 
