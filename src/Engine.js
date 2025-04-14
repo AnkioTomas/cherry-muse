@@ -215,7 +215,7 @@ export default class Engine {
       this.md5Cache[sign] = func(str);
       if (BUILD_ENV !== 'production') {
         // 生产环境屏蔽
-        Logger.log('markdown引擎渲染了：', str, new Error().stack);
+        Logger.log('markdown引擎渲染了：', str);
       }
     }
     return { sign, html: this.md5Cache[sign] };
