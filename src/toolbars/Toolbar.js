@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { mac } from 'codemirror/src/util/browser';
 import HookCenter from './HookCenter';
 import Event from '@/Event';
 import { createElement } from '@/utils/dom';
