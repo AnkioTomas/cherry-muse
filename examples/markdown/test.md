@@ -379,19 +379,19 @@ https://example.com?param=中文
 # 视频
 
 
-!video[不带封面演示视频](https://tencent.github.io/cherry-markdown/examples/images/demo.mp4)
-!video[带封面演示视频](https://tencent.github.io/cherry-markdown/examples/images/demo.mp4){poster=https://dummyimage.com/640x4:3/}
+!video[不带封面演示视频](https://tencent.github.io/cherry-markdown/examples/assets/images/demo.mp4)
+!video[带封面演示视频](https://tencent.github.io/cherry-markdown/examples/assets/images/demo.mp4){poster=https://dummyimage.com/640x4:3/}
 
 
 
 # 文件
 
 
-!file[文件名|类型|密码](https://tencent.github.io/cherry-markdown/examples/images/demo.mp4)
+!file[文件名|类型|密码](https://tencent.github.io/cherry-markdown/examples/assets/images/demo.mp4)
 
-!file[文件名|mp3](https://tencent.github.io/cherry-markdown/examples/images/demo.mp4)
+!file[文件名|mp3](https://tencent.github.io/cherry-markdown/examples/assets/images/demo.mp4)
 
-!file[文件名|mp4](https://tencent.github.io/cherry-markdown/examples/images/demo.mp4)
+!file[文件名|mp4](https://tencent.github.io/cherry-markdown/examples/assets/images/demo.mp4)
 
 
 

@@ -24,7 +24,7 @@ import Event from './Event';
 import { addEvent, removeEvent } from './utils/event';
 import { exportPDF, exportMarkdownFile, exportHTMLFile } from './utils/export';
 import PreviewerBubble from './toolbars/PreviewerBubble';
-import LazyLoadImg from '@/utils/lazyLoadImg';
+import LazyLoader from '@/utils/LazyLoader';
 
 let onScroll = () => {}; // store in memory for remove event
 
@@ -90,20 +90,6 @@ export default class Previewer {
         loadingImgPath: '',
         // 同一时间最多有几个图片请求，最大同时加载6张图片
         maxNumPerTime: 2,
-        // 不进行懒加载处理的图片数量，如果为0，即所有图片都进行懒加载处理， 如果设置为-1，则所有图片都不进行懒加载处理
-        noLoadImgNum: 5,
-        // 首次自动加载几张图片（不论图片是否滚动到视野内），autoLoadImgNum = -1 表示会自动加载完所有图片
-        autoLoadImgNum: 5,
-        // 针对加载失败的图片 或 beforeLoadOneImgCallback 返回false 的图片，最多尝试加载几次，为了防止死循环，最多5次。以图片的src为纬度统计重试次数
-        maxTryTimesPerSrc: 2,
-        // 加载一张图片之前的回调函数，函数return false 会终止加载操作
-        beforeLoadOneImgCallback: (img) => {},
-        // 加载一张图片失败之后的回调函数
-        failLoadOneImgCallback: (img) => {},
-        // 加载一张图片之后的回调函数，如果图片加载失败，则不会回调该函数
-        afterLoadOneImgCallback: (img) => {},
-        // 加载完所有图片后调用的回调函数
-        afterLoadAllImgCallback: () => {},
       },
     };
 
@@ -129,8 +115,7 @@ export default class Previewer {
     this.editor = editor;
     this.bindDrag();
     this.$initPreviewerBubble();
-    this.lazyLoadImg = new LazyLoadImg(this.options.lazyLoadImg, this);
-    this.lazyLoadImg.doLazyLoad();
+    this.lazyLoadImg = new LazyLoader(this.options.lazyLoadImg, this);
     this.bindClick();
     this.onMouseDown();
     this.onSizeChange();
@@ -187,7 +172,7 @@ export default class Previewer {
       html = this.getDomContainer().innerHTML;
     }
     // 需要未加载的图片替换成原始图片
-    html = this.lazyLoadImg.changeDataSrc2Src(html);
+    html = this.lazyLoadImg.transformLoadedDataSrcToSrc(html);
     if (!wrapTheme || !this.$cherry.wrapperDom) {
       return html;
     }
@@ -690,7 +675,7 @@ export default class Previewer {
 
   update(html) {
     // 更新时保留图片懒加载逻辑
-    const newHtml = this.lazyLoadImg.changeSrc2DataSrc(html);
+    const newHtml = this.lazyLoadImg.transformSrcToDataSrc(html);
     if (!this.isPreviewerHidden()) {
       // 标记当前正在更新预览区域，锁定同步滚动功能
       window.clearTimeout(this.syncScrollLockTimer);
