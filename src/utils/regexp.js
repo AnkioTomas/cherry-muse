@@ -251,7 +251,7 @@ export function getPanelRule() {
  */
 export function getDetailRule() {
   const ret = {
-    begin: /(?:^|\n)(\n*(?:[^\S\n]*))\+\+\+([-]{0,1})\s+([^\n]+)\n/,
+    begin: /(?:^|\n)(\n*[^\S\n]*)\+\+([+-]?)\s+([^\n]+)\n/,
     content: /([\w\W]+?)/,
     end: /\n[ \t]*\+\+\+[ \t]*(?=$|\n+)/,
   };
