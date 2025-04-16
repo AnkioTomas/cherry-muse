@@ -189,10 +189,4 @@ export default class LazyLoader {
     this.failedMap.clear();
     this.loadedSet.clear();
   }
-
-  observeNewElement(el) {
-    if (this.getLazyAttribute(el)) {
-      this.observer.observe(el);
-    }
-  }
 }
