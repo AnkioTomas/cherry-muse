@@ -594,7 +594,7 @@ export default class Previewer {
     result.forEach((change) => {
       if (newContent[change.newIndex].dom) {
         // 把已经加载过的图片的data-src变成src
-        newContent[change.newIndex].dom.innerHTML = this.lazyLoadImg.changeLoadedDataSrc2Src(
+        newContent[change.newIndex].dom.innerHTML = this.lazyLoadImg.transformLoadedDataSrcToSrc(
           newContent[change.newIndex].dom.innerHTML,
         );
       }
