@@ -75,9 +75,6 @@ function getEmojiByKey(key) {
 
 export function getEmoji(key, options, isKey = false) {
   const emoji = getEmojiByKey(key);
-  if (!emoji) {
-    return null;
-  }
   if (options.useUnicode) {
     try {
       return convertToUnicode(isKey ? key : emoji);
