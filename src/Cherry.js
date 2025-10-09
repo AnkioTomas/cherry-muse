@@ -72,6 +72,9 @@ export default class Cherry extends CherryStatic {
     if (this.options.isPreviewOnly || this.options.editor.defaultModel === 'previewOnly') {
       this.options.toolbars.showToolbar = false;
       this.options.editor.defaultModel = 'previewOnly';
+      // 在纯预览模式下不应触发编辑器聚焦导致的页面滚动
+      this.options.editor.codemirror = this.options.editor.codemirror || {};
+      this.options.editor.codemirror.autofocus = false;
       this.status.editor = 'hide';
       this.status.toolbar = 'hide';
     }
@@ -641,8 +644,11 @@ export default class Cherry extends CherryStatic {
         }
 
         Event.emit('editor', 'change', that);
-        codemirror.scrollIntoView(null);
-        this.editor.restoreDocumentScroll();
+        // 仅在编辑器可见时才触发编辑器滚动与文档滚动恢复，避免影响纯预览页面滚动
+        if (this.status.editor === 'show') {
+          codemirror.scrollIntoView(null);
+          this.editor.restoreDocumentScroll();
+        }
       }, interval);
     } catch (e) {
       throw new NestedError(e);
