@@ -25,11 +25,6 @@ export default class Color extends MenuBase {
     this.setName('color', 'format_color_fill');
     // this.bubbleMenu = true;
     this.bubbleColor = new BubbleColor($cherry);
-    const that = this;
-    this.showing = false;
-    Event.on('toolbar', 'hideAll', () => {
-      that.showing = that.bubbleColor.isShow();
-    });
   }
 
   $testIsColor(type, selection) {
@@ -85,11 +80,6 @@ export default class Color extends MenuBase {
       });
       return `${begin}${$selection}${end}`;
     }
-    if (this.showing) {
-      this.bubbleColor.hide();
-      return null;
-    }
-    this.showing = true;
 
     // 定位调色盘应该出现的位置
     // 该按钮可能出现在顶部工具栏，
@@ -291,12 +281,5 @@ class BubbleColor {
     this.dom.style.top = `${top}px`;
     this.dom.style.display = 'block';
     this.$color = $color;
-  }
-
-  isShow() {
-    return this.dom.style.display === 'block';
-  }
-  hide() {
-    this.dom.style.display = 'none';
   }
 }

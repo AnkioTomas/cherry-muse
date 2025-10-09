@@ -16,7 +16,7 @@
 import MenuBase from '@/toolbars/MenuBase';
 import { gfmUnicode } from '@/core/hooks/Emoji.config';
 import { getEmoji } from '@/core/hooks/Emoji';
-import Event from '@/Event';
+
 /**
  * 插入Emoji的按钮
  */
@@ -26,11 +26,6 @@ export default class Emoji extends MenuBase {
     this.setName('emoji', 'mood');
     // this.bubbleMenu = true;
     this.bubbleEmoji = new BubbleEmoji($cherry);
-    const that = this;
-    this.showing = false;
-    Event.on('toolbar', 'hideAll', () => {
-      that.showing = that.bubbleEmoji.isShow();
-    });
   }
 
   /**
@@ -47,12 +42,6 @@ export default class Emoji extends MenuBase {
       return `:${emoji}:`;
     }
 
-    if (this.showing) {
-      this.bubbleEmoji.hide();
-      return null;
-    }
-    this.showing = true;
-
     let top = 0;
     let left = 0;
     if (event.target.closest('.cherry-bubble')) {
@@ -67,7 +56,6 @@ export default class Emoji extends MenuBase {
       left = clientRect.left;
     }
     this.updateMarkdown = false;
-    // 【TODO】需要增加getMoreSelection的逻辑
     this.bubbleEmoji.show({
       left,
       top,
@@ -311,11 +299,5 @@ ${icon}
     this.dom.style.top = `${top}px`;
     this.dom.style.display = 'block';
     this.$emoji = $emoji;
-  }
-  isShow() {
-    return this.dom.style.display === 'block';
-  }
-  hide() {
-    this.dom.style.display = 'none';
   }
 }
