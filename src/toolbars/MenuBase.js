@@ -123,6 +123,9 @@ export default class MenuBase {
     this.cacheOnce = false;
     return ret;
   }
+  getActiveSubMenuIndex(subMenuDomPanel) {
+    return -1;
+  }
 
   hasCacheOnce() {
     return this.cacheOnce !== false;
