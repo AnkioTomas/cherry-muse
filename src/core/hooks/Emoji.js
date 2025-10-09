@@ -62,10 +62,10 @@ export function fuzzySearchKeysWithValues(query, options) {
   return combinedValues;
 }
 
-function getEmojiByKey(key) {
+function getEmojiByName(name) {
   for (const emojiCategoryKey in gfmUnicode.emojis) {
     const emojiCategory = gfmUnicode.emojis[emojiCategoryKey];
-    const emoji = emojiCategory.find((emoji) => emoji.a.includes(key));
+    const emoji = emojiCategory.find((emoji) => emoji.a.includes(name));
     if (emoji) {
       return emoji.e;
     }
@@ -73,21 +73,32 @@ function getEmojiByKey(key) {
   return null;
 }
 
-export function getEmoji(key, options, isKey = false) {
-  const emoji = getEmojiByKey(key);
-  if (!emoji) {
-    return null;
+/**
+ *
+ * @param nameOrUnicode
+ * @param options
+ * @param isUnicode
+ * @returns {string|*|null}
+ */
+export function getEmoji(nameOrUnicode, options, isUnicode = false) {
+  let unicode = nameOrUnicode;
+  if (!isUnicode) {
+    unicode = getEmojiByName(nameOrUnicode);
+    if (unicode === null) {
+      return null;
+    }
   }
+
   if (options.useUnicode) {
     try {
-      return convertToUnicode(isKey ? key : emoji);
+      return convertToUnicode(unicode);
     } catch (e) {
       console.error(e);
       return null;
     }
   } else {
-    const src = options.resourceURL.replace(/\$\{code\}/g, (isKey ? key : emoji).toLowerCase());
-    return `<img class="emoji" src="${src}" alt="${_e(key)}" />`;
+    const src = options.resourceURL.replace(/\$\{code\}/g, unicode.toLowerCase());
+    return `<img class="emoji" src="${src}" alt="${_e(unicode)}" />`;
   }
 }
 
@@ -155,12 +166,12 @@ export default class Emoji extends SyntaxBase {
     if (!this.test(str)) {
       return str;
     }
-    return str.replace(this.RULE.reg, (match, emojiKey) => {
+    return str.replace(this.RULE.reg, (match, emojiName) => {
       // 先走自定义渲染逻辑
       if (this.options.customHandled && typeof this.options.customRenderer === 'function') {
-        return this.options.customRenderer(emojiKey);
+        return this.options.customRenderer(emojiName);
       }
-      const emoji = getEmoji(emojiKey, this.options);
+      const emoji = getEmoji(emojiName, this.options);
       if (emoji === null) return str;
       return emoji;
     });

@@ -38,7 +38,7 @@ export default class Emoji extends MenuBase {
    * @param {string} selection 被用户选中的文本内容
    * @param {string} shortKey 快捷键参数，本函数不处理这个参数
    * @param {Event & {target:HTMLElement}} event 点击事件，用来从被点击的调色盘中获得对应的颜色
-   * @returns 回填到编辑器光标位置/选中文本区域的内容
+   * @returns string
    */
   onClick(selection, shortKey = '', event) {
     if (this.hasCacheOnce()) {
@@ -81,7 +81,6 @@ export default class Emoji extends MenuBase {
  */
 class BubbleEmoji {
   constructor($cherry) {
-    this.hasShow = false;
     this.editor = $cherry.editor;
     this.$cherry = $cherry;
     this.init();
@@ -269,7 +268,7 @@ ${icon}
         .map((emoji) => {
           return `<span class="cherry-emoji-item" data-emoji="${emoji.emoji}" data-alias="${
             emoji.aliases[0]
-          }">${getEmoji(emoji.emoji, this.$cherry.options.engine.syntax.emoji, true)}</span>`;
+          }">${getEmoji(emoji.emoji, this.$cherry.options.engine.syntax.emoji)}</span>`;
         })
         .join('');
       const searchPanel = this.dom.querySelector('.cherry-emoji-item_search .cherry-emoji-container');
