@@ -24,7 +24,7 @@ import Event from './Event';
 import { addEvent, removeEvent } from './utils/event';
 import { exportPDF, exportMarkdownFile, exportHTMLFile } from './utils/export';
 import PreviewerBubble from './toolbars/PreviewerBubble';
-import LazyLoader from '@/utils/LazyLoader';
+import LazyLoadImg from '@/utils/LazyLoadImg';
 
 let onScroll = () => {}; // store in memory for remove event
 
@@ -115,7 +115,8 @@ export default class Previewer {
     this.editor = editor;
     this.bindDrag();
     this.$initPreviewerBubble();
-    this.lazyLoadImg = new LazyLoader(this.options.lazyLoadImg, this);
+    this.lazyLoadImg = new LazyLoadImg(this.options.lazyLoadImg, this);
+    this.lazyLoadImg.doLazyLoad();
     this.bindClick();
     this.onMouseDown();
     this.onSizeChange();
@@ -172,7 +173,7 @@ export default class Previewer {
       html = this.getDomContainer().innerHTML;
     }
     // 需要未加载的图片替换成原始图片
-    html = this.lazyLoadImg.transformLoadedDataSrcToSrc(html);
+    html = this.lazyLoadImg.changeDataSrc2Src(html);
     if (!wrapTheme || !this.$cherry.wrapperDom) {
       return html;
     }
@@ -594,7 +595,7 @@ export default class Previewer {
     result.forEach((change) => {
       if (newContent[change.newIndex].dom) {
         // 把已经加载过的图片的data-src变成src
-        newContent[change.newIndex].dom.innerHTML = this.lazyLoadImg.transformLoadedDataSrcToSrc(
+        newContent[change.newIndex].dom.innerHTML = this.lazyLoadImg.changeDataSrc2Src(
           newContent[change.newIndex].dom.innerHTML,
         );
       }
@@ -675,7 +676,7 @@ export default class Previewer {
 
   update(html) {
     // 更新时保留图片懒加载逻辑
-    const newHtml = this.lazyLoadImg.transformSrcToDataSrc(html);
+    const newHtml = this.lazyLoadImg.changeSrc2DataSrc(html);
     if (!this.isPreviewerHidden()) {
       // 标记当前正在更新预览区域，锁定同步滚动功能
       window.clearTimeout(this.syncScrollLockTimer);
