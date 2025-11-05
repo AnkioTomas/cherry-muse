@@ -15,7 +15,7 @@
  */
 import ParagraphBase from '@/core/ParagraphBase';
 import Prism from 'prismjs';
-import { escapeHTMLSpecialChar } from '@/utils/sanitize';
+import { escapeHTMLSpecialChar, unescapeHTMLSpecialChar } from '@/utils/sanitize';
 import { getTableRule, getCodeBlockRule } from '@/utils/regexp';
 import { prependLineFeedForParagraph } from '@/utils/lineFeed';
 
@@ -434,6 +434,7 @@ export default class CodeBlock extends ParagraphBase {
 
   constructor({ externals, config }) {
     super({ needCache: true });
+
     CodeBlock.inlineCodeCache = {};
     this.codeCache = {};
     this.customLang = [];
@@ -570,6 +571,7 @@ export default class CodeBlock extends ParagraphBase {
   renderCodeBlock($code, $lang, sign, lines) {
     let cacheCode = $code;
     let lang = $lang;
+    const highlighted = false;
     const that = this;
     if (this.customHighlighter) {
       // 平台自定义代码块样式
@@ -583,6 +585,7 @@ export default class CodeBlock extends ParagraphBase {
         cacheCode = Prism.highlight(cacheCode, Prism.languages[lang], lang);
         cacheCode = this.renderLineNumber(cacheCode);
       } else {
+        cacheCode = escapeHTMLSpecialChar(cacheCode);
         Prism.plugins.autoloader.loadLanguages(
           [lang],
           function () {
@@ -622,13 +625,34 @@ export default class CodeBlock extends ParagraphBase {
 
   $highlightCodeBlock(code, lang, clazz) {
     const language = lang;
-    let cacheCode = Prism.highlight(code, Prism.languages[language], language);
+    let cacheCode = Prism.highlight(unescapeHTMLSpecialChar(code), Prism.languages[language], language);
     cacheCode = this.renderLineNumber(cacheCode);
     cacheCode = this.wrapCode(cacheCode, language);
+    const cherry = this.$engine.$cherry;
     // 查找指定id
-    document.querySelectorAll(clazz).forEach((codeBlock) => {
-      codeBlock.innerHTML = cacheCode;
+    setTimeout(function () {
+      console.log(clazz, cherry.wrapperDom.querySelectorAll(clazz), document.querySelectorAll(clazz));
+    }, 20000);
+    this.$waitElement(clazz, 0, function (elements) {
+      elements.forEach((codeBlock) => {
+        codeBlock.innerHTML = cacheCode;
+      });
     });
+  }
+
+  $waitElement(clazz, times, cb) {
+    const that = this;
+    if (times > 100) {
+      console.warn(`times ${times} milliseconds, clazz ${clazz} not found`);
+      return;
+    }
+    if (document.querySelectorAll(clazz).length === 0) {
+      setTimeout(function () {
+        that.$waitElement(clazz, times + 1, cb);
+      }, 500);
+    } else {
+      cb(document.querySelectorAll(clazz));
+    }
   }
 
   /**
