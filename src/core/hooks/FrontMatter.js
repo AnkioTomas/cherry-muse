@@ -35,7 +35,6 @@ export default class FrontMatter extends ParagraphBase {
           this.$engine.$cherry.frontMatter = {};
         }
       }
-      console.log(this.$engine.$cherry.frontMatter);
       return '';
     });
   }

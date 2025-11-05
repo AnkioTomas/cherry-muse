@@ -403,6 +403,7 @@ const defaultConfig = {
   locale: 'zh_CN',
   // cherry初始化后是否检查 location.hash 尝试滚动到对应位置
   autoScrollByHashAfterInit: true,
+  stats: true,
 };
 if (window.outerWidth <= 600) {
   defaultConfig.toolbars.toolbar = ['switchModel'];
