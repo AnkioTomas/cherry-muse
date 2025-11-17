@@ -16,15 +16,6 @@ export const Theme = {
         Theme.applyTheme($cherry, systemPrefersDarkScheme ? 'dark' : 'light');
       }
     });
-
-    window.addEventListener('resize', function () {
-      if ($cherry.model === 'previewOnly') return;
-      if (window.outerWidth > 600) {
-        $cherry.switchModel('edit&preview');
-      } else {
-        $cherry.switchModel('editOnly');
-      }
-    });
   },
   isDark() {
     const theme = Theme.getTheme();
