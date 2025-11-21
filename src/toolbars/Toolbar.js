@@ -80,6 +80,7 @@ export default class Toolbar {
       dom: document.createElement('div'),
       buttonConfig: ['bold'],
       customMenu: [],
+      position: 'left',
     };
 
     Object.assign(this.options, options);
@@ -171,9 +172,14 @@ export default class Toolbar {
   }
 
   appendMenusToDom(menus) {
-    const toolbarLeft = createElement('div', 'toolbar-left');
-    toolbarLeft.appendChild(menus);
-    this.options.dom.appendChild(toolbarLeft);
+    const position = this.options.position === 'right' ? 'right' : 'left';
+    const className = `toolbar-${position}`;
+    let toolbarContainer = this.options.dom.querySelector(`.${className}`);
+    if (!toolbarContainer) {
+      toolbarContainer = createElement('div', className);
+      this.options.dom.appendChild(toolbarContainer);
+    }
+    toolbarContainer.appendChild(menus);
   }
 
   setSubMenuPosition(menuObj, subMenuObj) {

@@ -130,6 +130,7 @@ export default class Cherry extends CherryStatic {
     $expectTarget(this.options.toolbars.toolbar, Array);
     // 创建顶部工具栏
     this.createToolbar();
+    this.createToolbarRight();
 
     const wrapperFragment = document.createDocumentFragment();
     wrapperFragment.appendChild(this.toolbar.options.dom);
@@ -491,6 +492,38 @@ export default class Cherry extends CherryStatic {
     return this.toolbar;
   }
 
+  createToolbarRight() {
+    if (!this.toolbarContainer) {
+      return null;
+    }
+    const config = this.options.toolbars.toolbarRight;
+    const toolbarRightDom = this.toolbarContainer.querySelector('.toolbar-right');
+    if (toolbarRightDom) {
+      toolbarRightDom.remove();
+    }
+    if (config === false || config === null || typeof config === 'undefined') {
+      this.toolbarRight = null;
+      return null;
+    }
+    $expectTarget(config, Array);
+    if (config.length === 0) {
+      this.toolbarRight = null;
+      return null;
+    }
+    this.toolbarRight = new Toolbar({
+      dom: this.toolbarContainer,
+      position: 'right',
+      $cherry: this,
+      buttonConfig: config,
+      customMenu: this.options.toolbars.customMenu,
+      shortcutKey: this.options.toolbars.shortcutKey,
+    });
+    if (this.toolbar) {
+      this.toolbar.collectMenuInfo(this.toolbarRight);
+    }
+    return this.toolbarRight;
+  }
+
   /**
    * 动态重置工具栏配置
    * @public
@@ -499,7 +532,7 @@ export default class Cherry extends CherryStatic {
    * @returns {Boolean}
    */
   resetToolbar(type, toolbar) {
-    const $type = /(toolbar|sidebar|bubble|float|toc)/.test(type) ? type : false;
+    const $type = /(toolbar|toolbarRight|sidebar|bubble|float|toc)/.test(type) ? type : false;
     if ($type === false) {
       return false;
     }
