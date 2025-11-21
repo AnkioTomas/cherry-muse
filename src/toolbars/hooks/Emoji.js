@@ -256,7 +256,7 @@ ${icon}
         .map((emoji) => {
           return `<span class="cherry-emoji-item" data-emoji="${emoji.emoji}" data-alias="${
             emoji.aliases[0]
-          }">${getEmoji(emoji.emoji, this.$cherry.options.engine.syntax.emoji)}</span>`;
+          }">${getEmoji(emoji.emoji, this.$cherry.options.engine.syntax.emoji, true)}</span>`;
         })
         .join('');
       const searchPanel = this.dom.querySelector('.cherry-emoji-item_search .cherry-emoji-container');
