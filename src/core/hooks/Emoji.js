@@ -173,7 +173,7 @@ export default class Emoji extends SyntaxBase {
       }
       const emoji = getEmoji(emojiName, this.options);
       if (emoji === null) return str;
-      return `<span>${emoji}</span>`;
+      return `<span class="cherry-emoji">${emoji}</span>`;
     });
   }
 
