@@ -1,0 +1,40 @@
+# Development files
+examples/
+build/
+tools/
+
+# Test files
+test/
+jest.config.ts
+
+# Build artifacts
+node_modules/
+*.log
+*.tgz
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# CI/CD
+.github/
+.husky/
+
+# Misc
+*.md
+!README.md
+.DS_Store
+.eslintrc*
+.prettierrc*
+babel.config.js
+jsconfig.json
+yarn.lock
+package-lock.json
+

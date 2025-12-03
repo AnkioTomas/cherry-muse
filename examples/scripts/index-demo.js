@@ -15,13 +15,24 @@ var help = Cherry.createMenuHook('帮助中心',  {
       }},
   ]
 });
+let config1 = {
+  id:"markdown",
+  toolbars: {
 
+    customMenu: {
+      help: help
+    },
+    toolbarRight: ['fullScreen', '|', 'export', '|','help', '|', 'switchModel'],
+  }
+}
 let config2 = {
   id:"markdown",
-
-
+  editor:{
+    defaultModel: "editOnly"
+  },
+  stats: false,
 }
-window.cherry = new Cherry(config2);
+window.cherry = new Cherry(config1);
 
 
 fetch('./markdown/bigData.md').then((response) => response.text()).then((value) => {

@@ -1,55 +1,139 @@
-<p align="center"><img src="logo/android-chrome-192x192.png" alt="cherry logo" width="100%"/></p>
+<p align="center"><img src="logo/android-chrome-192x192.png" alt="cherry logo" width="100px"/></p>
 
-## 介绍
+# Cherry Muse
 
-Cherry Muse 是基于腾讯开源的[CherryMarkdown](https://github.com/Tencent/cherry-markdown) 深度定制的Markdown编辑器，增加了一些新的特性，删除了一些不太重要的特性，并且进行了一定程度的精简，完整版体积比原版更小。
+> 基于 [Cherry Markdown](https://github.com/Tencent/cherry-markdown) 的深度定制版本
 
-编译出来的`cherry-markdown.min.js`约800KB，远小于官方编译版的4.8MB
+## 为什么选择 Cherry Muse？
 
-## 主要改动
-- UI：
-  - 主题调整为内置light和dark，自动跟随系统切换；
-  - 字体图标使用Google Fonts取代；
-  - 增强了markdown编辑区域的语法提示效果，趋向于typora；
-  - 重新设计了编辑器的UI,整体更美观；
-- 语法：
-  - 增加`!file[]()`这种文件渲染语法；
-  - 增加`卡片列表语法`；
-  - 补全`echarts`功能；
-  - 增加`==`高亮语法；
-  - 增加`徽章`语法；
-  - 移除plantuml语法；
-  - checklist由图标换成input；
-  - 增加iframe渲染语法；
-  - frontMatter完整语法支持，可以使用`yaml`和`json`,可以在markdown中使用变量或者在js中的cherry对象使用frontMatter变量访问；
-- 功能：
-  - 重新规划联想功能；
-  - 新增Emoji自动联想；
-  - 自动联想深拷贝修复；
-  - 移除浮动框；
-  - ~~新增编辑页显示左侧目录列表~~（已替换为官方方案）；
-  - 删除导出长图的功能；
-  - 删除在预览时修改代码语言的功能；
-  - 分离mermaid，使用API服务端渲染（也可以自己引入mermaid.js,则使用前端渲染）；
-  - 分离echarts，使用API服务端渲染（也可以自己引入echarts.js,则使用前端渲染）；
-  - 分离MathJax，使用API服务端渲染（也可以自己引入MathJax.js,则使用前端渲染）；
-  - 删除英语语言包，完善中文语言包；
-  - 所有需要前端渲染的图标，默认均使用API调用；
-  - 移除FloatMenu；
-  - 字数统计功能改成左下角显示；
-  - 重新优化编辑器预览切换功能，更自然；
-- 事件：
-  - 新增编辑器渲染完成事件；
-  - 新增二级菜单打开事件；
-  - 新增编辑器模式修改事件；
-- 代码：
-  - 移除typescript相关内容；
-  - 删除所有的测试用例；
+**体积优化**: 编译后的 `cherry-markdown.min.js` 仅 **800KB**，相比官方版本的 4.8MB 减少了 **83%**
 
-## 其他
+**核心改进**:
+- 🎨 现代化 UI 设计，自动跟随系统主题切换
+- ⚡ 更激进的按需加载策略（Mermaid/ECharts/MathJax 支持 API 渲染）
+- 🔧 增强的 Markdown 语法支持（文件渲染、卡片列表、高亮、徽章等）
+- 🌐 专注中文环境优化
 
-定期跟随Cherry Markdown的更新，保持同步。
+## 快速开始
 
-## License
+### 安装
+
+```bash
+npm install cherry-muse
+```
+
+### 基础使用
+
+```javascript
+import Cherry from 'cherry-muse';
+
+const cherry = new Cherry({
+  id: 'markdown-container',
+  value: '# Hello Cherry Muse'
+});
+```
+
+### CDN 引入
+
+```html
+<link href="dist/cherry-markdown.min.css" rel="stylesheet">
+<script src="dist/cherry-markdown.min.js"></script>
+
+<div id="markdown-container"></div>
+
+<script>
+  const cherry = new Cherry({
+    id: 'markdown-container',
+    value: '# Hello Cherry Muse'
+  });
+</script>
+```
+
+## 主要特性
+
+### 🎨 UI/UX 增强
+
+- 内置 `light` 和 `dark` 主题，自动跟随系统切换
+- 使用 Google Fonts 图标替代原有字体图标
+- Typora 风格的语法提示效果
+- 重新设计的编辑器界面，更简洁现代
+
+### ✨ 新增语法
+
+| 语法 | 说明 | 示例 |
+|------|------|------|
+| 文件渲染 | 渲染文件链接 | `!file[文件名](url)` |
+| 高亮 | 文本高亮显示 | `==高亮文本==` |
+| 徽章 | 显示徽章 | 徽章语法 |
+| 卡片列表 | 卡片样式列表 | 卡片列表语法 |
+| Iframe | 嵌入外部页面 | iframe 语法 |
+| FrontMatter | 完整的元数据支持 | 支持 `yaml` 和 `json` |
+
+### ⚡ 性能优化
+
+**按需加载策略**：大型渲染库支持 API 服务端渲染或前端引入
+- Mermaid 图表
+- ECharts 图表  
+- MathJax 公式
+
+这意味着：
+- 默认情况下使用 API 渲染，零前端体积
+- 需要离线环境？自行引入对应 JS 库即可切换为前端渲染
+
+### 🔧 功能优化
+
+**新增功能**:
+- Emoji 自动联想补全
+- 编辑器渲染完成事件
+- 二级菜单打开事件
+- 编辑器模式修改事件
+
+**改进功能**:
+- 重新设计的联想功能，修复深拷贝问题
+- Checklist 使用原生 `<input>` 替代图标
+- 字数统计移至左下角显示
+- 更流畅的预览切换体验
+
+**精简内容**:
+- 移除 PlantUML 语法
+- 移除浮动菜单（FloatMenu）
+- 移除导出长图功能
+- 移除预览时修改代码语言功能
+- 删除英语语言包，完善中文语言包
+
+### 🛠️ 开发体验
+
+- 移除 TypeScript 相关内容（纯 JavaScript）
+- 删除所有测试用例
+- 更小的构建产物
+
+## 与原版的区别
+
+Cherry Muse 是对 Cherry Markdown 的**精简优化版**，而非功能增强版。我们的理念是：
+
+```
+体积更小 + 核心功能完整 > 大而全但臃肿
+```
+
+**适合使用 Cherry Muse 的场景**:
+- 需要控制前端资源体积的项目
+- 主要面向中文用户的应用
+- 不需要 PlantUML、长图导出等边缘功能
+- 希望使用服务端渲染 Mermaid/ECharts 的项目
+
+**仍然建议使用原版的场景**:
+- 需要完整的国际化支持
+- 依赖 PlantUML 等被移除的功能
+- 团队已经深度依赖 TypeScript 类型定义
+
+## 维护策略
+
+定期跟随 Cherry Markdown 官方更新，保持同步。
+
+## 开源协议
 
 Apache-2.0
+
+---
+
+**基于 [Cherry Markdown](https://github.com/Tencent/cherry-markdown) 构建** | 感谢腾讯开源团队的优秀工作

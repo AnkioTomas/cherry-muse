@@ -1,11 +1,11 @@
 {
-  "name": "cherry-markdown",
+  "name": "cherry-muse",
   "license": "Apache-2.0",
-  "version": "0.8.29",
-  "description": "a new markdown editor",
+  "version": "1.0.0",
+  "description": "Lightweight Cherry Markdown fork with 83% smaller bundle size (800KB vs 4.8MB)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tencent/cherry-markdown.git"
+    "url": "git+https://github.com/AnkioTomas/cherry-muse.git"
   },
   "main": "./dist/cherry-markdown.min.js",
   "module": "./dist/cherry-markdown.esm.js",
@@ -16,7 +16,8 @@
   "files": [
     "dist",
     "src",
-    "test"
+    "README.md",
+    "LICENSE"
   ],
   "sideEffects": [
     "./dist/*.css"
@@ -50,9 +51,18 @@
     "examples": "serve -p 3000 ."
   },
   "keywords": [
-    "markdown"
+    "markdown",
+    "editor",
+    "wysiwyg",
+    "cherry",
+    "markdown-editor",
+    "lightweight"
   ],
-  "author": "Cherry Oteam",
+  "author": "ankio <ankio@ankio.net>",
+  "homepage": "https://github.com/AnkioTomas/cherry-muse#readme",
+  "bugs": {
+    "url": "https://github.com/AnkioTomas/cherry-muse/issues"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/eslint-parser": "^7.12.1",
