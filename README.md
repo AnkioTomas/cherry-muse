@@ -1,4 +1,4 @@
-<p align="center"><img src="logo/cover.png" alt="cherry logo" width="100%"/></p>
+<p align="center"><img src="logo/android-chrome-192x192.png" alt="cherry logo" width="100%"/></p>
 
 ## 介绍
 
