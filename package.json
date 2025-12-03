@@ -1,7 +1,7 @@
 {
   "name": "cherry-muse",
   "license": "Apache-2.0",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Lightweight Cherry Markdown fork with 83% smaller bundle size (800KB vs 4.8MB)",
   "repository": {
     "type": "git",
