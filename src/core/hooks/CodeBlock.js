@@ -15,7 +15,7 @@
  */
 import ParagraphBase from '@/core/ParagraphBase';
 import Prism from 'prismjs';
-import { escapeHTMLSpecialChar, unescapeHTMLSpecialChar } from '@/utils/sanitize';
+import { escapeHTMLSpecialChar } from '@/utils/sanitize';
 import { getTableRule, getCodeBlockRule } from '@/utils/regexp';
 import { prependLineFeedForParagraph } from '@/utils/lineFeed';
 
@@ -625,33 +625,30 @@ export default class CodeBlock extends ParagraphBase {
 
   $highlightCodeBlock(code, lang, clazz) {
     const language = lang;
-    let cacheCode = Prism.highlight(unescapeHTMLSpecialChar(code), Prism.languages[language], language);
+    // 直接使用原始代码，不做 unescapeHTMLSpecialChar，避免破坏代码完整性
+    let cacheCode = Prism.highlight(code, Prism.languages[language], language);
     cacheCode = this.renderLineNumber(cacheCode);
     cacheCode = this.wrapCode(cacheCode, language);
     const cherry = this.$engine.$cherry;
-    // 查找指定id
-    setTimeout(function () {
-      console.log(clazz, cherry.wrapperDom.querySelectorAll(clazz), document.querySelectorAll(clazz));
-    }, 20000);
-    this.$waitElement(clazz, 0, function (elements) {
+    this.$waitElement(cherry.wrapperDom, clazz, 0, (elements) => {
       elements.forEach((codeBlock) => {
         codeBlock.innerHTML = cacheCode;
       });
     });
   }
 
-  $waitElement(clazz, times, cb) {
-    const that = this;
+  $waitElement(container, clazz, times, cb) {
     if (times > 100) {
-      console.warn(`times ${times} milliseconds, clazz ${clazz} not found`);
+      console.warn(`${clazz} not found after ${times} retries`);
       return;
     }
-    if (document.querySelectorAll(clazz).length === 0) {
-      setTimeout(function () {
-        that.$waitElement(clazz, times + 1, cb);
+    const elements = container.querySelectorAll(clazz);
+    if (elements.length === 0) {
+      setTimeout(() => {
+        this.$waitElement(container, clazz, times + 1, cb);
       }, 500);
     } else {
-      cb(document.querySelectorAll(clazz));
+      cb(elements);
     }
   }
 
