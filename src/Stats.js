@@ -3,8 +3,6 @@ import Event from '@/Event';
 export default class Stats {
   constructor(options) {
     this.$cherry = options.$cherry;
-    console.log(options);
-    if (!this.$cherry.options.stats) return;
     this.container = null;
     this.stats = {
       characters: 0,
