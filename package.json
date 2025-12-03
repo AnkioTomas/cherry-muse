@@ -1,7 +1,7 @@
 {
   "name": "cherry-muse",
   "license": "Apache-2.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight Cherry Markdown fork with 83% smaller bundle size (800KB vs 4.8MB)",
   "repository": {
     "type": "git",
@@ -46,8 +46,6 @@
     "lint": "eslint --plugin file-progress --rule \"file-progress/activate: 1\" --ext .js .",
     "lint:fix": "yarn lint --fix",
     "lint:ci": "eslint --max-warnings=0 --ext .js .",
-    "prepare": "husky install",
-    "publish": "git push --follow-tags origin main",
     "examples": "serve -p 3000 ."
   },
   "keywords": [
