@@ -4,6 +4,8 @@
 
 > 基于 [Cherry Markdown](https://github.com/Tencent/cherry-markdown) 的深度定制版本
 
+**📖 [查看文档](https://cherry.ankio.net/)** | **🚀 [在线体验](https://cherry-muse.vercel.app/examples/index.html)** | **📦 [NPM](https://www.npmjs.com/package/cherry-muse)**
+
 ## 为什么选择 Cherry Muse？
 
 **体积优化**: 编译后的 `cherry-markdown.min.js` 仅 **800KB**，相比官方版本的 4.8MB 减少了 **83%**
@@ -125,6 +127,11 @@ Cherry Muse 是对 Cherry Markdown 的**精简优化版**，而非功能增强�
 - 需要完整的国际化支持
 - 依赖 PlantUML 等被移除的功能
 - 团队已经深度依赖 TypeScript 类型定义
+
+## 文档与资源
+
+- **📖 完整文档**: [https://cherry.ankio.net/](https://cherry.ankio.net/)
+- **🚀 在线演示**: [https://cherry-muse.vercel.app/examples/index.html](https://cherry-muse.vercel.app/examples/index.html)
 
 ## 维护策略
 
