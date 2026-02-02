@@ -35,6 +35,40 @@ export default class Blockquote extends ParagraphBase {
     // TODO: String.prototype.repeat polyfill
   }
 
+  getAlertInfo(line) {
+    const match = line.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/i);
+    if (match) {
+      return {
+        type: match[1].toUpperCase(),
+        remaining: line.replace(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/i, ''),
+      };
+    }
+    return null;
+  }
+
+  getPanelClass(type) {
+    const map = {
+      NOTE: 'note',
+      TIP: 'tip',
+      IMPORTANT: 'important',
+      WARNING: 'warning',
+      CAUTION: 'danger',
+    };
+    const t = map[type] || 'note';
+    return `cherry-panel cherry-panel__${t}`;
+  }
+
+  getPanelTitle(type) {
+    const map = {
+      NOTE: 'Note',
+      TIP: 'Tip',
+      IMPORTANT: 'Important',
+      WARNING: 'Warning',
+      CAUTION: 'Caution',
+    };
+    return map[type] || type;
+  }
+
   handleMatch(str, sentenceMakeFunc) {
     return str.replace(this.RULE.reg, (match, lines, content) => {
       const { sign: contentSign, html: parsedHtml } = sentenceMakeFunc(content);
@@ -47,9 +81,13 @@ export default class Blockquote extends ParagraphBase {
       const contentLines = parsedHtml.split('\n');
       const replaceReg = /^[>\s]+/;
       const countReg = />/g;
-      let lastLevel = 1;
-      let level = 0;
-      let handledHtml = `<blockquote data-sign="${sign}_${lineCount}" data-lines="${lineCount}">`;
+      let lastLevel = 0;
+      let handledHtml = '';
+      const tagStack = [];
+      const rootAttrs = ` data-sign="${sign}_${lineCount}" data-lines="${lineCount}"`;
+      let isRoot = true;
+      let skipNextBr = false;
+
       for (let i = 0; contentLines[i]; i++) {
         if (i !== 0) {
           const leadIndent = computeLeadingSpaces(contentLines[i]);
@@ -59,31 +97,63 @@ export default class Blockquote extends ParagraphBase {
           lastIndent = leadIndent;
         }
         /* eslint-disable no-loop-func */
-        const $line = contentLines[i].replace(replaceReg, (leadSymbol) => {
+        let currentLevel = 0;
+        let $line = contentLines[i].replace(replaceReg, (leadSymbol) => {
           const leadSymbols = leadSymbol.match(countReg);
           // 本行引用嵌套层级比上层要多
           if (leadSymbols && leadSymbols.length > lastLevel) {
-            level = leadSymbols.length;
+            currentLevel = leadSymbols.length;
           } else {
             // 否则保持当前缩进层级
-            level = lastLevel;
+            currentLevel = lastLevel;
           }
           return '';
         });
+
         // 同层级，且不为首行时补充一个换行
-        if (lastLevel === level && i !== 0) {
-          handledHtml += '<br>';
+        if (lastLevel === currentLevel && i !== 0) {
+          if (!skipNextBr) {
+            handledHtml += '<br>';
+          }
+          skipNextBr = false;
         }
+
         // 补充缩进
-        if (lastLevel < level) {
-          handledHtml += '<blockquote>'.repeat(level - lastLevel);
-          lastLevel = level;
+        if (lastLevel < currentLevel) {
+          for (let l = lastLevel + 1; l <= currentLevel; l++) {
+            let tagOpen = `<blockquote${isRoot ? rootAttrs : ''}>`;
+            let tagClose = '</blockquote>';
+
+            // Check for Alert
+            if (l === currentLevel) {
+              const alertInfo = this.getAlertInfo($line);
+              if (alertInfo) {
+                const className = this.getPanelClass(alertInfo.type);
+                const title = this.getPanelTitle(alertInfo.type);
+                tagOpen = `<div class="${className}"${
+                  isRoot ? rootAttrs : ''
+                }><div class="cherry-panel--title cherry-panel--title__not-empty">${title}</div><div class="cherry-panel--body"><p>`;
+                tagClose = '</p></div></div>';
+                $line = alertInfo.remaining;
+                if ($line.trim() === '') {
+                  skipNextBr = true;
+                }
+              }
+            }
+
+            handledHtml += tagOpen;
+            tagStack.push(tagClose);
+            isRoot = false;
+          }
+          lastLevel = currentLevel;
         }
         // 插入当前行内容
         handledHtml += $line;
       }
       // 标签闭合
-      handledHtml += '</blockquote>'.repeat(lastLevel);
+      while (tagStack.length) {
+        handledHtml += tagStack.pop();
+      }
       return this.getCacheWithSpace(this.pushCache(handledHtml, sign, lineCount), match);
     });
   }
