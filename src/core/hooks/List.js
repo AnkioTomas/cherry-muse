@@ -252,7 +252,7 @@ export default class List extends ParagraphBase {
     const ret = {
       begin: '(?:^|\n)(\n*)(([ ]{0,3}([*+-]|\\d+[.]|[a-z]\\.|[I一二三四五六七八九十]+\\.)[ \\t]+)',
       content: '([^\\r]+?)',
-      end: '(~0|\\n{2,}(?=\\S)(?![ \\t]*(?:[*+-]|\\d+[.]|[a-z]\\.|[I一二三四五六七八九十]+\\.)[ \\t]+)))',
+      end: '(~0|(?=\\n[ \\t]*(?::::|\\+\\+))|\\n{2,}(?=\\S)(?![ \\t]*(?:[*+-]|\\d+[.]|[a-z]\\.|[I一二三四五六七八九十]+\\.)[ \\t]+)))',
     };
     ret.reg = new RegExp(ret.begin + ret.content + ret.end, 'gm');
     return ret;
