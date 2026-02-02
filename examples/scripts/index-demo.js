@@ -35,6 +35,6 @@ let config2 = {
 window.cherry = new Cherry(config1);
 
 
-fetch('./markdown/bigData.md').then((response) => response.text()).then((value) => {
+fetch('./markdown/basic.md').then((response) => response.text()).then((value) => {
   window.cherry.setMarkdown(value)
 });
