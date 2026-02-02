@@ -584,6 +584,9 @@ export default class CodeBlock extends ParagraphBase {
       if (Prism.languages[lang]) {
         cacheCode = Prism.highlight(cacheCode, Prism.languages[lang], lang);
         cacheCode = this.renderLineNumber(cacheCode);
+      } else if (lang === 'text') {
+        cacheCode = escapeHTMLSpecialChar(cacheCode);
+        cacheCode = this.renderLineNumber(cacheCode);
       } else {
         cacheCode = escapeHTMLSpecialChar(cacheCode);
         Prism.plugins.autoloader.loadLanguages(
@@ -626,7 +629,12 @@ export default class CodeBlock extends ParagraphBase {
   $highlightCodeBlock(code, lang, clazz) {
     const language = lang;
     // 直接使用原始代码，不做 unescapeHTMLSpecialChar，避免破坏代码完整性
-    let cacheCode = Prism.highlight(code, Prism.languages[language], language);
+    let cacheCode;
+    if (Prism.languages[language]) {
+      cacheCode = Prism.highlight(code, Prism.languages[language], language);
+    } else {
+      cacheCode = escapeHTMLSpecialChar(code);
+    }
     cacheCode = this.renderLineNumber(cacheCode);
     cacheCode = this.wrapCode(cacheCode, language);
     const cherry = this.$engine.$cherry;
@@ -801,9 +809,20 @@ export default class CodeBlock extends ParagraphBase {
       }
       // $code = this.$replaceSpecialChar($code);
       $code = $code.replace(/~X/g, '\\`');
+
+      // 判断是否需要异步渲染，如果需要异步渲染则不缓存
+      let effectiveLang = $lang;
+      if (!supportLanguages.includes(effectiveLang)) {
+        effectiveLang = 'text';
+      }
+      const isAsync =
+        !this.customHighlighter && !Prism.languages[effectiveLang] && effectiveLang !== 'text';
+
       cacheCode = this.renderCodeBlock($code, $lang, sign, lines);
       cacheCode = cacheCode.replace(/\\/g, '\\\\');
-      cacheCode = this.$codeCache(sign, cacheCode);
+      if (!isAsync) {
+        cacheCode = this.$codeCache(sign, cacheCode);
+      }
       const result = this.getCacheWithSpace(this.pushCache(cacheCode, sign, lines), match);
       return addBlockQuoteSignToResult(result);
     });
