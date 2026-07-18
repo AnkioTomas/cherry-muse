@@ -1,7 +1,7 @@
 > [!IMPORTANT]
 > **告别 cherry-muse 与 cherry-markdown**
 >
-> 是时候拥抱全新的 [cherry-markdown-next](https://github.com/AnkioTomas/cherry-markdown-next) —— 更强大的功能、更优异的性能，以及面向未来的全新体验。
+> 是时候拥抱全新的 [Penna Markdown](https://github.com/AnkioTomas/penna-markdown) —— 更强大的功能、更优异的性能，以及面向未来的全新体验。
 
 
 <p align="center"><img src="logo/android-chrome-192x192.png" alt="cherry logo" width="100px"/></p>
